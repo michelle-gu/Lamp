@@ -2,6 +2,38 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
+	<string>Foundation</string>
+	<string>FirebaseMLVisionTextModel</string>
+	<string>FirebaseMLVisionLabelModel</string>
+	<string>FirebaseInstanceID</string>
+	<string>Firebase</string>
+	<string>FirebaseFirestore</string>
+	<string>GoogleMobileAds</string>
+	<string>FirebaseMLNLLanguageID</string>
+	<string>FirebaseMLVisionFaceModel</string>
+	<string>FirebaseDatabase</string>
+	<string>FirebaseInAppMessaging</string>
+	<string>Fabric</string>
+	<string>FirebaseAnalytics</string>
+	<string>FirebaseMLVisionBarcodeModel</string>
+	<string>FirebasePerformance</string>
+	<string>FirebaseMLModelInterpreter</string>
+	<string>FirebaseRemoteConfig</string>
+	<string>Crashlytics</string>
+	<string>FirebaseMLNaturalLanguage</string>
+	<string>FirebaseAuth</string>
 	<string>UIKit</string>
+	<string>FirebaseCrash</string>
+	<string>SystemConfiguration</string>
+	<string>FirebaseMessaging</string>
+	<string>sys</string>
+	<string>GoogleUtilities</string>
+	<string>FirebaseCore</string>
+	<string>FirebaseInvites</string>
+	<string>FirebaseStorage</string>
+	<string>FirebaseDynamicLinks</string>
+	<string>FirebaseMLVision</string>
+	<string>FirebaseFunctions</string>
+	<string>objc</string>
 </array>
 </plist>

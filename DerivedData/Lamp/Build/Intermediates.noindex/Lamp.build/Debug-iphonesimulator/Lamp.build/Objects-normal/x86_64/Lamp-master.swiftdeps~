@@ -1,0 +1,6 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "0f89a347f2183dfdb5b8aea12d2d5b22"
+build_time: [1552070692, 415592000]
+inputs:
+  "/Users/lindseythompson/Desktop/Lamp/Lamp/ViewController.swift": !dirty [1551911280, 0]
+  "/Users/lindseythompson/Desktop/Lamp/Lamp/AppDelegate.swift": !dirty [1552070688, 0]
