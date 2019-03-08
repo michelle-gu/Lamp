@@ -6,7 +6,7 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>1B23529D-7C85-4C2D-8292-C0119957A736</key>
+		<key>CC30A635-20D3-4426-B902-5256D45A79C5</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,21 +15,21 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.ProvisioningLog</string>
 			<key>fileName</key>
-			<string>1B23529D-7C85-4C2D-8292-C0119957A736.xcactivitylog</string>
+			<string>CC30A635-20D3-4426-B902-5256D45A79C5.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>E</string>
 			<key>signature</key>
 			<string>Update Signing</string>
 			<key>timeStartedRecording</key>
-			<real>573763477.90800202</real>
+			<real>573773968.50254202</real>
 			<key>timeStoppedRecording</key>
-			<real>573763480.60884702</real>
+			<real>573773970.94377899</real>
 			<key>title</key>
 			<string>Update Signing</string>
 			<key>uniqueIdentifier</key>
-			<string>1B23529D-7C85-4C2D-8292-C0119957A736</string>
+			<string>CC30A635-20D3-4426-B902-5256D45A79C5</string>
 		</dict>
-		<key>F7F38465-7C54-4580-BB63-13C85E8437A2</key>
+		<key>EF702157-6E9F-40BD-9BB9-9FE34883AC20</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -38,19 +38,19 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.ProvisioningLog</string>
 			<key>fileName</key>
-			<string>F7F38465-7C54-4580-BB63-13C85E8437A2.xcactivitylog</string>
+			<string>EF702157-6E9F-40BD-9BB9-9FE34883AC20.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>E</string>
 			<key>signature</key>
 			<string>Update Signing</string>
 			<key>timeStartedRecording</key>
-			<real>573763563.11476505</real>
+			<real>573770872.322806</real>
 			<key>timeStoppedRecording</key>
-			<real>573763563.55802298</real>
+			<real>573770878.46182096</real>
 			<key>title</key>
 			<string>Update Signing</string>
 			<key>uniqueIdentifier</key>
-			<string>F7F38465-7C54-4580-BB63-13C85E8437A2</string>
+			<string>EF702157-6E9F-40BD-9BB9-9FE34883AC20</string>
 		</dict>
 	</dict>
 </dict>
