@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		484D1178B6C8C9141158E82C /* Pods_Lamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADB058DDDBB271D44C9F82B /* Pods_Lamp.framework */; };
+		B65D1CFC2232409B009F84A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B65D1CFB2232409B009F84A3 /* GoogleService-Info.plist */; };
 		B6F5005722307A3500FD1433 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F5005622307A3500FD1433 /* AppDelegate.swift */; };
 		B6F5005922307A3500FD1433 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F5005822307A3500FD1433 /* ViewController.swift */; };
 		B6F5005C22307A3500FD1433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F5005A22307A3500FD1433 /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B65D1CFB2232409B009F84A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6F5005322307A3500FD1433 /* Lamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F5005622307A3500FD1433 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F5005822307A3500FD1433 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		B6F5005D22307A3600FD1433 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6F5006022307A3600FD1433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6F5006222307A3600FD1433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC28D6B2E29B51B15F48F78C /* Pods-Lamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lamp.debug.xcconfig"; path = "Target Support Files/Pods-Lamp/Pods-Lamp.debug.xcconfig"; sourceTree = "<group>"; };
+		D6692CB92E970FF7A14AFFAD /* Pods-Lamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lamp.release.xcconfig"; path = "Target Support Files/Pods-Lamp/Pods-Lamp.release.xcconfig"; sourceTree = "<group>"; };
+		EADB058DDDBB271D44C9F82B /* Pods_Lamp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lamp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484D1178B6C8C9141158E82C /* Pods_Lamp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		746D53F767B4961D1D89C5E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC28D6B2E29B51B15F48F78C /* Pods-Lamp.debug.xcconfig */,
+				D6692CB92E970FF7A14AFFAD /* Pods-Lamp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B6F5004A22307A3500FD1433 = {
 			isa = PBXGroup;
 			children = (
 				B6F5005522307A3500FD1433 /* Lamp */,
 				B6F5005422307A3500FD1433 /* Products */,
+				746D53F767B4961D1D89C5E8 /* Pods */,
+				FBF310C20D28FDAC3FFC065E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +78,17 @@
 				B6F5005D22307A3600FD1433 /* Assets.xcassets */,
 				B6F5005F22307A3600FD1433 /* LaunchScreen.storyboard */,
 				B6F5006222307A3600FD1433 /* Info.plist */,
+				B65D1CFB2232409B009F84A3 /* GoogleService-Info.plist */,
 			);
 			path = Lamp;
+			sourceTree = "<group>";
+		};
+		FBF310C20D28FDAC3FFC065E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EADB058DDDBB271D44C9F82B /* Pods_Lamp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6F5006522307A3600FD1433 /* Build configuration list for PBXNativeTarget "Lamp" */;
 			buildPhases = (
+				652B955146BD5FA3113C677E /* [CP] Check Pods Manifest.lock */,
 				B6F5004F22307A3500FD1433 /* Sources */,
 				B6F5005022307A3500FD1433 /* Frameworks */,
 				B6F5005122307A3500FD1433 /* Resources */,
+				4E8151465D10B9D2948B3932 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,12 +152,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6F5006122307A3600FD1433 /* LaunchScreen.storyboard in Resources */,
+				B65D1CFC2232409B009F84A3 /* GoogleService-Info.plist in Resources */,
 				B6F5005E22307A3600FD1433 /* Assets.xcassets in Resources */,
 				B6F5005C22307A3500FD1433 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E8151465D10B9D2948B3932 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lamp/Pods-Lamp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lamp/Pods-Lamp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		652B955146BD5FA3113C677E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lamp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B6F5004F22307A3500FD1433 /* Sources */ = {
@@ -280,10 +359,11 @@
 		};
 		B6F5006622307A3600FD1433 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC28D6B2E29B51B15F48F78C /* Pods-Lamp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GY6Y6QSGCU;
+				DEVELOPMENT_TEAM = BA47R6G3M3;
 				INFOPLIST_FILE = Lamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,10 +378,11 @@
 		};
 		B6F5006722307A3600FD1433 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6692CB92E970FF7A14AFFAD /* Pods-Lamp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GY6Y6QSGCU;
+				DEVELOPMENT_TEAM = BA47R6G3M3;
 				INFOPLIST_FILE = Lamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
