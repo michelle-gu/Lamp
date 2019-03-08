@@ -199,6 +199,31 @@ SWIFT_CLASS("_TtC4Lamp11AppDelegate")
 @class NSBundle;
 @class NSCoder;
 
+SWIFT_CLASS("_TtC4Lamp19LogInViewController")
+@interface LogInViewController : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITextField;
+@class UIButton;
+
+SWIFT_CLASS("_TtC4Lamp20SignUpViewController")
+@interface SignUpViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified emailField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified passwordField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified confirmPasswordField;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified logInButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified signUpButton;
+- (IBAction)logInDidTouch:(id _Nonnull)sender;
+- (IBAction)signUpDidTouch:(id _Nonnull)sender;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC4Lamp14ViewController")
 @interface ViewController : UIViewController
 - (void)viewDidLoad;
