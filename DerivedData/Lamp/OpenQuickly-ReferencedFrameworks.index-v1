@@ -4,27 +4,27 @@
 <array>
 	<string>Foundation</string>
 	<string>FirebaseMLVisionTextModel</string>
+	<string>Firebase</string>
 	<string>FirebaseMLVisionLabelModel</string>
 	<string>FirebaseInstanceID</string>
-	<string>Firebase</string>
 	<string>FirebaseFirestore</string>
 	<string>GoogleMobileAds</string>
 	<string>FirebaseMLNLLanguageID</string>
 	<string>FirebaseMLVisionFaceModel</string>
+	<string>FirebaseDatabase</string>
 	<string>FirebaseMLNaturalLanguage</string>
 	<string>FirebaseInAppMessaging</string>
-	<string>Fabric</string>
-	<string>FirebaseAnalytics</string>
-	<string>FirebaseDatabase</string>
-	<string>FirebaseMLVisionBarcodeModel</string>
-	<string>FirebaseMLModelInterpreter</string>
-	<string>FirebaseRemoteConfig</string>
-	<string>Crashlytics</string>
-	<string>UIKit</string>
-	<string>FirebaseAuth</string>
 	<string>FirebasePerformance</string>
-	<string>FirebaseCrash</string>
+	<string>FirebaseAnalytics</string>
+	<string>UIKit</string>
+	<string>FirebaseMLModelInterpreter</string>
+	<string>FirebaseMLVisionBarcodeModel</string>
+	<string>FirebaseRemoteConfig</string>
 	<string>SystemConfiguration</string>
+	<string>Fabric</string>
+	<string>Crashlytics</string>
+	<string>FirebaseAuth</string>
+	<string>FirebaseCrash</string>
 	<string>FirebaseMessaging</string>
 	<string>sys</string>
 	<string>GoogleUtilities</string>
