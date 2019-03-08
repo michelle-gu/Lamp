@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		484D1178B6C8C9141158E82C /* Pods_Lamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADB058DDDBB271D44C9F82B /* Pods_Lamp.framework */; };
 		B65D1CFC2232409B009F84A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B65D1CFB2232409B009F84A3 /* GoogleService-Info.plist */; };
-		B6F5005722307A3500FD1433 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F5005622307A3500FD1433 /* AppDelegate.swift */; };
+		B6B897132233025600164801 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B897122233025600164801 /* User.swift */; };
+		B6B897152233037300164801 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B897142233037300164801 /* SignUpViewController.swift */; };
+		B6B89717223303E100164801 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B89716223303E100164801 /* LogInViewController.swift */; };
+		B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B8971A22331FCA00164801 /* AppDelegate.swift */; };
 		B6F5005922307A3500FD1433 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F5005822307A3500FD1433 /* ViewController.swift */; };
 		B6F5005C22307A3500FD1433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F5005A22307A3500FD1433 /* Main.storyboard */; };
 		B6F5005E22307A3600FD1433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F5005D22307A3600FD1433 /* Assets.xcassets */; };
@@ -18,8 +21,12 @@
 
 /* Begin PBXFileReference section */
 		B65D1CFB2232409B009F84A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B6B897122233025600164801 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B6B897142233037300164801 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B6B89716223303E100164801 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		B6B897182233095300164801 /* Lamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lamp.entitlements; sourceTree = "<group>"; };
+		B6B8971A22331FCA00164801 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F5005322307A3500FD1433 /* Lamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6F5005622307A3500FD1433 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F5005822307A3500FD1433 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6F5005B22307A3500FD1433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6F5005D22307A3600FD1433 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,27 +49,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07D5B1762232FF8C007C8453 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		07D5B1772232FF9F007C8453 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		07D5B1782232FFAE007C8453 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		746D53F767B4961D1D89C5E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +56,23 @@
 				D6692CB92E970FF7A14AFFAD /* Pods-Lamp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B6B897102233021D00164801 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6B897142233037300164801 /* SignUpViewController.swift */,
+				B6B89716223303E100164801 /* LogInViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B6B897112233022700164801 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6B897122233025600164801 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B6F5004A22307A3500FD1433 = {
@@ -93,10 +96,10 @@
 		B6F5005522307A3500FD1433 /* Lamp */ = {
 			isa = PBXGroup;
 			children = (
-				07D5B1782232FFAE007C8453 /* Controller */,
-				07D5B1772232FF9F007C8453 /* View */,
-				07D5B1762232FF8C007C8453 /* Model */,
-				B6F5005622307A3500FD1433 /* AppDelegate.swift */,
+				B6B8971A22331FCA00164801 /* AppDelegate.swift */,
+				B6B897182233095300164801 /* Lamp.entitlements */,
+				B6B897112233022700164801 /* Models */,
+				B6B897102233021D00164801 /* Controllers */,
 				B6F5005822307A3500FD1433 /* ViewController.swift */,
 				B6F5005A22307A3500FD1433 /* Main.storyboard */,
 				B6F5005D22307A3600FD1433 /* Assets.xcassets */,
@@ -149,6 +152,11 @@
 				TargetAttributes = {
 					B6F5005222307A3500FD1433 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -238,8 +246,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */,
 				B6F5005922307A3500FD1433 /* ViewController.swift in Sources */,
-				B6F5005722307A3500FD1433 /* AppDelegate.swift in Sources */,
+				B6B897152233037300164801 /* SignUpViewController.swift in Sources */,
+				B6B89717223303E100164801 /* LogInViewController.swift in Sources */,
+				B6B897132233025600164801 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +397,7 @@
 			baseConfigurationReference = CC28D6B2E29B51B15F48F78C /* Pods-Lamp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Lamp/Lamp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BA47R6G3M3;
 				INFOPLIST_FILE = Lamp/Info.plist;
@@ -405,6 +417,7 @@
 			baseConfigurationReference = D6692CB92E970FF7A14AFFAD /* Pods-Lamp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Lamp/Lamp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BA47R6G3M3;
 				INFOPLIST_FILE = Lamp/Info.plist;
