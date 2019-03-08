@@ -49,6 +49,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07D5B1762232FF8C007C8453 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		07D5B1772232FF9F007C8453 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07D5B1782232FFAE007C8453 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		746D53F767B4961D1D89C5E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +120,7 @@
 				B6B897182233095300164801 /* Lamp.entitlements */,
 				B6B897112233022700164801 /* Models */,
 				B6B897102233021D00164801 /* Controllers */,
-				B6F5005622307A3500FD1433 /* AppDelegate.swift */,
+                6F5005622307A3500FD1433 /* AppDelegate.swift */,
 				B6F5005822307A3500FD1433 /* ViewController.swift */,
 				B6F5005A22307A3500FD1433 /* Main.storyboard */,
 				B6F5005D22307A3600FD1433 /* Assets.xcassets */,
