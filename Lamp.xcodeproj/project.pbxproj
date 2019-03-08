@@ -12,7 +12,7 @@
 		B6B897132233025600164801 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B897122233025600164801 /* User.swift */; };
 		B6B897152233037300164801 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B897142233037300164801 /* SignUpViewController.swift */; };
 		B6B89717223303E100164801 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B89716223303E100164801 /* LogInViewController.swift */; };
-		B6F5005722307A3500FD1433 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F5005622307A3500FD1433 /* AppDelegate.swift */; };
+		B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B8971A22331FCA00164801 /* AppDelegate.swift */; };
 		B6F5005922307A3500FD1433 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F5005822307A3500FD1433 /* ViewController.swift */; };
 		B6F5005C22307A3500FD1433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F5005A22307A3500FD1433 /* Main.storyboard */; };
 		B6F5005E22307A3600FD1433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F5005D22307A3600FD1433 /* Assets.xcassets */; };
@@ -25,8 +25,8 @@
 		B6B897142233037300164801 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B6B89716223303E100164801 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		B6B897182233095300164801 /* Lamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lamp.entitlements; sourceTree = "<group>"; };
+		B6B8971A22331FCA00164801 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F5005322307A3500FD1433 /* Lamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6F5005622307A3500FD1433 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F5005822307A3500FD1433 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6F5005B22307A3500FD1433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6F5005D22307A3600FD1433 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,27 +49,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07D5B1762232FF8C007C8453 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		07D5B1772232FF9F007C8453 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		07D5B1782232FFAE007C8453 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		746D53F767B4961D1D89C5E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,10 +96,10 @@
 		B6F5005522307A3500FD1433 /* Lamp */ = {
 			isa = PBXGroup;
 			children = (
+				B6B8971A22331FCA00164801 /* AppDelegate.swift */,
 				B6B897182233095300164801 /* Lamp.entitlements */,
 				B6B897112233022700164801 /* Models */,
 				B6B897102233021D00164801 /* Controllers */,
-                6F5005622307A3500FD1433 /* AppDelegate.swift */,
 				B6F5005822307A3500FD1433 /* ViewController.swift */,
 				B6F5005A22307A3500FD1433 /* Main.storyboard */,
 				B6F5005D22307A3600FD1433 /* Assets.xcassets */,
@@ -267,8 +246,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */,
 				B6F5005922307A3500FD1433 /* ViewController.swift in Sources */,
-				B6F5005722307A3500FD1433 /* AppDelegate.swift in Sources */,
 				B6B897152233037300164801 /* SignUpViewController.swift in Sources */,
 				B6B89717223303E100164801 /* LogInViewController.swift in Sources */,
 				B6B897132233025600164801 /* User.swift in Sources */,
