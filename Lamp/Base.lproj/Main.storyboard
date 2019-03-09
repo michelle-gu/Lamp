@@ -55,7 +55,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="ceN-V3-Lv2" kind="show" id="Wqk-UB-71f"/>
+                                    <segue destination="Dwe-GM-baQ" kind="show" id="Wqk-UB-71f"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EDU Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sd-BO-lda">
@@ -119,7 +119,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email confirmation sent!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdI-CB-Oay">
-                                <rect key="frame" x="68" y="322" width="237" height="31"/>
+                                <rect key="frame" x="68" y="317" width="237" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check your university email to start finding your future roommate!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmM-E4-7Qf">
+                                <rect key="frame" x="40" y="367" width="293" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,7 +140,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHC-qi-Kih">
-                                <rect key="frame" x="99" y="565" width="177" height="50"/>
+                                <rect key="frame" x="99" y="537" width="177" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
@@ -144,17 +151,23 @@
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kw-yR-icR">
+                                <rect key="frame" x="99" y="616" width="177" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <color key="tintColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="LOG IN"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="flf-ug-c2v" kind="show" id="GSN-KY-4sZ"/>
+                                    <segue destination="0nf-L3-v0g" kind="show" id="IdY-Gv-dXt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check your university email to start finding your future roommate!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmM-E4-7Qf">
-                                <rect key="frame" x="40" y="372" width="293" height="107"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="hh3-l8-BCA"/>
@@ -163,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JqO-m5-XCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="132"/>
+            <point key="canvasLocation" x="2663.1999999999998" y="131.52709359605913"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MmH-8R-oNS">
@@ -224,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNW-7C-n9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3493.5999999999999" y="131.52709359605913"/>
+            <point key="canvasLocation" x="4436" y="131.52709359605913"/>
         </scene>
         <!--Profile-->
         <scene sceneID="jyb-8l-1qh">
@@ -318,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LM5-8S-Lib" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4278" y="132"/>
+            <point key="canvasLocation" x="5220" y="131.52709359605913"/>
         </scene>
         <!--Location Info-->
         <scene sceneID="Ez6-oR-vaO">
@@ -398,14 +411,14 @@
                                 <color key="backgroundColor" red="0.84789663550000005" green="0.58553600309999998" blue="0.82471710440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="SAVE"/>
+                                <state key="normal" title="DONE"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Efn-aT-hyt" kind="show" id="SP5-0k-tVq"/>
+                                    <segue destination="Skw-1a-Og8" kind="show" id="SP5-0k-tVq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -415,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ons-V7-Xmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5070" y="132"/>
+            <point key="canvasLocation" x="6012" y="131.52709359605913"/>
         </scene>
         <!--Future Location-->
         <scene sceneID="V9g-77-Ipm">
@@ -519,16 +532,16 @@
                     </view>
                     <navigationItem key="navigationItem" title="Future Location" id="NWJ-T3-hoW">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="SXC-S1-0gN">
-                            <color key="tintColor" red="0.14886525270000001" green="0.89389282459999997" blue="0.99154657130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="sac-02-C9P">
-                            <color key="tintColor" red="0.14886525270000001" green="0.89389282459999997" blue="0.99154657130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lH5-XG-22f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6724" y="132"/>
+            <point key="canvasLocation" x="7666.3999999999996" y="131.52709359605913"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kYb-VZ-QI2">
@@ -538,6 +551,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdo-bC-9n7">
+                                <rect key="frame" x="158" y="235" width="59" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EDU Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3f-7l-FRv">
                                 <rect key="frame" x="56" y="364" width="76" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -579,7 +599,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Efn-aT-hyt" kind="show" id="Dm4-rv-vWA"/>
+                                    <segue destination="flf-ug-c2v" kind="show" id="CbP-Ea-bhu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Need an Account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xs-KS-ady">
@@ -599,13 +619,6 @@
                                     <segue destination="bad-8v-AgN" kind="show" id="aaS-ll-X6p"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdo-bC-9n7">
-                                <rect key="frame" x="158" y="235" width="59" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2HH-Mx-aMh"/>
@@ -846,7 +859,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="2551" y="132"/>
+            <point key="canvasLocation" x="3492" y="131.52709359605913"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nhr-vO-w0V">
@@ -864,7 +877,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="5865" y="132"/>
+            <point key="canvasLocation" x="6807.1999999999998" y="131.52709359605913"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IY6-xb-0Ar">
@@ -914,13 +927,17 @@
                         <viewLayoutGuide key="safeArea" id="RFE-RO-gX3"/>
                     </view>
                     <navigationItem key="navigationItem" title="lamp" id="LbJ-It-GIu">
-                        <barButtonItem key="leftBarButtonItem" title="Profile" id="HhH-xh-1AI"/>
-                        <barButtonItem key="rightBarButtonItem" title="Messages" id="X5X-Lx-tnK"/>
+                        <barButtonItem key="leftBarButtonItem" title="Profile" id="HhH-xh-1AI">
+                            <color key="tintColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Messages" id="X5X-Lx-tnK">
+                            <color key="tintColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdL-55-Xqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3870" y="1005"/>
+            <point key="canvasLocation" x="4812" y="1004.9261083743843"/>
         </scene>
         <!--Messages-->
         <scene sceneID="5Q1-Ma-qcG">
@@ -1077,10 +1094,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yta-AS-Ney" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4789.6000000000004" y="1004.9261083743843"/>
+            <point key="canvasLocation" x="5732" y="1004.9261083743843"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RVJ-qG-OUO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dwe-GM-baQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AGU-4r-B3H">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ceN-V3-Lv2" kind="relationship" relationship="rootViewController" id="AHM-bC-9CK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8Z-4F-YEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720.8" y="131.52709359605913"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="axK-Vi-p7f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Skw-1a-Og8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0TZ-bM-pFw">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Efn-aT-hyt" kind="relationship" relationship="rootViewController" id="uiR-7V-AeI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sV0-RY-aVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3869.5999999999999" y="1004.9261083743843"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Dm4-rv-vWA"/>
+        <segue reference="IdY-Gv-dXt"/>
     </inferredMetricsTieBreakers>
 </document>
