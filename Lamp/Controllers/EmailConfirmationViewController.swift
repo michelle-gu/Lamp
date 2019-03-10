@@ -11,7 +11,7 @@ import UIKit
 class EmailConfirmationViewController: UIViewController {
 
     // MARK: Constants
-    let showLoginScreen = "showLoginScreen"
+    let showConfirmedLoginScreen = "showConfirmedLoginScreen"
     
     override func viewDidLoad() {
         super.viewDidLoad()

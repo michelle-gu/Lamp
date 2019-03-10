@@ -165,7 +165,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="0nf-L3-v0g" kind="show" identifier="showLoginScreen" id="IdY-Gv-dXt"/>
+                                    <segue destination="0nf-L3-v0g" kind="show" identifier="showConfirmedLoginScreen" id="IdY-Gv-dXt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1134,6 +1134,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9WS-Lc-l6O"/>
+        <segue reference="IdY-Gv-dXt"/>
     </inferredMetricsTieBreakers>
 </document>
