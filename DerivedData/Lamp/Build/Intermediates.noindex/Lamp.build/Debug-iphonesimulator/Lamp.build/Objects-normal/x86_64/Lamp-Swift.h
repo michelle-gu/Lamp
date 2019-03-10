@@ -199,8 +199,48 @@ SWIFT_CLASS("_TtC4Lamp11AppDelegate")
 @class NSBundle;
 @class NSCoder;
 
+SWIFT_CLASS("_TtC4Lamp19CardsViewController")
+@interface CardsViewController : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC4Lamp31EmailConfirmationViewController")
+@interface EmailConfirmationViewController : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC4Lamp19LogInViewController")
 @interface LogInViewController : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC4Lamp29ProfileCreationViewController")
+@interface ProfileCreationViewController : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC4Lamp29ProfileLocationViewController")
+@interface ProfileLocationViewController : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC4Lamp24ProfileMapViewController")
+@interface ProfileMapViewController : UIViewController
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -218,6 +258,14 @@ SWIFT_CLASS("_TtC4Lamp20SignUpViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified signUpButton;
 - (IBAction)logInDidTouch:(id _Nonnull)sender;
 - (IBAction)signUpDidTouch:(id _Nonnull)sender;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC4Lamp32SocialMediaConnectViewController")
+@interface SocialMediaConnectViewController : UIViewController
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

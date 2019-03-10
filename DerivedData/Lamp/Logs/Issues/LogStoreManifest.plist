@@ -6,7 +6,7 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>2AC610AE-6540-4E51-A927-7204F93ACC3C</key>
+		<key>267DDD52-F249-4800-95FC-D0C6BD858EF1</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,21 +15,21 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
 			<key>fileName</key>
-			<string>2AC610AE-6540-4E51-A927-7204F93ACC3C.xcactivitylog</string>
+			<string>267DDD52-F249-4800-95FC-D0C6BD858EF1.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>signature</key>
 			<string>nanopb-evznuqskugpsgtdzbregcegidcrk</string>
 			<key>timeStartedRecording</key>
-			<real>573775951.17363298</real>
+			<real>573869322.62206697</real>
 			<key>timeStoppedRecording</key>
-			<real>573775951.178105</real>
+			<real>573869322.626652</real>
 			<key>title</key>
 			<string>Build target nanopb</string>
 			<key>uniqueIdentifier</key>
-			<string>2AC610AE-6540-4E51-A927-7204F93ACC3C</string>
+			<string>267DDD52-F249-4800-95FC-D0C6BD858EF1</string>
 		</dict>
-		<key>3579A454-6B7D-46E5-96EE-42D09A9E7DAF</key>
+		<key>47682CEB-B0DD-4436-95A7-423D7E81989F</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -38,21 +38,21 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
 			<key>fileName</key>
-			<string>3579A454-6B7D-46E5-96EE-42D09A9E7DAF.xcactivitylog</string>
+			<string>47682CEB-B0DD-4436-95A7-423D7E81989F.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>signature</key>
-			<string>Pods-Lamp-evznuqskugpsgtdzbregcegidcrk</string>
+			<string>GoogleUtilities-evznuqskugpsgtdzbregcegidcrk</string>
 			<key>timeStartedRecording</key>
-			<real>573775951.17910397</real>
+			<real>573869322.60373902</real>
 			<key>timeStoppedRecording</key>
-			<real>573775951.181566</real>
+			<real>573869322.61271203</real>
 			<key>title</key>
-			<string>Build target Pods-Lamp</string>
+			<string>Build target GoogleUtilities</string>
 			<key>uniqueIdentifier</key>
-			<string>3579A454-6B7D-46E5-96EE-42D09A9E7DAF</string>
+			<string>47682CEB-B0DD-4436-95A7-423D7E81989F</string>
 		</dict>
-		<key>3E1E6711-A209-460F-A68A-EFE753FF310B</key>
+		<key>76A8B2A5-47FD-48DD-8343-E53E0EB09930</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -61,21 +61,21 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
 			<key>fileName</key>
-			<string>3E1E6711-A209-460F-A68A-EFE753FF310B.xcactivitylog</string>
+			<string>76A8B2A5-47FD-48DD-8343-E53E0EB09930.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>signature</key>
 			<string>FirebaseCore-evznuqskugpsgtdzbregcegidcrk</string>
 			<key>timeStartedRecording</key>
-			<real>573775951.16374004</real>
+			<real>573869175.65688503</real>
 			<key>timeStoppedRecording</key>
-			<real>573775951.17942595</real>
+			<real>573869175.68705404</real>
 			<key>title</key>
 			<string>Build target FirebaseCore</string>
 			<key>uniqueIdentifier</key>
-			<string>3E1E6711-A209-460F-A68A-EFE753FF310B</string>
+			<string>76A8B2A5-47FD-48DD-8343-E53E0EB09930</string>
 		</dict>
-		<key>D2C80356-4E84-4565-8019-538BD328C60A</key>
+		<key>C4906D6B-A814-40F8-8290-CE5DFF2B2D1C</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -84,21 +84,21 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>D2C80356-4E84-4565-8019-538BD328C60A.xcactivitylog</string>
+			<string>C4906D6B-A814-40F8-8290-CE5DFF2B2D1C.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>W</string>
 			<key>signature</key>
 			<string>Lamp-grkaaykclbgyxuanpupppowssgfe</string>
 			<key>timeStartedRecording</key>
-			<real>573868699.58112001</real>
+			<real>573872501.62335002</real>
 			<key>timeStoppedRecording</key>
-			<real>573868701.15603495</real>
+			<real>573872504.69490302</real>
 			<key>title</key>
 			<string>Build target Lamp</string>
 			<key>uniqueIdentifier</key>
-			<string>D2C80356-4E84-4565-8019-538BD328C60A</string>
+			<string>C4906D6B-A814-40F8-8290-CE5DFF2B2D1C</string>
 		</dict>
-		<key>E128FC19-0594-478E-BF43-8262A245923C</key>
+		<key>D1351C2E-8645-405A-913C-D0F633F2B2BB</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -107,19 +107,19 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
 			<key>fileName</key>
-			<string>E128FC19-0594-478E-BF43-8262A245923C.xcactivitylog</string>
+			<string>D1351C2E-8645-405A-913C-D0F633F2B2BB.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>signature</key>
-			<string>GoogleUtilities-evznuqskugpsgtdzbregcegidcrk</string>
+			<string>Pods-Lamp-evznuqskugpsgtdzbregcegidcrk</string>
 			<key>timeStartedRecording</key>
-			<real>573775951.15394402</real>
+			<real>573869067.136011</real>
 			<key>timeStoppedRecording</key>
-			<real>573775951.16284001</real>
+			<real>573869067.13947999</real>
 			<key>title</key>
-			<string>Build target GoogleUtilities</string>
+			<string>Build target Pods-Lamp</string>
 			<key>uniqueIdentifier</key>
-			<string>E128FC19-0594-478E-BF43-8262A245923C</string>
+			<string>D1351C2E-8645-405A-913C-D0F633F2B2BB</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

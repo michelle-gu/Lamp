@@ -11,7 +11,9 @@ import UIKit
 class SignUpViewController: UIViewController {
     
     // MARK: Constants
-    let signUpSegue = "signUpSegue"
+    let sendEmailConfirm = "sendEmailConfirm"
+    let showLoginScreen = "showLoginScreen"
+
 
     // MARK: Properties
 

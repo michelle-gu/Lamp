@@ -1,27 +1,18 @@
 //
-//  LogInViewController.swift
+//  ProfileCreationViewController.swift
 //  Lamp
 //
-//  Created by Michelle Gu on 3/8/19.
+//  Created by Lindsey Thompson on 3/9/19.
 //  Copyright © 2019 LaMMP. All rights reserved.
 //
 
 import UIKit
 
-class LogInViewController: UIViewController {
+class ProfileCreationViewController: UIViewController {
 
     // MARK: Constants
-    let showSignUpScreen = "showSignUpScreen"
-    let showSocialMediaScreen = "showSocialMediaScreen"
+    let showLocationInfoScreen = "showLocationInfoScreen"
     
-    // MARK: Properties
-    
-    // MARK: Outlets
-    
-    
-    // MARK: Actions
-    
-    // MARK: UIViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 

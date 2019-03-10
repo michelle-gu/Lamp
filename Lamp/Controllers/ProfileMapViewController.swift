@@ -1,27 +1,19 @@
 //
-//  LogInViewController.swift
+//  ProfileMapViewController.swift
 //  Lamp
 //
-//  Created by Michelle Gu on 3/8/19.
+//  Created by Lindsey Thompson on 3/9/19.
 //  Copyright © 2019 LaMMP. All rights reserved.
 //
 
 import UIKit
 
-class LogInViewController: UIViewController {
+class ProfileMapViewController: UIViewController {
 
     // MARK: Constants
-    let showSignUpScreen = "showSignUpScreen"
-    let showSocialMediaScreen = "showSocialMediaScreen"
-    
-    // MARK: Properties
-    
-    // MARK: Outlets
-    
-    
-    // MARK: Actions
-    
-    // MARK: UIViewController Lifecycle
+    // let cancelLocationChanges = "cancelLocationChanges"
+    // let saveLocationChanges = "saveLocationChanges"
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

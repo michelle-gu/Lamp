@@ -64,6 +64,35 @@
 			<key>uniqueIdentifier</key>
 			<string>10DD4427-3920-4AC2-B025-73F8D98011C2</string>
 		</dict>
+		<key>13D19245-2410-4960-8D65-817DF586D3DF</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>13D19245-2410-4960-8D65-817DF586D3DF.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>573869345.38205194</real>
+			<key>timeStoppedRecording</key>
+			<real>573869365.885867</real>
+			<key>title</key>
+			<string>Debug Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>13D19245-2410-4960-8D65-817DF586D3DF</string>
+		</dict>
 		<key>28A0CB56-B4FD-4FAF-9FEB-C57713CFF4EA</key>
 		<dict>
 			<key>className</key>
@@ -92,6 +121,64 @@
 			<string>Debug Lamp</string>
 			<key>uniqueIdentifier</key>
 			<string>28A0CB56-B4FD-4FAF-9FEB-C57713CFF4EA</string>
+		</dict>
+		<key>2D138EF4-348D-457E-BDB2-0BF8C7F8274C</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>2D138EF4-348D-457E-BDB2-0BF8C7F8274C.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>573868701.16266799</real>
+			<key>timeStoppedRecording</key>
+			<real>573869341.16585004</real>
+			<key>title</key>
+			<string>Debug Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>2D138EF4-348D-457E-BDB2-0BF8C7F8274C</string>
+		</dict>
+		<key>3B688982-1406-4C59-8BDC-BE624D8A0052</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>3B688982-1406-4C59-8BDC-BE624D8A0052.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>573871060.79893899</real>
+			<key>timeStoppedRecording</key>
+			<real>573871082.40261495</real>
+			<key>title</key>
+			<string>Debug Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>3B688982-1406-4C59-8BDC-BE624D8A0052</string>
 		</dict>
 		<key>43A4A851-2BF2-44FB-870B-24AA8D5E2510</key>
 		<dict>
@@ -267,6 +354,35 @@
 			<key>uniqueIdentifier</key>
 			<string>77D3FED4-90B6-4BC8-B60C-B88E39347C97</string>
 		</dict>
+		<key>7F3BCEA8-6DA1-4F81-8F34-5330667FD1FE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>7F3BCEA8-6DA1-4F81-8F34-5330667FD1FE.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>573870825.01147699</real>
+			<key>timeStoppedRecording</key>
+			<real>573870918.46155703</real>
+			<key>title</key>
+			<string>Debug Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>7F3BCEA8-6DA1-4F81-8F34-5330667FD1FE</string>
+		</dict>
 		<key>866A9A61-7E70-4706-A6FF-C9149F35E877</key>
 		<dict>
 			<key>className</key>
@@ -412,6 +528,35 @@
 			<key>uniqueIdentifier</key>
 			<string>B029B5D0-88D4-4A59-BA2F-A1E72C40F82F</string>
 		</dict>
+		<key>C3D7C2DB-79A1-4483-926D-436F8EECB18A</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C3D7C2DB-79A1-4483-926D-436F8EECB18A.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>573870928.53515196</real>
+			<key>timeStoppedRecording</key>
+			<real>573871052.60922205</real>
+			<key>title</key>
+			<string>Debug Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>C3D7C2DB-79A1-4483-926D-436F8EECB18A</string>
+		</dict>
 		<key>C518F500-79C6-45B6-97AB-5D2793A9D375</key>
 		<dict>
 			<key>className</key>
@@ -527,6 +672,35 @@
 			<string>Debug Lamp</string>
 			<key>uniqueIdentifier</key>
 			<string>DEC593BE-5B50-4191-93BC-8326DB2753AC</string>
+		</dict>
+		<key>EE68078E-B0E0-4359-8000-FF6643F34984</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EE68078E-B0E0-4359-8000-FF6643F34984.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>573872472.95526505</real>
+			<key>timeStoppedRecording</key>
+			<real>573872501.151443</real>
+			<key>title</key>
+			<string>Debug Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>EE68078E-B0E0-4359-8000-FF6643F34984</string>
 		</dict>
 	</dict>
 </dict>

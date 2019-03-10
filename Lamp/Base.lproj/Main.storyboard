@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignUpViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                                 <color key="tintColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="LOG IN"/>
                                 <connections>
-                                    <segue destination="0nf-L3-v0g" kind="show" id="9WS-Lc-l6O"/>
+                                    <segue destination="0nf-L3-v0g" kind="show" identifier="showLoginScreen" id="9WS-Lc-l6O"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfH-eP-3bd">
@@ -55,7 +55,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Dwe-GM-baQ" kind="show" id="Wqk-UB-71f"/>
+                                    <segue destination="Dwe-GM-baQ" kind="show" identifier="sendEmailConfirm" id="Wqk-UB-71f"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EDU Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sd-BO-lda">
@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="860" y="132.26600985221674"/>
         </scene>
-        <!--View Controller-->
+        <!--Email Confirmation View Controller-->
         <scene sceneID="Ctn-NL-I64">
             <objects>
-                <viewController id="ceN-V3-Lv2" sceneMemberID="viewController">
+                <viewController id="ceN-V3-Lv2" customClass="EmailConfirmationViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="do1-xn-sl9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,7 +165,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="0nf-L3-v0g" kind="show" id="IdY-Gv-dXt"/>
+                                    <segue destination="0nf-L3-v0g" kind="show" identifier="showLoginScreen" id="IdY-Gv-dXt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -178,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="2663.1999999999998" y="131.52709359605913"/>
         </scene>
-        <!--View Controller-->
+        <!--Social Media Connect View Controller-->
         <scene sceneID="MmH-8R-oNS">
             <objects>
-                <viewController id="S9Y-iI-4LZ" sceneMemberID="viewController">
+                <viewController id="S9Y-iI-4LZ" customClass="SocialMediaConnectViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y91-hL-ih5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,7 +193,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="SKIP FOR NOW"/>
                                 <connections>
-                                    <segue destination="60o-zV-7xX" kind="show" id="ort-cD-2uV"/>
+                                    <segue destination="60o-zV-7xX" kind="show" identifier="showProfileCreationScreen" id="ort-cD-2uV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connect to Social Media" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iV-EC-mdD">
@@ -242,7 +242,7 @@
         <!--Profile-->
         <scene sceneID="jyb-8l-1qh">
             <objects>
-                <viewController title="Profile" id="60o-zV-7xX" sceneMemberID="viewController">
+                <viewController title="Profile" id="60o-zV-7xX" customClass="ProfileCreationViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w1Z-JW-RNr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -313,7 +313,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="f7I-q0-QYu" kind="show" id="Nyq-VY-Z89"/>
+                                    <segue destination="f7I-q0-QYu" kind="show" identifier="showLocationInfoScreen" id="Nyq-VY-Z89"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWL-3d-fL6">
@@ -336,7 +336,7 @@
         <!--Location Info-->
         <scene sceneID="Ez6-oR-vaO">
             <objects>
-                <viewController title="Location Info" id="f7I-q0-QYu" sceneMemberID="viewController">
+                <viewController title="Location Info" id="f7I-q0-QYu" customClass="ProfileLocationViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ol9-py-QYH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -402,7 +402,7 @@
                                     <color key="titleColor" red="0.14886525270000001" green="0.89389282459999997" blue="0.99154657130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="t7y-ra-mxw" kind="show" id="e4G-g4-Um8"/>
+                                    <segue destination="t7y-ra-mxw" kind="show" identifier="openMap" id="e4G-g4-Um8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5m-lV-bIu">
@@ -418,7 +418,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Skw-1a-Og8" kind="show" id="SP5-0k-tVq"/>
+                                    <segue destination="Skw-1a-Og8" kind="show" identifier="showHomePage" id="SP5-0k-tVq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -433,7 +433,7 @@
         <!--Future Location-->
         <scene sceneID="V9g-77-Ipm">
             <objects>
-                <viewController id="uT8-Ch-rGB" sceneMemberID="viewController">
+                <viewController id="uT8-Ch-rGB" customClass="ProfileMapViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qxh-sI-6pP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -543,10 +543,10 @@
             </objects>
             <point key="canvasLocation" x="7666.3999999999996" y="131.52709359605913"/>
         </scene>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="kYb-VZ-QI2">
             <objects>
-                <viewController id="nTe-Tx-Mzo" sceneMemberID="viewController">
+                <viewController id="nTe-Tx-Mzo" customClass="LogInViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ns3-zC-TkO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -584,7 +584,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVy-PE-b9r">
                                 <rect key="frame" x="99" y="587" width="177" height="50"/>
@@ -599,7 +599,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="flf-ug-c2v" kind="show" id="CbP-Ea-bhu"/>
+                                    <segue destination="flf-ug-c2v" kind="show" identifier="showSocialMediaScreen" id="CbP-Ea-bhu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Need an Account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xs-KS-ady">
@@ -616,7 +616,7 @@
                                 <color key="tintColor" red="0.84789663550000005" green="0.58553600309999998" blue="0.82471710440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="SIGN UP"/>
                                 <connections>
-                                    <segue destination="bad-8v-AgN" kind="show" id="aaS-ll-X6p"/>
+                                    <segue destination="bad-8v-AgN" kind="show" identifier="showSignUpScreen" id="aaS-ll-X6p"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -900,7 +900,7 @@
         <!--lamp-->
         <scene sceneID="eza-3b-wLa">
             <objects>
-                <viewController id="Efn-aT-hyt" sceneMemberID="viewController">
+                <viewController id="Efn-aT-hyt" customClass="CardsViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vA3-gX-uSw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1134,6 +1134,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="IdY-Gv-dXt"/>
+        <segue reference="9WS-Lc-l6O"/>
     </inferredMetricsTieBreakers>
 </document>
