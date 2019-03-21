@@ -11,22 +11,22 @@
 	<string>GoogleMobileAds</string>
 	<string>FirebaseMLNLLanguageID</string>
 	<string>FirebaseMLVisionFaceModel</string>
-	<string>FirebaseDatabase</string>
 	<string>FirebaseMLNaturalLanguage</string>
 	<string>FirebaseInAppMessaging</string>
+	<string>Fabric</string>
 	<string>FirebasePerformance</string>
 	<string>FirebaseAnalytics</string>
-	<string>UIKit</string>
-	<string>FirebaseMLModelInterpreter</string>
 	<string>FirebaseMLVisionBarcodeModel</string>
+	<string>FirebaseMLModelInterpreter</string>
 	<string>FirebaseRemoteConfig</string>
-	<string>SystemConfiguration</string>
-	<string>Fabric</string>
+	<string>UIKit</string>
+	<string>FirebaseDatabase</string>
 	<string>Crashlytics</string>
 	<string>FirebaseAuth</string>
 	<string>FirebaseCrash</string>
-	<string>FirebaseMessaging</string>
 	<string>sys</string>
+	<string>FirebaseMessaging</string>
+	<string>SystemConfiguration</string>
 	<string>GoogleUtilities</string>
 	<string>FirebaseCore</string>
 	<string>FirebaseInvites</string>
