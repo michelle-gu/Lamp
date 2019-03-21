@@ -10,6 +10,8 @@ import UIKit
 
 class CardsViewController: UIViewController {
 
+    @IBOutlet weak var cardView: UIView!
+    
     @IBOutlet weak var profilePic: UIImageView!
     
     @IBOutlet weak var yesButton: UIButton!
@@ -18,12 +20,27 @@ class CardsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // card view styles
+        cardView.layer.cornerRadius = 10
+        cardView.layer.shadowColor = UIColor.darkGray.cgColor
+        cardView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        cardView.layer.shadowOpacity = 0.3
+        cardView.layer.shadowRadius = 8
 
         // make sure picture adjusts to image view
         profilePic.clipsToBounds = true
         
         // yes & no button styles
-        yesButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        yesButton.layer.shadowColor = UIColor.darkGray.cgColor
+        yesButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        yesButton.layer.shadowOpacity = 0.2
+        yesButton.layer.shadowRadius = 2
+        
+        noButton.layer.shadowColor = UIColor.darkGray.cgColor
+        noButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        noButton.layer.shadowOpacity = 0.2
+        noButton.layer.shadowRadius = 2
     }
     
 
@@ -36,5 +53,6 @@ class CardsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }

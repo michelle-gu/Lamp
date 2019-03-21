@@ -196,6 +196,7 @@ SWIFT_CLASS("_TtC4Lamp11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIView;
 @class UIImageView;
 @class UIButton;
 @class NSBundle;
@@ -203,6 +204,7 @@ SWIFT_CLASS("_TtC4Lamp11AppDelegate")
 
 SWIFT_CLASS("_TtC4Lamp19CardsViewController")
 @interface CardsViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified cardView;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified profilePic;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified yesButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified noButton;
