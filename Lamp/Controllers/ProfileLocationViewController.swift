@@ -10,14 +10,17 @@ import UIKit
 
 class ProfileLocationViewController: UIViewController {
 
-    // MARK: Constants
+    // segues
     let openMap = "openMap"
     let showHomePage = "showHomePage"
+    
+    @IBOutlet weak var profilePictureView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        profilePictureView.clipsToBounds = true
     }
     
 

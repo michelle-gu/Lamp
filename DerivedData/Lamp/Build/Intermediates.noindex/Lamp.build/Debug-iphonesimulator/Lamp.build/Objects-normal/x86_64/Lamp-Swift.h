@@ -196,11 +196,16 @@ SWIFT_CLASS("_TtC4Lamp11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIImageView;
+@class UIButton;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC4Lamp19CardsViewController")
 @interface CardsViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified profilePic;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified yesButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified noButton;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -233,6 +238,7 @@ SWIFT_CLASS("_TtC4Lamp29ProfileCreationViewController")
 
 SWIFT_CLASS("_TtC4Lamp29ProfileLocationViewController")
 @interface ProfileLocationViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified profilePictureView;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -247,7 +253,6 @@ SWIFT_CLASS("_TtC4Lamp24ProfileMapViewController")
 @end
 
 @class UITextField;
-@class UIButton;
 
 SWIFT_CLASS("_TtC4Lamp20SignUpViewController")
 @interface SignUpViewController : UIViewController

@@ -10,10 +10,20 @@ import UIKit
 
 class CardsViewController: UIViewController {
 
+    @IBOutlet weak var profilePic: UIImageView!
+    
+    @IBOutlet weak var yesButton: UIButton!
+    @IBOutlet weak var noButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // make sure picture adjusts to image view
+        profilePic.clipsToBounds = true
+        
+        // yes & no button styles
+        yesButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
     }
     
 
