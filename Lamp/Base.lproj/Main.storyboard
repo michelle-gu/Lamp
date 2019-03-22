@@ -979,6 +979,9 @@
                                         <integer key="value" value="41"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="LbY-A7-u8D" kind="show" identifier="matchSegue" id="ZV0-Jk-bH9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97799816303603215" green="0.98422282521239113" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1110,55 +1113,80 @@
             </objects>
             <point key="canvasLocation" x="6652" y="1882.7586206896553"/>
         </scene>
-        <!--View Controller-->
+        <!--Match Message View Controller-->
         <scene sceneID="BdU-na-0W9">
             <objects>
-                <viewController id="YW5-JA-cCu" sceneMemberID="viewController">
+                <viewController id="YW5-JA-cCu" customClass="MatchMessageViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nZn-TL-qVj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU'VE MATCHED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xr3-iZ-r4X">
-                                <rect key="frame" x="115" y="326" width="144" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WITH JANE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlG-jN-I8E">
-                                <rect key="frame" x="143" y="355" width="89" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uf-8n-rhP">
-                                <rect key="frame" x="139" y="593" width="97" height="29"/>
+                                <rect key="frame" x="82" y="611" width="210" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="tintColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <color key="tintColor" red="0.43505138160000001" green="0.70846599340000005" blue="0.986839354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="KEEP SWIPING"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2m-nD-1hv">
-                                <rect key="frame" x="99" y="510" width="177" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It's a Match!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xr3-iZ-r4X">
+                                <rect key="frame" x="101" y="225" width="173" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Future roomies?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uS-op-9sF">
+                                <rect key="frame" x="122" y="270" width="130" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="girl-3" translatesAutoresizingMaskIntoConstraints="NO" id="79e-dg-eNg">
+                                <rect key="frame" x="74" y="335" width="101" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96808308359999995" green="0.56691890950000001" blue="0.72591620680000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="SEND A MESSAGE"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="25"/>
+                                        <integer key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="girl-1" translatesAutoresizingMaskIntoConstraints="NO" id="4hx-To-gq1">
+                                <rect key="frame" x="199" y="335" width="101" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96808308359999995" green="0.56691890950000001" blue="0.72591620680000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2m-nD-1hv">
+                                <rect key="frame" x="82" y="531" width="210" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.43505138160000001" green="0.70846599340000005" blue="0.986839354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="SEND A MESSAGE"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.23921568627450979" green="0.23921568627450979" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="qpY-of-TLJ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="st9-IZ-ptq"/>
+                    <connections>
+                        <outlet property="keepSwipingButton" destination="0uf-8n-rhP" id="64Q-1w-2ix"/>
+                        <outlet property="matchProfilePicView" destination="4hx-To-gq1" id="q2v-gk-3K0"/>
+                        <outlet property="sendMessageButton" destination="i2m-nD-1hv" id="2vB-bE-vOx"/>
+                        <outlet property="yourProfilePicView" destination="79e-dg-eNg" id="rxE-ZM-qAI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yta-AS-Ney" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5732" y="1004.9261083743843"/>
+            <point key="canvasLocation" x="6674.3999999999996" y="1004.9261083743843"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RVJ-qG-OUO">
@@ -1196,12 +1224,30 @@
             </objects>
             <point key="canvasLocation" x="3869.5999999999999" y="1004.9261083743843"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qdW-WY-OoC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LbY-A7-u8D" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="60H-Zl-ovx">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YW5-JA-cCu" kind="relationship" relationship="rootViewController" id="0Kh-SO-GYx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czD-wA-Qh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5732" y="1004.9261083743843"/>
+        </scene>
     </scenes>
     <resources>
         <image name="girl-1" width="3280" height="4928"/>
         <image name="girl-3" width="5370" height="3390"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9WS-Lc-l6O"/>
+        <segue reference="IdY-Gv-dXt"/>
     </inferredMetricsTieBreakers>
 </document>

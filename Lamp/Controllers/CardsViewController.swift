@@ -10,6 +10,9 @@ import UIKit
 
 class CardsViewController: UIViewController {
 
+    // MARK: Constants
+    let matchSegue = "matchSegue"
+    
     @IBOutlet weak var cardView: UIView!
     
     @IBOutlet weak var profilePic: UIImageView!
