@@ -6,29 +6,6 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>0FA5532C-43D8-49B4-90C5-4BADD53C2A3B</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>0FA5532C-43D8-49B4-90C5-4BADD53C2A3B.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>W</string>
-			<key>signature</key>
-			<string>Lamp-grkaaykclbgyxuanpupppowssgfe</string>
-			<key>timeStartedRecording</key>
-			<real>574973784.15507305</real>
-			<key>timeStoppedRecording</key>
-			<real>574973787.33003497</real>
-			<key>title</key>
-			<string>Build target Lamp</string>
-			<key>uniqueIdentifier</key>
-			<string>0FA5532C-43D8-49B4-90C5-4BADD53C2A3B</string>
-		</dict>
 		<key>47082C58-4E16-40D8-B331-D0F23A9402D5</key>
 		<dict>
 			<key>className</key>
@@ -74,6 +51,29 @@
 			<string>Build target nanopb</string>
 			<key>uniqueIdentifier</key>
 			<string>53663BE7-BF75-4B40-B7D1-0110B978271A</string>
+		</dict>
+		<key>54CD8D7D-5E3D-4583-8E5B-FDE128A320E8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>54CD8D7D-5E3D-4583-8E5B-FDE128A320E8.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>signature</key>
+			<string>Lamp-grkaaykclbgyxuanpupppowssgfe</string>
+			<key>timeStartedRecording</key>
+			<real>574974679.84877205</real>
+			<key>timeStoppedRecording</key>
+			<real>574974682.74722195</real>
+			<key>title</key>
+			<string>Build target Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>54CD8D7D-5E3D-4583-8E5B-FDE128A320E8</string>
 		</dict>
 		<key>7AA51693-79BF-4F28-AFE1-132F8540E07C</key>
 		<dict>

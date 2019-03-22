@@ -48,7 +48,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Dwe-GM-baQ" kind="show" identifier="sendEmailConfirm" id="Wqk-UB-71f"/>
+                                    <segue destination="ceN-V3-Lv2" kind="popoverPresentation" identifier="sendEmailConfirm" popoverAnchorView="qfH-eP-3bd" id="dov-Yf-zTS">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EDU Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sd-BO-lda">
@@ -170,6 +172,9 @@
                         <viewLayoutGuide key="safeArea" id="hh3-l8-BCA"/>
                     </view>
                     <navigationItem key="navigationItem" id="elV-dY-shg"/>
+                    <connections>
+                        <outlet property="loginButton" destination="1kw-yR-icR" id="kyT-9d-cwk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JqO-m5-XCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1186,24 +1191,6 @@
             <point key="canvasLocation" x="5825" y="1005"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="RVJ-qG-OUO">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dwe-GM-baQ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AGU-4r-B3H">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ceN-V3-Lv2" kind="relationship" relationship="rootViewController" id="AHM-bC-9CK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G8Z-4F-YEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1720.8" y="131.52709359605913"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="axK-Vi-p7f">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Skw-1a-Og8" sceneMemberID="viewController">
@@ -1228,6 +1215,6 @@
         <image name="girl-3" width="5370" height="3390"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9WS-Lc-l6O"/>
+        <segue reference="IdY-Gv-dXt"/>
     </inferredMetricsTieBreakers>
 </document>

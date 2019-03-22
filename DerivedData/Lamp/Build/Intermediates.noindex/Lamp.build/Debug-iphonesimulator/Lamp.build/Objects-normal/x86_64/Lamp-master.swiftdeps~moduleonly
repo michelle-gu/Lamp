@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
 options: "4d3bde174b6dc806f9029a34b5ae16bf"
-build_time: [1553279971, 831719000]
+build_time: [1553281879, 841656000]
 inputs:
   "/Users/lindseythompson/Desktop/Lamp/Lamp/AppDelegate.swift": [1552070688, 0]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/ViewController.swift": [1551911280, 0]
@@ -8,7 +8,7 @@ inputs:
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/ProfileCreationViewController.swift": [1552178020, 0]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/LogInViewController.swift": [1552178020, 0]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/ProfileMapViewController.swift": [1552178238, 0]
-  "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/EmailConfirmationViewController.swift": [1552183916, 0]
+  "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/EmailConfirmationViewController.swift": [1553281851, 0]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/CardsViewController.swift": [1553275516, 0]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/MatchMessageViewController.swift": [1553279175, 0]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/ProfileLocationViewController.swift": [1553199098, 0]
