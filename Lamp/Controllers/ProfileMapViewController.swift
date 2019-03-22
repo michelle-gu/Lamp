@@ -20,7 +20,17 @@ class ProfileMapViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func saveButtonClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func cancelButtonClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
