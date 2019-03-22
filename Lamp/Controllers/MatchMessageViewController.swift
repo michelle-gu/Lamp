@@ -26,11 +26,20 @@ class MatchMessageViewController: UIViewController {
 
         // button styles
         sendMessageButton.layer.cornerRadius = sendMessageButton.bounds.height / 2
+        sendMessageButton.layer.borderWidth = 1
+        sendMessageButton.layer.borderColor = UIColor(red: 0.44, green: 0.71, blue: 0.99, alpha: 1).cgColor
         
         keepSwipingButton.layer.cornerRadius = keepSwipingButton.bounds.height / 2
         keepSwipingButton.layer.borderWidth = 1
         keepSwipingButton.layer.borderColor = UIColor(red: 0.44, green: 0.71, blue: 0.99, alpha: 1).cgColor
     }
+    
+    @IBAction func keepSwipingButtonClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     
 
     /*

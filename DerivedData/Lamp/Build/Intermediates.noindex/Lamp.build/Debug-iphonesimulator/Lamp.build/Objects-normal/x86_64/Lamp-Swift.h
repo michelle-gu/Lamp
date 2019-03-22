@@ -237,6 +237,7 @@ SWIFT_CLASS("_TtC4Lamp26MatchMessageViewController")
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified yourProfilePicView;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified matchProfilePicView;
 - (void)viewDidLoad;
+- (IBAction)keepSwipingButtonClicked:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
