@@ -244,12 +244,17 @@ SWIFT_CLASS("_TtC4Lamp26MatchMessageViewController")
 @end
 
 @class UITextField;
+@class UITapGestureRecognizer;
+@class UIDatePicker;
 @class UIPickerView;
 
 SWIFT_CLASS("_TtC4Lamp29ProfileCreationViewController")
 @interface ProfileCreationViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified genderTextField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified birthdayTextField;
 - (void)viewDidLoad;
+- (void)viewTappedWithGestureRecognizer:(UITapGestureRecognizer * _Nonnull)gestureRecognizer;
+- (void)dateChangedWithDatePicker:(UIDatePicker * _Nonnull)datePicker;
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
