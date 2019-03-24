@@ -180,6 +180,35 @@
 			<key>uniqueIdentifier</key>
 			<string>4BD46E45-8033-4108-A0AE-16866D8510C0</string>
 		</dict>
+		<key>4E1A5FD1-9242-4D17-9F07-C0FE88C9FF1D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>4E1A5FD1-9242-4D17-9F07-C0FE88C9FF1D.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>575095829.02150404</real>
+			<key>timeStoppedRecording</key>
+			<real>575095932.55832696</real>
+			<key>title</key>
+			<string>Debug Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>4E1A5FD1-9242-4D17-9F07-C0FE88C9FF1D</string>
+		</dict>
 		<key>4E9EFD90-A936-4CAE-8CD7-134F48D90E0C</key>
 		<dict>
 			<key>className</key>
@@ -527,6 +556,35 @@
 			<string>Debug Lamp</string>
 			<key>uniqueIdentifier</key>
 			<string>E8B9C38A-18DC-48E5-8502-FBC169050700</string>
+		</dict>
+		<key>F6E491EB-DCAA-430B-8A10-9E148E142F41</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F6E491EB-DCAA-430B-8A10-9E148E142F41.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>575089662.53652704</real>
+			<key>timeStoppedRecording</key>
+			<real>575095822.41317296</real>
+			<key>title</key>
+			<string>Debug Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>F6E491EB-DCAA-430B-8A10-9E148E142F41</string>
 		</dict>
 		<key>FA94354B-5B73-42F8-8180-F64F742DF6A7</key>
 		<dict>
