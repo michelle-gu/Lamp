@@ -8,26 +8,41 @@
 
 import UIKit
 
-class ProfileCreationViewController: UIViewController {
+let genderPickerData = [String](arrayLiteral: "Female", "Male", "Other")
+
+class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     // MARK: Constants
     let showLocationInfoScreen = "showLocationInfoScreen"
     
+    @IBOutlet weak var genderTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Gender picker setup
+        let genderPicker = UIPickerView()
+        genderPicker.delegate = self
+        genderTextField.inputView = genderPicker
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // UI Picker delegate methods
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
-    */
+    
+    // Number of elements
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return genderPickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return genderPickerData[row]
+    }
+    
+    // Sets gender text field to selection
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        genderTextField.text = genderPickerData[row]
+    }
 
 }

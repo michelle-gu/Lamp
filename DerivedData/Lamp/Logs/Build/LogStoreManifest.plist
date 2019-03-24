@@ -151,6 +151,64 @@
 			<key>uniqueIdentifier</key>
 			<string>4DE71C6E-D3DB-418F-A75A-93C916DB291F</string>
 		</dict>
+		<key>4E8BDE7F-8E47-415B-BA56-C1FF3409F627</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4E8BDE7F-8E47-415B-BA56-C1FF3409F627.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>575087335.87872696</real>
+			<key>timeStoppedRecording</key>
+			<real>575087341.24120998</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>4E8BDE7F-8E47-415B-BA56-C1FF3409F627</string>
+		</dict>
+		<key>70B1E701-E534-4E3C-B546-52A6EDE73F5D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>70B1E701-E534-4E3C-B546-52A6EDE73F5D.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>575087721.36920202</real>
+			<key>timeStoppedRecording</key>
+			<real>575087723.30089605</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>70B1E701-E534-4E3C-B546-52A6EDE73F5D</string>
+		</dict>
 		<key>74D8C1C9-7814-4EA5-84DD-7D4F680E86D4</key>
 		<dict>
 			<key>className</key>

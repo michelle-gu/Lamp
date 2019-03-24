@@ -330,6 +330,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="WuP-vw-nTI"/>
                     </view>
+                    <connections>
+                        <outlet property="genderTextField" destination="s00-dv-s8A" id="P9N-2z-Uhv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LM5-8S-Lib" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -29,29 +29,6 @@
 			<key>uniqueIdentifier</key>
 			<string>1ADC7AAA-92DC-4269-B020-C007FDBE3AE8</string>
 		</dict>
-		<key>30086336-A86F-40E5-9E9B-33D7CF792D7C</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>30086336-A86F-40E5-9E9B-33D7CF792D7C.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>W</string>
-			<key>signature</key>
-			<string>Lamp-grkaaykclbgyxuanpupppowssgfe</string>
-			<key>timeStartedRecording</key>
-			<real>575083131.87023306</real>
-			<key>timeStoppedRecording</key>
-			<real>575083133.48344398</real>
-			<key>title</key>
-			<string>Build target Lamp</string>
-			<key>uniqueIdentifier</key>
-			<string>30086336-A86F-40E5-9E9B-33D7CF792D7C</string>
-		</dict>
 		<key>30CFD435-2B91-41A8-838E-0C9FE9590E20</key>
 		<dict>
 			<key>className</key>
@@ -74,6 +51,29 @@
 			<string>Build target Pods-Lamp</string>
 			<key>uniqueIdentifier</key>
 			<string>30CFD435-2B91-41A8-838E-0C9FE9590E20</string>
+		</dict>
+		<key>4CCC4A5F-5937-43E9-ABB9-AB5CEBD8459A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>4CCC4A5F-5937-43E9-ABB9-AB5CEBD8459A.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>signature</key>
+			<string>Lamp-grkaaykclbgyxuanpupppowssgfe</string>
+			<key>timeStartedRecording</key>
+			<real>575087721.48474705</real>
+			<key>timeStoppedRecording</key>
+			<real>575087723.23258996</real>
+			<key>title</key>
+			<string>Build target Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>4CCC4A5F-5937-43E9-ABB9-AB5CEBD8459A</string>
 		</dict>
 		<key>734443D8-064A-4F01-89AF-556AE9BDD8F5</key>
 		<dict>
