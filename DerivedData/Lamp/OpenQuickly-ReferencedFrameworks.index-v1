@@ -2,38 +2,39 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>Foundation</string>
-	<string>FirebaseMLVisionTextModel</string>
-	<string>Firebase</string>
-	<string>FirebaseMLVisionLabelModel</string>
-	<string>FirebaseInstanceID</string>
-	<string>FirebaseFirestore</string>
 	<string>GoogleMobileAds</string>
-	<string>FirebaseMLNLLanguageID</string>
-	<string>FirebaseMLVisionFaceModel</string>
-	<string>FirebaseMLNaturalLanguage</string>
-	<string>FirebaseInAppMessaging</string>
-	<string>Fabric</string>
 	<string>FirebasePerformance</string>
-	<string>FirebaseAnalytics</string>
-	<string>FirebaseMLVisionBarcodeModel</string>
-	<string>FirebaseMLModelInterpreter</string>
-	<string>FirebaseRemoteConfig</string>
-	<string>UIKit</string>
-	<string>FirebaseDatabase</string>
-	<string>Crashlytics</string>
+	<string>FirebaseDynamicLinks</string>
+	<string>objc</string>
 	<string>FirebaseAuth</string>
-	<string>FirebaseCrash</string>
-	<string>sys</string>
-	<string>FirebaseMessaging</string>
-	<string>SystemConfiguration</string>
 	<string>GoogleUtilities</string>
+	<string>Firebase</string>
+	<string>FirebaseInAppMessaging</string>
 	<string>FirebaseCore</string>
+	<string>FirebaseMessaging</string>
+	<string>sys</string>
+	<string>FirebaseInstanceID</string>
+	<string>FirebaseMLVisionFaceModel</string>
+	<string>FirebaseMLVisionLabelModel</string>
+	<string>FirebaseFirestore</string>
+	<string>FirebaseMLNLLanguageID</string>
+	<string>FirebaseDatabase</string>
+	<string>FirebaseRemoteConfig</string>
+	<string>FirebaseMLNaturalLanguage</string>
+	<string>Crashlytics</string>
+	<string>MapKit</string>
+	<string>FirebaseMLVision</string>
+	<string>FirebaseMLVisionBarcodeModel</string>
+	<string>FirebaseMLVisionTextModel</string>
+	<string>Foundation</string>
+	<string>FirebaseMLModelInterpreter</string>
+	<string>Fabric</string>
+	<string>FirebaseCrash</string>
 	<string>FirebaseInvites</string>
 	<string>FirebaseStorage</string>
-	<string>FirebaseDynamicLinks</string>
-	<string>FirebaseMLVision</string>
+	<string>SystemConfiguration</string>
 	<string>FirebaseFunctions</string>
-	<string>objc</string>
+	<string>FirebaseAnalytics</string>
+	<string>UIKit</string>
 </array>
 </plist>

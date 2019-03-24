@@ -7,17 +7,28 @@
 //
 
 import UIKit
+import MapKit
 
 class ProfileMapViewController: UIViewController {
 
-    // MARK: Constants
-    // let cancelLocationChanges = "cancelLocationChanges"
-    // let saveLocationChanges = "saveLocationChanges"
-
+    @IBOutlet weak var mapView: MKMapView!
+    
+    // radius that the map shows with coordinates in the center
+    let regionRadius: CLLocationDistance = 10000
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Setting initial map location
+        let initialLocation = CLLocation(latitude: 37.773972, longitude: -122.431297)
+        // showing map
+        centerMapOnLocation(location: initialLocation)
+    }
+    
+    // helper method that sets the rectangular view of the map based on region radius
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
     }
     
     @IBAction func saveButtonClicked(_ sender: Any) {
@@ -25,20 +36,9 @@ class ProfileMapViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
     @IBAction func cancelButtonClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

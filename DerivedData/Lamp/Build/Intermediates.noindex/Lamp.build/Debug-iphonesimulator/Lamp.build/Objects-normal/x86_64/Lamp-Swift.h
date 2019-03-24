@@ -260,10 +260,14 @@ SWIFT_CLASS("_TtC4Lamp29ProfileLocationViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class MKMapView;
 
 SWIFT_CLASS("_TtC4Lamp24ProfileMapViewController")
 @interface ProfileMapViewController : UIViewController
+@property (nonatomic, weak) IBOutlet MKMapView * _Null_unspecified mapView;
 - (void)viewDidLoad;
+- (IBAction)saveButtonClicked:(id _Nonnull)sender;
+- (IBAction)cancelButtonClicked:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
