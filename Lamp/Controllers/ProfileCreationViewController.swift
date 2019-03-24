@@ -15,11 +15,22 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     // MARK: Constants
     let showLocationInfoScreen = "showLocationInfoScreen"
     
+    @IBOutlet weak var profilePictureView: UIImageView!
+    @IBOutlet weak var changePictureButton: UIButton!
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var birthdayTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // profile picture styling
+        profilePictureView.layer.cornerRadius = profilePictureView.bounds.height / 2
+        profilePictureView.clipsToBounds = true
+        
+        // change picture button styling
+        changePictureButton.layer.borderWidth = 1
+        changePictureButton.layer.cornerRadius = changePictureButton.bounds.height / 2
+        changePictureButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
 
         // Gender picker setup
         let genderPicker = UIPickerView()

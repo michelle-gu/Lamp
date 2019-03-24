@@ -250,6 +250,8 @@ SWIFT_CLASS("_TtC4Lamp26MatchMessageViewController")
 
 SWIFT_CLASS("_TtC4Lamp29ProfileCreationViewController")
 @interface ProfileCreationViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified profilePictureView;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified changePictureButton;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified genderTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified birthdayTextField;
 - (void)viewDidLoad;

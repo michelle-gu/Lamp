@@ -24,6 +24,7 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        profilePictureView.layer.cornerRadius = profilePictureView.bounds.height / 2
         profilePictureView.clipsToBounds = true
         
         // for university picker
