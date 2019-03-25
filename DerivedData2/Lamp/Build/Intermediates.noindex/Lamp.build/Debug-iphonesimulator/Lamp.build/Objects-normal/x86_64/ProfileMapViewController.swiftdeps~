@@ -1,0 +1,429 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ProfileMapViewController"
+provides-nominal:
+- "4Lamp24ProfileMapViewControllerC"
+provides-member:
+- ["4Lamp24ProfileMapViewControllerC", ""]
+provides-dynamic-lookup:
+- "cancelButtonClicked"
+- "mapView"
+- "saveButtonClicked"
+- "viewDidLoad"
+depends-top-level:
+- !private "BooleanLiteralType"
+- "CLLocation"
+- "CLLocationDistance"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- !private "MKCoordinateRegion"
+- "MKMapView"
+- "ProfileMapViewController"
+- "UIViewController"
+depends-member:
+- !private ["So15CALayerDelegateP", "setRegion"]
+- !private ["So10CLLocationC", "coordinate"]
+- !private ["So10CLLocationC", "init"]
+- !private ["s7CVarArgP", "CLLocation"]
+- !private ["s7CVarArgP", "MKCoordinateRegion"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "centerMapOnLocation"]
+- !private ["s7CVarArgP", "coordinate"]
+- !private ["s7CVarArgP", "dismiss"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "mapView"]
+- !private ["s7CVarArgP", "navigationController"]
+- !private ["s7CVarArgP", "popViewController"]
+- !private ["s7CVarArgP", "regionRadius"]
+- !private ["s7CVarArgP", "setRegion"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["s28CustomDebugStringConvertibleP", "CLLocation"]
+- !private ["s28CustomDebugStringConvertibleP", "MKCoordinateRegion"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "centerMapOnLocation"]
+- !private ["s28CustomDebugStringConvertibleP", "coordinate"]
+- !private ["s28CustomDebugStringConvertibleP", "dismiss"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "mapView"]
+- !private ["s28CustomDebugStringConvertibleP", "navigationController"]
+- !private ["s28CustomDebugStringConvertibleP", "popViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "regionRadius"]
+- !private ["s28CustomDebugStringConvertibleP", "setRegion"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s17CustomReflectableP", "setRegion"]
+- !private ["s23CustomStringConvertibleP", "CLLocation"]
+- !private ["s23CustomStringConvertibleP", "MKCoordinateRegion"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "centerMapOnLocation"]
+- !private ["s23CustomStringConvertibleP", "coordinate"]
+- !private ["s23CustomStringConvertibleP", "dismiss"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "mapView"]
+- !private ["s23CustomStringConvertibleP", "navigationController"]
+- !private ["s23CustomStringConvertibleP", "popViewController"]
+- !private ["s23CustomStringConvertibleP", "regionRadius"]
+- !private ["s23CustomStringConvertibleP", "setRegion"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["Se", "setRegion"]
+- !private ["SE", "setRegion"]
+- !private ["SQ", "CLLocation"]
+- !private ["SQ", "MKCoordinateRegion"]
+- ["SQ", ""]
+- !private ["SQ", "centerMapOnLocation"]
+- !private ["SQ", "coordinate"]
+- !private ["SQ", "dismiss"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "mapView"]
+- !private ["SQ", "navigationController"]
+- !private ["SQ", "popViewController"]
+- !private ["SQ", "regionRadius"]
+- !private ["SQ", "setRegion"]
+- !private ["SQ", "viewDidLoad"]
+- !private ["s23ExpressibleByNilLiteralP", "setRegion"]
+- !private ["SH", "CLLocation"]
+- !private ["SH", "MKCoordinateRegion"]
+- ["SH", ""]
+- !private ["SH", "centerMapOnLocation"]
+- !private ["SH", "coordinate"]
+- !private ["SH", "dismiss"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "mapView"]
+- !private ["SH", "navigationController"]
+- !private ["SH", "popViewController"]
+- !private ["SH", "regionRadius"]
+- !private ["SH", "setRegion"]
+- !private ["SH", "viewDidLoad"]
+- !private ["So18MKCoordinateRegiona", "init"]
+- !private ["So9MKMapViewC", "setRegion"]
+- !private ["So8NSCodingP", "CLLocation"]
+- !private ["So8NSCodingP", "MKCoordinateRegion"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "centerMapOnLocation"]
+- !private ["So8NSCodingP", "coordinate"]
+- !private ["So8NSCodingP", "dismiss"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "mapView"]
+- !private ["So8NSCodingP", "navigationController"]
+- !private ["So8NSCodingP", "popViewController"]
+- !private ["So8NSCodingP", "regionRadius"]
+- !private ["So8NSCodingP", "setRegion"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- !private ["So9NSCopyingP", "coordinate"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "CLLocation"]
+- !private ["So26NSExtensionRequestHandlingP", "MKCoordinateRegion"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "centerMapOnLocation"]
+- !private ["So26NSExtensionRequestHandlingP", "dismiss"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "mapView"]
+- !private ["So26NSExtensionRequestHandlingP", "navigationController"]
+- !private ["So26NSExtensionRequestHandlingP", "popViewController"]
+- !private ["So26NSExtensionRequestHandlingP", "regionRadius"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So8NSObjectC", "CLLocation"]
+- ["So8NSObjectC", "CLLocationDistance"]
+- !private ["So8NSObjectC", "MKCoordinateRegion"]
+- ["So8NSObjectC", "MKMapView"]
+- ["So8NSObjectC", "cancelButtonClicked"]
+- ["So8NSObjectC", "centerMapOnLocation"]
+- !private ["So8NSObjectC", "coordinate"]
+- !private ["So8NSObjectC", "dismiss"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "mapView"]
+- !private ["So8NSObjectC", "navigationController"]
+- !private ["So8NSObjectC", "popViewController"]
+- ["So8NSObjectC", "regionRadius"]
+- ["So8NSObjectC", "saveButtonClicked"]
+- !private ["So8NSObjectC", "setRegion"]
+- ["So8NSObjectC", "viewDidLoad"]
+- !private ["So8NSObjectP", "CLLocation"]
+- !private ["So8NSObjectP", "MKCoordinateRegion"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "centerMapOnLocation"]
+- !private ["So8NSObjectP", "coordinate"]
+- !private ["So8NSObjectP", "dismiss"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "mapView"]
+- !private ["So8NSObjectP", "navigationController"]
+- !private ["So8NSObjectP", "popViewController"]
+- !private ["So8NSObjectP", "regionRadius"]
+- !private ["So8NSObjectP", "setRegion"]
+- !private ["So8NSObjectP", "viewDidLoad"]
+- !private ["So14NSSecureCodingP", "coordinate"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["Sq", "setRegion"]
+- ["4Lamp24ProfileMapViewControllerC", "CLLocation"]
+- ["4Lamp24ProfileMapViewControllerC", "CLLocationDistance"]
+- !private ["4Lamp24ProfileMapViewControllerC", "MKCoordinateRegion"]
+- ["4Lamp24ProfileMapViewControllerC", "MKMapView"]
+- ["4Lamp24ProfileMapViewControllerC", "cancelButtonClicked"]
+- ["4Lamp24ProfileMapViewControllerC", "centerMapOnLocation"]
+- !private ["4Lamp24ProfileMapViewControllerC", "dismiss"]
+- ["4Lamp24ProfileMapViewControllerC", "init"]
+- ["4Lamp24ProfileMapViewControllerC", "mapView"]
+- !private ["4Lamp24ProfileMapViewControllerC", "navigationController"]
+- ["4Lamp24ProfileMapViewControllerC", "regionRadius"]
+- ["4Lamp24ProfileMapViewControllerC", "saveButtonClicked"]
+- ["4Lamp24ProfileMapViewControllerC", "viewDidLoad"]
+- !private ["So29UIAccessibilityIdentificationP", "setRegion"]
+- !private ["So12UIAppearanceP", "setRegion"]
+- !private ["So21UIAppearanceContainerP", "CLLocation"]
+- !private ["So21UIAppearanceContainerP", "MKCoordinateRegion"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "centerMapOnLocation"]
+- !private ["So21UIAppearanceContainerP", "dismiss"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "mapView"]
+- !private ["So21UIAppearanceContainerP", "navigationController"]
+- !private ["So21UIAppearanceContainerP", "popViewController"]
+- !private ["So21UIAppearanceContainerP", "regionRadius"]
+- !private ["So21UIAppearanceContainerP", "setRegion"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- !private ["So18UIContentContainerP", "CLLocation"]
+- !private ["So18UIContentContainerP", "MKCoordinateRegion"]
+- ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "centerMapOnLocation"]
+- !private ["So18UIContentContainerP", "dismiss"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "mapView"]
+- !private ["So18UIContentContainerP", "navigationController"]
+- !private ["So18UIContentContainerP", "popViewController"]
+- !private ["So18UIContentContainerP", "regionRadius"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So17UICoordinateSpaceP", "setRegion"]
+- !private ["So13UIDynamicItemP", "setRegion"]
+- !private ["So18UIFocusEnvironmentP", "CLLocation"]
+- !private ["So18UIFocusEnvironmentP", "MKCoordinateRegion"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "centerMapOnLocation"]
+- !private ["So18UIFocusEnvironmentP", "dismiss"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "mapView"]
+- !private ["So18UIFocusEnvironmentP", "navigationController"]
+- !private ["So18UIFocusEnvironmentP", "popViewController"]
+- !private ["So18UIFocusEnvironmentP", "regionRadius"]
+- !private ["So18UIFocusEnvironmentP", "setRegion"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", "setRegion"]
+- !private ["So20UIFocusItemContainerP", "setRegion"]
+- !private ["So22UINavigationControllerC", "popViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "CLLocation"]
+- !private ["So30UIPasteConfigurationSupportingP", "MKCoordinateRegion"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "centerMapOnLocation"]
+- !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "mapView"]
+- !private ["So30UIPasteConfigurationSupportingP", "navigationController"]
+- !private ["So30UIPasteConfigurationSupportingP", "popViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "regionRadius"]
+- !private ["So30UIPasteConfigurationSupportingP", "setRegion"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So11UIResponderC", "CLLocation"]
+- ["So11UIResponderC", "CLLocationDistance"]
+- !private ["So11UIResponderC", "MKCoordinateRegion"]
+- ["So11UIResponderC", "MKMapView"]
+- ["So11UIResponderC", "cancelButtonClicked"]
+- ["So11UIResponderC", "centerMapOnLocation"]
+- !private ["So11UIResponderC", "dismiss"]
+- ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "mapView"]
+- !private ["So11UIResponderC", "navigationController"]
+- !private ["So11UIResponderC", "popViewController"]
+- ["So11UIResponderC", "regionRadius"]
+- ["So11UIResponderC", "saveButtonClicked"]
+- !private ["So11UIResponderC", "setRegion"]
+- ["So11UIResponderC", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "CLLocation"]
+- !private ["So30UIResponderStandardEditActionsP", "MKCoordinateRegion"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "centerMapOnLocation"]
+- !private ["So30UIResponderStandardEditActionsP", "dismiss"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "mapView"]
+- !private ["So30UIResponderStandardEditActionsP", "navigationController"]
+- !private ["So30UIResponderStandardEditActionsP", "popViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "regionRadius"]
+- !private ["So30UIResponderStandardEditActionsP", "setRegion"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So16UIStateRestoringP", "CLLocation"]
+- !private ["So16UIStateRestoringP", "MKCoordinateRegion"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "centerMapOnLocation"]
+- !private ["So16UIStateRestoringP", "dismiss"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "mapView"]
+- !private ["So16UIStateRestoringP", "navigationController"]
+- !private ["So16UIStateRestoringP", "popViewController"]
+- !private ["So16UIStateRestoringP", "regionRadius"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So18UITraitEnvironmentP", "CLLocation"]
+- !private ["So18UITraitEnvironmentP", "MKCoordinateRegion"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "centerMapOnLocation"]
+- !private ["So18UITraitEnvironmentP", "dismiss"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "mapView"]
+- !private ["So18UITraitEnvironmentP", "navigationController"]
+- !private ["So18UITraitEnvironmentP", "popViewController"]
+- !private ["So18UITraitEnvironmentP", "regionRadius"]
+- !private ["So18UITraitEnvironmentP", "setRegion"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- !private ["So23UIUserActivityRestoringP", "CLLocation"]
+- !private ["So23UIUserActivityRestoringP", "MKCoordinateRegion"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "centerMapOnLocation"]
+- !private ["So23UIUserActivityRestoringP", "dismiss"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "mapView"]
+- !private ["So23UIUserActivityRestoringP", "navigationController"]
+- !private ["So23UIUserActivityRestoringP", "popViewController"]
+- !private ["So23UIUserActivityRestoringP", "regionRadius"]
+- !private ["So23UIUserActivityRestoringP", "setRegion"]
+- !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
+- !private ["So6UIViewC", "setRegion"]
+- ["So16UIViewControllerC", "CLLocation"]
+- ["So16UIViewControllerC", "CLLocationDistance"]
+- !private ["So16UIViewControllerC", "MKCoordinateRegion"]
+- ["So16UIViewControllerC", "MKMapView"]
+- ["So16UIViewControllerC", ""]
+- ["So16UIViewControllerC", "cancelButtonClicked"]
+- ["So16UIViewControllerC", "centerMapOnLocation"]
+- !private ["So16UIViewControllerC", "dismiss"]
+- ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "mapView"]
+- !private ["So16UIViewControllerC", "navigationController"]
+- !private ["So16UIViewControllerC", "popViewController"]
+- ["So16UIViewControllerC", "regionRadius"]
+- ["So16UIViewControllerC", "saveButtonClicked"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "setRegion"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CLLocation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "MKCoordinateRegion"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "centerMapOnLocation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "coordinate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "mapView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "popViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "regionRadius"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setRegion"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["s21_ObjectiveCBridgeableP", "setRegion"]
+depends-nominal:
+- !private "So15CALayerDelegateP"
+- !private "So10CLLocationC"
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s23ExpressibleByNilLiteralP"
+- "SH"
+- !private "So18MKCoordinateRegiona"
+- !private "So9MKMapViewC"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "Sq"
+- "4Lamp24ProfileMapViewControllerC"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So22UINavigationControllerC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So16UIStateRestoringP"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MapKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "65d6ab622d57fa9980f16cf201bef0f7"

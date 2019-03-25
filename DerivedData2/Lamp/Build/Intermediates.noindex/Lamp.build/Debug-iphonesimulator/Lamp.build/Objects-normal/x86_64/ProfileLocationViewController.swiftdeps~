@@ -1,0 +1,766 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "uniPickerData"
+- "ProfileLocationViewController"
+provides-nominal:
+- "4Lamp29ProfileLocationViewControllerC"
+provides-member:
+- ["4Lamp29ProfileLocationViewControllerC", ""]
+provides-dynamic-lookup:
+- "numberOfComponents"
+- "pickerView"
+- "profilePictureView"
+- "uniTextField"
+- "viewDidLoad"
+depends-top-level:
+- !private "/"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- "ProfileLocationViewController"
+- "String"
+- "StringLiteralType"
+- "UIImageView"
+- "UIPickerView"
+- "UIPickerViewDataSource"
+- "UIPickerViewDelegate"
+- "UITextField"
+- "UIViewController"
+- "uniPickerData"
+depends-member:
+- !private ["Sa", "count"]
+- ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- !private ["s13ArrayProtocolP", "count"]
+- ["s13ArrayProtocolP", "init"]
+- !private ["s13ArrayProtocolP", "subscript"]
+- !private ["SK", "count"]
+- ["SK", "init"]
+- ["SK", "init"]
+- !private ["SK", "subscript"]
+- !private ["So7CALayerC", "cornerRadius"]
+- !private ["So15CALayerDelegateP", "bounds"]
+- !private ["So15CALayerDelegateP", "clipsToBounds"]
+- !private ["So15CALayerDelegateP", "delegate"]
+- !private ["So15CALayerDelegateP", "init"]
+- !private ["So15CALayerDelegateP", "inputView"]
+- !private ["So15CALayerDelegateP", "layer"]
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["So13CAMediaTimingP", "cornerRadius"]
+- !private ["So6CGRectV", "height"]
+- !private ["s7CVarArgP", "UIPickerView"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "bounds"]
+- !private ["s7CVarArgP", "clipsToBounds"]
+- !private ["s7CVarArgP", "cornerRadius"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "delegate"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "inputView"]
+- !private ["s7CVarArgP", "layer"]
+- ["s7CVarArgP", "numberOfComponents"]
+- ["s7CVarArgP", "numberOfComponentsInPickerView"]
+- ["s7CVarArgP", "pickerView"]
+- !private ["s7CVarArgP", "profilePictureView"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "uniPickerData"]
+- !private ["s7CVarArgP", "uniTextField"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["Sl", "count"]
+- ["Sl", "init"]
+- ["Sl", "init"]
+- !private ["Sl", "subscript"]
+- ["SL", "init"]
+- ["SL", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "UIPickerView"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "bounds"]
+- !private ["s28CustomDebugStringConvertibleP", "clipsToBounds"]
+- !private ["s28CustomDebugStringConvertibleP", "cornerRadius"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "height"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "inputView"]
+- !private ["s28CustomDebugStringConvertibleP", "layer"]
+- ["s28CustomDebugStringConvertibleP", "numberOfComponents"]
+- ["s28CustomDebugStringConvertibleP", "numberOfComponentsInPickerView"]
+- ["s28CustomDebugStringConvertibleP", "pickerView"]
+- !private ["s28CustomDebugStringConvertibleP", "profilePictureView"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "uniPickerData"]
+- !private ["s28CustomDebugStringConvertibleP", "uniTextField"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s29CustomPlaygroundQuickLookableP", "height"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "bounds"]
+- !private ["s17CustomReflectableP", "clipsToBounds"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "height"]
+- ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "inputView"]
+- !private ["s17CustomReflectableP", "layer"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "text"]
+- !private ["s23CustomStringConvertibleP", "UIPickerView"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "bounds"]
+- !private ["s23CustomStringConvertibleP", "clipsToBounds"]
+- !private ["s23CustomStringConvertibleP", "cornerRadius"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "inputView"]
+- !private ["s23CustomStringConvertibleP", "layer"]
+- ["s23CustomStringConvertibleP", "numberOfComponents"]
+- ["s23CustomStringConvertibleP", "numberOfComponentsInPickerView"]
+- ["s23CustomStringConvertibleP", "pickerView"]
+- !private ["s23CustomStringConvertibleP", "profilePictureView"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "uniPickerData"]
+- !private ["s23CustomStringConvertibleP", "uniTextField"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["Se", "bounds"]
+- !private ["Se", "clipsToBounds"]
+- !private ["Se", "count"]
+- !private ["Se", "height"]
+- ["Se", "init"]
+- ["Se", "init"]
+- !private ["Se", "inputView"]
+- !private ["Se", "layer"]
+- !private ["Se", "subscript"]
+- !private ["Se", "text"]
+- !private ["SE", "bounds"]
+- !private ["SE", "clipsToBounds"]
+- !private ["SE", "count"]
+- !private ["SE", "height"]
+- ["SE", "init"]
+- ["SE", "init"]
+- !private ["SE", "inputView"]
+- !private ["SE", "layer"]
+- !private ["SE", "subscript"]
+- !private ["SE", "text"]
+- !private ["SQ", "UIPickerView"]
+- ["SQ", ""]
+- !private ["SQ", "bounds"]
+- !private ["SQ", "clipsToBounds"]
+- !private ["SQ", "cornerRadius"]
+- !private ["SQ", "count"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "height"]
+- ["SQ", "init"]
+- ["SQ", "init"]
+- !private ["SQ", "inputView"]
+- !private ["SQ", "layer"]
+- ["SQ", "numberOfComponents"]
+- ["SQ", "numberOfComponentsInPickerView"]
+- ["SQ", "pickerView"]
+- !private ["SQ", "profilePictureView"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "text"]
+- !private ["SQ", "uniPickerData"]
+- !private ["SQ", "uniTextField"]
+- !private ["SQ", "viewDidLoad"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "bounds"]
+- !private ["s23ExpressibleByNilLiteralP", "clipsToBounds"]
+- !private ["s23ExpressibleByNilLiteralP", "inputView"]
+- !private ["s23ExpressibleByNilLiteralP", "layer"]
+- !private ["s23ExpressibleByNilLiteralP", "text"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["SH", "UIPickerView"]
+- ["SH", ""]
+- !private ["SH", "bounds"]
+- !private ["SH", "clipsToBounds"]
+- !private ["SH", "cornerRadius"]
+- !private ["SH", "count"]
+- !private ["SH", "delegate"]
+- ["SH", "init"]
+- ["SH", "init"]
+- !private ["SH", "inputView"]
+- !private ["SH", "layer"]
+- ["SH", "numberOfComponents"]
+- ["SH", "numberOfComponentsInPickerView"]
+- ["SH", "pickerView"]
+- !private ["SH", "profilePictureView"]
+- !private ["SH", "subscript"]
+- !private ["SH", "text"]
+- !private ["SH", "uniPickerData"]
+- !private ["SH", "uniTextField"]
+- !private ["SH", "viewDidLoad"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["SM", "count"]
+- ["SM", "init"]
+- !private ["SM", "subscript"]
+- !private ["So8NSCodingP", "UIPickerView"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "bounds"]
+- !private ["So8NSCodingP", "clipsToBounds"]
+- !private ["So8NSCodingP", "cornerRadius"]
+- !private ["So8NSCodingP", "delegate"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "inputView"]
+- !private ["So8NSCodingP", "layer"]
+- ["So8NSCodingP", "numberOfComponents"]
+- ["So8NSCodingP", "numberOfComponentsInPickerView"]
+- ["So8NSCodingP", "pickerView"]
+- !private ["So8NSCodingP", "profilePictureView"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "uniPickerData"]
+- !private ["So8NSCodingP", "uniTextField"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- !private ["So26NSExtensionRequestHandlingP", "UIPickerView"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- ["So26NSExtensionRequestHandlingP", "numberOfComponents"]
+- ["So26NSExtensionRequestHandlingP", "numberOfComponentsInPickerView"]
+- ["So26NSExtensionRequestHandlingP", "pickerView"]
+- !private ["So26NSExtensionRequestHandlingP", "profilePictureView"]
+- !private ["So26NSExtensionRequestHandlingP", "uniPickerData"]
+- !private ["So26NSExtensionRequestHandlingP", "uniTextField"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UIImageView"]
+- ["So8NSObjectC", "UIPickerView"]
+- ["So8NSObjectC", "UITextField"]
+- !private ["So8NSObjectC", "bounds"]
+- !private ["So8NSObjectC", "clipsToBounds"]
+- !private ["So8NSObjectC", "cornerRadius"]
+- !private ["So8NSObjectC", "delegate"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "inputView"]
+- !private ["So8NSObjectC", "layer"]
+- ["So8NSObjectC", "numberOfComponents"]
+- ["So8NSObjectC", "numberOfComponentsInPickerView"]
+- ["So8NSObjectC", "openMap"]
+- ["So8NSObjectC", "pickerView"]
+- ["So8NSObjectC", "profilePictureView"]
+- ["So8NSObjectC", "showHomePage"]
+- !private ["So8NSObjectC", "text"]
+- !private ["So8NSObjectC", "uniPickerData"]
+- ["So8NSObjectC", "uniTextField"]
+- ["So8NSObjectC", "viewDidLoad"]
+- !private ["So8NSObjectP", "UIPickerView"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "bounds"]
+- !private ["So8NSObjectP", "clipsToBounds"]
+- !private ["So8NSObjectP", "cornerRadius"]
+- !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "inputView"]
+- !private ["So8NSObjectP", "layer"]
+- ["So8NSObjectP", "numberOfComponents"]
+- ["So8NSObjectP", "numberOfComponentsInPickerView"]
+- ["So8NSObjectP", "pickerView"]
+- !private ["So8NSObjectP", "profilePictureView"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "uniPickerData"]
+- !private ["So8NSObjectP", "uniTextField"]
+- !private ["So8NSObjectP", "viewDidLoad"]
+- !private ["So14NSSecureCodingP", "cornerRadius"]
+- !private ["Sq", "bounds"]
+- !private ["Sq", "clipsToBounds"]
+- !private ["Sq", "inputView"]
+- !private ["Sq", "layer"]
+- !private ["Sq", "text"]
+- ["4Lamp29ProfileLocationViewControllerC", "Int"]
+- ["4Lamp29ProfileLocationViewControllerC", "String"]
+- ["4Lamp29ProfileLocationViewControllerC", "UIImageView"]
+- ["4Lamp29ProfileLocationViewControllerC", "UIPickerView"]
+- ["4Lamp29ProfileLocationViewControllerC", "UITextField"]
+- ["4Lamp29ProfileLocationViewControllerC", "deinit"]
+- ["4Lamp29ProfileLocationViewControllerC", "init"]
+- ["4Lamp29ProfileLocationViewControllerC", "numberOfComponents"]
+- ["4Lamp29ProfileLocationViewControllerC", "numberOfComponentsInPickerView"]
+- ["4Lamp29ProfileLocationViewControllerC", "openMap"]
+- ["4Lamp29ProfileLocationViewControllerC", "pickerView"]
+- ["4Lamp29ProfileLocationViewControllerC", "profilePictureView"]
+- ["4Lamp29ProfileLocationViewControllerC", "showHomePage"]
+- !private ["4Lamp29ProfileLocationViewControllerC", "uniPickerData"]
+- ["4Lamp29ProfileLocationViewControllerC", "uniTextField"]
+- ["4Lamp29ProfileLocationViewControllerC", "viewDidLoad"]
+- !private ["Sk", "count"]
+- ["Sk", "init"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", "count"]
+- ["Sm", "init"]
+- ["Sm", "init"]
+- !private ["Sm", "subscript"]
+- !private ["ST", "count"]
+- ["ST", "init"]
+- ["ST", "init"]
+- !private ["ST", "subscript"]
+- ["SS", "init"]
+- ["SS", "init"]
+- ["Sy", "init"]
+- ["Sy", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "bounds"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "clipsToBounds"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "layer"]
+- !private ["So29UIAccessibilityIdentificationP", "bounds"]
+- !private ["So29UIAccessibilityIdentificationP", "clipsToBounds"]
+- !private ["So29UIAccessibilityIdentificationP", "delegate"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "inputView"]
+- !private ["So29UIAccessibilityIdentificationP", "layer"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So12UIAppearanceP", "bounds"]
+- !private ["So12UIAppearanceP", "clipsToBounds"]
+- !private ["So12UIAppearanceP", "delegate"]
+- !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "inputView"]
+- !private ["So12UIAppearanceP", "layer"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So21UIAppearanceContainerP", "UIPickerView"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "bounds"]
+- !private ["So21UIAppearanceContainerP", "clipsToBounds"]
+- !private ["So21UIAppearanceContainerP", "delegate"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "inputView"]
+- !private ["So21UIAppearanceContainerP", "layer"]
+- ["So21UIAppearanceContainerP", "numberOfComponents"]
+- ["So21UIAppearanceContainerP", "numberOfComponentsInPickerView"]
+- ["So21UIAppearanceContainerP", "pickerView"]
+- !private ["So21UIAppearanceContainerP", "profilePictureView"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "uniPickerData"]
+- !private ["So21UIAppearanceContainerP", "uniTextField"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- !private ["So18UIContentContainerP", "UIPickerView"]
+- ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "init"]
+- ["So18UIContentContainerP", "numberOfComponents"]
+- ["So18UIContentContainerP", "numberOfComponentsInPickerView"]
+- ["So18UIContentContainerP", "pickerView"]
+- !private ["So18UIContentContainerP", "profilePictureView"]
+- !private ["So18UIContentContainerP", "uniPickerData"]
+- !private ["So18UIContentContainerP", "uniTextField"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "inputView"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So9UIControlC", "inputView"]
+- !private ["So9UIControlC", "text"]
+- !private ["So17UICoordinateSpaceP", "bounds"]
+- !private ["So17UICoordinateSpaceP", "clipsToBounds"]
+- !private ["So17UICoordinateSpaceP", "delegate"]
+- !private ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "inputView"]
+- !private ["So17UICoordinateSpaceP", "layer"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", "bounds"]
+- !private ["So13UIDynamicItemP", "clipsToBounds"]
+- !private ["So13UIDynamicItemP", "delegate"]
+- !private ["So13UIDynamicItemP", "init"]
+- !private ["So13UIDynamicItemP", "inputView"]
+- !private ["So13UIDynamicItemP", "layer"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So18UIFocusEnvironmentP", "UIPickerView"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "bounds"]
+- !private ["So18UIFocusEnvironmentP", "clipsToBounds"]
+- !private ["So18UIFocusEnvironmentP", "delegate"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "inputView"]
+- !private ["So18UIFocusEnvironmentP", "layer"]
+- ["So18UIFocusEnvironmentP", "numberOfComponents"]
+- ["So18UIFocusEnvironmentP", "numberOfComponentsInPickerView"]
+- ["So18UIFocusEnvironmentP", "pickerView"]
+- !private ["So18UIFocusEnvironmentP", "profilePictureView"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "uniPickerData"]
+- !private ["So18UIFocusEnvironmentP", "uniTextField"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", "bounds"]
+- !private ["So11UIFocusItemP", "clipsToBounds"]
+- !private ["So11UIFocusItemP", "delegate"]
+- !private ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "inputView"]
+- !private ["So11UIFocusItemP", "layer"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So20UIFocusItemContainerP", "bounds"]
+- !private ["So20UIFocusItemContainerP", "clipsToBounds"]
+- !private ["So20UIFocusItemContainerP", "delegate"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "inputView"]
+- !private ["So20UIFocusItemContainerP", "layer"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So11UIImageViewC", "bounds"]
+- !private ["So11UIImageViewC", "clipsToBounds"]
+- !private ["So11UIImageViewC", "layer"]
+- !private ["So10UIKeyInputP", "inputView"]
+- !private ["So10UIKeyInputP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIPickerView"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "bounds"]
+- !private ["So30UIPasteConfigurationSupportingP", "clipsToBounds"]
+- !private ["So30UIPasteConfigurationSupportingP", "delegate"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "inputView"]
+- !private ["So30UIPasteConfigurationSupportingP", "layer"]
+- ["So30UIPasteConfigurationSupportingP", "numberOfComponents"]
+- ["So30UIPasteConfigurationSupportingP", "numberOfComponentsInPickerView"]
+- ["So30UIPasteConfigurationSupportingP", "pickerView"]
+- !private ["So30UIPasteConfigurationSupportingP", "profilePictureView"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "uniPickerData"]
+- !private ["So30UIPasteConfigurationSupportingP", "uniTextField"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- !private ["So12UIPickerViewC", "delegate"]
+- !private ["So12UIPickerViewC", "init"]
+- !private ["So22UIPickerViewDataSourceP", "UIPickerView"]
+- ["So22UIPickerViewDataSourceP", ""]
+- ["So22UIPickerViewDataSourceP", "numberOfComponents"]
+- ["So22UIPickerViewDataSourceP", "numberOfComponentsInPickerView"]
+- ["So22UIPickerViewDataSourceP", "pickerView"]
+- !private ["So22UIPickerViewDataSourceP", "profilePictureView"]
+- !private ["So22UIPickerViewDataSourceP", "uniPickerData"]
+- !private ["So22UIPickerViewDataSourceP", "uniTextField"]
+- !private ["So20UIPickerViewDelegateP", "UIPickerView"]
+- ["So20UIPickerViewDelegateP", ""]
+- ["So20UIPickerViewDelegateP", "numberOfComponents"]
+- ["So20UIPickerViewDelegateP", "numberOfComponentsInPickerView"]
+- ["So20UIPickerViewDelegateP", "pickerView"]
+- !private ["So20UIPickerViewDelegateP", "profilePictureView"]
+- !private ["So20UIPickerViewDelegateP", "uniPickerData"]
+- !private ["So20UIPickerViewDelegateP", "uniTextField"]
+- ["So11UIResponderC", "Int"]
+- ["So11UIResponderC", "String"]
+- ["So11UIResponderC", "UIImageView"]
+- ["So11UIResponderC", "UIPickerView"]
+- ["So11UIResponderC", "UITextField"]
+- !private ["So11UIResponderC", "bounds"]
+- !private ["So11UIResponderC", "clipsToBounds"]
+- !private ["So11UIResponderC", "delegate"]
+- ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "inputView"]
+- !private ["So11UIResponderC", "layer"]
+- ["So11UIResponderC", "numberOfComponents"]
+- ["So11UIResponderC", "numberOfComponentsInPickerView"]
+- ["So11UIResponderC", "openMap"]
+- ["So11UIResponderC", "pickerView"]
+- ["So11UIResponderC", "profilePictureView"]
+- ["So11UIResponderC", "showHomePage"]
+- !private ["So11UIResponderC", "text"]
+- !private ["So11UIResponderC", "uniPickerData"]
+- ["So11UIResponderC", "uniTextField"]
+- ["So11UIResponderC", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "UIPickerView"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "bounds"]
+- !private ["So30UIResponderStandardEditActionsP", "clipsToBounds"]
+- !private ["So30UIResponderStandardEditActionsP", "delegate"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "inputView"]
+- !private ["So30UIResponderStandardEditActionsP", "layer"]
+- ["So30UIResponderStandardEditActionsP", "numberOfComponents"]
+- ["So30UIResponderStandardEditActionsP", "numberOfComponentsInPickerView"]
+- ["So30UIResponderStandardEditActionsP", "pickerView"]
+- !private ["So30UIResponderStandardEditActionsP", "profilePictureView"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "uniPickerData"]
+- !private ["So30UIResponderStandardEditActionsP", "uniTextField"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So16UIStateRestoringP", "UIPickerView"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "init"]
+- ["So16UIStateRestoringP", "numberOfComponents"]
+- ["So16UIStateRestoringP", "numberOfComponentsInPickerView"]
+- ["So16UIStateRestoringP", "pickerView"]
+- !private ["So16UIStateRestoringP", "profilePictureView"]
+- !private ["So16UIStateRestoringP", "uniPickerData"]
+- !private ["So16UIStateRestoringP", "uniTextField"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So15UITextDraggableP", "inputView"]
+- !private ["So15UITextDraggableP", "text"]
+- !private ["So15UITextDroppableP", "inputView"]
+- !private ["So15UITextDroppableP", "text"]
+- !private ["So11UITextFieldC", "inputView"]
+- !private ["So11UITextFieldC", "text"]
+- !private ["So11UITextInputP", "inputView"]
+- !private ["So11UITextInputP", "text"]
+- !private ["So17UITextInputTraitsP", "inputView"]
+- !private ["So17UITextInputTraitsP", "text"]
+- !private ["So34UITextPasteConfigurationSupportingP", "inputView"]
+- !private ["So34UITextPasteConfigurationSupportingP", "text"]
+- !private ["So18UITraitEnvironmentP", "UIPickerView"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "bounds"]
+- !private ["So18UITraitEnvironmentP", "clipsToBounds"]
+- !private ["So18UITraitEnvironmentP", "delegate"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "inputView"]
+- !private ["So18UITraitEnvironmentP", "layer"]
+- ["So18UITraitEnvironmentP", "numberOfComponents"]
+- ["So18UITraitEnvironmentP", "numberOfComponentsInPickerView"]
+- ["So18UITraitEnvironmentP", "pickerView"]
+- !private ["So18UITraitEnvironmentP", "profilePictureView"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "uniPickerData"]
+- !private ["So18UITraitEnvironmentP", "uniTextField"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- !private ["So23UIUserActivityRestoringP", "UIPickerView"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "bounds"]
+- !private ["So23UIUserActivityRestoringP", "clipsToBounds"]
+- !private ["So23UIUserActivityRestoringP", "delegate"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "inputView"]
+- !private ["So23UIUserActivityRestoringP", "layer"]
+- ["So23UIUserActivityRestoringP", "numberOfComponents"]
+- ["So23UIUserActivityRestoringP", "numberOfComponentsInPickerView"]
+- ["So23UIUserActivityRestoringP", "pickerView"]
+- !private ["So23UIUserActivityRestoringP", "profilePictureView"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "uniPickerData"]
+- !private ["So23UIUserActivityRestoringP", "uniTextField"]
+- !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
+- !private ["So6UIViewC", "bounds"]
+- !private ["So6UIViewC", "clipsToBounds"]
+- !private ["So6UIViewC", "delegate"]
+- !private ["So6UIViewC", "init"]
+- !private ["So6UIViewC", "inputView"]
+- !private ["So6UIViewC", "layer"]
+- !private ["So6UIViewC", "text"]
+- ["So16UIViewControllerC", "Int"]
+- ["So16UIViewControllerC", "String"]
+- ["So16UIViewControllerC", "UIImageView"]
+- ["So16UIViewControllerC", "UIPickerView"]
+- ["So16UIViewControllerC", "UITextField"]
+- ["So16UIViewControllerC", ""]
+- ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "numberOfComponents"]
+- ["So16UIViewControllerC", "numberOfComponentsInPickerView"]
+- ["So16UIViewControllerC", "openMap"]
+- ["So16UIViewControllerC", "pickerView"]
+- ["So16UIViewControllerC", "profilePictureView"]
+- ["So16UIViewControllerC", "showHomePage"]
+- !private ["So16UIViewControllerC", "uniPickerData"]
+- ["So16UIViewControllerC", "uniTextField"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "bounds"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "clipsToBounds"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "delegate"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "inputView"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "layer"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIPickerView"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bounds"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "clipsToBounds"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cornerRadius"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "inputView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "layer"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "numberOfComponents"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "numberOfComponentsInPickerView"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "pickerView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "profilePictureView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "uniPickerData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "uniTextField"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["s21_ObjectiveCBridgeableP", "bounds"]
+- !private ["s21_ObjectiveCBridgeableP", "clipsToBounds"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "height"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "inputView"]
+- !private ["s21_ObjectiveCBridgeableP", "layer"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "text"]
+- ["s16_SwiftStringViewP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "Sa"
+- "s13ArrayProtocolP"
+- "SK"
+- !private "So7CALayerC"
+- !private "So15CALayerDelegateP"
+- !private "So13CAMediaTimingP"
+- !private "So6CGRectV"
+- "s7CVarArgP"
+- "Sl"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "SE"
+- "SQ"
+- "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "SM"
+- "So8NSCodingP"
+- "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "Sq"
+- "4Lamp29ProfileLocationViewControllerC"
+- "Sk"
+- "Sm"
+- "ST"
+- "SS"
+- "Sy"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So9UIControlC"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So11UIImageViewC"
+- !private "So10UIKeyInputP"
+- "So30UIPasteConfigurationSupportingP"
+- !private "So12UIPickerViewC"
+- "So22UIPickerViewDataSourceP"
+- "So20UIPickerViewDelegateP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So16UIStateRestoringP"
+- !private "So15UITextDraggableP"
+- !private "So15UITextDroppableP"
+- !private "So11UITextFieldC"
+- !private "So11UITextInputP"
+- !private "So17UITextInputTraitsP"
+- !private "So34UITextPasteConfigurationSupportingP"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- "s24_DestructorSafeContainerP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MapKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "ed76e6b39cc8d793c89f7dd1c9614349"

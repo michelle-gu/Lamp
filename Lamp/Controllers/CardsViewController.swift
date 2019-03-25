@@ -46,16 +46,25 @@ class CardsViewController: UIViewController {
         noButton.layer.shadowRadius = 2
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // nav bar helper
+//        let nav = self.navigationController?.navigationBar
+        
+        // nav bar styles
+//        nav?.barStyle = UIBarStyle.black
+        
+        // add app logo with constraints to nav bar
+        let imageView = UIImageView()
+        imageView.widthAnchor.constraint(equalToConstant: 34).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 34).isActive = true
+        imageView.contentMode = .scaleAspectFit
+        
+        // add logo to navbar
+        let image = UIImage(named: "LogoColor")
+        imageView.image = image
 
-    /*
-    // MARK: - Navigation
+        navigationItem.titleView = imageView
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
-
 }
