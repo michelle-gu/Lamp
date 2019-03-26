@@ -15,9 +15,12 @@ class MessagesViewController: UIViewController {
     @IBOutlet weak var profile2PicView: UIImageView!
     
     // profiles in messages
+    @IBOutlet weak var profileM1PicView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //setUpNavigationBarItems()
 
         // profile picture styling
         let profileBorderRadius = profile1PicView.bounds.height / 2
@@ -25,18 +28,22 @@ class MessagesViewController: UIViewController {
         profile2PicView.layer.cornerRadius = profileBorderRadius
         profile1PicView.clipsToBounds = true
         profile2PicView.clipsToBounds = true
+        
+        // message profile picture styling
+        let messageProfileBorderRadius = profileM1PicView.bounds.height / 2
+        profileM1PicView.layer.cornerRadius = messageProfileBorderRadius
+        profileM1PicView.clipsToBounds = true
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        
-//        // back to main card page
-//        let logo = UIImage(named: "LogoColor")
-//        let lampLogo = UIButton(type: .system)
-//        lampLogo.setImage(logo, for: .normal)
-//        
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: lampLogo)
-//        
-//    }
+    private func setUpNavigationBarItems() {
+        // back to main card page button
+        let backButton = UIButton(type: .system)
+        backButton.setImage(UIImage(named: "LogoColor")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        backButton.widthAnchor.constraint(equalToConstant: 28).isActive = true
+        backButton.heightAnchor.constraint(equalToConstant: 34).isActive = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+        
+    }
     
 
 }

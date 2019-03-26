@@ -245,10 +245,19 @@ SWIFT_CLASS("_TtC4Lamp26MatchMessageViewController")
 @end
 
 
+SWIFT_CLASS("_TtC4Lamp29MessageInstanceViewController")
+@interface MessageInstanceViewController : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC4Lamp22MessagesViewController")
 @interface MessagesViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified profile1PicView;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified profile2PicView;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified profileM1PicView;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

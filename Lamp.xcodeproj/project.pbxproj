@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07131722224554F3000CDD33 /* MatchMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07131721224554F3000CDD33 /* MatchMessageViewController.swift */; };
 		07AB86A0224921D9001EE449 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AB869F224921D9001EE449 /* MessagesViewController.swift */; };
+		07AB86A2224994BD001EE449 /* MessageInstanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */; };
 		07B43E6622348C0900BB8548 /* EmailConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B43E6522348C0900BB8548 /* EmailConfirmationViewController.swift */; };
 		07B43E6822348C4000BB8548 /* SocialMediaConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B43E6722348C4000BB8548 /* SocialMediaConnectViewController.swift */; };
 		07B43E6A22348C7600BB8548 /* ProfileCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B43E6922348C7600BB8548 /* ProfileCreationViewController.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		07131721224554F3000CDD33 /* MatchMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchMessageViewController.swift; sourceTree = "<group>"; };
 		07AB869F224921D9001EE449 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInstanceViewController.swift; sourceTree = "<group>"; };
 		07B43E6522348C0900BB8548 /* EmailConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailConfirmationViewController.swift; sourceTree = "<group>"; };
 		07B43E6722348C4000BB8548 /* SocialMediaConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaConnectViewController.swift; sourceTree = "<group>"; };
 		07B43E6922348C7600BB8548 /* ProfileCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCreationViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				07B43E6F22348D0900BB8548 /* CardsViewController.swift */,
 				07131721224554F3000CDD33 /* MatchMessageViewController.swift */,
 				07AB869F224921D9001EE449 /* MessagesViewController.swift */,
+				07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				07B43E6C22348C9900BB8548 /* ProfileLocationViewController.swift in Sources */,
 				07B43E6822348C4000BB8548 /* SocialMediaConnectViewController.swift in Sources */,
 				B6B897132233025600164801 /* User.swift in Sources */,
+				07AB86A2224994BD001EE449 /* MessageInstanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
