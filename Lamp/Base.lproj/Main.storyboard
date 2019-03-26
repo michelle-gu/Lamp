@@ -32,6 +32,7 @@
                                 <color key="tintColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="LOG IN"/>
                                 <connections>
+                                    <action selector="logInDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GAO-h6-H3Y"/>
                                     <segue destination="0nf-L3-v0g" kind="show" identifier="showLoginScreen" id="9WS-Lc-l6O"/>
                                 </connections>
                             </button>
@@ -48,6 +49,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="signUpDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKN-q2-yok"/>
                                     <segue destination="ceN-V3-Lv2" kind="popoverPresentation" identifier="sendEmailConfirm" popoverAnchorView="qfH-eP-3bd" id="dov-Yf-zTS">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
@@ -104,6 +106,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="wYJ-Hi-5in"/>
+                    <connections>
+                        <outlet property="confirmPasswordField" destination="ErW-n6-drJ" id="TxE-fM-YP9"/>
+                        <outlet property="emailField" destination="dsJ-Vd-aDm" id="3nd-fz-NWV"/>
+                        <outlet property="logInButton" destination="Dkw-l1-Q9N" id="KIZ-7A-kcb"/>
+                        <outlet property="passwordField" destination="FE2-NE-z1Z" id="bkW-MA-dLe"/>
+                        <outlet property="signUpButton" destination="qfH-eP-3bd" id="VyW-t2-AiS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -538,6 +547,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="logInDidTouch:" destination="nTe-Tx-Mzo" eventType="touchUpInside" id="KCK-pZ-bfq"/>
                                     <segue destination="flf-ug-c2v" kind="show" identifier="showSocialMediaScreen" id="CbP-Ea-bhu"/>
                                 </connections>
                             </button>
@@ -587,6 +597,7 @@
                                 <color key="tintColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="SIGN UP"/>
                                 <connections>
+                                    <action selector="signUpDidTouch:" destination="nTe-Tx-Mzo" eventType="touchUpInside" id="tfg-AY-yjC"/>
                                     <segue destination="bad-8v-AgN" kind="show" identifier="showSignUpScreen" id="aaS-ll-X6p"/>
                                 </connections>
                             </button>
@@ -595,6 +606,12 @@
                         <viewLayoutGuide key="safeArea" id="2HH-Mx-aMh"/>
                     </view>
                     <navigationItem key="navigationItem" id="L4u-73-Pgh"/>
+                    <connections>
+                        <outlet property="emailField" destination="uxr-hG-g8s" id="qhO-XX-5IL"/>
+                        <outlet property="logInButton" destination="PVy-PE-b9r" id="dNn-75-NVD"/>
+                        <outlet property="passwordField" destination="gM6-NL-DXr" id="pvx-Rn-6tl"/>
+                        <outlet property="signUpButton" destination="ewY-O2-AD1" id="x2P-RY-eMc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGm-Vn-xJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
