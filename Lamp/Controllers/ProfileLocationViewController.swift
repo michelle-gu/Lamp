@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import Firebase
 
 // current universities
 let uniPickerData = [String](arrayLiteral: "University of Texas at Austin", "St. Edwards")
 
 class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    // segues
+    // MARK: Segues
     let openMap = "openMap"
     let showHomePage = "showHomePage"
+    
+    // MARK: Properties
+    let ref = Database.database().reference(withPath: "user-profiles")
     
     // MARK: Outlets
     @IBOutlet weak var profilePictureView: UIImageView!
@@ -58,7 +62,24 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
+        guard
+            let uni = uniTextField.text,
+            let futureLoc = futureLocTextField.text,
+            let occupation = occupationTextField.text
+            //let profilePicture = profilePictureView.image
+            else {
+                return
+        }
+        
+        let user = Auth.auth().currentUser?.uid
+        
+        let profile = ref.child(user!)
+        let values = [
+            "uni": uni,
+            "futureLoc": futureLoc,
+            "occupation": occupation
+        ]
+        profile.updateChildValues(values)
     }
     
-
 }
