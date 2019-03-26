@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 let genderPickerData = [String](arrayLiteral: "Female", "Male", "Other")
 
@@ -15,10 +16,15 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     // MARK: Constants
     let showLocationInfoScreen = "showLocationInfoScreen"
     
+    // MARK: Properties
+    let ref = Database.database().reference(withPath: "user-profiles")
+    
+    // MARK: Outlets
     @IBOutlet weak var profilePictureView: UIImageView!
     @IBOutlet weak var changePictureButton: UIButton!
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var birthdayTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +82,35 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     // Sets gender text field to selection
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         genderTextField.text = genderPickerData[row]
+    }
+    
+    // Upon completion of filling in profile fields and Next button is pressed
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        guard
+            let firstName = firstNameTextField.text,
+            let birthday = birthdayTextField.text,
+            let gender = genderTextField.text,
+            //let profilePicture = profilePictureView.image,
+            firstName.count > 0
+            else {
+                let alert = UIAlertController(
+                    title: "Profile Creation Failed",
+                    message: "Please fill First Name field.",
+                    preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+                return
+        }
+        
+        let user = Auth.auth().currentUser?.uid
+        
+        let profile = Profile(firstName: firstName, birthday: birthday, gender: gender, uni: "", futureLoc: "", occupation: "")
+        // 3
+        let profileRef = self.ref.child(user!)
+        
+        // 4
+        profileRef.setValue(profile.toAnyObject())
     }
 
 }

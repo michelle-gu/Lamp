@@ -17,8 +17,11 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     let openMap = "openMap"
     let showHomePage = "showHomePage"
     
+    // MARK: Outlets
     @IBOutlet weak var profilePictureView: UIImageView!
     @IBOutlet weak var uniTextField: UITextField!
+    @IBOutlet weak var futureLocTextField: UITextField!
+    @IBOutlet weak var occupationTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,5 +56,9 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         uniTextField.text = uniPickerData[row]
     }
+    
+    @IBAction func doneButtonPressed(_ sender: Any) {
+    }
+    
 
 }

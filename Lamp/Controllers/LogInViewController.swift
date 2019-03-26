@@ -73,5 +73,10 @@ class LogInViewController: UIViewController {
     }
     
     // MARK: - Navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == showSignUpScreen, let destination = segue.destination as? UIViewController {
+//            destination.email = emailField.text
+//        }
+//    }
 
 }

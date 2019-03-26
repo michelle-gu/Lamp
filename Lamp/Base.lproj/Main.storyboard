@@ -319,6 +319,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="nextButtonPressed:" destination="60o-zV-7xX" eventType="touchUpInside" id="Hp9-q8-KOg"/>
                                     <segue destination="f7I-q0-QYu" kind="show" identifier="showLocationInfoScreen" id="Nyq-VY-Z89"/>
                                 </connections>
                             </button>
@@ -336,6 +337,7 @@
                     <connections>
                         <outlet property="birthdayTextField" destination="hcg-jM-27Q" id="gpo-pD-e0J"/>
                         <outlet property="changePictureButton" destination="V04-gP-XNv" id="SGJ-Hc-qZn"/>
+                        <outlet property="firstNameTextField" destination="ov7-8j-oYj" id="5an-vX-hmD"/>
                         <outlet property="genderTextField" destination="s00-dv-s8A" id="P9N-2z-Uhv"/>
                         <outlet property="profilePictureView" destination="pkP-2H-sCP" id="iPk-Rc-fZi"/>
                     </connections>
@@ -418,6 +420,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="doneButtonPressed:" destination="f7I-q0-QYu" eventType="touchUpInside" id="1h1-kU-m2v"/>
                                     <segue destination="Skw-1a-Og8" kind="show" identifier="showHomePage" id="SP5-0k-tVq"/>
                                 </connections>
                             </button>
@@ -432,6 +435,8 @@
                         <viewLayoutGuide key="safeArea" id="tJO-Nj-4HI"/>
                     </view>
                     <connections>
+                        <outlet property="futureLocTextField" destination="8QG-ze-MQh" id="eHk-eT-KLT"/>
+                        <outlet property="occupationTextField" destination="sDn-mk-5Xb" id="n18-GJ-BOD"/>
                         <outlet property="profilePictureView" destination="2kC-M0-PXD" id="HRl-so-oCe"/>
                         <outlet property="uniTextField" destination="FNH-AD-iAe" id="0bU-mB-gLK"/>
                     </connections>
