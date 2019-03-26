@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
     
     // MARK: Constants
     let sendEmailConfirm = "sendEmailConfirm"
     let showLoginScreen = "showLoginScreen"
-
 
     // MARK: Properties
 
@@ -30,25 +30,56 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpDidTouch(_ sender: Any) {
+        guard
+            let email = emailField.text,
+            let password = passwordField.text,
+            let confirmedPassword = confirmPasswordField.text,
+            email.count > 0,
+            password.count > 0,
+            confirmedPassword.count > 0,
+            confirmedPassword == password
+            else {
+                let alert = UIAlertController(
+                    title: "Sign Up Failed",
+                    message: "Please fill in all fields and ensure password matches confirmation password.",
+                    preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+                return
+        }
         
+        // Store email and password to firebase
+        Auth.auth().createUser(withEmail: email, password: password) { user, error in
+            if error == nil {
+                // TODO: Success - send email
+            } else {
+                let alert = UIAlertController(
+                    title: "Sign Up Failed",
+                    message: error?.localizedDescription,
+                    preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     
     // MARK: UIViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Checks if user is already logged in
+        Auth.auth().addStateDidChangeListener() { auth, user in
+            if user != nil {
+                self.performSegue(withIdentifier: "showLoginScreen",
+                                  sender: nil)
+                self.emailField.text = nil
+                self.passwordField.text = nil
+            }
+        }
     }
     
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

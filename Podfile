@@ -7,5 +7,7 @@ target 'Lamp' do
 
   # Pods for Lamp
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
 end
