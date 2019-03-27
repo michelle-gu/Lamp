@@ -13,6 +13,10 @@ public let discovery = ["Future Location", "Max Distance", "Universities", "Gend
 
 class DiscoveryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    let futureLocationSegueIdentifier = "FutureLocationSegueIdentifier"
+    let universitiesSegueIdentifier = "UniversitiesSegueIdentifier"
+    let genderSegueIdentifier = "GenderSegueIdentifier"
+    
     @IBOutlet weak var tableView: UITableView!
     let discoveryCellIdentifier = "DiscoveryCellIdentifier"
     
@@ -48,34 +52,36 @@ class DiscoveryViewController: UIViewController, UITableViewDataSource, UITableV
             
         case "Max Distance":
             let sliderCell = tableView.dequeueReusableCell(withIdentifier: SliderTableViewCell.identifier) as! SliderTableViewCell
-            
+            sliderCell.titleLabel.text = cellLabel
             // configure slider cell
             
             return sliderCell
             
         case "Show My Profile":
             let toggleCell = tableView.dequeueReusableCell(withIdentifier: ToggleTableViewCell.identifier) as! ToggleTableViewCell
-            
+            toggleCell.titleLabel.text = cellLabel
             
             return toggleCell
         default:
             fatalError("Something went wrong")
         }
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         
-//        if cellLabel == "Future Location" || cellLabel == "Universities" || cellLabel == "Gender"{
-//            cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: discoveryCellIdentifier)
-//            cell.detailTextLabel?.text = "Nothing"
-//        }
-//
-//        cell.textLabel?.text = cellLabel
-////        else if cellLabel == "Max Distance" || cellLabel == "Age Range"{
-////
-////        }
-//
-//        cell.textLabel?.font = UIFont(name: "Avenir", size: 20)
-//
-//        return cell
+        tableView.deselectRow(at: indexPath, animated: true)
+        var segueIdentifier = ""
+        if discovery[indexPath.row] == "Future Location"{
+            segueIdentifier = futureLocationSegueIdentifier
+        }
+        else if discovery[indexPath.row] == "Universities"{
+            segueIdentifier = universitiesSegueIdentifier
+        }
+        else if discovery[indexPath.row] == "Gender"{
+            segueIdentifier = genderSegueIdentifier
+        }
+        performSegue(withIdentifier: segueIdentifier, sender: self)
     }
     
 
