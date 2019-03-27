@@ -9,5 +9,7 @@ target 'Lamp' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Eureka'
+  pod 'RangeUISlider', '~> 1.8'
 
 end
