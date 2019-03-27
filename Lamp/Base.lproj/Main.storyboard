@@ -757,16 +757,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sliders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLg-27-e0f">
-                                                    <rect key="frame" x="15" y="25" width="52" height="18"/>
+                                                    <rect key="frame" x="14.999999999999996" y="25" width="50.666666666666657" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="KWI-y2-qDj"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t8W-Wi-BBt" customClass="RangeUISlider" customModule="RangeUISlider">
-                                                    <rect key="frame" x="150" y="21" width="200" height="27"/>
+                                                    <rect key="frame" x="148.66666666666663" y="21" width="201.33333333333337" height="27"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="27" id="8Dc-DR-OfD"/>
@@ -776,13 +776,13 @@
                                                             <integer key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="scaleMinValue">
-                                                            <real key="value" value="0.0"/>
+                                                            <real key="value" value="18"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="scaleMaxValue">
-                                                            <real key="value" value="10"/>
+                                                            <real key="value" value="40"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="defaultValueLeftKnob">
-                                                            <real key="value" value="1"/>
+                                                            <real key="value" value="18"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="rangeSelectedBackgroundEdgeInsetTop">
                                                             <real key="value" value="1"/>
@@ -799,17 +799,14 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="leftKnobCorners">
                                                             <real key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="rangeSelectedColor">
-                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="rangeSelectedGradientColor1">
-                                                            <color key="value" red="0.3921568627" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="leftKnobColor">
-                                                            <color key="value" red="0.98039215690000003" green="0.9444438758" blue="0.18058293119999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="value" red="0.3921568627" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="defaultValueRightKnob">
-                                                            <real key="value" value="8"/>
+                                                            <real key="value" value="25"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="rightKnobWidth">
                                                             <real key="value" value="20"/>
@@ -821,10 +818,22 @@
                                                             <real key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="rightKnobColor">
-                                                            <color key="value" red="0.1994088295" green="0.98039215690000003" blue="0.18691395089999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="value" red="0.3921568627" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="barHeight">
-                                                            <real key="value" value="3"/>
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rangeNotSelectedBackgroundEdgeInsetTop">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rangeNotSelectedBackgroundEdgeInsetLeft">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="point" keyPath="rangeSelectedGradientStartPoint">
+                                                            <point key="value" x="500" y="500"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="rangeSelectedGradientColor2">
+                                                            <color key="value" red="0.43505138158798218" green="0.70846599340438843" blue="0.98683935403823853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -855,7 +864,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="jj8-d9-Tch"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -881,47 +890,56 @@
                                             <outlet property="titleLabel" destination="MCa-1K-bYG" id="inn-kG-ZEA"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SubtitleTableViewCell" rowHeight="73" id="JqE-kI-SQ4" customClass="SubtitleTableViewCell" customModule="Lamp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="174" width="375" height="73"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SubtitleTableViewCell" rowHeight="81" id="JqE-kI-SQ4" customClass="SubtitleTableViewCell" customModule="Lamp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="174" width="375" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JqE-kI-SQ4" id="FWE-WD-ciT">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="72.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="80.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSt-GM-FQM">
-                                                    <rect key="frame" x="15" y="44" width="59" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5n-mf-Re4">
+                                                    <rect key="frame" x="15" y="11" width="327" height="25"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5n-mf-Re4">
-                                                    <rect key="frame" x="15" y="11" width="33.333333333333336" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSt-GM-FQM">
+                                                    <rect key="frame" x="28" y="32" width="300" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="him-e2-JYa"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BSt-GM-FQM" firstAttribute="top" secondItem="j5n-mf-Re4" secondAttribute="bottom" constant="-4" id="58f-8V-PzT"/>
+                                                <constraint firstItem="BSt-GM-FQM" firstAttribute="leading" secondItem="FWE-WD-ciT" secondAttribute="leadingMargin" constant="13" id="Mhh-0i-NHY"/>
+                                                <constraint firstItem="j5n-mf-Re4" firstAttribute="leading" secondItem="FWE-WD-ciT" secondAttribute="leading" constant="15" id="XtB-JR-IV0"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="j5n-mf-Re4" secondAttribute="trailing" constant="33" id="wHf-b3-GNG"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="subtitleLabel" destination="BSt-GM-FQM" id="eij-pp-H6O"/>
                                             <outlet property="titleLabel" destination="j5n-mf-Re4" id="vk8-yy-QFR"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToggleTableViewCell" rowHeight="73" id="N4W-Gm-MVv" customClass="ToggleTableViewCell" customModule="Lamp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="247" width="375" height="73"/>
+                                        <rect key="frame" x="0.0" y="255" width="375" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N4W-Gm-MVv" id="eSd-2b-9sQ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="72.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sliders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZF-kI-llp">
-                                                    <rect key="frame" x="15" y="25" width="52" height="18"/>
+                                                    <rect key="frame" x="14.999999999999996" y="25" width="50.666666666666657" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="HGP-7A-wbB"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1891,8 +1909,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="PA3-YF-Hx5"/>
         <segue reference="bMq-vc-0S6"/>
-        <segue reference="Giz-EN-7gh"/>
-        <segue reference="SP5-0k-tVq"/>
         <segue reference="BfG-uu-C7Q"/>
         <segue reference="5YV-eX-J77"/>
         <segue reference="9WS-Lc-l6O"/>

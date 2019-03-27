@@ -33,12 +33,14 @@ class DiscoveryViewController: UIViewController, UITableViewDataSource, UITableV
             fallthrough
         case "Gender":
             let subtitleCell = tableView.dequeueReusableCell(withIdentifier: SubtitleTableViewCell.identifier) as! SubtitleTableViewCell
-            
+            subtitleCell.titleLabel.text = cellLabel
+            subtitleCell.subtitleLabel.text = "Hello"
             // configure subtitle
 
             return subtitleCell
         case "Age Range":
             let rangeCell = tableView.dequeueReusableCell(withIdentifier: RangeSliderTableViewCell.identifier) as! RangeSliderTableViewCell
+            rangeCell.titleLabel.text = cellLabel
             
             // configure range cell
             
