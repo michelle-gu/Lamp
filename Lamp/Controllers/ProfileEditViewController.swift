@@ -16,8 +16,12 @@ class ProfileEditViewController: UIViewController {
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var occupationTextField: UITextField!
     @IBOutlet weak var futureLocTextField: UITextField!
-    @IBOutlet weak var bioTextField: UITextField!
+    @IBOutlet weak var bioText: UITextView!
     @IBOutlet weak var budgetTextField: UITextField!
+    @IBOutlet weak var bedroomNumTextField: UITextField!
+    @IBOutlet weak var petsTextField: UITextField!
+    @IBOutlet weak var smokingTextField: UITextField!
+    @IBOutlet weak var timeOfDayTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +34,7 @@ class ProfileEditViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // dismisses the edit page and returns to ProfileViewController
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
