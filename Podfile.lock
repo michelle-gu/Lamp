@@ -1,4 +1,5 @@
 PODS:
+  - Eureka (4.3.1)
   - Firebase/Auth (5.18.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.4.0)
@@ -66,14 +67,18 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - RangeUISlider (1.8.0)
 
 DEPENDENCIES:
+  - Eureka
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - RangeUISlider (~> 1.8)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Eureka
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -86,8 +91,10 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - RangeUISlider
 
 SPEC CHECKSUMS:
+  Eureka: 28ea296f06710f6745266b71f17862048941a32d
   Firebase: 02f3281965c075426141a0ce1277e9de6649cab9
   FirebaseAnalytics: 23851fe602c872130a2c5c55040b302120346cc2
   FirebaseAuth: d85d052354447f30b4b2a805ab91b511458b56a6
@@ -100,7 +107,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  RangeUISlider: 50c649267711dde92f7c27d1d52acd75b5adb73e
 
-PODFILE CHECKSUM: f739df0c39a8279eedcf6992f5190bb19f035dd2
+PODFILE CHECKSUM: 90ae69f17f5001ffe137ffa43af5c105ed50afc7
 
 COCOAPODS: 1.6.1
