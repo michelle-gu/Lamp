@@ -27,7 +27,29 @@ class ProfileEditViewController: UIViewController {
         super.viewDidLoad()
         
         // load existing information
+        let borderRadius = profilePictureImageView.bounds.height / 2
+        profilePictureImageView.layer.cornerRadius = borderRadius
+        profilePictureImageView.clipsToBounds = true
         
+        bioText.layer.borderWidth = 0.5
+        bioText.layer.cornerRadius = 5
+        bioText.layer.borderColor = UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1).cgColor
+        bioText.text = "Bio"
+        bioText.textColor = UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1)
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1) {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Bio"
+            textView.textColor = UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1)
+        }
     }
     
     override func didReceiveMemoryWarning() {
