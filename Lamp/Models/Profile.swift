@@ -11,14 +11,22 @@ import Firebase
 
 struct Profile {
     
+    // Firebase ref/key
     let ref: DatabaseReference?
     let key: String
+    
+    // Basic info
     let firstName: String
     let birthday: String
     let gender: String
     let uni: String
     let futureLoc: String
     let occupation: String
+    
+    // Lifestyle preferences
+    
+    // Contact info
+    
     //let profilePicture: UIImage
     
     init(key: String = "", firstName: String, birthday: String, gender: String, uni: String, futureLoc: String, occupation: String) {
@@ -56,6 +64,24 @@ struct Profile {
         self.occupation = occupation
         //self.profilePicture = profilePicture
     }
+    
+//    func getAgeStr() -> String {
+//        let now = Date()
+//        let calendar = Calendar.current
+//
+//        let myDateFormatter = DateFormatter()
+//        myDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+//        myDateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+//        let date = myDateFormatter.date(from: self.birthday)!
+//
+//
+//        let birthday =
+//        let ageComponents = calendar.dateComponents([.year], from: self.birthday, to: now)
+//
+//        let age = ageComponents.year!
+//
+//        return age
+//    }
     
     func toAnyObject() -> Any {
         return [

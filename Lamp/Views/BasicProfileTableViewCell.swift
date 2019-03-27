@@ -1,5 +1,5 @@
 //
-//  LifestylePreferencesTableViewCell.swift
+//  BasicProfileTableViewCell.swift
 //  Lamp
 //
 //  Created by Michelle Gu on 3/27/19.
@@ -8,10 +8,11 @@
 
 import UIKit
 
-class LifestylePreferencesTableViewCell: UITableViewCell {
+class BasicProfileTableViewCell: UITableViewCell {
 
     // MARK: Outlets
-    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     // MARK: Lifecycle
     override func awakeFromNib() {

@@ -1,5 +1,5 @@
 //
-//  BasicProfileTableViewCell.swift
+//  ContactInfoTableViewCell.swift
 //  Lamp
 //
 //  Created by Michelle Gu on 3/27/19.
@@ -8,10 +8,13 @@
 
 import UIKit
 
-class BasicProfileTableViewCell: UITableViewCell {
+class ContactInfoTableViewCell: UITableViewCell {
 
     // MARK: Outlets
-    
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var facebookLabel: UILabel!
+    @IBOutlet weak var otherLabel: UILabel!
     
     // MARK: Lifecycle
     override func awakeFromNib() {

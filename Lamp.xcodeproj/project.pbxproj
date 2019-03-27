@@ -18,6 +18,8 @@
 		07B43E7022348D0900BB8548 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B43E6F22348D0900BB8548 /* CardsViewController.swift */; };
 		484D1178B6C8C9141158E82C /* Pods_Lamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADB058DDDBB271D44C9F82B /* Pods_Lamp.framework */; };
 		571B426B224AC8EF00F9F42B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B426A224AC8EF00F9F42B /* Profile.swift */; };
+		571B426F224B401E00F9F42B /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B426E224B401E00F9F42B /* ProfileEditViewController.swift */; };
+		571B4271224BD66300F9F42B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B4270224BD66300F9F42B /* ProfileViewController.swift */; };
 		95132AC0224B4469006C1A84 /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95132ABF224B4469006C1A84 /* SliderTableViewCell.swift */; };
 		95132AC2224B47D9006C1A84 /* RangeSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95132AC1224B47D9006C1A84 /* RangeSliderTableViewCell.swift */; };
 		95132AC4224B47FB006C1A84 /* SubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95132AC3224B47FB006C1A84 /* SubtitleTableViewCell.swift */; };
@@ -26,8 +28,9 @@
 		95412749224B12C9003343D4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95412748224B12C9003343D4 /* AccountViewController.swift */; };
 		9541274D224B1EC8003343D4 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */; };
 		95412751224B2F8F003343D4 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95412750224B2F8E003343D4 /* NotificationsViewController.swift */; };
-		571B426F224B401E00F9F42B /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B426E224B401E00F9F42B /* ProfileEditViewController.swift */; };
-		571B4271224BD66300F9F42B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B4270224BD66300F9F42B /* ProfileViewController.swift */; };
+		B640FEB2224C064B00E8FBFF /* BasicProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB1224C064B00E8FBFF /* BasicProfileTableViewCell.swift */; };
+		B640FEB5224C066700E8FBFF /* ContactInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */; };
+		B640FEB6224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */; };
 		B65D1CFC2232409B009F84A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B65D1CFB2232409B009F84A3 /* GoogleService-Info.plist */; };
 		B6B897132233025600164801 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B897122233025600164801 /* User.swift */; };
 		B6B897152233037300164801 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B897142233037300164801 /* SignUpViewController.swift */; };
@@ -50,6 +53,8 @@
 		07B43E6D22348CCC00BB8548 /* ProfileMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMapViewController.swift; sourceTree = "<group>"; };
 		07B43E6F22348D0900BB8548 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		571B426A224AC8EF00F9F42B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		571B426E224B401E00F9F42B /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
+		571B4270224BD66300F9F42B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		95132ABF224B4469006C1A84 /* SliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
 		95132AC1224B47D9006C1A84 /* RangeSliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderTableViewCell.swift; sourceTree = "<group>"; };
 		95132AC3224B47FB006C1A84 /* SubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleTableViewCell.swift; sourceTree = "<group>"; };
@@ -58,8 +63,9 @@
 		95412748224B12C9003343D4 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
 		95412750224B2F8E003343D4 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
-		571B426E224B401E00F9F42B /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
-		571B4270224BD66300F9F42B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B640FEB1224C064B00E8FBFF /* BasicProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicProfileTableViewCell.swift; sourceTree = "<group>"; };
+		B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewCell.swift; sourceTree = "<group>"; };
+		B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifestylePreferencesTableViewCell.swift; sourceTree = "<group>"; };
 		B65D1CFB2232409B009F84A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6B897122233025600164801 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B6B897142233037300164801 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +107,9 @@
 		95132ABD224B442D006C1A84 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B640FEB1224C064B00E8FBFF /* BasicProfileTableViewCell.swift */,
+				B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */,
+				B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */,
 				95132ABE224B4436006C1A84 /* Table View Cells */,
 			);
 			path = Views;
@@ -172,14 +181,14 @@
 		B6F5005522307A3500FD1433 /* Lamp */ = {
 			isa = PBXGroup;
 			children = (
-				95132ABD224B442D006C1A84 /* Views */,
 				B6B8971A22331FCA00164801 /* AppDelegate.swift */,
-				B6B897182233095300164801 /* Lamp.entitlements */,
+				B6F5005A22307A3500FD1433 /* Main.storyboard */,
+				95132ABD224B442D006C1A84 /* Views */,
 				B6B897112233022700164801 /* Models */,
 				B6B897102233021D00164801 /* Controllers */,
-				B6F5005A22307A3500FD1433 /* Main.storyboard */,
 				B6F5005D22307A3600FD1433 /* Assets.xcassets */,
 				B6F5005F22307A3600FD1433 /* LaunchScreen.storyboard */,
+				B6B897182233095300164801 /* Lamp.entitlements */,
 				B6F5006222307A3600FD1433 /* Info.plist */,
 				B65D1CFB2232409B009F84A3 /* GoogleService-Info.plist */,
 			);
@@ -331,12 +340,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				95412751224B2F8F003343D4 /* NotificationsViewController.swift in Sources */,
-				571B426F224B401E00F9F42B /* ProfileEditViewController.swift in Sources */,				B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */,
+				571B426F224B401E00F9F42B /* ProfileEditViewController.swift in Sources */,
+				B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */,
 				9541274D224B1EC8003343D4 /* DiscoveryViewController.swift in Sources */,
+				B640FEB6224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift in Sources */,
 				B6F5005922307A3500FD1433 /* ViewController.swift in Sources */,
 				07AB86A0224921D9001EE449 /* MessagesViewController.swift in Sources */,
 				B6B897152233037300164801 /* SignUpViewController.swift in Sources */,
 				95132AC6224B4803006C1A84 /* ToggleTableViewCell.swift in Sources */,
+				B640FEB2224C064B00E8FBFF /* BasicProfileTableViewCell.swift in Sources */,
 				571B426B224AC8EF00F9F42B /* Profile.swift in Sources */,
 				07B43E6A22348C7600BB8548 /* ProfileCreationViewController.swift in Sources */,
 				571B4271224BD66300F9F42B /* ProfileViewController.swift in Sources */,
@@ -345,6 +357,7 @@
 				95412745224B0254003343D4 /* SettingsViewController.swift in Sources */,
 				95412749224B12C9003343D4 /* AccountViewController.swift in Sources */,
 				07B43E6E22348CCC00BB8548 /* ProfileMapViewController.swift in Sources */,
+				B640FEB5224C066700E8FBFF /* ContactInfoTableViewCell.swift in Sources */,
 				07B43E6622348C0900BB8548 /* EmailConfirmationViewController.swift in Sources */,
 				07B43E7022348D0900BB8548 /* CardsViewController.swift in Sources */,
 				95132AC4224B47FB006C1A84 /* SubtitleTableViewCell.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ContactInfoTableViewCell.swift
+//  LifestylePreferencesTableViewCell.swift
 //  Lamp
 //
 //  Created by Michelle Gu on 3/27/19.
@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ContactInfoTableViewCell: UITableViewCell {
+class LifestylePreferencesTableViewCell: UITableViewCell {
 
     // MARK: Outlets
-    
-    
+    @IBOutlet weak var numBedroomsLabel: UILabel!
+    @IBOutlet weak var petsLabel: UILabel!
+    @IBOutlet weak var smokingLabel: UILabel!
+    @IBOutlet weak var otherLabel: UILabel!
+
     // MARK: Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
