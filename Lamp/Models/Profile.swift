@@ -9,8 +9,10 @@
 import Foundation
 import Firebase
 
+// Model for user profiles
 struct Profile {
     
+    // MARK: Variables
     // Firebase ref/key
     let ref: DatabaseReference?
     let key: String
@@ -22,16 +24,29 @@ struct Profile {
     let uni: String
     let futureLoc: String
     let occupation: String
-    
-    // Lifestyle preferences
-    
-    // Contact info
-    
     //let profilePicture: UIImage
     
+    // Lifestyle preferences
+    let numBedrooms: String
+    let pets: String
+    let smoking: String
+    let otherLifestylePrefs: String
+    
+    // Contact info
+    let phone: String
+    let email: String
+    let facebook: String
+    let otherContact: String
+    
+    // MARK: Initializers
+    
+    // Initializer
     init(key: String = "", firstName: String, birthday: String, gender: String, uni: String, futureLoc: String, occupation: String) {
+        // Initialize Firebase ref/key
         self.ref = nil
         self.key = key
+        
+        // Initialize Basic Info
         self.firstName = firstName
         self.birthday = birthday
         self.gender = gender
@@ -39,8 +54,21 @@ struct Profile {
         self.futureLoc = futureLoc
         self.occupation = occupation
         //self.profilePicture = profilePicture
+        
+        // Initialize Lifestyle Preferences
+        self.numBedrooms = ""
+        self.pets = ""
+        self.smoking = ""
+        self.otherLifestylePrefs = ""
+        
+        // Initialize Contact Info
+        self.phone = ""
+        self.email = ""
+        self.facebook = ""
+        self.otherContact = ""
     }
     
+    // Snapshot initializer
     init?(snapshot: DataSnapshot) {
         guard
             let value = snapshot.value as? [String: AnyObject],
@@ -49,13 +77,24 @@ struct Profile {
             let gender = value["gender"] as? String,
             let uni = value["uni"] as? String,
             let futureLoc = value["futureLoc"] as? String,
-            let occupation = value["occupation"] as? String else {
+            let occupation = value["occupation"] as? String,
             //let profilePicture = value["profilePicture"] as? UIImage
+            let numBedrooms = value["numBedrooms"] as? String,
+            let pets = value["pets"] as? String,
+            let smoking = value["smoking"] as? String,
+            let otherLifestylePrefs = value["otherLifestylePrefs"] as? String,
+            let phone = value["phone"] as? String,
+            let email = value["email"] as? String,
+            let facebook = value["facebook"] as? String,
+            let otherContact = value["otherContact"] as? String else {
             return nil
         }
         
+        // Firebase ref/key
         self.ref = snapshot.ref
         self.key = snapshot.key
+        
+        // Basic Info
         self.firstName = firstName
         self.birthday = birthday
         self.gender = gender
@@ -63,35 +102,55 @@ struct Profile {
         self.futureLoc = futureLoc
         self.occupation = occupation
         //self.profilePicture = profilePicture
+        
+        // Lifestyle Preferences
+        self.numBedrooms = numBedrooms
+        self.pets = pets
+        self.smoking = smoking
+        self.otherLifestylePrefs = otherLifestylePrefs
+        
+        // Contact Info
+        self.phone = phone
+        self.email = email
+        self.facebook = facebook
+        self.otherContact = otherContact
     }
     
-//    func getAgeStr() -> String {
-//        let now = Date()
-//        let calendar = Calendar.current
-//
-//        let myDateFormatter = DateFormatter()
-//        myDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-//        myDateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-//        let date = myDateFormatter.date(from: self.birthday)!
-//
-//
-//        let birthday =
-//        let ageComponents = calendar.dateComponents([.year], from: self.birthday, to: now)
-//
-//        let age = ageComponents.year!
-//
-//        return age
-//    }
+    // MARK: Functions
     
+    // Get age from birthday string
+    func getAgeStr() -> String {
+        let now = Date()
+        let calendar = Calendar.current
+        let myDateFormatter = DateFormatter()
+        myDateFormatter.dateFormat = "MM/dd/yyyy"
+        let birthdayDate = myDateFormatter.date(from: self.birthday)!
+        let ageComponents = calendar.dateComponents([.year], from: birthdayDate, to: now)
+        let age = ageComponents.year!
+        return String(age)
+    }
+    
+    // Returns json of profile data
     func toAnyObject() -> Any {
         return [
+            // Basic Info
             "firstName": firstName,
             "birthday": birthday,
             "gender": gender,
             "uni": uni,
             "futureLoc": futureLoc,
             "occupation": occupation,
-            //"profilePicture": profilePicture
+            //"profilePicture": profilePicture,
+            // Lifestyle Prefs
+            "numBedrooms": numBedrooms,
+            "pets": pets,
+            "smoking": smoking,
+            "otherLifestylePrefs": otherLifestylePrefs,
+            // Contact Info
+            "phone": phone,
+            "email": email,
+            "facebook": facebook,
+            "otherContact": otherContact
         ]
     }
 }
