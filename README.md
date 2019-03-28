@@ -1,8 +1,8 @@
 Roommate finder for students and alumni at UT Austin.
 
-Alpha Release README
+# Alpha Release README
 
-Contributions:
+## Contributions:
     Lindsey Thompson (35%)
         * Learned about UI and design/styling
         * Created VCs classes, screens, and segues for Home, Messaging, Onboarding, Profile, Swipe
@@ -19,7 +19,7 @@ Contributions:
         * Added Firebase functionality and worked on model for Profile Creation screens
         * Added logic to VC classes
 
-Deviations:
+## Deviations:
     * Did not create the following view controllers:
         * View a profile through Messages (Still figuring out custom navigation)
         * Card swiping/Running out of cards showing a map from the Home view
