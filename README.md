@@ -24,7 +24,7 @@ Roommate finder for students and alumni at UT Austin.
         * View a profile through Messages (Still figuring out custom navigation)
         * Card swiping (Still figuring out custom navigation)
         * Running out of cards to swipe shows a map from the Home view (Card swiping is not yet working)
-        * Login screen does not go directly to Swipe (Still working on custom navigation)
+        * Login screen does not go directly to Swipe -- Profile gets recreated every time (Still working on custom navigation)
     * Note: Account creation/Login -- alerts/user error checking are not functional due 
             to a Window hierarchy problem, However, we included debugging in beta, and if
             done correctly, account creation and login are fully functional.
