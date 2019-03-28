@@ -24,6 +24,8 @@ struct Profile {
     let uni: String
     let futureLoc: String
     let occupation: String
+    let bio: String
+    let budget: String
     //let profilePicture: UIImage
     
     // Lifestyle preferences
@@ -53,6 +55,8 @@ struct Profile {
         self.uni = uni
         self.futureLoc = futureLoc
         self.occupation = occupation
+        self.bio = ""
+        self.budget = ""
         //self.profilePicture = profilePicture
         
         // Initialize Lifestyle Preferences
@@ -78,6 +82,8 @@ struct Profile {
             let uni = value["uni"] as? String,
             let futureLoc = value["futureLoc"] as? String,
             let occupation = value["occupation"] as? String,
+            let bio = value["bio"] as? String,
+            let budget = value["budget"] as? String,
             //let profilePicture = value["profilePicture"] as? UIImage
             let numBedrooms = value["numBedrooms"] as? String,
             let pets = value["pets"] as? String,
@@ -101,6 +107,8 @@ struct Profile {
         self.uni = uni
         self.futureLoc = futureLoc
         self.occupation = occupation
+        self.bio = bio
+        self.budget = budget
         //self.profilePicture = profilePicture
         
         // Lifestyle Preferences
@@ -117,19 +125,6 @@ struct Profile {
     }
     
     // MARK: Functions
-    
-    // Get age from birthday string
-    func getAgeStr() -> String {
-        let now = Date()
-        let calendar = Calendar.current
-        let myDateFormatter = DateFormatter()
-        myDateFormatter.dateFormat = "MM/dd/yyyy"
-        let birthdayDate = myDateFormatter.date(from: self.birthday)!
-        let ageComponents = calendar.dateComponents([.year], from: birthdayDate, to: now)
-        let age = ageComponents.year!
-        return String(age)
-    }
-    
     // Returns json of profile data
     func toAnyObject() -> Any {
         return [
@@ -140,6 +135,8 @@ struct Profile {
             "uni": uni,
             "futureLoc": futureLoc,
             "occupation": occupation,
+            "bio": bio,
+            "budget": budget,
             //"profilePicture": profilePicture,
             // Lifestyle Prefs
             "numBedrooms": numBedrooms,

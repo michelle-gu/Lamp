@@ -91,11 +91,12 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
             let birthday = birthdayTextField.text,
             let gender = genderTextField.text,
             //let profilePicture = profilePictureView.image,
-            firstName.count > 0
+            firstName.count > 0,
+            birthday.count > 0
             else {
                 let alert = UIAlertController(
                     title: "Profile Creation Failed",
-                    message: "Please fill First Name field.",
+                    message: "Please fill First Name and birthday fields.",
                     preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default))

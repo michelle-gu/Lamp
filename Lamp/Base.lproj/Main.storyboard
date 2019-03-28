@@ -1174,6 +1174,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="girl-3" translatesAutoresizingMaskIntoConstraints="NO" id="Rqo-xx-EbM">
+                                <rect key="frame" x="0.0" y="87" width="375" height="271"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="45X-sP-WzP">
                                 <rect key="frame" x="0.0" y="44" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1203,9 +1207,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEl-Ok-Xrm">
-                                <rect key="frame" x="329" y="109" width="30" height="30"/>
+                                <rect key="frame" x="307" y="109" width="55" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Edit"/>
+                                <color key="backgroundColor" red="0.60796302556991577" green="0.69684332609176636" blue="0.94992285966873169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="editButtonDidTouch:" destination="xyo-cP-NUj" eventType="touchUpInside" id="fH3-bK-2NH"/>
                                     <segue destination="o6T-CF-uji" kind="presentation" id="hGF-OB-Vrn"/>
@@ -1216,7 +1224,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bioTableViewCellIdentifier" rowHeight="125" id="hgp-YV-hdF" customClass="BasicProfileTableViewCell" customModule="Lamp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bioCellIdentifier" rowHeight="125" id="hgp-YV-hdF" customClass="BioTableViewCell" customModule="Lamp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hgp-YV-hdF" id="l8M-tV-gjb">
@@ -1231,7 +1239,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is my bio, it tells about all the things I like and don't like. Please be my roommate thanks." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSI-Ph-aRO">
-                                                    <rect key="frame" x="15" y="30" width="345" height="43"/>
+                                                    <rect key="frame" x="15" y="30" width="345" height="95"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
@@ -1240,11 +1248,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="description" destination="SSI-Ph-aRO" id="1XU-s1-qUo"/>
-                                            <outlet property="titleLabel" destination="J6e-n0-g8Q" id="R2i-ou-Chn"/>
+                                            <outlet property="bioTextLabel" destination="SSI-Ph-aRO" id="bZV-PZ-ubw"/>
+                                            <outlet property="bioTitleLabel" destination="J6e-n0-g8Q" id="iZT-UO-PWy"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="budgetTableViewCellIdentifier" rowHeight="70" id="dHk-x4-s4R" customClass="BasicProfileTableViewCell" customModule="Lamp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="budgetCellIdentifier" rowHeight="70" id="dHk-x4-s4R" customClass="BudgetTableViewCell" customModule="Lamp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="153" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dHk-x4-s4R" id="abo-nu-KmI">
@@ -1259,7 +1267,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$1000 - 1500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjD-8x-L6S">
-                                                    <rect key="frame" x="15" y="38" width="89" height="21"/>
+                                                    <rect key="frame" x="15" y="38" width="345" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
@@ -1268,11 +1276,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="description" destination="IjD-8x-L6S" id="aLu-iE-bMR"/>
-                                            <outlet property="titleLabel" destination="zNp-YQ-U2c" id="b24-MS-r6j"/>
+                                            <outlet property="budgetTextLabel" destination="IjD-8x-L6S" id="ECa-dw-lhK"/>
+                                            <outlet property="budgetTitleLabel" destination="zNp-YQ-U2c" id="kae-rS-Ch6"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lifestylePrefsTableViewCellIdentifier" rowHeight="155" id="4Vx-fs-jgG" customClass="LifestylePreferencesTableViewCell" customModule="Lamp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lifestylePrefsCellIdentifier" rowHeight="155" id="4Vx-fs-jgG" customClass="LifestylePreferencesTableViewCell" customModule="Lamp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="223" width="375" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Vx-fs-jgG" id="MI3-a7-bW9">
@@ -1322,28 +1330,28 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Large dog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvw-lI-FKh">
-                                                    <rect key="frame" x="54" y="65" width="69" height="21"/>
+                                                    <rect key="frame" x="54" y="65" width="306" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Non-smoker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LkY-jd-2zA">
-                                                    <rect key="frame" x="87" y="94" width="83" height="21"/>
+                                                    <rect key="frame" x="87" y="94" width="273" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Morning person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AG-3r-9NJ">
-                                                    <rect key="frame" x="68" y="122" width="108" height="21"/>
+                                                    <rect key="frame" x="68" y="122" width="292" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4C-BH-kc9">
-                                                    <rect key="frame" x="126" y="37" width="9" height="21"/>
+                                                    <rect key="frame" x="126" y="37" width="234" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
@@ -1352,13 +1360,18 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="lifestylePrefTitle" destination="uZ2-5a-8NH" id="qq9-8P-1bc"/>
                                             <outlet property="numBedroomsLabel" destination="X4C-BH-kc9" id="mX2-g7-O9K"/>
+                                            <outlet property="numBedroomsTitle" destination="Cnv-CK-QL1" id="Rv3-sK-lHD"/>
                                             <outlet property="otherLabel" destination="0AG-3r-9NJ" id="FzI-ep-CXJ"/>
+                                            <outlet property="otherTitle" destination="HaG-BZ-D3u" id="Q1p-cH-ssn"/>
                                             <outlet property="petsLabel" destination="xvw-lI-FKh" id="2Cg-OW-XX8"/>
-                                            <outlet property="smokingLabel" destination="LkY-jd-2zA" id="9mj-7l-dnC"/>
+                                            <outlet property="petsTitle" destination="V46-4X-VAy" id="l4P-Gd-zRF"/>
+                                            <outlet property="smokingLabel" destination="LkY-jd-2zA" id="pSx-mv-kfv"/>
+                                            <outlet property="smokingTitle" destination="UvR-TJ-MPV" id="d9U-pn-uLt"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactInfoTableViewCellIdentifier" rowHeight="155" id="tuj-vp-HDH" customClass="ContactInfoTableViewCell" customModule="Lamp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactInfoCellIdentifier" rowHeight="155" id="tuj-vp-HDH" customClass="ContactInfoTableViewCell" customModule="Lamp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="378" width="375" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tuj-vp-HDH" id="JgB-IL-8wO">
@@ -1401,14 +1414,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(123) 456 - 7890" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gec-mR-cdC">
-                                                    <rect key="frame" x="70" y="36" width="109" height="21"/>
+                                                    <rect key="frame" x="70" y="36" width="297" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@jordanFB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zA9-jZ-acv">
-                                                    <rect key="frame" x="92" y="91" width="73" height="21"/>
+                                                    <rect key="frame" x="92" y="91" width="275" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
@@ -1422,14 +1435,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXZ-c9-rP7">
-                                                    <rect key="frame" x="68" y="120" width="93" height="21"/>
+                                                    <rect key="frame" x="68" y="120" width="299" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="jordan@utexas.edu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGy-sG-CNF">
-                                                    <rect key="frame" x="64" y="62" width="128" height="21"/>
+                                                    <rect key="frame" x="64" y="62" width="303" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
@@ -1438,10 +1451,15 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="contactInfoTitle" destination="o41-00-5OO" id="Utz-UJ-xf0"/>
                                             <outlet property="emailLabel" destination="OGy-sG-CNF" id="Vkg-GF-C5o"/>
+                                            <outlet property="emailTitle" destination="ztU-EM-CXp" id="Qmd-WW-BzQ"/>
                                             <outlet property="facebookLabel" destination="zA9-jZ-acv" id="eLN-cJ-9HQ"/>
+                                            <outlet property="facebookTitle" destination="Lsc-ZN-6wv" id="7lZ-Ym-XfL"/>
                                             <outlet property="otherLabel" destination="uXZ-c9-rP7" id="4jg-1y-Bkr"/>
+                                            <outlet property="otherTitle" destination="jSQ-Et-0uU" id="eK0-jZ-s7K"/>
                                             <outlet property="phoneLabel" destination="gec-mR-cdC" id="DYB-di-a8h"/>
+                                            <outlet property="phoneTitle" destination="LM4-0K-lWS" id="y6j-cv-fot"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1475,10 +1493,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="girl-3" translatesAutoresizingMaskIntoConstraints="NO" id="Rqo-xx-EbM">
-                                <rect key="frame" x="0.0" y="88" width="375" height="271"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="O4R-KS-Ox6"/>
@@ -1550,8 +1564,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum Budget" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="grA-6f-aVK">
-                                <rect key="frame" x="35" y="474" width="150" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Budget" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="grA-6f-aVK">
+                                <rect key="frame" x="35" y="474" width="304" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1560,7 +1574,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWI-G6-sbC">
                                 <rect key="frame" x="146" y="741" width="80" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.60784313729999995" green="0.69803921570000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.60796302556991577" green="0.69684332609176636" blue="0.94992285966873169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Save"/>
@@ -1631,14 +1645,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Maximum Budget" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YIB-l4-vUU">
-                                <rect key="frame" x="189" y="474" width="150" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Instagram" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RIb-uF-zrB">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Other Contact" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RIb-uF-zrB">
                                 <rect key="frame" x="190" y="702" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -1650,7 +1657,7 @@
                         <viewLayoutGuide key="safeArea" id="KBC-61-zr0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Profile" id="rgM-GJ-34t">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="HYI-jR-lTD">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HYI-jR-lTD">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="VG0-HI-Q7Y" id="1Vb-He-Hoo"/>
                             </connections>
@@ -1660,13 +1667,17 @@
                         <outlet property="bedroomNumTextField" destination="JOa-9r-ULP" id="Vak-XQ-Iwt"/>
                         <outlet property="bioText" destination="Q81-51-e6S" id="BUg-19-KFd"/>
                         <outlet property="budgetTextField" destination="grA-6f-aVK" id="ys2-hq-CHs"/>
+                        <outlet property="emailTextField" destination="z7X-04-7VL" id="fJ5-vP-Auc"/>
+                        <outlet property="facebookTextField" destination="dz0-TV-PAH" id="toX-yQ-cu7"/>
                         <outlet property="firstNameTextField" destination="CCw-Nw-M9V" id="Xzp-Lr-jw8"/>
                         <outlet property="futureLocTextField" destination="dQV-Wl-uce" id="IYl-Cu-0WL"/>
                         <outlet property="occupationTextField" destination="8MY-dC-srW" id="3bZ-vs-rRO"/>
+                        <outlet property="otherContactTextField" destination="RIb-uF-zrB" id="EG5-KL-gHf"/>
+                        <outlet property="otherLifestylePrefsTextField" destination="Te6-8x-N2l" id="odi-ci-TpI"/>
                         <outlet property="petsTextField" destination="LFw-P2-gc4" id="BBz-vW-vKH"/>
+                        <outlet property="phoneTextField" destination="yM6-kO-8Up" id="4zT-k3-h4r"/>
                         <outlet property="profilePictureImageView" destination="yvm-Q3-l8c" id="iVN-AT-Lon"/>
                         <outlet property="smokingTextField" destination="Dmx-lG-qpO" id="gY2-ha-4De"/>
-                        <outlet property="timeOfDayTextField" destination="Te6-8x-N2l" id="kVB-lD-Xrv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MPa-fY-RIx" userLabel="First Responder" sceneMemberID="firstResponder"/>

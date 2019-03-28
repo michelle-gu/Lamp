@@ -11,9 +11,14 @@ import UIKit
 class LifestylePreferencesTableViewCell: UITableViewCell {
 
     // MARK: Outlets
+    @IBOutlet weak var lifestylePrefTitle: UILabel!
+    @IBOutlet weak var numBedroomsTitle: UILabel!
     @IBOutlet weak var numBedroomsLabel: UILabel!
+    @IBOutlet weak var petsTitle: UILabel!
     @IBOutlet weak var petsLabel: UILabel!
+    @IBOutlet weak var smokingTitle: UILabel!
     @IBOutlet weak var smokingLabel: UILabel!
+    @IBOutlet weak var otherTitle: UILabel!
     @IBOutlet weak var otherLabel: UILabel!
 
     // MARK: Lifecycle

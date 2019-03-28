@@ -1,5 +1,5 @@
 //
-//  BasicProfileTableViewCell.swift
+//  BioTableViewCell.swift
 //  Lamp
 //
 //  Created by Michelle Gu on 3/27/19.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class BasicProfileTableViewCell: UITableViewCell {
-
-    // MARK: Outlets
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+class BioTableViewCell: UITableViewCell {
     
-    // MARK: Lifecycle
+    @IBOutlet weak var bioTitleLabel: UILabel!
+    @IBOutlet weak var bioTextLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

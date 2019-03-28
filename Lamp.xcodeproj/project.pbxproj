@@ -28,9 +28,10 @@
 		95412749224B12C9003343D4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95412748224B12C9003343D4 /* AccountViewController.swift */; };
 		9541274D224B1EC8003343D4 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */; };
 		95412751224B2F8F003343D4 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95412750224B2F8E003343D4 /* NotificationsViewController.swift */; };
-		B640FEB2224C064B00E8FBFF /* BasicProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB1224C064B00E8FBFF /* BasicProfileTableViewCell.swift */; };
 		B640FEB5224C066700E8FBFF /* ContactInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */; };
 		B640FEB6224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */; };
+		B640FEB8224C4B1A00E8FBFF /* BioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB7224C4B1A00E8FBFF /* BioTableViewCell.swift */; };
+		B640FEBA224C4B2F00E8FBFF /* BudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB9224C4B2F00E8FBFF /* BudgetTableViewCell.swift */; };
 		B65D1CFC2232409B009F84A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B65D1CFB2232409B009F84A3 /* GoogleService-Info.plist */; };
 		B6B897132233025600164801 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B897122233025600164801 /* User.swift */; };
 		B6B897152233037300164801 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B897142233037300164801 /* SignUpViewController.swift */; };
@@ -63,9 +64,10 @@
 		95412748224B12C9003343D4 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
 		95412750224B2F8E003343D4 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
-		B640FEB1224C064B00E8FBFF /* BasicProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicProfileTableViewCell.swift; sourceTree = "<group>"; };
 		B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewCell.swift; sourceTree = "<group>"; };
 		B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifestylePreferencesTableViewCell.swift; sourceTree = "<group>"; };
+		B640FEB7224C4B1A00E8FBFF /* BioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioTableViewCell.swift; sourceTree = "<group>"; };
+		B640FEB9224C4B2F00E8FBFF /* BudgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTableViewCell.swift; sourceTree = "<group>"; };
 		B65D1CFB2232409B009F84A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6B897122233025600164801 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B6B897142233037300164801 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -107,9 +109,10 @@
 		95132ABD224B442D006C1A84 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B640FEB1224C064B00E8FBFF /* BasicProfileTableViewCell.swift */,
-				B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */,
+				B640FEB7224C4B1A00E8FBFF /* BioTableViewCell.swift */,
+				B640FEB9224C4B2F00E8FBFF /* BudgetTableViewCell.swift */,
 				B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */,
+				B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */,
 				95132ABE224B4436006C1A84 /* Table View Cells */,
 			);
 			path = Views;
@@ -348,7 +351,6 @@
 				07AB86A0224921D9001EE449 /* MessagesViewController.swift in Sources */,
 				B6B897152233037300164801 /* SignUpViewController.swift in Sources */,
 				95132AC6224B4803006C1A84 /* ToggleTableViewCell.swift in Sources */,
-				B640FEB2224C064B00E8FBFF /* BasicProfileTableViewCell.swift in Sources */,
 				571B426B224AC8EF00F9F42B /* Profile.swift in Sources */,
 				07B43E6A22348C7600BB8548 /* ProfileCreationViewController.swift in Sources */,
 				571B4271224BD66300F9F42B /* ProfileViewController.swift in Sources */,
@@ -365,7 +367,9 @@
 				07131722224554F3000CDD33 /* MatchMessageViewController.swift in Sources */,
 				07B43E6C22348C9900BB8548 /* ProfileLocationViewController.swift in Sources */,
 				07B43E6822348C4000BB8548 /* SocialMediaConnectViewController.swift in Sources */,
+				B640FEBA224C4B2F00E8FBFF /* BudgetTableViewCell.swift in Sources */,
 				B6B897132233025600164801 /* User.swift in Sources */,
+				B640FEB8224C4B1A00E8FBFF /* BioTableViewCell.swift in Sources */,
 				07AB86A2224994BD001EE449 /* MessageInstanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
