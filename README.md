@@ -24,7 +24,7 @@ Roommate finder for students and alumni at UT Austin.
         * View a profile through Messages (Still figuring out custom navigation)
         * Card swiping/Running out of cards showing a map from the Home view
         * Login segue to Swipe
-    * Account creation/Login -- alert/error checking is not functional (Window hierarchy problem ** Try to fix today @Mich & Pearl)
     * Profile TableView not fully functional (** Fix today @Mich & Pearl)
     * Edit profile/Viewing profile hooked up to Firebase (** Fix today @Mich & Pearl)
+    * Note: Account creation/Login -- alerts/user error checking are not functional due to a Window hierarchy problem. However, we included debugging in beta, and if done correctly, account creation and login are fully functional.
 
