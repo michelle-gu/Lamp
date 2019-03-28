@@ -565,7 +565,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lhZ-S1-Kts"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="AFh-sN-q7C"/>
+                    <navigationItem key="navigationItem" title="Settings" id="AFh-sN-q7C">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="DiA-Hn-Ef7">
+                            <connections>
+                                <segue destination="nTe-Tx-Mzo" kind="show" identifier="LogOutSegueIdentifier" id="kpo-sd-wyc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="fUc-Kc-e1F" id="LIS-H0-f7b"/>
                         <segue destination="zJ1-1e-2f8" kind="show" identifier="accountSegueIdentifier" id="55D-kD-fMK"/>
@@ -2182,5 +2188,6 @@
         <segue reference="BfG-uu-C7Q"/>
         <segue reference="5YV-eX-J77"/>
         <segue reference="9WS-Lc-l6O"/>
+        <segue reference="kpo-sd-wyc"/>
     </inferredMetricsTieBreakers>
 </document>
