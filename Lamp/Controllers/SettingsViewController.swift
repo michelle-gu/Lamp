@@ -35,7 +35,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         let row = indexPath.row
         cell.textLabel?.text = settings[row]
         
-        cell.textLabel?.font = UIFont(name: "Avenir", size: 25)
+        cell.textLabel?.font = UIFont(name: "Avenir", size: 20)
         return cell
     }
 
