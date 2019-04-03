@@ -24,6 +24,11 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     // MARK: Actions
+    @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
+        print("Unwind segue to login triggered!")
+    }
+
+    
     @IBAction func logInDidTouch(_ sender: Any) {
         // Fetch from Firebase and sign in
         guard
