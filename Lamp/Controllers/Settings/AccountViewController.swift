@@ -8,14 +8,17 @@
 
 import UIKit
 
-public let accountSettings = ["Change Password", "Connect with Facebook", "Disconnect Instagram", "Connect with Google+", "Delete Account"]
-
 class AccountViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: Constants
+    let accountSettings = ["Change Password", "Connect with Facebook", "Connect with Google+", "Delete Account"]
     let accountCellIdentifier = "AccountCellIdentifier"
-    
+    let changePasswordSegueIdentifier = "changePasswordSegueIdentifier"
+
+    // MARK: Properties
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return accountSettings.count
     }
@@ -32,15 +35,6 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
             return cell
     }
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        tableView.dataSource = self
-        tableView.delegate = self
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if accountSettings[indexPath.row] == "Change Password"{
@@ -50,14 +44,19 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         
     }
 
-    /*
-    // MARK: - Navigation
+    // MARK: Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+        // Do any additional setup after loading the view.
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
-
+    
 }

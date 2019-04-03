@@ -28,6 +28,7 @@
 		95412749224B12C9003343D4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95412748224B12C9003343D4 /* AccountViewController.swift */; };
 		9541274D224B1EC8003343D4 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */; };
 		95412751224B2F8F003343D4 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95412750224B2F8E003343D4 /* NotificationsViewController.swift */; };
+		B62C34E82255588B00C5348F /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C34E72255588B00C5348F /* ChangePasswordViewController.swift */; };
 		B640FEB5224C066700E8FBFF /* ContactInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */; };
 		B640FEB6224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */; };
 		B640FEB8224C4B1A00E8FBFF /* BioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB7224C4B1A00E8FBFF /* BioTableViewCell.swift */; };
@@ -64,6 +65,7 @@
 		95412748224B12C9003343D4 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
 		95412750224B2F8E003343D4 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		B62C34E72255588B00C5348F /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewCell.swift; sourceTree = "<group>"; };
 		B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifestylePreferencesTableViewCell.swift; sourceTree = "<group>"; };
 		B640FEB7224C4B1A00E8FBFF /* BioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioTableViewCell.swift; sourceTree = "<group>"; };
@@ -129,12 +131,24 @@
 			path = "Table View Cells";
 			sourceTree = "<group>";
 		};
+		B62C34E9225558A000C5348F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				95412744224B0253003343D4 /* SettingsViewController.swift */,
+				95412748224B12C9003343D4 /* AccountViewController.swift */,
+				B62C34E72255588B00C5348F /* ChangePasswordViewController.swift */,
+				95412750224B2F8E003343D4 /* NotificationsViewController.swift */,
+				9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		B6B897102233021D00164801 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B62C34E9225558A000C5348F /* Settings */,
 				B6B897142233037300164801 /* SignUpViewController.swift */,
 				B6B89716223303E100164801 /* LogInViewController.swift */,
-				95412744224B0253003343D4 /* SettingsViewController.swift */,
 				07B43E6522348C0900BB8548 /* EmailConfirmationViewController.swift */,
 				07B43E6722348C4000BB8548 /* SocialMediaConnectViewController.swift */,
 				07B43E6922348C7600BB8548 /* ProfileCreationViewController.swift */,
@@ -146,9 +160,6 @@
 				07131721224554F3000CDD33 /* MatchMessageViewController.swift */,
 				07AB869F224921D9001EE449 /* MessagesViewController.swift */,
 				07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */,
-				95412748224B12C9003343D4 /* AccountViewController.swift */,
-				9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */,
-				95412750224B2F8E003343D4 /* NotificationsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -345,6 +356,7 @@
 				95412751224B2F8F003343D4 /* NotificationsViewController.swift in Sources */,
 				571B426F224B401E00F9F42B /* ProfileEditViewController.swift in Sources */,
 				B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */,
+				B62C34E82255588B00C5348F /* ChangePasswordViewController.swift in Sources */,
 				9541274D224B1EC8003343D4 /* DiscoveryViewController.swift in Sources */,
 				B640FEB6224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift in Sources */,
 				B6F5005922307A3500FD1433 /* ViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-8v-AgN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Skw-1a-Og8">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -623,7 +623,7 @@
         <!--Change Password-->
         <scene sceneID="hId-jG-YyK">
             <objects>
-                <viewController id="NxQ-Tf-fGu" sceneMemberID="viewController">
+                <viewController id="NxQ-Tf-fGu" customClass="ChangePasswordViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CCJ-S6-xlO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -684,6 +684,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="doneButtonPressed:" destination="f7I-q0-QYu" eventType="touchUpInside" id="fRG-ZQ-qfE"/>
+                                    <action selector="saveButtonPressed:" destination="NxQ-Tf-fGu" eventType="touchUpInside" id="o10-xM-K4U"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -691,10 +692,16 @@
                         <viewLayoutGuide key="safeArea" id="aIh-Og-Vlw"/>
                     </view>
                     <navigationItem key="navigationItem" title="Change Password" id="SPF-Fn-XVa"/>
+                    <connections>
+                        <outlet property="confirmPasswordField" destination="sXl-qc-SbZ" id="6rp-4d-qJ0"/>
+                        <outlet property="newPasswordField" destination="jvY-Ji-eSe" id="Juc-AY-oJh"/>
+                        <outlet property="oldPasswordField" destination="gXd-Ny-Y1r" id="GPG-wU-h5v"/>
+                        <outlet property="saveButton" destination="VOF-zc-XLK" id="Enu-XO-JVX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Sj-i2-h5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1702" y="3836"/>
+            <point key="canvasLocation" x="2593" y="4043"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="K1o-fq-xYi">
