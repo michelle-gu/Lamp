@@ -36,34 +36,39 @@ class ChangePasswordViewController: UIViewController {
                 return
         }
         
-//        let user = Auth.auth().currentUser
-//        var credential: AuthCredential
-        
-//        // Prompt the user to re-provide their sign-in credentials
-//        user?.reauthenticate(with: credential) { error in
-//            if let error = error {
-//                let alert = UIAlertController(
-//                    title: "Password Change Failed",
-//                    message: error.localizedDescription,
-//                    preferredStyle: .alert)
-//
-//                alert.addAction(UIAlertAction(title: "OK", style: .default))
-//                self.present(alert, animated: true, completion: nil)
-//            } else {
-//                // User re-authenticated.
-//            }
-//        }
-        
-        Auth.auth().currentUser?.updatePassword(to: newPassword) { (error) in
-            let alert = UIAlertController(
-                title: "Password Change Failed",
-                message: error?.localizedDescription,
-                preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
-            self.present(alert, animated: true, completion: nil)
-        }
-        
-        self.navigationController?.popViewController(animated: true)
+        // Prompt the user to re-provide their sign-in credentials
+        let user = Auth.auth().currentUser
+        let credential: AuthCredential = EmailAuthProvider.credential(withEmail: (user?.email)!, password: oldPassword)
+        user?.reauthenticateAndRetrieveData(with: credential, completion: {(authResult, error) in
+            if let error = error {
+                // An error happened.
+                let alert = UIAlertController(
+                    title: "Old Password Failed",
+                    message: error.localizedDescription,
+                    preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+            } else {
+                print("User re-authenticated.")
+                Auth.auth().currentUser?.updatePassword(to: newPassword) { error in
+                    if let error = error {
+                        print("\nError changing pass\n")
+                        let alert = UIAlertController(
+                            title: "Password Change Failed",
+                            message: error.localizedDescription,
+                            preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "OK", style: .default))
+                        self.present(alert, animated: true, completion: nil)
+                        return
+                    } else {
+                        print("\nSuccess! popping back to screen\n")
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }
+            }
+        })
     }
     
     // MARK: Lifecycle
