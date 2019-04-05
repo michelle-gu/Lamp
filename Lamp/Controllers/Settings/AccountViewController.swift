@@ -16,7 +16,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     
     // MARK: Constants
     let accountSettings = ["Change Password", "Connect with Facebook", "Connect with Google+", "Delete Account"]
-    let accountCellIdentifier = "AccountCellIdentifier"
+    let accountCellIdentifier = "accountCellIdentifier"
     let changePasswordSegueIdentifier = "changePasswordSegueIdentifier"
     let unwindToLoginSegueIdentifier = "unwindToLoginSegueIdentifier"
 
@@ -26,15 +26,16 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: accountCellIdentifier, for: indexPath as IndexPath)
-            
-            let row = indexPath.row
-            cell.textLabel?.text = accountSettings[row]
-        if accountSettings[row] == "Change Password"{
+        let cell = tableView.dequeueReusableCell(withIdentifier: accountCellIdentifier, for: indexPath as IndexPath)
+        let row = indexPath.row
+        cell.textLabel?.text = accountSettings[row]
+        if accountSettings[row] == "Change Password" {
             cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+        } else if accountSettings[row] == "Delete Account" {
+            cell.textLabel?.textColor = UIColor.red
         }
-            cell.textLabel?.font = UIFont(name: "Avenir", size: 20)
-            return cell
+        cell.textLabel?.font = UIFont(name: "Avenir", size: 20)
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
