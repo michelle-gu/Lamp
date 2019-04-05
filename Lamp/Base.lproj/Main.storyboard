@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PwM-K5-2cI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nTe-Tx-Mzo">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1117,7 +1117,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="logInDidTouch:" destination="nTe-Tx-Mzo" eventType="touchUpInside" id="KCK-pZ-bfq"/>
-                                    <segue destination="flf-ug-c2v" kind="show" identifier="showSocialMediaScreen" id="CbP-Ea-bhu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EDU Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo3-o3-i3j">
@@ -1180,6 +1179,7 @@
                         <outlet property="logInButton" destination="PVy-PE-b9r" id="dNn-75-NVD"/>
                         <outlet property="passwordField" destination="gM6-NL-DXr" id="pvx-Rn-6tl"/>
                         <outlet property="signUpButton" destination="ewY-O2-AD1" id="x2P-RY-eMc"/>
+                        <segue destination="flf-ug-c2v" kind="show" identifier="showSocialMediaScreen" id="A6C-LX-meC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGm-Vn-xJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2205,11 +2205,9 @@
         <image name="profile-pic-blank" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aaS-ll-X6p"/>
-        <segue reference="6Ed-sd-96H"/>
         <segue reference="PA3-YF-Hx5"/>
         <segue reference="BfG-uu-C7Q"/>
         <segue reference="5YV-eX-J77"/>
-        <segue reference="9WS-Lc-l6O"/>
+        <segue reference="IdY-Gv-dXt"/>
     </inferredMetricsTieBreakers>
 </document>

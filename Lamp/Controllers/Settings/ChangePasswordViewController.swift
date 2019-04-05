@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ChangePasswordViewController: UIViewController {
     
@@ -18,6 +19,50 @@ class ChangePasswordViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func saveButtonPressed(_ sender: Any) {
+        guard
+            let oldPassword = oldPasswordField.text,
+            let newPassword = newPasswordField.text,
+            let confirmPassword = confirmPasswordField.text,
+            newPassword.count > 6,
+            confirmPassword == newPassword
+            else {
+                let alert = UIAlertController(
+                    title: "Password Change Failed",
+                    message: "Please fill in all fields and ensure the new password is at least 6 characters and matches the confirmed password.",
+                    preferredStyle: .alert)
+
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+                return
+        }
+        
+//        let user = Auth.auth().currentUser
+//        var credential: AuthCredential
+        
+//        // Prompt the user to re-provide their sign-in credentials
+//        user?.reauthenticate(with: credential) { error in
+//            if let error = error {
+//                let alert = UIAlertController(
+//                    title: "Password Change Failed",
+//                    message: error.localizedDescription,
+//                    preferredStyle: .alert)
+//
+//                alert.addAction(UIAlertAction(title: "OK", style: .default))
+//                self.present(alert, animated: true, completion: nil)
+//            } else {
+//                // User re-authenticated.
+//            }
+//        }
+        
+        Auth.auth().currentUser?.updatePassword(to: newPassword) { (error) in
+            let alert = UIAlertController(
+                title: "Password Change Failed",
+                message: error?.localizedDescription,
+                preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
         self.navigationController?.popViewController(animated: true)
     }
     
