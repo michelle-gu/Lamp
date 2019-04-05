@@ -617,9 +617,11 @@
                     <connections>
                         <outlet property="tableView" destination="n2j-dA-Byq" id="unu-Iu-7Fe"/>
                         <segue destination="NxQ-Tf-fGu" kind="show" identifier="changePasswordSegueIdentifier" id="JQF-Wb-j4d"/>
+                        <segue destination="yLq-ST-M80" kind="unwind" identifier="unwindToLoginSegueIdentifier" unwindAction="unwindToLoginWithSegue:" id="oeb-ea-qIl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdO-a2-UYU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yLq-ST-M80" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2594" y="3310"/>
         </scene>
