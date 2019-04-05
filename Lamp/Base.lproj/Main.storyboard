@@ -504,6 +504,32 @@
                                     <action selector="searchButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="fph-bd-dLc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmE-Z9-3W0">
+                                <rect key="frame" x="276" y="738" width="84" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <state key="normal" title="Add City">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCityToListButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="JAs-sJ-IH8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0K-FP-SXs">
+                                <rect key="frame" x="336" y="100" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Radius" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L0U-4g-GpW">
+                                <rect key="frame" x="268" y="100" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Sl4-cr-Yek"/>
@@ -524,7 +550,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="8kS-bJ-mXd" id="53W-tC-re7"/>
+                        <outlet property="addCityToList" destination="lmE-Z9-3W0" id="oH4-bT-c77"/>
                         <outlet property="mapView" destination="6r8-zn-yKR" id="yd9-J8-V04"/>
+                        <outlet property="radiusInput" destination="L0U-4g-GpW" id="sVD-YU-1d3"/>
+                        <outlet property="radiusOkButton" destination="M0K-FP-SXs" id="ToC-D4-LBP"/>
                         <outlet property="searchDisplayController" destination="vaH-EC-EmH" id="T0Y-8h-qyy"/>
                     </connections>
                 </viewController>

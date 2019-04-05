@@ -14,6 +14,9 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var addCityToList: UIButton!
+    @IBOutlet weak var radiusInput: UITextField!
+    @IBOutlet weak var radiusOkButton: UIButton!
     
     // MARK: Properties
     let regionRadius: CLLocationDistance = 10000
@@ -27,10 +30,19 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         
         centerMapOnLocation(location: initialLocation)
         
-        // change picture button styling
+        // change add button styling
         addButton.layer.borderWidth = 1
         addButton.layer.cornerRadius = addButton.bounds.height / 2
         addButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
+        
+        addCityToList.layer.borderWidth = 1
+        addCityToList.layer.cornerRadius = addButton.bounds.height / 2
+        addCityToList.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
+        
+        radiusOkButton.layer.borderWidth = 1
+        radiusOkButton.layer.cornerRadius = addButton.bounds.height / 3
+        radiusOkButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
+        
     }
     
     // helper method that sets the rectangular view of the map based on region radius
@@ -95,6 +107,14 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 self.mapView.setRegion(region, animated: true)
             }
         }
+    }
+    
+    // Add to list of cities
+    @IBAction func addCityToListButtonPressed(_ sender: Any) {
+    }
+    
+    func addRadius(location: CLLocation) {
+        //let radius = radiusInput.text
     }
     
     // MARK: Navigation
