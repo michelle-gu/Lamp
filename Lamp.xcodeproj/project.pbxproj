@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,6 +38,7 @@
 		B6B897152233037300164801 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B897142233037300164801 /* SignUpViewController.swift */; };
 		B6B89717223303E100164801 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B89716223303E100164801 /* LogInViewController.swift */; };
 		B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B8971A22331FCA00164801 /* AppDelegate.swift */; };
+		B6DFE9CA2257C92D0086BCE6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DFE9C92257C92D0086BCE6 /* Settings.swift */; };
 		B6F5005922307A3500FD1433 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F5005822307A3500FD1433 /* ViewController.swift */; };
 		B6F5005C22307A3500FD1433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F5005A22307A3500FD1433 /* Main.storyboard */; };
 		B6F5005E22307A3600FD1433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F5005D22307A3600FD1433 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		B6B89716223303E100164801 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		B6B897182233095300164801 /* Lamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lamp.entitlements; sourceTree = "<group>"; };
 		B6B8971A22331FCA00164801 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B6DFE9C92257C92D0086BCE6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		B6F5005322307A3500FD1433 /* Lamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F5005822307A3500FD1433 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6F5005B22307A3500FD1433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				B6F5005822307A3500FD1433 /* ViewController.swift */,
 				B6B897122233025600164801 /* User.swift */,
 				571B426A224AC8EF00F9F42B /* Profile.swift */,
+				B6DFE9C92257C92D0086BCE6 /* Settings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -298,26 +301,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lamp/Pods-Lamp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/RangeUISlider/RangeUISlider.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Lamp/Pods-Lamp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RangeUISlider.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Lamp/Pods-Lamp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -374,6 +362,7 @@
 				B640FEB5224C066700E8FBFF /* ContactInfoTableViewCell.swift in Sources */,
 				07B43E6622348C0900BB8548 /* EmailConfirmationViewController.swift in Sources */,
 				07B43E7022348D0900BB8548 /* CardsViewController.swift in Sources */,
+				B6DFE9CA2257C92D0086BCE6 /* Settings.swift in Sources */,
 				95132AC4224B47FB006C1A84 /* SubtitleTableViewCell.swift in Sources */,
 				95132AC0224B4469006C1A84 /* SliderTableViewCell.swift in Sources */,
 				07131722224554F3000CDD33 /* MatchMessageViewController.swift in Sources */,

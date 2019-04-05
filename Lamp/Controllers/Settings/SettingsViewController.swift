@@ -7,15 +7,40 @@
 //
 
 import UIKit
+import Firebase
 
 public let settings = ["Account", "Notifications", "Discovery"]
 
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var tableView: UITableView!
     
-    var segueIdentifier = ""
+    // MARK: Constants
+    let unwindToLoginSegueIdentifier = "unwindToLoginSegueIdentifier"
     let settingsCellIdentifier = "settingsCellIdentifier"
 
+    // MARK: Outlets
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var logOutButton: UIBarButtonItem!
+    
+    @IBAction func logOutButtonPressed(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            print("Logged out")
+            self.performSegue(withIdentifier: "unwindToLoginSegueIdentifier", sender: self)
+
+        } catch (let error) {
+            print("Logged out error")
+            // FIXME: Test if this works
+            let alert = UIAlertController(
+                title: "Log Out Failed",
+                message: error.localizedDescription,
+                preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +49,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
     }
     
+    // MARK: Properties
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return settings.count
     }
@@ -43,6 +69,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         tableView.deselectRow(at: indexPath, animated: true)
         
+        var segueIdentifier = ""
         if settings[indexPath.row] == "Account"{
             segueIdentifier = "accountSegueIdentifier"
         }
@@ -55,14 +82,4 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         performSegue(withIdentifier: segueIdentifier, sender: self)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

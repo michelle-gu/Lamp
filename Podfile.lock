@@ -1,5 +1,15 @@
 PODS:
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
   - Eureka (4.3.1)
+  - FBSDKCoreKit (4.44.0):
+    - Bolts (~> 1.9)
+  - FBSDKLoginKit (4.44.0):
+    - FBSDKCoreKit
   - Firebase/Auth (5.18.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.4.0)
@@ -71,6 +81,7 @@ PODS:
 
 DEPENDENCIES:
   - Eureka
+  - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -78,7 +89,10 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Bolts
     - Eureka
+    - FBSDKCoreKit
+    - FBSDKLoginKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -94,7 +108,10 @@ SPEC REPOS:
     - RangeUISlider
 
 SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Eureka: 28ea296f06710f6745266b71f17862048941a32d
+  FBSDKCoreKit: 8bcd4503afe43f28823c2175a6142a7f50f1bf28
+  FBSDKLoginKit: 93c5a407ab1a6a17b1b38cff57e89991f714d878
   Firebase: 02f3281965c075426141a0ce1277e9de6649cab9
   FirebaseAnalytics: 23851fe602c872130a2c5c55040b302120346cc2
   FirebaseAuth: d85d052354447f30b4b2a805ab91b511458b56a6
@@ -109,6 +126,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   RangeUISlider: 50c649267711dde92f7c27d1d52acd75b5adb73e
 
-PODFILE CHECKSUM: 90ae69f17f5001ffe137ffa43af5c105ed50afc7
+PODFILE CHECKSUM: cad78fb102ad398362b09757d7b67f7abf9fd72e
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.0.beta.3
