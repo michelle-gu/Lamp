@@ -11,5 +11,6 @@ target 'Lamp' do
   pod 'Firebase/Database'
   pod 'Eureka'
   pod 'RangeUISlider', '~> 1.8'
+  pod 'FBSDKLoginKit'
 
 end

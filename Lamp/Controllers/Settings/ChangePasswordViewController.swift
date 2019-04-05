@@ -50,10 +50,10 @@ class ChangePasswordViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alert, animated: true, completion: nil)
             } else {
-                print("User re-authenticated.")
+                print("User re-authenticated. Attempting to update password.")
                 Auth.auth().currentUser?.updatePassword(to: newPassword) { error in
                     if let error = error {
-                        print("\nError changing pass\n")
+                        print("Password change failed.")
                         let alert = UIAlertController(
                             title: "Password Change Failed",
                             message: error.localizedDescription,
@@ -63,7 +63,7 @@ class ChangePasswordViewController: UIViewController {
                         self.present(alert, animated: true, completion: nil)
                         return
                     } else {
-                        print("\nSuccess! popping back to screen\n")
+                        print("Password change success. Returning to previous screen.")
                         self.navigationController?.popViewController(animated: true)
                     }
                 }
