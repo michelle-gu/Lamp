@@ -1,0 +1,376 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Decompressor"
+- "Compressor"
+provides-nominal:
+- "10Starscream12DecompressorC"
+- "10Starscream10CompressorC"
+provides-member:
+- ["10Starscream12DecompressorC", ""]
+- ["10Starscream10CompressorC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "&&"
+- !private "-"
+- !private "=="
+- !private ">"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- !private "CInt"
+- !private "CUnsignedInt"
+- "Compressor"
+- "Data"
+- "Decompressor"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- !private "MemoryLayout"
+- !private "NSError"
+- "UInt8"
+- !private "UnsafeMutablePointer"
+- "UnsafePointer"
+- !private "Void"
+- !private "WebSocket"
+- !private "ZLIB_VERSION"
+- !private "Z_BUF_ERROR"
+- !private "Z_DEFAULT_COMPRESSION"
+- !private "Z_DEFAULT_STRATEGY"
+- !private "Z_DEFLATED"
+- !private "Z_OK"
+- !private "Z_SYNC_FLUSH"
+- !private "deflate"
+- !private "deflateEnd"
+- !private "deflateInit2_"
+- !private "inflate"
+- !private "inflateEnd"
+- !private "inflateInit2_"
+- "z_stream"
+- !private "||"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["Sa", "count"]
+- ["Sa", "init"]
+- !private ["SK", "append"]
+- !private ["SK", "count"]
+- ["SK", "init"]
+- !private ["SK", "removeLast"]
+- !private ["SK", "withUnsafeBytes"]
+- !private ["Sz", "init"]
+- !private ["s7CVarArgP", "ErrorDomain"]
+- !private ["s7CVarArgP", "InternalErrorCode"]
+- !private ["s7CVarArgP", "count"]
+- ["s7CVarArgP", "init"]
+- !private ["Sl", "append"]
+- !private ["Sl", "count"]
+- ["Sl", "init"]
+- !private ["Sl", "removeLast"]
+- !private ["Sl", "withUnsafeBytes"]
+- !private ["SL", "init"]
+- ["10Starscream10CompressorC", "Bool"]
+- !private ["10Starscream10CompressorC", "CInt"]
+- !private ["10Starscream10CompressorC", "CUnsignedInt"]
+- ["10Starscream10CompressorC", "Data"]
+- ["10Starscream10CompressorC", "Int"]
+- !private ["10Starscream10CompressorC", "MemoryLayout"]
+- !private ["10Starscream10CompressorC", "NSError"]
+- ["10Starscream10CompressorC", "UInt8"]
+- !private ["10Starscream10CompressorC", "UnsafeMutablePointer"]
+- !private ["10Starscream10CompressorC", "UnsafePointer"]
+- !private ["10Starscream10CompressorC", "Void"]
+- !private ["10Starscream10CompressorC", "WebSocket"]
+- !private ["10Starscream10CompressorC", "ZLIB_VERSION"]
+- !private ["10Starscream10CompressorC", "Z_BUF_ERROR"]
+- !private ["10Starscream10CompressorC", "Z_DEFAULT_COMPRESSION"]
+- !private ["10Starscream10CompressorC", "Z_DEFAULT_STRATEGY"]
+- !private ["10Starscream10CompressorC", "Z_DEFLATED"]
+- !private ["10Starscream10CompressorC", "Z_OK"]
+- !private ["10Starscream10CompressorC", "Z_SYNC_FLUSH"]
+- !private ["10Starscream10CompressorC", "buffer"]
+- ["10Starscream10CompressorC", "compress"]
+- !private ["10Starscream10CompressorC", "deflate"]
+- !private ["10Starscream10CompressorC", "deflateEnd"]
+- !private ["10Starscream10CompressorC", "deflateInit2_"]
+- !private ["10Starscream10CompressorC", "deflateInitialized"]
+- ["10Starscream10CompressorC", "deinit"]
+- ["10Starscream10CompressorC", "init"]
+- !private ["10Starscream10CompressorC", "initDeflate"]
+- ["10Starscream10CompressorC", "reset"]
+- !private ["10Starscream10CompressorC", "strm"]
+- !private ["10Starscream10CompressorC", "teardownDeflate"]
+- !private ["10Starscream10CompressorC", "windowBits"]
+- ["10Starscream10CompressorC", "z_stream"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- ["10Foundation15ContiguousBytesP", "init"]
+- !private ["10Foundation15ContiguousBytesP", "removeLast"]
+- !private ["10Foundation15ContiguousBytesP", "withUnsafeBytes"]
+- !private ["s28CustomDebugStringConvertibleP", "ErrorDomain"]
+- !private ["s28CustomDebugStringConvertibleP", "InternalErrorCode"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "removeLast"]
+- !private ["s28CustomDebugStringConvertibleP", "withUnsafeBytes"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "count"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "removeLast"]
+- !private ["s17CustomReflectableP", "withUnsafeBytes"]
+- !private ["s23CustomStringConvertibleP", "ErrorDomain"]
+- !private ["s23CustomStringConvertibleP", "InternalErrorCode"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "removeLast"]
+- !private ["s23CustomStringConvertibleP", "withUnsafeBytes"]
+- !private ["10Foundation4DataV", "append"]
+- !private ["10Foundation4DataV", "count"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["10Foundation4DataV", "removeLast"]
+- !private ["10Foundation4DataV", "withUnsafeBytes"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- ["10Foundation12DataProtocolP", "init"]
+- !private ["10Foundation12DataProtocolP", "removeLast"]
+- !private ["10Foundation12DataProtocolP", "withUnsafeBytes"]
+- !private ["Se", "append"]
+- !private ["Se", "count"]
+- ["Se", "init"]
+- !private ["Se", "removeLast"]
+- !private ["Se", "withUnsafeBytes"]
+- ["10Starscream12DecompressorC", "Bool"]
+- !private ["10Starscream12DecompressorC", "CInt"]
+- !private ["10Starscream12DecompressorC", "CUnsignedInt"]
+- ["10Starscream12DecompressorC", "Data"]
+- ["10Starscream12DecompressorC", "Int"]
+- !private ["10Starscream12DecompressorC", "MemoryLayout"]
+- !private ["10Starscream12DecompressorC", "NSError"]
+- ["10Starscream12DecompressorC", "UInt8"]
+- !private ["10Starscream12DecompressorC", "UnsafeMutablePointer"]
+- ["10Starscream12DecompressorC", "UnsafePointer"]
+- !private ["10Starscream12DecompressorC", "WebSocket"]
+- !private ["10Starscream12DecompressorC", "ZLIB_VERSION"]
+- !private ["10Starscream12DecompressorC", "Z_BUF_ERROR"]
+- !private ["10Starscream12DecompressorC", "Z_OK"]
+- !private ["10Starscream12DecompressorC", "buffer"]
+- ["10Starscream12DecompressorC", "decompress"]
+- ["10Starscream12DecompressorC", "deinit"]
+- !private ["10Starscream12DecompressorC", "inflate"]
+- !private ["10Starscream12DecompressorC", "inflateEnd"]
+- !private ["10Starscream12DecompressorC", "inflateInit2_"]
+- !private ["10Starscream12DecompressorC", "inflateInitialized"]
+- ["10Starscream12DecompressorC", "init"]
+- !private ["10Starscream12DecompressorC", "initInflate"]
+- ["10Starscream12DecompressorC", "reset"]
+- !private ["10Starscream12DecompressorC", "strm"]
+- !private ["10Starscream12DecompressorC", "teardownInflate"]
+- !private ["10Starscream12DecompressorC", "windowBits"]
+- ["10Starscream12DecompressorC", "z_stream"]
+- !private ["SE", "append"]
+- !private ["SE", "count"]
+- ["SE", "init"]
+- !private ["SE", "removeLast"]
+- !private ["SE", "withUnsafeBytes"]
+- !private ["SQ", "ErrorDomain"]
+- !private ["SQ", "InternalErrorCode"]
+- !private ["SQ", "append"]
+- !private ["SQ", "compressionError"]
+- !private ["SQ", "count"]
+- ["SQ", "init"]
+- !private ["SQ", "rawValue"]
+- !private ["SQ", "removeLast"]
+- !private ["SQ", "withUnsafeBytes"]
+- !private ["s5ErrorP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["SH", "ErrorDomain"]
+- !private ["SH", "InternalErrorCode"]
+- !private ["SH", "append"]
+- !private ["SH", "compressionError"]
+- !private ["SH", "count"]
+- ["SH", "init"]
+- !private ["SH", "rawValue"]
+- !private ["SH", "removeLast"]
+- !private ["SH", "withUnsafeBytes"]
+- !private ["Si", "init"]
+- !private ["s5Int32V", "init"]
+- !private ["10Starscream9WebSocketC17InternalErrorCodeO", "compressionError"]
+- !private ["10Starscream9WebSocketC17InternalErrorCodeO", "deinit"]
+- !private ["10Starscream9WebSocketC17InternalErrorCodeO", "rawValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s12MemoryLayoutO", "size"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "append"]
+- !private ["SM", "count"]
+- ["SM", "init"]
+- !private ["SM", "removeLast"]
+- !private ["SM", "withUnsafeBytes"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "removeLast"]
+- !private ["10Foundation19MutableDataProtocolP", "withUnsafeBytes"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So7NSErrorC", "init"]
+- !private ["So8NSObjectC", "ErrorDomain"]
+- !private ["So8NSObjectC", "InternalErrorCode"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectP", "ErrorDomain"]
+- !private ["So8NSObjectP", "InternalErrorCode"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["Sj", "init"]
+- !private ["Sk", "append"]
+- !private ["Sk", "count"]
+- ["Sk", "init"]
+- !private ["Sk", "removeLast"]
+- !private ["Sk", "withUnsafeBytes"]
+- !private ["Sm", "append"]
+- !private ["Sm", "count"]
+- ["Sm", "init"]
+- !private ["Sm", "removeLast"]
+- !private ["Sm", "withUnsafeBytes"]
+- !private ["SY", "compressionError"]
+- !private ["SY", "rawValue"]
+- !private ["10Foundation20ReferenceConvertibleP", "append"]
+- !private ["10Foundation20ReferenceConvertibleP", "count"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "removeLast"]
+- !private ["10Foundation20ReferenceConvertibleP", "withUnsafeBytes"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["ST", "append"]
+- !private ["ST", "count"]
+- ["ST", "init"]
+- !private ["ST", "removeLast"]
+- !private ["ST", "withUnsafeBytes"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["So16NSStreamDelegateP", "ErrorDomain"]
+- !private ["So16NSStreamDelegateP", "InternalErrorCode"]
+- !private ["Sx", "init"]
+- !private ["s6UInt32V", "init"]
+- !private ["Sp", "init"]
+- !private ["SU", "init"]
+- !private ["10Starscream9WebSocketC", "ErrorDomain"]
+- !private ["10Starscream9WebSocketC", "InternalErrorCode"]
+- !private ["s14_ArrayProtocolP", "count"]
+- ["s14_ArrayProtocolP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- ["s24_DestructorSafeContainerP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- ["s19_HasContiguousBytesP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ErrorDomain"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "InternalErrorCode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "removeLast"]
+- !private ["s21_ObjectiveCBridgeableP", "withUnsafeBytes"]
+- !private ["s8_PointerP", "init"]
+- !private ["So10z_stream_sV", "avail_in"]
+- !private ["So10z_stream_sV", "avail_out"]
+- ["So10z_stream_sV", "init"]
+- !private ["So10z_stream_sV", "next_in"]
+- !private ["So10z_stream_sV", "next_out"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- "Sa"
+- "SK"
+- !private "Sz"
+- "s7CVarArgP"
+- "Sl"
+- !private "SL"
+- "10Starscream10CompressorC"
+- "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- "10Foundation12DataProtocolP"
+- "Se"
+- "10Starscream12DecompressorC"
+- "SE"
+- "SQ"
+- !private "s5ErrorP"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "SH"
+- !private "Si"
+- !private "s5Int32V"
+- !private "10Starscream9WebSocketC17InternalErrorCodeO"
+- !private "s25LosslessStringConvertibleP"
+- !private "s12MemoryLayoutO"
+- !private "s10MirrorPathP"
+- "SM"
+- "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So7NSErrorC"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "Sj"
+- "Sk"
+- "Sm"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s10SIMDScalarP"
+- "ST"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "So16NSStreamDelegateP"
+- !private "Sx"
+- !private "s6UInt32V"
+- !private "Sp"
+- !private "SU"
+- !private "10Starscream9WebSocketC"
+- "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s19_HasContiguousBytesP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- !private "s8_PointerP"
+- "So10z_stream_sV"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Starscream/Starscream-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Starscream.build/unextended-module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Starscream/zlib/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "571b419743ca7c4f43a4d39060ed83d7"

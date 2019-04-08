@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+options: "aac17d5b388eba57742a137f2a52c68c"
+build_time: [1554490588, 204126000]
+inputs:
+  "/Users/lindseythompson/Desktop/Lamp/Pods/Starscream/Source/Compression.swift": [1554490108, 330787053]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/Starscream/Source/SSLSecurity.swift": [1554490108, 331010894]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/Starscream/Source/WebSocket.swift": [1554490108, 331230738]

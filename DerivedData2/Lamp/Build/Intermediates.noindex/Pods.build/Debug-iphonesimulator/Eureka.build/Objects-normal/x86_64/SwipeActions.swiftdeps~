@@ -1,0 +1,519 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SwipeActionHandler"
+- "SwipeAction"
+- "SwipeConfiguration"
+- "ContextualAction"
+- "ContextualStyle"
+provides-nominal:
+- "6Eureka11SwipeActionC"
+- "6Eureka11SwipeActionC5StyleO"
+- "6Eureka18SwipeConfigurationV"
+- "6Eureka16ContextualActionP"
+- "So20UITableViewRowActionC"
+- "So18UIContextualActionC"
+- "6Eureka15ContextualStyleP"
+- "So25UITableViewRowActionStyleV"
+- "So23UIContextualActionStyleV"
+provides-member:
+- ["6Eureka11SwipeActionC", ""]
+- ["6Eureka11SwipeActionC5StyleO", ""]
+- ["6Eureka18SwipeConfigurationV", ""]
+- ["6Eureka16ContextualActionP", ""]
+- ["So20UITableViewRowActionC", ""]
+- ["So18UIContextualActionC", ""]
+- ["6Eureka15ContextualStyleP", ""]
+- ["So25UITableViewRowActionStyleV", ""]
+- ["So23UIContextualActionStyleV", ""]
+- ["6Eureka18SwipeConfigurationV", "contextualConfiguration"]
+- ["6Eureka18SwipeConfigurationV", "contextualActions"]
+- ["6Eureka16ContextualActionP", "backgroundColor"]
+provides-dynamic-lookup:
+depends-top-level:
+- "=="
+- "AssignmentPrecedence"
+- "BaseRow"
+- "Bool"
+- "CastingPrecedence"
+- "ContextualAction"
+- "ContextualStyle"
+- !private "DispatchQueue"
+- "String"
+- "SwipeAction"
+- "SwipeActionHandler"
+- "SwipeConfiguration"
+- "UIColor"
+- "UIContextualAction"
+- "UIImage"
+- "UISwipeActionsConfiguration"
+- "UITableViewRowAction"
+- "Void"
+depends-member:
+- !private ["Sa", "map"]
+- !private ["6Eureka8BaseCellC", "deinit"]
+- !private ["6Eureka8BaseCellC", "formViewController"]
+- !private ["6Eureka12BaseCellTypeP", "formViewController"]
+- !private ["6Eureka7BaseRowC", "baseCell"]
+- !private ["6Eureka7BaseRowC", "deinit"]
+- !private ["6Eureka7BaseRowC", "section"]
+- !private ["6Eureka11BaseRowTypeP", "baseCell"]
+- !private ["6Eureka11BaseRowTypeP", "section"]
+- !private ["SK", "map"]
+- !private ["SK", "remove"]
+- !private ["SK", "row"]
+- !private ["So15CALayerDelegateP", "formViewController"]
+- !private ["So15CALayerDelegateP", "setEditing"]
+- !private ["s7CVarArgP", "Style"]
+- !private ["s7CVarArgP", "async"]
+- ["s7CVarArgP", "backgroundColor"]
+- !private ["s7CVarArgP", "formViewController"]
+- ["s7CVarArgP", "image"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "map"]
+- !private ["s7CVarArgP", "performsFirstActionWithFullSwipe"]
+- !private ["s7CVarArgP", "setEditing"]
+- !private ["s7CVarArgP", "style"]
+- !private ["s7CVarArgP", "tableView"]
+- ["s7CVarArgP", "title"]
+- !private ["Sl", "map"]
+- !private ["Sl", "remove"]
+- !private ["Sl", "row"]
+- !private ["SL", "row"]
+- !private ["6Eureka16ContextualActionP", "DispatchQueue"]
+- ["6Eureka16ContextualActionP", "String"]
+- !private ["6Eureka16ContextualActionP", "Style"]
+- ["6Eureka16ContextualActionP", "UIColor"]
+- !private ["6Eureka16ContextualActionP", "UIContextualAction"]
+- ["6Eureka16ContextualActionP", "UIImage"]
+- !private ["6Eureka16ContextualActionP", "UITableViewRowAction"]
+- ["6Eureka16ContextualActionP", ""]
+- ["6Eureka16ContextualActionP", "backgroundColor"]
+- !private ["6Eureka16ContextualActionP", "contextualAction"]
+- !private ["6Eureka16ContextualActionP", "handler"]
+- ["6Eureka16ContextualActionP", "image"]
+- !private ["6Eureka16ContextualActionP", "init"]
+- !private ["6Eureka16ContextualActionP", "style"]
+- ["6Eureka16ContextualActionP", "title"]
+- ["6Eureka15ContextualStyleP", ""]
+- !private ["6Eureka15ContextualStyleP", "destructive"]
+- !private ["6Eureka15ContextualStyleP", "normal"]
+- !private ["10Foundation15ContiguousBytesP", "map"]
+- !private ["s28CustomDebugStringConvertibleP", "Style"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- ["s28CustomDebugStringConvertibleP", "backgroundColor"]
+- !private ["s28CustomDebugStringConvertibleP", "formViewController"]
+- ["s28CustomDebugStringConvertibleP", "image"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "map"]
+- !private ["s28CustomDebugStringConvertibleP", "performsFirstActionWithFullSwipe"]
+- !private ["s28CustomDebugStringConvertibleP", "row"]
+- !private ["s28CustomDebugStringConvertibleP", "setEditing"]
+- !private ["s28CustomDebugStringConvertibleP", "style"]
+- !private ["s28CustomDebugStringConvertibleP", "tableView"]
+- ["s28CustomDebugStringConvertibleP", "title"]
+- !private ["s17CustomReflectableP", "map"]
+- !private ["s17CustomReflectableP", "row"]
+- !private ["s23CustomStringConvertibleP", "Style"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- ["s23CustomStringConvertibleP", "backgroundColor"]
+- !private ["s23CustomStringConvertibleP", "formViewController"]
+- ["s23CustomStringConvertibleP", "image"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "map"]
+- !private ["s23CustomStringConvertibleP", "performsFirstActionWithFullSwipe"]
+- !private ["s23CustomStringConvertibleP", "row"]
+- !private ["s23CustomStringConvertibleP", "setEditing"]
+- !private ["s23CustomStringConvertibleP", "style"]
+- !private ["s23CustomStringConvertibleP", "tableView"]
+- ["s23CustomStringConvertibleP", "title"]
+- !private ["10Foundation12DataProtocolP", "map"]
+- !private ["Se", "map"]
+- !private ["Se", "row"]
+- !private ["6Eureka11DisableableP", "baseCell"]
+- !private ["6Eureka11DisableableP", "section"]
+- !private ["So18OS_dispatch_objectC", "async"]
+- !private ["So18OS_dispatch_objectC", "main"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- !private ["So17OS_dispatch_queueC", "main"]
+- !private ["SE", "map"]
+- !private ["SE", "row"]
+- ["SQ", "=="]
+- !private ["SQ", "Style"]
+- !private ["SQ", "UIContextualAction"]
+- !private ["SQ", "UITableViewRowAction"]
+- ["SQ", ""]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "async"]
+- ["SQ", "backgroundColor"]
+- !private ["SQ", "baseCell"]
+- !private ["SQ", "contextualStyle"]
+- ["SQ", "destructive"]
+- !private ["SQ", "formViewController"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "image"]
+- !private ["SQ", "init"]
+- !private ["SQ", "main"]
+- !private ["SQ", "map"]
+- ["SQ", "normal"]
+- !private ["SQ", "performsFirstActionWithFullSwipe"]
+- !private ["SQ", "remove"]
+- !private ["SQ", "row"]
+- !private ["SQ", "section"]
+- !private ["SQ", "setEditing"]
+- !private ["SQ", "style"]
+- !private ["SQ", "tableView"]
+- ["SQ", "title"]
+- !private ["s25ExpressibleByArrayLiteralP", "map"]
+- !private ["s25ExpressibleByArrayLiteralP", "row"]
+- !private ["6Eureka12FormDelegateP", "tableView"]
+- !private ["6Eureka18FormViewControllerC", "deinit"]
+- !private ["6Eureka18FormViewControllerC", "tableView"]
+- !private ["6Eureka26FormViewControllerProtocolP", "tableView"]
+- ["SH", "=="]
+- !private ["SH", "Style"]
+- !private ["SH", "UIContextualAction"]
+- !private ["SH", "UITableViewRowAction"]
+- ["SH", ""]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "async"]
+- ["SH", "backgroundColor"]
+- !private ["SH", "contextualStyle"]
+- ["SH", "destructive"]
+- !private ["SH", "formViewController"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "image"]
+- !private ["SH", "init"]
+- !private ["SH", "main"]
+- !private ["SH", "map"]
+- ["SH", "normal"]
+- !private ["SH", "performsFirstActionWithFullSwipe"]
+- !private ["SH", "row"]
+- !private ["SH", "setEditing"]
+- !private ["SH", "style"]
+- !private ["SH", "tableView"]
+- ["SH", "title"]
+- !private ["s6HasherV", "combine"]
+- !private ["6Eureka7HidableP", "baseCell"]
+- !private ["6Eureka7HidableP", "remove"]
+- !private ["6Eureka7HidableP", "section"]
+- !private ["10Foundation9IndexPathV", "row"]
+- !private ["SM", "map"]
+- !private ["SM", "remove"]
+- !private ["SM", "row"]
+- !private ["10Foundation19MutableDataProtocolP", "map"]
+- !private ["So8NSCodingP", "formViewController"]
+- !private ["So8NSCodingP", "setEditing"]
+- !private ["So8NSCodingP", "tableView"]
+- !private ["So9NSCopyingP", "Style"]
+- ["So9NSCopyingP", "backgroundColor"]
+- ["So9NSCopyingP", "image"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "style"]
+- ["So9NSCopyingP", "title"]
+- !private ["So26NSExtensionRequestHandlingP", "tableView"]
+- ["So8NSObjectC", "Style"]
+- ["So8NSObjectC", "UIImage"]
+- !private ["So8NSObjectC", "async"]
+- ["So8NSObjectC", "backgroundColor"]
+- !private ["So8NSObjectC", "formViewController"]
+- ["So8NSObjectC", "image"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "performsFirstActionWithFullSwipe"]
+- !private ["So8NSObjectC", "setEditing"]
+- !private ["So8NSObjectC", "style"]
+- !private ["So8NSObjectC", "tableView"]
+- ["So8NSObjectC", "title"]
+- !private ["So8NSObjectP", "Style"]
+- !private ["So8NSObjectP", "async"]
+- ["So8NSObjectP", "backgroundColor"]
+- !private ["So8NSObjectP", "formViewController"]
+- ["So8NSObjectP", "image"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "performsFirstActionWithFullSwipe"]
+- !private ["So8NSObjectP", "setEditing"]
+- !private ["So8NSObjectP", "style"]
+- !private ["So8NSObjectP", "tableView"]
+- ["So8NSObjectP", "title"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "main"]
+- !private ["Sk", "map"]
+- !private ["Sk", "row"]
+- !private ["Sm", "map"]
+- !private ["Sm", "remove"]
+- !private ["SY", "destructive"]
+- !private ["SY", "normal"]
+- !private ["10Foundation20ReferenceConvertibleP", "row"]
+- !private ["6Eureka7SectionC", "deinit"]
+- !private ["6Eureka7SectionC", "remove"]
+- !private ["6Eureka15SectionDelegateP", "remove"]
+- !private ["ST", "map"]
+- !private ["ST", "remove"]
+- !private ["ST", "row"]
+- ["6Eureka11SwipeActionC5StyleO", "=="]
+- ["6Eureka11SwipeActionC5StyleO", "ContextualStyle"]
+- !private ["6Eureka11SwipeActionC5StyleO", "UIContextualAction"]
+- !private ["6Eureka11SwipeActionC5StyleO", "UITableViewRowAction"]
+- ["6Eureka11SwipeActionC5StyleO", "__derived_enum_equals"]
+- ["6Eureka11SwipeActionC5StyleO", "_rawHashValue"]
+- ["6Eureka11SwipeActionC5StyleO", "contextualStyle"]
+- ["6Eureka11SwipeActionC5StyleO", "deinit"]
+- ["So23UIContextualActionStyleV", "deinit"]
+- ["So25UITableViewRowActionStyleV", "deinit"]
+- ["6Eureka11SwipeActionC5StyleO", "destructive"]
+- !private ["So23UIContextualActionStyleV", "destructive"]
+- !private ["So25UITableViewRowActionStyleV", "destructive"]
+- ["6Eureka11SwipeActionC5StyleO", "hash"]
+- ["6Eureka11SwipeActionC5StyleO", "hashValue"]
+- ["6Eureka11SwipeActionC5StyleO", "normal"]
+- !private ["So23UIContextualActionStyleV", "normal"]
+- !private ["So25UITableViewRowActionStyleV", "normal"]
+- ["6Eureka11SwipeActionC", "BaseRow"]
+- ["6Eureka11SwipeActionC", "ContextualAction"]
+- ["6Eureka11SwipeActionC", "ContextualStyle"]
+- !private ["6Eureka11SwipeActionC", "DispatchQueue"]
+- ["6Eureka11SwipeActionC", "String"]
+- ["6Eureka11SwipeActionC", "Style"]
+- ["6Eureka11SwipeActionC", "SwipeActionHandler"]
+- ["6Eureka11SwipeActionC", "UIColor"]
+- !private ["6Eureka11SwipeActionC", "UIContextualAction"]
+- ["6Eureka11SwipeActionC", "UIImage"]
+- !private ["6Eureka11SwipeActionC", "UITableViewRowAction"]
+- !private ["6Eureka11SwipeActionC", "Void"]
+- ["6Eureka11SwipeActionC", "backgroundColor"]
+- ["6Eureka11SwipeActionC", "contextualAction"]
+- ["6Eureka11SwipeActionC", "deinit"]
+- ["6Eureka11SwipeActionC", "handler"]
+- ["6Eureka11SwipeActionC", "image"]
+- ["6Eureka11SwipeActionC", "init"]
+- ["6Eureka11SwipeActionC", "style"]
+- ["6Eureka11SwipeActionC", "title"]
+- ["6Eureka18SwipeConfigurationV", "BaseRow"]
+- ["6Eureka18SwipeConfigurationV", "ContextualAction"]
+- ["6Eureka18SwipeConfigurationV", "SwipeAction"]
+- !private ["6Eureka18SwipeConfigurationV", "UIContextualAction"]
+- ["6Eureka18SwipeConfigurationV", "UISwipeActionsConfiguration"]
+- ["6Eureka18SwipeConfigurationV", "actions"]
+- ["6Eureka18SwipeConfigurationV", "contextualActions"]
+- ["6Eureka18SwipeConfigurationV", "contextualConfiguration"]
+- ["6Eureka18SwipeConfigurationV", "init"]
+- ["6Eureka18SwipeConfigurationV", "performsFirstActionWithFullSwipe"]
+- ["6Eureka18SwipeConfigurationV", "row"]
+- !private ["6Eureka8TaggableP", "baseCell"]
+- !private ["6Eureka8TaggableP", "remove"]
+- !private ["6Eureka8TaggableP", "section"]
+- !private ["So29UIAccessibilityIdentificationP", "formViewController"]
+- !private ["So29UIAccessibilityIdentificationP", "setEditing"]
+- !private ["So12UIAppearanceP", "formViewController"]
+- !private ["So12UIAppearanceP", "setEditing"]
+- !private ["So21UIAppearanceContainerP", "formViewController"]
+- !private ["So21UIAppearanceContainerP", "setEditing"]
+- !private ["So21UIAppearanceContainerP", "tableView"]
+- !private ["So18UIContentContainerP", "tableView"]
+- ["So18UIContextualActionC", "Style"]
+- ["So18UIContextualActionC", "backgroundColor"]
+- ["So18UIContextualActionC", "deinit"]
+- ["So18UIContextualActionC", "image"]
+- !private ["So18UIContextualActionC", "init"]
+- ["So18UIContextualActionC", "title"]
+- !private ["So17UICoordinateSpaceP", "formViewController"]
+- !private ["So17UICoordinateSpaceP", "setEditing"]
+- !private ["So23UIDataSourceTranslatingP", "setEditing"]
+- !private ["So13UIDynamicItemP", "formViewController"]
+- !private ["So13UIDynamicItemP", "setEditing"]
+- !private ["So18UIFocusEnvironmentP", "formViewController"]
+- !private ["So18UIFocusEnvironmentP", "setEditing"]
+- !private ["So18UIFocusEnvironmentP", "tableView"]
+- !private ["So11UIFocusItemP", "formViewController"]
+- !private ["So11UIFocusItemP", "setEditing"]
+- !private ["So20UIFocusItemContainerP", "formViewController"]
+- !private ["So20UIFocusItemContainerP", "setEditing"]
+- !private ["So30UIFocusItemScrollableContainerP", "setEditing"]
+- !private ["So27UIGestureRecognizerDelegateP", "formViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "formViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "setEditing"]
+- !private ["So30UIPasteConfigurationSupportingP", "tableView"]
+- !private ["So11UIResponderC", "formViewController"]
+- !private ["So11UIResponderC", "setEditing"]
+- !private ["So11UIResponderC", "tableView"]
+- !private ["So30UIResponderStandardEditActionsP", "formViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "setEditing"]
+- !private ["So30UIResponderStandardEditActionsP", "tableView"]
+- !private ["So12UIScrollViewC", "setEditing"]
+- !private ["So20UIScrollViewDelegateP", "tableView"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "setEditing"]
+- !private ["So16UIStateRestoringP", "tableView"]
+- !private ["So27UISwipeActionsConfigurationC", "init"]
+- !private ["So27UISwipeActionsConfigurationC", "performsFirstActionWithFullSwipe"]
+- !private ["So11UITableViewC", "setEditing"]
+- !private ["So15UITableViewCellC", "formViewController"]
+- !private ["So21UITableViewDataSourceP", "tableView"]
+- !private ["So19UITableViewDelegateP", "tableView"]
+- ["So20UITableViewRowActionC", "Style"]
+- ["So20UITableViewRowActionC", "UIImage"]
+- ["So20UITableViewRowActionC", "backgroundColor"]
+- ["So20UITableViewRowActionC", "deinit"]
+- ["So20UITableViewRowActionC", "image"]
+- !private ["So20UITableViewRowActionC", "init"]
+- !private ["So20UITableViewRowActionC", "style"]
+- ["So20UITableViewRowActionC", "title"]
+- !private ["So18UITraitEnvironmentP", "formViewController"]
+- !private ["So18UITraitEnvironmentP", "setEditing"]
+- !private ["So18UITraitEnvironmentP", "tableView"]
+- !private ["So23UIUserActivityRestoringP", "formViewController"]
+- !private ["So23UIUserActivityRestoringP", "setEditing"]
+- !private ["So23UIUserActivityRestoringP", "tableView"]
+- !private ["So6UIViewC", "formViewController"]
+- !private ["So6UIViewC", "setEditing"]
+- !private ["So16UIViewControllerC", "tableView"]
+- !private ["s14_ArrayProtocolP", "map"]
+- !private ["s24_DestructorSafeContainerP", "map"]
+- !private ["s19_HasContiguousBytesP", "map"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "map"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Style"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "formViewController"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "image"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "performsFirstActionWithFullSwipe"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setEditing"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "style"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "tableView"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "title"]
+- !private ["s21_ObjectiveCBridgeableP", "map"]
+- !private ["s21_ObjectiveCBridgeableP", "row"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "formViewController"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "setEditing"]
+depends-nominal:
+- !private "Sa"
+- !private "6Eureka8BaseCellC"
+- !private "6Eureka12BaseCellTypeP"
+- !private "6Eureka7BaseRowC"
+- !private "6Eureka11BaseRowTypeP"
+- !private "SK"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- "6Eureka16ContextualActionP"
+- "6Eureka15ContextualStyleP"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "6Eureka11DisableableP"
+- !private "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "6Eureka12FormDelegateP"
+- !private "6Eureka18FormViewControllerC"
+- !private "6Eureka26FormViewControllerProtocolP"
+- "SH"
+- !private "s6HasherV"
+- !private "6Eureka7HidableP"
+- !private "10Foundation9IndexPathV"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- "So9NSCopyingP"
+- !private "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So9OS_objectC"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "6Eureka7SectionC"
+- !private "6Eureka15SectionDelegateP"
+- !private "ST"
+- "6Eureka11SwipeActionC5StyleO"
+- "So23UIContextualActionStyleV"
+- "So25UITableViewRowActionStyleV"
+- "6Eureka11SwipeActionC5StyleO"
+- !private "So23UIContextualActionStyleV"
+- !private "So25UITableViewRowActionStyleV"
+- "6Eureka11SwipeActionC5StyleO"
+- !private "So23UIContextualActionStyleV"
+- !private "So25UITableViewRowActionStyleV"
+- "6Eureka11SwipeActionC"
+- "6Eureka18SwipeConfigurationV"
+- !private "6Eureka8TaggableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So18UIContentContainerP"
+- "So18UIContextualActionC"
+- !private "So17UICoordinateSpaceP"
+- !private "So23UIDataSourceTranslatingP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So30UIFocusItemScrollableContainerP"
+- !private "So27UIGestureRecognizerDelegateP"
+- !private "So30UIPasteConfigurationSupportingP"
+- !private "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So12UIScrollViewC"
+- !private "So20UIScrollViewDelegateP"
+- !private "So35UISpringLoadedInteractionSupportingP"
+- !private "So16UIStateRestoringP"
+- !private "So27UISwipeActionsConfigurationC"
+- !private "So11UITableViewC"
+- !private "So15UITableViewCellC"
+- !private "So21UITableViewDataSourceP"
+- !private "So19UITableViewDelegateP"
+- "So20UITableViewRowActionC"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- !private "So16UIViewControllerC"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Eureka/Eureka-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Eureka.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "853a69c2634e90d3493d7fe0ecc6b99c"

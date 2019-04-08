@@ -1,0 +1,593 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ScaledroneDelegate"
+- "ScaledroneAuthenticateDelegate"
+- "ScaledroneRoomDelegate"
+- "ScaledroneObservableRoomDelegate"
+- "Scaledrone"
+- "ScaledroneRoom"
+- "ScaledroneMember"
+- "convertJSONMessageToDictionary"
+- "convertAnyToMember"
+- "convertAnyToMembers"
+provides-nominal:
+- "10Scaledrone0A8DelegateP"
+- "10Scaledrone0A20AuthenticateDelegateP"
+- "10Scaledrone0A12RoomDelegateP"
+- "10Scaledrone0A22ObservableRoomDelegateP"
+- "10ScaledroneAAC"
+- "10Scaledrone0A4RoomC"
+- "10Scaledrone0A6MemberC"
+provides-member:
+- ["10Scaledrone0A8DelegateP", ""]
+- ["10Scaledrone0A20AuthenticateDelegateP", ""]
+- ["10Scaledrone0A12RoomDelegateP", ""]
+- ["10Scaledrone0A22ObservableRoomDelegateP", ""]
+- ["10ScaledroneAAC", ""]
+- ["10Scaledrone0A4RoomC", ""]
+- ["10Scaledrone0A6MemberC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "&&"
+- !private "+="
+- !private "=="
+- !private ">"
+- !private "??"
+- "AnyObject"
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- "Data"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- !private "JSONSerialization"
+- "NSError"
+- "Scaledrone"
+- "ScaledroneAuthenticateDelegate"
+- "ScaledroneDelegate"
+- "ScaledroneMember"
+- "ScaledroneObservableRoomDelegate"
+- "ScaledroneRoom"
+- "ScaledroneRoomDelegate"
+- "String"
+- "StringLiteralType"
+- !private "URL"
+- "Void"
+- "WebSocket"
+- "WebSocketDelegate"
+- "convertAnyToMember"
+- "convertAnyToMembers"
+- "convertJSONMessageToDictionary"
+- !private "print"
+- !private "~="
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "filter"]
+- !private ["Sa", "first"]
+- !private ["Sa", "firstIndex"]
+- !private ["Sa", "map"]
+- !private ["Sa", "remove"]
+- !private ["SK", "append"]
+- !private ["SK", "count"]
+- !private ["SK", "data"]
+- !private ["SK", "filter"]
+- !private ["SK", "first"]
+- !private ["SK", "firstIndex"]
+- !private ["SK", "map"]
+- !private ["SK", "remove"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "connect"]
+- !private ["s7CVarArgP", "data"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "disconnect"]
+- !private ["s7CVarArgP", "filter"]
+- !private ["s7CVarArgP", "first"]
+- !private ["s7CVarArgP", "firstIndex"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isValidJSONObject"]
+- !private ["s7CVarArgP", "jsonObject"]
+- !private ["s7CVarArgP", "map"]
+- !private ["s7CVarArgP", "remove"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "write"]
+- !private ["Sl", "append"]
+- !private ["Sl", "count"]
+- !private ["Sl", "data"]
+- !private ["Sl", "filter"]
+- !private ["Sl", "first"]
+- !private ["Sl", "firstIndex"]
+- !private ["Sl", "map"]
+- !private ["Sl", "remove"]
+- !private ["Sl", "subscript"]
+- !private ["SL", "data"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "filter"]
+- !private ["10Foundation15ContiguousBytesP", "first"]
+- !private ["10Foundation15ContiguousBytesP", "firstIndex"]
+- !private ["10Foundation15ContiguousBytesP", "map"]
+- !private ["10Foundation15ContiguousBytesP", "remove"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "connect"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "data"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "disconnect"]
+- !private ["s28CustomDebugStringConvertibleP", "filter"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "firstIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isValidJSONObject"]
+- !private ["s28CustomDebugStringConvertibleP", "jsonObject"]
+- !private ["s28CustomDebugStringConvertibleP", "map"]
+- !private ["s28CustomDebugStringConvertibleP", "remove"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "write"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "data"]
+- !private ["s17CustomReflectableP", "filter"]
+- !private ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "firstIndex"]
+- !private ["s17CustomReflectableP", "map"]
+- !private ["s17CustomReflectableP", "remove"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "connect"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "data"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "disconnect"]
+- !private ["s23CustomStringConvertibleP", "filter"]
+- !private ["s23CustomStringConvertibleP", "first"]
+- !private ["s23CustomStringConvertibleP", "firstIndex"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isValidJSONObject"]
+- !private ["s23CustomStringConvertibleP", "jsonObject"]
+- !private ["s23CustomStringConvertibleP", "map"]
+- !private ["s23CustomStringConvertibleP", "remove"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "utf8"]
+- !private ["s23CustomStringConvertibleP", "write"]
+- !private ["10Foundation4DataV", "count"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "filter"]
+- !private ["10Foundation12DataProtocolP", "first"]
+- !private ["10Foundation12DataProtocolP", "firstIndex"]
+- !private ["10Foundation12DataProtocolP", "map"]
+- !private ["10Foundation12DataProtocolP", "remove"]
+- !private ["Se", "append"]
+- !private ["Se", "count"]
+- !private ["Se", "data"]
+- !private ["Se", "filter"]
+- !private ["Se", "first"]
+- !private ["Se", "firstIndex"]
+- !private ["Se", "init"]
+- !private ["Se", "map"]
+- !private ["Se", "remove"]
+- !private ["Se", "subscript"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["SD", "subscript"]
+- !private ["SE", "append"]
+- !private ["SE", "count"]
+- !private ["SE", "data"]
+- !private ["SE", "filter"]
+- !private ["SE", "first"]
+- !private ["SE", "firstIndex"]
+- !private ["SE", "init"]
+- !private ["SE", "map"]
+- !private ["SE", "remove"]
+- !private ["SE", "subscript"]
+- !private ["SS10FoundationE8EncodingV", "utf8"]
+- !private ["SQ", "append"]
+- !private ["SQ", "connect"]
+- !private ["SQ", "count"]
+- !private ["SQ", "data"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "disconnect"]
+- !private ["SQ", "filter"]
+- !private ["SQ", "first"]
+- !private ["SQ", "firstIndex"]
+- !private ["SQ", "init"]
+- !private ["SQ", "isValidJSONObject"]
+- !private ["SQ", "jsonObject"]
+- !private ["SQ", "map"]
+- !private ["SQ", "remove"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "utf8"]
+- !private ["SQ", "write"]
+- !private ["s5ErrorP", "init"]
+- !private ["s5ErrorP", "localizedDescription"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "filter"]
+- !private ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s25ExpressibleByArrayLiteralP", "firstIndex"]
+- !private ["s25ExpressibleByArrayLiteralP", "map"]
+- !private ["s25ExpressibleByArrayLiteralP", "remove"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "data"]
+- !private ["s32ExpressibleByStringInterpolationP", "data"]
+- !private ["s26ExpressibleByStringLiteralP", "data"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "data"]
+- !private ["SH", "append"]
+- !private ["SH", "connect"]
+- !private ["SH", "count"]
+- !private ["SH", "data"]
+- !private ["SH", "delegate"]
+- !private ["SH", "disconnect"]
+- !private ["SH", "filter"]
+- !private ["SH", "first"]
+- !private ["SH", "firstIndex"]
+- !private ["SH", "init"]
+- !private ["SH", "isValidJSONObject"]
+- !private ["SH", "jsonObject"]
+- !private ["SH", "map"]
+- !private ["SH", "remove"]
+- !private ["SH", "subscript"]
+- !private ["SH", "utf8"]
+- !private ["SH", "write"]
+- !private ["So19NSJSONSerializationC", "data"]
+- !private ["So19NSJSONSerializationC", "isValidJSONObject"]
+- !private ["So19NSJSONSerializationC", "jsonObject"]
+- !private ["s25LosslessStringConvertibleP", "data"]
+- !private ["s10MirrorPathP", "data"]
+- !private ["SM", "append"]
+- !private ["SM", "count"]
+- !private ["SM", "filter"]
+- !private ["SM", "first"]
+- !private ["SM", "firstIndex"]
+- !private ["SM", "map"]
+- !private ["SM", "remove"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "filter"]
+- !private ["10Foundation19MutableDataProtocolP", "first"]
+- !private ["10Foundation19MutableDataProtocolP", "firstIndex"]
+- !private ["10Foundation19MutableDataProtocolP", "map"]
+- !private ["10Foundation19MutableDataProtocolP", "remove"]
+- !private ["So8NSCodingP", "data"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So9NSCopyingP", "data"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So7NSErrorC", "init"]
+- !private ["So21NSItemProviderReadingP", "data"]
+- !private ["So21NSItemProviderWritingP", "data"]
+- !private ["So16NSMutableCopyingP", "data"]
+- !private ["So8NSObjectC", "connect"]
+- !private ["So8NSObjectC", "data"]
+- !private ["So8NSObjectC", "delegate"]
+- !private ["So8NSObjectC", "disconnect"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isValidJSONObject"]
+- !private ["So8NSObjectC", "jsonObject"]
+- !private ["So8NSObjectC", "write"]
+- !private ["So8NSObjectP", "connect"]
+- !private ["So8NSObjectP", "data"]
+- !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "disconnect"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isValidJSONObject"]
+- !private ["So8NSObjectP", "jsonObject"]
+- !private ["So8NSObjectP", "write"]
+- !private ["So14NSSecureCodingP", "data"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "data"]
+- !private ["Sk", "append"]
+- !private ["Sk", "count"]
+- !private ["Sk", "filter"]
+- !private ["Sk", "first"]
+- !private ["Sk", "firstIndex"]
+- !private ["Sk", "map"]
+- !private ["Sk", "remove"]
+- !private ["Sm", "append"]
+- !private ["Sm", "count"]
+- !private ["Sm", "data"]
+- !private ["Sm", "filter"]
+- !private ["Sm", "first"]
+- !private ["Sm", "firstIndex"]
+- !private ["Sm", "map"]
+- !private ["Sm", "remove"]
+- !private ["SY", "utf8"]
+- !private ["10Foundation20ReferenceConvertibleP", "count"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- ["10ScaledroneAAC", "Callback"]
+- ["10ScaledroneAAC", "Data"]
+- ["10ScaledroneAAC", "Int"]
+- !private ["10ScaledroneAAC", "JSONSerialization"]
+- ["10ScaledroneAAC", "NSError"]
+- ["10ScaledroneAAC", "RoomName"]
+- ["10ScaledroneAAC", "ScaledroneAuthenticateDelegate"]
+- ["10ScaledroneAAC", "ScaledroneDelegate"]
+- !private ["10ScaledroneAAC", "ScaledroneMember"]
+- ["10ScaledroneAAC", "ScaledroneRoom"]
+- ["10ScaledroneAAC", "String"]
+- !private ["10ScaledroneAAC", "URL"]
+- ["10ScaledroneAAC", "Void"]
+- ["10ScaledroneAAC", "WebSocket"]
+- ["10ScaledroneAAC", "authenticate"]
+- ["10ScaledroneAAC", "authenticateDelegate"]
+- !private ["10ScaledroneAAC", "callbackId"]
+- !private ["10ScaledroneAAC", "callbacks"]
+- !private ["10ScaledroneAAC", "channelID"]
+- ["10ScaledroneAAC", "clientID"]
+- ["10ScaledroneAAC", "connect"]
+- !private ["10ScaledroneAAC", "convertAnyToMember"]
+- !private ["10ScaledroneAAC", "convertAnyToMembers"]
+- !private ["10ScaledroneAAC", "convertJSONMessageToDictionary"]
+- !private ["10ScaledroneAAC", "createCallback"]
+- !private ["10ScaledroneAAC", "data"]
+- ["10ScaledroneAAC", "deinit"]
+- ["10ScaledroneAAC", "delegate"]
+- !private ["10ScaledroneAAC", "delegatePublishMessage"]
+- ["10ScaledroneAAC", "disconnect"]
+- !private ["10ScaledroneAAC", "handleHistoryMessage"]
+- ["10ScaledroneAAC", "init"]
+- !private ["10ScaledroneAAC", "nextHistoryIndex"]
+- !private ["10ScaledroneAAC", "pendingHistoryMessages"]
+- !private ["10ScaledroneAAC", "print"]
+- ["10ScaledroneAAC", "publish"]
+- !private ["10ScaledroneAAC", "rooms"]
+- !private ["10ScaledroneAAC", "send"]
+- !private ["10ScaledroneAAC", "socket"]
+- ["10ScaledroneAAC", "subscribe"]
+- ["10ScaledroneAAC", "websocketDidConnect"]
+- ["10ScaledroneAAC", "websocketDidDisconnect"]
+- ["10ScaledroneAAC", "websocketDidReceiveData"]
+- ["10ScaledroneAAC", "websocketDidReceiveMessage"]
+- ["10Scaledrone0A20AuthenticateDelegateP", "NSError"]
+- ["10Scaledrone0A20AuthenticateDelegateP", "Scaledrone"]
+- ["10Scaledrone0A20AuthenticateDelegateP", "scaledroneDidAuthenticate"]
+- ["10Scaledrone0A8DelegateP", "NSError"]
+- ["10Scaledrone0A8DelegateP", "Scaledrone"]
+- ["10Scaledrone0A8DelegateP", "scaledroneDidConnect"]
+- ["10Scaledrone0A8DelegateP", "scaledroneDidDisconnect"]
+- ["10Scaledrone0A8DelegateP", "scaledroneDidReceiveError"]
+- ["10Scaledrone0A6MemberC", "String"]
+- ["10Scaledrone0A6MemberC", "authData"]
+- ["10Scaledrone0A6MemberC", "clientData"]
+- ["10Scaledrone0A6MemberC", "description"]
+- ["10Scaledrone0A6MemberC", "id"]
+- ["10Scaledrone0A6MemberC", "init"]
+- ["10Scaledrone0A22ObservableRoomDelegateP", "ScaledroneMember"]
+- ["10Scaledrone0A22ObservableRoomDelegateP", "ScaledroneRoom"]
+- ["10Scaledrone0A22ObservableRoomDelegateP", "scaledroneObservableRoomDidConnect"]
+- ["10Scaledrone0A22ObservableRoomDelegateP", "scaledroneObservableRoomMemberDidJoin"]
+- ["10Scaledrone0A22ObservableRoomDelegateP", "scaledroneObservableRoomMemberDidLeave"]
+- ["10Scaledrone0A4RoomC", "Scaledrone"]
+- ["10Scaledrone0A4RoomC", "ScaledroneMember"]
+- ["10Scaledrone0A4RoomC", "ScaledroneObservableRoomDelegate"]
+- ["10Scaledrone0A4RoomC", "ScaledroneRoomDelegate"]
+- ["10Scaledrone0A4RoomC", "String"]
+- ["10Scaledrone0A4RoomC", "delegate"]
+- ["10Scaledrone0A4RoomC", "init"]
+- ["10Scaledrone0A4RoomC", "members"]
+- ["10Scaledrone0A4RoomC", "name"]
+- ["10Scaledrone0A4RoomC", "observableDelegate"]
+- ["10Scaledrone0A4RoomC", "publish"]
+- ["10Scaledrone0A4RoomC", "scaledrone"]
+- ["10Scaledrone0A12RoomDelegateP", "NSError"]
+- ["10Scaledrone0A12RoomDelegateP", "ScaledroneMember"]
+- ["10Scaledrone0A12RoomDelegateP", "ScaledroneRoom"]
+- ["10Scaledrone0A12RoomDelegateP", "scaledroneRoomDidConnect"]
+- ["10Scaledrone0A12RoomDelegateP", "scaledroneRoomDidReceiveMessage"]
+- !private ["ST", "append"]
+- !private ["ST", "count"]
+- !private ["ST", "data"]
+- !private ["ST", "filter"]
+- !private ["ST", "first"]
+- !private ["ST", "firstIndex"]
+- !private ["ST", "map"]
+- !private ["ST", "remove"]
+- !private ["ST", "subscript"]
+- !private ["So16NSStreamDelegateP", "connect"]
+- !private ["So16NSStreamDelegateP", "delegate"]
+- !private ["So16NSStreamDelegateP", "disconnect"]
+- !private ["So16NSStreamDelegateP", "init"]
+- !private ["So16NSStreamDelegateP", "write"]
+- !private ["SS", "data"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["Sy", "data"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "data"]
+- !private ["s20TextOutputStreamableP", "data"]
+- !private ["10Foundation3URLV", "init"]
+- !private ["10Starscream9WebSocketC", "connect"]
+- !private ["10Starscream9WebSocketC", "delegate"]
+- !private ["10Starscream9WebSocketC", "disconnect"]
+- !private ["10Starscream9WebSocketC", "init"]
+- !private ["10Starscream9WebSocketC", "write"]
+- !private ["10Starscream17WebSocketDelegateP", "JSONSerialization"]
+- !private ["10Starscream17WebSocketDelegateP", "NSError"]
+- !private ["10Starscream17WebSocketDelegateP", "ScaledroneRoom"]
+- !private ["10Starscream17WebSocketDelegateP", "URL"]
+- !private ["10Starscream17WebSocketDelegateP", "WebSocket"]
+- ["10Starscream17WebSocketDelegateP", ""]
+- !private ["10Starscream17WebSocketDelegateP", "authenticateDelegate"]
+- !private ["10Starscream17WebSocketDelegateP", "callbackId"]
+- !private ["10Starscream17WebSocketDelegateP", "callbacks"]
+- !private ["10Starscream17WebSocketDelegateP", "channelID"]
+- !private ["10Starscream17WebSocketDelegateP", "clientID"]
+- !private ["10Starscream17WebSocketDelegateP", "convertAnyToMember"]
+- !private ["10Starscream17WebSocketDelegateP", "convertAnyToMembers"]
+- !private ["10Starscream17WebSocketDelegateP", "convertJSONMessageToDictionary"]
+- !private ["10Starscream17WebSocketDelegateP", "createCallback"]
+- !private ["10Starscream17WebSocketDelegateP", "data"]
+- !private ["10Starscream17WebSocketDelegateP", "delegate"]
+- !private ["10Starscream17WebSocketDelegateP", "delegatePublishMessage"]
+- !private ["10Starscream17WebSocketDelegateP", "handleHistoryMessage"]
+- !private ["10Starscream17WebSocketDelegateP", "nextHistoryIndex"]
+- !private ["10Starscream17WebSocketDelegateP", "pendingHistoryMessages"]
+- !private ["10Starscream17WebSocketDelegateP", "print"]
+- !private ["10Starscream17WebSocketDelegateP", "publish"]
+- !private ["10Starscream17WebSocketDelegateP", "rooms"]
+- !private ["10Starscream17WebSocketDelegateP", "send"]
+- !private ["10Starscream17WebSocketDelegateP", "socket"]
+- ["10Starscream17WebSocketDelegateP", "websocketDidConnect"]
+- ["10Starscream17WebSocketDelegateP", "websocketDidDisconnect"]
+- ["10Starscream17WebSocketDelegateP", "websocketDidReceiveData"]
+- ["10Starscream17WebSocketDelegateP", "websocketDidReceiveMessage"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "filter"]
+- !private ["s14_ArrayProtocolP", "first"]
+- !private ["s14_ArrayProtocolP", "firstIndex"]
+- !private ["s14_ArrayProtocolP", "map"]
+- !private ["s14_ArrayProtocolP", "remove"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "data"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "filter"]
+- !private ["s24_DestructorSafeContainerP", "first"]
+- !private ["s24_DestructorSafeContainerP", "firstIndex"]
+- !private ["s24_DestructorSafeContainerP", "map"]
+- !private ["s24_DestructorSafeContainerP", "remove"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "data"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "data"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "data"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "data"]
+- !private ["s19_HasContiguousBytesP", "filter"]
+- !private ["s19_HasContiguousBytesP", "first"]
+- !private ["s19_HasContiguousBytesP", "firstIndex"]
+- !private ["s19_HasContiguousBytesP", "map"]
+- !private ["s19_HasContiguousBytesP", "remove"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "data"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "filter"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "firstIndex"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "map"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "remove"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "connect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "disconnect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isValidJSONObject"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "jsonObject"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "write"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "data"]
+- !private ["s21_ObjectiveCBridgeableP", "filter"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "firstIndex"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "map"]
+- !private ["s21_ObjectiveCBridgeableP", "remove"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+depends-nominal:
+- !private "Sa"
+- !private "SK"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
+- !private "SD"
+- !private "SE"
+- !private "SS10FoundationE8EncodingV"
+- !private "SQ"
+- !private "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SH"
+- !private "So19NSJSONSerializationC"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So7NSErrorC"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- "10ScaledroneAAC"
+- "10Scaledrone0A20AuthenticateDelegateP"
+- "10Scaledrone0A8DelegateP"
+- "10Scaledrone0A6MemberC"
+- "10Scaledrone0A22ObservableRoomDelegateP"
+- "10Scaledrone0A4RoomC"
+- "10Scaledrone0A12RoomDelegateP"
+- !private "ST"
+- !private "So16NSStreamDelegateP"
+- !private "SS"
+- !private "s27StringInterpolationProtocolP"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "10Foundation3URLV"
+- !private "10Starscream9WebSocketC"
+- "10Starscream17WebSocketDelegateP"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s34_ExpressibleByFileReferenceLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Modules/Starscream.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Scaledrone/Scaledrone-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Starscream/Starscream-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Headers/Starscream-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Scaledrone.build/unextended-module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Starscream/zlib/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Starscream.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "9151d7d756f9d7bb4319a8cf2efa6ae2"

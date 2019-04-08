@@ -1,0 +1,15 @@
+version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+options: "9143b533de1616d3a765518e7dbcfb7b"
+build_time: [1554490117, 965642000]
+inputs:
+  "/Users/lindseythompson/Desktop/Lamp/Pods/MessageInputBar/Sources/Controls/InputBarButtonItem.swift": [1554490106, 6445019]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/MessageInputBar/Sources/Protocols/InputItem.swift": [1554490106, 8033819]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/MessageInputBar/Sources/Protocols/InputPlugin.swift": [1554490106, 7641924]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/MessageInputBar/Sources/Views/InputStackView.swift": [1554490106, 6831280]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/MessageInputBar/Sources/Views/InputTextView.swift": [1554490106, 7029919]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/MessageInputBar/Sources/MessageInputBar.swift": [1554490106, 5008006]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/MessageInputBar/Sources/Protocols/MessageInputBarDelegate.swift": [1554490106, 7839999]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/MessageInputBar/Sources/Models/NSConstraintLayoutSet.swift": [1554490106, 5410240]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/MessageInputBar/Sources/Extensions/NSMutableAttributedString+Extensions.swift": [1554490106, 6007099]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/MessageInputBar/Sources/Views/SeparatorLine.swift": [1554490106, 7216162]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/MessageInputBar/Sources/Extensions/UIView+Extensions.swift": [1554490106, 5813267]

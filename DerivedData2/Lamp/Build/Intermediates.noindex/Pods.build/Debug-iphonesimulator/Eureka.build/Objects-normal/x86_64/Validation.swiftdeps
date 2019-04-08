@@ -1,0 +1,406 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ValidationError"
+- "=="
+- "BaseRuleType"
+- "RuleType"
+- "ValidationOptions"
+- "ValidationRuleHelper"
+- "RuleSet"
+provides-nominal:
+- "6Eureka15ValidationErrorV"
+- "6Eureka12BaseRuleTypeP"
+- "6Eureka8RuleTypeP"
+- "6Eureka17ValidationOptionsV"
+- "6Eureka20ValidationRuleHelperV"
+- "6Eureka7RuleSetV"
+provides-member:
+- ["6Eureka15ValidationErrorV", ""]
+- ["6Eureka12BaseRuleTypeP", ""]
+- ["6Eureka8RuleTypeP", ""]
+- ["6Eureka17ValidationOptionsV", ""]
+- ["6Eureka20ValidationRuleHelperV", ""]
+- ["6Eureka7RuleSetV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "<<"
+- "=="
+- "AssignmentPrecedence"
+- "BaseRuleType"
+- "Bool"
+- "Equatable"
+- "Int"
+- "OptionSet"
+- "RuleSet"
+- "RuleType"
+- "String"
+- "ValidationError"
+- "ValidationOptions"
+- "ValidationRuleHelper"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "index"]
+- !private ["Sa", "remove"]
+- !private ["Sa", "removeAll"]
+- ["6Eureka12BaseRuleTypeP", "RowValueType"]
+- ["6Eureka12BaseRuleTypeP", "String"]
+- ["6Eureka12BaseRuleTypeP", "ValidationError"]
+- ["6Eureka12BaseRuleTypeP", ""]
+- ["6Eureka12BaseRuleTypeP", "id"]
+- ["6Eureka12BaseRuleTypeP", "isValid"]
+- ["6Eureka12BaseRuleTypeP", "validationError"]
+- !private ["SK", "append"]
+- !private ["SK", "index"]
+- !private ["SK", "remove"]
+- !private ["SK", "removeAll"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "index"]
+- !private ["s7CVarArgP", "remove"]
+- !private ["s7CVarArgP", "removeAll"]
+- !private ["Sl", "append"]
+- !private ["Sl", "index"]
+- !private ["Sl", "remove"]
+- !private ["Sl", "removeAll"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "index"]
+- !private ["10Foundation15ContiguousBytesP", "remove"]
+- !private ["10Foundation15ContiguousBytesP", "removeAll"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "index"]
+- !private ["s28CustomDebugStringConvertibleP", "remove"]
+- !private ["s28CustomDebugStringConvertibleP", "removeAll"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "index"]
+- !private ["s17CustomReflectableP", "remove"]
+- !private ["s17CustomReflectableP", "removeAll"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "index"]
+- !private ["s23CustomStringConvertibleP", "remove"]
+- !private ["s23CustomStringConvertibleP", "removeAll"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "index"]
+- !private ["10Foundation12DataProtocolP", "remove"]
+- !private ["10Foundation12DataProtocolP", "removeAll"]
+- !private ["Se", "append"]
+- !private ["Se", "index"]
+- !private ["Se", "remove"]
+- !private ["Se", "removeAll"]
+- !private ["SE", "append"]
+- !private ["SE", "index"]
+- !private ["SE", "remove"]
+- !private ["SE", "removeAll"]
+- ["SQ", "=="]
+- ["SQ", "ArrayLiteralElement"]
+- ["SQ", "Element"]
+- ["SQ", "RawValue"]
+- ["SQ", "ValidationOptions"]
+- ["SQ", ""]
+- ["SQ", "_Default_ArrayLiteralElement"]
+- ["SQ", "_Default_Element"]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "append"]
+- ["SQ", "contains"]
+- ["SQ", "formIntersection"]
+- ["SQ", "formSymmetricDifference"]
+- ["SQ", "formUnion"]
+- !private ["SQ", "index"]
+- ["SQ", "init"]
+- ["SQ", "insert"]
+- ["SQ", "intersection"]
+- ["SQ", "isDisjoint"]
+- ["SQ", "isEmpty"]
+- ["SQ", "isSubset"]
+- ["SQ", "isSuperset"]
+- !private ["SQ", "msg"]
+- ["SQ", "rawValue"]
+- ["SQ", "remove"]
+- !private ["SQ", "removeAll"]
+- ["SQ", "subtract"]
+- ["SQ", "subtracting"]
+- ["SQ", "symmetricDifference"]
+- ["SQ", "union"]
+- ["SQ", "update"]
+- ["SQ", "validatesOnBlur"]
+- ["SQ", "validatesOnChange"]
+- ["s25ExpressibleByArrayLiteralP", "=="]
+- ["s25ExpressibleByArrayLiteralP", "ArrayLiteralElement"]
+- ["s25ExpressibleByArrayLiteralP", "Element"]
+- ["s25ExpressibleByArrayLiteralP", "RawValue"]
+- ["s25ExpressibleByArrayLiteralP", "ValidationOptions"]
+- ["s25ExpressibleByArrayLiteralP", ""]
+- ["s25ExpressibleByArrayLiteralP", "_Default_ArrayLiteralElement"]
+- ["s25ExpressibleByArrayLiteralP", "_Default_Element"]
+- ["s25ExpressibleByArrayLiteralP", "_Default_RawValue"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- ["s25ExpressibleByArrayLiteralP", "contains"]
+- ["s25ExpressibleByArrayLiteralP", "formIntersection"]
+- ["s25ExpressibleByArrayLiteralP", "formSymmetricDifference"]
+- ["s25ExpressibleByArrayLiteralP", "formUnion"]
+- !private ["s25ExpressibleByArrayLiteralP", "index"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- ["s25ExpressibleByArrayLiteralP", "insert"]
+- ["s25ExpressibleByArrayLiteralP", "intersection"]
+- ["s25ExpressibleByArrayLiteralP", "isDisjoint"]
+- ["s25ExpressibleByArrayLiteralP", "isEmpty"]
+- ["s25ExpressibleByArrayLiteralP", "isSubset"]
+- ["s25ExpressibleByArrayLiteralP", "isSuperset"]
+- ["s25ExpressibleByArrayLiteralP", "rawValue"]
+- ["s25ExpressibleByArrayLiteralP", "remove"]
+- !private ["s25ExpressibleByArrayLiteralP", "removeAll"]
+- ["s25ExpressibleByArrayLiteralP", "subtract"]
+- ["s25ExpressibleByArrayLiteralP", "subtracting"]
+- ["s25ExpressibleByArrayLiteralP", "symmetricDifference"]
+- ["s25ExpressibleByArrayLiteralP", "union"]
+- ["s25ExpressibleByArrayLiteralP", "update"]
+- ["s25ExpressibleByArrayLiteralP", "validatesOnBlur"]
+- ["s25ExpressibleByArrayLiteralP", "validatesOnChange"]
+- !private ["SH", "append"]
+- !private ["SH", "index"]
+- !private ["SH", "remove"]
+- !private ["SH", "removeAll"]
+- !private ["SM", "append"]
+- !private ["SM", "index"]
+- !private ["SM", "remove"]
+- !private ["SM", "removeAll"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "index"]
+- !private ["10Foundation19MutableDataProtocolP", "remove"]
+- !private ["10Foundation19MutableDataProtocolP", "removeAll"]
+- ["s9OptionSetP", "=="]
+- ["s9OptionSetP", "ArrayLiteralElement"]
+- ["s9OptionSetP", "Element"]
+- ["s9OptionSetP", "RawValue"]
+- ["s9OptionSetP", "ValidationOptions"]
+- ["s9OptionSetP", ""]
+- ["s9OptionSetP", "_Default_ArrayLiteralElement"]
+- ["s9OptionSetP", "_Default_Element"]
+- ["s9OptionSetP", "_Default_RawValue"]
+- ["s9OptionSetP", "contains"]
+- ["s9OptionSetP", "formIntersection"]
+- ["s9OptionSetP", "formSymmetricDifference"]
+- ["s9OptionSetP", "formUnion"]
+- ["s9OptionSetP", "init"]
+- ["s9OptionSetP", "insert"]
+- ["s9OptionSetP", "intersection"]
+- ["s9OptionSetP", "isDisjoint"]
+- ["s9OptionSetP", "isEmpty"]
+- ["s9OptionSetP", "isSubset"]
+- ["s9OptionSetP", "isSuperset"]
+- ["s9OptionSetP", "rawValue"]
+- ["s9OptionSetP", "remove"]
+- ["s9OptionSetP", "subtract"]
+- ["s9OptionSetP", "subtracting"]
+- ["s9OptionSetP", "symmetricDifference"]
+- ["s9OptionSetP", "union"]
+- ["s9OptionSetP", "update"]
+- ["s9OptionSetP", "validatesOnBlur"]
+- ["s9OptionSetP", "validatesOnChange"]
+- !private ["Sk", "append"]
+- !private ["Sk", "index"]
+- !private ["Sk", "remove"]
+- !private ["Sk", "removeAll"]
+- !private ["Sm", "append"]
+- !private ["Sm", "index"]
+- !private ["Sm", "remove"]
+- !private ["Sm", "removeAll"]
+- ["SY", "=="]
+- ["SY", "ArrayLiteralElement"]
+- ["SY", "Element"]
+- ["SY", "RawValue"]
+- ["SY", "ValidationOptions"]
+- ["SY", ""]
+- ["SY", "_Default_ArrayLiteralElement"]
+- ["SY", "_Default_Element"]
+- ["SY", "_Default_RawValue"]
+- ["SY", "contains"]
+- ["SY", "formIntersection"]
+- ["SY", "formSymmetricDifference"]
+- ["SY", "formUnion"]
+- ["SY", "init"]
+- ["SY", "insert"]
+- ["SY", "intersection"]
+- ["SY", "isDisjoint"]
+- ["SY", "isEmpty"]
+- ["SY", "isSubset"]
+- ["SY", "isSuperset"]
+- ["SY", "rawValue"]
+- ["SY", "remove"]
+- ["SY", "subtract"]
+- ["SY", "subtracting"]
+- ["SY", "symmetricDifference"]
+- ["SY", "union"]
+- ["SY", "update"]
+- ["SY", "validatesOnBlur"]
+- ["SY", "validatesOnChange"]
+- !private ["6Eureka7RuleSetV", "Bool"]
+- ["6Eureka7RuleSetV", "RuleType"]
+- ["6Eureka7RuleSetV", "String"]
+- !private ["6Eureka7RuleSetV", "ValidationError"]
+- ["6Eureka7RuleSetV", "ValidationRuleHelper"]
+- ["6Eureka7RuleSetV", "add"]
+- ["6Eureka7RuleSetV", "init"]
+- ["6Eureka7RuleSetV", "remove"]
+- ["6Eureka7RuleSetV", "removeAllRules"]
+- ["6Eureka7RuleSetV", "rules"]
+- ["6Eureka8RuleTypeP", "RowValueType"]
+- ["6Eureka8RuleTypeP", "ValidationError"]
+- ["6Eureka8RuleTypeP", "isValid"]
+- !private ["ST", "append"]
+- !private ["ST", "index"]
+- !private ["ST", "remove"]
+- !private ["ST", "removeAll"]
+- ["s10SetAlgebraP", "=="]
+- ["s10SetAlgebraP", "ArrayLiteralElement"]
+- ["s10SetAlgebraP", "Element"]
+- ["s10SetAlgebraP", "RawValue"]
+- ["s10SetAlgebraP", "ValidationOptions"]
+- ["s10SetAlgebraP", ""]
+- ["s10SetAlgebraP", "_Default_ArrayLiteralElement"]
+- ["s10SetAlgebraP", "_Default_Element"]
+- ["s10SetAlgebraP", "_Default_RawValue"]
+- ["s10SetAlgebraP", "contains"]
+- ["s10SetAlgebraP", "formIntersection"]
+- ["s10SetAlgebraP", "formSymmetricDifference"]
+- ["s10SetAlgebraP", "formUnion"]
+- ["s10SetAlgebraP", "init"]
+- ["s10SetAlgebraP", "insert"]
+- ["s10SetAlgebraP", "intersection"]
+- ["s10SetAlgebraP", "isDisjoint"]
+- ["s10SetAlgebraP", "isEmpty"]
+- ["s10SetAlgebraP", "isSubset"]
+- ["s10SetAlgebraP", "isSuperset"]
+- ["s10SetAlgebraP", "rawValue"]
+- ["s10SetAlgebraP", "remove"]
+- ["s10SetAlgebraP", "subtract"]
+- ["s10SetAlgebraP", "subtracting"]
+- ["s10SetAlgebraP", "symmetricDifference"]
+- ["s10SetAlgebraP", "union"]
+- ["s10SetAlgebraP", "update"]
+- ["s10SetAlgebraP", "validatesOnBlur"]
+- ["s10SetAlgebraP", "validatesOnChange"]
+- ["6Eureka15ValidationErrorV", "=="]
+- ["6Eureka15ValidationErrorV", "String"]
+- ["6Eureka15ValidationErrorV", "deinit"]
+- ["6Eureka15ValidationErrorV", "init"]
+- ["6Eureka15ValidationErrorV", "msg"]
+- ["6Eureka17ValidationOptionsV", "=="]
+- ["6Eureka17ValidationOptionsV", "ArrayLiteralElement"]
+- ["6Eureka17ValidationOptionsV", "Element"]
+- ["6Eureka17ValidationOptionsV", "Int"]
+- ["6Eureka17ValidationOptionsV", "RawValue"]
+- ["6Eureka17ValidationOptionsV", "ValidationOptions"]
+- ["6Eureka17ValidationOptionsV", "_Default_ArrayLiteralElement"]
+- ["6Eureka17ValidationOptionsV", "_Default_Element"]
+- ["6Eureka17ValidationOptionsV", "_Default_RawValue"]
+- ["6Eureka17ValidationOptionsV", "contains"]
+- ["6Eureka17ValidationOptionsV", "deinit"]
+- ["6Eureka17ValidationOptionsV", "formIntersection"]
+- ["6Eureka17ValidationOptionsV", "formSymmetricDifference"]
+- ["6Eureka17ValidationOptionsV", "formUnion"]
+- ["6Eureka17ValidationOptionsV", "init"]
+- ["6Eureka17ValidationOptionsV", "insert"]
+- ["6Eureka17ValidationOptionsV", "intersection"]
+- ["6Eureka17ValidationOptionsV", "isDisjoint"]
+- ["6Eureka17ValidationOptionsV", "isEmpty"]
+- ["6Eureka17ValidationOptionsV", "isSubset"]
+- ["6Eureka17ValidationOptionsV", "isSuperset"]
+- ["6Eureka17ValidationOptionsV", "rawValue"]
+- ["6Eureka17ValidationOptionsV", "remove"]
+- ["6Eureka17ValidationOptionsV", "subtract"]
+- ["6Eureka17ValidationOptionsV", "subtracting"]
+- ["6Eureka17ValidationOptionsV", "symmetricDifference"]
+- ["6Eureka17ValidationOptionsV", "union"]
+- ["6Eureka17ValidationOptionsV", "update"]
+- ["6Eureka17ValidationOptionsV", "validatesAlways"]
+- ["6Eureka17ValidationOptionsV", "validatesOnBlur"]
+- ["6Eureka17ValidationOptionsV", "validatesOnChange"]
+- ["6Eureka17ValidationOptionsV", "validatesOnChangeAfterBlurred"]
+- ["6Eureka17ValidationOptionsV", "validatesOnDemand"]
+- ["6Eureka20ValidationRuleHelperV", "BaseRuleType"]
+- ["6Eureka20ValidationRuleHelperV", "ValidationError"]
+- ["6Eureka20ValidationRuleHelperV", "init"]
+- ["6Eureka20ValidationRuleHelperV", "rule"]
+- ["6Eureka20ValidationRuleHelperV", "validateFn"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "index"]
+- !private ["s14_ArrayProtocolP", "remove"]
+- !private ["s14_ArrayProtocolP", "removeAll"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "index"]
+- !private ["s24_DestructorSafeContainerP", "remove"]
+- !private ["s24_DestructorSafeContainerP", "removeAll"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "index"]
+- !private ["s19_HasContiguousBytesP", "remove"]
+- !private ["s19_HasContiguousBytesP", "removeAll"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "index"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "remove"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "removeAll"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "index"]
+- !private ["s21_ObjectiveCBridgeableP", "remove"]
+- !private ["s21_ObjectiveCBridgeableP", "removeAll"]
+depends-nominal:
+- !private "Sa"
+- "6Eureka12BaseRuleTypeP"
+- !private "SK"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "10Foundation15ContiguousBytesP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- "s25ExpressibleByArrayLiteralP"
+- !private "SH"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "s9OptionSetP"
+- !private "Sk"
+- !private "Sm"
+- "SY"
+- "6Eureka7RuleSetV"
+- "6Eureka8RuleTypeP"
+- !private "ST"
+- "s10SetAlgebraP"
+- "6Eureka15ValidationErrorV"
+- "6Eureka17ValidationOptionsV"
+- "6Eureka20ValidationRuleHelperV"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Eureka/Eureka-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Eureka.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "da5668459bf1fe00be8793c8321af90b"

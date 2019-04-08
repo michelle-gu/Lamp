@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07131722224554F3000CDD33 /* MatchMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07131721224554F3000CDD33 /* MatchMessageViewController.swift */; };
+		075D8A61225802E200829E6C /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D8A60225802E200829E6C /* MessagesTableViewCell.swift */; };
 		07AB86A0224921D9001EE449 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AB869F224921D9001EE449 /* MessagesViewController.swift */; };
 		07AB86A2224994BD001EE449 /* MessageInstanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */; };
 		07B43E6622348C0900BB8548 /* EmailConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B43E6522348C0900BB8548 /* EmailConfirmationViewController.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		07131721224554F3000CDD33 /* MatchMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchMessageViewController.swift; sourceTree = "<group>"; };
+		075D8A60225802E200829E6C /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		07AB869F224921D9001EE449 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInstanceViewController.swift; sourceTree = "<group>"; };
 		07B43E6522348C0900BB8548 /* EmailConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailConfirmationViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		95132ABE224B4436006C1A84 /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
+				075D8A60225802E200829E6C /* MessagesTableViewCell.swift */,
 				95132ABF224B4469006C1A84 /* SliderTableViewCell.swift */,
 				95132AC1224B47D9006C1A84 /* RangeSliderTableViewCell.swift */,
 				95132AC3224B47FB006C1A84 /* SubtitleTableViewCell.swift */,
@@ -358,6 +361,7 @@
 				95132AC2224B47D9006C1A84 /* RangeSliderTableViewCell.swift in Sources */,
 				95412745224B0254003343D4 /* SettingsViewController.swift in Sources */,
 				95412749224B12C9003343D4 /* AccountViewController.swift in Sources */,
+				075D8A61225802E200829E6C /* MessagesTableViewCell.swift in Sources */,
 				07B43E6E22348CCC00BB8548 /* ProfileMapViewController.swift in Sources */,
 				B640FEB5224C066700E8FBFF /* ContactInfoTableViewCell.swift in Sources */,
 				07B43E6622348C0900BB8548 /* EmailConfirmationViewController.swift in Sources */,

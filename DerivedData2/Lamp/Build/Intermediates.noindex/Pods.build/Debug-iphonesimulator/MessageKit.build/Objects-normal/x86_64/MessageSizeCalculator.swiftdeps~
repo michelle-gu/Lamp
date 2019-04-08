@@ -1,0 +1,585 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "MessageSizeCalculator"
+provides-nominal:
+- "10MessageKit0A14SizeCalculatorC"
+provides-member:
+- ["10MessageKit0A14SizeCalculatorC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "+"
+- !private "+="
+- !private "-"
+- "AssignmentPrecedence"
+- "AvatarPosition"
+- "CGFloat"
+- "CGSize"
+- "CastingPrecedence"
+- "CellSizeCalculator"
+- "HorizontalEdgeInsets"
+- "IndexPath"
+- "LabelAlignment"
+- "MessageSizeCalculator"
+- "MessageType"
+- "MessagesCollectionViewFlowLayout"
+- !private "MessagesCollectionViewLayoutAttributes"
+- "NSAttributedString"
+- "TernaryPrecedence"
+- "UICollectionViewLayoutAttributes"
+- "UIEdgeInsets"
+- !private "fatalError"
+- !private "max"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "greatestFiniteMagnitude"]
+- !private ["10MessageKit14AvatarPositionV", "horizontal"]
+- ["10MessageKit14AvatarPositionV", "init"]
+- !private ["10MessageKit14AvatarPositionV", "vertical"]
+- !private ["SB", "greatestFiniteMagnitude"]
+- !private ["12CoreGraphics7CGFloatV", "greatestFiniteMagnitude"]
+- !private ["So6CGRectV", "integral"]
+- !private ["So6CGRectV", "size"]
+- !private ["So6CGSizeV", "height"]
+- ["So6CGSizeV", "init"]
+- !private ["So6CGSizeV", "width"]
+- ["So6CGSizeV", "zero"]
+- !private ["s7CVarArgP", "accessoryViewPadding"]
+- !private ["s7CVarArgP", "accessoryViewSize"]
+- !private ["s7CVarArgP", "avatarPosition"]
+- !private ["s7CVarArgP", "avatarSize"]
+- !private ["s7CVarArgP", "boundingRect"]
+- !private ["s7CVarArgP", "cellTopLabelSize"]
+- !private ["s7CVarArgP", "greatestFiniteMagnitude"]
+- !private ["s7CVarArgP", "indexPath"]
+- !private ["s7CVarArgP", "itemWidth"]
+- !private ["s7CVarArgP", "messageBottomLabelAlignment"]
+- !private ["s7CVarArgP", "messageBottomLabelSize"]
+- !private ["s7CVarArgP", "messageContainerPadding"]
+- !private ["s7CVarArgP", "messageContainerSize"]
+- !private ["s7CVarArgP", "messageTopLabelAlignment"]
+- !private ["s7CVarArgP", "messageTopLabelSize"]
+- !private ["s7CVarArgP", "messagesCollectionView"]
+- !private ["s7CVarArgP", "messagesDataSource"]
+- !private ["s7CVarArgP", "messagesLayoutDelegate"]
+- ["10MessageKit18CellSizeCalculatorC", "AvatarPosition"]
+- ["10MessageKit18CellSizeCalculatorC", "CGFloat"]
+- ["10MessageKit18CellSizeCalculatorC", "CGSize"]
+- ["10MessageKit18CellSizeCalculatorC", "HorizontalEdgeInsets"]
+- ["10MessageKit18CellSizeCalculatorC", "IndexPath"]
+- ["10MessageKit18CellSizeCalculatorC", "LabelAlignment"]
+- ["10MessageKit18CellSizeCalculatorC", "MessageType"]
+- ["10MessageKit18CellSizeCalculatorC", "MessagesCollectionViewFlowLayout"]
+- !private ["10MessageKit18CellSizeCalculatorC", "MessagesCollectionViewLayoutAttributes"]
+- ["10MessageKit18CellSizeCalculatorC", "NSAttributedString"]
+- ["10MessageKit18CellSizeCalculatorC", "UICollectionViewLayoutAttributes"]
+- ["10MessageKit18CellSizeCalculatorC", "UIEdgeInsets"]
+- ["10MessageKit18CellSizeCalculatorC", ""]
+- ["10MessageKit18CellSizeCalculatorC", "accessoryViewPadding"]
+- ["10MessageKit18CellSizeCalculatorC", "accessoryViewSize"]
+- ["10MessageKit18CellSizeCalculatorC", "avatarPosition"]
+- ["10MessageKit18CellSizeCalculatorC", "avatarSize"]
+- ["10MessageKit18CellSizeCalculatorC", "cellContentHeight"]
+- ["10MessageKit18CellSizeCalculatorC", "cellTopLabelAlignment"]
+- ["10MessageKit18CellSizeCalculatorC", "cellTopLabelSize"]
+- ["10MessageKit18CellSizeCalculatorC", "configure"]
+- !private ["10MessageKit18CellSizeCalculatorC", "fatalError"]
+- ["10MessageKit18CellSizeCalculatorC", "incomingAccessoryViewPadding"]
+- ["10MessageKit18CellSizeCalculatorC", "incomingAccessoryViewSize"]
+- ["10MessageKit18CellSizeCalculatorC", "incomingAvatarPosition"]
+- ["10MessageKit18CellSizeCalculatorC", "incomingAvatarSize"]
+- ["10MessageKit18CellSizeCalculatorC", "incomingCellTopLabelAlignment"]
+- ["10MessageKit18CellSizeCalculatorC", "incomingMessageBottomLabelAlignment"]
+- ["10MessageKit18CellSizeCalculatorC", "incomingMessagePadding"]
+- ["10MessageKit18CellSizeCalculatorC", "incomingMessageTopLabelAlignment"]
+- ["10MessageKit18CellSizeCalculatorC", "init"]
+- ["10MessageKit18CellSizeCalculatorC", "labelSize"]
+- !private ["10MessageKit18CellSizeCalculatorC", "layout"]
+- !private ["10MessageKit18CellSizeCalculatorC", "max"]
+- ["10MessageKit18CellSizeCalculatorC", "messageBottomLabelAlignment"]
+- ["10MessageKit18CellSizeCalculatorC", "messageBottomLabelSize"]
+- ["10MessageKit18CellSizeCalculatorC", "messageContainerMaxWidth"]
+- ["10MessageKit18CellSizeCalculatorC", "messageContainerPadding"]
+- ["10MessageKit18CellSizeCalculatorC", "messageContainerSize"]
+- ["10MessageKit18CellSizeCalculatorC", "messageTopLabelAlignment"]
+- ["10MessageKit18CellSizeCalculatorC", "messageTopLabelSize"]
+- ["10MessageKit18CellSizeCalculatorC", "messagesLayout"]
+- ["10MessageKit18CellSizeCalculatorC", "outgoingAccessoryViewPadding"]
+- ["10MessageKit18CellSizeCalculatorC", "outgoingAccessoryViewSize"]
+- ["10MessageKit18CellSizeCalculatorC", "outgoingAvatarPosition"]
+- ["10MessageKit18CellSizeCalculatorC", "outgoingAvatarSize"]
+- ["10MessageKit18CellSizeCalculatorC", "outgoingCellTopLabelAlignment"]
+- ["10MessageKit18CellSizeCalculatorC", "outgoingMessageBottomLabelAlignment"]
+- ["10MessageKit18CellSizeCalculatorC", "outgoingMessagePadding"]
+- ["10MessageKit18CellSizeCalculatorC", "outgoingMessageTopLabelAlignment"]
+- ["10MessageKit18CellSizeCalculatorC", "sizeForItem"]
+- !private ["SL", "greatestFiniteMagnitude"]
+- !private ["s28CustomDebugStringConvertibleP", "accessoryViewPadding"]
+- !private ["s28CustomDebugStringConvertibleP", "accessoryViewSize"]
+- !private ["s28CustomDebugStringConvertibleP", "avatarPosition"]
+- !private ["s28CustomDebugStringConvertibleP", "avatarSize"]
+- !private ["s28CustomDebugStringConvertibleP", "boundingRect"]
+- !private ["s28CustomDebugStringConvertibleP", "cellTopLabelSize"]
+- !private ["s28CustomDebugStringConvertibleP", "height"]
+- !private ["s28CustomDebugStringConvertibleP", "indexPath"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "integral"]
+- !private ["s28CustomDebugStringConvertibleP", "itemWidth"]
+- !private ["s28CustomDebugStringConvertibleP", "messageBottomLabelAlignment"]
+- !private ["s28CustomDebugStringConvertibleP", "messageBottomLabelSize"]
+- !private ["s28CustomDebugStringConvertibleP", "messageContainerPadding"]
+- !private ["s28CustomDebugStringConvertibleP", "messageContainerSize"]
+- !private ["s28CustomDebugStringConvertibleP", "messageTopLabelAlignment"]
+- !private ["s28CustomDebugStringConvertibleP", "messageTopLabelSize"]
+- !private ["s28CustomDebugStringConvertibleP", "messagesCollectionView"]
+- !private ["s28CustomDebugStringConvertibleP", "messagesDataSource"]
+- !private ["s28CustomDebugStringConvertibleP", "messagesLayoutDelegate"]
+- !private ["s28CustomDebugStringConvertibleP", "size"]
+- !private ["s28CustomDebugStringConvertibleP", "width"]
+- ["s28CustomDebugStringConvertibleP", "zero"]
+- !private ["s17CustomReflectableP", "greatestFiniteMagnitude"]
+- !private ["s17CustomReflectableP", "height"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "integral"]
+- !private ["s17CustomReflectableP", "size"]
+- !private ["s17CustomReflectableP", "width"]
+- ["s17CustomReflectableP", "zero"]
+- !private ["s23CustomStringConvertibleP", "accessoryViewPadding"]
+- !private ["s23CustomStringConvertibleP", "accessoryViewSize"]
+- !private ["s23CustomStringConvertibleP", "avatarPosition"]
+- !private ["s23CustomStringConvertibleP", "avatarSize"]
+- !private ["s23CustomStringConvertibleP", "boundingRect"]
+- !private ["s23CustomStringConvertibleP", "cellTopLabelSize"]
+- !private ["s23CustomStringConvertibleP", "greatestFiniteMagnitude"]
+- !private ["s23CustomStringConvertibleP", "indexPath"]
+- !private ["s23CustomStringConvertibleP", "itemWidth"]
+- !private ["s23CustomStringConvertibleP", "messageBottomLabelAlignment"]
+- !private ["s23CustomStringConvertibleP", "messageBottomLabelSize"]
+- !private ["s23CustomStringConvertibleP", "messageContainerPadding"]
+- !private ["s23CustomStringConvertibleP", "messageContainerSize"]
+- !private ["s23CustomStringConvertibleP", "messageTopLabelAlignment"]
+- !private ["s23CustomStringConvertibleP", "messageTopLabelSize"]
+- !private ["s23CustomStringConvertibleP", "messagesCollectionView"]
+- !private ["s23CustomStringConvertibleP", "messagesDataSource"]
+- !private ["s23CustomStringConvertibleP", "messagesLayoutDelegate"]
+- !private ["Se", "greatestFiniteMagnitude"]
+- !private ["Se", "height"]
+- !private ["Se", "horizontal"]
+- ["Se", "init"]
+- !private ["Se", "integral"]
+- !private ["Se", "size"]
+- !private ["Se", "vertical"]
+- !private ["Se", "width"]
+- ["Se", "zero"]
+- !private ["SE", "greatestFiniteMagnitude"]
+- !private ["SE", "height"]
+- !private ["SE", "horizontal"]
+- ["SE", "init"]
+- !private ["SE", "integral"]
+- !private ["SE", "size"]
+- !private ["SE", "vertical"]
+- !private ["SE", "width"]
+- ["SE", "zero"]
+- !private ["SQ", "accessoryViewPadding"]
+- !private ["SQ", "accessoryViewSize"]
+- !private ["SQ", "avatarPosition"]
+- !private ["SQ", "avatarSize"]
+- !private ["SQ", "boundingRect"]
+- ["SQ", "cellBottom"]
+- ["SQ", "cellLeading"]
+- ["SQ", "cellTop"]
+- !private ["SQ", "cellTopLabelSize"]
+- ["SQ", "cellTrailing"]
+- ["SQ", "center"]
+- !private ["SQ", "greatestFiniteMagnitude"]
+- !private ["SQ", "height"]
+- !private ["SQ", "horizontal"]
+- !private ["SQ", "indexPath"]
+- ["SQ", "init"]
+- !private ["SQ", "integral"]
+- !private ["SQ", "itemWidth"]
+- ["SQ", "left"]
+- ["SQ", "messageBottom"]
+- !private ["SQ", "messageBottomLabelAlignment"]
+- !private ["SQ", "messageBottomLabelSize"]
+- ["SQ", "messageCenter"]
+- !private ["SQ", "messageContainerPadding"]
+- !private ["SQ", "messageContainerSize"]
+- ["SQ", "messageLabelTop"]
+- ["SQ", "messageTop"]
+- !private ["SQ", "messageTopLabelAlignment"]
+- !private ["SQ", "messageTopLabelSize"]
+- !private ["SQ", "messagesCollectionView"]
+- !private ["SQ", "messagesDataSource"]
+- !private ["SQ", "messagesLayoutDelegate"]
+- ["SQ", "natural"]
+- ["SQ", "right"]
+- !private ["SQ", "size"]
+- !private ["SQ", "usesFontLeading"]
+- !private ["SQ", "usesLineFragmentOrigin"]
+- !private ["SQ", "vertical"]
+- !private ["SQ", "width"]
+- ["SQ", "zero"]
+- !private ["s25ExpressibleByArrayLiteralP", "usesFontLeading"]
+- !private ["s25ExpressibleByArrayLiteralP", "usesLineFragmentOrigin"]
+- !private ["s25ExpressibleByFloatLiteralP", "greatestFiniteMagnitude"]
+- !private ["s27ExpressibleByIntegerLiteralP", "greatestFiniteMagnitude"]
+- !private ["SF", "greatestFiniteMagnitude"]
+- !private ["SH", "accessoryViewPadding"]
+- !private ["SH", "accessoryViewSize"]
+- !private ["SH", "avatarPosition"]
+- !private ["SH", "avatarSize"]
+- !private ["SH", "boundingRect"]
+- ["SH", "cellBottom"]
+- ["SH", "cellLeading"]
+- ["SH", "cellTop"]
+- !private ["SH", "cellTopLabelSize"]
+- ["SH", "cellTrailing"]
+- ["SH", "center"]
+- !private ["SH", "greatestFiniteMagnitude"]
+- !private ["SH", "indexPath"]
+- !private ["SH", "itemWidth"]
+- ["SH", "left"]
+- ["SH", "messageBottom"]
+- !private ["SH", "messageBottomLabelAlignment"]
+- !private ["SH", "messageBottomLabelSize"]
+- ["SH", "messageCenter"]
+- !private ["SH", "messageContainerPadding"]
+- !private ["SH", "messageContainerSize"]
+- ["SH", "messageLabelTop"]
+- ["SH", "messageTop"]
+- !private ["SH", "messageTopLabelAlignment"]
+- !private ["SH", "messageTopLabelSize"]
+- !private ["SH", "messagesCollectionView"]
+- !private ["SH", "messagesDataSource"]
+- !private ["SH", "messagesLayoutDelegate"]
+- ["SH", "natural"]
+- ["SH", "right"]
+- ["10MessageKit14AvatarPositionV10HorizontalO", "cellLeading"]
+- ["10MessageKit14AvatarPositionV10HorizontalO", "cellTrailing"]
+- ["10MessageKit14AvatarPositionV10HorizontalO", "natural"]
+- !private ["10MessageKit20HorizontalEdgeInsetsV", "horizontal"]
+- ["10MessageKit20HorizontalEdgeInsetsV", "zero"]
+- ["10MessageKit14LabelAlignmentV", "init"]
+- ["10MessageKit0A14SizeCalculatorC", "AvatarPosition"]
+- ["10MessageKit0A14SizeCalculatorC", "CGFloat"]
+- ["10MessageKit0A14SizeCalculatorC", "CGSize"]
+- ["10MessageKit0A14SizeCalculatorC", "HorizontalEdgeInsets"]
+- ["10MessageKit0A14SizeCalculatorC", "IndexPath"]
+- ["10MessageKit0A14SizeCalculatorC", "LabelAlignment"]
+- ["10MessageKit0A14SizeCalculatorC", "MessageType"]
+- ["10MessageKit0A14SizeCalculatorC", "MessagesCollectionViewFlowLayout"]
+- !private ["10MessageKit0A14SizeCalculatorC", "MessagesCollectionViewLayoutAttributes"]
+- ["10MessageKit0A14SizeCalculatorC", "NSAttributedString"]
+- ["10MessageKit0A14SizeCalculatorC", "UICollectionViewLayoutAttributes"]
+- ["10MessageKit0A14SizeCalculatorC", "UIEdgeInsets"]
+- ["10MessageKit0A14SizeCalculatorC", "accessoryViewPadding"]
+- ["10MessageKit0A14SizeCalculatorC", "accessoryViewSize"]
+- ["10MessageKit0A14SizeCalculatorC", "avatarPosition"]
+- ["10MessageKit0A14SizeCalculatorC", "avatarSize"]
+- ["10MessageKit0A14SizeCalculatorC", "cellContentHeight"]
+- ["10MessageKit0A14SizeCalculatorC", "cellTopLabelAlignment"]
+- ["10MessageKit0A14SizeCalculatorC", "cellTopLabelSize"]
+- ["10MessageKit0A14SizeCalculatorC", "configure"]
+- !private ["10MessageKit0A14SizeCalculatorC", "fatalError"]
+- ["10MessageKit0A14SizeCalculatorC", "incomingAccessoryViewPadding"]
+- ["10MessageKit0A14SizeCalculatorC", "incomingAccessoryViewSize"]
+- ["10MessageKit0A14SizeCalculatorC", "incomingAvatarPosition"]
+- ["10MessageKit0A14SizeCalculatorC", "incomingAvatarSize"]
+- ["10MessageKit0A14SizeCalculatorC", "incomingCellTopLabelAlignment"]
+- ["10MessageKit0A14SizeCalculatorC", "incomingMessageBottomLabelAlignment"]
+- ["10MessageKit0A14SizeCalculatorC", "incomingMessagePadding"]
+- ["10MessageKit0A14SizeCalculatorC", "incomingMessageTopLabelAlignment"]
+- ["10MessageKit0A14SizeCalculatorC", "init"]
+- ["10MessageKit0A14SizeCalculatorC", "labelSize"]
+- !private ["10MessageKit0A14SizeCalculatorC", "layout"]
+- !private ["10MessageKit0A14SizeCalculatorC", "max"]
+- ["10MessageKit0A14SizeCalculatorC", "messageBottomLabelAlignment"]
+- ["10MessageKit0A14SizeCalculatorC", "messageBottomLabelSize"]
+- ["10MessageKit0A14SizeCalculatorC", "messageContainerMaxWidth"]
+- ["10MessageKit0A14SizeCalculatorC", "messageContainerPadding"]
+- ["10MessageKit0A14SizeCalculatorC", "messageContainerSize"]
+- ["10MessageKit0A14SizeCalculatorC", "messageTopLabelAlignment"]
+- ["10MessageKit0A14SizeCalculatorC", "messageTopLabelSize"]
+- ["10MessageKit0A14SizeCalculatorC", "messagesLayout"]
+- ["10MessageKit0A14SizeCalculatorC", "outgoingAccessoryViewPadding"]
+- ["10MessageKit0A14SizeCalculatorC", "outgoingAccessoryViewSize"]
+- ["10MessageKit0A14SizeCalculatorC", "outgoingAvatarPosition"]
+- ["10MessageKit0A14SizeCalculatorC", "outgoingAvatarSize"]
+- ["10MessageKit0A14SizeCalculatorC", "outgoingCellTopLabelAlignment"]
+- ["10MessageKit0A14SizeCalculatorC", "outgoingMessageBottomLabelAlignment"]
+- ["10MessageKit0A14SizeCalculatorC", "outgoingMessagePadding"]
+- ["10MessageKit0A14SizeCalculatorC", "outgoingMessageTopLabelAlignment"]
+- ["10MessageKit0A14SizeCalculatorC", "sizeForItem"]
+- !private ["10MessageKit32MessagesCollectionViewFlowLayoutC", "itemWidth"]
+- !private ["10MessageKit32MessagesCollectionViewFlowLayoutC", "messagesCollectionView"]
+- !private ["10MessageKit32MessagesCollectionViewFlowLayoutC", "messagesDataSource"]
+- !private ["10MessageKit32MessagesCollectionViewFlowLayoutC", "messagesLayoutDelegate"]
+- !private ["10MessageKit38MessagesCollectionViewLayoutAttributesC", "accessoryViewPadding"]
+- !private ["10MessageKit38MessagesCollectionViewLayoutAttributesC", "accessoryViewSize"]
+- !private ["10MessageKit38MessagesCollectionViewLayoutAttributesC", "avatarPosition"]
+- !private ["10MessageKit38MessagesCollectionViewLayoutAttributesC", "avatarSize"]
+- !private ["10MessageKit38MessagesCollectionViewLayoutAttributesC", "cellTopLabelSize"]
+- !private ["10MessageKit38MessagesCollectionViewLayoutAttributesC", "indexPath"]
+- !private ["10MessageKit38MessagesCollectionViewLayoutAttributesC", "messageBottomLabelAlignment"]
+- !private ["10MessageKit38MessagesCollectionViewLayoutAttributesC", "messageBottomLabelSize"]
+- !private ["10MessageKit38MessagesCollectionViewLayoutAttributesC", "messageContainerPadding"]
+- !private ["10MessageKit38MessagesCollectionViewLayoutAttributesC", "messageContainerSize"]
+- !private ["10MessageKit38MessagesCollectionViewLayoutAttributesC", "messageTopLabelAlignment"]
+- !private ["10MessageKit38MessagesCollectionViewLayoutAttributesC", "messageTopLabelSize"]
+- !private ["10MessageKit18MessagesDataSourceP", "isFromCurrentSender"]
+- !private ["10MessageKit18MessagesDataSourceP", "messageForItem"]
+- !private ["10MessageKit22MessagesLayoutDelegateP", "cellTopLabelHeight"]
+- !private ["10MessageKit22MessagesLayoutDelegateP", "messageBottomLabelHeight"]
+- !private ["10MessageKit22MessagesLayoutDelegateP", "messageTopLabelHeight"]
+- !private ["So18NSAttributedStringC", "boundingRect"]
+- !private ["So8NSCodingP", "boundingRect"]
+- !private ["So8NSCodingP", "itemWidth"]
+- !private ["So8NSCodingP", "messagesCollectionView"]
+- !private ["So8NSCodingP", "messagesDataSource"]
+- !private ["So8NSCodingP", "messagesLayoutDelegate"]
+- !private ["So9NSCopyingP", "accessoryViewPadding"]
+- !private ["So9NSCopyingP", "accessoryViewSize"]
+- !private ["So9NSCopyingP", "avatarPosition"]
+- !private ["So9NSCopyingP", "avatarSize"]
+- !private ["So9NSCopyingP", "boundingRect"]
+- !private ["So9NSCopyingP", "cellTopLabelSize"]
+- !private ["So9NSCopyingP", "indexPath"]
+- !private ["So9NSCopyingP", "messageBottomLabelAlignment"]
+- !private ["So9NSCopyingP", "messageBottomLabelSize"]
+- !private ["So9NSCopyingP", "messageContainerPadding"]
+- !private ["So9NSCopyingP", "messageContainerSize"]
+- !private ["So9NSCopyingP", "messageTopLabelAlignment"]
+- !private ["So9NSCopyingP", "messageTopLabelSize"]
+- !private ["So21NSItemProviderReadingP", "boundingRect"]
+- !private ["So21NSItemProviderWritingP", "boundingRect"]
+- !private ["So16NSMutableCopyingP", "boundingRect"]
+- !private ["So8NSObjectC", "accessoryViewPadding"]
+- !private ["So8NSObjectC", "accessoryViewSize"]
+- !private ["So8NSObjectC", "avatarPosition"]
+- !private ["So8NSObjectC", "avatarSize"]
+- !private ["So8NSObjectC", "boundingRect"]
+- !private ["So8NSObjectC", "cellTopLabelSize"]
+- !private ["So8NSObjectC", "indexPath"]
+- !private ["So8NSObjectC", "itemWidth"]
+- !private ["So8NSObjectC", "messageBottomLabelAlignment"]
+- !private ["So8NSObjectC", "messageBottomLabelSize"]
+- !private ["So8NSObjectC", "messageContainerPadding"]
+- !private ["So8NSObjectC", "messageContainerSize"]
+- !private ["So8NSObjectC", "messageTopLabelAlignment"]
+- !private ["So8NSObjectC", "messageTopLabelSize"]
+- !private ["So8NSObjectC", "messagesCollectionView"]
+- !private ["So8NSObjectC", "messagesDataSource"]
+- !private ["So8NSObjectC", "messagesLayoutDelegate"]
+- !private ["So8NSObjectP", "accessoryViewPadding"]
+- !private ["So8NSObjectP", "accessoryViewSize"]
+- !private ["So8NSObjectP", "avatarPosition"]
+- !private ["So8NSObjectP", "avatarSize"]
+- !private ["So8NSObjectP", "boundingRect"]
+- !private ["So8NSObjectP", "cellTopLabelSize"]
+- !private ["So8NSObjectP", "indexPath"]
+- !private ["So8NSObjectP", "itemWidth"]
+- !private ["So8NSObjectP", "messageBottomLabelAlignment"]
+- !private ["So8NSObjectP", "messageBottomLabelSize"]
+- !private ["So8NSObjectP", "messageContainerPadding"]
+- !private ["So8NSObjectP", "messageContainerSize"]
+- !private ["So8NSObjectP", "messageTopLabelAlignment"]
+- !private ["So8NSObjectP", "messageTopLabelSize"]
+- !private ["So8NSObjectP", "messagesCollectionView"]
+- !private ["So8NSObjectP", "messagesDataSource"]
+- !private ["So8NSObjectP", "messagesLayoutDelegate"]
+- !private ["So14NSSecureCodingP", "boundingRect"]
+- !private ["So22NSStringDrawingOptionsV", "usesFontLeading"]
+- !private ["So22NSStringDrawingOptionsV", "usesLineFragmentOrigin"]
+- ["So15NSTextAlignmentV", "center"]
+- ["So15NSTextAlignmentV", "left"]
+- ["So15NSTextAlignmentV", "right"]
+- !private ["Sj", "greatestFiniteMagnitude"]
+- !private ["s9OptionSetP", "usesFontLeading"]
+- !private ["s9OptionSetP", "usesLineFragmentOrigin"]
+- ["SY", "center"]
+- ["SY", "left"]
+- ["SY", "right"]
+- !private ["SY", "usesFontLeading"]
+- !private ["SY", "usesLineFragmentOrigin"]
+- !private ["s10SetAlgebraP", "usesFontLeading"]
+- !private ["s10SetAlgebraP", "usesLineFragmentOrigin"]
+- !private ["s13SignedNumericP", "greatestFiniteMagnitude"]
+- !private ["Sx", "greatestFiniteMagnitude"]
+- !private ["So26UICollectionViewFlowLayoutC", "itemWidth"]
+- !private ["So26UICollectionViewFlowLayoutC", "messagesCollectionView"]
+- !private ["So26UICollectionViewFlowLayoutC", "messagesDataSource"]
+- !private ["So26UICollectionViewFlowLayoutC", "messagesLayoutDelegate"]
+- !private ["So22UICollectionViewLayoutC", "itemWidth"]
+- !private ["So22UICollectionViewLayoutC", "messagesCollectionView"]
+- !private ["So22UICollectionViewLayoutC", "messagesDataSource"]
+- !private ["So22UICollectionViewLayoutC", "messagesLayoutDelegate"]
+- !private ["So32UICollectionViewLayoutAttributesC", "accessoryViewPadding"]
+- !private ["So32UICollectionViewLayoutAttributesC", "accessoryViewSize"]
+- !private ["So32UICollectionViewLayoutAttributesC", "avatarPosition"]
+- !private ["So32UICollectionViewLayoutAttributesC", "avatarSize"]
+- !private ["So32UICollectionViewLayoutAttributesC", "cellTopLabelSize"]
+- !private ["So32UICollectionViewLayoutAttributesC", "indexPath"]
+- !private ["So32UICollectionViewLayoutAttributesC", "messageBottomLabelAlignment"]
+- !private ["So32UICollectionViewLayoutAttributesC", "messageBottomLabelSize"]
+- !private ["So32UICollectionViewLayoutAttributesC", "messageContainerPadding"]
+- !private ["So32UICollectionViewLayoutAttributesC", "messageContainerSize"]
+- !private ["So32UICollectionViewLayoutAttributesC", "messageTopLabelAlignment"]
+- !private ["So32UICollectionViewLayoutAttributesC", "messageTopLabelSize"]
+- !private ["So13UIDynamicItemP", "accessoryViewPadding"]
+- !private ["So13UIDynamicItemP", "accessoryViewSize"]
+- !private ["So13UIDynamicItemP", "avatarPosition"]
+- !private ["So13UIDynamicItemP", "avatarSize"]
+- !private ["So13UIDynamicItemP", "cellTopLabelSize"]
+- !private ["So13UIDynamicItemP", "indexPath"]
+- !private ["So13UIDynamicItemP", "messageBottomLabelAlignment"]
+- !private ["So13UIDynamicItemP", "messageBottomLabelSize"]
+- !private ["So13UIDynamicItemP", "messageContainerPadding"]
+- !private ["So13UIDynamicItemP", "messageContainerSize"]
+- !private ["So13UIDynamicItemP", "messageTopLabelAlignment"]
+- !private ["So13UIDynamicItemP", "messageTopLabelSize"]
+- ["So12UIEdgeInsetsV", "CGFloat"]
+- !private ["So12UIEdgeInsetsV", "horizontal"]
+- ["So12UIEdgeInsetsV", "init"]
+- !private ["So12UIEdgeInsetsV", "vertical"]
+- ["So12UIEdgeInsetsV", "zero"]
+- ["10MessageKit14AvatarPositionV8VerticalO", "cellBottom"]
+- ["10MessageKit14AvatarPositionV8VerticalO", "cellTop"]
+- ["10MessageKit14AvatarPositionV8VerticalO", "messageBottom"]
+- ["10MessageKit14AvatarPositionV8VerticalO", "messageCenter"]
+- ["10MessageKit14AvatarPositionV8VerticalO", "messageLabelTop"]
+- ["10MessageKit14AvatarPositionV8VerticalO", "messageTop"]
+- !private ["s15_CVarArgAlignedP", "greatestFiniteMagnitude"]
+- !private ["s22_CVarArgPassedAsDoubleP", "greatestFiniteMagnitude"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "height"]
+- ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "integral"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "size"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "width"]
+- ["s30_CustomPlaygroundQuickLookableP", "zero"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "accessoryViewPadding"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "accessoryViewSize"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "avatarPosition"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "avatarSize"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "boundingRect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cellTopLabelSize"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "indexPath"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "itemWidth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "messageBottomLabelAlignment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "messageBottomLabelSize"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "messageContainerPadding"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "messageContainerSize"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "messageTopLabelAlignment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "messageTopLabelSize"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "messagesCollectionView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "messagesDataSource"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "messagesLayoutDelegate"]
+- !private ["s21_ObjectiveCBridgeableP", "greatestFiniteMagnitude"]
+- !private ["s21_ObjectiveCBridgeableP", "height"]
+- !private ["s21_ObjectiveCBridgeableP", "horizontal"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "integral"]
+- !private ["s21_ObjectiveCBridgeableP", "size"]
+- !private ["s21_ObjectiveCBridgeableP", "vertical"]
+- !private ["s21_ObjectiveCBridgeableP", "width"]
+- ["s21_ObjectiveCBridgeableP", "zero"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- "10MessageKit14AvatarPositionV"
+- !private "SB"
+- !private "12CoreGraphics7CGFloatV"
+- !private "So6CGRectV"
+- "So6CGSizeV"
+- !private "s7CVarArgP"
+- "10MessageKit18CellSizeCalculatorC"
+- !private "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- "Se"
+- "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "SF"
+- "SH"
+- "10MessageKit14AvatarPositionV10HorizontalO"
+- "10MessageKit20HorizontalEdgeInsetsV"
+- "10MessageKit14LabelAlignmentV"
+- "10MessageKit0A14SizeCalculatorC"
+- !private "10MessageKit32MessagesCollectionViewFlowLayoutC"
+- !private "10MessageKit38MessagesCollectionViewLayoutAttributesC"
+- !private "10MessageKit18MessagesDataSourceP"
+- !private "10MessageKit22MessagesLayoutDelegateP"
+- !private "So18NSAttributedStringC"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So22NSStringDrawingOptionsV"
+- "So15NSTextAlignmentV"
+- !private "Sj"
+- !private "s9OptionSetP"
+- "SY"
+- !private "s10SetAlgebraP"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "So26UICollectionViewFlowLayoutC"
+- !private "So22UICollectionViewLayoutC"
+- !private "So32UICollectionViewLayoutAttributesC"
+- !private "So13UIDynamicItemP"
+- "So12UIEdgeInsetsV"
+- "10MessageKit14AvatarPositionV8VerticalO"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- "s30_CustomPlaygroundQuickLookableP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/MessageInputBar.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MapKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/MessageInputBar/MessageInputBar-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/MessageKit/MessageKit-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/MessageKit.build/unextended-module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/MessageInputBar.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "d68489ecefbb71be37206544a0da4bd2"

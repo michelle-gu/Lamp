@@ -1,0 +1,544 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "DecimalFormatter"
+provides-nominal:
+- "6Eureka16DecimalFormatterC"
+provides-member:
+- ["6Eureka16DecimalFormatterC", ""]
+provides-dynamic-lookup:
+- "getObjectValue"
+depends-top-level:
+- !private "!="
+- !private "-"
+- !private "/"
+- !private "??"
+- "AnyObject"
+- "AssignmentPrecedence"
+- "AutoreleasingUnsafeMutablePointer"
+- !private "CharacterSet"
+- "DecimalFormatter"
+- !private "Double"
+- "FormatterProtocol"
+- !private "Locale"
+- "NSCoder"
+- !private "NSNumber"
+- "NSRange"
+- "NumberFormatter"
+- "String"
+- "UITextInput"
+- "UITextPosition"
+- "UnsafeMutablePointer"
+- !private "fatalError"
+- !private "pow"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["Sa", "joined"]
+- !private ["SA", "pointee"]
+- !private ["SK", "components"]
+- !private ["SK", "count"]
+- !private ["SK", "joined"]
+- !private ["SB", "init"]
+- !private ["s7CVarArgP", "CharacterSet"]
+- !private ["s7CVarArgP", "Double"]
+- !private ["s7CVarArgP", "Locale"]
+- !private ["s7CVarArgP", "NSNumber"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "components"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "fatalError"]
+- ["s7CVarArgP", "getNewPosition"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "joined"]
+- !private ["s7CVarArgP", "locale"]
+- !private ["s7CVarArgP", "maximumFractionDigits"]
+- !private ["s7CVarArgP", "minimumFractionDigits"]
+- !private ["s7CVarArgP", "numberStyle"]
+- !private ["s7CVarArgP", "pointee"]
+- !private ["s7CVarArgP", "pow"]
+- !private ["10Foundation12CharacterSetV", "decimalDigits"]
+- !private ["10Foundation12CharacterSetV", "inverted"]
+- !private ["Sl", "components"]
+- !private ["Sl", "count"]
+- !private ["Sl", "joined"]
+- !private ["SL", "components"]
+- !private ["SL", "count"]
+- !private ["SL", "init"]
+- !private ["SL", "pointee"]
+- !private ["10Foundation15ContiguousBytesP", "joined"]
+- !private ["s28CustomDebugStringConvertibleP", "CharacterSet"]
+- !private ["s28CustomDebugStringConvertibleP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "Locale"]
+- !private ["s28CustomDebugStringConvertibleP", "NSNumber"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "components"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "current"]
+- !private ["s28CustomDebugStringConvertibleP", "decimalDigits"]
+- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- ["s28CustomDebugStringConvertibleP", "getNewPosition"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "inverted"]
+- !private ["s28CustomDebugStringConvertibleP", "joined"]
+- !private ["s28CustomDebugStringConvertibleP", "locale"]
+- !private ["s28CustomDebugStringConvertibleP", "maximumFractionDigits"]
+- !private ["s28CustomDebugStringConvertibleP", "minimumFractionDigits"]
+- !private ["s28CustomDebugStringConvertibleP", "numberStyle"]
+- !private ["s28CustomDebugStringConvertibleP", "pointee"]
+- !private ["s28CustomDebugStringConvertibleP", "pow"]
+- !private ["s17CustomReflectableP", "components"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "current"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "joined"]
+- !private ["s17CustomReflectableP", "pointee"]
+- !private ["s23CustomStringConvertibleP", "CharacterSet"]
+- !private ["s23CustomStringConvertibleP", "Double"]
+- !private ["s23CustomStringConvertibleP", "Locale"]
+- !private ["s23CustomStringConvertibleP", "NSNumber"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "components"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "current"]
+- !private ["s23CustomStringConvertibleP", "decimalDigits"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
+- ["s23CustomStringConvertibleP", "getNewPosition"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "inverted"]
+- !private ["s23CustomStringConvertibleP", "joined"]
+- !private ["s23CustomStringConvertibleP", "locale"]
+- !private ["s23CustomStringConvertibleP", "maximumFractionDigits"]
+- !private ["s23CustomStringConvertibleP", "minimumFractionDigits"]
+- !private ["s23CustomStringConvertibleP", "numberStyle"]
+- !private ["s23CustomStringConvertibleP", "pow"]
+- !private ["10Foundation12DataProtocolP", "joined"]
+- ["6Eureka16DecimalFormatterC", "AnyObject"]
+- ["6Eureka16DecimalFormatterC", "AutoreleasingUnsafeMutablePointer"]
+- !private ["6Eureka16DecimalFormatterC", "CharacterSet"]
+- !private ["6Eureka16DecimalFormatterC", "Double"]
+- !private ["6Eureka16DecimalFormatterC", "Locale"]
+- ["6Eureka16DecimalFormatterC", "NSCoder"]
+- !private ["6Eureka16DecimalFormatterC", "NSNumber"]
+- ["6Eureka16DecimalFormatterC", "NSRange"]
+- ["6Eureka16DecimalFormatterC", "String"]
+- ["6Eureka16DecimalFormatterC", "UITextInput"]
+- ["6Eureka16DecimalFormatterC", "UITextPosition"]
+- ["6Eureka16DecimalFormatterC", "UnsafeMutablePointer"]
+- ["6Eureka16DecimalFormatterC", "deinit"]
+- !private ["6Eureka16DecimalFormatterC", "fatalError"]
+- ["6Eureka16DecimalFormatterC", "getNewPosition"]
+- ["6Eureka16DecimalFormatterC", "getObjectValue"]
+- ["6Eureka16DecimalFormatterC", "init"]
+- !private ["6Eureka16DecimalFormatterC", "locale"]
+- !private ["6Eureka16DecimalFormatterC", "maximumFractionDigits"]
+- !private ["6Eureka16DecimalFormatterC", "minimumFractionDigits"]
+- !private ["6Eureka16DecimalFormatterC", "numberStyle"]
+- !private ["6Eureka16DecimalFormatterC", "pow"]
+- !private ["Se", "components"]
+- !private ["Se", "count"]
+- !private ["Se", "current"]
+- !private ["Se", "decimalDigits"]
+- !private ["Se", "init"]
+- !private ["Se", "inverted"]
+- !private ["Se", "joined"]
+- !private ["Sd", "deinit"]
+- !private ["Sd", "init"]
+- !private ["SE", "components"]
+- !private ["SE", "count"]
+- !private ["SE", "current"]
+- !private ["SE", "decimalDigits"]
+- !private ["SE", "init"]
+- !private ["SE", "inverted"]
+- !private ["SE", "joined"]
+- !private ["SQ", "CharacterSet"]
+- !private ["SQ", "Double"]
+- !private ["SQ", "Locale"]
+- !private ["SQ", "NSNumber"]
+- ["SQ", ""]
+- !private ["SQ", "components"]
+- !private ["SQ", "count"]
+- !private ["SQ", "current"]
+- !private ["SQ", "decimal"]
+- !private ["SQ", "decimalDigits"]
+- !private ["SQ", "fatalError"]
+- ["SQ", "getNewPosition"]
+- !private ["SQ", "init"]
+- !private ["SQ", "inverted"]
+- !private ["SQ", "joined"]
+- !private ["SQ", "locale"]
+- !private ["SQ", "maximumFractionDigits"]
+- !private ["SQ", "minimumFractionDigits"]
+- !private ["SQ", "numberStyle"]
+- !private ["SQ", "pointee"]
+- !private ["SQ", "pow"]
+- !private ["s25ExpressibleByArrayLiteralP", "decimalDigits"]
+- !private ["s25ExpressibleByArrayLiteralP", "inverted"]
+- !private ["s25ExpressibleByArrayLiteralP", "joined"]
+- !private ["s27ExpressibleByBooleanLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "components"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "count"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "components"]
+- !private ["s32ExpressibleByStringInterpolationP", "count"]
+- !private ["s26ExpressibleByStringLiteralP", "components"]
+- !private ["s26ExpressibleByStringLiteralP", "count"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "components"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "count"]
+- !private ["SF", "init"]
+- ["So11NSFormatterC", "AnyObject"]
+- ["So11NSFormatterC", "AutoreleasingUnsafeMutablePointer"]
+- !private ["So11NSFormatterC", "CharacterSet"]
+- !private ["So11NSFormatterC", "Double"]
+- !private ["So11NSFormatterC", "Locale"]
+- ["So11NSFormatterC", "NSCoder"]
+- !private ["So11NSFormatterC", "NSNumber"]
+- ["So11NSFormatterC", "NSRange"]
+- ["So11NSFormatterC", "String"]
+- ["So11NSFormatterC", "UITextInput"]
+- ["So11NSFormatterC", "UITextPosition"]
+- ["So11NSFormatterC", "UnsafeMutablePointer"]
+- !private ["So11NSFormatterC", "fatalError"]
+- ["So11NSFormatterC", "getNewPosition"]
+- ["So11NSFormatterC", "getObjectValue"]
+- ["So11NSFormatterC", "init"]
+- !private ["So11NSFormatterC", "locale"]
+- !private ["So11NSFormatterC", "maximumFractionDigits"]
+- !private ["So11NSFormatterC", "minimumFractionDigits"]
+- !private ["So11NSFormatterC", "numberStyle"]
+- !private ["So11NSFormatterC", "pow"]
+- !private ["6Eureka17FormatterProtocolP", "CharacterSet"]
+- !private ["6Eureka17FormatterProtocolP", "Double"]
+- !private ["6Eureka17FormatterProtocolP", "Locale"]
+- !private ["6Eureka17FormatterProtocolP", "NSNumber"]
+- ["6Eureka17FormatterProtocolP", ""]
+- !private ["6Eureka17FormatterProtocolP", "fatalError"]
+- ["6Eureka17FormatterProtocolP", "getNewPosition"]
+- !private ["6Eureka17FormatterProtocolP", "locale"]
+- !private ["6Eureka17FormatterProtocolP", "maximumFractionDigits"]
+- !private ["6Eureka17FormatterProtocolP", "minimumFractionDigits"]
+- !private ["6Eureka17FormatterProtocolP", "numberStyle"]
+- !private ["6Eureka17FormatterProtocolP", "pow"]
+- !private ["SH", "CharacterSet"]
+- !private ["SH", "Double"]
+- !private ["SH", "Locale"]
+- !private ["SH", "NSNumber"]
+- ["SH", ""]
+- !private ["SH", "components"]
+- !private ["SH", "count"]
+- !private ["SH", "current"]
+- !private ["SH", "decimal"]
+- !private ["SH", "decimalDigits"]
+- !private ["SH", "fatalError"]
+- ["SH", "getNewPosition"]
+- !private ["SH", "init"]
+- !private ["SH", "inverted"]
+- !private ["SH", "joined"]
+- !private ["SH", "locale"]
+- !private ["SH", "maximumFractionDigits"]
+- !private ["SH", "minimumFractionDigits"]
+- !private ["SH", "numberStyle"]
+- !private ["SH", "pointee"]
+- !private ["SH", "pow"]
+- !private ["6Eureka18InputTypeInitiableP", "components"]
+- !private ["6Eureka18InputTypeInitiableP", "count"]
+- !private ["6Eureka18InputTypeInitiableP", "init"]
+- !private ["10Foundation6LocaleV", "current"]
+- !private ["s25LosslessStringConvertibleP", "components"]
+- !private ["s25LosslessStringConvertibleP", "count"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "components"]
+- !private ["s10MirrorPathP", "count"]
+- !private ["SM", "joined"]
+- !private ["10Foundation19MutableDataProtocolP", "joined"]
+- !private ["So8NSCodingP", "CharacterSet"]
+- !private ["So8NSCodingP", "Double"]
+- !private ["So8NSCodingP", "Locale"]
+- !private ["So8NSCodingP", "NSNumber"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "components"]
+- !private ["So8NSCodingP", "count"]
+- !private ["So8NSCodingP", "fatalError"]
+- ["So8NSCodingP", "getNewPosition"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "locale"]
+- !private ["So8NSCodingP", "maximumFractionDigits"]
+- !private ["So8NSCodingP", "minimumFractionDigits"]
+- !private ["So8NSCodingP", "numberStyle"]
+- !private ["So8NSCodingP", "pow"]
+- !private ["So9NSCopyingP", "CharacterSet"]
+- !private ["So9NSCopyingP", "Double"]
+- !private ["So9NSCopyingP", "Locale"]
+- !private ["So9NSCopyingP", "NSNumber"]
+- ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "components"]
+- !private ["So9NSCopyingP", "count"]
+- !private ["So9NSCopyingP", "fatalError"]
+- ["So9NSCopyingP", "getNewPosition"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "locale"]
+- !private ["So9NSCopyingP", "maximumFractionDigits"]
+- !private ["So9NSCopyingP", "minimumFractionDigits"]
+- !private ["So9NSCopyingP", "numberStyle"]
+- !private ["So9NSCopyingP", "pow"]
+- !private ["So21NSItemProviderReadingP", "components"]
+- !private ["So21NSItemProviderReadingP", "count"]
+- !private ["So21NSItemProviderWritingP", "components"]
+- !private ["So21NSItemProviderWritingP", "count"]
+- !private ["So16NSMutableCopyingP", "components"]
+- !private ["So16NSMutableCopyingP", "count"]
+- !private ["So8NSNumberC", "init"]
+- ["So8NSObjectC", "AnyObject"]
+- ["So8NSObjectC", "AutoreleasingUnsafeMutablePointer"]
+- !private ["So8NSObjectC", "CharacterSet"]
+- !private ["So8NSObjectC", "Double"]
+- !private ["So8NSObjectC", "Locale"]
+- ["So8NSObjectC", "NSCoder"]
+- !private ["So8NSObjectC", "NSNumber"]
+- ["So8NSObjectC", "NSRange"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UITextInput"]
+- ["So8NSObjectC", "UITextPosition"]
+- ["So8NSObjectC", "UnsafeMutablePointer"]
+- !private ["So8NSObjectC", "components"]
+- !private ["So8NSObjectC", "count"]
+- !private ["So8NSObjectC", "fatalError"]
+- ["So8NSObjectC", "getNewPosition"]
+- ["So8NSObjectC", "getObjectValue"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "locale"]
+- !private ["So8NSObjectC", "maximumFractionDigits"]
+- !private ["So8NSObjectC", "minimumFractionDigits"]
+- !private ["So8NSObjectC", "numberStyle"]
+- !private ["So8NSObjectC", "pow"]
+- !private ["So8NSObjectP", "CharacterSet"]
+- !private ["So8NSObjectP", "Double"]
+- !private ["So8NSObjectP", "Locale"]
+- !private ["So8NSObjectP", "NSNumber"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "components"]
+- !private ["So8NSObjectP", "count"]
+- !private ["So8NSObjectP", "fatalError"]
+- ["So8NSObjectP", "getNewPosition"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "locale"]
+- !private ["So8NSObjectP", "maximumFractionDigits"]
+- !private ["So8NSObjectP", "minimumFractionDigits"]
+- !private ["So8NSObjectP", "numberStyle"]
+- !private ["So8NSObjectP", "position"]
+- !private ["So8NSObjectP", "pow"]
+- !private ["So14NSSecureCodingP", "components"]
+- !private ["So14NSSecureCodingP", "count"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "components"]
+- !private ["So8NSStringC", "count"]
+- !private ["So7NSValueC", "init"]
+- ["So17NSNumberFormatterC", "AnyObject"]
+- ["So17NSNumberFormatterC", "AutoreleasingUnsafeMutablePointer"]
+- !private ["So17NSNumberFormatterC", "CharacterSet"]
+- !private ["So17NSNumberFormatterC", "Double"]
+- !private ["So17NSNumberFormatterC", "Locale"]
+- ["So17NSNumberFormatterC", "NSCoder"]
+- !private ["So17NSNumberFormatterC", "NSNumber"]
+- ["So17NSNumberFormatterC", "NSRange"]
+- ["So17NSNumberFormatterC", "String"]
+- ["So17NSNumberFormatterC", "UITextInput"]
+- ["So17NSNumberFormatterC", "UITextPosition"]
+- ["So17NSNumberFormatterC", "UnsafeMutablePointer"]
+- ["So17NSNumberFormatterC", ""]
+- !private ["So17NSNumberFormatterC", "fatalError"]
+- ["So17NSNumberFormatterC", "getNewPosition"]
+- ["So17NSNumberFormatterC", "getObjectValue"]
+- ["So17NSNumberFormatterC", "init"]
+- !private ["So17NSNumberFormatterC", "locale"]
+- !private ["So17NSNumberFormatterC", "maximumFractionDigits"]
+- !private ["So17NSNumberFormatterC", "minimumFractionDigits"]
+- !private ["So17NSNumberFormatterC", "numberStyle"]
+- !private ["So17NSNumberFormatterC", "pow"]
+- !private ["Sj", "init"]
+- !private ["Sk", "joined"]
+- !private ["Sm", "components"]
+- !private ["Sm", "count"]
+- !private ["Sm", "joined"]
+- !private ["SY", "decimal"]
+- !private ["10Foundation20ReferenceConvertibleP", "current"]
+- !private ["10Foundation20ReferenceConvertibleP", "decimalDigits"]
+- !private ["10Foundation20ReferenceConvertibleP", "inverted"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["ST", "components"]
+- !private ["ST", "count"]
+- !private ["ST", "joined"]
+- !private ["s10SetAlgebraP", "decimalDigits"]
+- !private ["s10SetAlgebraP", "inverted"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", "init"]
+- !private ["Sx", "pointee"]
+- !private ["SS", "components"]
+- !private ["SS", "count"]
+- !private ["Sy", "components"]
+- !private ["Sy", "count"]
+- !private ["So22NSNumberFormatterStyleV", "decimal"]
+- !private ["s16TextOutputStreamP", "components"]
+- !private ["s16TextOutputStreamP", "count"]
+- !private ["s20TextOutputStreamableP", "components"]
+- !private ["s20TextOutputStreamableP", "count"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So10UIKeyInputP", "position"]
+- !private ["So11UITextInputP", "position"]
+- !private ["So17UITextInputTraitsP", "position"]
+- !private ["s14_ArrayProtocolP", "joined"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "components"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "count"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "joined"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "components"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "count"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "components"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "count"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "components"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "count"]
+- !private ["s19_HasContiguousBytesP", "components"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "joined"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "components"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "joined"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CharacterSet"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Double"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Locale"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSNumber"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "components"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "count"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "getNewPosition"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "locale"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "maximumFractionDigits"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "minimumFractionDigits"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "numberStyle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pow"]
+- !private ["s21_ObjectiveCBridgeableP", "components"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "current"]
+- !private ["s21_ObjectiveCBridgeableP", "decimalDigits"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "inverted"]
+- !private ["s21_ObjectiveCBridgeableP", "joined"]
+- !private ["s8_PointerP", "pointee"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "Sa"
+- !private "SA"
+- !private "SK"
+- !private "SB"
+- "s7CVarArgP"
+- !private "10Foundation12CharacterSetV"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- "6Eureka16DecimalFormatterC"
+- !private "Se"
+- !private "Sd"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SF"
+- "So11NSFormatterC"
+- "6Eureka17FormatterProtocolP"
+- "SH"
+- !private "6Eureka18InputTypeInitiableP"
+- !private "10Foundation6LocaleV"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSNumberC"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "So7NSValueC"
+- "So17NSNumberFormatterC"
+- !private "Sj"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s10SIMDScalarP"
+- !private "ST"
+- !private "s10SetAlgebraP"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "SS"
+- !private "Sy"
+- !private "So22NSNumberFormatterStyleV"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So10UIKeyInputP"
+- !private "So11UITextInputP"
+- !private "So17UITextInputTraitsP"
+- !private "s14_ArrayProtocolP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s8_PointerP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Eureka/Eureka-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Eureka.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "46b8c299f804194b46864812bd51415b"

@@ -1,0 +1,10 @@
+framework module RangeUISlider {
+  umbrella header "RangeUISlider-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module RangeUISlider.__Swift {
+    exclude header "RangeUISlider-Swift.h"
+}

@@ -1,0 +1,41 @@
+dependencies: \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Login/FAuthTokenProvider.m \
+  /Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseDatabase.build/module.modulemap \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Login/FAuthTokenProvider.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Utilities/FTypedefs.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Api/Private/FTypedefs_Private.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Headers/Public/FirebaseAuthInterop/FIRAuthInterop.h \
+  /Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRAppInternal.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRAnalyticsConfiguration.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRErrors.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRErrorCode.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRComponentContainer.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRComponentType.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRLibrary.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRComponent.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRLogger.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Utilities/FUtilities.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Utilities/FParsedUrl.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Core/FRepoInfo.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FPath.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Api/Private/FIRDatabaseQuery_Private.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Core/FRepo.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Core/FPersistentConnection.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Realtime/FConnection.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Realtime/FWebSocketConnection.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/third_party/SocketRocket/FSRWebSocket.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataEventType.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleUserCallback.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Core/FQueryParams.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Core/FRepoManager.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Api/FIRDatabaseConfig.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDatabaseQuery.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataSnapshot.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Login/FIRNoopAuthTokenProvider.h
