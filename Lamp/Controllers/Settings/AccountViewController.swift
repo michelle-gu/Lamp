@@ -19,6 +19,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     let accountCellIdentifier = "accountCellIdentifier"
     let changePasswordSegueIdentifier = "changePasswordSegueIdentifier"
     let unwindToLoginSegueIdentifier = "unwindToLoginSegueIdentifier"
+    let ref = Database.database().reference(withPath: "user-profiles")
 
     // MARK: Properties
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,9 +48,9 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         case 0: // Change password
             let segueIdentifier = "changePasswordSegueIdentifier"
             performSegue(withIdentifier: segueIdentifier, sender: self)
-        case 1:
+        case 1: // Connect w/ FB
             break
-        case 2:
+        case 2: // Connect w/ Google
             break
         case 3: // Delete account
             // Prompt the user to re-provide their sign-in credentials
@@ -79,6 +80,10 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
                         self.present(alert, animated: true, completion: nil)
                     } else {
                         print("User re-authenticated. Attempting to delete account and return to login.")
+                        // Save current user's token to delete data later
+                        let userToken = Auth.auth().currentUser?.uid
+
+                        // Delete User account from Firebase
                         user?.delete { error in
                             if let error = error {
                                 // An error happened.
@@ -94,6 +99,9 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
                             } else {
                                 print("Account deleted.")
                                 self.performSegue(withIdentifier: "unwindToLoginSegueIdentifier", sender: self)
+                                
+                                // Delete User data from Firebase
+                                self.ref.child(userToken!).removeValue()
                             }
                         }
                     }

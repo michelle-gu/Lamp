@@ -108,9 +108,9 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         
         let profile = Profile(firstName: firstName, birthday: birthday, gender: gender, uni: "", futureLoc: "", occupation: "")
         
-        let profileRef = self.ref.child(user!)
+        let userRef = self.ref.child(user!)
         
-        profileRef.setValue(profile.toAnyObject())
+        userRef.setValue(profile.toAnyObject())
     }
 
 }

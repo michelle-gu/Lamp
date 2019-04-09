@@ -35,8 +35,8 @@ struct Settings {
     let showProfile: Bool
     
     // MARK: Initializers
-    // Initializer
-    init(key: String = "", fb: Bool, google: Bool, newMessages: Bool, newMatches: Bool, futureLoc: [String], maxDistance: Int, universities: [String], genders: [String], ageMin: Int, ageMax: Int, showProfile: Bool) {
+    // Initializer with default settings
+    init(key: String = "", fb: Bool = false, google: Bool = false, newMessages: Bool = true, newMatches: Bool = true, futureLoc: [String] = [], maxDistance: Int = 0, universities: [String] = [], genders: [String] = [], ageMin: Int = 0, ageMax: Int = Int.max, showProfile: Bool = true) {
         // Initialize Firebase ref/key
         self.ref = nil
         self.key = key

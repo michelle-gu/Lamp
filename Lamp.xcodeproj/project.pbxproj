@@ -27,7 +27,6 @@
 		95412745224B0254003343D4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95412744224B0253003343D4 /* SettingsViewController.swift */; };
 		95412749224B12C9003343D4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95412748224B12C9003343D4 /* AccountViewController.swift */; };
 		9541274D224B1EC8003343D4 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */; };
-		95412751224B2F8F003343D4 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95412750224B2F8E003343D4 /* NotificationsViewController.swift */; };
 		B62C34E82255588B00C5348F /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C34E72255588B00C5348F /* ChangePasswordViewController.swift */; };
 		B640FEB5224C066700E8FBFF /* ContactInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */; };
 		B640FEB6224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */; };
@@ -39,6 +38,7 @@
 		B6B89717223303E100164801 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B89716223303E100164801 /* LogInViewController.swift */; };
 		B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B8971A22331FCA00164801 /* AppDelegate.swift */; };
 		B6DFE9CA2257C92D0086BCE6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DFE9C92257C92D0086BCE6 /* Settings.swift */; };
+		B6DFE9CC225884150086BCE6 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DFE9CB225884150086BCE6 /* NotificationsTableViewController.swift */; };
 		B6F5005922307A3500FD1433 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F5005822307A3500FD1433 /* ViewController.swift */; };
 		B6F5005C22307A3500FD1433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F5005A22307A3500FD1433 /* Main.storyboard */; };
 		B6F5005E22307A3600FD1433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F5005D22307A3600FD1433 /* Assets.xcassets */; };
@@ -65,7 +65,6 @@
 		95412744224B0253003343D4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		95412748224B12C9003343D4 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
-		95412750224B2F8E003343D4 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		B62C34E72255588B00C5348F /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewCell.swift; sourceTree = "<group>"; };
 		B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifestylePreferencesTableViewCell.swift; sourceTree = "<group>"; };
@@ -78,6 +77,7 @@
 		B6B897182233095300164801 /* Lamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lamp.entitlements; sourceTree = "<group>"; };
 		B6B8971A22331FCA00164801 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6DFE9C92257C92D0086BCE6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		B6DFE9CB225884150086BCE6 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
 		B6F5005322307A3500FD1433 /* Lamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F5005822307A3500FD1433 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6F5005B22307A3500FD1433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,8 +139,8 @@
 				95412744224B0253003343D4 /* SettingsViewController.swift */,
 				95412748224B12C9003343D4 /* AccountViewController.swift */,
 				B62C34E72255588B00C5348F /* ChangePasswordViewController.swift */,
-				95412750224B2F8E003343D4 /* NotificationsViewController.swift */,
 				9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */,
+				B6DFE9CB225884150086BCE6 /* NotificationsTableViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -150,14 +150,14 @@
 			children = (
 				B62C34E9225558A000C5348F /* Settings */,
 				B6B897142233037300164801 /* SignUpViewController.swift */,
+				571B4270224BD66300F9F42B /* ProfileViewController.swift */,
+				07B43E6922348C7600BB8548 /* ProfileCreationViewController.swift */,
 				B6B89716223303E100164801 /* LogInViewController.swift */,
 				07B43E6522348C0900BB8548 /* EmailConfirmationViewController.swift */,
 				07B43E6722348C4000BB8548 /* SocialMediaConnectViewController.swift */,
-				07B43E6922348C7600BB8548 /* ProfileCreationViewController.swift */,
 				07B43E6B22348C9900BB8548 /* ProfileLocationViewController.swift */,
 				07B43E6D22348CCC00BB8548 /* ProfileMapViewController.swift */,
 				571B426E224B401E00F9F42B /* ProfileEditViewController.swift */,
-				571B4270224BD66300F9F42B /* ProfileViewController.swift */,
 				07B43E6F22348D0900BB8548 /* CardsViewController.swift */,
 				07131721224554F3000CDD33 /* MatchMessageViewController.swift */,
 				07AB869F224921D9001EE449 /* MessagesViewController.swift */,
@@ -341,8 +341,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95412751224B2F8F003343D4 /* NotificationsViewController.swift in Sources */,
 				571B426F224B401E00F9F42B /* ProfileEditViewController.swift in Sources */,
+				B6DFE9CC225884150086BCE6 /* NotificationsTableViewController.swift in Sources */,
 				B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */,
 				B62C34E82255588B00C5348F /* ChangePasswordViewController.swift in Sources */,
 				9541274D224B1EC8003343D4 /* DiscoveryViewController.swift in Sources */,
