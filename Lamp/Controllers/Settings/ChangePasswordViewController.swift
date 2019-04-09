@@ -74,6 +74,9 @@ class ChangePasswordViewController: UIViewController {
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        oldPasswordField.isSecureTextEntry = true
+        newPasswordField.isSecureTextEntry = true
+        confirmPasswordField.isSecureTextEntry = true
         // Do any additional setup after loading the view.
     }
     

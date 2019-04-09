@@ -61,6 +61,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
             
             alert.addTextField { (textField) in
                 textField.placeholder = "Password"
+                textField.isSecureTextEntry = true
             }
             
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
@@ -117,7 +118,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
