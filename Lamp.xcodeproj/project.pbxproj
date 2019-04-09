@@ -27,6 +27,10 @@
 		95412745224B0254003343D4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95412744224B0253003343D4 /* SettingsViewController.swift */; };
 		95412749224B12C9003343D4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95412748224B12C9003343D4 /* AccountViewController.swift */; };
 		9541274D224B1EC8003343D4 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */; };
+		B61FE834225C6637002BDDD7 /* DiscoveryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61FE833225C6637002BDDD7 /* DiscoveryTableViewController.swift */; };
+		B61FE836225C6DC4002BDDD7 /* GenderFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61FE835225C6DC4002BDDD7 /* GenderFilterViewController.swift */; };
+		B61FE838225C6DF2002BDDD7 /* FutureLocationFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61FE837225C6DF2002BDDD7 /* FutureLocationFilterViewController.swift */; };
+		B61FE83A225C6E01002BDDD7 /* UniversitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61FE839225C6E01002BDDD7 /* UniversitiesViewController.swift */; };
 		B62C34E82255588B00C5348F /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C34E72255588B00C5348F /* ChangePasswordViewController.swift */; };
 		B640FEB5224C066700E8FBFF /* ContactInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */; };
 		B640FEB6224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */; };
@@ -65,6 +69,10 @@
 		95412744224B0253003343D4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		95412748224B12C9003343D4 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
+		B61FE833225C6637002BDDD7 /* DiscoveryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryTableViewController.swift; sourceTree = "<group>"; };
+		B61FE835225C6DC4002BDDD7 /* GenderFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderFilterViewController.swift; sourceTree = "<group>"; };
+		B61FE837225C6DF2002BDDD7 /* FutureLocationFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureLocationFilterViewController.swift; sourceTree = "<group>"; };
+		B61FE839225C6E01002BDDD7 /* UniversitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversitiesViewController.swift; sourceTree = "<group>"; };
 		B62C34E72255588B00C5348F /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewCell.swift; sourceTree = "<group>"; };
 		B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifestylePreferencesTableViewCell.swift; sourceTree = "<group>"; };
@@ -141,6 +149,10 @@
 				B62C34E72255588B00C5348F /* ChangePasswordViewController.swift */,
 				9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */,
 				B6DFE9CB225884150086BCE6 /* NotificationsTableViewController.swift */,
+				B61FE833225C6637002BDDD7 /* DiscoveryTableViewController.swift */,
+				B61FE835225C6DC4002BDDD7 /* GenderFilterViewController.swift */,
+				B61FE837225C6DF2002BDDD7 /* FutureLocationFilterViewController.swift */,
+				B61FE839225C6E01002BDDD7 /* UniversitiesViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -344,19 +356,23 @@
 				571B426F224B401E00F9F42B /* ProfileEditViewController.swift in Sources */,
 				B6DFE9CC225884150086BCE6 /* NotificationsTableViewController.swift in Sources */,
 				B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */,
+				B61FE83A225C6E01002BDDD7 /* UniversitiesViewController.swift in Sources */,
 				B62C34E82255588B00C5348F /* ChangePasswordViewController.swift in Sources */,
 				9541274D224B1EC8003343D4 /* DiscoveryViewController.swift in Sources */,
 				B640FEB6224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift in Sources */,
+				B61FE838225C6DF2002BDDD7 /* FutureLocationFilterViewController.swift in Sources */,
 				B6F5005922307A3500FD1433 /* ViewController.swift in Sources */,
 				07AB86A0224921D9001EE449 /* MessagesViewController.swift in Sources */,
 				B6B897152233037300164801 /* SignUpViewController.swift in Sources */,
 				95132AC6224B4803006C1A84 /* ToggleTableViewCell.swift in Sources */,
 				571B426B224AC8EF00F9F42B /* Profile.swift in Sources */,
 				07B43E6A22348C7600BB8548 /* ProfileCreationViewController.swift in Sources */,
+				B61FE834225C6637002BDDD7 /* DiscoveryTableViewController.swift in Sources */,
 				571B4271224BD66300F9F42B /* ProfileViewController.swift in Sources */,
 				B6B89717223303E100164801 /* LogInViewController.swift in Sources */,
 				95132AC2224B47D9006C1A84 /* RangeSliderTableViewCell.swift in Sources */,
 				95412745224B0254003343D4 /* SettingsViewController.swift in Sources */,
+				B61FE836225C6DC4002BDDD7 /* GenderFilterViewController.swift in Sources */,
 				95412749224B12C9003343D4 /* AccountViewController.swift in Sources */,
 				07B43E6E22348CCC00BB8548 /* ProfileMapViewController.swift in Sources */,
 				B640FEB5224C066700E8FBFF /* ContactInfoTableViewCell.swift in Sources */,
