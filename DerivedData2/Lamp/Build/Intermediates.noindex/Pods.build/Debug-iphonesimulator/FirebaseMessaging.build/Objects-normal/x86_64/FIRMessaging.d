@@ -1,0 +1,46 @@
+dependencies: \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessaging.m \
+  /Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseMessaging.build/module.modulemap \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/Public/FIRMessaging.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessaging_Private.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingAnalytics.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Headers/Public/FirebaseAnalyticsInterop/FIRAnalyticsInterop.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingClient.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingConstants.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingContextManagerService.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingDataMessageManager.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingDefines.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/Public/FIRMessagingExtensionHelper.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingLogger.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMMessageCode.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingPubSub.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingReceiver.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingRemoteNotificationsProxy.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingRmqManager.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingSyncMessageManager.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingUtilities.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingVersionUtilities.h \
+  /Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRAppInternal.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRAnalyticsConfiguration.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRErrors.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRErrorCode.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRComponent.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRComponentContainer.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRComponentType.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRLibrary.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRDependency.h \
+  /Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseInstanceID.build/module.modulemap \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/Public/FIRInstanceID.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/Public/FirebaseInstanceID.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Target\ Support\ Files/FirebaseInstanceID/FirebaseInstanceID-umbrella.h \
+  /Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/GoogleUtilities.build/module.modulemap \
+  /Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/Reachability/Private/GULReachabilityChecker.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/UserDefaults/Private/GULUserDefaults.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseMessaging/Firebase/Messaging/NSError+FIRMessaging.h

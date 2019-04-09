@@ -8,13 +8,20 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 class MessagesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // user match list
-    var messagedUsers: [Profile] = []
+    var messagedUsers: [String] = ["B13rifXWDfOREcfxLdeBvF3Btc42", "O5tkewRsPUQTNBFdq2WMwQTD7Gi2", "PYVm2MqtW7MApaO80w7AnBlHii82", "iVFU2mH3npgjxvzIndiOT6BDBJ02"]
+    
+    // MARK: Properties
+    var ref: DatabaseReference!
     
     let customTableViewCellIdentifier = "userCell"
+    let goToMessagesSegueId = "goToMessagesSegueId"
+    
+    var selectedIndex = 0
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -27,8 +34,6 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        messagedUsers.append(Profile(firstName: "Lindsey", birthday: "", gender: "", uni: "", futureLoc: "", occupation: ""))
         
         //setUpNavigationBarItems()
         // profile picture styling
@@ -45,22 +50,48 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         // create a new cell if needed or reuse an old one
         let cell = tableView.dequeueReusableCell(withIdentifier: customTableViewCellIdentifier, for: indexPath as IndexPath) as! MessagesTableViewCell
         
-        let user = messagedUsers[indexPath.row]
+        ref = Database.database().reference(withPath: "user-profiles")
+        let userId = messagedUsers[indexPath.row]
+        let messagingUser = ref.child(userId)
         
-        cell.nameLabel.text = user.firstName
+        messagingUser.observe(.value, with: { (snapshot) in
+            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+            let firstName = profileDict["firstName"] as? String
+            cell.nameLabel.text = firstName
+        })
+        
+        // grab timestamp from last message
+        
+        
+        // grab last message text from last message
+        
         
         return cell
     }
     
+    // table cell height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 95.0
     }
     
+    // user clicks on a row
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        self.performSegue(withIdentifier: goToMessagesSegueId, sender: nil)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == goToMessagesSegueId,
+            let controller = segue.destination as? MessageInstanceViewController {
+            
+        }
+    }
+    
+    
+    // styling
     private func styleElements() {
         let profileBorderRadius = profile1PicView.bounds.height / 2
         profile1PicView.layer.cornerRadius = profileBorderRadius

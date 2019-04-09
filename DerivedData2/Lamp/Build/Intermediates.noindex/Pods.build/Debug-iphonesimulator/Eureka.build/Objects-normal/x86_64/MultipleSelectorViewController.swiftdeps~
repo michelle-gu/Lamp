@@ -29,6 +29,7 @@ depends-top-level:
 - "SelectableSection"
 - "Set"
 - "String"
+- !private "StringLiteralType"
 - !private "TernaryPrecedence"
 - "TypedRowControllerType"
 - "UIViewController"

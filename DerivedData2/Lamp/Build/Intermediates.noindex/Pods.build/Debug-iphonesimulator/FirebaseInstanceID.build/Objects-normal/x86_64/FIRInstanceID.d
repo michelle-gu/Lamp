@@ -1,0 +1,37 @@
+dependencies: \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceID.m \
+  /Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseInstanceID.build/module.modulemap \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/Public/FIRInstanceID.h \
+  /Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRAppInternal.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRAnalyticsConfiguration.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRErrors.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRErrorCode.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRComponent.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRComponentContainer.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRComponentType.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRLibrary.h \
+  /Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/GoogleUtilities.build/module.modulemap \
+  /Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceID+Private.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinService.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDUtilities.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDAuthService.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCombinedHandler.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDConstants.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDDefines.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeyPairStore.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDLogger.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRIMessageCode.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDStore.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenInfo.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDAPNSInfo.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenManager.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDVersionUtilities.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/NSError+FIRInstanceID.h

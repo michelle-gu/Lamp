@@ -20,7 +20,6 @@ depends-top-level:
 - "BaseCellType"
 - "BaseRow"
 - "Bool"
-- "BooleanLiteralType"
 - "CGFloat"
 - "CastingPrecedence"
 - "Cell"

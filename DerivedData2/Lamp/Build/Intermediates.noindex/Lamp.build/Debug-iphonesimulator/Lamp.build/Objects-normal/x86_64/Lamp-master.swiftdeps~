@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
-options: "6488447681e6b97cea589cbc084ae67a"
-build_time: [1554762663, 398952000]
+options: "57fec39951ff690d4a084ea4d3de10b1"
+build_time: [1554844185, 357503000]
 inputs:
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Settings/NotificationsViewController.swift": [1554488239, 716893251]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/ProfileEditViewController.swift": [1554488239, 715818728]
@@ -9,7 +9,7 @@ inputs:
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Settings/DiscoveryViewController.swift": [1554488239, 716735220]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Views/LifestylePreferencesTableViewCell.swift": [1554488239, 718120940]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Models/ViewController.swift": [1553726760, 944895008]
-  "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/MessagesViewController.swift": [1554762662, 714228212]
+  "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/MessagesViewController.swift": [1554844184, 419849808]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/SignUpViewController.swift": [1553726760, 943496220]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Views/Table View Cells/ToggleTableViewCell.swift": [1553726760, 946147839]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Models/Profile.swift": [1554488239, 717316064]
@@ -33,4 +33,4 @@ inputs:
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Views/BudgetTableViewCell.swift": [1554488239, 717668898]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Models/User.swift": [1553726760, 944726470]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Views/BioTableViewCell.swift": [1554488239, 717492924]
-  "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/MessageInstanceViewController.swift": [1554499663, 418007591]
+  "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/MessageInstanceViewController.swift": [1554841904, 864546838]

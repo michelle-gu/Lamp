@@ -337,13 +337,7 @@ SWIFT_CLASS("_TtC13RangeUISlider13RangeUISlider")
 /// Method used to layout precisely the subview.
 /// Used here to set the starting values of the knob.
 - (void)layoutSubviews;
-/// Method used to respond to the gesture recognizer attached on the left knob.
-/// \param gestureRecognizer the gesture recognizer that uses this method as selector.
-///
 - (void)moveLeftKnobWithGestureRecognizer:(UIPanGestureRecognizer * _Nonnull)gestureRecognizer;
-/// Method used to respond to the gesture recognizer attached on the right knob.
-/// \param gestureRecognizer the gesture recognizer that uses this method as selector.
-///
 - (void)moveRightKnobWithGestureRecognizer:(UIPanGestureRecognizer * _Nonnull)gestureRecognizer;
 @end
 
@@ -354,6 +348,8 @@ SWIFT_CLASS("_TtC13RangeUISlider13RangeUISlider")
 SWIFT_PROTOCOL("_TtP13RangeUISlider21RangeUISliderDelegate_")
 @protocol RangeUISliderDelegate
 @optional
+/// Calls the delegate when the user has started the change of the range.
+- (void)rangeChangeStarted;
 /// Calls the delegate when the user is changing the range by moving the knobs.
 /// \param minValueSelected the minimum value selected.
 ///

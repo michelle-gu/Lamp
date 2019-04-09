@@ -102,6 +102,7 @@ depends-top-level:
 - "EurekaError"
 - "ExpressibleByBooleanLiteral"
 - "ExpressibleByStringLiteral"
+- "FloatLiteralType"
 - "Form"
 - "FormDelegate"
 - "FormViewController"
@@ -112,6 +113,7 @@ depends-top-level:
 - "IndexSet"
 - "InlineRowHideOptions"
 - "Int"
+- "IntegerLiteralType"
 - !private "KeyboardReturnHandler"
 - "KeyboardReturnTypeConfiguration"
 - !private "MultivaluedSection"
@@ -328,7 +330,7 @@ depends-member:
 - ["s7CVarArgP", "CellStyle"]
 - !private ["s7CVarArgP", "DispatchQueue"]
 - ["s7CVarArgP", "EditingStyle"]
-- !private ["s7CVarArgP", "Form"]
+- ["s7CVarArgP", "Form"]
 - !private ["s7CVarArgP", "FormViewController"]
 - !private ["s7CVarArgP", "IndexPath"]
 - !private ["s7CVarArgP", "NavigationAccessoryView"]
@@ -510,7 +512,7 @@ depends-member:
 - !private ["Sl", "defaultInlineRowHideOptions"]
 - !private ["Sl", "defaultKeyboardReturnType"]
 - !private ["Sl", "defaultNavigationOptions"]
-- !private ["Sl", "delegate"]
+- ["Sl", "delegate"]
 - !private ["Sl", "filter"]
 - !private ["Sl", "first"]
 - !private ["Sl", "footer"]
@@ -587,7 +589,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "CellStyle"]
 - !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
 - ["s28CustomDebugStringConvertibleP", "EditingStyle"]
-- !private ["s28CustomDebugStringConvertibleP", "Form"]
+- ["s28CustomDebugStringConvertibleP", "Form"]
 - !private ["s28CustomDebugStringConvertibleP", "FormViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "IndexPath"]
 - !private ["s28CustomDebugStringConvertibleP", "NavigationAccessoryView"]
@@ -819,7 +821,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "CellStyle"]
 - !private ["s23CustomStringConvertibleP", "DispatchQueue"]
 - ["s23CustomStringConvertibleP", "EditingStyle"]
-- !private ["s23CustomStringConvertibleP", "Form"]
+- ["s23CustomStringConvertibleP", "Form"]
 - !private ["s23CustomStringConvertibleP", "FormViewController"]
 - !private ["s23CustomStringConvertibleP", "IndexPath"]
 - !private ["s23CustomStringConvertibleP", "NavigationAccessoryView"]
@@ -1146,7 +1148,7 @@ depends-member:
 - ["SQ", "Element"]
 - !private ["SQ", "Enabled"]
 - !private ["SQ", "FirstResponderChanges"]
-- !private ["SQ", "Form"]
+- ["SQ", "Form"]
 - !private ["SQ", "FormViewController"]
 - !private ["SQ", "IndexPath"]
 - ["SQ", "InlineRowHideOptions"]
@@ -1543,9 +1545,9 @@ depends-member:
 - !private ["6Eureka4FormC", "defaultInlineRowHideOptions"]
 - !private ["6Eureka4FormC", "defaultKeyboardReturnType"]
 - !private ["6Eureka4FormC", "defaultNavigationOptions"]
-- !private ["6Eureka4FormC", "deinit"]
-- !private ["6Eureka4FormC", "delegate"]
-- !private ["6Eureka4FormC", "init"]
+- ["6Eureka4FormC", "deinit"]
+- ["6Eureka4FormC", "delegate"]
+- ["6Eureka4FormC", "init"]
 - !private ["6Eureka4FormC", "inlineRowHideOptions"]
 - !private ["6Eureka4FormC", "keyboardReturnType"]
 - !private ["6Eureka4FormC", "nextRow"]
@@ -1554,7 +1556,7 @@ depends-member:
 - !private ["6Eureka12FormDelegateP", "BaseRow"]
 - !private ["6Eureka12FormDelegateP", "CGRect"]
 - !private ["6Eureka12FormDelegateP", "DispatchQueue"]
-- !private ["6Eureka12FormDelegateP", "Form"]
+- ["6Eureka12FormDelegateP", "Form"]
 - !private ["6Eureka12FormDelegateP", "FormViewController"]
 - !private ["6Eureka12FormDelegateP", "IndexPath"]
 - !private ["6Eureka12FormDelegateP", "NavigationAccessoryView"]
@@ -1755,7 +1757,7 @@ depends-member:
 - !private ["6Eureka26FormViewControllerProtocolP", "CGRect"]
 - ["6Eureka26FormViewControllerProtocolP", "Cell"]
 - !private ["6Eureka26FormViewControllerProtocolP", "DispatchQueue"]
-- !private ["6Eureka26FormViewControllerProtocolP", "Form"]
+- ["6Eureka26FormViewControllerProtocolP", "Form"]
 - !private ["6Eureka26FormViewControllerProtocolP", "FormViewController"]
 - !private ["6Eureka26FormViewControllerProtocolP", "IndexPath"]
 - !private ["6Eureka26FormViewControllerProtocolP", "NavigationAccessoryView"]
@@ -1845,7 +1847,7 @@ depends-member:
 - ["SH", "CellStyle"]
 - !private ["SH", "DispatchQueue"]
 - ["SH", "EditingStyle"]
-- !private ["SH", "Form"]
+- ["SH", "Form"]
 - !private ["SH", "FormViewController"]
 - !private ["SH", "IndexPath"]
 - !private ["SH", "NavigationAccessoryView"]
@@ -2147,13 +2149,13 @@ depends-member:
 - !private ["SM", "defaultInlineRowHideOptions"]
 - !private ["SM", "defaultKeyboardReturnType"]
 - !private ["SM", "defaultNavigationOptions"]
-- !private ["SM", "delegate"]
+- ["SM", "delegate"]
 - !private ["SM", "filter"]
 - !private ["SM", "first"]
 - !private ["SM", "footer"]
 - !private ["SM", "forEach"]
 - !private ["SM", "header"]
-- !private ["SM", "init"]
+- ["SM", "init"]
 - !private ["SM", "inlineRowHideOptions"]
 - !private ["SM", "insert"]
 - !private ["SM", "isEmpty"]
@@ -2181,7 +2183,7 @@ depends-member:
 - ["So8NSCodingP", "CellStyle"]
 - !private ["So8NSCodingP", "DispatchQueue"]
 - ["So8NSCodingP", "EditingStyle"]
-- !private ["So8NSCodingP", "Form"]
+- ["So8NSCodingP", "Form"]
 - !private ["So8NSCodingP", "FormViewController"]
 - !private ["So8NSCodingP", "IndexPath"]
 - !private ["So8NSCodingP", "NavigationAccessoryView"]
@@ -2326,7 +2328,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "BaseRow"]
 - !private ["So26NSExtensionRequestHandlingP", "CGRect"]
 - !private ["So26NSExtensionRequestHandlingP", "DispatchQueue"]
-- !private ["So26NSExtensionRequestHandlingP", "Form"]
+- ["So26NSExtensionRequestHandlingP", "Form"]
 - !private ["So26NSExtensionRequestHandlingP", "FormViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "IndexPath"]
 - !private ["So26NSExtensionRequestHandlingP", "NavigationAccessoryView"]
@@ -2613,7 +2615,7 @@ depends-member:
 - ["So8NSObjectP", "CellStyle"]
 - !private ["So8NSObjectP", "DispatchQueue"]
 - ["So8NSObjectP", "EditingStyle"]
-- !private ["So8NSObjectP", "Form"]
+- ["So8NSObjectP", "Form"]
 - !private ["So8NSObjectP", "FormViewController"]
 - !private ["So8NSObjectP", "IndexPath"]
 - !private ["So8NSObjectP", "NavigationAccessoryView"]
@@ -2910,13 +2912,13 @@ depends-member:
 - !private ["Sm", "defaultInlineRowHideOptions"]
 - !private ["Sm", "defaultKeyboardReturnType"]
 - !private ["Sm", "defaultNavigationOptions"]
-- !private ["Sm", "delegate"]
+- ["Sm", "delegate"]
 - !private ["Sm", "filter"]
 - !private ["Sm", "first"]
 - !private ["Sm", "footer"]
 - !private ["Sm", "forEach"]
 - !private ["Sm", "header"]
-- !private ["Sm", "init"]
+- ["Sm", "init"]
 - !private ["Sm", "inlineRowHideOptions"]
 - !private ["Sm", "insert"]
 - !private ["Sm", "isEmpty"]
@@ -3083,7 +3085,7 @@ depends-member:
 - !private ["ST", "defaultInlineRowHideOptions"]
 - !private ["ST", "defaultKeyboardReturnType"]
 - !private ["ST", "defaultNavigationOptions"]
-- !private ["ST", "delegate"]
+- ["ST", "delegate"]
 - !private ["ST", "filter"]
 - !private ["ST", "first"]
 - !private ["ST", "footer"]
@@ -3325,7 +3327,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "CellStyle"]
 - !private ["So21UIAppearanceContainerP", "DispatchQueue"]
 - ["So21UIAppearanceContainerP", "EditingStyle"]
-- !private ["So21UIAppearanceContainerP", "Form"]
+- ["So21UIAppearanceContainerP", "Form"]
 - !private ["So21UIAppearanceContainerP", "FormViewController"]
 - !private ["So21UIAppearanceContainerP", "IndexPath"]
 - !private ["So21UIAppearanceContainerP", "NavigationAccessoryView"]
@@ -3469,7 +3471,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "BaseRow"]
 - !private ["So18UIContentContainerP", "CGRect"]
 - !private ["So18UIContentContainerP", "DispatchQueue"]
-- !private ["So18UIContentContainerP", "Form"]
+- ["So18UIContentContainerP", "Form"]
 - !private ["So18UIContentContainerP", "FormViewController"]
 - !private ["So18UIContentContainerP", "IndexPath"]
 - !private ["So18UIContentContainerP", "NavigationAccessoryView"]
@@ -3726,7 +3728,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "CellStyle"]
 - !private ["So18UIFocusEnvironmentP", "DispatchQueue"]
 - ["So18UIFocusEnvironmentP", "EditingStyle"]
-- !private ["So18UIFocusEnvironmentP", "Form"]
+- ["So18UIFocusEnvironmentP", "Form"]
 - !private ["So18UIFocusEnvironmentP", "FormViewController"]
 - !private ["So18UIFocusEnvironmentP", "IndexPath"]
 - !private ["So18UIFocusEnvironmentP", "NavigationAccessoryView"]
@@ -4050,7 +4052,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "CellStyle"]
 - !private ["So30UIPasteConfigurationSupportingP", "DispatchQueue"]
 - ["So30UIPasteConfigurationSupportingP", "EditingStyle"]
-- !private ["So30UIPasteConfigurationSupportingP", "Form"]
+- ["So30UIPasteConfigurationSupportingP", "Form"]
 - !private ["So30UIPasteConfigurationSupportingP", "FormViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "IndexPath"]
 - !private ["So30UIPasteConfigurationSupportingP", "NavigationAccessoryView"]
@@ -4387,7 +4389,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "CellStyle"]
 - !private ["So30UIResponderStandardEditActionsP", "DispatchQueue"]
 - ["So30UIResponderStandardEditActionsP", "EditingStyle"]
-- !private ["So30UIResponderStandardEditActionsP", "Form"]
+- ["So30UIResponderStandardEditActionsP", "Form"]
 - !private ["So30UIResponderStandardEditActionsP", "FormViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "IndexPath"]
 - !private ["So30UIResponderStandardEditActionsP", "NavigationAccessoryView"]
@@ -4576,7 +4578,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "BaseRow"]
 - !private ["So20UIScrollViewDelegateP", "CGRect"]
 - !private ["So20UIScrollViewDelegateP", "DispatchQueue"]
-- !private ["So20UIScrollViewDelegateP", "Form"]
+- ["So20UIScrollViewDelegateP", "Form"]
 - !private ["So20UIScrollViewDelegateP", "FormViewController"]
 - !private ["So20UIScrollViewDelegateP", "IndexPath"]
 - !private ["So20UIScrollViewDelegateP", "NavigationAccessoryView"]
@@ -4695,7 +4697,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "BaseRow"]
 - !private ["So16UIStateRestoringP", "CGRect"]
 - !private ["So16UIStateRestoringP", "DispatchQueue"]
-- !private ["So16UIStateRestoringP", "Form"]
+- ["So16UIStateRestoringP", "Form"]
 - !private ["So16UIStateRestoringP", "FormViewController"]
 - !private ["So16UIStateRestoringP", "IndexPath"]
 - !private ["So16UIStateRestoringP", "NavigationAccessoryView"]
@@ -4838,7 +4840,7 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "BaseRow"]
 - !private ["So21UITableViewDataSourceP", "CGRect"]
 - !private ["So21UITableViewDataSourceP", "DispatchQueue"]
-- !private ["So21UITableViewDataSourceP", "Form"]
+- ["So21UITableViewDataSourceP", "Form"]
 - !private ["So21UITableViewDataSourceP", "FormViewController"]
 - !private ["So21UITableViewDataSourceP", "IndexPath"]
 - !private ["So21UITableViewDataSourceP", "NavigationAccessoryView"]
@@ -4918,7 +4920,7 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "BaseRow"]
 - !private ["So19UITableViewDelegateP", "CGRect"]
 - !private ["So19UITableViewDelegateP", "DispatchQueue"]
-- !private ["So19UITableViewDelegateP", "Form"]
+- ["So19UITableViewDelegateP", "Form"]
 - !private ["So19UITableViewDelegateP", "FormViewController"]
 - !private ["So19UITableViewDelegateP", "IndexPath"]
 - !private ["So19UITableViewDelegateP", "NavigationAccessoryView"]
@@ -5009,7 +5011,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "CellStyle"]
 - !private ["So18UITraitEnvironmentP", "DispatchQueue"]
 - ["So18UITraitEnvironmentP", "EditingStyle"]
-- !private ["So18UITraitEnvironmentP", "Form"]
+- ["So18UITraitEnvironmentP", "Form"]
 - !private ["So18UITraitEnvironmentP", "FormViewController"]
 - !private ["So18UITraitEnvironmentP", "IndexPath"]
 - !private ["So18UITraitEnvironmentP", "NavigationAccessoryView"]
@@ -5155,7 +5157,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "CellStyle"]
 - !private ["So23UIUserActivityRestoringP", "DispatchQueue"]
 - ["So23UIUserActivityRestoringP", "EditingStyle"]
-- !private ["So23UIUserActivityRestoringP", "Form"]
+- ["So23UIUserActivityRestoringP", "Form"]
 - !private ["So23UIUserActivityRestoringP", "FormViewController"]
 - !private ["So23UIUserActivityRestoringP", "IndexPath"]
 - !private ["So23UIUserActivityRestoringP", "NavigationAccessoryView"]
@@ -5529,7 +5531,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "CellStyle"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "EditingStyle"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "Form"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Form"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "FormViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "IndexPath"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NavigationAccessoryView"]
@@ -5846,7 +5848,7 @@ depends-nominal:
 - !private "s23ExpressibleByNilLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
-- !private "6Eureka4FormC"
+- "6Eureka4FormC"
 - "6Eureka12FormDelegateP"
 - "6Eureka18FormViewControllerC"
 - "6Eureka26FormViewControllerProtocolP"
@@ -5863,7 +5865,7 @@ depends-nominal:
 - !private "s20LazySequenceProtocolP"
 - !private "6Eureka18MultivaluedOptionsV"
 - !private "6Eureka18MultivaluedSectionC"
-- !private "SM"
+- "SM"
 - !private "10Foundation19MutableDataProtocolP"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
@@ -5884,7 +5886,7 @@ depends-nominal:
 - "6Eureka16PresentationModeO"
 - !private "So13NSProcessInfoC"
 - !private "Sk"
-- !private "Sm"
+- "Sm"
 - "SY"
 - !private "10Foundation20ReferenceConvertibleP"
 - !private "So23UITableViewRowAnimationV"

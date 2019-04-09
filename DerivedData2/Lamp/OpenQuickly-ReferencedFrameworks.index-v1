@@ -3,12 +3,15 @@
 <plist version="1.0">
 <array>
 	<string>MapKit</string>
+	<string>Protobuf</string>
+	<string>FirebaseAnalyticsInterop</string>
 	<string>FirebaseCore</string>
 	<string>Bolts</string>
 	<string>libkern</string>
 	<string>WebKit</string>
 	<string>FirebaseStorage</string>
 	<string>FirebaseInAppMessaging</string>
+	<string>CoreLocation</string>
 	<string>GameKit</string>
 	<string>FirebaseDatabase</string>
 	<string>StoreKit</string>
@@ -18,50 +21,59 @@
 	<string>FirebaseMLVisionTextModel</string>
 	<string>SafariServices</string>
 	<string>FirebaseMLModelInterpreter</string>
+	<string>mach</string>
 	<string>FirebaseMessaging</string>
+	<string>AVFoundation</string>
 	<string>GoogleMobileAds</string>
-	<string>MobileCoreServices</string>
 	<string>WatchKit</string>
+	<string>Starscream</string>
 	<string>FirebaseInstanceID</string>
 	<string>FirebaseMLVisionFaceModel</string>
-	<string>FirebaseMLNaturalLanguage</string>
+	<string>CoreText</string>
 	<string>FirebaseAuthInterop</string>
 	<string>FirebaseAuth</string>
-	<string>FBSDKLoginKit</string>
+	<string>FirebaseMLNaturalLanguage</string>
 	<string>FirebaseMLVisionLabelModel</string>
-	<string>FirebaseInvites</string>
+	<string>FBSDKLoginKit</string>
 	<string>FBSDKCoreKit</string>
-	<string>CoreText</string>
+	<string>FirebaseInvites</string>
 	<string>AdSupport</string>
+	<string>MobileCoreServices</string>
+	<string>CoreFoundation</string>
 	<string>FirebasePerformance</string>
 	<string>Crashlytics</string>
 	<string>Accounts</string>
 	<string>CoreData</string>
 	<string>netinet</string>
+	<string>FirebaseMLNLSmartReply</string>
 	<string>CommonCrypto</string>
 	<string>GoogleUtilities</string>
 	<string>FirebaseRemoteConfig</string>
 	<string>unicode</string>
 	<string>FirebaseMLVision</string>
 	<string>FirebaseCrash</string>
-	<string>GTMSessionFetcher</string>
 	<string>FirebaseMLNLLanguageID</string>
 	<string>QuartzCore</string>
+	<string>GTMSessionFetcher</string>
 	<string>SystemConfiguration</string>
 	<string>FirebaseAnalytics</string>
 	<string>AudioToolbox</string>
 	<string>Security</string>
 	<string>CoreGraphics</string>
 	<string>objc</string>
+	<string>SSCommonCrypto</string>
 	<string>FirebaseDynamicLinks</string>
+	<string>MessageInputBar</string>
 	<string>RangeUISlider</string>
+	<string>UserNotifications</string>
 	<string>UIKit</string>
 	<string>Fabric</string>
-	<string>CoreTelephony</string>
 	<string>FirebaseMLVisionBarcodeModel</string>
 	<string>Foundation</string>
+	<string>CoreTelephony</string>
 	<string>Eureka</string>
 	<string>sys</string>
+	<string>SSCZLib</string>
 	<string>FirebaseFirestore</string>
 </array>
 </plist>
