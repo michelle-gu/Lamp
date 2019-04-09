@@ -8,14 +8,37 @@
 
 import UIKit
 import Koloda
+import Firebase
 
 class MyKolodaViewController: UIViewController {
-
+    
+    var images: [Profile] = []
+    var ref: DatabaseReference!
+    
+    @IBOutlet weak var kolodaView: KolodaView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        ref = Database.database().reference(withPath: "user-profiles")
+        
+        kolodaView.dataSource = self
+        kolodaView.delegate = self
+        
+        getData()
+    }
+    
+    func getData() {
+        
+        ref.queryOrderedByKey().observe(.value) { snapshot in
+            
+            self.images = snapshot.children.compactMap { child in
+                guard let snap = child as? DataSnapshot else { return nil }
+                return Profile(snapshot: snap)
+            }
+            
+            self.kolodaView.reloadData()
+        }
     }
     
 
@@ -29,4 +52,37 @@ class MyKolodaViewController: UIViewController {
     }
     */
 
+}
+
+extension MyKolodaViewController: KolodaViewDelegate {
+    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
+        koloda.reloadData()
+    }
+    
+    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
+        //so this opens the profile 
+        
+        UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
+        let user = Auth.auth().currentUser?.uid
+        let profile = ref.child(user!)
+    }
+}
+
+extension MyKolodaViewController: KolodaViewDataSource {
+    
+    func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
+        return images.count
+    }
+    
+    func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
+        return .slow
+    }
+    
+    func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
+        return UIImageView(image: #imageLiteral(resourceName: "guy-5"))
+    }
+    
+    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
+        return nil //Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)![0] as? OverlayView
+    }
 }
