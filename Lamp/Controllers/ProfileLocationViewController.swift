@@ -21,6 +21,8 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     // MARK: Properties
     let profilesRef = Database.database().reference(withPath: "user-profiles")
     let dbRef = Database.database()
+    let citiesRef = Database.database().reference(withPath: "locations")
+    var cities:[String] = []
     
     // MARK: Outlets
     @IBOutlet weak var profilePictureView: UIImageView!
@@ -40,6 +42,37 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         uniPicker.delegate = self
         uniTextField.inputView = uniPicker
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getLocationText()
+    }
+    
+    // update the location text to show user's preferences
+    func getLocationText() {
+        var locationText = ""
+        getCities() { (citiesArray) in
+            self.cities = citiesArray
+            locationText = self.cities.joined(separator: ", ")
+            
+            self.futureLocTextField.text = locationText
+        }
+    }
+    
+    // populate the cities array with cities currently in Firebase
+    func getCities(completion: @escaping ([String]) -> Void) {
+        citiesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let citiesDict = snapshot.value as? [String : AnyObject] else {
+                return completion([])
+            }
+            
+            var citiesArray: [String] = []
+            for city in citiesDict {
+                citiesArray.append(city.key)
+            }
+            completion(citiesArray)
+        })
     }
     
     // for uni picker delegate
