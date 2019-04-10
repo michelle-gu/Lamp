@@ -16,13 +16,13 @@ class UniversitiesFilterViewController: UIViewController, UITableViewDelegate, U
     
     // MARK: Variables
     var selectAllSelected: Bool = false
+    var numUniversities = 1
+    var universitiesArray = [" "]
     
     // MARK: Constants
     let profilesRef = Database.database().reference(withPath: "user-profiles")
     let universitiesRef = Database.database().reference(withPath: "universities")
     let universityCellIdentifier = "universityCellIdentifier"
-    let numUniversities = 2
-    let universitiesArray = ["University of Texas at Austin", "Another School"]
     
     // MARK: TableView stubs
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,12 +82,36 @@ class UniversitiesFilterViewController: UIViewController, UITableViewDelegate, U
         }
     }
     
+    // MARK: Function
+    static func getUniArray(completion: @escaping ([String]) -> Void) {
+        let uniRef = Database.database().reference(withPath: "universities")
+
+        uniRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let uniDict = snapshot.value as? [String : AnyObject] else {
+                return completion([])
+            }
+            var uniArray: [String] = []
+            for uni in uniDict {
+                uniArray.append(uni.key)
+            }
+            completion(uniArray)
+        })
+    }
+
+    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        UniversitiesFilterViewController.getUniArray() { (uniArray) in
+            print(uniArray)
+            self.universitiesArray = uniArray
+            self.numUniversities = uniArray.count
+            self.tableView.reloadData()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -105,19 +129,27 @@ class UniversitiesFilterViewController: UIViewController, UITableViewDelegate, U
             }
         }
         
+        // Update discovery settings data
+        // Update universitites data
+
         for uni in universitiesArray {
             let values: [String: Bool]
             if universitiesSelected.contains(uni) {
                 values = [
                     uni: true
                 ]
+                universitiesRef.child(uni).child(user!).setValue(true)
             } else {
                 values = [
                     uni: false
                 ]
+                universitiesRef.child(uni).child(user!).setValue(false)
             }
             discoverySettingsRef.child("universities").updateChildValues(values)
+            
         }
+        
+        
     }
     
 }
