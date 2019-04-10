@@ -63,6 +63,7 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 self.futureCity2.isHidden = false
                 self.futureCity3.isHidden = false
             }
+            
         }
         
         centerMapOnLocation(location: initialLocation)
