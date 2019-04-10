@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,8 +26,10 @@
 		95132AC6224B4803006C1A84 /* ToggleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95132AC5224B4802006C1A84 /* ToggleTableViewCell.swift */; };
 		95412745224B0254003343D4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95412744224B0253003343D4 /* SettingsViewController.swift */; };
 		95412749224B12C9003343D4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95412748224B12C9003343D4 /* AccountViewController.swift */; };
-		9541274D224B1EC8003343D4 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */; };
-		95412751224B2F8F003343D4 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95412750224B2F8E003343D4 /* NotificationsViewController.swift */; };
+		B61FE834225C6637002BDDD7 /* DiscoveryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61FE833225C6637002BDDD7 /* DiscoveryTableViewController.swift */; };
+		B61FE836225C6DC4002BDDD7 /* GenderFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61FE835225C6DC4002BDDD7 /* GenderFilterViewController.swift */; };
+		B61FE838225C6DF2002BDDD7 /* FutureLocationFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61FE837225C6DF2002BDDD7 /* FutureLocationFilterViewController.swift */; };
+		B62C34E82255588B00C5348F /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C34E72255588B00C5348F /* ChangePasswordViewController.swift */; };
 		B640FEB5224C066700E8FBFF /* ContactInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */; };
 		B640FEB6224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */; };
 		B640FEB8224C4B1A00E8FBFF /* BioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB7224C4B1A00E8FBFF /* BioTableViewCell.swift */; };
@@ -37,6 +39,9 @@
 		B6B897152233037300164801 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B897142233037300164801 /* SignUpViewController.swift */; };
 		B6B89717223303E100164801 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B89716223303E100164801 /* LogInViewController.swift */; };
 		B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B8971A22331FCA00164801 /* AppDelegate.swift */; };
+		B6C58FC5225D368A00BA2B94 /* UniversitiesFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C58FC4225D368A00BA2B94 /* UniversitiesFilterViewController.swift */; };
+		B6DFE9CA2257C92D0086BCE6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DFE9C92257C92D0086BCE6 /* Settings.swift */; };
+		B6DFE9CC225884150086BCE6 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DFE9CB225884150086BCE6 /* NotificationsTableViewController.swift */; };
 		B6F5005922307A3500FD1433 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F5005822307A3500FD1433 /* ViewController.swift */; };
 		B6F5005C22307A3500FD1433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F5005A22307A3500FD1433 /* Main.storyboard */; };
 		B6F5005E22307A3600FD1433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F5005D22307A3600FD1433 /* Assets.xcassets */; };
@@ -62,8 +67,10 @@
 		95132AC5224B4802006C1A84 /* ToggleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleTableViewCell.swift; sourceTree = "<group>"; };
 		95412744224B0253003343D4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		95412748224B12C9003343D4 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
-		95412750224B2F8E003343D4 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		B61FE833225C6637002BDDD7 /* DiscoveryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryTableViewController.swift; sourceTree = "<group>"; };
+		B61FE835225C6DC4002BDDD7 /* GenderFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderFilterViewController.swift; sourceTree = "<group>"; };
+		B61FE837225C6DF2002BDDD7 /* FutureLocationFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureLocationFilterViewController.swift; sourceTree = "<group>"; };
+		B62C34E72255588B00C5348F /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewCell.swift; sourceTree = "<group>"; };
 		B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifestylePreferencesTableViewCell.swift; sourceTree = "<group>"; };
 		B640FEB7224C4B1A00E8FBFF /* BioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioTableViewCell.swift; sourceTree = "<group>"; };
@@ -74,6 +81,9 @@
 		B6B89716223303E100164801 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		B6B897182233095300164801 /* Lamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lamp.entitlements; sourceTree = "<group>"; };
 		B6B8971A22331FCA00164801 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B6C58FC4225D368A00BA2B94 /* UniversitiesFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversitiesFilterViewController.swift; sourceTree = "<group>"; };
+		B6DFE9C92257C92D0086BCE6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		B6DFE9CB225884150086BCE6 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
 		B6F5005322307A3500FD1433 /* Lamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F5005822307A3500FD1433 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6F5005B22307A3500FD1433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,26 +139,38 @@
 			path = "Table View Cells";
 			sourceTree = "<group>";
 		};
+		B62C34E9225558A000C5348F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				95412744224B0253003343D4 /* SettingsViewController.swift */,
+				95412748224B12C9003343D4 /* AccountViewController.swift */,
+				B62C34E72255588B00C5348F /* ChangePasswordViewController.swift */,
+				B6DFE9CB225884150086BCE6 /* NotificationsTableViewController.swift */,
+				B61FE833225C6637002BDDD7 /* DiscoveryTableViewController.swift */,
+				B61FE835225C6DC4002BDDD7 /* GenderFilterViewController.swift */,
+				B61FE837225C6DF2002BDDD7 /* FutureLocationFilterViewController.swift */,
+				B6C58FC4225D368A00BA2B94 /* UniversitiesFilterViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		B6B897102233021D00164801 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B62C34E9225558A000C5348F /* Settings */,
 				B6B897142233037300164801 /* SignUpViewController.swift */,
+				571B4270224BD66300F9F42B /* ProfileViewController.swift */,
+				07B43E6922348C7600BB8548 /* ProfileCreationViewController.swift */,
 				B6B89716223303E100164801 /* LogInViewController.swift */,
-				95412744224B0253003343D4 /* SettingsViewController.swift */,
 				07B43E6522348C0900BB8548 /* EmailConfirmationViewController.swift */,
 				07B43E6722348C4000BB8548 /* SocialMediaConnectViewController.swift */,
-				07B43E6922348C7600BB8548 /* ProfileCreationViewController.swift */,
 				07B43E6B22348C9900BB8548 /* ProfileLocationViewController.swift */,
 				07B43E6D22348CCC00BB8548 /* ProfileMapViewController.swift */,
 				571B426E224B401E00F9F42B /* ProfileEditViewController.swift */,
-				571B4270224BD66300F9F42B /* ProfileViewController.swift */,
 				07B43E6F22348D0900BB8548 /* CardsViewController.swift */,
 				07131721224554F3000CDD33 /* MatchMessageViewController.swift */,
 				07AB869F224921D9001EE449 /* MessagesViewController.swift */,
 				07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */,
-				95412748224B12C9003343D4 /* AccountViewController.swift */,
-				9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */,
-				95412750224B2F8E003343D4 /* NotificationsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -159,6 +181,7 @@
 				B6F5005822307A3500FD1433 /* ViewController.swift */,
 				B6B897122233025600164801 /* User.swift */,
 				571B426A224AC8EF00F9F42B /* Profile.swift */,
+				B6DFE9C92257C92D0086BCE6 /* Settings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -287,26 +310,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lamp/Pods-Lamp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/RangeUISlider/RangeUISlider.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Lamp/Pods-Lamp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RangeUISlider.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Lamp/Pods-Lamp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -342,26 +350,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95412751224B2F8F003343D4 /* NotificationsViewController.swift in Sources */,
 				571B426F224B401E00F9F42B /* ProfileEditViewController.swift in Sources */,
+				B6DFE9CC225884150086BCE6 /* NotificationsTableViewController.swift in Sources */,
 				B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */,
-				9541274D224B1EC8003343D4 /* DiscoveryViewController.swift in Sources */,
+				B62C34E82255588B00C5348F /* ChangePasswordViewController.swift in Sources */,
 				B640FEB6224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift in Sources */,
+				B61FE838225C6DF2002BDDD7 /* FutureLocationFilterViewController.swift in Sources */,
 				B6F5005922307A3500FD1433 /* ViewController.swift in Sources */,
 				07AB86A0224921D9001EE449 /* MessagesViewController.swift in Sources */,
 				B6B897152233037300164801 /* SignUpViewController.swift in Sources */,
 				95132AC6224B4803006C1A84 /* ToggleTableViewCell.swift in Sources */,
 				571B426B224AC8EF00F9F42B /* Profile.swift in Sources */,
 				07B43E6A22348C7600BB8548 /* ProfileCreationViewController.swift in Sources */,
+				B61FE834225C6637002BDDD7 /* DiscoveryTableViewController.swift in Sources */,
 				571B4271224BD66300F9F42B /* ProfileViewController.swift in Sources */,
 				B6B89717223303E100164801 /* LogInViewController.swift in Sources */,
 				95132AC2224B47D9006C1A84 /* RangeSliderTableViewCell.swift in Sources */,
 				95412745224B0254003343D4 /* SettingsViewController.swift in Sources */,
+				B61FE836225C6DC4002BDDD7 /* GenderFilterViewController.swift in Sources */,
 				95412749224B12C9003343D4 /* AccountViewController.swift in Sources */,
 				07B43E6E22348CCC00BB8548 /* ProfileMapViewController.swift in Sources */,
 				B640FEB5224C066700E8FBFF /* ContactInfoTableViewCell.swift in Sources */,
+				B6C58FC5225D368A00BA2B94 /* UniversitiesFilterViewController.swift in Sources */,
 				07B43E6622348C0900BB8548 /* EmailConfirmationViewController.swift in Sources */,
 				07B43E7022348D0900BB8548 /* CardsViewController.swift in Sources */,
+				B6DFE9CA2257C92D0086BCE6 /* Settings.swift in Sources */,
 				95132AC4224B47FB006C1A84 /* SubtitleTableViewCell.swift in Sources */,
 				95132AC0224B4469006C1A84 /* SliderTableViewCell.swift in Sources */,
 				07131722224554F3000CDD33 /* MatchMessageViewController.swift in Sources */,

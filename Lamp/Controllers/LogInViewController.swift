@@ -24,14 +24,21 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     // MARK: Actions
+    @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
+        print("Unwind segue to login triggered!")
+    }
+
+    
     @IBAction func logInDidTouch(_ sender: Any) {
         // Fetch from Firebase and sign in
+        print("\nTouched login\n")
         guard
             let email = emailField.text,
             let password = passwordField.text,
             email.count > 0,
             password.count > 0
             else {
+                print("\nError signing with fields!\n")
                 let alert = UIAlertController(
                     title: "Sign In Failed",
                     message: "Please fill in all fields.",
@@ -44,6 +51,7 @@ class LogInViewController: UIViewController {
         
         Auth.auth().signIn(withEmail: email, password: password) { user, error in
             if let error = error, user == nil {
+                print("\nError signing in\n")
                 let alert = UIAlertController(
                     title: "Sign In Failed",
                     message: error.localizedDescription,
@@ -51,6 +59,10 @@ class LogInViewController: UIViewController {
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alert, animated: true, completion: nil)
+                return
+            } else {
+                print("\nSuccess! Using social media segue\n")
+                self.performSegue(withIdentifier: "showSocialMediaScreen", sender: nil)
             }
         }
     }
@@ -74,9 +86,8 @@ class LogInViewController: UIViewController {
     
     // MARK: - Navigation
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == showSignUpScreen, let destination = segue.destination as? UIViewController {
-//            destination.email = emailField.text
+//        if segue.identifier == showSocialMediaScreen {
 //        }
 //    }
-
+    
 }

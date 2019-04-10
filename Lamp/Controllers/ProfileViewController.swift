@@ -43,7 +43,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = Auth.auth().currentUser?.uid
         let profile = ref.child(user!)
-        
+                
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: bioTableViewCellIdentifier, for: indexPath) as! BioTableViewCell
             // Set data
@@ -108,8 +108,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.occupationLabel.text = profileDict["occupation"] as? String
             self.futureLocationLabel.text = profileDict["futureLoc"] as? String
             self.uniLabel.text = profileDict["uni"] as? String
-            let nameAge = profileDict["firstName"] as? String
-            self.nameAgeLabel.text = "\(nameAge!), \(self.getAgeStr(birthday: (profileDict["birthday"] as? String)!))"
+            if let nameAge = profileDict["firstName"] as? String,
+                let birthday = profileDict["birthday"] as? String {
+                self.nameAgeLabel.text = "\(nameAge), \(self.getAgeStr(birthday: birthday))"
+            }
         })
     }
     

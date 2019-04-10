@@ -14,8 +14,7 @@ class SignUpViewController: UIViewController {
     // MARK: Constants
     let sendEmailConfirm = "sendEmailConfirm"
     let showLoginScreen = "showLoginScreen"
-
-    // MARK: Properties
+//    let ref = Database.database().reference(withPath: "user-profiles")
 
     // MARK: Outlets
     @IBOutlet weak var emailField: UITextField!
@@ -63,6 +62,12 @@ class SignUpViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         }
+        
+        // Add default user info to Firebase
+//        let user = Auth.auth().currentUser?.uid
+//        let settings = Settings()
+//        let userRef = ref.child(user!)
+//        userRef.setValue(settings.toAnyObject())
     }
     
     // MARK: UIViewController Lifecycle
@@ -78,8 +83,5 @@ class SignUpViewController: UIViewController {
             }
         }
     }
-    
-    // MARK: - Navigation
-    
 
 }
