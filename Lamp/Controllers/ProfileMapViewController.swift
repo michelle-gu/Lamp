@@ -146,16 +146,14 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         for n in 1...size {
             
         } */
-        if (size == 1) {
-            futureCity1.setTitle(cities[0], for: .normal)
+        if (futureCity1.isHidden == true) {
+            futureCity1.setTitle(currentCity, for: .normal)
             futureCity1.isHidden = false
-        }
-        if (size == 2) {
-            futureCity2.setTitle(cities[1], for: .normal)
+        } else if (futureCity2.isHidden == true) {
+            futureCity2.setTitle(currentCity, for: .normal)
             futureCity2.isHidden = false
-        }
-        if (size == 3) {
-            futureCity3.setTitle(cities[2], for: .normal)
+        } else if (futureCity3.isHidden == true) {
+            futureCity3.setTitle(currentCity, for: .normal)
             futureCity3.isHidden = false
         }
     }
