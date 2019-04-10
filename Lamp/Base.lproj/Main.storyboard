@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S9Y-iI-4LZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-8v-AgN">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -50,9 +50,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signUpDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKN-q2-yok"/>
-                                    <segue destination="ceN-V3-Lv2" kind="popoverPresentation" identifier="sendEmailConfirm" popoverAnchorView="qfH-eP-3bd" id="dov-Yf-zTS">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EDU Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sd-BO-lda">
@@ -112,6 +109,7 @@
                         <outlet property="logInButton" destination="Dkw-l1-Q9N" id="KIZ-7A-kcb"/>
                         <outlet property="passwordField" destination="FE2-NE-z1Z" id="bkW-MA-dLe"/>
                         <outlet property="signUpButton" destination="qfH-eP-3bd" id="VyW-t2-AiS"/>
+                        <segue destination="ceN-V3-Lv2" kind="presentation" identifier="sendEmailConfirm" id="kVi-I6-Fia"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -187,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JqO-m5-XCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2663.1999999999998" y="131.52709359605913"/>
+            <point key="canvasLocation" x="2262" y="132"/>
         </scene>
         <!--Social Media Connect View Controller-->
         <scene sceneID="MmH-8R-oNS">
@@ -1395,11 +1393,12 @@
                         <outlet property="passwordField" destination="gM6-NL-DXr" id="pvx-Rn-6tl"/>
                         <outlet property="signUpButton" destination="ewY-O2-AD1" id="x2P-RY-eMc"/>
                         <segue destination="flf-ug-c2v" kind="show" identifier="showSocialMediaScreen" id="A6C-LX-meC"/>
+                        <segue destination="Skw-1a-Og8" kind="show" identifier="showProfileSegueIdentifier" id="y47-ET-fPn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGm-Vn-xJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="864"/>
+            <point key="canvasLocation" x="1751" y="980"/>
         </scene>
         <!--Profile-->
         <scene sceneID="ZWK-wf-CVj">
@@ -1701,14 +1700,14 @@
                                 <sections/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jordan, 23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfI-qc-pRQ">
-                                <rect key="frame" x="16" y="366" width="181" height="22"/>
+                                <rect key="frame" x="16" y="366" width="145" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UT Austin" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSM-3i-lDj">
-                                <rect key="frame" x="293" y="367" width="66" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="University of Texas at Austin" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSM-3i-lDj">
+                                <rect key="frame" x="210" y="367" width="149" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -1819,11 +1818,11 @@
                                     <action selector="saveButtonPressed:" destination="VG0-HI-Q7Y" eventType="touchUpInside" id="Ys3-mK-D2M"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Bio" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q81-51-e6S">
-                                <rect key="frame" x="35" y="405" width="306" height="61"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q81-51-e6S">
+                                <rect key="frame" x="67" y="405" width="274" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
@@ -1889,6 +1888,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xeq-AL-7Vu">
+                                <rect key="frame" x="40" y="425" width="25" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KBC-61-zr0"/>
@@ -1992,7 +1998,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMx-wF-9Ah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="689" y="864"/>
+            <point key="canvasLocation" x="689" y="980"/>
         </scene>
         <!--lamp-->
         <scene sceneID="eza-3b-wLa">
@@ -2339,7 +2345,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sV0-RY-aVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3870" y="950"/>
+            <point key="canvasLocation" x="3786" y="980"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1UR-Pt-9iP">
@@ -2425,7 +2431,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="PA3-YF-Hx5"/>
         <segue reference="BfG-uu-C7Q"/>
-        <segue reference="SP5-0k-tVq"/>
+        <segue reference="5YV-eX-J77"/>
         <segue reference="9WS-Lc-l6O"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.60796302560000004" green="0.69684332609999999" blue="0.94992285970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

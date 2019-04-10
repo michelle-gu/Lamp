@@ -42,7 +42,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = Auth.auth().currentUser?.uid
-        let profile = ref.child(user!)
+        let profile = ref.child(user!).child("profile")
                 
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: bioTableViewCellIdentifier, for: indexPath) as! BioTableViewCell
@@ -102,7 +102,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         ref = Database.database().reference(withPath: "user-profiles")
         let user = Auth.auth().currentUser?.uid
-        let profile = ref.child(user!)
+        let profile = ref.child(user!).child("profile")
         profile.observe(.value, with: { (snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
             self.occupationLabel.text = profileDict["occupation"] as? String
