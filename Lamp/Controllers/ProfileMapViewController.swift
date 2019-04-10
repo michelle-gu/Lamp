@@ -141,9 +141,9 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     // Add to list of cities
     // super duper hard coded
     @IBAction func addCityToListButtonPressed(_ sender: Any) {
+        /*
         cities.append(currentCity)
         let size = cities.count
-        /*
         for n in 1...size {
             
         } */
