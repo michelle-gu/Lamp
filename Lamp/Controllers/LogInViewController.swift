@@ -14,6 +14,9 @@ class LogInViewController: UIViewController {
     // MARK: Constants
     let showSignUpScreen = "showSignUpScreen"
     let showSocialMediaScreen = "showSocialMediaScreen"
+    let showProfileSegueIdentifier = "showProfileSegueIdentifier"
+    
+    let ref = Database.database().reference(withPath: "user-profiles")
     
     // MARK: Properties
     
@@ -60,7 +63,17 @@ class LogInViewController: UIViewController {
                 return
             } else {
                 print("\nSuccess! Using social media segue\n")
-                self.performSegue(withIdentifier: "showSocialMediaScreen", sender: nil)
+                if let userID = user?.user.uid {
+                    self.ref.child(userID).child("profile").observe(.value, with: { (snapshot) in
+                        let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+                        if profileDict.isEmpty {
+                            self.performSegue(withIdentifier: self.showSocialMediaScreen, sender: nil)
+                        } else {
+                            self.performSegue(withIdentifier: self.showProfileSegueIdentifier, sender: nil)
+                        }
+                    })
+                }
+//                self.performSegue(withIdentifier: self.showSocialMediaScreen, sender: nil)
             }
         }
     }
@@ -74,10 +87,22 @@ class LogInViewController: UIViewController {
         // Checks if user is already logged in
         Auth.auth().addStateDidChangeListener() { auth, user in
             if user != nil {
-                self.performSegue(withIdentifier: "showSocialMediaScreen",
-                                  sender: nil)
                 self.emailField.text = nil
                 self.passwordField.text = nil
+                
+                print ("Already logged in!!!!")
+                if let userID = user?.uid {
+                    print ("UserID exists")
+                    self.ref.child(userID).child("profile").observe(.value, with: { (snapshot) in
+                        let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+                        if profileDict.isEmpty {
+                            self.performSegue(withIdentifier: self.showSocialMediaScreen, sender: nil)
+                        } else {
+                            self.performSegue(withIdentifier: self.showProfileSegueIdentifier, sender: nil)
+                        }
+                    })
+                }
+                
             }
         }
     }

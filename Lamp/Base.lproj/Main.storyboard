@@ -1393,11 +1393,12 @@
                         <outlet property="passwordField" destination="gM6-NL-DXr" id="pvx-Rn-6tl"/>
                         <outlet property="signUpButton" destination="ewY-O2-AD1" id="x2P-RY-eMc"/>
                         <segue destination="flf-ug-c2v" kind="show" identifier="showSocialMediaScreen" id="A6C-LX-meC"/>
+                        <segue destination="Skw-1a-Og8" kind="show" identifier="showProfileSegueIdentifier" id="y47-ET-fPn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGm-Vn-xJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="1037"/>
+            <point key="canvasLocation" x="1751" y="980"/>
         </scene>
         <!--Profile-->
         <scene sceneID="ZWK-wf-CVj">
@@ -1990,7 +1991,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMx-wF-9Ah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="689" y="1037"/>
+            <point key="canvasLocation" x="689" y="980"/>
         </scene>
         <!--lamp-->
         <scene sceneID="eza-3b-wLa">
@@ -2337,7 +2338,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sV0-RY-aVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3870" y="950"/>
+            <point key="canvasLocation" x="3786" y="980"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1UR-Pt-9iP">
@@ -2423,7 +2424,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="PA3-YF-Hx5"/>
         <segue reference="BfG-uu-C7Q"/>
-        <segue reference="5YV-eX-J77"/>
+        <segue reference="y47-ET-fPn"/>
         <segue reference="9WS-Lc-l6O"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.60796302560000004" green="0.69684332609999999" blue="0.94992285970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
