@@ -20,6 +20,7 @@
 		571B426B224AC8EF00F9F42B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B426A224AC8EF00F9F42B /* Profile.swift */; };
 		571B426F224B401E00F9F42B /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B426E224B401E00F9F42B /* ProfileEditViewController.swift */; };
 		571B4271224BD66300F9F42B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B4270224BD66300F9F42B /* ProfileViewController.swift */; };
+		57D701F3225D69060071C59F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D701F2225D69060071C59F /* LocationManager.swift */; };
 		95132AC0224B4469006C1A84 /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95132ABF224B4469006C1A84 /* SliderTableViewCell.swift */; };
 		95132AC2224B47D9006C1A84 /* RangeSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95132AC1224B47D9006C1A84 /* RangeSliderTableViewCell.swift */; };
 		95132AC4224B47FB006C1A84 /* SubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95132AC3224B47FB006C1A84 /* SubtitleTableViewCell.swift */; };
@@ -56,6 +57,7 @@
 		571B426A224AC8EF00F9F42B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		571B426E224B401E00F9F42B /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		571B4270224BD66300F9F42B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		57D701F2225D69060071C59F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		95132ABF224B4469006C1A84 /* SliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
 		95132AC1224B47D9006C1A84 /* RangeSliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderTableViewCell.swift; sourceTree = "<group>"; };
 		95132AC3224B47FB006C1A84 /* SubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleTableViewCell.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				B6F5005822307A3500FD1433 /* ViewController.swift */,
 				B6B897122233025600164801 /* User.swift */,
 				571B426A224AC8EF00F9F42B /* Profile.swift */,
+				57D701F2225D69060071C59F /* LocationManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			files = (
 				95412751224B2F8F003343D4 /* NotificationsViewController.swift in Sources */,
 				571B426F224B401E00F9F42B /* ProfileEditViewController.swift in Sources */,
+				57D701F3225D69060071C59F /* LocationManager.swift in Sources */,
 				B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */,
 				9541274D224B1EC8003343D4 /* DiscoveryViewController.swift in Sources */,
 				B640FEB6224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift in Sources */,

@@ -17,16 +17,25 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     @IBOutlet weak var addCityToList: UIButton!
     @IBOutlet weak var radiusInput: UITextField!
     @IBOutlet weak var radiusOkButton: UIButton!
+    @IBOutlet weak var futureCity1: UIButton!
+    @IBOutlet weak var futureCity2: UIButton!
+    @IBOutlet weak var futureCity3: UIButton!
     
     // MARK: Properties
+    var cities:[String] = []
     let regionRadius: CLLocationDistance = 10000
     let locationManager = CLLocationManager()
+    var location = CLLocation()
+    var currentCity: String = ""
     let searchRadius: CLLocationDistance = 2000
     let initialLocation = CLLocation(latitude: 37.773972, longitude: -122.431297)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        futureCity1.isHidden = true
+        futureCity2.isHidden = true
+        futureCity3.isHidden = true
         
         centerMapOnLocation(location: initialLocation)
         
@@ -105,12 +114,49 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
                 let region = MKCoordinateRegion(center: coordinate, span: span)
                 self.mapView.setRegion(region, animated: true)
+                
+                self.location = CLLocation(latitude: latitude!, longitude: longitude!)
+                
+                // convert coordinates to city name
+                // add city to array of cities
+                self.fetchCityAndCountry(from: self.location) { city, country, error in
+                    guard let city = city, error == nil else { return }
+                    self.currentCity = city
+                }
             }
         }
     }
     
     // Add to list of cities
+    // super duper hard coded
     @IBAction func addCityToListButtonPressed(_ sender: Any) {
+        cities.append(currentCity)
+        let size = cities.count
+        /*
+        for n in 1...size {
+            
+        } */
+        if (size == 1) {
+            futureCity1.setTitle(cities[0], for: .normal)
+            futureCity1.isHidden = false
+        }
+        if (size == 2) {
+            futureCity2.setTitle(cities[1], for: .normal)
+            futureCity2.isHidden = false
+        }
+        if (size == 3) {
+            futureCity3.setTitle(cities[2], for: .normal)
+            futureCity3.isHidden = false
+        }
+    }
+    
+    // Convert a Coordinate into a Placemark
+    func fetchCityAndCountry(from location: CLLocation, completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
+        CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
+            completion(placemarks?.first?.locality,
+                       placemarks?.first?.country,
+                       error)
+        }
     }
     
     func addRadius(location: CLLocation) {
