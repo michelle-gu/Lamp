@@ -464,6 +464,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="city1ButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="3wf-YD-wan"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Locations (Click to Remove)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZb-M6-86T">
                                 <rect key="frame" x="16" y="104" width="228" height="22"/>
@@ -502,6 +505,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="city2ButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="t4E-Sv-gEP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDz-sG-ldj">
                                 <rect key="frame" x="249" y="135" width="110" height="40"/>
@@ -514,6 +520,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="city3ButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="65B-nN-ors"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kS-bJ-mXd">
                                 <rect key="frame" x="329" y="100" width="30" height="30"/>

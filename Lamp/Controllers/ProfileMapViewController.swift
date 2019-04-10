@@ -45,7 +45,7 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         addButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
         
         addCityToList.layer.borderWidth = 1
-        addCityToList.layer.cornerRadius = addButton.bounds.height / 2
+        addCityToList.layer.cornerRadius = addButton.bounds.height / 1.5
         addCityToList.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
         
         /*
@@ -128,6 +128,15 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         }
     }
     
+    // Convert a Coordinate into a Placemark
+    func fetchCityAndCountry(from location: CLLocation, completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
+        CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
+            completion(placemarks?.first?.locality,
+                       placemarks?.first?.country,
+                       error)
+        }
+    }
+    
     // Add to list of cities
     // super duper hard coded
     @IBAction func addCityToListButtonPressed(_ sender: Any) {
@@ -151,12 +160,22 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         }
     }
     
-    // Convert a Coordinate into a Placemark
-    func fetchCityAndCountry(from location: CLLocation, completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
-        CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
-            completion(placemarks?.first?.locality,
-                       placemarks?.first?.country,
-                       error)
+    // Click to Remove City
+    @IBAction func city1ButtonPressed(_ sender: Any) {
+        if (futureCity1.isHidden == false) {
+            futureCity1.isHidden = true
+        }
+    }
+    
+    @IBAction func city2ButtonPressed(_ sender: Any) {
+        if (futureCity2.isHidden == false) {
+            futureCity2.isHidden = true
+        }
+    }
+    
+    @IBAction func city3ButtonPressed(_ sender: Any) {
+        if (futureCity3.isHidden == false) {
+            futureCity3.isHidden = true
         }
     }
     
