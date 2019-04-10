@@ -41,8 +41,8 @@ class GenderFilterViewController: UIViewController, UITableViewDataSource, UITab
                 let genderKeyArray = Array(genderDict.keys).sorted()
                 var genderArray: [String] = []
                 for gender in genderKeyArray {
-                    let genderStr = genderDict[gender]!["title"]
-                    genderArray.append(genderStr as! String)
+//                    let genderStr = genderDict[gender]!["title"]
+                    genderArray.append("")
                 }
                 cell.textLabel?.text = genderArray[indexPath.row - 1]
             })

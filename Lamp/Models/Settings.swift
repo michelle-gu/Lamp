@@ -26,17 +26,17 @@ struct Settings {
     let newMatches: Bool
     
     // Discovery Settings
-    let futureLoc: [String] // Array of location data
+    let futureLocs: [String: Bool] // Array of location data
     let maxDistance: Int
-    let universities: [String] // Array of universities allowed
-    let genders: [String] // Array of genders allowed
+    let universities: [String: Bool] // Array of universities allowed
+    let genders: [String: Bool] // Array of genders allowed
     let ageMin: Int
     let ageMax: Int
     let showProfile: Bool
     
     // MARK: Initializers
     // Initializer with default settings
-    init(key: String = "", fb: Bool = false, google: Bool = false, newMessages: Bool = true, newMatches: Bool = true, futureLoc: [String] = [], maxDistance: Int = 0, universities: [String] = [], genders: [String] = [], ageMin: Int = 0, ageMax: Int = Int.max, showProfile: Bool = true) {
+    init(key: String = "", fb: Bool = false, google: Bool = false, newMessages: Bool = true, newMatches: Bool = true, futureLocs: [String: Bool] = [:], maxDistance: Int = 0, universities: [String: Bool] = [:], genders: [String: Bool] = ["Female": true, "Male": true, "Other": true, "Prefer not to say": true], ageMin: Int = 0, ageMax: Int = Int.max, showProfile: Bool = true) {
         // Initialize Firebase ref/key
         self.ref = nil
         self.key = key
@@ -50,7 +50,7 @@ struct Settings {
         self.newMatches = newMatches
 
         // Initialize Discovery Settings
-        self.futureLoc = futureLoc
+        self.futureLocs = futureLocs
         self.maxDistance = maxDistance
         self.universities = universities
         self.genders = genders
@@ -67,10 +67,10 @@ struct Settings {
             let google = value["google"] as? Bool,
             let newMessages = value["newMessages"] as? Bool,
             let newMatches = value["newMatches"] as? Bool,
-            let futureLoc = value["futureLoc"] as? [String],
+            let futureLocs = value["futureLocs"] as? [String: Bool],
             let maxDistance = value["maxDistance"] as? Int,
-            let universities = value["universities"] as? [String],
-            let genders = value["genders"] as? [String],
+            let universities = value["universities"] as? [String: Bool],
+            let genders = value["genders"] as? [String: Bool],
             let ageMin = value["ageMin"] as? Int,
             let ageMax = value["ageMax"] as? Int,
             let showProfile = value["showProfile"] as? Bool else {
@@ -90,7 +90,7 @@ struct Settings {
         self.newMatches = newMatches
         
         // Initialize Discovery Settings
-        self.futureLoc = futureLoc
+        self.futureLocs = futureLocs
         self.maxDistance = maxDistance
         self.universities = universities
         self.genders = genders
@@ -113,7 +113,7 @@ struct Settings {
                     "newMatches": newMatches
                 ],
                 "discovery": [
-                    "futureLoc": futureLoc,
+                    "futureLocs": futureLocs,
                     "maxDistance": maxDistance,
                     "universities": universities,
                     "genders": genders,

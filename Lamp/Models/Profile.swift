@@ -128,26 +128,28 @@ struct Profile {
     // Returns json of profile data
     func toAnyObject() -> Any {
         return [
-            // Basic Info
-            "firstName": firstName,
-            "birthday": birthday,
-            "gender": gender,
-            "uni": uni,
-            "futureLoc": futureLoc,
-            "occupation": occupation,
-            "bio": bio,
-            "budget": budget,
-            //"profilePicture": profilePicture,
-            // Lifestyle Prefs
-            "numBedrooms": numBedrooms,
-            "pets": pets,
-            "smoking": smoking,
-            "otherLifestylePrefs": otherLifestylePrefs,
-            // Contact Info
-            "phone": phone,
-            "email": email,
-            "facebook": facebook,
-            "otherContact": otherContact
+            "profile": [
+                // Basic Info
+                "firstName": firstName,
+                "birthday": birthday,
+                "gender": gender,
+                "uni": uni,
+                "futureLoc": futureLoc,
+                "occupation": occupation,
+                "bio": bio,
+                "budget": budget,
+                //"profilePicture": profilePicture,
+                // Lifestyle Prefs
+                "numBedrooms": numBedrooms,
+                "pets": pets,
+                "smoking": smoking,
+                "otherLifestylePrefs": otherLifestylePrefs,
+                // Contact Info
+                "phone": phone,
+                "email": email,
+                "facebook": facebook,
+                "otherContact": otherContact
+            ]
         ]
     }
 }

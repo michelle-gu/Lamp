@@ -19,7 +19,8 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     let showHomePage = "showHomePage"
     
     // MARK: Properties
-    let ref = Database.database().reference(withPath: "user-profiles")
+    let profilesRef = Database.database().reference(withPath: "user-profiles")
+    let dbRef = Database.database()
     
     // MARK: Outlets
     @IBOutlet weak var profilePictureView: UIImageView!
@@ -73,13 +74,41 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         
         let user = Auth.auth().currentUser?.uid
         
-        let profile = ref.child(user!)
+        let profile = profilesRef.child(user!).child("profile")
         let values = [
             "uni": uni,
             "futureLoc": futureLoc,
             "occupation": occupation
         ]
         profile.updateChildValues(values)
+        
+        // Set default location & uni filters
+        let filterValues = [
+            "futureLocs": [
+                futureLoc: true
+            ],
+            "universities": [
+                uni: true
+            ]
+        ]
+        profilesRef.child(user!).child("settings").child("discovery").updateChildValues(filterValues)
+        
+        // Add university
+        let uniValues = [
+            uni: [
+                user: true
+            ]
+        ]
+        dbRef.reference(withPath: "universities").updateChildValues(uniValues)
+        
+        let locValues = [
+            futureLoc: [
+                user: true
+            ]
+        ]
+        dbRef.reference(withPath: "locations").updateChildValues(locValues)
+
+        // Update filter defaults
     }
     
 }
