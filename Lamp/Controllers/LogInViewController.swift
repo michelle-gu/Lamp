@@ -30,8 +30,6 @@ class LogInViewController: UIViewController {
 
     
     @IBAction func logInDidTouch(_ sender: Any) {
-        // Fetch from Firebase and sign in
-        print("\nTouched login\n")
         guard
             let email = emailField.text,
             let password = passwordField.text,
