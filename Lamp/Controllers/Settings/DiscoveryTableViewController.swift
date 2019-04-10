@@ -74,10 +74,10 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
             self.futureLocationsListLabel.text = discoverySettingsDict["futureLoc"] as? String
             self.universitiesListLabel.text = discoverySettingsDict["universities"] as? String
             
-            let genderNSArray = discoverySettingsDict["genders"]
-            let genderArray = genderNSArray as! NSArray as? [String]
-            let genderStr = genderArray?.joined(separator: ", ")
-            self.genderListLabel.text = genderStr
+//            let genderNSArray = discoverySettingsDict["genders"]
+//            let genderArray = genderNSArray as! NSArray as? [String]
+//            let genderStr = genderArray?.joined(separator: ", ")
+            self.genderListLabel.text = ""
         })
     }
 
