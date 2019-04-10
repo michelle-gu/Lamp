@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Firebase
 
 class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
 
@@ -21,6 +22,11 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     @IBOutlet weak var futureCity2: UIButton!
     @IBOutlet weak var futureCity3: UIButton!
     
+    // MARK: Firebase Properties
+    let citiesRef = Database.database().reference(withPath: "locations")
+    let userRef = Database.database().reference(withPath: "user-profiles")
+    let user = Auth.auth().currentUser?.uid
+    
     // MARK: Properties
     var cities:[String] = []
     let regionRadius: CLLocationDistance = 10000
@@ -33,9 +39,31 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-        futureCity1.isHidden = true
-        futureCity2.isHidden = true
-        futureCity3.isHidden = true
+        
+        getCities() { (citiesArray) in
+            self.cities = citiesArray
+            
+            self.futureCity1.isHidden = true
+            self.futureCity2.isHidden = true
+            self.futureCity3.isHidden = true
+            
+            if (self.cities.count == 1) {
+                self.futureCity1.setTitle(self.cities[0], for: .normal)
+                self.futureCity1.isHidden = false
+            }else if (self.cities.count == 2) {
+                self.futureCity1.setTitle(self.cities[0], for: .normal)
+                self.futureCity2.setTitle(self.cities[1], for: .normal)
+                self.futureCity1.isHidden = false
+                self.futureCity2.isHidden = false
+            } else if (self.cities.count == 3) {
+                self.futureCity1.setTitle(self.cities[0], for: .normal)
+                self.futureCity2.setTitle(self.cities[1], for: .normal)
+                self.futureCity3.setTitle(self.cities[2], for: .normal)
+                self.futureCity1.isHidden = false
+                self.futureCity2.isHidden = false
+                self.futureCity3.isHidden = false
+            }
+        }
         
         centerMapOnLocation(location: initialLocation)
         
@@ -53,6 +81,21 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         radiusOkButton.layer.cornerRadius = addButton.bounds.height / 3
         radiusOkButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor */
         
+    }
+    
+    // populate the cities array with cities currently in Firebase
+    func getCities(completion: @escaping ([String]) -> Void) {
+        citiesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let citiesDict = snapshot.value as? [String : AnyObject] else {
+                return completion([])
+            }
+            
+            var citiesArray: [String] = []
+            for city in citiesDict {
+                citiesArray.append(city.key)
+            }
+            completion(citiesArray)
+        })
     }
     
     // helper method that sets the rectangular view of the map based on region radius
@@ -170,12 +213,16 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         if (futureCity1.isHidden == false) {
             futureCity1.isHidden = true
         }
-        
-        // remove city from array
         var n = 0
         for currentCity in cities {
             if (currentCity == futureCity1.titleLabel?.text) {
+                // remove city from array
                 cities.remove(at: n)
+                n -= 1
+                
+                //remove from Firebase
+                let locationRef = self.citiesRef
+                locationRef.child(currentCity).removeValue()
             }
             n += 1
         }
@@ -190,11 +237,16 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
             futureCity2.isHidden = true
         }
         
-        // remove city from array
         var n = 0
         for currentCity in cities {
             if (currentCity == futureCity2.titleLabel?.text) {
+                // remove city from array
                 cities.remove(at: n)
+                n -= 1
+                
+                //remove from Firebase
+                let locationRef = self.citiesRef
+                locationRef.child(currentCity).removeValue()
             }
             n += 1
         }
@@ -209,11 +261,16 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
             futureCity3.isHidden = true
         }
         
-        // remove city from array
         var n = 0
         for currentCity in cities {
             if (currentCity == futureCity3.titleLabel?.text) {
+                // remove city from array
                 cities.remove(at: n)
+                n -= 1
+                
+                //remove from Firebase
+                let locationRef = self.citiesRef
+                locationRef.child(currentCity).removeValue()
             }
             n += 1
         }
@@ -230,6 +287,23 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     
     // MARK: Navigation
     @IBAction func saveButtonClicked(_ sender: Any) {
+        let locationRef = self.citiesRef
+        
+        // add each city in array to Firebase
+        for currentCity in cities {
+            let values: [String : Any] = [
+                currentCity : [
+                    user : true
+                ]
+            ]
+            // updated locations
+            locationRef.updateChildValues(values)
+            
+            // update locations nested in user>profile>futureLoc
+            //userRef.child(user!).updateChildValues(values)
+            // update locations nested in user>settings>discovery>futureLoc
+        }
+        
         self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
