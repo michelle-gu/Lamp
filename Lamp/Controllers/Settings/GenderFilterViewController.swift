@@ -22,6 +22,7 @@ class GenderFilterViewController: UIViewController, UITableViewDataSource, UITab
     let gendersRef = Database.database().reference(withPath: "genders")
     let genderCellIdentifier = "genderCellIdentifier"
     let numGenders = 4
+    let genderArray = ["Female", "Male", "Other", "Prefer not to say"]
     
     // MARK: TableView Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,20 +36,9 @@ class GenderFilterViewController: UIViewController, UITableViewDataSource, UITab
             cell.textLabel?.text = "Select All"
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: genderCellIdentifier, for: indexPath)
-            // Set data
-            gendersRef.observe(.value, with: { (snapshot) in
-                let genderDict = snapshot.value as? [String : AnyObject] ?? [:]
-                let genderKeyArray = Array(genderDict.keys).sorted()
-                var genderArray: [String] = []
-                for gender in genderKeyArray {
-//                    let genderStr = genderDict[gender]!["title"]
-                    genderArray.append("")
-                }
-                cell.textLabel?.text = genderArray[indexPath.row - 1]
-            })
+            // Set cell label
+            cell.textLabel?.text = genderArray[indexPath.row - 1]
         }
-//        cell.selectionStyl÷e = .whi
-        
         return cell
     }
 
@@ -106,9 +96,20 @@ class GenderFilterViewController: UIViewController, UITableViewDataSource, UITab
                 gendersSelected.append(gender)
             }
         }
-        print ("Selected genders: ", gendersSelected)
-        let values = ["genders": gendersSelected]
-        discoverySettingsRef.updateChildValues(values)
+
+        for gender in genderArray {
+            let values: [String: Bool]
+            if gendersSelected.contains(gender) {
+                values = [
+                    gender: true
+                ]
+            } else {
+                values = [
+                    gender: false
+                ]
+            }
+            discoverySettingsRef.child("genders").updateChildValues(values)
+        }
     }
     
 }
