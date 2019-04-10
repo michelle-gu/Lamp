@@ -63,7 +63,22 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
         super.viewDidLoad()
         // Remove empty cells at bottom
         tableView.tableFooterView = UIView()
+        // Set age range slider delegate
         ageRangeSlider.delegate = self
+        
+        // Set subtitles for Future Loc, Uni, Gender
+        // Retrieve data from database
+        let discoverySettingsRef = ref.child(user!).child("settings").child("discovery")
+        discoverySettingsRef.observe(.value, with: { (snapshot) in
+            let discoverySettingsDict = snapshot.value as? [String : AnyObject] ?? [:]
+            self.futureLocationsListLabel.text = discoverySettingsDict["futureLoc"] as? String
+            self.universitiesListLabel.text = discoverySettingsDict["universities"] as? String
+            
+            let genderNSArray = discoverySettingsDict["genders"]
+            let genderArray = genderNSArray as! NSArray as? [String]
+            let genderStr = genderArray?.joined(separator: ", ")
+            self.genderListLabel.text = genderStr
+        })
     }
 
     // MARK: Table view data source
