@@ -937,9 +937,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="eve-d7-OLb" kind="show" id="vnY-jA-1pH"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="maxDistanceCellIdentifier" id="kht-OL-hRS">
                                         <rect key="frame" x="0.0" y="98" width="375" height="44"/>
@@ -1027,9 +1024,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="jyl-8m-0lP" kind="show" id="qLQ-AM-nFc"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ageRangeCellIdentifier" id="d65-TP-6Fj">
                                         <rect key="frame" x="0.0" y="310" width="375" height="44"/>
@@ -1186,61 +1180,6 @@
             </objects>
 
             <point key="canvasLocation" x="4424.8000000000002" y="3309.6059113300494"/>
-        </scene>
-        <!--Gender-->
-        <scene sceneID="hy2-TK-2iW">
-            <objects>
-                <viewController id="jyl-8m-0lP" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eLj-aA-aoC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HZ-TL-eWH">
-                                <rect key="frame" x="41" y="84" width="200" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="r6A-N4-njI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KAl-yi-3P6">
-                                <rect key="frame" x="300" y="81" width="51" height="31"/>
-                                <color key="onTintColor" red="0.43505138160000001" green="0.70846599340000005" blue="0.986839354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </switch>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="tDQ-mR-fGZ" firstAttribute="trailing" secondItem="KAl-yi-3P6" secondAttribute="trailing" constant="26" id="3rD-O7-DPl"/>
-                            <constraint firstItem="2HZ-TL-eWH" firstAttribute="leading" secondItem="tDQ-mR-fGZ" secondAttribute="leading" constant="41" id="VLI-NF-hmI"/>
-                            <constraint firstItem="KAl-yi-3P6" firstAttribute="leading" secondItem="2HZ-TL-eWH" secondAttribute="trailing" constant="59" id="VcM-rM-Gxq"/>
-                            <constraint firstItem="KAl-yi-3P6" firstAttribute="top" secondItem="tDQ-mR-fGZ" secondAttribute="top" constant="37" id="bLM-wO-LSi"/>
-                            <constraint firstItem="2HZ-TL-eWH" firstAttribute="top" secondItem="tDQ-mR-fGZ" secondAttribute="top" constant="40" id="f9J-Xy-8MJ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="tDQ-mR-fGZ"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Gender" id="yCE-7b-KaI"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b7v-FR-Upd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4426" y="4043"/>
-        </scene>
-        <!--Future Location-->
-        <scene sceneID="7OA-sg-lVG">
-            <objects>
-                <viewController id="eve-d7-OLb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4Lh-28-VKU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Ttz-jR-AjW"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Future Location" id="lJK-QL-JmZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mbv-qh-AEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5506" y="2948"/>
-            
         </scene>
         <!--Universities-->
         <scene sceneID="PXy-R6-2AO">
