@@ -157,7 +157,7 @@ class ProfileEditViewController: UIViewController, UITextViewDelegate {
         
         let user = Auth.auth().currentUser?.uid
         
-        let profile = ref.child(user!)
+        let profile = ref.child(user!).child("profile")
         let values = [
             // Basic Info
             "firstName": firstName,
