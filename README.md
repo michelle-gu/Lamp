@@ -6,6 +6,19 @@ Roommate finder for students and alumni at UT Austin.
     Lindsey Thompson (%)
     Maria Ocanas (%)
     Michelle Gu (%)
+        * Designed database
+            - Wrote some example JSON
+            - Updated models accordingly
+        * Settings functionality
+            - Account settings -- Change password, Logout button, Delete account, Began FB/Google connection
+            - Notifications -- Update user input values to Firebase
+            - Discovery
+                - Update user input values to Firebase
+                - Created select all lists for filters that update to Firebase
+        * Profile Creation updates
+            - Update user, location, gender, and university data to Firebase
+            - Added default settings
+            - Fixed invalid login bug
     Pearl Xie (%)
         * Maps View Controller during Profile Creation 
             - Setting desired future locations by searching on a map
@@ -24,6 +37,8 @@ Roommate finder for students and alumni at UT Austin.
         - Error checking that will be left for Final Release:
             1. Placing a placemark in the exact location. Currently all search capabilities of a location is handled by
                Apple's MapKit, but it's not exactly the most accurate. If you search for Boston, it places you nearly in the
+            2. Setting the initial map view to the user's location as opposed to having it hardcoded to San
+               Francisco right now
                Atlantic ocean. Not sure how I can fix that but it'd be worth looking into for Final Release.
         - Other that will be attempted for Final Release:
             1. Allowing users to set a radius of how far they want to search for housing around a certain pinpoint. Making it
