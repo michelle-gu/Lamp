@@ -63,6 +63,7 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     
     // when the Add button is pressed, the Search bar is brought up
     @IBAction func searchButtonPressed(_ sender: Any) {
+        
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
         present(searchController, animated: true, completion: nil)
@@ -146,6 +147,7 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         for n in 1...size {
             
         } */
+        
         if (futureCity1.isHidden == true) {
             futureCity1.setTitle(currentCity, for: .normal)
             futureCity1.isHidden = false
@@ -156,6 +158,12 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
             futureCity3.setTitle(currentCity, for: .normal)
             futureCity3.isHidden = false
         }
+        
+        if (futureCity1.isHidden == false && futureCity2.isHidden == false && futureCity3.isHidden == false) {
+            addButton.isHidden = true
+        } else {
+            addButton.isHidden = false
+        }
     }
     
     // Click to Remove City
@@ -163,17 +171,26 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         if (futureCity1.isHidden == false) {
             futureCity1.isHidden = true
         }
+        if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
+            addButton.isHidden = false
+        }
     }
     
     @IBAction func city2ButtonPressed(_ sender: Any) {
         if (futureCity2.isHidden == false) {
             futureCity2.isHidden = true
         }
+        if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
+            addButton.isHidden = false
+        }
     }
     
     @IBAction func city3ButtonPressed(_ sender: Any) {
         if (futureCity3.isHidden == false) {
             futureCity3.isHidden = true
+        }
+        if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
+            addButton.isHidden = false
         }
     }
     
