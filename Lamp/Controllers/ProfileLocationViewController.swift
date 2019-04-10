@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Foundation
 
 // current universities
 let uniPickerData = [String](arrayLiteral: "University of Texas at Austin", "St. Edwards")
@@ -22,6 +23,7 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     let profilesRef = Database.database().reference(withPath: "user-profiles")
     let dbRef = Database.database()
     let citiesRef = Database.database().reference(withPath: "locations")
+    let user = Auth.auth().currentUser?.uid
     var cities:[String] = []
     
     // MARK: Outlets
@@ -41,8 +43,6 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         let uniPicker = UIPickerView()
         uniPicker.delegate = self
         uniTextField.inputView = uniPicker
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,7 +62,8 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     
     // populate the cities array with cities currently in Firebase
     func getCities(completion: @escaping ([String]) -> Void) {
-        citiesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+        let profileLocs = profilesRef.child(user!).child("profile").child("futureLoc")
+        profileLocs.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let citiesDict = snapshot.value as? [String : AnyObject] else {
                 return completion([])
             }
@@ -115,11 +116,23 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         ]
         profile.updateChildValues(values)
         
-        // Set default location & uni filters
+        var futureLocArr: [String] = futureLoc.components(separatedBy: ", ")
+        print(futureLocArr)
+        // Set default location fitler
+        for loc in futureLocArr {
+            let locFilterVal = [
+                "futureLocs": [
+                    loc: [
+                        user: true // Flowermound, AUstin: true
+                    ]
+                ]
+            ]
+            profilesRef.child(user!).child("settings").child("discovery").updateChildValues(locFilterVal)
+        }
+
+        
+        // Set default uni filter
         let filterValues = [
-            "futureLocs": [
-                futureLoc: true
-            ],
             "universities": [
                 uni: true
             ]

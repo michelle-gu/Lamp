@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S9Y-iI-4LZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ceN-V3-Lv2">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -900,6 +900,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="city1ButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="V9v-Cr-eFc"/>
+                                    <action selector="city1Pressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="icc-Vy-JP0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38m-jU-781">
@@ -915,6 +916,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="city1ButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="ImE-fj-Ipe"/>
+                                    <action selector="city2Pressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="Os7-xk-jxh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EpC-gK-aTT">
@@ -930,6 +932,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="city1ButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="ehM-S1-nrM"/>
+                                    <action selector="city3Pressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="lLb-H9-ioQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNU-ev-Mof">
@@ -941,6 +944,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="addCityButtonPressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="jw2-8N-7QE"/>
                                     <action selector="addCityToListButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="KWl-D2-qpc"/>
                                 </connections>
                             </button>
@@ -2426,7 +2430,7 @@
         <segue reference="PA3-YF-Hx5"/>
         <segue reference="BfG-uu-C7Q"/>
         <segue reference="SP5-0k-tVq"/>
-        <segue reference="9WS-Lc-l6O"/>
+        <segue reference="IdY-Gv-dXt"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.60796302560000004" green="0.69684332609999999" blue="0.94992285970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

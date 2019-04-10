@@ -63,12 +63,11 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 self.futureCity2.isHidden = false
                 self.futureCity3.isHidden = false
             }
-            
         }
         
         centerMapOnLocation(location: initialLocation)
         
-        // change add button styling
+        // button styling
         addButton.layer.borderWidth = 1
         addButton.layer.cornerRadius = addButton.bounds.height / 2
         addButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
@@ -86,7 +85,8 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     
     // populate the cities array with cities currently in Firebase
     func getCities(completion: @escaping ([String]) -> Void) {
-        citiesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+        let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
+        profileLocs.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let citiesDict = snapshot.value as? [String : AnyObject] else {
                 return completion([])
             }
@@ -222,8 +222,10 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 n -= 1
                 
                 //remove from Firebase
-                let locationRef = self.citiesRef
-                locationRef.child(currentCity).removeValue()
+                let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
+                profileLocs.child(currentCity).removeValue()
+                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLocs")
+                discoverySettingsRef.child(currentCity).removeValue()
             }
             n += 1
         }
@@ -246,8 +248,10 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 n -= 1
                 
                 //remove from Firebase
-                let locationRef = self.citiesRef
-                locationRef.child(currentCity).removeValue()
+                let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
+                profileLocs.child(currentCity).removeValue()
+                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLocs")
+                discoverySettingsRef.child(currentCity).removeValue()
             }
             n += 1
         }
@@ -270,8 +274,10 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 n -= 1
                 
                 //remove from Firebase
-                let locationRef = self.citiesRef
-                locationRef.child(currentCity).removeValue()
+                let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
+                profileLocs.child(currentCity).removeValue()
+                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLocs")
+                discoverySettingsRef.child(currentCity).removeValue()
             }
             n += 1
         }
@@ -289,6 +295,8 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     // MARK: Navigation
     @IBAction func saveButtonClicked(_ sender: Any) {
         let locationRef = self.citiesRef
+        let profileRef = self.userRef.child(user!).child("profile")
+        let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery")
         
         // add each city in array to Firebase
         for currentCity in cities {
@@ -301,8 +309,10 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
             locationRef.updateChildValues(values)
             
             // update locations nested in user>profile>futureLoc
-            //userRef.child(user!).updateChildValues(values)
+            profileRef.child("futureLoc").updateChildValues(values)
+            
             // update locations nested in user>settings>discovery>futureLoc
+            discoverySettingsRef.child("futureLocs").updateChildValues(values)
         }
         
         self.navigationController?.popViewController(animated: true)
