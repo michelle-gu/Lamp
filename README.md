@@ -1,5 +1,37 @@
 Roommate finder for students and alumni at UT Austin.
 
+# Beta Release README
+
+## Contributions:
+    Lindsey Thompson (%)
+    Maria Ocanas (%)
+    Michelle Gu (%)
+    Pearl Xie (%)
+        * Maps View Controller during Profile Creation 
+            - Setting desired future locations by searching on a map
+            - Updating that data into Firebase (TODO)
+        * Maps View Controller via Settings
+            - Pulling current location preferences via Firebase (TODO)
+            - Ability to edit and update future locations
+
+## Deviations:
+    * Maps (Pearl):
+        - Only allowing users to set up to three future locations for simplicity (also who looks for relocations for that many
+          different places anyway)
+        - Might not implement an option to bring up Maps during Swiping because unsure of the purpose it would serve. Seeing
+          other users' exact locations on a map might come with privacy issues. Also not sure how much it would help or matter
+          when searching for a roommate.
+        - Error checking that will be left for Final Release:
+            1. Placing a placemark in the exact location. Currently all search capabilities of a location is handled by
+               Apple's MapKit, but it's not exactly the most accurate. If you search for Boston, it places you nearly in the
+               Atlantic ocean. Not sure how I can fix that but it'd be worth looking into for Final Release.
+        - Other that will be attempted for Final Release:
+            1. Allowing users to set a radius of how far they want to search for housing around a certain pinpoint. Making it
+               a stretch goal because it would also come with calculating the distance between two users' coordinates and 
+               radiuses and determining if they'd be compatible to appear in each others' swipe searches. 
+    * Notes: 
+
+
 # Alpha Release README
 
 ## Contributions:
