@@ -15,8 +15,8 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var addCityToList: UIButton!
-    @IBOutlet weak var radiusInput: UITextField!
-    @IBOutlet weak var radiusOkButton: UIButton!
+    //@IBOutlet weak var radiusInput: UITextField!
+    //@IBOutlet weak var radiusOkButton: UIButton!
     @IBOutlet weak var futureCity1: UIButton!
     @IBOutlet weak var futureCity2: UIButton!
     @IBOutlet weak var futureCity3: UIButton!
@@ -48,9 +48,10 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         addCityToList.layer.cornerRadius = addButton.bounds.height / 2
         addCityToList.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
         
+        /*
         radiusOkButton.layer.borderWidth = 1
         radiusOkButton.layer.cornerRadius = addButton.bounds.height / 3
-        radiusOkButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
+        radiusOkButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor */
         
     }
     
@@ -159,12 +160,12 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         }
     }
     
+    /*
     func addRadius(location: CLLocation) {
         //let radius = radiusInput.text
-    }
+    } */
     
     // MARK: Navigation
-    
     @IBAction func saveButtonClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
@@ -189,16 +190,5 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         super.viewDidAppear(animated)
         checkLocationAuthorizationStatus()
     }
-    
-    /*
-    // This gets called when location information comes back. You get an array of locations, but you’re only interested in the first item. You don’t do anything with it yet, but eventually you will zoom to this location.
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-            let region = MKCoordinateRegion(center: location.coordinate, span: span)
-            mapView.setRegion(region, animated: true)
-        }
-    }
-    */
 
 }
