@@ -71,13 +71,40 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
         let discoverySettingsRef = ref.child(user!).child("settings").child("discovery")
         discoverySettingsRef.observe(.value, with: { (snapshot) in
             let discoverySettingsDict = snapshot.value as? [String : AnyObject] ?? [:]
-            self.futureLocationsListLabel.text = discoverySettingsDict["futureLoc"] as? String
-            self.universitiesListLabel.text = discoverySettingsDict["universities"] as? String
             
-//            let genderNSArray = discoverySettingsDict["genders"]
-//            let genderArray = genderNSArray as! NSArray as? [String]
-//            let genderStr = genderArray?.joined(separator: ", ")
-            self.genderListLabel.text = ""
+            let futureLocData = discoverySettingsDict["futureLocs"] as? [String: AnyObject] ?? [:]
+            print ("futureLocData: ", futureLocData)
+            var futureLocSubtitleArr: [String] = []
+            for futureLoc in futureLocData {
+                if futureLoc.value.boolValue { // true
+                    futureLocSubtitleArr.append(futureLoc.key)
+                }
+            }
+            let futureLocSubtitleStr: String = futureLocSubtitleArr.joined(separator: ", ")
+            self.futureLocationsListLabel.text = futureLocSubtitleStr
+            
+            
+            let universityData = discoverySettingsDict["universities"] as? [String: AnyObject] ?? [:]
+            print ("universitydata: ", universityData)
+            var universitySubtitleArr: [String] = []
+            for university in universityData {
+                if university.value.boolValue { // true
+                    universitySubtitleArr.append(university.key)
+                }
+            }
+            let universitySubtitleStr: String = universitySubtitleArr.joined(separator: ", ")
+            self.universitiesListLabel.text = universitySubtitleStr
+            
+            let genderData = discoverySettingsDict["genders"] as? [String: AnyObject] ?? [:]
+            print ("Genderdata: ", genderData)
+            var genderSubtitleArr: [String] = []
+            for gender in genderData {
+                if gender.value.boolValue { // true
+                    genderSubtitleArr.append(gender.key)
+                }
+            }
+            let genderSubtitleStr: String = genderSubtitleArr.joined(separator: ", ")
+            self.genderListLabel.text = genderSubtitleStr
         })
     }
 
