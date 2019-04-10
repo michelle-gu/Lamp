@@ -1770,15 +1770,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQ1-pP-GfJ" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="16" y="44" width="343" height="637"/>
+                                <rect key="frame" x="16" y="64" width="343" height="564"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuf-TY-otn">
+                                <rect key="frame" x="96" y="636" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.84789663550000005" green="0.58553600309999998" blue="0.82471710440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="NO"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="41"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQJ-UI-ZlV">
+                                <rect key="frame" x="197" y="636" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.43505138160000001" green="0.70846599340000005" blue="0.986839354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="41"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="WQ1-pP-GfJ" firstAttribute="top" secondItem="rYT-fs-nlh" secondAttribute="top" id="CWh-BJ-gwE"/>
+                            <constraint firstItem="WQ1-pP-GfJ" firstAttribute="top" secondItem="rYT-fs-nlh" secondAttribute="top" constant="20" id="Bz3-ro-K9l"/>
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="trailing" secondItem="WQ1-pP-GfJ" secondAttribute="trailing" constant="16" id="J4a-vD-gYb"/>
-                            <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="WQ1-pP-GfJ" secondAttribute="bottom" constant="97" id="nWp-J2-J3F"/>
+                            <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="WQ1-pP-GfJ" secondAttribute="bottom" constant="150" id="nWp-J2-J3F"/>
                             <constraint firstItem="WQ1-pP-GfJ" firstAttribute="leading" secondItem="rYT-fs-nlh" secondAttribute="leading" constant="16" id="x2y-Yh-N1v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rYT-fs-nlh"/>
@@ -1919,7 +1945,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdL-55-Xqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4812" y="950"/>
+            <point key="canvasLocation" x="4812" y="949.50738916256159"/>
         </scene>
         <!--Messages-->
         <scene sceneID="5Q1-Ma-qcG">
@@ -2238,6 +2264,7 @@
         <image name="profile-pic-blank" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="bMq-vc-0S6"/>
         <segue reference="PA3-YF-Hx5"/>
         <segue reference="BfG-uu-C7Q"/>
         <segue reference="5YV-eX-J77"/>

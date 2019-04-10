@@ -29,6 +29,9 @@
 		9541274D224B1EC8003343D4 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */; };
 		95412751224B2F8F003343D4 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95412750224B2F8E003343D4 /* NotificationsViewController.swift */; };
 		955450802257FC94003C4448 /* MyKolodaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554507F2257FC94003C4448 /* MyKolodaViewController.swift */; };
+		95E4E7DD225D6EEB00A45EC4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4E7DC225D6EEB00A45EC4 /* CardView.swift */; };
+		95E4E7DF225D6EF900A45EC4 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95E4E7DE225D6EF900A45EC4 /* CardView.xib */; };
+		95E4E7E1225D799D00A45EC4 /* XibCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4E7E0225D799D00A45EC4 /* XibCreatable.swift */; };
 		B62C34E82255588B00C5348F /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C34E72255588B00C5348F /* ChangePasswordViewController.swift */; };
 		B640FEB5224C066700E8FBFF /* ContactInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */; };
 		B640FEB6224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */; };
@@ -68,6 +71,9 @@
 		9541274C224B1EC8003343D4 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
 		95412750224B2F8E003343D4 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		9554507F2257FC94003C4448 /* MyKolodaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKolodaViewController.swift; sourceTree = "<group>"; };
+		95E4E7DC225D6EEB00A45EC4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		95E4E7DE225D6EF900A45EC4 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		95E4E7E0225D799D00A45EC4 /* XibCreatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = XibCreatable.swift; path = Lamp/Views/XibCreatable.swift; sourceTree = SOURCE_ROOT; };
 		B62C34E72255588B00C5348F /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		B640FEB3224C066700E8FBFF /* ContactInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewCell.swift; sourceTree = "<group>"; };
 		B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifestylePreferencesTableViewCell.swift; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 		95132ABD224B442D006C1A84 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				95E4E7DB225D6ECD00A45EC4 /* CardView */,
 				B640FEB7224C4B1A00E8FBFF /* BioTableViewCell.swift */,
 				B640FEB9224C4B2F00E8FBFF /* BudgetTableViewCell.swift */,
 				B640FEB4224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift */,
@@ -133,6 +140,16 @@
 				95132AC5224B4802006C1A84 /* ToggleTableViewCell.swift */,
 			);
 			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		95E4E7DB225D6ECD00A45EC4 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				95E4E7DC225D6EEB00A45EC4 /* CardView.swift */,
+				95E4E7DE225D6EF900A45EC4 /* CardView.xib */,
+				95E4E7E0225D799D00A45EC4 /* XibCreatable.swift */,
+			);
+			path = CardView;
 			sourceTree = "<group>";
 		};
 		B62C34E9225558A000C5348F /* Settings */ = {
@@ -290,6 +307,7 @@
 			files = (
 				B6F5006122307A3600FD1433 /* LaunchScreen.storyboard in Resources */,
 				B65D1CFC2232409B009F84A3 /* GoogleService-Info.plist in Resources */,
+				95E4E7DF225D6EF900A45EC4 /* CardView.xib in Resources */,
 				B6F5005E22307A3600FD1433 /* Assets.xcassets in Resources */,
 				B6F5005C22307A3500FD1433 /* Main.storyboard in Resources */,
 			);
@@ -386,6 +404,7 @@
 				95132AC2224B47D9006C1A84 /* RangeSliderTableViewCell.swift in Sources */,
 				95412745224B0254003343D4 /* SettingsViewController.swift in Sources */,
 				95412749224B12C9003343D4 /* AccountViewController.swift in Sources */,
+				95E4E7E1225D799D00A45EC4 /* XibCreatable.swift in Sources */,
 				07B43E6E22348CCC00BB8548 /* ProfileMapViewController.swift in Sources */,
 				B640FEB5224C066700E8FBFF /* ContactInfoTableViewCell.swift in Sources */,
 				07B43E6622348C0900BB8548 /* EmailConfirmationViewController.swift in Sources */,
@@ -400,6 +419,7 @@
 				B640FEBA224C4B2F00E8FBFF /* BudgetTableViewCell.swift in Sources */,
 				B6B897132233025600164801 /* User.swift in Sources */,
 				B640FEB8224C4B1A00E8FBFF /* BioTableViewCell.swift in Sources */,
+				95E4E7DD225D6EEB00A45EC4 /* CardView.swift in Sources */,
 				07AB86A2224994BD001EE449 /* MessageInstanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

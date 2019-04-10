@@ -60,11 +60,11 @@ extension MyKolodaViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        //so this opens the profile 
+        //so this opens the profile
         
-        UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
-        let user = Auth.auth().currentUser?.uid
-        let profile = ref.child(user!)
+//        UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
+//        let user = Auth.auth().currentUser?.uid
+//        let profile = ref.child(user!)
     }
 }
 
@@ -79,7 +79,11 @@ extension MyKolodaViewController: KolodaViewDataSource {
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        return UIImageView(image: #imageLiteral(resourceName: "guy-5"))
+        let card:CardView =  CardView.create()
+        let profile = images[index]
+        card.image.image = UIImage(named: "empty")
+        card.nameLabel.text = profile.firstName
+        return card
     }
     
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
