@@ -62,8 +62,15 @@ class GenderFilterViewController: UIViewController, UITableViewDataSource, UITab
         // Unheck the selected row
         let cell = tableView.cellForRow(at: indexPath)
         cell?.accessoryType = .none
+        
+        // Deselecting cell, select all not possible anymore!
+        selectAllSelected = false
+        let indexPathForSelectAll = IndexPath(row: 0, section: 0)
+        let selectAllCell = tableView.cellForRow(at: indexPathForSelectAll)
+        selectAllCell!.isSelected = false
+        selectAllCell!.accessoryType = .none
+        
         if indexPath.row == 0 { // Select all
-            selectAllSelected = false
             // Deselect all
             for row in 1...numGenders {
                 let indexPathForRow = IndexPath(row: row, section: 0)
