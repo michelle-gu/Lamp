@@ -87,6 +87,8 @@ class GenderFilterViewController: UIViewController, UITableViewDataSource, UITab
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // TODO: Pre-load what's already selected
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -110,10 +112,12 @@ class GenderFilterViewController: UIViewController, UITableViewDataSource, UITab
                 values = [
                     gender: true
                 ]
+                gendersRef.child(gender).child(user!).setValue(true)
             } else {
                 values = [
                     gender: false
                 ]
+                gendersRef.child(gender).child(user!).setValue(false)
             }
             discoverySettingsRef.child("genders").updateChildValues(values)
         }

@@ -112,6 +112,9 @@ class UniversitiesFilterViewController: UIViewController, UITableViewDelegate, U
             self.numUniversities = uniArray.count
             self.tableView.reloadData()
         }
+        
+        // TODO: Pre-load what's already selected
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
