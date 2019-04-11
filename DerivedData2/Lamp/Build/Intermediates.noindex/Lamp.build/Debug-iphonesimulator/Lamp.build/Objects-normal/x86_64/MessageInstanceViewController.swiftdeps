@@ -11,8 +11,6 @@ depends-top-level:
 - !private "/"
 - "AssignmentPrecedence"
 - !private "BooleanLiteralType"
-- !private "FloatLiteralType"
-- !private "IntegerLiteralType"
 - "MessageInstanceViewController"
 - !private "StringLiteralType"
 - !private "UIImage"

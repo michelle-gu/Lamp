@@ -13,7 +13,7 @@ import Firebase
 class MessagesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // user match list
-    var messagedUsers: [String] = ["B13rifXWDfOREcfxLdeBvF3Btc42", "O5tkewRsPUQTNBFdq2WMwQTD7Gi2", "PYVm2MqtW7MApaO80w7AnBlHii82", "iVFU2mH3npgjxvzIndiOT6BDBJ02"]
+    var messagedUsers: [String] = ["5RAnK9zEAORdQLJUMRsezwkjD8A3", "O5tkewRsPUQTNBFdq2WMwQTD7Gi2", "iVFU2mH3npgjxvzIndiOT6BDBJ02", "ubCnU8kdafc82CqU5ndWV4vNb1i1"]
     
     // MARK: Properties
     var ref: DatabaseReference!
@@ -53,13 +53,13 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         // create a new cell if needed or reuse an old one
         let cell = tableView.dequeueReusableCell(withIdentifier: customTableViewCellIdentifier, for: indexPath as IndexPath) as! MessagesTableViewCell
         
-        ref = Database.database().reference(withPath: "user-profiles")
+        ref = Database.database().reference().child("user-profiles")
         let userId = messagedUsers[indexPath.row]
-        let messagingUser = ref.child(userId)
+        let messagingUser = ref.child(userId).child("profile")
         
         messagingUser.observe(.value, with: { (snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
-            let firstName = profileDict["firstName"] as? String
+            let firstName = profileDict["firstName"] as! String
             cell.nameLabel.text = firstName
         })
         

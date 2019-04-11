@@ -22,11 +22,11 @@
 	<string>SafariServices</string>
 	<string>FirebaseMLModelInterpreter</string>
 	<string>mach</string>
-	<string>FirebaseMessaging</string>
 	<string>AVFoundation</string>
+	<string>FirebaseMessaging</string>
 	<string>GoogleMobileAds</string>
 	<string>WatchKit</string>
-	<string>Starscream</string>
+	<string>MobileCoreServices</string>
 	<string>FirebaseInstanceID</string>
 	<string>FirebaseMLVisionFaceModel</string>
 	<string>CoreText</string>
@@ -35,10 +35,10 @@
 	<string>FirebaseMLNaturalLanguage</string>
 	<string>FirebaseMLVisionLabelModel</string>
 	<string>FBSDKLoginKit</string>
-	<string>FBSDKCoreKit</string>
 	<string>FirebaseInvites</string>
+	<string>FBSDKCoreKit</string>
 	<string>AdSupport</string>
-	<string>MobileCoreServices</string>
+	<string>Starscream</string>
 	<string>CoreFoundation</string>
 	<string>FirebasePerformance</string>
 	<string>Crashlytics</string>
@@ -54,17 +54,17 @@
 	<string>FirebaseCrash</string>
 	<string>FirebaseMLNLLanguageID</string>
 	<string>QuartzCore</string>
-	<string>GTMSessionFetcher</string>
+	<string>AudioToolbox</string>
 	<string>SystemConfiguration</string>
 	<string>FirebaseAnalytics</string>
-	<string>AudioToolbox</string>
+	<string>GTMSessionFetcher</string>
 	<string>Security</string>
 	<string>CoreGraphics</string>
 	<string>objc</string>
 	<string>SSCommonCrypto</string>
 	<string>FirebaseDynamicLinks</string>
-	<string>MessageInputBar</string>
 	<string>RangeUISlider</string>
+	<string>MessageInputBar</string>
 	<string>UserNotifications</string>
 	<string>UIKit</string>
 	<string>Fabric</string>

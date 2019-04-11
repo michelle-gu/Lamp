@@ -7,6 +7,7 @@ provides-member:
 - ["13RangeUISlider0aB8DelegateP", ""]
 provides-dynamic-lookup:
 - "rangeChangeFinished"
+- "rangeChangeStarted"
 - "rangeIsChanging"
 depends-top-level:
 - "CGFloat"
@@ -16,6 +17,7 @@ depends-member:
 - ["13RangeUISlider0aB8DelegateP", "CGFloat"]
 - ["13RangeUISlider0aB8DelegateP", "RangeUISlider"]
 - ["13RangeUISlider0aB8DelegateP", "rangeChangeFinished"]
+- ["13RangeUISlider0aB8DelegateP", "rangeChangeStarted"]
 - ["13RangeUISlider0aB8DelegateP", "rangeIsChanging"]
 depends-nominal:
 - "13RangeUISlider0aB8DelegateP"
@@ -48,4 +50,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "3294019d354334b10413e1684ed481b5"
+interface-hash: "e2341d588e987ab3decdf1d3d1a45abc"

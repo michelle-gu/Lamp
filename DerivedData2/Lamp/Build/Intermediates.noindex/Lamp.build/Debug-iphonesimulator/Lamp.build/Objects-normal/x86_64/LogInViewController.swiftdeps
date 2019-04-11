@@ -20,7 +20,6 @@ depends-top-level:
 - !private ">"
 - !private "AssignmentPrecedence"
 - !private "Auth"
-- !private "BooleanLiteralType"
 - "LogInViewController"
 - !private "UIAlertAction"
 - !private "UIAlertController"
