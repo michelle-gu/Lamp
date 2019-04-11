@@ -5,6 +5,16 @@ Roommate finder for students and alumni at UT Austin.
 ## Contributions:
     Lindsey Thompson (%)
     Maria Ocanas (%)
+        * Implemented Card Swiping
+            - Created card objects to hold profile information, pulling information such as name, occupation, etc
+            - Add animation functionality which goes through the database information and updates swiping records
+        * Swiping Functionality with Firebase
+            - Updated database model to reflect swiping records and update user information
+                - If users "like" another user, the information will be stored, which is then compared to the other user's swiping records
+                - All matches are recorded and prompted to start a conversation with eachother
+         * Button Updates for Swiping
+            - Changed the button functionality on the swiping page in order to match the swiping mechanics, including animation and database updating
+            
     Michelle Gu (%)
         * Designed database
             - Wrote some example JSON
@@ -47,6 +57,13 @@ Roommate finder for students and alumni at UT Austin.
                 2. Setting the initial map view to the user's location as opposed to having it hardcoded to San Francisco right now Atlantic ocean. Not sure how I can fix that but it'd be worth looking into for Final Release.
             - Other that will be attempted for Final Release:
                 1. Allowing users to set a radius of how far they want to search for housing around a certain pinpoint. Making it a stretch goal because it would also come with calculating the distance between two users' coordinates and radiuses and determining if they'd be compatible to appear in each others' swipe searches. This is also dependent on Maria's portion of Swiping.
+         * Swiping (Maria):
+            - Error checking that will be left for Final Release:
+                1. After all cards are swiped through, the app will crash upon continually pressing the yes/no buttons. This can be fixed by adding a notification once the database has been traversed and will be implemented for Final.
+            - Populating the Profile Cards and profile page left for Final Release:
+                1. The card labels are not being pulled from the database, apart from the name. This is a simple pull from the database once we establish that some fields are mandatory, so as to not cause conflict with nil values.
+                2. Right now the user is unable to view the prosepctive roommate's profile fully. For the final release, we plan on implementing a view specifically for this, much like the user's own profile view, so that all the information can be displayed upon selecting the card displayed. 
+                3. We do not hold profile pictures in Firebase as of yet, so for the final release we plan on implementing this storage and pulling these pictures into the cards to replace the stock image currently there.
 
 
 # Alpha Release README
