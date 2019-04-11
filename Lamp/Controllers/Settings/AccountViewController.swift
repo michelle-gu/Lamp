@@ -35,7 +35,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         } else if accountSettings[row] == "Delete Account" {
             cell.textLabel?.textColor = UIColor.red
         }
-        cell.textLabel?.font = UIFont(name: "Avenir", size: 20)
+        cell.textLabel?.font = UIFont(name: "Avenir", size: 17)
         return cell
     }
     
