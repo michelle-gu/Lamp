@@ -1,0 +1,549 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SwipeResultDirection"
+- "CGLine"
+provides-nominal:
+- "6Koloda20SwipeResultDirectionO"
+provides-member:
+- ["6Koloda20SwipeResultDirectionO", ""]
+- ["So7CGPointV", ""]
+- ["So6CGRectV", ""]
+- ["6Koloda20SwipeResultDirectionO", "point"]
+- ["6Koloda20SwipeResultDirectionO", "bearing"]
+- ["6Koloda20SwipeResultDirectionO", "boundsRect"]
+- ["So7CGPointV", "distanceTo"]
+- ["So7CGPointV", "bearingTo"]
+- ["So7CGPointV", "scalarProjectionWith"]
+- ["So7CGPointV", "scalarProjectionPointWith"]
+- ["So7CGPointV", "dotProductWith"]
+- ["So7CGPointV", "modulo"]
+- ["So7CGPointV", "distanceToRect"]
+- ["So7CGPointV", "normalizedDistanceForSize"]
+- ["So7CGPointV", "normalizedPointForSize"]
+- ["So7CGPointV", "screenPointForSize"]
+- ["So7CGPointV", "intersectionBetweenLines"]
+- ["So6CGRectV", "topLine"]
+- ["So6CGRectV", "leftLine"]
+- ["So6CGRectV", "bottomLine"]
+- ["So6CGRectV", "rightLine"]
+- ["So6CGRectV", "perimeterLines"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "*"
+- !private "+"
+- !private "-"
+- !private "/"
+- !private "<"
+- "=="
+- "AssignmentPrecedence"
+- "CGFloat"
+- "CGLine"
+- "CGPoint"
+- "CGRect"
+- "CGSize"
+- "CaseIterable"
+- "Direction"
+- "Double"
+- "FloatLiteralType"
+- "HorizontalPosition"
+- "IntegerLiteralType"
+- "String"
+- "StringLiteralType"
+- "SwipeResultDirection"
+- "VerticalPosition"
+- !private "_findStringSwitchCase"
+- !private "atan2"
+- !private "hypot"
+- !private "max"
+- !private "pow"
+- !private "sqrt"
+- !private "~="
+depends-member:
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["SB", "init"]
+- ["So7CGPointV", "CGFloat"]
+- ["So7CGPointV", "CGLine"]
+- ["So7CGPointV", "CGPoint"]
+- ["So7CGPointV", "CGRect"]
+- ["So7CGPointV", "CGSize"]
+- ["So7CGPointV", "Double"]
+- !private ["So7CGPointV", "atan2"]
+- ["So7CGPointV", "bearingTo"]
+- ["So7CGPointV", "distanceTo"]
+- ["So7CGPointV", "distanceToRect"]
+- ["So7CGPointV", "dotProductWith"]
+- !private ["So7CGPointV", "hypot"]
+- !private ["So7CGPointV", "init"]
+- ["So7CGPointV", "intersectionBetweenLines"]
+- !private ["So7CGPointV", "max"]
+- ["So7CGPointV", "modulo"]
+- ["So7CGPointV", "normalizedDistanceForSize"]
+- ["So7CGPointV", "normalizedPointForSize"]
+- !private ["So7CGPointV", "pow"]
+- ["So7CGPointV", "scalarProjectionPointWith"]
+- ["So7CGPointV", "scalarProjectionWith"]
+- ["So7CGPointV", "screenPointForSize"]
+- !private ["So7CGPointV", "sqrt"]
+- !private ["So7CGPointV", "x"]
+- !private ["So7CGPointV", "y"]
+- ["So6CGRectV", "CGLine"]
+- !private ["So6CGRectV", "Direction"]
+- ["So6CGRectV", "bottomLine"]
+- !private ["So6CGRectV", "contains"]
+- !private ["So6CGRectV", "init"]
+- ["So6CGRectV", "leftLine"]
+- !private ["So6CGRectV", "maxX"]
+- !private ["So6CGRectV", "maxY"]
+- !private ["So6CGRectV", "midX"]
+- !private ["So6CGRectV", "midY"]
+- !private ["So6CGRectV", "minX"]
+- !private ["So6CGRectV", "minY"]
+- ["So6CGRectV", "perimeterLines"]
+- ["So6CGRectV", "rightLine"]
+- ["So6CGRectV", "topLine"]
+- !private ["So6CGSizeV", "height"]
+- !private ["So6CGSizeV", "width"]
+- !private ["s7CVarArgP", "init"]
+- ["s12CaseIterableP", "=="]
+- ["s12CaseIterableP", "AllCases"]
+- !private ["s12CaseIterableP", "CGRect"]
+- !private ["s12CaseIterableP", "HorizontalPosition"]
+- ["s12CaseIterableP", "RawValue"]
+- !private ["s12CaseIterableP", "VerticalPosition"]
+- ["s12CaseIterableP", ""]
+- ["s12CaseIterableP", "_Default_AllCases"]
+- ["s12CaseIterableP", "_Default_RawValue"]
+- !private ["s12CaseIterableP", "_findStringSwitchCase"]
+- ["s12CaseIterableP", "_rawHashValue"]
+- ["s12CaseIterableP", "allCases"]
+- ["s12CaseIterableP", "bottomLeft"]
+- ["s12CaseIterableP", "bottomRight"]
+- ["s12CaseIterableP", "down"]
+- ["s12CaseIterableP", "hash"]
+- ["s12CaseIterableP", "hashValue"]
+- ["s12CaseIterableP", "init"]
+- ["s12CaseIterableP", "left"]
+- ["s12CaseIterableP", "rawValue"]
+- ["s12CaseIterableP", "right"]
+- !private ["s12CaseIterableP", "swipeDirection"]
+- ["s12CaseIterableP", "topLeft"]
+- ["s12CaseIterableP", "topRight"]
+- ["s12CaseIterableP", "up"]
+- !private ["SL", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
+- !private ["s28CustomDebugStringConvertibleP", "Direction"]
+- !private ["s28CustomDebugStringConvertibleP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "atan2"]
+- !private ["s28CustomDebugStringConvertibleP", "bearingTo"]
+- !private ["s28CustomDebugStringConvertibleP", "bottomLine"]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "distanceTo"]
+- !private ["s28CustomDebugStringConvertibleP", "dotProductWith"]
+- !private ["s28CustomDebugStringConvertibleP", "height"]
+- !private ["s28CustomDebugStringConvertibleP", "hypot"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "leftLine"]
+- !private ["s28CustomDebugStringConvertibleP", "max"]
+- !private ["s28CustomDebugStringConvertibleP", "maxX"]
+- !private ["s28CustomDebugStringConvertibleP", "maxY"]
+- !private ["s28CustomDebugStringConvertibleP", "midX"]
+- !private ["s28CustomDebugStringConvertibleP", "midY"]
+- !private ["s28CustomDebugStringConvertibleP", "minX"]
+- !private ["s28CustomDebugStringConvertibleP", "minY"]
+- !private ["s28CustomDebugStringConvertibleP", "modulo"]
+- !private ["s28CustomDebugStringConvertibleP", "pow"]
+- !private ["s28CustomDebugStringConvertibleP", "rightLine"]
+- !private ["s28CustomDebugStringConvertibleP", "scalarProjectionWith"]
+- !private ["s28CustomDebugStringConvertibleP", "sqrt"]
+- !private ["s28CustomDebugStringConvertibleP", "topLine"]
+- !private ["s28CustomDebugStringConvertibleP", "width"]
+- !private ["s28CustomDebugStringConvertibleP", "x"]
+- !private ["s28CustomDebugStringConvertibleP", "y"]
+- !private ["s17CustomReflectableP", "CGPoint"]
+- !private ["s17CustomReflectableP", "Direction"]
+- !private ["s17CustomReflectableP", "Double"]
+- !private ["s17CustomReflectableP", "atan2"]
+- !private ["s17CustomReflectableP", "bearingTo"]
+- !private ["s17CustomReflectableP", "bottomLine"]
+- !private ["s17CustomReflectableP", "contains"]
+- !private ["s17CustomReflectableP", "distanceTo"]
+- !private ["s17CustomReflectableP", "dotProductWith"]
+- !private ["s17CustomReflectableP", "height"]
+- !private ["s17CustomReflectableP", "hypot"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "leftLine"]
+- !private ["s17CustomReflectableP", "max"]
+- !private ["s17CustomReflectableP", "maxX"]
+- !private ["s17CustomReflectableP", "maxY"]
+- !private ["s17CustomReflectableP", "midX"]
+- !private ["s17CustomReflectableP", "midY"]
+- !private ["s17CustomReflectableP", "minX"]
+- !private ["s17CustomReflectableP", "minY"]
+- !private ["s17CustomReflectableP", "modulo"]
+- !private ["s17CustomReflectableP", "pow"]
+- !private ["s17CustomReflectableP", "rightLine"]
+- !private ["s17CustomReflectableP", "scalarProjectionWith"]
+- !private ["s17CustomReflectableP", "sqrt"]
+- !private ["s17CustomReflectableP", "topLine"]
+- !private ["s17CustomReflectableP", "width"]
+- !private ["s17CustomReflectableP", "x"]
+- !private ["s17CustomReflectableP", "y"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["Se", "CGPoint"]
+- !private ["Se", "Direction"]
+- !private ["Se", "Double"]
+- !private ["Se", "atan2"]
+- !private ["Se", "bearingTo"]
+- !private ["Se", "bottomLine"]
+- !private ["Se", "contains"]
+- !private ["Se", "distanceTo"]
+- !private ["Se", "dotProductWith"]
+- !private ["Se", "height"]
+- !private ["Se", "hypot"]
+- !private ["Se", "init"]
+- !private ["Se", "leftLine"]
+- !private ["Se", "max"]
+- !private ["Se", "maxX"]
+- !private ["Se", "maxY"]
+- !private ["Se", "midX"]
+- !private ["Se", "midY"]
+- !private ["Se", "minX"]
+- !private ["Se", "minY"]
+- !private ["Se", "modulo"]
+- !private ["Se", "pow"]
+- !private ["Se", "rightLine"]
+- !private ["Se", "scalarProjectionWith"]
+- !private ["Se", "sqrt"]
+- !private ["Se", "topLine"]
+- !private ["Se", "width"]
+- !private ["Se", "x"]
+- !private ["Se", "y"]
+- !private ["Sd", "init"]
+- !private ["SE", "CGPoint"]
+- !private ["SE", "Direction"]
+- !private ["SE", "Double"]
+- !private ["SE", "atan2"]
+- !private ["SE", "bearingTo"]
+- !private ["SE", "bottomLine"]
+- !private ["SE", "contains"]
+- !private ["SE", "distanceTo"]
+- !private ["SE", "dotProductWith"]
+- !private ["SE", "height"]
+- !private ["SE", "hypot"]
+- !private ["SE", "init"]
+- !private ["SE", "leftLine"]
+- !private ["SE", "max"]
+- !private ["SE", "maxX"]
+- !private ["SE", "maxY"]
+- !private ["SE", "midX"]
+- !private ["SE", "midY"]
+- !private ["SE", "minX"]
+- !private ["SE", "minY"]
+- !private ["SE", "modulo"]
+- !private ["SE", "pow"]
+- !private ["SE", "rightLine"]
+- !private ["SE", "scalarProjectionWith"]
+- !private ["SE", "sqrt"]
+- !private ["SE", "topLine"]
+- !private ["SE", "width"]
+- !private ["SE", "x"]
+- !private ["SE", "y"]
+- ["SQ", "=="]
+- ["SQ", "AllCases"]
+- !private ["SQ", "CGPoint"]
+- !private ["SQ", "CGRect"]
+- !private ["SQ", "Direction"]
+- !private ["SQ", "Double"]
+- !private ["SQ", "HorizontalPosition"]
+- ["SQ", "RawValue"]
+- !private ["SQ", "VerticalPosition"]
+- ["SQ", ""]
+- ["SQ", "_Default_AllCases"]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "_findStringSwitchCase"]
+- ["SQ", "_rawHashValue"]
+- ["SQ", "allCases"]
+- !private ["SQ", "atan2"]
+- !private ["SQ", "bearingTo"]
+- ["SQ", "bottom"]
+- ["SQ", "bottomLeft"]
+- !private ["SQ", "bottomLine"]
+- ["SQ", "bottomRight"]
+- !private ["SQ", "contains"]
+- !private ["SQ", "distanceTo"]
+- !private ["SQ", "dotProductWith"]
+- ["SQ", "down"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- !private ["SQ", "height"]
+- !private ["SQ", "hypot"]
+- ["SQ", "init"]
+- ["SQ", "left"]
+- !private ["SQ", "leftLine"]
+- !private ["SQ", "max"]
+- !private ["SQ", "maxX"]
+- !private ["SQ", "maxY"]
+- !private ["SQ", "midX"]
+- !private ["SQ", "midY"]
+- ["SQ", "middle"]
+- !private ["SQ", "minX"]
+- !private ["SQ", "minY"]
+- !private ["SQ", "modulo"]
+- !private ["SQ", "pow"]
+- ["SQ", "rawValue"]
+- ["SQ", "right"]
+- !private ["SQ", "rightLine"]
+- !private ["SQ", "scalarProjectionWith"]
+- !private ["SQ", "sqrt"]
+- !private ["SQ", "swipeDirection"]
+- ["SQ", "top"]
+- ["SQ", "topLeft"]
+- !private ["SQ", "topLine"]
+- ["SQ", "topRight"]
+- ["SQ", "up"]
+- !private ["SQ", "width"]
+- !private ["SQ", "x"]
+- !private ["SQ", "y"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["SF", "init"]
+- ["SH", "=="]
+- ["SH", "AllCases"]
+- !private ["SH", "CGRect"]
+- !private ["SH", "HorizontalPosition"]
+- ["SH", "RawValue"]
+- !private ["SH", "VerticalPosition"]
+- ["SH", ""]
+- ["SH", "_Default_AllCases"]
+- ["SH", "_Default_RawValue"]
+- !private ["SH", "_findStringSwitchCase"]
+- ["SH", "_rawHashValue"]
+- ["SH", "allCases"]
+- ["SH", "bottom"]
+- ["SH", "bottomLeft"]
+- ["SH", "bottomRight"]
+- ["SH", "down"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "init"]
+- ["SH", "left"]
+- ["SH", "middle"]
+- ["SH", "rawValue"]
+- ["SH", "right"]
+- !private ["SH", "swipeDirection"]
+- ["SH", "top"]
+- ["SH", "topLeft"]
+- ["SH", "topRight"]
+- ["SH", "up"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["Sj", "init"]
+- ["SY", "=="]
+- ["SY", "AllCases"]
+- !private ["SY", "CGRect"]
+- !private ["SY", "HorizontalPosition"]
+- ["SY", "RawValue"]
+- !private ["SY", "VerticalPosition"]
+- ["SY", ""]
+- ["SY", "_Default_AllCases"]
+- ["SY", "_Default_RawValue"]
+- !private ["SY", "_findStringSwitchCase"]
+- ["SY", "_rawHashValue"]
+- ["SY", "allCases"]
+- ["SY", "bottom"]
+- ["SY", "bottomLeft"]
+- ["SY", "bottomRight"]
+- ["SY", "down"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "init"]
+- ["SY", "left"]
+- ["SY", "middle"]
+- ["SY", "rawValue"]
+- ["SY", "right"]
+- !private ["SY", "swipeDirection"]
+- ["SY", "top"]
+- ["SY", "topLeft"]
+- ["SY", "topRight"]
+- ["SY", "up"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", "init"]
+- ["6Koloda20SwipeResultDirectionO", "=="]
+- ["6Koloda20SwipeResultDirectionO", "AllCases"]
+- ["6Koloda20SwipeResultDirectionO", "CGPoint"]
+- ["6Koloda20SwipeResultDirectionO", "CGRect"]
+- ["6Koloda20SwipeResultDirectionO", "Direction"]
+- ["6Koloda20SwipeResultDirectionO", "Double"]
+- !private ["6Koloda20SwipeResultDirectionO", "HorizontalPosition"]
+- ["6Koloda20SwipeResultDirectionO", "RawValue"]
+- !private ["6Koloda20SwipeResultDirectionO", "VerticalPosition"]
+- ["6Koloda20SwipeResultDirectionO", "_Default_AllCases"]
+- ["6Koloda20SwipeResultDirectionO", "_Default_RawValue"]
+- !private ["6Koloda20SwipeResultDirectionO", "_findStringSwitchCase"]
+- ["6Koloda20SwipeResultDirectionO", "_rawHashValue"]
+- ["6Koloda20SwipeResultDirectionO", "allCases"]
+- ["6Koloda20SwipeResultDirectionO", "bearing"]
+- ["6Koloda20SwipeResultDirectionO", "bottomLeft"]
+- ["6Koloda20SwipeResultDirectionO", "bottomRight"]
+- ["6Koloda20SwipeResultDirectionO", "boundsRect"]
+- ["6Koloda20SwipeResultDirectionO", "deinit"]
+- ["6Koloda20SwipeResultDirectionO", "down"]
+- ["6Koloda20SwipeResultDirectionO", "hash"]
+- ["6Koloda20SwipeResultDirectionO", "hashValue"]
+- ["6Koloda20SwipeResultDirectionO", "init"]
+- ["6Koloda20SwipeResultDirectionO", "left"]
+- ["6Koloda20SwipeResultDirectionO", "point"]
+- ["6Koloda20SwipeResultDirectionO", "rawValue"]
+- ["6Koloda20SwipeResultDirectionO", "right"]
+- !private ["6Koloda20SwipeResultDirectionO", "swipeDirection"]
+- ["6Koloda20SwipeResultDirectionO", "topLeft"]
+- ["6Koloda20SwipeResultDirectionO", "topRight"]
+- ["6Koloda20SwipeResultDirectionO", "up"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "CGPoint"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "Direction"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "Double"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "atan2"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "bearingTo"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "bottomLine"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "contains"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "distanceTo"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "dotProductWith"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "height"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "hypot"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "leftLine"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "max"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "maxX"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "maxY"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "midX"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "midY"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "minX"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "minY"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "modulo"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "pow"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "rightLine"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "scalarProjectionWith"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "sqrt"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "topLine"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "width"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "x"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "y"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "CGPoint"]
+- !private ["s21_ObjectiveCBridgeableP", "Direction"]
+- !private ["s21_ObjectiveCBridgeableP", "Double"]
+- !private ["s21_ObjectiveCBridgeableP", "atan2"]
+- !private ["s21_ObjectiveCBridgeableP", "bearingTo"]
+- !private ["s21_ObjectiveCBridgeableP", "bottomLine"]
+- !private ["s21_ObjectiveCBridgeableP", "contains"]
+- !private ["s21_ObjectiveCBridgeableP", "distanceTo"]
+- !private ["s21_ObjectiveCBridgeableP", "dotProductWith"]
+- !private ["s21_ObjectiveCBridgeableP", "height"]
+- !private ["s21_ObjectiveCBridgeableP", "hypot"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "leftLine"]
+- !private ["s21_ObjectiveCBridgeableP", "max"]
+- !private ["s21_ObjectiveCBridgeableP", "maxX"]
+- !private ["s21_ObjectiveCBridgeableP", "maxY"]
+- !private ["s21_ObjectiveCBridgeableP", "midX"]
+- !private ["s21_ObjectiveCBridgeableP", "midY"]
+- !private ["s21_ObjectiveCBridgeableP", "minX"]
+- !private ["s21_ObjectiveCBridgeableP", "minY"]
+- !private ["s21_ObjectiveCBridgeableP", "modulo"]
+- !private ["s21_ObjectiveCBridgeableP", "pow"]
+- !private ["s21_ObjectiveCBridgeableP", "rightLine"]
+- !private ["s21_ObjectiveCBridgeableP", "scalarProjectionWith"]
+- !private ["s21_ObjectiveCBridgeableP", "sqrt"]
+- !private ["s21_ObjectiveCBridgeableP", "topLine"]
+- !private ["s21_ObjectiveCBridgeableP", "width"]
+- !private ["s21_ObjectiveCBridgeableP", "x"]
+- !private ["s21_ObjectiveCBridgeableP", "y"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "SB"
+- "So7CGPointV"
+- "So6CGRectV"
+- !private "So6CGSizeV"
+- !private "s7CVarArgP"
+- "s12CaseIterableP"
+- !private "SL"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "Sd"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "SF"
+- "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "Sj"
+- "SY"
+- !private "s10SIMDScalarP"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- "6Koloda20SwipeResultDirectionO"
+- !private "s20TextOutputStreamableP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POP.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Koloda/Koloda-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/pop/pop-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPBasicAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPSpringAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPCustomAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPDecayAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPPropertyAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimationTracer.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimator.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPVector.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimationExtras.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPLayerExtras.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPDefines.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimatablePropertyTypes.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimationEvent.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPGeometry.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimatableProperty.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Koloda.build/unextended-module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/pop.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "1a07f86407a8d74cec87a335baaaaf67"

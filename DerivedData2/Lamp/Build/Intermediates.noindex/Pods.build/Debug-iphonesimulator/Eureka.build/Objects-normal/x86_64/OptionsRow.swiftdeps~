@@ -1,0 +1,215 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "OptionsRow"
+provides-nominal:
+- "6Eureka10OptionsRowC"
+provides-member:
+- ["6Eureka10OptionsRowC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "BaseCell"
+- "CellType"
+- "NoValueDisplayTextConformance"
+- "OptionsProvider"
+- "OptionsProviderRow"
+- "OptionsRow"
+- "Row"
+- "String"
+depends-member:
+- ["6Eureka8BaseCellC", "Value"]
+- ["6Eureka12BaseCellTypeP", "Value"]
+- ["6Eureka7BaseRowC", "OptionsProvider"]
+- ["6Eureka7BaseRowC", "OptionsProviderType"]
+- ["6Eureka7BaseRowC", "String"]
+- ["6Eureka7BaseRowC", "_Default_OptionsProviderType"]
+- ["6Eureka7BaseRowC", "cachedOptionsData"]
+- ["6Eureka7BaseRowC", "init"]
+- ["6Eureka7BaseRowC", "noValueDisplayText"]
+- ["6Eureka7BaseRowC", "optionsProvider"]
+- ["6Eureka7BaseRowC", "selectorTitle"]
+- ["6Eureka11BaseRowTypeP", "OptionsProviderType"]
+- ["6Eureka11BaseRowTypeP", ""]
+- ["6Eureka11BaseRowTypeP", "_Default_OptionsProviderType"]
+- ["6Eureka11BaseRowTypeP", "cachedOptionsData"]
+- !private ["6Eureka11BaseRowTypeP", "init"]
+- ["6Eureka11BaseRowTypeP", "noValueDisplayText"]
+- ["6Eureka11BaseRowTypeP", "optionsProvider"]
+- ["So15CALayerDelegateP", "Value"]
+- ["s7CVarArgP", "Value"]
+- ["6Eureka8CellTypeP", "Value"]
+- ["s28CustomDebugStringConvertibleP", "Value"]
+- ["s23CustomStringConvertibleP", "Value"]
+- ["6Eureka11DisableableP", "OptionsProviderType"]
+- ["6Eureka11DisableableP", ""]
+- ["6Eureka11DisableableP", "_Default_OptionsProviderType"]
+- ["6Eureka11DisableableP", "cachedOptionsData"]
+- !private ["6Eureka11DisableableP", "init"]
+- ["6Eureka11DisableableP", "noValueDisplayText"]
+- ["6Eureka11DisableableP", "optionsProvider"]
+- ["SQ", "OptionsProviderType"]
+- ["SQ", "Value"]
+- ["SQ", ""]
+- ["SQ", "_Default_OptionsProviderType"]
+- ["SQ", "cachedOptionsData"]
+- !private ["SQ", "init"]
+- ["SQ", "noValueDisplayText"]
+- ["SQ", "optionsProvider"]
+- ["SH", "Value"]
+- ["6Eureka7HidableP", "OptionsProviderType"]
+- ["6Eureka7HidableP", ""]
+- ["6Eureka7HidableP", "_Default_OptionsProviderType"]
+- ["6Eureka7HidableP", "cachedOptionsData"]
+- !private ["6Eureka7HidableP", "init"]
+- ["6Eureka7HidableP", "noValueDisplayText"]
+- ["6Eureka7HidableP", "optionsProvider"]
+- ["So8NSCodingP", "Value"]
+- ["So8NSObjectC", "Value"]
+- ["So8NSObjectP", "Value"]
+- ["6Eureka29NoValueDisplayTextConformanceP", "OptionsProviderType"]
+- ["6Eureka29NoValueDisplayTextConformanceP", ""]
+- ["6Eureka29NoValueDisplayTextConformanceP", "_Default_OptionsProviderType"]
+- ["6Eureka29NoValueDisplayTextConformanceP", "cachedOptionsData"]
+- ["6Eureka29NoValueDisplayTextConformanceP", "noValueDisplayText"]
+- ["6Eureka29NoValueDisplayTextConformanceP", "optionsProvider"]
+- ["6Eureka15OptionsProviderO", "deinit"]
+- ["6Eureka18OptionsProviderRowP", "OptionsProviderType"]
+- ["6Eureka18OptionsProviderRowP", ""]
+- ["6Eureka18OptionsProviderRowP", "_Default_OptionsProviderType"]
+- ["6Eureka18OptionsProviderRowP", "cachedOptionsData"]
+- ["6Eureka18OptionsProviderRowP", "noValueDisplayText"]
+- ["6Eureka18OptionsProviderRowP", "optionsProvider"]
+- ["6Eureka10OptionsRowC", "OptionsProvider"]
+- ["6Eureka10OptionsRowC", "OptionsProviderType"]
+- ["6Eureka10OptionsRowC", "String"]
+- ["6Eureka10OptionsRowC", "_Default_OptionsProviderType"]
+- ["6Eureka10OptionsRowC", "cachedOptionsData"]
+- ["6Eureka10OptionsRowC", "deinit"]
+- ["6Eureka10OptionsRowC", "init"]
+- ["6Eureka10OptionsRowC", "noValueDisplayText"]
+- ["6Eureka10OptionsRowC", "optionsProvider"]
+- ["6Eureka10OptionsRowC", "selectorTitle"]
+- ["6Eureka3RowC", "OptionsProvider"]
+- ["6Eureka3RowC", "OptionsProviderType"]
+- ["6Eureka3RowC", "String"]
+- ["6Eureka3RowC", ""]
+- ["6Eureka3RowC", "_Default_OptionsProviderType"]
+- ["6Eureka3RowC", "cachedOptionsData"]
+- ["6Eureka3RowC", "init"]
+- ["6Eureka3RowC", "noValueDisplayText"]
+- ["6Eureka3RowC", "optionsProvider"]
+- ["6Eureka3RowC", "selectorTitle"]
+- ["6Eureka5RowOfC", "OptionsProvider"]
+- ["6Eureka5RowOfC", "OptionsProviderType"]
+- ["6Eureka5RowOfC", "String"]
+- ["6Eureka5RowOfC", "_Default_OptionsProviderType"]
+- ["6Eureka5RowOfC", "cachedOptionsData"]
+- ["6Eureka5RowOfC", "init"]
+- ["6Eureka5RowOfC", "noValueDisplayText"]
+- ["6Eureka5RowOfC", "optionsProvider"]
+- ["6Eureka5RowOfC", "selectorTitle"]
+- ["6Eureka8TaggableP", "OptionsProviderType"]
+- ["6Eureka8TaggableP", ""]
+- ["6Eureka8TaggableP", "_Default_OptionsProviderType"]
+- ["6Eureka8TaggableP", "cachedOptionsData"]
+- !private ["6Eureka8TaggableP", "init"]
+- ["6Eureka8TaggableP", "noValueDisplayText"]
+- ["6Eureka8TaggableP", "optionsProvider"]
+- ["6Eureka13TypedCellTypeP", "Value"]
+- ["6Eureka12TypedRowTypeP", "OptionsProviderType"]
+- ["6Eureka12TypedRowTypeP", ""]
+- ["6Eureka12TypedRowTypeP", "_Default_OptionsProviderType"]
+- ["6Eureka12TypedRowTypeP", "cachedOptionsData"]
+- !private ["6Eureka12TypedRowTypeP", "init"]
+- ["6Eureka12TypedRowTypeP", "noValueDisplayText"]
+- ["6Eureka12TypedRowTypeP", "optionsProvider"]
+- ["So29UIAccessibilityIdentificationP", "Value"]
+- ["So12UIAppearanceP", "Value"]
+- ["So21UIAppearanceContainerP", "Value"]
+- ["So17UICoordinateSpaceP", "Value"]
+- ["So13UIDynamicItemP", "Value"]
+- ["So18UIFocusEnvironmentP", "Value"]
+- ["So11UIFocusItemP", "Value"]
+- ["So20UIFocusItemContainerP", "Value"]
+- ["So27UIGestureRecognizerDelegateP", "Value"]
+- ["So30UIPasteConfigurationSupportingP", "Value"]
+- ["So11UIResponderC", "Value"]
+- ["So30UIResponderStandardEditActionsP", "Value"]
+- ["So15UITableViewCellC", "Value"]
+- ["So18UITraitEnvironmentP", "Value"]
+- ["So23UIUserActivityRestoringP", "Value"]
+- ["So6UIViewC", "Value"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Value"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "Value"]
+depends-nominal:
+- "6Eureka8BaseCellC"
+- "6Eureka12BaseCellTypeP"
+- "6Eureka7BaseRowC"
+- "6Eureka11BaseRowTypeP"
+- "So15CALayerDelegateP"
+- "s7CVarArgP"
+- "6Eureka8CellTypeP"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "6Eureka11DisableableP"
+- "SQ"
+- "SH"
+- "6Eureka7HidableP"
+- "So8NSCodingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "6Eureka29NoValueDisplayTextConformanceP"
+- "6Eureka15OptionsProviderO"
+- "6Eureka18OptionsProviderRowP"
+- "6Eureka10OptionsRowC"
+- "6Eureka3RowC"
+- "6Eureka5RowOfC"
+- "6Eureka8TaggableP"
+- "6Eureka13TypedCellTypeP"
+- "6Eureka12TypedRowTypeP"
+- "So29UIAccessibilityIdentificationP"
+- "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So17UICoordinateSpaceP"
+- "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
+- "So27UIGestureRecognizerDelegateP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So15UITableViewCellC"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- "So6UIViewC"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Eureka/Eureka-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Eureka.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "8328b6284289230edbfb3446db0f0a7b"

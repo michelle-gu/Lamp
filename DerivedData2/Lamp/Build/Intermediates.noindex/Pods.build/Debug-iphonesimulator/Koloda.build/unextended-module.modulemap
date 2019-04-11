@@ -1,0 +1,10 @@
+framework module Koloda {
+  umbrella header "Koloda-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Koloda.__Swift {
+    exclude header "Koloda-Swift.h"
+}
