@@ -1,0 +1,56 @@
+dependencies: \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequest.m \
+  /Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FBSDKCoreKit.build/module.modulemap \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Target\ Support\ Files/FBSDKCoreKit/FBSDKCoreKit-prefix.pch \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Internal/Network/FBSDKGraphRequest+Internal.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequest.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequestConnection.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKAccessToken.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKCopying.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppEvents/FBSDKAppEvents.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKApplicationDelegate.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKButton.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKConstants.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequestDataAttachment.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKMacros.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKSettings.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKTestUsersManager.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKUtility.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLink.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLinkTarget.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLinkNavigation.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLinkResolving.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLinkResolver.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFAppLinkResolving.h \
+  /Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Bolts.build/module.modulemap \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/Bolts.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/BFTaskCompletionSource.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/BFTask.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/BFGeneric.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/BFExecutor.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/BFCancellationTokenSource.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/BFCancellationTokenRegistration.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/BFCancellationToken.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFWebViewAppLinkResolver.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFURL.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFMeasurementEvent.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFAppLinkTarget.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFAppLinkReturnToRefererView.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFAppLinkReturnToRefererController.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFAppLinkNavigation.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFAppLink.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/Target\ Support\ Files/Bolts/Bolts-umbrella.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLinkReturnToRefererController.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLinkReturnToRefererView.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLinkUtility.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphErrorRecoveryProcessor.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKMeasurementEvent.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKMutableCopying.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKProfile.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKProfilePictureView.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKURL.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKWebViewAppLinkResolver.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKInternalUtility.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKLogger.h \
+  /Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKSettings+Internal.h

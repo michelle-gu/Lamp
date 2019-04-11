@@ -1,0 +1,371 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SSLTrustValidator"
+- "SSLCert"
+- "SSLSecurity"
+provides-nominal:
+- "10Starscream17SSLTrustValidatorP"
+- "10Starscream7SSLCertC"
+- "10Starscream11SSLSecurityC"
+provides-member:
+- ["10Starscream17SSLTrustValidatorP", ""]
+- ["10Starscream7SSLCertC", ""]
+- ["10Starscream11SSLSecurityC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- !private "+="
+- !private "..<"
+- !private "=="
+- !private ">"
+- !private "AnyObject"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- !private "Bundle"
+- !private "CFData"
+- "CastingPrecedence"
+- "Data"
+- !private "DispatchQueue"
+- !private "FloatLiteralType"
+- !private "Int"
+- !private "IntegerLiteralType"
+- !private "NSArray"
+- !private "NSData"
+- !private "NSString"
+- "SSLCert"
+- "SSLSecurity"
+- "SSLTrustValidator"
+- "SecCertificate"
+- !private "SecCertificateCopyData"
+- !private "SecCertificateCreateWithData"
+- "SecKey"
+- "SecPolicy"
+- !private "SecPolicyCreateBasicX509"
+- !private "SecPolicyCreateSSL"
+- "SecTrust"
+- !private "SecTrustCopyPublicKey"
+- !private "SecTrustCreateWithCertificates"
+- !private "SecTrustEvaluate"
+- !private "SecTrustGetCertificateAtIndex"
+- !private "SecTrustGetCertificateCount"
+- !private "SecTrustResultType"
+- !private "SecTrustSetAnchorCertificates"
+- !private "SecTrustSetPolicies"
+- "String"
+- !private "StringLiteralType"
+- !private "UnicodeScalarType"
+- !private "usleep"
+- !private "||"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "count"]
+- !private ["Sa", "init"]
+- !private ["Sa", "reduce"]
+- !private ["SK", "append"]
+- !private ["SK", "count"]
+- !private ["SK", "init"]
+- !private ["SK", "reduce"]
+- !private ["So8NSBundleC", "main"]
+- !private ["So8NSBundleC", "paths"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "global"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "paths"]
+- !private ["s7CVarArgP", "reduce"]
+- !private ["Sl", "append"]
+- !private ["Sl", "count"]
+- !private ["Sl", "init"]
+- !private ["Sl", "reduce"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "init"]
+- !private ["10Foundation15ContiguousBytesP", "reduce"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "global"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "paths"]
+- !private ["s28CustomDebugStringConvertibleP", "reduce"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "reduce"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "global"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "paths"]
+- !private ["s23CustomStringConvertibleP", "reduce"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "init"]
+- !private ["10Foundation12DataProtocolP", "reduce"]
+- !private ["Se", "append"]
+- !private ["Se", "count"]
+- !private ["Se", "init"]
+- !private ["Se", "reduce"]
+- !private ["So18OS_dispatch_objectC", "async"]
+- !private ["So18OS_dispatch_objectC", "global"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- !private ["So17OS_dispatch_queueC", "global"]
+- !private ["SE", "append"]
+- !private ["SE", "count"]
+- !private ["SE", "init"]
+- !private ["SE", "reduce"]
+- !private ["SQ", "append"]
+- !private ["SQ", "async"]
+- !private ["SQ", "count"]
+- !private ["SQ", "default"]
+- !private ["SQ", "global"]
+- !private ["SQ", "init"]
+- !private ["SQ", "main"]
+- !private ["SQ", "paths"]
+- !private ["SQ", "proceed"]
+- !private ["SQ", "reduce"]
+- !private ["SQ", "unspecified"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "reduce"]
+- !private ["SH", "append"]
+- !private ["SH", "async"]
+- !private ["SH", "count"]
+- !private ["SH", "default"]
+- !private ["SH", "global"]
+- !private ["SH", "init"]
+- !private ["SH", "main"]
+- !private ["SH", "paths"]
+- !private ["SH", "proceed"]
+- !private ["SH", "reduce"]
+- !private ["SH", "unspecified"]
+- !private ["SM", "append"]
+- !private ["SM", "count"]
+- !private ["SM", "init"]
+- !private ["SM", "reduce"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "reduce"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So6NSDataC", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "global"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "paths"]
+- !private ["So8NSObjectP", "async"]
+- !private ["So8NSObjectP", "global"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "paths"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "global"]
+- !private ["8Dispatch0A3QoSV0B6SClassO", "default"]
+- !private ["Sk", "append"]
+- !private ["Sk", "count"]
+- !private ["Sk", "init"]
+- !private ["Sk", "reduce"]
+- !private ["Sn", "reduce"]
+- !private ["SX", "reduce"]
+- !private ["Sm", "append"]
+- !private ["Sm", "count"]
+- !private ["Sm", "init"]
+- !private ["Sm", "reduce"]
+- !private ["SY", "proceed"]
+- !private ["SY", "unspecified"]
+- ["10Starscream7SSLCertC", "Data"]
+- ["10Starscream7SSLCertC", "SecKey"]
+- ["10Starscream7SSLCertC", "certData"]
+- ["10Starscream7SSLCertC", "init"]
+- ["10Starscream7SSLCertC", "key"]
+- !private ["10Starscream11SSLSecurityC", "AnyObject"]
+- ["10Starscream11SSLSecurityC", "Bool"]
+- !private ["10Starscream11SSLSecurityC", "Bundle"]
+- !private ["10Starscream11SSLSecurityC", "CFData"]
+- ["10Starscream11SSLSecurityC", "Data"]
+- !private ["10Starscream11SSLSecurityC", "DispatchQueue"]
+- !private ["10Starscream11SSLSecurityC", "Int"]
+- !private ["10Starscream11SSLSecurityC", "NSArray"]
+- !private ["10Starscream11SSLSecurityC", "NSData"]
+- !private ["10Starscream11SSLSecurityC", "NSString"]
+- ["10Starscream11SSLSecurityC", "SSLCert"]
+- ["10Starscream11SSLSecurityC", "SecCertificate"]
+- !private ["10Starscream11SSLSecurityC", "SecCertificateCopyData"]
+- !private ["10Starscream11SSLSecurityC", "SecCertificateCreateWithData"]
+- ["10Starscream11SSLSecurityC", "SecKey"]
+- ["10Starscream11SSLSecurityC", "SecPolicy"]
+- !private ["10Starscream11SSLSecurityC", "SecPolicyCreateBasicX509"]
+- !private ["10Starscream11SSLSecurityC", "SecPolicyCreateSSL"]
+- ["10Starscream11SSLSecurityC", "SecTrust"]
+- !private ["10Starscream11SSLSecurityC", "SecTrustCopyPublicKey"]
+- !private ["10Starscream11SSLSecurityC", "SecTrustCreateWithCertificates"]
+- !private ["10Starscream11SSLSecurityC", "SecTrustEvaluate"]
+- !private ["10Starscream11SSLSecurityC", "SecTrustGetCertificateAtIndex"]
+- !private ["10Starscream11SSLSecurityC", "SecTrustGetCertificateCount"]
+- !private ["10Starscream11SSLSecurityC", "SecTrustResultType"]
+- !private ["10Starscream11SSLSecurityC", "SecTrustSetAnchorCertificates"]
+- !private ["10Starscream11SSLSecurityC", "SecTrustSetPolicies"]
+- ["10Starscream11SSLSecurityC", "String"]
+- ["10Starscream11SSLSecurityC", "certificateChain"]
+- ["10Starscream11SSLSecurityC", "certificates"]
+- ["10Starscream11SSLSecurityC", "deinit"]
+- ["10Starscream11SSLSecurityC", "extractPublicKey"]
+- ["10Starscream11SSLSecurityC", "init"]
+- ["10Starscream11SSLSecurityC", "isReady"]
+- ["10Starscream11SSLSecurityC", "isValid"]
+- ["10Starscream11SSLSecurityC", "pubKeys"]
+- ["10Starscream11SSLSecurityC", "publicKeyChain"]
+- ["10Starscream11SSLSecurityC", "usePublicKeys"]
+- !private ["10Starscream11SSLSecurityC", "usleep"]
+- ["10Starscream11SSLSecurityC", "validatedDN"]
+- ["10Starscream17SSLTrustValidatorP", "Bool"]
+- !private ["10Starscream17SSLTrustValidatorP", "Bundle"]
+- !private ["10Starscream17SSLTrustValidatorP", "Data"]
+- !private ["10Starscream17SSLTrustValidatorP", "DispatchQueue"]
+- !private ["10Starscream17SSLTrustValidatorP", "NSData"]
+- !private ["10Starscream17SSLTrustValidatorP", "SSLCert"]
+- !private ["10Starscream17SSLTrustValidatorP", "SecCertificate"]
+- !private ["10Starscream17SSLTrustValidatorP", "SecCertificateCopyData"]
+- !private ["10Starscream17SSLTrustValidatorP", "SecCertificateCreateWithData"]
+- !private ["10Starscream17SSLTrustValidatorP", "SecKey"]
+- !private ["10Starscream17SSLTrustValidatorP", "SecPolicyCreateBasicX509"]
+- !private ["10Starscream17SSLTrustValidatorP", "SecPolicyCreateSSL"]
+- ["10Starscream17SSLTrustValidatorP", "SecTrust"]
+- !private ["10Starscream17SSLTrustValidatorP", "SecTrustCopyPublicKey"]
+- !private ["10Starscream17SSLTrustValidatorP", "SecTrustCreateWithCertificates"]
+- !private ["10Starscream17SSLTrustValidatorP", "SecTrustEvaluate"]
+- !private ["10Starscream17SSLTrustValidatorP", "SecTrustGetCertificateAtIndex"]
+- !private ["10Starscream17SSLTrustValidatorP", "SecTrustGetCertificateCount"]
+- !private ["10Starscream17SSLTrustValidatorP", "SecTrustSetAnchorCertificates"]
+- !private ["10Starscream17SSLTrustValidatorP", "SecTrustSetPolicies"]
+- ["10Starscream17SSLTrustValidatorP", "String"]
+- ["10Starscream17SSLTrustValidatorP", ""]
+- !private ["10Starscream17SSLTrustValidatorP", "certificateChain"]
+- !private ["10Starscream17SSLTrustValidatorP", "certificates"]
+- !private ["10Starscream17SSLTrustValidatorP", "extractPublicKey"]
+- !private ["10Starscream17SSLTrustValidatorP", "init"]
+- !private ["10Starscream17SSLTrustValidatorP", "isReady"]
+- ["10Starscream17SSLTrustValidatorP", "isValid"]
+- !private ["10Starscream17SSLTrustValidatorP", "pubKeys"]
+- !private ["10Starscream17SSLTrustValidatorP", "publicKeyChain"]
+- !private ["10Starscream17SSLTrustValidatorP", "usePublicKeys"]
+- !private ["10Starscream17SSLTrustValidatorP", "usleep"]
+- !private ["10Starscream17SSLTrustValidatorP", "validatedDN"]
+- !private ["So18SecTrustResultTypeV", "proceed"]
+- !private ["So18SecTrustResultTypeV", "unspecified"]
+- !private ["ST", "append"]
+- !private ["ST", "count"]
+- !private ["ST", "init"]
+- !private ["ST", "reduce"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "reduce"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "reduce"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "reduce"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "reduce"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "global"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "paths"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "reduce"]
+depends-nominal:
+- !private "Sa"
+- !private "SK"
+- !private "So8NSBundleC"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "10Foundation15ContiguousBytesP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
+- !private "SE"
+- !private "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "SH"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So6NSDataC"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So9OS_objectC"
+- !private "8Dispatch0A3QoSV0B6SClassO"
+- !private "Sk"
+- !private "Sn"
+- !private "SX"
+- !private "Sm"
+- !private "SY"
+- "10Starscream7SSLCertC"
+- "10Starscream11SSLSecurityC"
+- "10Starscream17SSLTrustValidatorP"
+- !private "So18SecTrustResultTypeV"
+- !private "ST"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+- !private "isEqual"
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Starscream/Starscream-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Starscream.build/unextended-module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Starscream/zlib/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "07ed60bc353ffbc9daa92574f9083beb"

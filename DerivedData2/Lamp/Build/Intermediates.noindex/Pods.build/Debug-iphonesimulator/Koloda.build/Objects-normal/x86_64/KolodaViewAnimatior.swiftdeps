@@ -1,0 +1,598 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "KolodaViewAnimator"
+provides-nominal:
+- "6Koloda0A12ViewAnimatorC"
+provides-member:
+- ["6Koloda0A12ViewAnimatorC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "+"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "CACurrentMediaTime"
+- "CGFloat"
+- !private "CGPoint"
+- "CGRect"
+- "CGSize"
+- "DraggableCardView"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
+- "KolodaView"
+- "KolodaViewAnimator"
+- !private "NSNumber"
+- !private "NSValue"
+- !private "POPBasicAnimation"
+- !private "StringLiteralType"
+- "SwipeResultDirection"
+- "TernaryPrecedence"
+- "TimeInterval"
+- !private "UIView"
+- "Void"
+- !private "cardSwipeActionAnimationDuration"
+- !private "kPOPLayerRotation"
+- !private "kPOPLayerScaleXY"
+- !private "kPOPLayerTranslationXY"
+- !private "kPOPViewAlpha"
+- !private "kPOPViewFrame"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["So22UIViewAnimationOptionsV", "curveLinear"]
+- !private ["Sa", "enumerated"]
+- !private ["Sa", "forEach"]
+- !private ["Sa", "map"]
+- !private ["Sa", "subscript"]
+- !private ["SK", "enumerated"]
+- !private ["SK", "forEach"]
+- !private ["SK", "map"]
+- !private ["SK", "subscript"]
+- !private ["SB", "init"]
+- !private ["So7CALayerC", "pop_add"]
+- !private ["So15CALayerDelegateP", "alpha"]
+- !private ["So15CALayerDelegateP", "animate"]
+- !private ["So15CALayerDelegateP", "animationPointForDirection"]
+- !private ["So15CALayerDelegateP", "animationRotationForDirection"]
+- !private ["So15CALayerDelegateP", "layer"]
+- !private ["So15CALayerDelegateP", "moveOtherCardsWithPercentage"]
+- !private ["So15CALayerDelegateP", "pop_add"]
+- !private ["So13CAMediaTimingP", "pop_add"]
+- !private ["12CoreGraphics7CGFloatV", "init"]
+- !private ["So7CGPointV", "init"]
+- !private ["So7CGPointV", "zero"]
+- !private ["s7CVarArgP", "alpha"]
+- !private ["s7CVarArgP", "animate"]
+- !private ["s7CVarArgP", "animationPointForDirection"]
+- !private ["s7CVarArgP", "animationRotationForDirection"]
+- !private ["s7CVarArgP", "beginTime"]
+- !private ["s7CVarArgP", "completionBlock"]
+- !private ["s7CVarArgP", "duration"]
+- !private ["s7CVarArgP", "enumerated"]
+- !private ["s7CVarArgP", "forEach"]
+- !private ["s7CVarArgP", "fromValue"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "layer"]
+- !private ["s7CVarArgP", "map"]
+- !private ["s7CVarArgP", "moveOtherCardsWithPercentage"]
+- !private ["s7CVarArgP", "pop_add"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "toValue"]
+- !private ["Sl", "enumerated"]
+- !private ["Sl", "forEach"]
+- !private ["Sl", "map"]
+- !private ["Sl", "subscript"]
+- !private ["SL", "init"]
+- !private ["10Foundation15ContiguousBytesP", "enumerated"]
+- !private ["10Foundation15ContiguousBytesP", "forEach"]
+- !private ["10Foundation15ContiguousBytesP", "map"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "alpha"]
+- !private ["s28CustomDebugStringConvertibleP", "animate"]
+- !private ["s28CustomDebugStringConvertibleP", "animationPointForDirection"]
+- !private ["s28CustomDebugStringConvertibleP", "animationRotationForDirection"]
+- !private ["s28CustomDebugStringConvertibleP", "beginTime"]
+- !private ["s28CustomDebugStringConvertibleP", "completionBlock"]
+- !private ["s28CustomDebugStringConvertibleP", "duration"]
+- !private ["s28CustomDebugStringConvertibleP", "enumerated"]
+- !private ["s28CustomDebugStringConvertibleP", "forEach"]
+- !private ["s28CustomDebugStringConvertibleP", "fromValue"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "layer"]
+- !private ["s28CustomDebugStringConvertibleP", "map"]
+- !private ["s28CustomDebugStringConvertibleP", "moveOtherCardsWithPercentage"]
+- !private ["s28CustomDebugStringConvertibleP", "pop_add"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "toValue"]
+- !private ["s28CustomDebugStringConvertibleP", "zero"]
+- !private ["s17CustomReflectableP", "enumerated"]
+- !private ["s17CustomReflectableP", "forEach"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "map"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "zero"]
+- !private ["s23CustomStringConvertibleP", "alpha"]
+- !private ["s23CustomStringConvertibleP", "animate"]
+- !private ["s23CustomStringConvertibleP", "animationPointForDirection"]
+- !private ["s23CustomStringConvertibleP", "animationRotationForDirection"]
+- !private ["s23CustomStringConvertibleP", "beginTime"]
+- !private ["s23CustomStringConvertibleP", "completionBlock"]
+- !private ["s23CustomStringConvertibleP", "duration"]
+- !private ["s23CustomStringConvertibleP", "enumerated"]
+- !private ["s23CustomStringConvertibleP", "forEach"]
+- !private ["s23CustomStringConvertibleP", "fromValue"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "layer"]
+- !private ["s23CustomStringConvertibleP", "map"]
+- !private ["s23CustomStringConvertibleP", "moveOtherCardsWithPercentage"]
+- !private ["s23CustomStringConvertibleP", "pop_add"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "toValue"]
+- !private ["10Foundation12DataProtocolP", "enumerated"]
+- !private ["10Foundation12DataProtocolP", "forEach"]
+- !private ["10Foundation12DataProtocolP", "map"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "enumerated"]
+- !private ["Se", "forEach"]
+- !private ["Se", "init"]
+- !private ["Se", "map"]
+- !private ["Se", "subscript"]
+- !private ["Se", "zero"]
+- !private ["6Koloda21DraggableCardDelegateP", "layer"]
+- !private ["6Koloda21DraggableCardDelegateP", "moveOtherCardsWithPercentage"]
+- !private ["6Koloda21DraggableCardDelegateP", "pop_add"]
+- !private ["6Koloda17DraggableCardViewC", "alpha"]
+- !private ["6Koloda17DraggableCardViewC", "animationPointForDirection"]
+- !private ["6Koloda17DraggableCardViewC", "animationRotationForDirection"]
+- !private ["6Koloda17DraggableCardViewC", "layer"]
+- !private ["6Koloda17DraggableCardViewC", "pop_add"]
+- !private ["SE", "enumerated"]
+- !private ["SE", "forEach"]
+- !private ["SE", "init"]
+- !private ["SE", "map"]
+- !private ["SE", "subscript"]
+- !private ["SE", "zero"]
+- !private ["SQ", "alpha"]
+- !private ["SQ", "animate"]
+- !private ["SQ", "animationPointForDirection"]
+- !private ["SQ", "animationRotationForDirection"]
+- !private ["SQ", "beginTime"]
+- !private ["SQ", "completionBlock"]
+- !private ["SQ", "curveLinear"]
+- !private ["SQ", "duration"]
+- !private ["SQ", "enumerated"]
+- !private ["SQ", "forEach"]
+- !private ["SQ", "fromValue"]
+- !private ["SQ", "init"]
+- !private ["SQ", "layer"]
+- !private ["SQ", "map"]
+- !private ["SQ", "moveOtherCardsWithPercentage"]
+- !private ["SQ", "pop_add"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "toValue"]
+- !private ["SQ", "zero"]
+- !private ["s25ExpressibleByArrayLiteralP", "curveLinear"]
+- !private ["s25ExpressibleByArrayLiteralP", "enumerated"]
+- !private ["s25ExpressibleByArrayLiteralP", "forEach"]
+- !private ["s25ExpressibleByArrayLiteralP", "map"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["SF", "init"]
+- !private ["SH", "alpha"]
+- !private ["SH", "animate"]
+- !private ["SH", "animationPointForDirection"]
+- !private ["SH", "animationRotationForDirection"]
+- !private ["SH", "beginTime"]
+- !private ["SH", "completionBlock"]
+- !private ["SH", "duration"]
+- !private ["SH", "enumerated"]
+- !private ["SH", "forEach"]
+- !private ["SH", "fromValue"]
+- !private ["SH", "init"]
+- !private ["SH", "layer"]
+- !private ["SH", "map"]
+- !private ["SH", "moveOtherCardsWithPercentage"]
+- !private ["SH", "pop_add"]
+- !private ["SH", "subscript"]
+- !private ["SH", "toValue"]
+- !private ["6Koloda0A4ViewC", "layer"]
+- !private ["6Koloda0A4ViewC", "moveOtherCardsWithPercentage"]
+- !private ["6Koloda0A4ViewC", "pop_add"]
+- ["6Koloda0A12ViewAnimatorC", "AnimationCompletionBlock"]
+- ["6Koloda0A12ViewAnimatorC", "Bool"]
+- !private ["6Koloda0A12ViewAnimatorC", "CACurrentMediaTime"]
+- ["6Koloda0A12ViewAnimatorC", "CGFloat"]
+- !private ["6Koloda0A12ViewAnimatorC", "CGPoint"]
+- ["6Koloda0A12ViewAnimatorC", "CGRect"]
+- ["6Koloda0A12ViewAnimatorC", "CGSize"]
+- ["6Koloda0A12ViewAnimatorC", "DraggableCardView"]
+- ["6Koloda0A12ViewAnimatorC", "KolodaView"]
+- !private ["6Koloda0A12ViewAnimatorC", "NSNumber"]
+- !private ["6Koloda0A12ViewAnimatorC", "NSValue"]
+- !private ["6Koloda0A12ViewAnimatorC", "POPBasicAnimation"]
+- ["6Koloda0A12ViewAnimatorC", "SwipeResultDirection"]
+- ["6Koloda0A12ViewAnimatorC", "TimeInterval"]
+- !private ["6Koloda0A12ViewAnimatorC", "UIView"]
+- ["6Koloda0A12ViewAnimatorC", "Void"]
+- ["6Koloda0A12ViewAnimatorC", "animateAppearance"]
+- ["6Koloda0A12ViewAnimatorC", "applyAlphaAnimation"]
+- ["6Koloda0A12ViewAnimatorC", "applyInsertionAnimation"]
+- ["6Koloda0A12ViewAnimatorC", "applyRemovalAnimation"]
+- ["6Koloda0A12ViewAnimatorC", "applyReverseAnimation"]
+- ["6Koloda0A12ViewAnimatorC", "applyScaleAnimation"]
+- !private ["6Koloda0A12ViewAnimatorC", "cardSwipeActionAnimationDuration"]
+- ["6Koloda0A12ViewAnimatorC", "init"]
+- !private ["6Koloda0A12ViewAnimatorC", "kPOPLayerRotation"]
+- !private ["6Koloda0A12ViewAnimatorC", "kPOPLayerScaleXY"]
+- !private ["6Koloda0A12ViewAnimatorC", "kPOPLayerTranslationXY"]
+- !private ["6Koloda0A12ViewAnimatorC", "kPOPViewAlpha"]
+- !private ["6Koloda0A12ViewAnimatorC", "kPOPViewFrame"]
+- !private ["6Koloda0A12ViewAnimatorC", "koloda"]
+- ["6Koloda0A12ViewAnimatorC", "resetBackgroundCardsWithCompletion"]
+- !private ["SM", "enumerated"]
+- !private ["SM", "forEach"]
+- !private ["SM", "map"]
+- !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "enumerated"]
+- !private ["10Foundation19MutableDataProtocolP", "forEach"]
+- !private ["10Foundation19MutableDataProtocolP", "map"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- !private ["So8NSCodingP", "alpha"]
+- !private ["So8NSCodingP", "animate"]
+- !private ["So8NSCodingP", "animationPointForDirection"]
+- !private ["So8NSCodingP", "animationRotationForDirection"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "layer"]
+- !private ["So8NSCodingP", "moveOtherCardsWithPercentage"]
+- !private ["So8NSCodingP", "pop_add"]
+- !private ["So9NSCopyingP", "beginTime"]
+- !private ["So9NSCopyingP", "completionBlock"]
+- !private ["So9NSCopyingP", "duration"]
+- !private ["So9NSCopyingP", "fromValue"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "toValue"]
+- !private ["So8NSNumberC", "init"]
+- !private ["So8NSObjectC", "alpha"]
+- !private ["So8NSObjectC", "animate"]
+- !private ["So8NSObjectC", "animationPointForDirection"]
+- !private ["So8NSObjectC", "animationRotationForDirection"]
+- !private ["So8NSObjectC", "beginTime"]
+- !private ["So8NSObjectC", "completionBlock"]
+- !private ["So8NSObjectC", "duration"]
+- !private ["So8NSObjectC", "fromValue"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "layer"]
+- !private ["So8NSObjectC", "moveOtherCardsWithPercentage"]
+- !private ["So8NSObjectC", "pop_add"]
+- !private ["So8NSObjectC", "toValue"]
+- !private ["So8NSObjectP", "alpha"]
+- !private ["So8NSObjectP", "animate"]
+- !private ["So8NSObjectP", "animationPointForDirection"]
+- !private ["So8NSObjectP", "animationRotationForDirection"]
+- !private ["So8NSObjectP", "beginTime"]
+- !private ["So8NSObjectP", "completionBlock"]
+- !private ["So8NSObjectP", "duration"]
+- !private ["So8NSObjectP", "fromValue"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "layer"]
+- !private ["So8NSObjectP", "moveOtherCardsWithPercentage"]
+- !private ["So8NSObjectP", "pop_add"]
+- !private ["So8NSObjectP", "toValue"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "pop_add"]
+- !private ["So7NSValueC", "init"]
+- !private ["Sj", "init"]
+- !private ["s9OptionSetP", "curveLinear"]
+- !private ["So12POPAnimationC", "beginTime"]
+- !private ["So12POPAnimationC", "completionBlock"]
+- !private ["So12POPAnimationC", "duration"]
+- !private ["So12POPAnimationC", "fromValue"]
+- !private ["So12POPAnimationC", "init"]
+- !private ["So12POPAnimationC", "toValue"]
+- !private ["So17POPBasicAnimationC", "beginTime"]
+- !private ["So17POPBasicAnimationC", "completionBlock"]
+- !private ["So17POPBasicAnimationC", "duration"]
+- !private ["So17POPBasicAnimationC", "fromValue"]
+- !private ["So17POPBasicAnimationC", "init"]
+- !private ["So17POPBasicAnimationC", "toValue"]
+- !private ["So20POPPropertyAnimationC", "beginTime"]
+- !private ["So20POPPropertyAnimationC", "completionBlock"]
+- !private ["So20POPPropertyAnimationC", "duration"]
+- !private ["So20POPPropertyAnimationC", "fromValue"]
+- !private ["So20POPPropertyAnimationC", "init"]
+- !private ["So20POPPropertyAnimationC", "toValue"]
+- !private ["Sk", "enumerated"]
+- !private ["Sk", "forEach"]
+- !private ["Sk", "map"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", "enumerated"]
+- !private ["Sm", "forEach"]
+- !private ["Sm", "map"]
+- !private ["Sm", "subscript"]
+- !private ["SY", "curveLinear"]
+- !private ["ST", "enumerated"]
+- !private ["ST", "forEach"]
+- !private ["ST", "map"]
+- !private ["ST", "subscript"]
+- !private ["s10SetAlgebraP", "curveLinear"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", "init"]
+- !private ["6Koloda20SwipeResultDirectionO", "deinit"]
+- !private ["So29UIAccessibilityIdentificationP", "alpha"]
+- !private ["So29UIAccessibilityIdentificationP", "animate"]
+- !private ["So29UIAccessibilityIdentificationP", "animationPointForDirection"]
+- !private ["So29UIAccessibilityIdentificationP", "animationRotationForDirection"]
+- !private ["So29UIAccessibilityIdentificationP", "layer"]
+- !private ["So29UIAccessibilityIdentificationP", "moveOtherCardsWithPercentage"]
+- !private ["So29UIAccessibilityIdentificationP", "pop_add"]
+- !private ["So12UIAppearanceP", "alpha"]
+- !private ["So12UIAppearanceP", "animate"]
+- !private ["So12UIAppearanceP", "animationPointForDirection"]
+- !private ["So12UIAppearanceP", "animationRotationForDirection"]
+- !private ["So12UIAppearanceP", "layer"]
+- !private ["So12UIAppearanceP", "moveOtherCardsWithPercentage"]
+- !private ["So12UIAppearanceP", "pop_add"]
+- !private ["So21UIAppearanceContainerP", "alpha"]
+- !private ["So21UIAppearanceContainerP", "animate"]
+- !private ["So21UIAppearanceContainerP", "animationPointForDirection"]
+- !private ["So21UIAppearanceContainerP", "animationRotationForDirection"]
+- !private ["So21UIAppearanceContainerP", "layer"]
+- !private ["So21UIAppearanceContainerP", "moveOtherCardsWithPercentage"]
+- !private ["So21UIAppearanceContainerP", "pop_add"]
+- !private ["So17UICoordinateSpaceP", "alpha"]
+- !private ["So17UICoordinateSpaceP", "animate"]
+- !private ["So17UICoordinateSpaceP", "animationPointForDirection"]
+- !private ["So17UICoordinateSpaceP", "animationRotationForDirection"]
+- !private ["So17UICoordinateSpaceP", "layer"]
+- !private ["So17UICoordinateSpaceP", "moveOtherCardsWithPercentage"]
+- !private ["So17UICoordinateSpaceP", "pop_add"]
+- !private ["So13UIDynamicItemP", "alpha"]
+- !private ["So13UIDynamicItemP", "animate"]
+- !private ["So13UIDynamicItemP", "animationPointForDirection"]
+- !private ["So13UIDynamicItemP", "animationRotationForDirection"]
+- !private ["So13UIDynamicItemP", "layer"]
+- !private ["So13UIDynamicItemP", "moveOtherCardsWithPercentage"]
+- !private ["So13UIDynamicItemP", "pop_add"]
+- !private ["So18UIFocusEnvironmentP", "alpha"]
+- !private ["So18UIFocusEnvironmentP", "animate"]
+- !private ["So18UIFocusEnvironmentP", "animationPointForDirection"]
+- !private ["So18UIFocusEnvironmentP", "animationRotationForDirection"]
+- !private ["So18UIFocusEnvironmentP", "layer"]
+- !private ["So18UIFocusEnvironmentP", "moveOtherCardsWithPercentage"]
+- !private ["So18UIFocusEnvironmentP", "pop_add"]
+- !private ["So11UIFocusItemP", "alpha"]
+- !private ["So11UIFocusItemP", "animate"]
+- !private ["So11UIFocusItemP", "animationPointForDirection"]
+- !private ["So11UIFocusItemP", "animationRotationForDirection"]
+- !private ["So11UIFocusItemP", "layer"]
+- !private ["So11UIFocusItemP", "moveOtherCardsWithPercentage"]
+- !private ["So11UIFocusItemP", "pop_add"]
+- !private ["So20UIFocusItemContainerP", "alpha"]
+- !private ["So20UIFocusItemContainerP", "animate"]
+- !private ["So20UIFocusItemContainerP", "animationPointForDirection"]
+- !private ["So20UIFocusItemContainerP", "animationRotationForDirection"]
+- !private ["So20UIFocusItemContainerP", "layer"]
+- !private ["So20UIFocusItemContainerP", "moveOtherCardsWithPercentage"]
+- !private ["So20UIFocusItemContainerP", "pop_add"]
+- !private ["So27UIGestureRecognizerDelegateP", "alpha"]
+- !private ["So27UIGestureRecognizerDelegateP", "animationPointForDirection"]
+- !private ["So27UIGestureRecognizerDelegateP", "animationRotationForDirection"]
+- !private ["So27UIGestureRecognizerDelegateP", "layer"]
+- !private ["So27UIGestureRecognizerDelegateP", "pop_add"]
+- !private ["So30UIPasteConfigurationSupportingP", "alpha"]
+- !private ["So30UIPasteConfigurationSupportingP", "animate"]
+- !private ["So30UIPasteConfigurationSupportingP", "animationPointForDirection"]
+- !private ["So30UIPasteConfigurationSupportingP", "animationRotationForDirection"]
+- !private ["So30UIPasteConfigurationSupportingP", "layer"]
+- !private ["So30UIPasteConfigurationSupportingP", "moveOtherCardsWithPercentage"]
+- !private ["So30UIPasteConfigurationSupportingP", "pop_add"]
+- !private ["So11UIResponderC", "alpha"]
+- !private ["So11UIResponderC", "animate"]
+- !private ["So11UIResponderC", "animationPointForDirection"]
+- !private ["So11UIResponderC", "animationRotationForDirection"]
+- !private ["So11UIResponderC", "layer"]
+- !private ["So11UIResponderC", "moveOtherCardsWithPercentage"]
+- !private ["So11UIResponderC", "pop_add"]
+- !private ["So30UIResponderStandardEditActionsP", "alpha"]
+- !private ["So30UIResponderStandardEditActionsP", "animate"]
+- !private ["So30UIResponderStandardEditActionsP", "animationPointForDirection"]
+- !private ["So30UIResponderStandardEditActionsP", "animationRotationForDirection"]
+- !private ["So30UIResponderStandardEditActionsP", "layer"]
+- !private ["So30UIResponderStandardEditActionsP", "moveOtherCardsWithPercentage"]
+- !private ["So30UIResponderStandardEditActionsP", "pop_add"]
+- !private ["So18UITraitEnvironmentP", "alpha"]
+- !private ["So18UITraitEnvironmentP", "animate"]
+- !private ["So18UITraitEnvironmentP", "animationPointForDirection"]
+- !private ["So18UITraitEnvironmentP", "animationRotationForDirection"]
+- !private ["So18UITraitEnvironmentP", "layer"]
+- !private ["So18UITraitEnvironmentP", "moveOtherCardsWithPercentage"]
+- !private ["So18UITraitEnvironmentP", "pop_add"]
+- !private ["So23UIUserActivityRestoringP", "alpha"]
+- !private ["So23UIUserActivityRestoringP", "animate"]
+- !private ["So23UIUserActivityRestoringP", "animationPointForDirection"]
+- !private ["So23UIUserActivityRestoringP", "animationRotationForDirection"]
+- !private ["So23UIUserActivityRestoringP", "layer"]
+- !private ["So23UIUserActivityRestoringP", "moveOtherCardsWithPercentage"]
+- !private ["So23UIUserActivityRestoringP", "pop_add"]
+- !private ["So6UIViewC", "alpha"]
+- !private ["So6UIViewC", "animate"]
+- !private ["So6UIViewC", "animationPointForDirection"]
+- !private ["So6UIViewC", "animationRotationForDirection"]
+- !private ["So6UIViewC", "layer"]
+- !private ["So6UIViewC", "moveOtherCardsWithPercentage"]
+- !private ["So6UIViewC", "pop_add"]
+- !private ["s14_ArrayProtocolP", "enumerated"]
+- !private ["s14_ArrayProtocolP", "forEach"]
+- !private ["s14_ArrayProtocolP", "map"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "zero"]
+- !private ["s24_DestructorSafeContainerP", "enumerated"]
+- !private ["s24_DestructorSafeContainerP", "forEach"]
+- !private ["s24_DestructorSafeContainerP", "map"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s19_HasContiguousBytesP", "enumerated"]
+- !private ["s19_HasContiguousBytesP", "forEach"]
+- !private ["s19_HasContiguousBytesP", "map"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "enumerated"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "forEach"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "map"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "alpha"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "animate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "animationPointForDirection"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "animationRotationForDirection"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "beginTime"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "completionBlock"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "duration"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fromValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "layer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "moveOtherCardsWithPercentage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pop_add"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "toValue"]
+- !private ["s21_ObjectiveCBridgeableP", "enumerated"]
+- !private ["s21_ObjectiveCBridgeableP", "forEach"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "map"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "zero"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "alpha"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "animate"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "animationPointForDirection"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "animationRotationForDirection"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "layer"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "moveOtherCardsWithPercentage"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "pop_add"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "So22UIViewAnimationOptionsV"
+- !private "Sa"
+- !private "SK"
+- !private "SB"
+- !private "So7CALayerC"
+- !private "So15CALayerDelegateP"
+- !private "So13CAMediaTimingP"
+- !private "12CoreGraphics7CGFloatV"
+- !private "So7CGPointV"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "6Koloda21DraggableCardDelegateP"
+- !private "6Koloda17DraggableCardViewC"
+- !private "SE"
+- !private "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "SF"
+- !private "SH"
+- !private "6Koloda0A4ViewC"
+- "6Koloda0A12ViewAnimatorC"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So8NSNumberC"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So7NSValueC"
+- !private "Sj"
+- !private "s9OptionSetP"
+- !private "So12POPAnimationC"
+- !private "So17POPBasicAnimationC"
+- !private "So20POPPropertyAnimationC"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "ST"
+- !private "s10SetAlgebraP"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "6Koloda20SwipeResultDirectionO"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So27UIGestureRecognizerDelegateP"
+- !private "So30UIPasteConfigurationSupportingP"
+- !private "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- !private "s14_ArrayProtocolP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POP.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Koloda/Koloda-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/pop/pop-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPBasicAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPSpringAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPCustomAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPDecayAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPPropertyAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimationTracer.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimator.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPVector.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimationExtras.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPLayerExtras.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPDefines.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimatablePropertyTypes.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimationEvent.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPGeometry.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimatableProperty.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Koloda.build/unextended-module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/pop.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "1fe781ec87cd48ef1281a3f1d5e8383e"

@@ -1,0 +1,618 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["So6UIViewC", ""]
+- ["So11NSPredicateC", ""]
+- ["So12NSExpressionC", ""]
+- ["So6UIViewC", "findFirstResponder"]
+- ["So6UIViewC", "formCell"]
+- ["So11NSPredicateC", "predicateVars"]
+- ["So12NSExpressionC", "expressionVars"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "..."
+- !private "..<"
+- "BaseCell"
+- "CastingPrecedence"
+- !private "NSComparisonPredicate"
+- !private "NSCompoundPredicate"
+- "NSExpression"
+- "NSPredicate"
+- "String"
+- !private "UITableViewCell"
+- "UIView"
+- !private "UnicodeScalarType"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "init"]
+- !private ["SK", "append"]
+- !private ["SK", "index"]
+- !private ["SK", "init"]
+- !private ["SK", "lowerBound"]
+- !private ["SK", "range"]
+- !private ["SK", "startIndex"]
+- !private ["SK", "subscript"]
+- !private ["So15CALayerDelegateP", "findFirstResponder"]
+- !private ["So15CALayerDelegateP", "formCell"]
+- !private ["So15CALayerDelegateP", "isFirstResponder"]
+- !private ["So15CALayerDelegateP", "subviews"]
+- !private ["So15CALayerDelegateP", "superview"]
+- !private ["s7CVarArgP", "String"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "expressionType"]
+- !private ["s7CVarArgP", "expressionVars"]
+- !private ["s7CVarArgP", "findFirstResponder"]
+- !private ["s7CVarArgP", "formCell"]
+- !private ["s7CVarArgP", "index"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isFirstResponder"]
+- !private ["s7CVarArgP", "leftExpression"]
+- !private ["s7CVarArgP", "predicateVars"]
+- !private ["s7CVarArgP", "range"]
+- !private ["s7CVarArgP", "rightExpression"]
+- !private ["s7CVarArgP", "startIndex"]
+- !private ["s7CVarArgP", "subpredicates"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "subviews"]
+- !private ["s7CVarArgP", "superview"]
+- !private ["Sl", "append"]
+- !private ["Sl", "index"]
+- !private ["Sl", "init"]
+- !private ["Sl", "lowerBound"]
+- !private ["Sl", "range"]
+- !private ["Sl", "startIndex"]
+- !private ["Sl", "subscript"]
+- !private ["SL", "index"]
+- !private ["SL", "init"]
+- !private ["SL", "range"]
+- !private ["SL", "startIndex"]
+- !private ["SL", "subscript"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "String"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "expressionType"]
+- !private ["s28CustomDebugStringConvertibleP", "expressionVars"]
+- !private ["s28CustomDebugStringConvertibleP", "findFirstResponder"]
+- !private ["s28CustomDebugStringConvertibleP", "formCell"]
+- !private ["s28CustomDebugStringConvertibleP", "index"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isFirstResponder"]
+- !private ["s28CustomDebugStringConvertibleP", "leftExpression"]
+- !private ["s28CustomDebugStringConvertibleP", "lowerBound"]
+- !private ["s28CustomDebugStringConvertibleP", "predicateVars"]
+- !private ["s28CustomDebugStringConvertibleP", "range"]
+- !private ["s28CustomDebugStringConvertibleP", "rightExpression"]
+- !private ["s28CustomDebugStringConvertibleP", "startIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "subpredicates"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "subviews"]
+- !private ["s28CustomDebugStringConvertibleP", "superview"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "index"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "lowerBound"]
+- !private ["s17CustomReflectableP", "range"]
+- !private ["s17CustomReflectableP", "startIndex"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "String"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "expressionType"]
+- !private ["s23CustomStringConvertibleP", "expressionVars"]
+- !private ["s23CustomStringConvertibleP", "findFirstResponder"]
+- !private ["s23CustomStringConvertibleP", "formCell"]
+- !private ["s23CustomStringConvertibleP", "index"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isFirstResponder"]
+- !private ["s23CustomStringConvertibleP", "leftExpression"]
+- !private ["s23CustomStringConvertibleP", "lowerBound"]
+- !private ["s23CustomStringConvertibleP", "predicateVars"]
+- !private ["s23CustomStringConvertibleP", "range"]
+- !private ["s23CustomStringConvertibleP", "rightExpression"]
+- !private ["s23CustomStringConvertibleP", "startIndex"]
+- !private ["s23CustomStringConvertibleP", "subpredicates"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "subviews"]
+- !private ["s23CustomStringConvertibleP", "superview"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "init"]
+- !private ["Se", "append"]
+- !private ["Se", "index"]
+- !private ["Se", "init"]
+- !private ["Se", "lowerBound"]
+- !private ["Se", "range"]
+- !private ["Se", "startIndex"]
+- !private ["Se", "subscript"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["SE", "append"]
+- !private ["SE", "index"]
+- !private ["SE", "init"]
+- !private ["SE", "lowerBound"]
+- !private ["SE", "range"]
+- !private ["SE", "startIndex"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "String"]
+- !private ["SQ", "append"]
+- !private ["SQ", "expressionType"]
+- !private ["SQ", "expressionVars"]
+- !private ["SQ", "findFirstResponder"]
+- !private ["SQ", "formCell"]
+- ["SQ", "function"]
+- !private ["SQ", "index"]
+- !private ["SQ", "init"]
+- !private ["SQ", "isFirstResponder"]
+- !private ["SQ", "leftExpression"]
+- !private ["SQ", "lowerBound"]
+- !private ["SQ", "predicateVars"]
+- !private ["SQ", "range"]
+- !private ["SQ", "rightExpression"]
+- !private ["SQ", "startIndex"]
+- !private ["SQ", "subpredicates"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "subviews"]
+- !private ["SQ", "superview"]
+- ["SQ", "variable"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "index"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "range"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "startIndex"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "subscript"]
+- !private ["s32ExpressibleByStringInterpolationP", "index"]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "range"]
+- !private ["s32ExpressibleByStringInterpolationP", "startIndex"]
+- !private ["s32ExpressibleByStringInterpolationP", "subscript"]
+- !private ["s26ExpressibleByStringLiteralP", "index"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "range"]
+- !private ["s26ExpressibleByStringLiteralP", "startIndex"]
+- !private ["s26ExpressibleByStringLiteralP", "subscript"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "index"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "range"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "startIndex"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "subscript"]
+- ["So16NSExpressionTypeV", "function"]
+- ["So16NSExpressionTypeV", "variable"]
+- !private ["SH", "String"]
+- !private ["SH", "append"]
+- !private ["SH", "expressionType"]
+- !private ["SH", "expressionVars"]
+- !private ["SH", "findFirstResponder"]
+- !private ["SH", "formCell"]
+- ["SH", "function"]
+- !private ["SH", "index"]
+- !private ["SH", "init"]
+- !private ["SH", "isFirstResponder"]
+- !private ["SH", "leftExpression"]
+- !private ["SH", "lowerBound"]
+- !private ["SH", "predicateVars"]
+- !private ["SH", "range"]
+- !private ["SH", "rightExpression"]
+- !private ["SH", "startIndex"]
+- !private ["SH", "subpredicates"]
+- !private ["SH", "subscript"]
+- !private ["SH", "subviews"]
+- !private ["SH", "superview"]
+- ["SH", "variable"]
+- !private ["6Eureka18InputTypeInitiableP", "index"]
+- !private ["6Eureka18InputTypeInitiableP", "init"]
+- !private ["6Eureka18InputTypeInitiableP", "range"]
+- !private ["6Eureka18InputTypeInitiableP", "startIndex"]
+- !private ["6Eureka18InputTypeInitiableP", "subscript"]
+- !private ["s25LosslessStringConvertibleP", "index"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "range"]
+- !private ["s25LosslessStringConvertibleP", "startIndex"]
+- !private ["s25LosslessStringConvertibleP", "subscript"]
+- !private ["s10MirrorPathP", "index"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "range"]
+- !private ["s10MirrorPathP", "startIndex"]
+- !private ["s10MirrorPathP", "subscript"]
+- !private ["SM", "append"]
+- !private ["SM", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["So8NSCodingP", "String"]
+- !private ["So8NSCodingP", "expressionType"]
+- !private ["So8NSCodingP", "expressionVars"]
+- !private ["So8NSCodingP", "findFirstResponder"]
+- !private ["So8NSCodingP", "formCell"]
+- !private ["So8NSCodingP", "index"]
+- !private ["So8NSCodingP", "isFirstResponder"]
+- !private ["So8NSCodingP", "leftExpression"]
+- !private ["So8NSCodingP", "predicateVars"]
+- !private ["So8NSCodingP", "range"]
+- !private ["So8NSCodingP", "rightExpression"]
+- !private ["So8NSCodingP", "startIndex"]
+- !private ["So8NSCodingP", "subpredicates"]
+- !private ["So8NSCodingP", "subscript"]
+- !private ["So8NSCodingP", "subviews"]
+- !private ["So8NSCodingP", "superview"]
+- !private ["So21NSComparisonPredicateC", "leftExpression"]
+- !private ["So21NSComparisonPredicateC", "rightExpression"]
+- !private ["So19NSCompoundPredicateC", "subpredicates"]
+- !private ["So9NSCopyingP", "String"]
+- !private ["So9NSCopyingP", "expressionType"]
+- !private ["So9NSCopyingP", "expressionVars"]
+- !private ["So9NSCopyingP", "index"]
+- !private ["So9NSCopyingP", "leftExpression"]
+- !private ["So9NSCopyingP", "predicateVars"]
+- !private ["So9NSCopyingP", "range"]
+- !private ["So9NSCopyingP", "rightExpression"]
+- !private ["So9NSCopyingP", "startIndex"]
+- !private ["So9NSCopyingP", "subpredicates"]
+- !private ["So9NSCopyingP", "subscript"]
+- ["So12NSExpressionC", "String"]
+- !private ["So12NSExpressionC", "expressionType"]
+- ["So12NSExpressionC", "expressionVars"]
+- !private ["So21NSItemProviderReadingP", "index"]
+- !private ["So21NSItemProviderReadingP", "range"]
+- !private ["So21NSItemProviderReadingP", "startIndex"]
+- !private ["So21NSItemProviderReadingP", "subscript"]
+- !private ["So21NSItemProviderWritingP", "index"]
+- !private ["So21NSItemProviderWritingP", "range"]
+- !private ["So21NSItemProviderWritingP", "startIndex"]
+- !private ["So21NSItemProviderWritingP", "subscript"]
+- !private ["So16NSMutableCopyingP", "index"]
+- !private ["So16NSMutableCopyingP", "range"]
+- !private ["So16NSMutableCopyingP", "startIndex"]
+- !private ["So16NSMutableCopyingP", "subscript"]
+- ["So8NSObjectC", "BaseCell"]
+- !private ["So8NSObjectC", "NSComparisonPredicate"]
+- !private ["So8NSObjectC", "NSCompoundPredicate"]
+- !private ["So8NSObjectC", "NSPredicate"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "UITableViewCell"]
+- ["So8NSObjectC", "UIView"]
+- !private ["So8NSObjectC", "expressionType"]
+- ["So8NSObjectC", "expressionVars"]
+- ["So8NSObjectC", "findFirstResponder"]
+- ["So8NSObjectC", "formCell"]
+- !private ["So8NSObjectC", "index"]
+- !private ["So8NSObjectC", "isFirstResponder"]
+- !private ["So8NSObjectC", "leftExpression"]
+- ["So8NSObjectC", "predicateVars"]
+- !private ["So8NSObjectC", "range"]
+- !private ["So8NSObjectC", "rightExpression"]
+- !private ["So8NSObjectC", "startIndex"]
+- !private ["So8NSObjectC", "subpredicates"]
+- !private ["So8NSObjectC", "subscript"]
+- !private ["So8NSObjectC", "subviews"]
+- !private ["So8NSObjectC", "superview"]
+- !private ["So8NSObjectP", "String"]
+- !private ["So8NSObjectP", "expressionType"]
+- !private ["So8NSObjectP", "expressionVars"]
+- !private ["So8NSObjectP", "findFirstResponder"]
+- !private ["So8NSObjectP", "formCell"]
+- !private ["So8NSObjectP", "index"]
+- !private ["So8NSObjectP", "isFirstResponder"]
+- !private ["So8NSObjectP", "leftExpression"]
+- !private ["So8NSObjectP", "predicateVars"]
+- !private ["So8NSObjectP", "range"]
+- !private ["So8NSObjectP", "rightExpression"]
+- !private ["So8NSObjectP", "startIndex"]
+- !private ["So8NSObjectP", "subpredicates"]
+- !private ["So8NSObjectP", "subscript"]
+- !private ["So8NSObjectP", "subviews"]
+- !private ["So8NSObjectP", "superview"]
+- !private ["So11NSPredicateC", "NSComparisonPredicate"]
+- !private ["So11NSPredicateC", "NSCompoundPredicate"]
+- !private ["So11NSPredicateC", "NSPredicate"]
+- ["So11NSPredicateC", "String"]
+- !private ["So11NSPredicateC", "leftExpression"]
+- ["So11NSPredicateC", "predicateVars"]
+- !private ["So11NSPredicateC", "rightExpression"]
+- !private ["So11NSPredicateC", "subpredicates"]
+- !private ["So14NSSecureCodingP", "String"]
+- !private ["So14NSSecureCodingP", "expressionType"]
+- !private ["So14NSSecureCodingP", "expressionVars"]
+- !private ["So14NSSecureCodingP", "index"]
+- !private ["So14NSSecureCodingP", "leftExpression"]
+- !private ["So14NSSecureCodingP", "predicateVars"]
+- !private ["So14NSSecureCodingP", "range"]
+- !private ["So14NSSecureCodingP", "rightExpression"]
+- !private ["So14NSSecureCodingP", "startIndex"]
+- !private ["So14NSSecureCodingP", "subpredicates"]
+- !private ["So14NSSecureCodingP", "subscript"]
+- !private ["So8NSStringC", "index"]
+- !private ["So8NSStringC", "range"]
+- !private ["So8NSStringC", "startIndex"]
+- !private ["So8NSStringC", "subscript"]
+- !private ["Sk", "append"]
+- !private ["Sk", "init"]
+- !private ["Sk", "lowerBound"]
+- !private ["Sn", "lowerBound"]
+- !private ["SX", "lowerBound"]
+- !private ["Sm", "append"]
+- !private ["Sm", "index"]
+- !private ["Sm", "init"]
+- !private ["Sm", "range"]
+- !private ["Sm", "startIndex"]
+- !private ["Sm", "subscript"]
+- ["SY", "function"]
+- ["SY", "variable"]
+- !private ["ST", "append"]
+- !private ["ST", "index"]
+- !private ["ST", "init"]
+- !private ["ST", "lowerBound"]
+- !private ["ST", "range"]
+- !private ["ST", "startIndex"]
+- !private ["ST", "subscript"]
+- !private ["SS", "deinit"]
+- !private ["SS", "index"]
+- !private ["SS", "init"]
+- !private ["SS", "range"]
+- !private ["SS", "startIndex"]
+- !private ["SS", "subscript"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["Sy", "index"]
+- !private ["Sy", "init"]
+- !private ["Sy", "range"]
+- !private ["Sy", "startIndex"]
+- !private ["Sy", "subscript"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "index"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "range"]
+- !private ["s16TextOutputStreamP", "startIndex"]
+- !private ["s16TextOutputStreamP", "subscript"]
+- !private ["s20TextOutputStreamableP", "index"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "range"]
+- !private ["s20TextOutputStreamableP", "startIndex"]
+- !private ["s20TextOutputStreamableP", "subscript"]
+- !private ["So29UIAccessibilityIdentificationP", "findFirstResponder"]
+- !private ["So29UIAccessibilityIdentificationP", "formCell"]
+- !private ["So29UIAccessibilityIdentificationP", "isFirstResponder"]
+- !private ["So29UIAccessibilityIdentificationP", "subviews"]
+- !private ["So29UIAccessibilityIdentificationP", "superview"]
+- !private ["So12UIAppearanceP", "findFirstResponder"]
+- !private ["So12UIAppearanceP", "formCell"]
+- !private ["So12UIAppearanceP", "isFirstResponder"]
+- !private ["So12UIAppearanceP", "subviews"]
+- !private ["So12UIAppearanceP", "superview"]
+- !private ["So21UIAppearanceContainerP", "findFirstResponder"]
+- !private ["So21UIAppearanceContainerP", "formCell"]
+- !private ["So21UIAppearanceContainerP", "isFirstResponder"]
+- !private ["So21UIAppearanceContainerP", "subviews"]
+- !private ["So21UIAppearanceContainerP", "superview"]
+- !private ["So17UICoordinateSpaceP", "findFirstResponder"]
+- !private ["So17UICoordinateSpaceP", "formCell"]
+- !private ["So17UICoordinateSpaceP", "isFirstResponder"]
+- !private ["So17UICoordinateSpaceP", "subviews"]
+- !private ["So17UICoordinateSpaceP", "superview"]
+- !private ["So13UIDynamicItemP", "findFirstResponder"]
+- !private ["So13UIDynamicItemP", "formCell"]
+- !private ["So13UIDynamicItemP", "isFirstResponder"]
+- !private ["So13UIDynamicItemP", "subviews"]
+- !private ["So13UIDynamicItemP", "superview"]
+- !private ["So18UIFocusEnvironmentP", "findFirstResponder"]
+- !private ["So18UIFocusEnvironmentP", "formCell"]
+- !private ["So18UIFocusEnvironmentP", "isFirstResponder"]
+- !private ["So18UIFocusEnvironmentP", "subviews"]
+- !private ["So18UIFocusEnvironmentP", "superview"]
+- !private ["So11UIFocusItemP", "findFirstResponder"]
+- !private ["So11UIFocusItemP", "formCell"]
+- !private ["So11UIFocusItemP", "isFirstResponder"]
+- !private ["So11UIFocusItemP", "subviews"]
+- !private ["So11UIFocusItemP", "superview"]
+- !private ["So20UIFocusItemContainerP", "findFirstResponder"]
+- !private ["So20UIFocusItemContainerP", "formCell"]
+- !private ["So20UIFocusItemContainerP", "isFirstResponder"]
+- !private ["So20UIFocusItemContainerP", "subviews"]
+- !private ["So20UIFocusItemContainerP", "superview"]
+- !private ["So30UIPasteConfigurationSupportingP", "findFirstResponder"]
+- !private ["So30UIPasteConfigurationSupportingP", "formCell"]
+- !private ["So30UIPasteConfigurationSupportingP", "isFirstResponder"]
+- !private ["So30UIPasteConfigurationSupportingP", "subviews"]
+- !private ["So30UIPasteConfigurationSupportingP", "superview"]
+- ["So11UIResponderC", "BaseCell"]
+- !private ["So11UIResponderC", "UITableViewCell"]
+- ["So11UIResponderC", "UIView"]
+- ["So11UIResponderC", "findFirstResponder"]
+- ["So11UIResponderC", "formCell"]
+- !private ["So11UIResponderC", "isFirstResponder"]
+- !private ["So11UIResponderC", "subviews"]
+- !private ["So11UIResponderC", "superview"]
+- !private ["So30UIResponderStandardEditActionsP", "findFirstResponder"]
+- !private ["So30UIResponderStandardEditActionsP", "formCell"]
+- !private ["So30UIResponderStandardEditActionsP", "isFirstResponder"]
+- !private ["So30UIResponderStandardEditActionsP", "subviews"]
+- !private ["So30UIResponderStandardEditActionsP", "superview"]
+- !private ["So18UITraitEnvironmentP", "findFirstResponder"]
+- !private ["So18UITraitEnvironmentP", "formCell"]
+- !private ["So18UITraitEnvironmentP", "isFirstResponder"]
+- !private ["So18UITraitEnvironmentP", "subviews"]
+- !private ["So18UITraitEnvironmentP", "superview"]
+- !private ["So23UIUserActivityRestoringP", "findFirstResponder"]
+- !private ["So23UIUserActivityRestoringP", "formCell"]
+- !private ["So23UIUserActivityRestoringP", "isFirstResponder"]
+- !private ["So23UIUserActivityRestoringP", "subviews"]
+- !private ["So23UIUserActivityRestoringP", "superview"]
+- ["So6UIViewC", "BaseCell"]
+- !private ["So6UIViewC", "UITableViewCell"]
+- ["So6UIViewC", "UIView"]
+- ["So6UIViewC", "findFirstResponder"]
+- ["So6UIViewC", "formCell"]
+- !private ["So6UIViewC", "isFirstResponder"]
+- !private ["So6UIViewC", "subviews"]
+- !private ["So6UIViewC", "superview"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "index"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "range"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "startIndex"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "index"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "range"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "startIndex"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "subscript"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "index"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "range"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "startIndex"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "subscript"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "index"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "range"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "startIndex"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "subscript"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "index"]
+- !private ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "range"]
+- !private ["s19_HasContiguousBytesP", "startIndex"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "index"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "range"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "startIndex"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "expressionType"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "expressionVars"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "findFirstResponder"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "formCell"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "index"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isFirstResponder"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "leftExpression"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "predicateVars"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "range"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "rightExpression"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "startIndex"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subpredicates"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subviews"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "superview"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "index"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "range"]
+- !private ["s21_ObjectiveCBridgeableP", "startIndex"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "findFirstResponder"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "formCell"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "isFirstResponder"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "subviews"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "superview"]
+depends-nominal:
+- !private "Sa"
+- !private "SK"
+- !private "So15CALayerDelegateP"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "So16NSExpressionTypeV"
+- "SH"
+- !private "6Eureka18InputTypeInitiableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So21NSComparisonPredicateC"
+- !private "So19NSCompoundPredicateC"
+- !private "So9NSCopyingP"
+- "So12NSExpressionC"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- !private "So8NSObjectP"
+- "So11NSPredicateC"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "Sk"
+- !private "Sn"
+- !private "SX"
+- !private "Sm"
+- "SY"
+- !private "ST"
+- !private "SS"
+- !private "s27StringInterpolationProtocolP"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- "So6UIViewC"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Eureka/Eureka-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Eureka.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "0e11379d44a7910c46a4716380536ab8"
