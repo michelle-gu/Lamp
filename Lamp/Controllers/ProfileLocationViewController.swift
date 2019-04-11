@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Foundation
 
 // current universities
 let uniPickerData = [String](arrayLiteral: "University of Texas at Austin", "St. Edwards")
@@ -19,7 +20,11 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     let showHomePage = "showHomePage"
     
     // MARK: Properties
-    let ref = Database.database().reference(withPath: "user-profiles")
+    let profilesRef = Database.database().reference(withPath: "user-profiles")
+    let dbRef = Database.database()
+    let citiesRef = Database.database().reference(withPath: "locations")
+    let user = Auth.auth().currentUser?.uid
+    var cities:[String] = []
     
     // MARK: Outlets
     @IBOutlet weak var profilePictureView: UIImageView!
@@ -38,7 +43,37 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         let uniPicker = UIPickerView()
         uniPicker.delegate = self
         uniTextField.inputView = uniPicker
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getLocationText()
+    }
+    
+    // update the location text to show user's preferences
+    func getLocationText() {
+        var locationText = ""
+        getCities() { (citiesArray) in
+            self.cities = citiesArray
+            locationText = self.cities.joined(separator: ", ")
+            
+            self.futureLocTextField.text = locationText
+        }
+    }
+    
+    // populate the cities array with cities currently in Firebase
+    func getCities(completion: @escaping ([String]) -> Void) {
+        let profileLocs = profilesRef.child(user!).child("profile").child("futureLoc")
+        profileLocs.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let citiesDict = snapshot.value as? [String : AnyObject] else {
+                return completion([])
+            }
+            
+            var citiesArray: [String] = []
+            for city in citiesDict {
+                citiesArray.append(city.key)
+            }
+            completion(citiesArray)
+        })
     }
     
     // for uni picker delegate
@@ -73,13 +108,52 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         
         let user = Auth.auth().currentUser?.uid
         
-        let profile = ref.child(user!)
+        let profile = profilesRef.child(user!).child("profile")
         let values = [
             "uni": uni,
-            "futureLoc": futureLoc,
             "occupation": occupation
         ]
         profile.updateChildValues(values)
+        
+        let futureLocArr: [String] = futureLoc.components(separatedBy: ", ")
+        print(futureLocArr)
+        for loc in futureLocArr {
+            print("Pressing done & saving data!")
+            // Set future location and default location filter
+            let locFilterVal = [
+                loc: true // Flowermound, AUstin: true
+            ]
+            profilesRef.child(user!).child("profile").child("futureLoc").updateChildValues(locFilterVal)
+            profilesRef.child(user!).child("settings").child("discovery").child("futureLoc").updateChildValues(locFilterVal)
+            
+            // Add the user's locations to list of all locations
+            let locValues = [
+                loc: [
+                    user: true
+                ]
+            ]
+            dbRef.reference(withPath: "locations").updateChildValues(locValues)
+        }
+
+        
+        // Set default uni filter
+        let filterValues = [
+            "universities": [
+                uni: true
+            ]
+        ]
+        profilesRef.child(user!).child("settings").child("discovery").updateChildValues(filterValues)
+        
+        // Add university
+        let uniValues = [
+            uni: [
+                user: true
+            ]
+        ]
+        dbRef.reference(withPath: "universities").updateChildValues(uniValues)
+        
+
+        // Update filter defaults
     }
     
 }

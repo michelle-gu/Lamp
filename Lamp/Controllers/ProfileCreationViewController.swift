@@ -17,8 +17,9 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     let showLocationInfoScreen = "showLocationInfoScreen"
     
     // MARK: Properties
-    let ref = Database.database().reference(withPath: "user-profiles")
-    
+    let userProfilesRef = Database.database().reference(withPath: "user-profiles")
+    let gendersRef = Database.database().reference(withPath: "genders")
+
     // MARK: Outlets
     @IBOutlet weak var profilePictureView: UIImageView!
     @IBOutlet weak var changePictureButton: UIButton!
@@ -106,11 +107,20 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         
         let user = Auth.auth().currentUser?.uid
         
-        let profile = Profile(firstName: firstName, birthday: birthday, gender: gender, uni: "", futureLoc: "", occupation: "")
+        let profile = Profile(firstName: firstName, birthday: birthday, gender: gender, uni: "", futureLoc: [:], occupation: "")
+        let settings = Settings()
         
-        let profileRef = self.ref.child(user!)
+        let userRef = self.userProfilesRef.child(user!)
+        userRef.updateChildValues(profile.toAnyObject() as! [AnyHashable : Any])
+        userRef.updateChildValues(settings.toAnyObject() as! [AnyHashable : Any])
         
-        profileRef.setValue(profile.toAnyObject())
+        let genderValues = [
+            gender: [
+                user: true
+            ]
+        ]
+        gendersRef.updateChildValues(genderValues)
+
     }
 
 }

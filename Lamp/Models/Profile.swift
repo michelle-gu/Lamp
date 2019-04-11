@@ -22,7 +22,7 @@ struct Profile {
     let birthday: String
     let gender: String
     let uni: String
-    let futureLoc: String
+    let futureLoc: [String : Bool]
     let occupation: String
     let bio: String
     let budget: String
@@ -43,7 +43,7 @@ struct Profile {
     // MARK: Initializers
     
     // Initializer
-    init(key: String = "", firstName: String, birthday: String, gender: String, uni: String, futureLoc: String, occupation: String) {
+    init(key: String = "", firstName: String, birthday: String, gender: String, uni: String, futureLoc: [String : Bool] = [:], occupation: String) {
         // Initialize Firebase ref/key
         self.ref = nil
         self.key = key
@@ -80,7 +80,7 @@ struct Profile {
             let birthday = value["birthday"] as? String,
             let gender = value["gender"] as? String,
             let uni = value["uni"] as? String,
-            let futureLoc = value["futureLoc"] as? String,
+            let futureLoc = value["futureLoc"] as? [String : Bool],
             let occupation = value["occupation"] as? String,
             let bio = value["bio"] as? String,
             let budget = value["budget"] as? String,
@@ -128,26 +128,28 @@ struct Profile {
     // Returns json of profile data
     func toAnyObject() -> Any {
         return [
-            // Basic Info
-            "firstName": firstName,
-            "birthday": birthday,
-            "gender": gender,
-            "uni": uni,
-            "futureLoc": futureLoc,
-            "occupation": occupation,
-            "bio": bio,
-            "budget": budget,
-            //"profilePicture": profilePicture,
-            // Lifestyle Prefs
-            "numBedrooms": numBedrooms,
-            "pets": pets,
-            "smoking": smoking,
-            "otherLifestylePrefs": otherLifestylePrefs,
-            // Contact Info
-            "phone": phone,
-            "email": email,
-            "facebook": facebook,
-            "otherContact": otherContact
+            "profile": [
+                // Basic Info
+                "firstName": firstName,
+                "birthday": birthday,
+                "gender": gender,
+                "uni": uni,
+                "futureLoc": futureLoc,
+                "occupation": occupation,
+                "bio": bio,
+                "budget": budget,
+                //"profilePicture": profilePicture,
+                // Lifestyle Prefs
+                "numBedrooms": numBedrooms,
+                "pets": pets,
+                "smoking": smoking,
+                "otherLifestylePrefs": otherLifestylePrefs,
+                // Contact Info
+                "phone": phone,
+                "email": email,
+                "facebook": facebook,
+                "otherContact": otherContact
+            ]
         ]
     }
 }
