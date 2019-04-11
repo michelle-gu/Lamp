@@ -19,26 +19,54 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ll-qt-Yox">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="440"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="440" id="WuB-Tp-MWz"/>
+                        <constraint firstAttribute="height" constant="300" id="WuB-Tp-MWz"/>
                         <constraint firstAttribute="width" constant="375" id="j11-5v-Qly"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEr-L3-RP6">
-                    <rect key="frame" x="16" y="467" width="343" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="27"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEr-L3-RP6">
+                    <rect key="frame" x="16" y="448" width="343" height="34"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Job" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihB-LI-XgS">
+                    <rect key="frame" x="16" y="490" width="343" height="24"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5US-t6-DT9">
+                    <rect key="frame" x="16" y="522" width="343" height="24"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="14 Mutual Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpi-fG-Blx">
+                    <rect key="frame" x="16" y="582" width="343" height="24"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="ihB-LI-XgS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="71J-iU-2yy"/>
+                <constraint firstItem="5US-t6-DT9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="7gW-FY-H5z"/>
+                <constraint firstItem="lpi-fG-Blx" firstAttribute="top" secondItem="5US-t6-DT9" secondAttribute="bottom" constant="36" id="EUJ-o3-99a"/>
+                <constraint firstItem="lpi-fG-Blx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="FIR-KP-gju"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5Ll-qt-Yox" secondAttribute="trailing" id="U3Q-zO-wFY"/>
+                <constraint firstItem="ihB-LI-XgS" firstAttribute="top" secondItem="QEr-L3-RP6" secondAttribute="bottom" constant="8" id="mpB-e3-awQ"/>
                 <constraint firstItem="5Ll-qt-Yox" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mqU-2a-GKy"/>
+                <constraint firstItem="QEr-L3-RP6" firstAttribute="top" secondItem="5Ll-qt-Yox" secondAttribute="bottom" constant="8" id="mwa-nx-Oyn"/>
+                <constraint firstItem="5US-t6-DT9" firstAttribute="top" secondItem="ihB-LI-XgS" secondAttribute="bottom" constant="8" id="r5K-dw-NZn"/>
+                <constraint firstItem="QEr-L3-RP6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="rjB-nL-hrw"/>
+                <constraint firstItem="QEr-L3-RP6" firstAttribute="leading" secondItem="5Ll-qt-Yox" secondAttribute="trailing" constant="-359" id="wHj-HC-drW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="image" destination="5Ll-qt-Yox" id="Uor-mr-Eht"/>
+                <outlet property="jobLabel" destination="ihB-LI-XgS" id="Ljp-Us-R5e"/>
+                <outlet property="locationLabel" destination="5US-t6-DT9" id="qkk-0e-eg8"/>
                 <outlet property="nameLabel" destination="QEr-L3-RP6" id="r3Z-jq-GL0"/>
             </connections>
             <point key="canvasLocation" x="63.200000000000003" y="48.125937031484263"/>

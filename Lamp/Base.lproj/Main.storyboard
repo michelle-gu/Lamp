@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cyu-ij-Vls">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sef-mb-ngf">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -421,7 +421,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="doneButtonPressed:" destination="f7I-q0-QYu" eventType="touchUpInside" id="1h1-kU-m2v"/>
-                                    <segue destination="Skw-1a-Og8" kind="show" identifier="showHomePage" id="SP5-0k-tVq"/>
+                                    <segue destination="Sef-mb-ngf" kind="show" identifier="showHomePage" id="P1N-dK-ZZG"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="girl-3" translatesAutoresizingMaskIntoConstraints="NO" id="2kC-M0-PXD">
@@ -1528,7 +1528,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Home" id="hur-0p-F9T">
                             <connections>
-                                <segue destination="Skw-1a-Og8" kind="show" id="5YV-eX-J77"/>
+                                <segue destination="Sef-mb-ngf" kind="show" id="Isj-X5-brD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1770,13 +1770,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQ1-pP-GfJ" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="16" y="64" width="343" height="564"/>
+                                <rect key="frame" x="16" y="108" width="343" height="520"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuf-TY-otn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuf-TY-otn">
                                 <rect key="frame" x="96" y="636" width="82" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.84789663550000005" green="0.58553600309999998" blue="0.82471710440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="7WB-n4-US1"/>
+                                    <constraint firstAttribute="width" constant="82" id="UIf-ym-zfE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="NO"/>
@@ -1785,11 +1788,18 @@
                                         <integer key="value" value="41"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="noButtonPressed:" destination="Cyu-ij-Vls" eventType="touchUpInside" id="R72-zs-qhM"/>
+                                    <action selector="yesButtonPressed:" destination="Cyu-ij-Vls" eventType="touchUpInside" id="SUA-8c-qP8"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQJ-UI-ZlV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQJ-UI-ZlV">
                                 <rect key="frame" x="197" y="636" width="82" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.43505138160000001" green="0.70846599340000005" blue="0.986839354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="E64-Sd-zr5"/>
+                                    <constraint firstAttribute="height" constant="82" id="ZaM-b6-jpz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="YES"/>
@@ -1798,24 +1808,46 @@
                                         <integer key="value" value="41"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="yesButtonPressed:" destination="Cyu-ij-Vls" eventType="touchUpInside" id="oPx-a0-frD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="kuf-TY-otn" secondAttribute="bottom" constant="60" id="8OH-kG-LTy"/>
                             <constraint firstItem="WQ1-pP-GfJ" firstAttribute="top" secondItem="rYT-fs-nlh" secondAttribute="top" constant="20" id="Bz3-ro-K9l"/>
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="trailing" secondItem="WQ1-pP-GfJ" secondAttribute="trailing" constant="16" id="J4a-vD-gYb"/>
+                            <constraint firstItem="rYT-fs-nlh" firstAttribute="trailing" secondItem="EQJ-UI-ZlV" secondAttribute="trailing" constant="96" id="V2B-uc-6dk"/>
+                            <constraint firstItem="kuf-TY-otn" firstAttribute="leading" secondItem="rYT-fs-nlh" secondAttribute="leading" constant="96" id="Zby-UP-JTM"/>
+                            <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="EQJ-UI-ZlV" secondAttribute="bottom" constant="60" id="ekD-Ep-Ws9"/>
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="WQ1-pP-GfJ" secondAttribute="bottom" constant="150" id="nWp-J2-J3F"/>
                             <constraint firstItem="WQ1-pP-GfJ" firstAttribute="leading" secondItem="rYT-fs-nlh" secondAttribute="leading" constant="16" id="x2y-Yh-N1v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rYT-fs-nlh"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hlp-6h-QyA">
+                        <barButtonItem key="leftBarButtonItem" title="Profile" id="HhH-xh-1AI">
+                            <color key="tintColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="PwM-K5-2cI" kind="show" id="bMq-vc-0S6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Messages" id="X5X-Lx-tnK">
+                            <color key="tintColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="eWr-FF-ddu" kind="show" id="PA3-YF-Hx5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="kolodaView" destination="WQ1-pP-GfJ" id="A2C-lg-Wbw"/>
+                        <segue destination="YW5-JA-cCu" kind="presentation" identifier="matchSegue" id="8he-3E-VTa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4G-jc-bdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-919.20000000000005" y="1615.2709359605913"/>
+            <point key="canvasLocation" x="6826" y="923"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IY6-xb-0Ar">
@@ -1914,28 +1946,12 @@
                                         <integer key="value" value="41"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="YW5-JA-cCu" kind="showDetail" id="Iqe-HO-oUg"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97799816303603215" green="0.98422282521239113" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="RFE-RO-gX3"/>
                     </view>
-                    <navigationItem key="navigationItem" title="lamp" id="LbJ-It-GIu">
-                        <barButtonItem key="leftBarButtonItem" title="Profile" id="HhH-xh-1AI">
-                            <color key="tintColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="PwM-K5-2cI" kind="show" id="bMq-vc-0S6"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Messages" id="X5X-Lx-tnK">
-                            <color key="tintColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="eWr-FF-ddu" kind="show" id="PA3-YF-Hx5"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="lamp" id="LbJ-It-GIu"/>
                     <connections>
                         <outlet property="cardView" destination="8DA-cw-O3z" id="ncl-to-91U"/>
                         <outlet property="noButton" destination="wMD-8j-Ywr" id="ZCw-vE-6eT"/>
@@ -1945,7 +1961,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdL-55-Xqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4812" y="949.50738916256159"/>
+            <point key="canvasLocation" x="4342" y="923"/>
         </scene>
         <!--Messages-->
         <scene sceneID="5Q1-Ma-qcG">
@@ -2024,7 +2040,7 @@
                     <navigationItem key="navigationItem" title="Messages" id="dEd-MF-Fvf">
                         <barButtonItem key="leftBarButtonItem" title="Home" id="Wsx-W6-wvv">
                             <connections>
-                                <segue destination="Skw-1a-Og8" kind="show" id="xD0-qf-AX0"/>
+                                <segue destination="Sef-mb-ngf" kind="show" id="c5S-Za-6zN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -2162,7 +2178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yta-AS-Ney" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5825" y="950"/>
+            <point key="canvasLocation" x="7708" y="923"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="axK-Vi-p7f">
@@ -2180,7 +2196,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sV0-RY-aVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3870" y="950"/>
+            <point key="canvasLocation" x="3383" y="923"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1UR-Pt-9iP">
@@ -2254,6 +2270,24 @@
             </objects>
             <point key="canvasLocation" x="4470" y="1779"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gR3-iv-1DW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sef-mb-ngf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mqV-9I-fPh">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cyu-ij-Vls" kind="relationship" relationship="rootViewController" id="XFt-aI-c00"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o3R-XW-sFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5884" y="923"/>
+        </scene>
     </scenes>
     <resources>
         <image name="LogoColor" width="199" height="242"/>
@@ -2264,10 +2298,9 @@
         <image name="profile-pic-blank" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bMq-vc-0S6"/>
+        <segue reference="Isj-X5-brD"/>
         <segue reference="PA3-YF-Hx5"/>
         <segue reference="BfG-uu-C7Q"/>
-        <segue reference="5YV-eX-J77"/>
         <segue reference="IdY-Gv-dXt"/>
     </inferredMetricsTieBreakers>
 </document>

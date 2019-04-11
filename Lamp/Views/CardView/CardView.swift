@@ -12,7 +12,9 @@ class CardView: UIView, XibCreatable {
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-//    @IBOutlet weak var subLabel: UILabel!
+    @IBOutlet weak var jobLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    //    @IBOutlet weak var subLabel: UILabel!
     
     
     /*
