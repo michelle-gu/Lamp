@@ -11,7 +11,7 @@ import Firebase
 import Foundation
 
 // current universities
-let uniPickerData = [String](arrayLiteral: "University of Texas at Austin", "St. Edwards")
+let uniPickerData = [String](arrayLiteral: "University of Texas at Austin", "St Edwards")
 
 class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
