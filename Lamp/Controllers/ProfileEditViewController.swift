@@ -44,14 +44,15 @@ class ProfileEditViewController: UIViewController, UITextViewDelegate {
         bioText.layer.cornerRadius = 5
         bioText.layer.borderColor = UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1).cgColor
 
-        if (bioText.text == "") {
-            bioText.text = "Bio"
-            bioText.textColor = UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1)
-        }
+//        if (bioText.text == "") {
+////            bioText.text = "Bio"
+//            bioText.textColor = UIColor.black
+////            bioText.textColor = UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1)
+//        }
 
-        bioText.becomeFirstResponder()
+//        bioText.becomeFirstResponder()
         
-        bioText.selectedTextRange = bioText.textRange(from: bioText.beginningOfDocument, to: bioText.beginningOfDocument)
+//        bioText.selectedTextRange = bioText.textRange(from: bioText.beginningOfDocument, to: bioText.beginningOfDocument)
         
         ref = Database.database().reference(withPath: "user-profiles")
         let user = Auth.auth().currentUser?.uid
@@ -62,9 +63,9 @@ class ProfileEditViewController: UIViewController, UITextViewDelegate {
             self.occupationTextField.text = profileDict["occupation"] as? String
             self.futureLocTextField.text = profileDict["futureLoc"] as? String
             self.bioText.text = profileDict["bio"] as? String
-            if self.bioText.text != "" {
-                self.bioText.textColor = UIColor.black
-            }
+//            if self.bioText.text != "" {
+//                self.bioText.textColor = UIColor.black
+//            }
             self.budgetTextField.text = profileDict["budget"] as? String
             self.bedroomNumTextField.text = profileDict["numBedrooms"] as? String
             self.petsTextField.text = profileDict["pets"] as? String
@@ -85,42 +86,43 @@ class ProfileEditViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        
-        // Combine the textView text and the replacement text to
-        // create the updated text string
-        let currentText:String = textView.text
-        let updatedText = (currentText as NSString).replacingCharacters(in: range, with: text)
-        
-        // If updated text view will be empty, add the placeholder
-        // and set the cursor to the beginning of the text view
-        if updatedText.isEmpty {
-            
-            textView.text = "Bio"
-            textView.textColor = UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1)
-            
-            textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
-        }
-            
-            // Else if the text view's placeholder is showing and the
-            // length of the replacement string is greater than 0, set
-            // the text color to black then set its text to the
-            // replacement string
-        else if textView.textColor == UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1) && !text.isEmpty {
-            textView.textColor = UIColor.black
-            textView.text = text
-        }
-            
-            // For every other case, the text should change with the usual
-            // behavior...
-        else {
-            return true
-        }
-        
-        // ...otherwise return false since the updates have already
-        // been made
-        return false
-    }
+//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+//
+//        // Combine the textView text and the replacement text to
+//        // create the updated text string
+//        let currentText:String = textView.text
+//        let updatedText = (currentText as NSString).replacingCharacters(in: range, with: text)
+//
+//        // If updated text view will be empty, add the placeholder
+//        // and set the cursor to the beginning of the text view
+//        if updatedText.isEmpty {
+//
+////            textView.text = "Bio"
+//            textView.textColor = UIColor.black
+////            textView.textColor = UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1)
+//
+//            textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
+//        }
+//
+//            // Else if the text view's placeholder is showing and the
+//            // length of the replacement string is greater than 0, set
+//            // the text color to black then set its text to the
+//            // replacement string
+//        else if textView.textColor == UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1) && !text.isEmpty {
+//            textView.textColor = UIColor.black
+//            textView.text = text
+//        }
+//
+//            // For every other case, the text should change with the usual
+//            // behavior...
+//        else {
+//            return true
+//        }
+//
+//        // ...otherwise return false since the updates have already
+//        // been made
+//        return false
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -157,7 +159,7 @@ class ProfileEditViewController: UIViewController, UITextViewDelegate {
         
         let user = Auth.auth().currentUser?.uid
         
-        let profile = ref.child(user!)
+        let profile = ref.child(user!).child("profile")
         let values = [
             // Basic Info
             "firstName": firstName,

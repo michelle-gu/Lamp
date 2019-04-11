@@ -14,7 +14,6 @@ class SignUpViewController: UIViewController {
     // MARK: Constants
     let sendEmailConfirm = "sendEmailConfirm"
     let showLoginScreen = "showLoginScreen"
-//    let ref = Database.database().reference(withPath: "user-profiles")
 
     // MARK: Outlets
     @IBOutlet weak var emailField: UITextField!
@@ -50,16 +49,20 @@ class SignUpViewController: UIViewController {
         
         // Store email and password to firebase
         Auth.auth().createUser(withEmail: email, password: password) { user, error in
-            if error == nil {
-                // TODO: Success - send email
-            } else {
+            
+            if let error = error, user == nil {
+                print("\nError signing up\n")
                 let alert = UIAlertController(
                     title: "Sign Up Failed",
-                    message: error?.localizedDescription,
+                    message: error.localizedDescription,
                     preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alert, animated: true, completion: nil)
+                return
+            } else {
+                print("\nSuccess! Using segue\n")
+                self.performSegue(withIdentifier: self.sendEmailConfirm, sender: nil)
             }
         }
         
