@@ -111,23 +111,28 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         let profile = profilesRef.child(user!).child("profile")
         let values = [
             "uni": uni,
-            "futureLoc": futureLoc,
             "occupation": occupation
         ]
         profile.updateChildValues(values)
         
-        var futureLocArr: [String] = futureLoc.components(separatedBy: ", ")
+        let futureLocArr: [String] = futureLoc.components(separatedBy: ", ")
         print(futureLocArr)
-        // Set default location fitler
         for loc in futureLocArr {
+            print("Pressing done & saving data!")
+            // Set future location and default location filter
             let locFilterVal = [
-                "futureLocs": [
-                    loc: [
-                        user: true // Flowermound, AUstin: true
-                    ]
+                loc: true // Flowermound, AUstin: true
+            ]
+            profilesRef.child(user!).child("profile").child("futureLoc").updateChildValues(locFilterVal)
+            profilesRef.child(user!).child("settings").child("discovery").child("futureLoc").updateChildValues(locFilterVal)
+            
+            // Add the user's locations to list of all locations
+            let locValues = [
+                loc: [
+                    user: true
                 ]
             ]
-            profilesRef.child(user!).child("settings").child("discovery").updateChildValues(locFilterVal)
+            dbRef.reference(withPath: "locations").updateChildValues(locValues)
         }
 
         
@@ -147,12 +152,6 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         ]
         dbRef.reference(withPath: "universities").updateChildValues(uniValues)
         
-        let locValues = [
-            futureLoc: [
-                user: true
-            ]
-        ]
-        dbRef.reference(withPath: "locations").updateChildValues(locValues)
 
         // Update filter defaults
     }

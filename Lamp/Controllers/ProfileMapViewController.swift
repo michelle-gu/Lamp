@@ -224,7 +224,7 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 //remove from Firebase
                 let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                 profileLocs.child(currentCity).removeValue()
-                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLocs")
+                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
                 discoverySettingsRef.child(currentCity).removeValue()
             }
             n += 1
@@ -250,7 +250,7 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 //remove from Firebase
                 let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                 profileLocs.child(currentCity).removeValue()
-                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLocs")
+                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
                 discoverySettingsRef.child(currentCity).removeValue()
             }
             n += 1
@@ -276,7 +276,7 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 //remove from Firebase
                 let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                 profileLocs.child(currentCity).removeValue()
-                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLocs")
+                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
                 discoverySettingsRef.child(currentCity).removeValue()
             }
             n += 1
@@ -300,19 +300,23 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         
         // add each city in array to Firebase
         for currentCity in cities {
-            let values: [String : Any] = [
+            let locationValues: [String : Any] = [
                 currentCity : [
                     user : true
                 ]
             ]
             // updated locations
-            locationRef.updateChildValues(values)
+            locationRef.updateChildValues(locationValues)
+            
+            let values: [String : Any] = [
+                currentCity: true
+            ]
             
             // update locations nested in user>profile>futureLoc
             profileRef.child("futureLoc").updateChildValues(values)
             
             // update locations nested in user>settings>discovery>futureLoc
-            discoverySettingsRef.child("futureLocs").updateChildValues(values)
+            discoverySettingsRef.child("futureLoc").updateChildValues(values)
         }
         
         self.navigationController?.popViewController(animated: true)

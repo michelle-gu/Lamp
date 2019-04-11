@@ -83,8 +83,8 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
     
     // populate the cities array with cities currently in Firebase
     func getCities(completion: @escaping ([String]) -> Void) {
-        let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
-        profileLocs.observeSingleEvent(of: .value, with: { (snapshot) in
+        let filterLocs = userRef.child(user!).child("settings").child("discovery").child("futureLoc")
+        filterLocs.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let citiesDict = snapshot.value as? [String : AnyObject] else {
                 return completion([])
             }
@@ -210,7 +210,7 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
                 //remove from Firebase
                 let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                 profileLocs.child(currentCity).removeValue()
-                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLocs")
+                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
                 discoverySettingsRef.child(currentCity).removeValue()
             }
             n += 1
@@ -236,7 +236,7 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
                 //remove from Firebase
                 let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                 profileLocs.child(currentCity).removeValue()
-                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLocs")
+                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
                 discoverySettingsRef.child(currentCity).removeValue()
             }
             n += 1
@@ -262,7 +262,7 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
                 //remove from Firebase
                 let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                 profileLocs.child(currentCity).removeValue()
-                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLocs")
+                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
                 discoverySettingsRef.child(currentCity).removeValue()
             }
             n += 1
@@ -282,18 +282,11 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
         // add each city in array to Firebase
         for currentCity in cities {
             let values: [String : Any] = [
-                currentCity : [
-                    user : true
-                ]
+                currentCity: true
             ]
-            // update locations
-            locationRef.updateChildValues(values)
-            
-            // update locations nested in user>profile>futureLoc
-            profileRef.child("futureLoc").updateChildValues(values)
             
             // update locations nested in user>settings>discovery>futureLocs
-            discoverySettingsRef.child("futureLocs").updateChildValues(values)
+            discoverySettingsRef.child("futureLoc").updateChildValues(values)
         }
         
         self.navigationController?.popViewController(animated: true)

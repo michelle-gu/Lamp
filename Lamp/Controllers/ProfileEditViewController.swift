@@ -161,7 +161,7 @@ class ProfileEditViewController: UIViewController, UITextViewDelegate {
         let values = [
             // Basic Info
             "firstName": firstName,
-            "futureLoc": futureLoc,
+            "futureLoc": [futureLoc: true],
             "occupation": occupation,
             "bio": bio,
             "budget": budget,
@@ -176,8 +176,8 @@ class ProfileEditViewController: UIViewController, UITextViewDelegate {
             "email": email,
             "facebook": facebook,
             "otherContact": otherContact
-        ]
-        profile.updateChildValues(values)
+        ] as [String : Any]
+        profile.child("profile").updateChildValues(values)
         self.dismiss(animated: true, completion: nil)
     }
 }
