@@ -12,5 +12,6 @@ target 'Lamp' do
   pod 'Eureka'
   pod 'RangeUISlider', '~> 1.8'
   pod 'FBSDKLoginKit'
+  pod 'Koloda'
 
 end
