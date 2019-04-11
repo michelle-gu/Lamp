@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Firebase
 
 class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
 
@@ -18,6 +19,11 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
     @IBOutlet weak var futureCity1: UIButton!
     @IBOutlet weak var futureCity2: UIButton!
     @IBOutlet weak var futureCity3: UIButton!
+    
+    // MARK: Firebase Properties
+    let citiesRef = Database.database().reference(withPath: "locations")
+    let userRef = Database.database().reference(withPath: "user-profiles")
+    let user = Auth.auth().currentUser?.uid
     
     // MARK: Properties
     var cities:[String] = []
@@ -30,15 +36,36 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         mapView.delegate = self
-        futureCity1.isHidden = true
-        futureCity2.isHidden = true
-        futureCity3.isHidden = true
+        
+        getCities() { (citiesArray) in
+            self.cities = citiesArray
+            
+            self.futureCity1.isHidden = true
+            self.futureCity2.isHidden = true
+            self.futureCity3.isHidden = true
+            
+            if (self.cities.count == 1) {
+                self.futureCity1.setTitle(self.cities[0], for: .normal)
+                self.futureCity1.isHidden = false
+            }else if (self.cities.count == 2) {
+                self.futureCity1.setTitle(self.cities[0], for: .normal)
+                self.futureCity2.setTitle(self.cities[1], for: .normal)
+                self.futureCity1.isHidden = false
+                self.futureCity2.isHidden = false
+            } else if (self.cities.count == 3) {
+                self.futureCity1.setTitle(self.cities[0], for: .normal)
+                self.futureCity2.setTitle(self.cities[1], for: .normal)
+                self.futureCity3.setTitle(self.cities[2], for: .normal)
+                self.futureCity1.isHidden = false
+                self.futureCity2.isHidden = false
+                self.futureCity3.isHidden = false
+            }
+        }
         
         centerMapOnLocation(location: initialLocation)
         
-        // change add button styling
+        // button styling
         addButton.layer.borderWidth = 1
         addButton.layer.cornerRadius = addButton.bounds.height / 2
         addButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
@@ -52,6 +79,22 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    // populate the cities array with cities currently in Firebase
+    func getCities(completion: @escaping ([String]) -> Void) {
+        let filterLocs = userRef.child(user!).child("settings").child("discovery").child("futureLoc")
+        filterLocs.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let citiesDict = snapshot.value as? [String : AnyObject] else {
+                return completion([])
+            }
+            
+            var citiesArray: [String] = []
+            for city in citiesDict {
+                citiesArray.append(city.key)
+            }
+            completion(citiesArray)
+        })
     }
     
     // when the Add button is pressed, the Search bar is brought up
@@ -131,9 +174,123 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
         }
     }
     
-
+    @IBAction func addCityButtonPressed(_ sender: Any) {
+        cities.append(currentCity)
+        
+        if (futureCity1.isHidden == true) {
+            futureCity1.setTitle(currentCity, for: .normal)
+            futureCity1.isHidden = false
+        } else if (futureCity2.isHidden == true) {
+            futureCity2.setTitle(currentCity, for: .normal)
+            futureCity2.isHidden = false
+        } else if (futureCity3.isHidden == true) {
+            futureCity3.setTitle(currentCity, for: .normal)
+            futureCity3.isHidden = false
+        }
+        
+        if (futureCity1.isHidden == false && futureCity2.isHidden == false && futureCity3.isHidden == false) {
+            addButton.isHidden = true
+        } else {
+            addButton.isHidden = false
+        }
+    }
+    
+    // Click to Remove City
+    @IBAction func city1Pressed(_ sender: Any) {
+        if (futureCity1.isHidden == false) {
+            futureCity1.isHidden = true
+        }
+        var n = 0
+        for currentCity in cities {
+            if (currentCity == futureCity1.titleLabel?.text) {
+                // remove city from array
+                cities.remove(at: n)
+                n -= 1
+                
+                //remove from Firebase
+                let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
+                profileLocs.child(currentCity).removeValue()
+                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
+                discoverySettingsRef.child(currentCity).removeValue()
+            }
+            n += 1
+        }
+        
+        if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
+            addButton.isHidden = false
+        }
+    }
+    
+    @IBAction func city2Pressed(_ sender: Any) {
+        if (futureCity2.isHidden == false) {
+            futureCity2.isHidden = true
+        }
+        
+        var n = 0
+        for currentCity in cities {
+            if (currentCity == futureCity2.titleLabel?.text) {
+                // remove city from array
+                cities.remove(at: n)
+                n -= 1
+                
+                //remove from Firebase
+                let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
+                profileLocs.child(currentCity).removeValue()
+                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
+                discoverySettingsRef.child(currentCity).removeValue()
+            }
+            n += 1
+        }
+        
+        if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
+            addButton.isHidden = false
+        }
+    }
+    
+    @IBAction func city3Pressed(_ sender: Any) {
+        if (futureCity3.isHidden == false) {
+            futureCity3.isHidden = true
+        }
+        
+        var n = 0
+        for currentCity in cities {
+            if (currentCity == futureCity3.titleLabel?.text) {
+                // remove city from array
+                cities.remove(at: n)
+                n -= 1
+                
+                //remove from Firebase
+                let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
+                profileLocs.child(currentCity).removeValue()
+                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
+                discoverySettingsRef.child(currentCity).removeValue()
+            }
+            n += 1
+        }
+        
+        if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
+            addButton.isHidden = false
+        }
+    }
+    
     // MARK: - Navigation
     @IBAction func saveButtonPressed(_ sender: Any) {
+        let locationRef = self.citiesRef
+        let profileRef = self.userRef.child(user!).child("profile")
+        let discoverySettingsRef = userRef.child(user!).child("settings").child("discovery")
+        
+        // add each city in array to Firebase
+        for currentCity in cities {
+            let values: [String : Any] = [
+                currentCity: true
+            ]
+            
+            // update locations nested in user>settings>discovery>futureLocs
+            discoverySettingsRef.child("futureLoc").updateChildValues(values)
+        }
+        
+        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
 

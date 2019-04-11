@@ -107,7 +107,7 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         
         let user = Auth.auth().currentUser?.uid
         
-        let profile = Profile(firstName: firstName, birthday: birthday, gender: gender, uni: "", futureLoc: "", occupation: "")
+        let profile = Profile(firstName: firstName, birthday: birthday, gender: gender, uni: "", futureLoc: [:], occupation: "")
         let settings = Settings()
         
         let userRef = self.userProfilesRef.child(user!)

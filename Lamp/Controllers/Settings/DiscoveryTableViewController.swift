@@ -72,7 +72,7 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
         discoverySettingsRef.observe(.value, with: { (snapshot) in
             let discoverySettingsDict = snapshot.value as? [String : AnyObject] ?? [:]
             
-            let futureLocData = discoverySettingsDict["futureLocs"] as? [String: AnyObject] ?? [:]
+            let futureLocData = discoverySettingsDict["futureLoc"] as? [String: AnyObject] ?? [:]
             print ("futureLocData: ", futureLocData)
             var futureLocSubtitleArr: [String] = []
             for futureLoc in futureLocData {
