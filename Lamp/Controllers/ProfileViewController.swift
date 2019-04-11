@@ -106,7 +106,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         profile.observe(.value, with: { (snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
             self.occupationLabel.text = profileDict["occupation"] as? String
-            self.futureLocationLabel.text = profileDict["futureLoc"] as? String
+            
+            var locArr: [String] = []
+            for city in profileDict["futureLoc"] as! [String: Bool] {
+                print ("city: ", city.key)
+                locArr.append(city.key)
+            }
+            let futureLocStr = locArr.joined(separator: ", ")
+            
+            self.futureLocationLabel.text = futureLocStr
             self.uniLabel.text = profileDict["uni"] as? String
             if let nameAge = profileDict["firstName"] as? String,
                 let birthday = profileDict["birthday"] as? String {
