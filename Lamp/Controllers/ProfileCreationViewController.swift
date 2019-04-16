@@ -9,9 +9,9 @@
 import UIKit
 import Firebase
 
-let genderPickerData = [String](arrayLiteral: "Female", "Male", "Other")
+let genderPickerData = [String](arrayLiteral: "Female", "Male", "Other", "Prefer not to say")
 
-class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
     // MARK: Constants
     let showLocationInfoScreen = "showLocationInfoScreen"
@@ -29,6 +29,10 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Textfield delegates
+        genderTextField.delegate = self
+        birthdayTextField.delegate = self
         
         // profile picture styling
         profilePictureView.layer.cornerRadius = profilePictureView.bounds.height / 2
@@ -85,6 +89,18 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         genderTextField.text = genderPickerData[row]
     }
     
+    // Birthday is at least 13 years old
+    func isValidBirthday(birthday: String) -> Bool {
+        let now = Date()
+        let calendar = Calendar.current
+        let myDateFormatter = DateFormatter()
+        myDateFormatter.dateFormat = "MM/dd/yyyy"
+        let birthdayDate = myDateFormatter.date(from: birthday)!
+        let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthdayDate, to: now)
+        let age = ageComponents.year!
+        return age >= 13
+    }
+
     // Upon completion of filling in profile fields and Next button is pressed
     @IBAction func nextButtonPressed(_ sender: Any) {
         guard
@@ -93,11 +109,13 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
             let gender = genderTextField.text,
             //let profilePicture = profilePictureView.image,
             firstName.count > 0,
-            birthday.count > 0
+            birthday.count > 0,
+            gender.count > 0,
+            isValidBirthday(birthday: birthday)
             else {
                 let alert = UIAlertController(
                     title: "Profile Creation Failed",
-                    message: "Please fill First Name and birthday fields.",
+                    message: "Please fill in all fields. You must be at least 13 years old to use this app.",
                     preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -121,6 +139,11 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         ]
         gendersRef.updateChildValues(genderValues)
 
+    }
+    
+    // MARK: - Text Field delegate
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return false
     }
 
 }

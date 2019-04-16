@@ -33,13 +33,14 @@ class SignUpViewController: UIViewController {
             let password = passwordField.text,
             let confirmedPassword = confirmPasswordField.text,
             email.count > 0,
+            email.hasSuffix(".edu"),
             password.count > 0,
             confirmedPassword.count > 0,
             confirmedPassword == password
             else {
                 let alert = UIAlertController(
                     title: "Sign Up Failed",
-                    message: "Please fill in all fields and ensure password matches confirmation password.",
+                    message: "Please fill in all fields, use a '.edu' email, and ensure password matches confirmation password.",
                     preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default))

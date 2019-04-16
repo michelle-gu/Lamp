@@ -134,7 +134,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         let myDateFormatter = DateFormatter()
         myDateFormatter.dateFormat = "MM/dd/yyyy"
         let birthdayDate = myDateFormatter.date(from: birthday)!
-        let ageComponents = calendar.dateComponents([.year], from: birthdayDate, to: now)
+        let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthdayDate, to: now)
         let age = ageComponents.year!
         return String(age)
     }
