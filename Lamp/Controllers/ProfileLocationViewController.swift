@@ -13,28 +13,35 @@ import Foundation
 // current universities
 let uniPickerData = [String](arrayLiteral: "University of Texas at Austin", "St Edwards")
 
-class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
-    // MARK: Segues
-    let openMap = "openMap"
-    let showHomePage = "showHomePage"
-    
-    // MARK: Properties
+    // MARK: - Constants
     let profilesRef = Database.database().reference(withPath: "user-profiles")
     let dbRef = Database.database()
     let citiesRef = Database.database().reference(withPath: "locations")
     let user = Auth.auth().currentUser?.uid
+    
+    // MARK: Segues
+    let openMap = "openMap"
+    let showHomePage = "showHomePage"
+    
+    // MARK: - Variables
     var cities:[String] = []
     
-    // MARK: Outlets
+    // MARK: - Outlets
     @IBOutlet weak var profilePictureView: UIImageView!
     @IBOutlet weak var uniTextField: UITextField!
     @IBOutlet weak var futureLocTextField: UITextField!
     @IBOutlet weak var occupationTextField: UITextField!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // TextField Delegates
+        futureLocTextField.delegate = self
+        uniTextField.delegate = self
+        
         // Do any additional setup after loading the view.
         profilePictureView.layer.cornerRadius = profilePictureView.bounds.height / 2
         profilePictureView.clipsToBounds = true
@@ -43,12 +50,27 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         let uniPicker = UIPickerView()
         uniPicker.delegate = self
         uniTextField.inputView = uniPicker
+        
+        // Pre-populate with values from Firebase
+        let profile = profilesRef.child(user!).child("profile")
+        profile.observe(.value, with: { (snapshot) in
+            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+            if let uniVal = profileDict["uni"] as? String {
+                self.uniTextField?.text = uniVal
+            }
+            self.getLocationText()
+            if let occupationVal = profileDict["occupation"] as? String {
+                self.occupationTextField?.text = occupationVal
+            }
+        })
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         getLocationText()
     }
     
+    // MARK: - Database Retrieval
     // update the location text to show user's preferences
     func getLocationText() {
         var locationText = ""
@@ -76,6 +98,8 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         })
     }
     
+    // MARK: - PickerView Delegate
+    
     // for uni picker delegate
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -96,13 +120,24 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         uniTextField.text = uniPickerData[row]
     }
     
+    // MARK: - Actions
     @IBAction func doneButtonPressed(_ sender: Any) {
         guard
             let uni = uniTextField.text,
             let futureLoc = futureLocTextField.text,
-            let occupation = occupationTextField.text
+            let occupation = occupationTextField.text,
+            uni.count > 0,
+            futureLoc.count > 0,
+            occupation.count > 0
             //let profilePicture = profilePictureView.image
             else {
+                let alert = UIAlertController(
+                    title: "Profile Creation Failed",
+                    message: "Please fill in all fields.",
+                    preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
                 return
         }
         
@@ -116,7 +151,6 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         profile.updateChildValues(values)
         
         let futureLocArr: [String] = futureLoc.components(separatedBy: ", ")
-        print(futureLocArr)
         for loc in futureLocArr {
             print("Pressing done & saving data!")
             // Set future location and default location filter
@@ -154,6 +188,11 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         
 
         // Update filter defaults
+    }
+    
+    // MARK: - Text Field delegate
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return false
     }
     
 }

@@ -12,7 +12,8 @@ import Firebase
 class NotificationsTableViewController: UITableViewController {
     
     // MARK: Constants
-    let ref = Database.database().reference(withPath: "user-profiles")
+    let user = Auth.auth().currentUser?.uid
+    let userProfilesRef = Database.database().reference(withPath: "user-profiles")
     
     // MARK: Outlets
     @IBOutlet weak var newMessagesSwitch: UISwitch!
@@ -20,35 +21,44 @@ class NotificationsTableViewController: UITableViewController {
     
     // MARK: Actions
     @IBAction func newMessageToggle(_ sender: Any) {
-        print("Toggled new msg switch")
         let notifyForNewMessages = newMessagesSwitch.isOn
-        print("Toggle value: ", notifyForNewMessages)
-        let user = Auth.auth().currentUser?.uid
-        let notificationsSettingsRef = ref.child(user!).child("settings").child("notifications")
         let values = ["newMessages": notifyForNewMessages]
+        let notificationsSettingsRef = userProfilesRef.child(user!).child("settings").child("notifications")
         notificationsSettingsRef.updateChildValues(values)
     }
     
     @IBAction func newMatchesToggle(_ sender: Any) {
-        print("Toggled new match switch")
         let notifyForNewMatches = newMatchesSwitch.isOn
-        print("Toggle value: ", notifyForNewMatches)
-        let user = Auth.auth().currentUser?.uid
-        let notificationsSettingsRef = ref.child(user!).child("settings").child("notifications")
         let values = ["newMatches": notifyForNewMatches]
+        let notificationsSettingsRef = userProfilesRef.child(user!).child("settings").child("notifications")
         notificationsSettingsRef.updateChildValues(values)
     }
     
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do not allow cell selection
         tableView.allowsSelection = false
         // Remove empty cells at bottom
         tableView.tableFooterView = UIView()
+        
+        // Retrieve notifications settings values from Firebase
+        let notificationsSettingsRef = userProfilesRef.child(user!).child("settings").child("notifications")
+        notificationsSettingsRef.observe(.value, with: { (snapshot) in
+            // Read snapshot
+            let notificationsSettingsDict = snapshot.value as? [String : AnyObject] ?? [:]
+            // If value exists, pre-populate newMessages switch
+            if let newMessagesVal = notificationsSettingsDict["newMessages"] as? Bool {
+                self.newMessagesSwitch?.isOn = newMessagesVal
+            }
+            // If value exists, pre-populate newMatches switch
+            if let newMatchesVal = notificationsSettingsDict["newMatches"] as? Bool {
+                self.newMatchesSwitch?.isOn = newMatchesVal
+            }
+        })
     }
 
-    // MARK: Table view data source
+    // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-8v-AgN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-8v-AgN">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1014,7 +1014,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="eve-d7-OLb" kind="show" identifier="" id="CPg-tX-kgH"/>
+                                            <segue destination="eve-d7-OLb" kind="show" identifier="selectFutureLocationSegueIdentifier" id="CPg-tX-kgH"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="maxDistanceCellIdentifier" id="kht-OL-hRS">
@@ -1077,7 +1077,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="RwB-Xq-Tf9" kind="show" id="uKX-ff-WYS"/>
+                                            <segue destination="RwB-Xq-Tf9" kind="show" identifier="selectUniversitiesSegueIdentifier" id="uKX-ff-WYS"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="genderCellIdentifier" rowHeight="70" id="OUV-Zy-bO1">
@@ -1104,7 +1104,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="jyl-8m-0lP" kind="show" id="uHt-F7-sgs"/>
+                                            <segue destination="jyl-8m-0lP" kind="show" identifier="selectGenderSegueIdentifier" id="uHt-F7-sgs"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ageRangeCellIdentifier" id="d65-TP-6Fj">
@@ -2524,7 +2524,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LogoColor" width="398" height="484"/>
+        <image name="LogoColor" width="199" height="242"/>
         <image name="girl-3" width="5370" height="3390"/>
         <image name="girl-4" width="2000" height="1333"/>
         <image name="girl-5" width="6000" height="4000"/>

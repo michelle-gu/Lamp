@@ -23,6 +23,7 @@ class GenderFilterViewController: UIViewController, UITableViewDataSource, UITab
     let genderCellIdentifier = "genderCellIdentifier"
     let numGenders = 4
     let genderArray = ["Female", "Male", "Other", "Prefer not to say"]
+    let user = Auth.auth().currentUser?.uid
     
     // MARK: TableView Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -88,19 +89,52 @@ class GenderFilterViewController: UIViewController, UITableViewDataSource, UITab
         tableView.delegate = self
         tableView.dataSource = self
         
-        // TODO: Pre-load what's already selected
+        // Retrieve initially selected genders from Firebase
+        let discoverySettingsRef = profilesRef.child(user!).child("settings").child("discovery")
+        discoverySettingsRef.observe(.value, with: { (snapshot) in
+            // Read snapshot
+            let discoverySettingsDict = snapshot.value as? [String : AnyObject] ?? [:]
+
+            // Build initially selected genders array
+            let genderData = discoverySettingsDict["genders"] as? [String: AnyObject] ?? [:]
+            var initiallySelectedGenders: [String] = []
+            for gender in genderData {
+                if gender.value.boolValue { // true
+                    initiallySelectedGenders.append(gender.key)
+                }
+            }
+            
+            // Check initially selected cells
+            var allInitiallySelected: Bool = true
+            // Loop through all cells
+            for i in 1...self.numGenders {
+                let indexPathForRow = IndexPath(row: i, section: 0)
+                let cell = self.tableView.cellForRow(at: indexPathForRow)
+                if initiallySelectedGenders.contains((cell?.textLabel?.text)!) {
+                    cell!.accessoryType = .checkmark
+                } else {
+                    cell!.accessoryType = .none
+                    allInitiallySelected = false
+                }
+            }
+            // Select All cell
+            if allInitiallySelected {
+                let indexPathForRow = IndexPath(row: 0, section: 0)
+                let cell = self.tableView.cellForRow(at: indexPathForRow)
+                cell!.accessoryType = .checkmark
+            }
+        })
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         // Update Firebase with genders
-        let user = Auth.auth().currentUser?.uid
         let discoverySettingsRef = profilesRef.child(user!).child("settings").child("discovery")
 
         var gendersSelected: [String] = []
         for row in 1...numGenders {
             let indexPathForRow = IndexPath(row: row, section: 0)
             let cell = tableView.cellForRow(at: indexPathForRow)
-            if (cell?.isSelected)! {
+            if cell?.accessoryType == .checkmark {
                 let gender: String = (cell?.textLabel!.text)!
                 gendersSelected.append(gender)
             }

@@ -23,6 +23,7 @@ class UniversitiesFilterViewController: UIViewController, UITableViewDelegate, U
     let profilesRef = Database.database().reference(withPath: "user-profiles")
     let universitiesRef = Database.database().reference(withPath: "universities")
     let universityCellIdentifier = "universityCellIdentifier"
+    let user = Auth.auth().currentUser?.uid
     
     // MARK: TableView stubs
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -107,14 +108,46 @@ class UniversitiesFilterViewController: UIViewController, UITableViewDelegate, U
         tableView.dataSource = self
         
         UniversitiesFilterViewController.getUniArray() { (uniArray) in
-            print(uniArray)
             self.universitiesArray = uniArray
             self.numUniversities = uniArray.count
             self.tableView.reloadData()
+            
+            // Retrieve initially selected genders from Firebase
+            let discoverySettingsRef = self.profilesRef.child(self.user!).child("settings").child("discovery")
+            discoverySettingsRef.observe(.value, with: { (snapshot) in
+                // Read snapshot
+                let discoverySettingsDict = snapshot.value as? [String : AnyObject] ?? [:]
+                
+                // Build initially selected genders array
+                let uniData = discoverySettingsDict["universities"] as? [String: AnyObject] ?? [:]
+                var initiallySelectedUnis: [String] = []
+                for uni in uniData {
+                    if uni.value.boolValue { // true
+                        initiallySelectedUnis.append(uni.key)
+                    }
+                }
+                
+                // Check initially selected cells
+                var allInitiallySelected: Bool = true
+                // Loop through all cells
+                for i in 1...self.numUniversities {
+                    let indexPathForRow = IndexPath(row: i, section: 0)
+                    let cell = self.tableView.cellForRow(at: indexPathForRow)
+                    if initiallySelectedUnis.contains((cell?.textLabel?.text)!) {
+                        cell!.accessoryType = .checkmark
+                    } else {
+                        cell!.accessoryType = .none
+                        allInitiallySelected = false
+                    }
+                }
+                // Select All cell
+                if allInitiallySelected {
+                    let indexPathForRow = IndexPath(row: 0, section: 0)
+                    let cell = self.tableView.cellForRow(at: indexPathForRow)
+                    cell!.accessoryType = .checkmark
+                }
+            })
         }
-        
-        // TODO: Pre-load what's already selected
-
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -126,7 +159,7 @@ class UniversitiesFilterViewController: UIViewController, UITableViewDelegate, U
         for row in 1...numUniversities {
             let indexPathForRow = IndexPath(row: row, section: 0)
             let cell = tableView.cellForRow(at: indexPathForRow)
-            if (cell?.isSelected)! {
+            if cell?.accessoryType == .checkmark {
                 let uni: String = (cell?.textLabel!.text)!
                 universitiesSelected.append(uni)
             }

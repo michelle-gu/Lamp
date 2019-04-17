@@ -11,18 +11,18 @@ import Firebase
 
 class SignUpViewController: UIViewController {
     
-    // MARK: Constants
+    // MARK: - Constants
     let sendEmailConfirm = "sendEmailConfirm"
     let showLoginScreen = "showLoginScreen"
 
-    // MARK: Outlets
+    // MARK: - Outlets
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
-    // MARK: Actions
+    // MARK: - Actions
     @IBAction func logInDidTouch(_ sender: Any) {
         
     }
@@ -33,13 +33,14 @@ class SignUpViewController: UIViewController {
             let password = passwordField.text,
             let confirmedPassword = confirmPasswordField.text,
             email.count > 0,
+            email.hasSuffix(".edu"),
             password.count > 0,
             confirmedPassword.count > 0,
             confirmedPassword == password
             else {
                 let alert = UIAlertController(
                     title: "Sign Up Failed",
-                    message: "Please fill in all fields and ensure password matches confirmation password.",
+                    message: "Please fill in all fields, use a '.edu' email, and ensure password matches confirmation password.",
                     preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -73,9 +74,15 @@ class SignUpViewController: UIViewController {
 //        userRef.setValue(settings.toAnyObject())
     }
     
-    // MARK: UIViewController Lifecycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        // tap.cancelsTouchesInView = false
+//        view.addGestureRecognizer(tap)
+
+        
         // Checks if user is already logged in
         Auth.auth().addStateDidChangeListener() { auth, user in
             if user != nil {
@@ -86,5 +93,11 @@ class SignUpViewController: UIViewController {
             }
         }
     }
+    
+//    // Calls this function when the tap is recognized.
+//    func dismissKeyboard() {
+//        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+//        view.endEditing(true)
+//    }
 
 }

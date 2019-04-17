@@ -109,7 +109,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             var locArr: [String] = []
             for city in profileDict["futureLoc"] as! [String: Bool] {
-                print ("city: ", city.key)
                 locArr.append(city.key)
             }
             let futureLocStr = locArr.joined(separator: ", ")
@@ -134,7 +133,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         let myDateFormatter = DateFormatter()
         myDateFormatter.dateFormat = "MM/dd/yyyy"
         let birthdayDate = myDateFormatter.date(from: birthday)!
-        let ageComponents = calendar.dateComponents([.year], from: birthdayDate, to: now)
+        let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthdayDate, to: now)
         let age = ageComponents.year!
         return String(age)
     }
