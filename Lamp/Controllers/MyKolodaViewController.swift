@@ -50,12 +50,10 @@ class MyKolodaViewController: UIViewController {
         ref.child("user-profiles").queryOrderedByKey().observe(.value, with: { (snapshot) in
 //            self.ids = snapshot
             self.idDict = snapshot.value as? [String : NSObject] ?? [:]
-            print(self.idDict)
             
             for (key, _) in self.idDict {
                 self.ids.append(key)
             }
-            print(self.ids)
         })
         self.kolodaView.reloadData()
     }
@@ -180,7 +178,6 @@ extension MyKolodaViewController: KolodaViewDataSource {
         profile.observe(.value, with: {(snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
             let firstName = profileDict["firstName"] as! String
-            print(firstName)
             let job = "Student"
             let location = "Austin"
             card.image.image = UIImage(named: "empty")

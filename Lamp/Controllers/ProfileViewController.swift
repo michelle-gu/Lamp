@@ -109,7 +109,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             var locArr: [String] = []
             for city in profileDict["futureLoc"] as! [String: Bool] {
-                print ("city: ", city.key)
                 locArr.append(city.key)
             }
             let futureLocStr = locArr.joined(separator: ", ")

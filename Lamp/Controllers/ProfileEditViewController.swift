@@ -11,7 +11,7 @@ import Firebase
 
 class ProfileEditViewController: UIViewController, UITextViewDelegate {
     
-    // MARK: Outlets
+    // MARK: - Outlets
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var occupationTextField: UITextField!
@@ -27,10 +27,16 @@ class ProfileEditViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var facebookTextField: UITextField!
     @IBOutlet weak var otherContactTextField: UITextField!
     
-    // MARK: Properties
-    var ref: DatabaseReference!
+    // MARK: - Constants
+    let profilesRef = Database.database().reference(withPath: "user-profiles")
+    let user = Auth.auth().currentUser?.uid
+    let dbRef = Database.database()
+    let citiesRef = Database.database().reference(withPath: "locations")
     
-    // MARK: Lifecycle
+    // MARK: - Variables
+    var cities:[String] = []
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,14 +60,27 @@ class ProfileEditViewController: UIViewController, UITextViewDelegate {
         
 //        bioText.selectedTextRange = bioText.textRange(from: bioText.beginningOfDocument, to: bioText.beginningOfDocument)
         
-        ref = Database.database().reference(withPath: "user-profiles")
+        // Pre-populate with values from Firebase
+//        let profile = profilesRef.child(user!).child("profile")
+//        profile.observe(.value, with: { (snapshot) in
+//            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+//            if let uniVal = profileDict["uni"] as? String {
+//                self.uniTextField?.text = uniVal
+//            }
+//            self.setLocationText()
+//            if let occupationVal = profileDict["occupation"] as? String {
+//                self.occupationTextField?.text = occupationVal
+//            }
+//        })
+
+        
         let user = Auth.auth().currentUser?.uid
-        let profile = ref.child(user!)
+        let profile = profilesRef.child(user!).child("profile")
         profile.observe(.value, with: { (snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
             self.firstNameTextField.text = profileDict["firstName"] as? String
             self.occupationTextField.text = profileDict["occupation"] as? String
-            self.futureLocTextField.text = profileDict["futureLoc"] as? String
+            self.setLocationText()
             self.bioText.text = profileDict["bio"] as? String
 //            if self.bioText.text != "" {
 //                self.bioText.textColor = UIColor.black
@@ -78,6 +97,39 @@ class ProfileEditViewController: UIViewController, UITextViewDelegate {
         })
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    // MARK: - Database Retrieval
+    // update the location text to show user's preferences
+    func setLocationText() {
+        var locationText = ""
+        getCities() { (citiesArray) in
+            self.cities = citiesArray
+            locationText = self.cities.joined(separator: ", ")
+            
+            self.futureLocTextField.text = locationText
+        }
+    }
+    
+    // populate the cities array with cities currently in Firebase
+    func getCities(completion: @escaping ([String]) -> Void) {
+        let profileLocs = profilesRef.child(user!).child("profile").child("futureLoc")
+        profileLocs.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let citiesDict = snapshot.value as? [String : AnyObject] else {
+                return completion([])
+            }
+            
+            var citiesArray: [String] = []
+            for city in citiesDict {
+                citiesArray.append(city.key)
+            }
+            completion(citiesArray)
+        })
+    }
+
+    // MARK: - TextView Delegate
     func textViewDidChangeSelection(_ textView: UITextView) {
         if self.view.window != nil {
             if textView.textColor == UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1) {
@@ -124,11 +176,7 @@ class ProfileEditViewController: UIViewController, UITextViewDelegate {
 //        return false
 //    }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    // MARK: Actions
+    // MARK: - Actions
     // dismisses the edit page and returns to ProfileViewController
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -157,13 +205,12 @@ class ProfileEditViewController: UIViewController, UITextViewDelegate {
                 return
         }
         
-        let user = Auth.auth().currentUser?.uid
-        
-        let profile = ref.child(user!).child("profile")
+        // Update all but futureLoc val
+        let profile = profilesRef.child(user!).child("profile")
         let values = [
             // Basic Info
             "firstName": firstName,
-            "futureLoc": [futureLoc: true],
+//            "futureLoc": [futureLoc: true],
             "occupation": occupation,
             "bio": bio,
             "budget": budget,
@@ -179,7 +226,28 @@ class ProfileEditViewController: UIViewController, UITextViewDelegate {
             "facebook": facebook,
             "otherContact": otherContact
         ] as [String : Any]
-        profile.child("profile").updateChildValues(values)
+        profile.updateChildValues(values)
+        
+        // Update futureLoc value
+        let futureLocArr: [String] = futureLoc.components(separatedBy: ", ")
+        for loc in futureLocArr {
+            print("Pressing done & saving data!")
+            // Set future location and default location filter
+            let locFilterVal = [
+                loc: true // Flowermound, AUstin: true
+            ]
+            profilesRef.child(user!).child("profile").child("futureLoc").updateChildValues(locFilterVal)
+            profilesRef.child(user!).child("settings").child("discovery").child("futureLoc").updateChildValues(locFilterVal)
+            
+            // Add the user's locations to list of all locations
+            let locValues = [
+                loc: [
+                    user: true
+                ]
+            ]
+            dbRef.reference(withPath: "locations").updateChildValues(locValues)
+        }
+        
         self.dismiss(animated: true, completion: nil)
     }
 }

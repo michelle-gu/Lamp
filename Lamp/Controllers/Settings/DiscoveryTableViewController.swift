@@ -13,8 +13,11 @@ import Firebase
 class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate {
     
     // MARK: Constants
-    let ref = Database.database().reference(withPath: "user-profiles")
     let user = Auth.auth().currentUser?.uid
+    let userProfilesRef = Database.database().reference(withPath: "user-profiles")
+    let selectGenderSegueIdentifier = "selectGenderSegueIdentifier"
+    let selectUniversitiesSegueIdentifier = "selectUniversitiesSegueIdentifier"
+    let selectFutureLocationSegueIdentifier = "selectFutureLocationSegueIdentifier"
 
     // MARK: Outlets
     @IBOutlet weak var maxDistanceSlider: UISlider!
@@ -33,27 +36,23 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
         maxAgeLabel.text = "\(Int(maxValueSelected))"
     }
     func rangeChangeFinished(minValueSelected: CGFloat, maxValueSelected: CGFloat, slider: RangeUISlider) {
-        let discoverySettingsRef = ref.child(user!).child("settings").child("discovery")
-        let values = ["minAge": minValueSelected,
-                      "maxAge": maxValueSelected]
+        let discoverySettingsRef = userProfilesRef.child(user!).child("settings").child("discovery")
+        let values = ["ageMin": minValueSelected,
+                      "ageMax": maxValueSelected]
         discoverySettingsRef.updateChildValues(values)
     }
     
     @IBAction func maxDistanceSliderChanged(_ sender: Any) {
-        print("Moved max dist slider")
         let maxDistance = maxDistanceSlider.value
-        print("Slider value: ", maxDistance)
-        let discoverySettingsRef = ref.child(user!).child("settings").child("discovery")
+        let discoverySettingsRef = userProfilesRef.child(user!).child("settings").child("discovery")
         let values = ["maxDistance": maxDistance]
         maxDistanceValueLabel.text = "\(Int(maxDistance))"
         discoverySettingsRef.updateChildValues(values)
     }
     
     @IBAction func showMyProfileToggled(_ sender: Any) {
-        print("Toggled new match switch")
         let showMyProfile = showMyProfileSwitch.isOn
-        print("Toggle value: ", showMyProfile)
-        let discoverySettingsRef = ref.child(user!).child("settings").child("discovery")
+        let discoverySettingsRef = userProfilesRef.child(user!).child("settings").child("discovery")
         let values = ["showProfile": showMyProfile]
         discoverySettingsRef.updateChildValues(values)
     }
@@ -65,15 +64,36 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
         tableView.tableFooterView = UIView()
         // Set age range slider delegate
         ageRangeSlider.delegate = self
+        ageRangeSlider.scaleMinValue = 0
+        ageRangeSlider.scaleMaxValue = 50
         
-        // Set subtitles for Future Loc, Uni, Gender
-        // Retrieve data from database
-        let discoverySettingsRef = ref.child(user!).child("settings").child("discovery")
+        // Retrieve discovery settings values from Firebase
+        let discoverySettingsRef = userProfilesRef.child(user!).child("settings").child("discovery")
         discoverySettingsRef.observe(.value, with: { (snapshot) in
+            // Read snapshot
             let discoverySettingsDict = snapshot.value as? [String : AnyObject] ?? [:]
-            
+            // If value exists, pre-populate newMessages switch
+            if let maxDistanceVal = discoverySettingsDict["maxDistance"] as? Float {
+                self.maxDistanceSlider?.value = maxDistanceVal
+                self.maxDistanceValueLabel?.text = "\(Int(maxDistanceVal))"
+            }
+            // If value exists, pre-populate newMatches switch
+            if let minAgeVal = discoverySettingsDict["ageMin"] as? CGFloat {
+                self.ageRangeSlider?.defaultValueLeftKnob = minAgeVal
+                self.minAgeLabel?.text = "\(Int(minAgeVal))"
+            }
+            // If value exists, pre-populate newMatches switch
+            if let maxAgeVal = discoverySettingsDict["ageMax"] as? CGFloat {
+                self.ageRangeSlider?.defaultValueRightKnob = maxAgeVal
+                self.maxAgeLabel?.text = "\(Int(maxAgeVal))"
+            }
+            // If value exists, pre-populate newMessages switch
+            if let showProfileVal = discoverySettingsDict["showProfile"] as? Bool {
+                self.showMyProfileSwitch?.isOn = showProfileVal
+            }
+        
+            // Set subtitles for Future Loc, Uni, Gender
             let futureLocData = discoverySettingsDict["futureLoc"] as? [String: AnyObject] ?? [:]
-            print ("futureLocData: ", futureLocData)
             var futureLocSubtitleArr: [String] = []
             for futureLoc in futureLocData {
                 if futureLoc.value.boolValue { // true
@@ -85,7 +105,6 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
             
             
             let universityData = discoverySettingsDict["universities"] as? [String: AnyObject] ?? [:]
-            print ("universitydata: ", universityData)
             var universitySubtitleArr: [String] = []
             for university in universityData {
                 if university.value.boolValue { // true
@@ -96,7 +115,6 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
             self.universitiesListLabel.text = universitySubtitleStr
             
             let genderData = discoverySettingsDict["genders"] as? [String: AnyObject] ?? [:]
-            print ("Genderdata: ", genderData)
             var genderSubtitleArr: [String] = []
             for gender in genderData {
                 if gender.value.boolValue { // true

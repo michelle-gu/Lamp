@@ -50,6 +50,20 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         let uniPicker = UIPickerView()
         uniPicker.delegate = self
         uniTextField.inputView = uniPicker
+        
+        // Pre-populate with values from Firebase
+        let profile = profilesRef.child(user!).child("profile")
+        profile.observe(.value, with: { (snapshot) in
+            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+            if let uniVal = profileDict["uni"] as? String {
+                self.uniTextField?.text = uniVal
+            }
+            self.getLocationText()
+            if let occupationVal = profileDict["occupation"] as? String {
+                self.occupationTextField?.text = occupationVal
+            }
+        })
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -137,7 +151,6 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         profile.updateChildValues(values)
         
         let futureLocArr: [String] = futureLoc.components(separatedBy: ", ")
-        print(futureLocArr)
         for loc in futureLocArr {
             print("Pressing done & saving data!")
             // Set future location and default location filter

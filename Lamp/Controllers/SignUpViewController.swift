@@ -11,18 +11,18 @@ import Firebase
 
 class SignUpViewController: UIViewController {
     
-    // MARK: Constants
+    // MARK: - Constants
     let sendEmailConfirm = "sendEmailConfirm"
     let showLoginScreen = "showLoginScreen"
 
-    // MARK: Outlets
+    // MARK: - Outlets
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
-    // MARK: Actions
+    // MARK: - Actions
     @IBAction func logInDidTouch(_ sender: Any) {
         
     }
@@ -74,9 +74,15 @@ class SignUpViewController: UIViewController {
 //        userRef.setValue(settings.toAnyObject())
     }
     
-    // MARK: UIViewController Lifecycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        // tap.cancelsTouchesInView = false
+//        view.addGestureRecognizer(tap)
+
+        
         // Checks if user is already logged in
         Auth.auth().addStateDidChangeListener() { auth, user in
             if user != nil {
@@ -87,5 +93,11 @@ class SignUpViewController: UIViewController {
             }
         }
     }
+    
+//    // Calls this function when the tap is recognized.
+//    func dismissKeyboard() {
+//        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+//        view.endEditing(true)
+//    }
 
 }

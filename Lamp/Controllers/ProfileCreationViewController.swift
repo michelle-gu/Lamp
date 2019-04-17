@@ -27,6 +27,7 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     @IBOutlet weak var birthdayTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,8 +56,26 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ProfileCreationViewController.viewTapped(gestureRecognizer:)))
         view.addGestureRecognizer(tapGesture)
         birthdayTextField.inputView = datePicker
+        
+        // Pre-populate with values from Firebase
+        let user = Auth.auth().currentUser?.uid
+        let profile = userProfilesRef.child(user!).child("profile")
+        profile.observe(.value, with: { (snapshot) in
+            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+            if let firstNameVal = profileDict["firstName"] as? String {
+                self.firstNameTextField?.text = firstNameVal
+            }
+            if let genderVal = profileDict["gender"] as? String {
+                self.genderTextField?.text = genderVal
+            }
+            if let birthdayVal = profileDict["birthday"] as? String {
+                self.birthdayTextField?.text = birthdayVal
+            }
+        })
+        
     }
     
+    // MARK: - Picker delegate
     // when outside of picker is tapped, it will dismiss
     @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
         view.endEditing(true)
