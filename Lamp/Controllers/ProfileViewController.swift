@@ -18,6 +18,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     let lifestylePrefsTableViewCellIdentifier = "lifestylePrefsCellIdentifier"
     let contactInfoTableViewCellIdentifier = "contactInfoCellIdentifier"
     
+    // MARK: Firebase Properties
+    let profilesRef = Database.database().reference(withPath: "user-profiles")
+    let user = Auth.auth().currentUser?.uid
+    
     // MARK: Outlets
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var occupationLabel: UILabel!
@@ -29,6 +33,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // MARK: Properties
     var ref: DatabaseReference!
+    var cities:[String] = []
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -107,18 +112,50 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
             self.occupationLabel.text = profileDict["occupation"] as? String
             
-            var locArr: [String] = []
+            /*var locArr: [String] = []
             for city in profileDict["futureLoc"] as! [String: Bool] {
                 locArr.append(city.key)
             }
             let futureLocStr = locArr.joined(separator: ", ")
             
-            self.futureLocationLabel.text = futureLocStr
+            self.futureLocationLabel.text = futureLocStr*/
             self.uniLabel.text = profileDict["uni"] as? String
             if let nameAge = profileDict["firstName"] as? String,
                 let birthday = profileDict["birthday"] as? String {
                 self.nameAgeLabel.text = "\(nameAge), \(self.getAgeStr(birthday: birthday))"
             }
+        })
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setLocationText()
+    }
+    
+    // MARK: - Database Retrieval
+    // update the location text to show user's preferences
+    func setLocationText() {
+        var locationText = ""
+        getCities() { (citiesArray) in
+            self.cities = citiesArray
+            locationText = self.cities.joined(separator: ", ")
+            
+            self.futureLocationLabel.text = locationText
+        }
+    }
+    
+    // populate the cities array with cities currently in Firebase
+    func getCities(completion: @escaping ([String]) -> Void) {
+        let profileLocs = profilesRef.child(user!).child("profile").child("futureLoc")
+        profileLocs.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let citiesDict = snapshot.value as? [String : AnyObject] else {
+                return completion([])
+            }
+            
+            var citiesArray: [String] = []
+            for city in citiesDict {
+                citiesArray.append(city.key)
+            }
+            completion(citiesArray)
         })
     }
     

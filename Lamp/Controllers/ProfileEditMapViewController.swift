@@ -1,8 +1,8 @@
 //
-//  FutureLocationFilterViewController.swift
+//  ProfileEditMapViewController.swift
 //  Lamp
 //
-//  Created by Michelle Gu on 4/9/19.
+//  Created by Pearl Xie on 4/17/19.
 //  Copyright © 2019 LaMMP. All rights reserved.
 //
 
@@ -10,8 +10,8 @@ import UIKit
 import MapKit
 import Firebase
 
-class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
-
+class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
+    
     // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addButton: UIButton!
@@ -298,6 +298,4 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
         self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
-    
-
 }
