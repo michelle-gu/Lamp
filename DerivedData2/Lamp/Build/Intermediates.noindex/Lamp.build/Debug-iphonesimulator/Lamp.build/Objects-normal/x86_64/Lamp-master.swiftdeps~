@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "4cdf1803c7183b3435f978dcabb70a59"
-build_time: [1555608652, 567410000]
+build_time: [1555609681, 445916000]
 inputs:
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/ProfileEditViewController.swift": [1555607003, 992630590]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Settings/NotificationsTableViewController.swift": [1555607003, 994507509]
@@ -11,6 +11,7 @@ inputs:
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Models/ViewController.swift": [1553726760, 944895008]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/MessageListViewController.swift": [1555608217, 897107838]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/SignUpViewController.swift": [1555607003, 995209787]
+  "/Users/lindseythompson/Desktop/Lamp/Lamp/Models/Message.swift": [1555609677, 658662853]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Views/Table View Cells/ToggleTableViewCell.swift": [1553726760, 946147839]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Models/Profile.swift": [1554953209, 809213995]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/ProfileCreationViewController.swift": [1555607003, 992165150]
@@ -29,16 +30,14 @@ inputs:
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/EmailConfirmationViewController.swift": [1553726760, 940971808]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/CardsViewController.swift": [1553726760, 940550973]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Models/Settings.swift": [1554953209, 809909092]
-  "/Users/lindseythompson/Desktop/Lamp/Lamp/ChatRoomViewController.swift": [1555607936, 104945856]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/MyKolodaViewController.swift": [1555607003, 991799097]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Views/Table View Cells/SubtitleTableViewCell.swift": [1553726760, 945999331]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Views/Table View Cells/SliderTableViewCell.swift": [1553726760, 945849163]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/MatchMessageViewController.swift": [1553726760, 941384944]
-  "/Users/lindseythompson/Desktop/Lamp/Lamp/TestMessagingViewController.swift": [1555607253, 843318824]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/ProfileLocationViewController.swift": [1555607003, 993027206]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/SocialMediaConnectViewController.swift": [1553726760, 943657506]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Views/BudgetTableViewCell.swift": [1554488239, 717668898]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Models/User.swift": [1553726760, 944726470]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Views/BioTableViewCell.swift": [1554488239, 717492924]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Views/CardView/CardView.swift": [1554953209, 810945645]
-  "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/MessageInstanceViewController.swift": [1555608652, 392439214]
+  "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/MessageInstanceViewController.swift": [1555609672, 801515454]

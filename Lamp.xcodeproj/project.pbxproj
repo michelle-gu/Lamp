@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0704BF222268EF03005F6394 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704BF212268EF03005F6394 /* Message.swift */; };
 		07131722224554F3000CDD33 /* MatchMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07131721224554F3000CDD33 /* MatchMessageViewController.swift */; };
 		0788127E225EEC4E00DCA246 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788127D225EEC4E00DCA246 /* MessageTableViewCell.swift */; };
 		07AB86A0224921D9001EE449 /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AB869F224921D9001EE449 /* MessageListViewController.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0704BF212268EF03005F6394 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		07131721224554F3000CDD33 /* MatchMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchMessageViewController.swift; sourceTree = "<group>"; };
 		0788127D225EEC4E00DCA246 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		07AB869F224921D9001EE449 /* MessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				B6B897122233025600164801 /* User.swift */,
 				571B426A224AC8EF00F9F42B /* Profile.swift */,
 				B6DFE9C92257C92D0086BCE6 /* Settings.swift */,
+				0704BF212268EF03005F6394 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				B6F5005922307A3500FD1433 /* ViewController.swift in Sources */,
 				07AB86A0224921D9001EE449 /* MessageListViewController.swift in Sources */,
 				B6B897152233037300164801 /* SignUpViewController.swift in Sources */,
+				0704BF222268EF03005F6394 /* Message.swift in Sources */,
 				95132AC6224B4803006C1A84 /* ToggleTableViewCell.swift in Sources */,
 				571B426B224AC8EF00F9F42B /* Profile.swift in Sources */,
 				07B43E6A22348C7600BB8548 /* ProfileCreationViewController.swift in Sources */,

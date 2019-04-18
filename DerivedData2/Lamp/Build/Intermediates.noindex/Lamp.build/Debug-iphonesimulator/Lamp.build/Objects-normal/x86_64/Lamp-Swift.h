@@ -433,6 +433,14 @@ SWIFT_CLASS("_TtC4Lamp29MessageInstanceViewController")
 @end
 
 
+
+
+
+
+
+
+
+
 SWIFT_CLASS("_TtC4Lamp25MessageListViewController")
 @interface MessageListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
