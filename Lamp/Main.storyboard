@@ -2215,14 +2215,6 @@
                                         <rect key="frame" x="106" y="47" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdw-Ey-F9x">
-                                        <rect key="frame" x="246" y="17" width="108" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Test Messaging"/>
-                                        <connections>
-                                            <segue destination="LfB-JI-5g8" kind="show" id="13C-oS-rf1"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -2529,14 +2521,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dB-zO-zR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9293.6000000000004" y="1764.5320197044337"/>
-        </scene>
-        <!--Messaging-->
-        <scene sceneID="cqg-BR-XqT">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Messaging" id="LfB-JI-5g8" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Fl-46-4na" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8806" y="2250"/>
         </scene>
     </scenes>
     <resources>

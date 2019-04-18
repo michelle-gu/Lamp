@@ -53,16 +53,16 @@
 	<string>AudioToolbox</string>
 	<string>QuartzCore</string>
 	<string>SystemConfiguration</string>
-	<string>MessageKit</string>
 	<string>FirebaseAnalytics</string>
-	<string>Security</string>
 	<string>GTMSessionFetcher</string>
+	<string>Security</string>
+	<string>MessageKit</string>
 	<string>CoreGraphics</string>
 	<string>Koloda</string>
 	<string>objc</string>
 	<string>FirebaseDynamicLinks</string>
-	<string>MessageInputBar</string>
 	<string>RangeUISlider</string>
+	<string>MessageInputBar</string>
 	<string>UIKit</string>
 	<string>Fabric</string>
 	<string>CoreTelephony</string>
