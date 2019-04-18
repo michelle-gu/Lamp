@@ -74,6 +74,9 @@ PODS:
   - Koloda (4.7):
     - pop (~> 1.0)
   - leveldb-library (1.20)
+  - MessageInputBar/Core (0.4.1)
+  - MessageKit (2.0.0):
+    - MessageInputBar/Core
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -89,6 +92,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Koloda
+  - MessageKit
   - RangeUISlider (~> 1.8)
 
 SPEC REPOS:
@@ -109,6 +113,8 @@ SPEC REPOS:
     - GTMSessionFetcher
     - Koloda
     - leveldb-library
+    - MessageInputBar
+    - MessageKit
     - nanopb
     - pop
     - RangeUISlider
@@ -130,10 +136,12 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   Koloda: f456d003d2ce15ef9f10c2874a444f1f570b490c
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
+  MessageKit: 29c1c87e5a396d2ca7a3f712e5171dc9aba42a1e
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   RangeUISlider: 50c649267711dde92f7c27d1d52acd75b5adb73e
 
-PODFILE CHECKSUM: cbeecf4e1618889edd8b882f131ec2e84738f1b1
+PODFILE CHECKSUM: a7e37f2111d2217aa7f249a3e27afd480b4beb38
 
 COCOAPODS: 1.6.1

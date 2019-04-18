@@ -32,6 +32,7 @@ depends-member:
 - !private ["So7FIRAuthC", "auth"]
 - !private ["So7FIRAuthC", "createUser"]
 - !private ["SK", "count"]
+- !private ["SK", "hasSuffix"]
 - !private ["So15CALayerDelegateP", "text"]
 - !private ["s7CVarArgP", "Auth"]
 - !private ["s7CVarArgP", "UIAlertAction"]
@@ -44,6 +45,7 @@ depends-member:
 - !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "createUser"]
 - !private ["s7CVarArgP", "emailField"]
+- !private ["s7CVarArgP", "hasSuffix"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "passwordField"]
@@ -54,7 +56,9 @@ depends-member:
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["Sl", "count"]
+- !private ["Sl", "hasSuffix"]
 - !private ["SL", "count"]
+- !private ["SL", "hasSuffix"]
 - !private ["s28CustomDebugStringConvertibleP", "Auth"]
 - !private ["s28CustomDebugStringConvertibleP", "UIAlertAction"]
 - !private ["s28CustomDebugStringConvertibleP", "UIAlertController"]
@@ -66,6 +70,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "createUser"]
 - !private ["s28CustomDebugStringConvertibleP", "emailField"]
+- !private ["s28CustomDebugStringConvertibleP", "hasSuffix"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "passwordField"]
@@ -76,6 +81,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "hasSuffix"]
 - !private ["s17CustomReflectableP", "text"]
 - !private ["s23CustomStringConvertibleP", "Auth"]
 - !private ["s23CustomStringConvertibleP", "UIAlertAction"]
@@ -88,6 +94,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "createUser"]
 - !private ["s23CustomStringConvertibleP", "emailField"]
+- !private ["s23CustomStringConvertibleP", "hasSuffix"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "passwordField"]
@@ -98,8 +105,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - !private ["Se", "count"]
+- !private ["Se", "hasSuffix"]
 - !private ["Se", "text"]
 - !private ["SE", "count"]
+- !private ["SE", "hasSuffix"]
 - !private ["SE", "text"]
 - !private ["SQ", "Auth"]
 - !private ["SQ", "UIAlertAction"]
@@ -114,6 +123,7 @@ depends-member:
 - !private ["SQ", "createUser"]
 - !private ["SQ", "default"]
 - !private ["SQ", "emailField"]
+- !private ["SQ", "hasSuffix"]
 - !private ["SQ", "init"]
 - !private ["SQ", "init"]
 - !private ["SQ", "passwordField"]
@@ -125,10 +135,14 @@ depends-member:
 - !private ["SQ", "viewDidLoad"]
 - !private ["s5ErrorP", "localizedDescription"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "count"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "hasSuffix"]
 - !private ["s23ExpressibleByNilLiteralP", "text"]
 - !private ["s32ExpressibleByStringInterpolationP", "count"]
+- !private ["s32ExpressibleByStringInterpolationP", "hasSuffix"]
 - !private ["s26ExpressibleByStringLiteralP", "count"]
+- !private ["s26ExpressibleByStringLiteralP", "hasSuffix"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "count"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "hasSuffix"]
 - !private ["SH", "Auth"]
 - !private ["SH", "UIAlertAction"]
 - !private ["SH", "UIAlertController"]
@@ -142,6 +156,7 @@ depends-member:
 - !private ["SH", "createUser"]
 - !private ["SH", "default"]
 - !private ["SH", "emailField"]
+- !private ["SH", "hasSuffix"]
 - !private ["SH", "init"]
 - !private ["SH", "init"]
 - !private ["SH", "passwordField"]
@@ -152,7 +167,9 @@ depends-member:
 - !private ["SH", "text"]
 - !private ["SH", "viewDidLoad"]
 - !private ["s25LosslessStringConvertibleP", "count"]
+- !private ["s25LosslessStringConvertibleP", "hasSuffix"]
 - !private ["s10MirrorPathP", "count"]
+- !private ["s10MirrorPathP", "hasSuffix"]
 - !private ["So8NSCodingP", "Auth"]
 - !private ["So8NSCodingP", "UIAlertAction"]
 - !private ["So8NSCodingP", "UIAlertController"]
@@ -161,6 +178,7 @@ depends-member:
 - !private ["So8NSCodingP", "confirmPasswordField"]
 - !private ["So8NSCodingP", "count"]
 - !private ["So8NSCodingP", "emailField"]
+- !private ["So8NSCodingP", "hasSuffix"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "passwordField"]
@@ -171,6 +189,7 @@ depends-member:
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - !private ["So9NSCopyingP", "count"]
+- !private ["So9NSCopyingP", "hasSuffix"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "Auth"]
 - !private ["So26NSExtensionRequestHandlingP", "UIAlertAction"]
@@ -188,8 +207,11 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "sendEmailConfirm"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - !private ["So21NSItemProviderReadingP", "count"]
+- !private ["So21NSItemProviderReadingP", "hasSuffix"]
 - !private ["So21NSItemProviderWritingP", "count"]
+- !private ["So21NSItemProviderWritingP", "hasSuffix"]
 - !private ["So16NSMutableCopyingP", "count"]
+- !private ["So16NSMutableCopyingP", "hasSuffix"]
 - !private ["So8NSObjectC", "Auth"]
 - !private ["So8NSObjectC", "UIAlertAction"]
 - !private ["So8NSObjectC", "UIAlertController"]
@@ -202,6 +224,7 @@ depends-member:
 - !private ["So8NSObjectC", "count"]
 - !private ["So8NSObjectC", "createUser"]
 - ["So8NSObjectC", "emailField"]
+- !private ["So8NSObjectC", "hasSuffix"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "logInButton"]
@@ -227,6 +250,7 @@ depends-member:
 - !private ["So8NSObjectP", "count"]
 - !private ["So8NSObjectP", "createUser"]
 - !private ["So8NSObjectP", "emailField"]
+- !private ["So8NSObjectP", "hasSuffix"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "passwordField"]
@@ -237,12 +261,16 @@ depends-member:
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "viewDidLoad"]
 - !private ["So14NSSecureCodingP", "count"]
+- !private ["So14NSSecureCodingP", "hasSuffix"]
 - !private ["So8NSStringC", "count"]
+- !private ["So8NSStringC", "hasSuffix"]
 - !private ["Sq", "text"]
 - !private ["Sm", "count"]
+- !private ["Sm", "hasSuffix"]
 - !private ["SY", "alert"]
 - !private ["SY", "default"]
 - !private ["ST", "count"]
+- !private ["ST", "hasSuffix"]
 - !private ["4Lamp20SignUpViewControllerC", "Auth"]
 - !private ["4Lamp20SignUpViewControllerC", "UIAlertAction"]
 - !private ["4Lamp20SignUpViewControllerC", "UIAlertController"]
@@ -264,11 +292,15 @@ depends-member:
 - ["4Lamp20SignUpViewControllerC", "signUpDidTouch"]
 - ["4Lamp20SignUpViewControllerC", "viewDidLoad"]
 - !private ["SS", "count"]
+- !private ["SS", "hasSuffix"]
 - !private ["Sy", "count"]
+- !private ["Sy", "hasSuffix"]
 - !private ["So22UIAlertControllerStyleV", "alert"]
 - !private ["So18UIAlertActionStyleV", "default"]
 - !private ["s16TextOutputStreamP", "count"]
+- !private ["s16TextOutputStreamP", "hasSuffix"]
 - !private ["s20TextOutputStreamableP", "count"]
+- !private ["s20TextOutputStreamableP", "hasSuffix"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So13UIAlertActionC", "init"]
 - !private ["So17UIAlertControllerC", "addAction"]
@@ -461,11 +493,17 @@ depends-member:
 - ["So16UIViewControllerC", "signUpDidTouch"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "count"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "hasSuffix"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "count"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "hasSuffix"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "count"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "hasSuffix"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "count"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "hasSuffix"]
 - !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "hasSuffix"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "hasSuffix"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Auth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIAlertAction"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIAlertController"]
@@ -477,6 +515,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "count"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "createUser"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "emailField"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hasSuffix"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "passwordField"]
@@ -487,6 +526,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "hasSuffix"]
 - !private ["s21_ObjectiveCBridgeableP", "text"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
 depends-nominal:
@@ -573,9 +613,13 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Modules/Koloda.swiftmodule/x86_64.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/MessageInputBar.swiftmodule/x86_64.swiftmodule"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/RangeUISlider.swiftmodule/x86_64.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/MessageKit.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
@@ -583,7 +627,9 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
@@ -597,7 +643,9 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/pop-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
@@ -656,7 +704,9 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers/Koloda-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
@@ -672,10 +722,13 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
@@ -684,9 +737,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "d373633315dc181542571e61dc09dedc"

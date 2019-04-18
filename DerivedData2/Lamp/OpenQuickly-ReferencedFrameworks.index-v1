@@ -6,10 +6,11 @@
 	<string>SceneKit</string>
 	<string>FirebaseCore</string>
 	<string>Bolts</string>
-	<string>libkern</string>
 	<string>WebKit</string>
+	<string>libkern</string>
 	<string>FirebaseStorage</string>
 	<string>FirebaseInAppMessaging</string>
+	<string>CoreLocation</string>
 	<string>GameKit</string>
 	<string>FirebaseDatabase</string>
 	<string>StoreKit</string>
@@ -19,22 +20,23 @@
 	<string>FirebaseMLVisionTextModel</string>
 	<string>SafariServices</string>
 	<string>FirebaseMLModelInterpreter</string>
+	<string>AVFoundation</string>
 	<string>FirebaseMessaging</string>
 	<string>GoogleMobileAds</string>
 	<string>WatchKit</string>
 	<string>MobileCoreServices</string>
 	<string>FirebaseInstanceID</string>
 	<string>FirebaseMLVisionFaceModel</string>
-	<string>CoreText</string>
+	<string>FirebaseMLNaturalLanguage</string>
 	<string>FirebaseAuthInterop</string>
 	<string>FirebaseAuth</string>
-	<string>FirebaseMLNaturalLanguage</string>
+	<string>FBSDKLoginKit</string>
 	<string>FirebaseMLVisionLabelModel</string>
 	<string>AppKit</string>
-	<string>FBSDKLoginKit</string>
 	<string>FirebaseInvites</string>
-	<string>AdSupport</string>
 	<string>FBSDKCoreKit</string>
+	<string>AdSupport</string>
+	<string>CoreText</string>
 	<string>FirebasePerformance</string>
 	<string>Crashlytics</string>
 	<string>Accounts</string>
@@ -48,22 +50,24 @@
 	<string>FirebaseMLVision</string>
 	<string>FirebaseCrash</string>
 	<string>FirebaseMLNLLanguageID</string>
-	<string>QuartzCore</string>
 	<string>AudioToolbox</string>
+	<string>QuartzCore</string>
 	<string>SystemConfiguration</string>
+	<string>MessageKit</string>
 	<string>FirebaseAnalytics</string>
-	<string>GTMSessionFetcher</string>
 	<string>Security</string>
+	<string>GTMSessionFetcher</string>
 	<string>CoreGraphics</string>
 	<string>Koloda</string>
 	<string>objc</string>
 	<string>FirebaseDynamicLinks</string>
+	<string>MessageInputBar</string>
 	<string>RangeUISlider</string>
 	<string>UIKit</string>
 	<string>Fabric</string>
+	<string>CoreTelephony</string>
 	<string>FirebaseMLVisionBarcodeModel</string>
 	<string>Foundation</string>
-	<string>CoreTelephony</string>
 	<string>sys</string>
 	<string>FirebaseFirestore</string>
 </array>

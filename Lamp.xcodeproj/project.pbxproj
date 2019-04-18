@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		07131722224554F3000CDD33 /* MatchMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07131721224554F3000CDD33 /* MatchMessageViewController.swift */; };
 		0788127E225EEC4E00DCA246 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788127D225EEC4E00DCA246 /* MessageTableViewCell.swift */; };
-		07AB86A0224921D9001EE449 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AB869F224921D9001EE449 /* MessagesViewController.swift */; };
+		07AB86A0224921D9001EE449 /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AB869F224921D9001EE449 /* MessageListViewController.swift */; };
 		07AB86A2224994BD001EE449 /* MessageInstanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */; };
 		07B43E6622348C0900BB8548 /* EmailConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B43E6522348C0900BB8548 /* EmailConfirmationViewController.swift */; };
 		07B43E6822348C4000BB8548 /* SocialMediaConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B43E6722348C4000BB8548 /* SocialMediaConnectViewController.swift */; };
@@ -56,7 +56,7 @@
 /* Begin PBXFileReference section */
 		07131721224554F3000CDD33 /* MatchMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchMessageViewController.swift; sourceTree = "<group>"; };
 		0788127D225EEC4E00DCA246 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
-		07AB869F224921D9001EE449 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		07AB869F224921D9001EE449 /* MessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
 		07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInstanceViewController.swift; sourceTree = "<group>"; };
 		07B43E6522348C0900BB8548 /* EmailConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailConfirmationViewController.swift; sourceTree = "<group>"; };
 		07B43E6722348C4000BB8548 /* SocialMediaConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaConnectViewController.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 				571B426E224B401E00F9F42B /* ProfileEditViewController.swift */,
 				07B43E6F22348D0900BB8548 /* CardsViewController.swift */,
 				07131721224554F3000CDD33 /* MatchMessageViewController.swift */,
-				07AB869F224921D9001EE449 /* MessagesViewController.swift */,
+				07AB869F224921D9001EE449 /* MessageListViewController.swift */,
 				07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */,
 			);
 			path = Controllers;
@@ -344,6 +344,8 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageInputBar/MessageInputBar.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RangeUISlider/RangeUISlider.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -360,6 +362,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageInputBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RangeUISlider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -406,7 +410,7 @@
 				B640FEB6224C066700E8FBFF /* LifestylePreferencesTableViewCell.swift in Sources */,
 				B61FE838225C6DF2002BDDD7 /* FutureLocationFilterViewController.swift in Sources */,
 				B6F5005922307A3500FD1433 /* ViewController.swift in Sources */,
-				07AB86A0224921D9001EE449 /* MessagesViewController.swift in Sources */,
+				07AB86A0224921D9001EE449 /* MessageListViewController.swift in Sources */,
 				B6B897152233037300164801 /* SignUpViewController.swift in Sources */,
 				95132AC6224B4803006C1A84 /* ToggleTableViewCell.swift in Sources */,
 				571B426B224AC8EF00F9F42B /* Profile.swift in Sources */,

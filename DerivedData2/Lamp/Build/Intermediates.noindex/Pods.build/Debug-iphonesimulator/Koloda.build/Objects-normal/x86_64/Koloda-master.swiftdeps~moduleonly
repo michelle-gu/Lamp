@@ -1,6 +1,6 @@
-version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
-options: "6464c522aa1a3df1e977be8ee36ead87"
-build_time: [1554953215, 188773000]
+version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+options: "4342f98f61b11861176fd28b6b38ad2b"
+build_time: [1555607071, 856733000]
 inputs:
   "/Users/lindseythompson/Desktop/Lamp/Pods/Koloda/Pod/Classes/KolodaView/DraggableCardView/DraggableCardView.swift": [1554953210, 822926024]
   "/Users/lindseythompson/Desktop/Lamp/Pods/Koloda/Pod/Classes/KolodaView/KolodaAnimationSemaphore.swift": [1554953210, 823257014]

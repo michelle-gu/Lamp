@@ -28,6 +28,7 @@ depends-top-level:
 - !private "-="
 - !private "/"
 - !private "=="
+- !private "AnyObject"
 - "AssignmentPrecedence"
 - "Auth"
 - "Bool"
@@ -37,6 +38,7 @@ depends-top-level:
 - !private "CLLocationCoordinate2DMake"
 - "CLLocationDistance"
 - "CLLocationManager"
+- !private "CastingPrecedence"
 - "Database"
 - "Error"
 - "FloatLiteralType"
@@ -67,6 +69,8 @@ depends-member:
 - !private ["Sa", "first"]
 - !private ["Sa", "remove"]
 - !private ["Sa", "subscript"]
+- ["So7FIRAuthC", "auth"]
+- ["So7FIRAuthC", "currentUser"]
 - !private ["SK", "append"]
 - !private ["SK", "count"]
 - !private ["SK", "first"]
@@ -135,6 +139,7 @@ depends-member:
 - !private ["s7CVarArgP", "addSubview"]
 - !private ["s7CVarArgP", "annotations"]
 - !private ["s7CVarArgP", "append"]
+- ["s7CVarArgP", "auth"]
 - !private ["s7CVarArgP", "authorizationStatus"]
 - !private ["s7CVarArgP", "beginIgnoringInteractionEvents"]
 - !private ["s7CVarArgP", "borderColor"]
@@ -145,6 +150,7 @@ depends-member:
 - !private ["s7CVarArgP", "centerMapOnLocation"]
 - !private ["s7CVarArgP", "cgColor"]
 - !private ["s7CVarArgP", "checkLocationAuthorizationStatus"]
+- !private ["s7CVarArgP", "child"]
 - !private ["s7CVarArgP", "cities"]
 - !private ["s7CVarArgP", "citiesRef"]
 - !private ["s7CVarArgP", "coordinate"]
@@ -152,6 +158,8 @@ depends-member:
 - !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "country"]
 - !private ["s7CVarArgP", "currentCity"]
+- ["s7CVarArgP", "currentUser"]
+- ["s7CVarArgP", "database"]
 - !private ["s7CVarArgP", "delegate"]
 - !private ["s7CVarArgP", "dismiss"]
 - !private ["s7CVarArgP", "endIgnoringInteractionEvents"]
@@ -181,14 +189,17 @@ depends-member:
 - ["s7CVarArgP", "mapViewWillStartRenderingMap"]
 - !private ["s7CVarArgP", "naturalLanguageQuery"]
 - !private ["s7CVarArgP", "navigationController"]
+- !private ["s7CVarArgP", "observeSingleEvent"]
 - !private ["s7CVarArgP", "popViewController"]
 - ["s7CVarArgP", "position"]
 - ["s7CVarArgP", "positionForBar"]
 - !private ["s7CVarArgP", "present"]
 - !private ["s7CVarArgP", "print"]
+- ["s7CVarArgP", "reference"]
 - !private ["s7CVarArgP", "regionRadius"]
 - !private ["s7CVarArgP", "remove"]
 - !private ["s7CVarArgP", "removeAnnotations"]
+- !private ["s7CVarArgP", "removeValue"]
 - !private ["s7CVarArgP", "requestWhenInUseAuthorization"]
 - !private ["s7CVarArgP", "resignFirstResponder"]
 - !private ["s7CVarArgP", "reverseGeocodeLocation"]
@@ -213,8 +224,11 @@ depends-member:
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "title"]
 - !private ["s7CVarArgP", "titleLabel"]
+- ["s7CVarArgP", "uid"]
+- !private ["s7CVarArgP", "updateChildValues"]
 - !private ["s7CVarArgP", "user"]
 - !private ["s7CVarArgP", "userRef"]
+- !private ["s7CVarArgP", "value"]
 - !private ["s7CVarArgP", "view"]
 - !private ["s7CVarArgP", "viewDidAppear"]
 - !private ["s7CVarArgP", "viewDidLoad"]
@@ -251,6 +265,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "addSubview"]
 - !private ["s28CustomDebugStringConvertibleP", "annotations"]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
+- ["s28CustomDebugStringConvertibleP", "auth"]
 - !private ["s28CustomDebugStringConvertibleP", "authorizationStatus"]
 - !private ["s28CustomDebugStringConvertibleP", "beginIgnoringInteractionEvents"]
 - !private ["s28CustomDebugStringConvertibleP", "borderColor"]
@@ -261,6 +276,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "centerMapOnLocation"]
 - !private ["s28CustomDebugStringConvertibleP", "cgColor"]
 - !private ["s28CustomDebugStringConvertibleP", "checkLocationAuthorizationStatus"]
+- !private ["s28CustomDebugStringConvertibleP", "child"]
 - !private ["s28CustomDebugStringConvertibleP", "cities"]
 - !private ["s28CustomDebugStringConvertibleP", "citiesRef"]
 - !private ["s28CustomDebugStringConvertibleP", "coordinate"]
@@ -268,6 +284,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "country"]
 - !private ["s28CustomDebugStringConvertibleP", "currentCity"]
+- ["s28CustomDebugStringConvertibleP", "currentUser"]
+- ["s28CustomDebugStringConvertibleP", "database"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
 - !private ["s28CustomDebugStringConvertibleP", "dismiss"]
 - !private ["s28CustomDebugStringConvertibleP", "endIgnoringInteractionEvents"]
@@ -298,14 +316,17 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "mapViewWillStartRenderingMap"]
 - !private ["s28CustomDebugStringConvertibleP", "naturalLanguageQuery"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationController"]
+- !private ["s28CustomDebugStringConvertibleP", "observeSingleEvent"]
 - !private ["s28CustomDebugStringConvertibleP", "popViewController"]
 - ["s28CustomDebugStringConvertibleP", "position"]
 - ["s28CustomDebugStringConvertibleP", "positionForBar"]
 - !private ["s28CustomDebugStringConvertibleP", "present"]
 - !private ["s28CustomDebugStringConvertibleP", "print"]
+- ["s28CustomDebugStringConvertibleP", "reference"]
 - !private ["s28CustomDebugStringConvertibleP", "regionRadius"]
 - !private ["s28CustomDebugStringConvertibleP", "remove"]
 - !private ["s28CustomDebugStringConvertibleP", "removeAnnotations"]
+- !private ["s28CustomDebugStringConvertibleP", "removeValue"]
 - !private ["s28CustomDebugStringConvertibleP", "requestWhenInUseAuthorization"]
 - !private ["s28CustomDebugStringConvertibleP", "resignFirstResponder"]
 - !private ["s28CustomDebugStringConvertibleP", "reverseGeocodeLocation"]
@@ -330,8 +351,11 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "title"]
 - !private ["s28CustomDebugStringConvertibleP", "titleLabel"]
+- ["s28CustomDebugStringConvertibleP", "uid"]
+- !private ["s28CustomDebugStringConvertibleP", "updateChildValues"]
 - !private ["s28CustomDebugStringConvertibleP", "user"]
 - !private ["s28CustomDebugStringConvertibleP", "userRef"]
+- !private ["s28CustomDebugStringConvertibleP", "value"]
 - !private ["s28CustomDebugStringConvertibleP", "view"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidAppear"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
@@ -377,6 +401,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "addSubview"]
 - !private ["s23CustomStringConvertibleP", "annotations"]
 - !private ["s23CustomStringConvertibleP", "append"]
+- ["s23CustomStringConvertibleP", "auth"]
 - !private ["s23CustomStringConvertibleP", "authorizationStatus"]
 - !private ["s23CustomStringConvertibleP", "beginIgnoringInteractionEvents"]
 - !private ["s23CustomStringConvertibleP", "borderColor"]
@@ -387,6 +412,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "centerMapOnLocation"]
 - !private ["s23CustomStringConvertibleP", "cgColor"]
 - !private ["s23CustomStringConvertibleP", "checkLocationAuthorizationStatus"]
+- !private ["s23CustomStringConvertibleP", "child"]
 - !private ["s23CustomStringConvertibleP", "cities"]
 - !private ["s23CustomStringConvertibleP", "citiesRef"]
 - !private ["s23CustomStringConvertibleP", "coordinate"]
@@ -394,6 +420,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "country"]
 - !private ["s23CustomStringConvertibleP", "currentCity"]
+- ["s23CustomStringConvertibleP", "currentUser"]
+- ["s23CustomStringConvertibleP", "database"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
 - !private ["s23CustomStringConvertibleP", "dismiss"]
 - !private ["s23CustomStringConvertibleP", "endIgnoringInteractionEvents"]
@@ -423,14 +451,17 @@ depends-member:
 - ["s23CustomStringConvertibleP", "mapViewWillStartRenderingMap"]
 - !private ["s23CustomStringConvertibleP", "naturalLanguageQuery"]
 - !private ["s23CustomStringConvertibleP", "navigationController"]
+- !private ["s23CustomStringConvertibleP", "observeSingleEvent"]
 - !private ["s23CustomStringConvertibleP", "popViewController"]
 - ["s23CustomStringConvertibleP", "position"]
 - ["s23CustomStringConvertibleP", "positionForBar"]
 - !private ["s23CustomStringConvertibleP", "present"]
 - !private ["s23CustomStringConvertibleP", "print"]
+- ["s23CustomStringConvertibleP", "reference"]
 - !private ["s23CustomStringConvertibleP", "regionRadius"]
 - !private ["s23CustomStringConvertibleP", "remove"]
 - !private ["s23CustomStringConvertibleP", "removeAnnotations"]
+- !private ["s23CustomStringConvertibleP", "removeValue"]
 - !private ["s23CustomStringConvertibleP", "requestWhenInUseAuthorization"]
 - !private ["s23CustomStringConvertibleP", "resignFirstResponder"]
 - !private ["s23CustomStringConvertibleP", "reverseGeocodeLocation"]
@@ -455,16 +486,31 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "title"]
 - !private ["s23CustomStringConvertibleP", "titleLabel"]
+- ["s23CustomStringConvertibleP", "uid"]
+- !private ["s23CustomStringConvertibleP", "updateChildValues"]
 - !private ["s23CustomStringConvertibleP", "user"]
 - !private ["s23CustomStringConvertibleP", "userRef"]
+- !private ["s23CustomStringConvertibleP", "value"]
 - !private ["s23CustomStringConvertibleP", "view"]
 - !private ["s23CustomStringConvertibleP", "viewDidAppear"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["So16FIRDataEventTypeV", "value"]
 - !private ["10Foundation12DataProtocolP", "append"]
 - !private ["10Foundation12DataProtocolP", "count"]
 - !private ["10Foundation12DataProtocolP", "first"]
 - !private ["10Foundation12DataProtocolP", "remove"]
 - !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["So15FIRDataSnapshotC", "value"]
+- ["So11FIRDatabaseC", "database"]
+- ["So11FIRDatabaseC", "reference"]
+- !private ["So16FIRDatabaseQueryC", "child"]
+- !private ["So16FIRDatabaseQueryC", "observeSingleEvent"]
+- !private ["So16FIRDatabaseQueryC", "removeValue"]
+- !private ["So16FIRDatabaseQueryC", "updateChildValues"]
+- !private ["So20FIRDatabaseReferenceC", "child"]
+- !private ["So20FIRDatabaseReferenceC", "observeSingleEvent"]
+- !private ["So20FIRDatabaseReferenceC", "removeValue"]
+- !private ["So20FIRDatabaseReferenceC", "updateChildValues"]
 - !private ["Se", "addAnnotation"]
 - !private ["Se", "addSubview"]
 - !private ["Se", "annotations"]
@@ -526,6 +572,7 @@ depends-member:
 - !private ["SQ", "addSubview"]
 - !private ["SQ", "annotations"]
 - !private ["SQ", "append"]
+- ["SQ", "auth"]
 - !private ["SQ", "authorizationStatus"]
 - !private ["SQ", "authorizedWhenInUse"]
 - !private ["SQ", "beginIgnoringInteractionEvents"]
@@ -537,6 +584,7 @@ depends-member:
 - !private ["SQ", "centerMapOnLocation"]
 - !private ["SQ", "cgColor"]
 - !private ["SQ", "checkLocationAuthorizationStatus"]
+- !private ["SQ", "child"]
 - !private ["SQ", "cities"]
 - !private ["SQ", "citiesRef"]
 - !private ["SQ", "coordinate"]
@@ -544,6 +592,8 @@ depends-member:
 - !private ["SQ", "count"]
 - !private ["SQ", "country"]
 - !private ["SQ", "currentCity"]
+- ["SQ", "currentUser"]
+- ["SQ", "database"]
 - !private ["SQ", "delegate"]
 - !private ["SQ", "dismiss"]
 - !private ["SQ", "endIgnoringInteractionEvents"]
@@ -576,14 +626,17 @@ depends-member:
 - !private ["SQ", "naturalLanguageQuery"]
 - !private ["SQ", "navigationController"]
 - !private ["SQ", "normal"]
+- !private ["SQ", "observeSingleEvent"]
 - !private ["SQ", "popViewController"]
 - ["SQ", "position"]
 - ["SQ", "positionForBar"]
 - !private ["SQ", "present"]
 - !private ["SQ", "print"]
+- ["SQ", "reference"]
 - !private ["SQ", "regionRadius"]
 - !private ["SQ", "remove"]
 - !private ["SQ", "removeAnnotations"]
+- !private ["SQ", "removeValue"]
 - !private ["SQ", "requestWhenInUseAuthorization"]
 - !private ["SQ", "resignFirstResponder"]
 - !private ["SQ", "reverseGeocodeLocation"]
@@ -608,8 +661,11 @@ depends-member:
 - !private ["SQ", "text"]
 - !private ["SQ", "title"]
 - !private ["SQ", "titleLabel"]
+- ["SQ", "uid"]
+- !private ["SQ", "updateChildValues"]
 - !private ["SQ", "user"]
 - !private ["SQ", "userRef"]
+- !private ["SQ", "value"]
 - !private ["SQ", "view"]
 - !private ["SQ", "viewDidAppear"]
 - !private ["SQ", "viewDidLoad"]
@@ -655,6 +711,7 @@ depends-member:
 - !private ["SH", "addSubview"]
 - !private ["SH", "annotations"]
 - !private ["SH", "append"]
+- ["SH", "auth"]
 - !private ["SH", "authorizationStatus"]
 - !private ["SH", "authorizedWhenInUse"]
 - !private ["SH", "beginIgnoringInteractionEvents"]
@@ -666,6 +723,7 @@ depends-member:
 - !private ["SH", "centerMapOnLocation"]
 - !private ["SH", "cgColor"]
 - !private ["SH", "checkLocationAuthorizationStatus"]
+- !private ["SH", "child"]
 - !private ["SH", "cities"]
 - !private ["SH", "citiesRef"]
 - !private ["SH", "coordinate"]
@@ -673,6 +731,8 @@ depends-member:
 - !private ["SH", "count"]
 - !private ["SH", "country"]
 - !private ["SH", "currentCity"]
+- ["SH", "currentUser"]
+- ["SH", "database"]
 - !private ["SH", "delegate"]
 - !private ["SH", "dismiss"]
 - !private ["SH", "endIgnoringInteractionEvents"]
@@ -703,14 +763,17 @@ depends-member:
 - ["SH", "mapViewWillStartRenderingMap"]
 - !private ["SH", "naturalLanguageQuery"]
 - !private ["SH", "navigationController"]
+- !private ["SH", "observeSingleEvent"]
 - !private ["SH", "popViewController"]
 - ["SH", "position"]
 - ["SH", "positionForBar"]
 - !private ["SH", "present"]
 - !private ["SH", "print"]
+- ["SH", "reference"]
 - !private ["SH", "regionRadius"]
 - !private ["SH", "remove"]
 - !private ["SH", "removeAnnotations"]
+- !private ["SH", "removeValue"]
 - !private ["SH", "requestWhenInUseAuthorization"]
 - !private ["SH", "resignFirstResponder"]
 - !private ["SH", "reverseGeocodeLocation"]
@@ -735,8 +798,11 @@ depends-member:
 - !private ["SH", "text"]
 - !private ["SH", "title"]
 - !private ["SH", "titleLabel"]
+- ["SH", "uid"]
+- !private ["SH", "updateChildValues"]
 - !private ["SH", "user"]
 - !private ["SH", "userRef"]
+- !private ["SH", "value"]
 - !private ["SH", "view"]
 - !private ["SH", "viewDidAppear"]
 - !private ["SH", "viewDidLoad"]
@@ -992,6 +1058,7 @@ depends-member:
 - !private ["So21NSItemProviderReadingP", "init"]
 - !private ["So21NSItemProviderWritingP", "cgColor"]
 - !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So8NSObjectC", "AnyObject"]
 - ["So8NSObjectC", "Auth"]
 - ["So8NSObjectC", "Bool"]
 - !private ["So8NSObjectC", "CLGeocoder"]
@@ -1022,6 +1089,7 @@ depends-member:
 - ["So8NSObjectC", "addCityToListButtonPressed"]
 - !private ["So8NSObjectC", "addSubview"]
 - !private ["So8NSObjectC", "annotations"]
+- ["So8NSObjectC", "auth"]
 - !private ["So8NSObjectC", "authorizationStatus"]
 - !private ["So8NSObjectC", "beginIgnoringInteractionEvents"]
 - !private ["So8NSObjectC", "borderColor"]
@@ -1033,8 +1101,9 @@ depends-member:
 - ["So8NSObjectC", "centerMapOnLocation"]
 - !private ["So8NSObjectC", "cgColor"]
 - ["So8NSObjectC", "checkLocationAuthorizationStatus"]
+- !private ["So8NSObjectC", "child"]
 - ["So8NSObjectC", "cities"]
-- !private ["So8NSObjectC", "citiesRef"]
+- ["So8NSObjectC", "citiesRef"]
 - ["So8NSObjectC", "city1ButtonPressed"]
 - ["So8NSObjectC", "city2ButtonPressed"]
 - ["So8NSObjectC", "city3ButtonPressed"]
@@ -1042,6 +1111,8 @@ depends-member:
 - !private ["So8NSObjectC", "cornerRadius"]
 - !private ["So8NSObjectC", "country"]
 - ["So8NSObjectC", "currentCity"]
+- ["So8NSObjectC", "currentUser"]
+- ["So8NSObjectC", "database"]
 - !private ["So8NSObjectC", "delegate"]
 - !private ["So8NSObjectC", "dismiss"]
 - !private ["So8NSObjectC", "endIgnoringInteractionEvents"]
@@ -1070,13 +1141,16 @@ depends-member:
 - ["So8NSObjectC", "mapViewWillStartRenderingMap"]
 - !private ["So8NSObjectC", "naturalLanguageQuery"]
 - !private ["So8NSObjectC", "navigationController"]
+- !private ["So8NSObjectC", "observeSingleEvent"]
 - !private ["So8NSObjectC", "popViewController"]
 - ["So8NSObjectC", "position"]
 - ["So8NSObjectC", "positionForBar"]
 - !private ["So8NSObjectC", "present"]
 - !private ["So8NSObjectC", "print"]
+- ["So8NSObjectC", "reference"]
 - ["So8NSObjectC", "regionRadius"]
 - !private ["So8NSObjectC", "removeAnnotations"]
+- !private ["So8NSObjectC", "removeValue"]
 - !private ["So8NSObjectC", "requestWhenInUseAuthorization"]
 - !private ["So8NSObjectC", "resignFirstResponder"]
 - !private ["So8NSObjectC", "reverseGeocodeLocation"]
@@ -1103,8 +1177,11 @@ depends-member:
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "title"]
 - !private ["So8NSObjectC", "titleLabel"]
-- !private ["So8NSObjectC", "user"]
-- !private ["So8NSObjectC", "userRef"]
+- ["So8NSObjectC", "uid"]
+- !private ["So8NSObjectC", "updateChildValues"]
+- ["So8NSObjectC", "user"]
+- ["So8NSObjectC", "userRef"]
+- !private ["So8NSObjectC", "value"]
 - !private ["So8NSObjectC", "view"]
 - ["So8NSObjectC", "viewDidAppear"]
 - ["So8NSObjectC", "viewDidLoad"]
@@ -1130,6 +1207,7 @@ depends-member:
 - !private ["So8NSObjectP", "addCityToList"]
 - !private ["So8NSObjectP", "addSubview"]
 - !private ["So8NSObjectP", "annotations"]
+- ["So8NSObjectP", "auth"]
 - !private ["So8NSObjectP", "authorizationStatus"]
 - !private ["So8NSObjectP", "beginIgnoringInteractionEvents"]
 - !private ["So8NSObjectP", "borderColor"]
@@ -1140,12 +1218,15 @@ depends-member:
 - !private ["So8NSObjectP", "centerMapOnLocation"]
 - !private ["So8NSObjectP", "cgColor"]
 - !private ["So8NSObjectP", "checkLocationAuthorizationStatus"]
+- !private ["So8NSObjectP", "child"]
 - !private ["So8NSObjectP", "cities"]
 - !private ["So8NSObjectP", "citiesRef"]
 - !private ["So8NSObjectP", "coordinate"]
 - !private ["So8NSObjectP", "cornerRadius"]
 - !private ["So8NSObjectP", "country"]
 - !private ["So8NSObjectP", "currentCity"]
+- ["So8NSObjectP", "currentUser"]
+- ["So8NSObjectP", "database"]
 - !private ["So8NSObjectP", "delegate"]
 - !private ["So8NSObjectP", "dismiss"]
 - !private ["So8NSObjectP", "endIgnoringInteractionEvents"]
@@ -1174,13 +1255,16 @@ depends-member:
 - ["So8NSObjectP", "mapViewWillStartRenderingMap"]
 - !private ["So8NSObjectP", "naturalLanguageQuery"]
 - !private ["So8NSObjectP", "navigationController"]
+- !private ["So8NSObjectP", "observeSingleEvent"]
 - !private ["So8NSObjectP", "popViewController"]
 - ["So8NSObjectP", "position"]
 - ["So8NSObjectP", "positionForBar"]
 - !private ["So8NSObjectP", "present"]
 - !private ["So8NSObjectP", "print"]
+- ["So8NSObjectP", "reference"]
 - !private ["So8NSObjectP", "regionRadius"]
 - !private ["So8NSObjectP", "removeAnnotations"]
+- !private ["So8NSObjectP", "removeValue"]
 - !private ["So8NSObjectP", "requestWhenInUseAuthorization"]
 - !private ["So8NSObjectP", "resignFirstResponder"]
 - !private ["So8NSObjectP", "reverseGeocodeLocation"]
@@ -1204,8 +1288,11 @@ depends-member:
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "title"]
 - !private ["So8NSObjectP", "titleLabel"]
+- ["So8NSObjectP", "uid"]
+- !private ["So8NSObjectP", "updateChildValues"]
 - !private ["So8NSObjectP", "user"]
 - !private ["So8NSObjectP", "userRef"]
+- !private ["So8NSObjectP", "value"]
 - !private ["So8NSObjectP", "view"]
 - !private ["So8NSObjectP", "viewDidAppear"]
 - !private ["So8NSObjectP", "viewDidLoad"]
@@ -1231,6 +1318,7 @@ depends-member:
 - !private ["Sq", "setTitle"]
 - !private ["Sq", "showsUserLocation"]
 - !private ["Sq", "titleLabel"]
+- !private ["4Lamp24ProfileMapViewControllerC", "AnyObject"]
 - ["4Lamp24ProfileMapViewControllerC", "Auth"]
 - ["4Lamp24ProfileMapViewControllerC", "Bool"]
 - !private ["4Lamp24ProfileMapViewControllerC", "CLGeocoder"]
@@ -1260,7 +1348,7 @@ depends-member:
 - ["4Lamp24ProfileMapViewControllerC", "centerMapOnLocation"]
 - ["4Lamp24ProfileMapViewControllerC", "checkLocationAuthorizationStatus"]
 - ["4Lamp24ProfileMapViewControllerC", "cities"]
-- !private ["4Lamp24ProfileMapViewControllerC", "citiesRef"]
+- ["4Lamp24ProfileMapViewControllerC", "citiesRef"]
 - ["4Lamp24ProfileMapViewControllerC", "city1ButtonPressed"]
 - ["4Lamp24ProfileMapViewControllerC", "city2ButtonPressed"]
 - ["4Lamp24ProfileMapViewControllerC", "city3ButtonPressed"]
@@ -1303,8 +1391,8 @@ depends-member:
 - ["4Lamp24ProfileMapViewControllerC", "searchBarTextDidEndEditing"]
 - ["4Lamp24ProfileMapViewControllerC", "searchButtonPressed"]
 - ["4Lamp24ProfileMapViewControllerC", "searchRadius"]
-- !private ["4Lamp24ProfileMapViewControllerC", "user"]
-- !private ["4Lamp24ProfileMapViewControllerC", "userRef"]
+- ["4Lamp24ProfileMapViewControllerC", "user"]
+- ["4Lamp24ProfileMapViewControllerC", "userRef"]
 - !private ["4Lamp24ProfileMapViewControllerC", "view"]
 - ["4Lamp24ProfileMapViewControllerC", "viewDidAppear"]
 - ["4Lamp24ProfileMapViewControllerC", "viewDidLoad"]
@@ -1321,6 +1409,7 @@ depends-member:
 - !private ["SY", "authorizedWhenInUse"]
 - !private ["SY", "gray"]
 - !private ["SY", "normal"]
+- !private ["SY", "value"]
 - !private ["So20MKLocalSearchRequestC", "init"]
 - !private ["So20MKLocalSearchRequestC", "naturalLanguageQuery"]
 - !private ["So21MKLocalSearchResponseC", "boundingRegion"]
@@ -1864,6 +1953,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "view"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidAppear"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- !private ["So11UIResponderC", "AnyObject"]
 - ["So11UIResponderC", "Auth"]
 - ["So11UIResponderC", "Bool"]
 - !private ["So11UIResponderC", "CLGeocoder"]
@@ -1900,7 +1990,7 @@ depends-member:
 - ["So11UIResponderC", "centerMapOnLocation"]
 - ["So11UIResponderC", "checkLocationAuthorizationStatus"]
 - ["So11UIResponderC", "cities"]
-- !private ["So11UIResponderC", "citiesRef"]
+- ["So11UIResponderC", "citiesRef"]
 - ["So11UIResponderC", "city1ButtonPressed"]
 - ["So11UIResponderC", "city2ButtonPressed"]
 - ["So11UIResponderC", "city3ButtonPressed"]
@@ -1960,8 +2050,8 @@ depends-member:
 - !private ["So11UIResponderC", "style"]
 - !private ["So11UIResponderC", "text"]
 - !private ["So11UIResponderC", "titleLabel"]
-- !private ["So11UIResponderC", "user"]
-- !private ["So11UIResponderC", "userRef"]
+- ["So11UIResponderC", "user"]
+- ["So11UIResponderC", "userRef"]
 - !private ["So11UIResponderC", "view"]
 - ["So11UIResponderC", "viewDidAppear"]
 - ["So11UIResponderC", "viewDidLoad"]
@@ -2375,6 +2465,7 @@ depends-member:
 - !private ["So6UIViewC", "style"]
 - !private ["So6UIViewC", "text"]
 - !private ["So6UIViewC", "titleLabel"]
+- !private ["So16UIViewControllerC", "AnyObject"]
 - ["So16UIViewControllerC", "Auth"]
 - ["So16UIViewControllerC", "Bool"]
 - !private ["So16UIViewControllerC", "CLGeocoder"]
@@ -2405,7 +2496,7 @@ depends-member:
 - ["So16UIViewControllerC", "centerMapOnLocation"]
 - ["So16UIViewControllerC", "checkLocationAuthorizationStatus"]
 - ["So16UIViewControllerC", "cities"]
-- !private ["So16UIViewControllerC", "citiesRef"]
+- ["So16UIViewControllerC", "citiesRef"]
 - ["So16UIViewControllerC", "city1ButtonPressed"]
 - ["So16UIViewControllerC", "city2ButtonPressed"]
 - ["So16UIViewControllerC", "city3ButtonPressed"]
@@ -2449,8 +2540,8 @@ depends-member:
 - ["So16UIViewControllerC", "searchBarTextDidEndEditing"]
 - ["So16UIViewControllerC", "searchButtonPressed"]
 - ["So16UIViewControllerC", "searchRadius"]
-- !private ["So16UIViewControllerC", "user"]
-- !private ["So16UIViewControllerC", "userRef"]
+- ["So16UIViewControllerC", "user"]
+- ["So16UIViewControllerC", "userRef"]
 - !private ["So16UIViewControllerC", "view"]
 - ["So16UIViewControllerC", "viewDidAppear"]
 - ["So16UIViewControllerC", "viewDidLoad"]
@@ -2458,6 +2549,8 @@ depends-member:
 - !private ["So37UIViewControllerAnimatedTransitioningP", "searchBar"]
 - !private ["So37UIViewControllerTransitioningDelegateP", "init"]
 - !private ["So37UIViewControllerTransitioningDelegateP", "searchBar"]
+- ["So7FIRUserC", "uid"]
+- ["So11FIRUserInfoP", "uid"]
 - !private ["s14_ArrayProtocolP", "append"]
 - !private ["s14_ArrayProtocolP", "count"]
 - !private ["s14_ArrayProtocolP", "first"]
@@ -2503,6 +2596,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addCityToList"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addSubview"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "annotations"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "authorizationStatus"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "beginIgnoringInteractionEvents"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "borderColor"]
@@ -2513,12 +2607,15 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "centerMapOnLocation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cgColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "checkLocationAuthorizationStatus"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "child"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cities"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "citiesRef"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "coordinate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cornerRadius"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "country"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "currentCity"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "database"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "endIgnoringInteractionEvents"]
@@ -2547,13 +2644,16 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "mapViewWillStartRenderingMap"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "naturalLanguageQuery"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "observeSingleEvent"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "popViewController"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "position"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "positionForBar"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "reference"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "regionRadius"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "removeAnnotations"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeValue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "requestWhenInUseAuthorization"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "resignFirstResponder"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reverseGeocodeLocation"]
@@ -2577,8 +2677,11 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "titleLabel"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "uid"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "updateChildValues"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "user"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "userRef"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidAppear"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
@@ -2627,6 +2730,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "titleLabel"]
 depends-nominal:
 - !private "Sa"
+- "So7FIRAuthC"
 - !private "SK"
 - !private "So7CALayerC"
 - !private "So15CALayerDelegateP"
@@ -2644,7 +2748,12 @@ depends-nominal:
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "So16FIRDataEventTypeV"
 - !private "10Foundation12DataProtocolP"
+- !private "So15FIRDataSnapshotC"
+- "So11FIRDatabaseC"
+- !private "So16FIRDatabaseQueryC"
+- !private "So20FIRDatabaseReferenceC"
 - !private "Se"
 - !private "SE"
 - "SQ"
@@ -2716,6 +2825,8 @@ depends-nominal:
 - "So16UIViewControllerC"
 - !private "So37UIViewControllerAnimatedTransitioningP"
 - !private "So37UIViewControllerTransitioningDelegateP"
+- "So7FIRUserC"
+- "So11FIRUserInfoP"
 - !private "s14_ArrayProtocolP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
@@ -2728,8 +2839,13 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Modules/Koloda.swiftmodule/x86_64.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/MessageInputBar.swiftmodule/x86_64.swiftmodule"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/RangeUISlider.swiftmodule/x86_64.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/MessageKit.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
@@ -2737,15 +2853,109 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MapKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POP.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers/Koloda-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/pop-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthCredential.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPBasicAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPSpringAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPCustomAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPDecayAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPPropertyAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimationTracer.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFederatedAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGameCenterAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimator.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPVector.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimationExtras.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPLayerExtras.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPDefines.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimatablePropertyTypes.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers/Koloda-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimationEvent.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPGeometry.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimatableProperty.h"
 - "/Users/lindseythompson/Desktop/Lamp/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
@@ -2753,9 +2963,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "d9818fcb18d8506d4c69e406585ed087"

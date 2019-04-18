@@ -14,152 +14,181 @@ provides-dynamic-lookup:
 - "tableView"
 - "viewDidLoad"
 depends-top-level:
+- !private "??"
+- !private "AnyObject"
 - "AssignmentPrecedence"
-- !private "Auth"
+- "Auth"
+- !private "Bool"
+- !private "CastingPrecedence"
 - "Database"
 - "Int"
 - "NotificationsTableViewController"
+- !private "String"
 - "UISwitch"
 - "UITableView"
 - "UITableViewController"
 - !private "UIView"
-- !private "print"
 depends-member:
-- !private ["So7FIRAuthC", "auth"]
-- !private ["So7FIRAuthC", "currentUser"]
+- ["So7FIRAuthC", "auth"]
+- ["So7FIRAuthC", "currentUser"]
 - !private ["So15CALayerDelegateP", "allowsSelection"]
 - !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "isOn"]
 - !private ["So15CALayerDelegateP", "tableFooterView"]
-- !private ["s7CVarArgP", "Auth"]
+- ["s7CVarArgP", "Auth"]
 - ["s7CVarArgP", "Database"]
 - !private ["s7CVarArgP", "UIView"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "allowsSelection"]
-- !private ["s7CVarArgP", "auth"]
+- ["s7CVarArgP", "auth"]
 - !private ["s7CVarArgP", "child"]
-- !private ["s7CVarArgP", "currentUser"]
+- ["s7CVarArgP", "currentUser"]
 - ["s7CVarArgP", "database"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isOn"]
 - !private ["s7CVarArgP", "newMatchesSwitch"]
 - !private ["s7CVarArgP", "newMessagesSwitch"]
-- !private ["s7CVarArgP", "print"]
-- !private ["s7CVarArgP", "ref"]
+- !private ["s7CVarArgP", "observe"]
 - ["s7CVarArgP", "reference"]
+- !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "tableFooterView"]
 - !private ["s7CVarArgP", "tableView"]
-- !private ["s7CVarArgP", "uid"]
+- ["s7CVarArgP", "uid"]
 - !private ["s7CVarArgP", "updateChildValues"]
+- !private ["s7CVarArgP", "user"]
+- !private ["s7CVarArgP", "userProfilesRef"]
+- !private ["s7CVarArgP", "value"]
 - !private ["s7CVarArgP", "viewDidLoad"]
-- !private ["s28CustomDebugStringConvertibleP", "Auth"]
+- !private ["Sl", "subscript"]
+- ["s28CustomDebugStringConvertibleP", "Auth"]
 - ["s28CustomDebugStringConvertibleP", "Database"]
 - !private ["s28CustomDebugStringConvertibleP", "UIView"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "allowsSelection"]
-- !private ["s28CustomDebugStringConvertibleP", "auth"]
+- ["s28CustomDebugStringConvertibleP", "auth"]
 - !private ["s28CustomDebugStringConvertibleP", "child"]
-- !private ["s28CustomDebugStringConvertibleP", "currentUser"]
+- ["s28CustomDebugStringConvertibleP", "currentUser"]
 - ["s28CustomDebugStringConvertibleP", "database"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isOn"]
 - !private ["s28CustomDebugStringConvertibleP", "newMatchesSwitch"]
 - !private ["s28CustomDebugStringConvertibleP", "newMessagesSwitch"]
-- !private ["s28CustomDebugStringConvertibleP", "print"]
-- !private ["s28CustomDebugStringConvertibleP", "ref"]
+- !private ["s28CustomDebugStringConvertibleP", "observe"]
 - ["s28CustomDebugStringConvertibleP", "reference"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "tableFooterView"]
 - !private ["s28CustomDebugStringConvertibleP", "tableView"]
-- !private ["s28CustomDebugStringConvertibleP", "uid"]
+- ["s28CustomDebugStringConvertibleP", "uid"]
 - !private ["s28CustomDebugStringConvertibleP", "updateChildValues"]
+- !private ["s28CustomDebugStringConvertibleP", "user"]
+- !private ["s28CustomDebugStringConvertibleP", "userProfilesRef"]
+- !private ["s28CustomDebugStringConvertibleP", "value"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - !private ["s17CustomReflectableP", "allowsSelection"]
 - !private ["s17CustomReflectableP", "isOn"]
+- !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "tableFooterView"]
-- !private ["s23CustomStringConvertibleP", "Auth"]
+- ["s23CustomStringConvertibleP", "Auth"]
 - ["s23CustomStringConvertibleP", "Database"]
 - !private ["s23CustomStringConvertibleP", "UIView"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "allowsSelection"]
-- !private ["s23CustomStringConvertibleP", "auth"]
+- ["s23CustomStringConvertibleP", "auth"]
 - !private ["s23CustomStringConvertibleP", "child"]
-- !private ["s23CustomStringConvertibleP", "currentUser"]
+- ["s23CustomStringConvertibleP", "currentUser"]
 - ["s23CustomStringConvertibleP", "database"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isOn"]
 - !private ["s23CustomStringConvertibleP", "newMatchesSwitch"]
 - !private ["s23CustomStringConvertibleP", "newMessagesSwitch"]
-- !private ["s23CustomStringConvertibleP", "print"]
-- !private ["s23CustomStringConvertibleP", "ref"]
+- !private ["s23CustomStringConvertibleP", "observe"]
 - ["s23CustomStringConvertibleP", "reference"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "tableFooterView"]
 - !private ["s23CustomStringConvertibleP", "tableView"]
-- !private ["s23CustomStringConvertibleP", "uid"]
+- ["s23CustomStringConvertibleP", "uid"]
 - !private ["s23CustomStringConvertibleP", "updateChildValues"]
+- !private ["s23CustomStringConvertibleP", "user"]
+- !private ["s23CustomStringConvertibleP", "userProfilesRef"]
+- !private ["s23CustomStringConvertibleP", "value"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["So16FIRDataEventTypeV", "value"]
+- !private ["So15FIRDataSnapshotC", "value"]
 - ["So11FIRDatabaseC", "database"]
 - ["So11FIRDatabaseC", "reference"]
 - !private ["So16FIRDatabaseQueryC", "child"]
+- !private ["So16FIRDatabaseQueryC", "observe"]
 - !private ["So16FIRDatabaseQueryC", "updateChildValues"]
 - !private ["So20FIRDatabaseReferenceC", "child"]
+- !private ["So20FIRDatabaseReferenceC", "observe"]
 - !private ["So20FIRDatabaseReferenceC", "updateChildValues"]
 - !private ["Se", "allowsSelection"]
 - !private ["Se", "isOn"]
+- !private ["Se", "subscript"]
 - !private ["Se", "tableFooterView"]
+- !private ["SD", "subscript"]
 - !private ["SE", "allowsSelection"]
 - !private ["SE", "isOn"]
+- !private ["SE", "subscript"]
 - !private ["SE", "tableFooterView"]
-- !private ["SQ", "Auth"]
+- ["SQ", "Auth"]
 - ["SQ", "Database"]
 - !private ["SQ", "UIView"]
 - ["SQ", ""]
 - !private ["SQ", "allowsSelection"]
-- !private ["SQ", "auth"]
+- ["SQ", "auth"]
 - !private ["SQ", "child"]
-- !private ["SQ", "currentUser"]
+- ["SQ", "currentUser"]
 - ["SQ", "database"]
 - !private ["SQ", "init"]
 - !private ["SQ", "init"]
 - !private ["SQ", "isOn"]
 - !private ["SQ", "newMatchesSwitch"]
 - !private ["SQ", "newMessagesSwitch"]
-- !private ["SQ", "print"]
-- !private ["SQ", "ref"]
+- !private ["SQ", "observe"]
 - ["SQ", "reference"]
+- !private ["SQ", "subscript"]
 - !private ["SQ", "tableFooterView"]
 - !private ["SQ", "tableView"]
-- !private ["SQ", "uid"]
+- ["SQ", "uid"]
 - !private ["SQ", "updateChildValues"]
+- !private ["SQ", "user"]
+- !private ["SQ", "userProfilesRef"]
+- !private ["SQ", "value"]
 - !private ["SQ", "viewDidLoad"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s23ExpressibleByNilLiteralP", "allowsSelection"]
 - !private ["s23ExpressibleByNilLiteralP", "isOn"]
 - !private ["s23ExpressibleByNilLiteralP", "tableFooterView"]
-- !private ["SH", "Auth"]
+- ["SH", "Auth"]
 - ["SH", "Database"]
 - !private ["SH", "UIView"]
 - ["SH", ""]
 - !private ["SH", "allowsSelection"]
-- !private ["SH", "auth"]
+- ["SH", "auth"]
 - !private ["SH", "child"]
-- !private ["SH", "currentUser"]
+- ["SH", "currentUser"]
 - ["SH", "database"]
 - !private ["SH", "init"]
 - !private ["SH", "init"]
 - !private ["SH", "isOn"]
 - !private ["SH", "newMatchesSwitch"]
 - !private ["SH", "newMessagesSwitch"]
-- !private ["SH", "print"]
-- !private ["SH", "ref"]
+- !private ["SH", "observe"]
 - ["SH", "reference"]
+- !private ["SH", "subscript"]
 - !private ["SH", "tableFooterView"]
 - !private ["SH", "tableView"]
-- !private ["SH", "uid"]
+- ["SH", "uid"]
 - !private ["SH", "updateChildValues"]
+- !private ["SH", "user"]
+- !private ["SH", "userProfilesRef"]
+- !private ["SH", "value"]
 - !private ["SH", "viewDidLoad"]
-- !private ["So8NSCodingP", "Auth"]
+- ["So8NSCodingP", "Auth"]
 - ["So8NSCodingP", "Database"]
 - !private ["So8NSCodingP", "UIView"]
 - ["So8NSCodingP", ""]
@@ -169,12 +198,12 @@ depends-member:
 - !private ["So8NSCodingP", "isOn"]
 - !private ["So8NSCodingP", "newMatchesSwitch"]
 - !private ["So8NSCodingP", "newMessagesSwitch"]
-- !private ["So8NSCodingP", "print"]
-- !private ["So8NSCodingP", "ref"]
 - !private ["So8NSCodingP", "tableFooterView"]
 - !private ["So8NSCodingP", "tableView"]
+- !private ["So8NSCodingP", "user"]
+- !private ["So8NSCodingP", "userProfilesRef"]
 - !private ["So8NSCodingP", "viewDidLoad"]
-- !private ["So26NSExtensionRequestHandlingP", "Auth"]
+- ["So26NSExtensionRequestHandlingP", "Auth"]
 - ["So26NSExtensionRequestHandlingP", "Database"]
 - !private ["So26NSExtensionRequestHandlingP", "UIView"]
 - ["So26NSExtensionRequestHandlingP", ""]
@@ -182,20 +211,23 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "newMatchesSwitch"]
 - !private ["So26NSExtensionRequestHandlingP", "newMessagesSwitch"]
-- !private ["So26NSExtensionRequestHandlingP", "print"]
-- !private ["So26NSExtensionRequestHandlingP", "ref"]
 - !private ["So26NSExtensionRequestHandlingP", "tableView"]
+- !private ["So26NSExtensionRequestHandlingP", "user"]
+- !private ["So26NSExtensionRequestHandlingP", "userProfilesRef"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
-- !private ["So8NSObjectC", "Auth"]
+- !private ["So8NSObjectC", "AnyObject"]
+- ["So8NSObjectC", "Auth"]
+- !private ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "Database"]
 - ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UISwitch"]
 - ["So8NSObjectC", "UITableView"]
 - !private ["So8NSObjectC", "UIView"]
 - !private ["So8NSObjectC", "allowsSelection"]
-- !private ["So8NSObjectC", "auth"]
+- ["So8NSObjectC", "auth"]
 - !private ["So8NSObjectC", "child"]
-- !private ["So8NSObjectC", "currentUser"]
+- ["So8NSObjectC", "currentUser"]
 - ["So8NSObjectC", "database"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "init"]
@@ -205,39 +237,46 @@ depends-member:
 - ["So8NSObjectC", "newMessageToggle"]
 - ["So8NSObjectC", "newMessagesSwitch"]
 - ["So8NSObjectC", "numberOfSections"]
-- !private ["So8NSObjectC", "print"]
-- ["So8NSObjectC", "ref"]
+- !private ["So8NSObjectC", "observe"]
 - ["So8NSObjectC", "reference"]
 - !private ["So8NSObjectC", "tableFooterView"]
 - ["So8NSObjectC", "tableView"]
-- !private ["So8NSObjectC", "uid"]
+- ["So8NSObjectC", "uid"]
 - !private ["So8NSObjectC", "updateChildValues"]
+- ["So8NSObjectC", "user"]
+- ["So8NSObjectC", "userProfilesRef"]
+- !private ["So8NSObjectC", "value"]
 - ["So8NSObjectC", "viewDidLoad"]
-- !private ["So8NSObjectP", "Auth"]
+- ["So8NSObjectP", "Auth"]
 - ["So8NSObjectP", "Database"]
 - !private ["So8NSObjectP", "UIView"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "allowsSelection"]
-- !private ["So8NSObjectP", "auth"]
+- ["So8NSObjectP", "auth"]
 - !private ["So8NSObjectP", "child"]
-- !private ["So8NSObjectP", "currentUser"]
+- ["So8NSObjectP", "currentUser"]
 - ["So8NSObjectP", "database"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isOn"]
 - !private ["So8NSObjectP", "newMatchesSwitch"]
 - !private ["So8NSObjectP", "newMessagesSwitch"]
-- !private ["So8NSObjectP", "print"]
-- !private ["So8NSObjectP", "ref"]
+- !private ["So8NSObjectP", "observe"]
 - ["So8NSObjectP", "reference"]
 - !private ["So8NSObjectP", "tableFooterView"]
 - !private ["So8NSObjectP", "tableView"]
-- !private ["So8NSObjectP", "uid"]
+- ["So8NSObjectP", "uid"]
 - !private ["So8NSObjectP", "updateChildValues"]
+- !private ["So8NSObjectP", "user"]
+- !private ["So8NSObjectP", "userProfilesRef"]
+- !private ["So8NSObjectP", "value"]
 - !private ["So8NSObjectP", "viewDidLoad"]
-- !private ["4Lamp32NotificationsTableViewControllerC", "Auth"]
+- !private ["4Lamp32NotificationsTableViewControllerC", "AnyObject"]
+- ["4Lamp32NotificationsTableViewControllerC", "Auth"]
+- !private ["4Lamp32NotificationsTableViewControllerC", "Bool"]
 - ["4Lamp32NotificationsTableViewControllerC", "Database"]
 - ["4Lamp32NotificationsTableViewControllerC", "Int"]
+- !private ["4Lamp32NotificationsTableViewControllerC", "String"]
 - ["4Lamp32NotificationsTableViewControllerC", "UISwitch"]
 - ["4Lamp32NotificationsTableViewControllerC", "UITableView"]
 - !private ["4Lamp32NotificationsTableViewControllerC", "UIView"]
@@ -248,13 +287,15 @@ depends-member:
 - ["4Lamp32NotificationsTableViewControllerC", "newMessageToggle"]
 - ["4Lamp32NotificationsTableViewControllerC", "newMessagesSwitch"]
 - ["4Lamp32NotificationsTableViewControllerC", "numberOfSections"]
-- !private ["4Lamp32NotificationsTableViewControllerC", "print"]
-- ["4Lamp32NotificationsTableViewControllerC", "ref"]
 - ["4Lamp32NotificationsTableViewControllerC", "tableView"]
+- ["4Lamp32NotificationsTableViewControllerC", "user"]
+- ["4Lamp32NotificationsTableViewControllerC", "userProfilesRef"]
 - ["4Lamp32NotificationsTableViewControllerC", "viewDidLoad"]
 - !private ["Sq", "allowsSelection"]
 - !private ["Sq", "isOn"]
 - !private ["Sq", "tableFooterView"]
+- !private ["SY", "value"]
+- !private ["ST", "subscript"]
 - !private ["So29UIAccessibilityIdentificationP", "allowsSelection"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "isOn"]
@@ -263,7 +304,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "isOn"]
 - !private ["So12UIAppearanceP", "tableFooterView"]
-- !private ["So21UIAppearanceContainerP", "Auth"]
+- ["So21UIAppearanceContainerP", "Auth"]
 - ["So21UIAppearanceContainerP", "Database"]
 - !private ["So21UIAppearanceContainerP", "UIView"]
 - ["So21UIAppearanceContainerP", ""]
@@ -273,12 +314,12 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "isOn"]
 - !private ["So21UIAppearanceContainerP", "newMatchesSwitch"]
 - !private ["So21UIAppearanceContainerP", "newMessagesSwitch"]
-- !private ["So21UIAppearanceContainerP", "print"]
-- !private ["So21UIAppearanceContainerP", "ref"]
 - !private ["So21UIAppearanceContainerP", "tableFooterView"]
 - !private ["So21UIAppearanceContainerP", "tableView"]
+- !private ["So21UIAppearanceContainerP", "user"]
+- !private ["So21UIAppearanceContainerP", "userProfilesRef"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
-- !private ["So18UIContentContainerP", "Auth"]
+- ["So18UIContentContainerP", "Auth"]
 - ["So18UIContentContainerP", "Database"]
 - !private ["So18UIContentContainerP", "UIView"]
 - ["So18UIContentContainerP", ""]
@@ -286,9 +327,9 @@ depends-member:
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "newMatchesSwitch"]
 - !private ["So18UIContentContainerP", "newMessagesSwitch"]
-- !private ["So18UIContentContainerP", "print"]
-- !private ["So18UIContentContainerP", "ref"]
 - !private ["So18UIContentContainerP", "tableView"]
+- !private ["So18UIContentContainerP", "user"]
+- !private ["So18UIContentContainerP", "userProfilesRef"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - !private ["So9UIControlC", "isOn"]
 - !private ["So17UICoordinateSpaceP", "allowsSelection"]
@@ -301,7 +342,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "isOn"]
 - !private ["So13UIDynamicItemP", "tableFooterView"]
-- !private ["So18UIFocusEnvironmentP", "Auth"]
+- ["So18UIFocusEnvironmentP", "Auth"]
 - ["So18UIFocusEnvironmentP", "Database"]
 - !private ["So18UIFocusEnvironmentP", "UIView"]
 - ["So18UIFocusEnvironmentP", ""]
@@ -311,10 +352,10 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "isOn"]
 - !private ["So18UIFocusEnvironmentP", "newMatchesSwitch"]
 - !private ["So18UIFocusEnvironmentP", "newMessagesSwitch"]
-- !private ["So18UIFocusEnvironmentP", "print"]
-- !private ["So18UIFocusEnvironmentP", "ref"]
 - !private ["So18UIFocusEnvironmentP", "tableFooterView"]
 - !private ["So18UIFocusEnvironmentP", "tableView"]
+- !private ["So18UIFocusEnvironmentP", "user"]
+- !private ["So18UIFocusEnvironmentP", "userProfilesRef"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - !private ["So11UIFocusItemP", "allowsSelection"]
 - !private ["So11UIFocusItemP", "init"]
@@ -326,7 +367,7 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "tableFooterView"]
 - !private ["So30UIFocusItemScrollableContainerP", "allowsSelection"]
 - !private ["So30UIFocusItemScrollableContainerP", "tableFooterView"]
-- !private ["So30UIPasteConfigurationSupportingP", "Auth"]
+- ["So30UIPasteConfigurationSupportingP", "Auth"]
 - ["So30UIPasteConfigurationSupportingP", "Database"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIView"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -336,14 +377,17 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "isOn"]
 - !private ["So30UIPasteConfigurationSupportingP", "newMatchesSwitch"]
 - !private ["So30UIPasteConfigurationSupportingP", "newMessagesSwitch"]
-- !private ["So30UIPasteConfigurationSupportingP", "print"]
-- !private ["So30UIPasteConfigurationSupportingP", "ref"]
 - !private ["So30UIPasteConfigurationSupportingP", "tableFooterView"]
 - !private ["So30UIPasteConfigurationSupportingP", "tableView"]
+- !private ["So30UIPasteConfigurationSupportingP", "user"]
+- !private ["So30UIPasteConfigurationSupportingP", "userProfilesRef"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
-- !private ["So11UIResponderC", "Auth"]
+- !private ["So11UIResponderC", "AnyObject"]
+- ["So11UIResponderC", "Auth"]
+- !private ["So11UIResponderC", "Bool"]
 - ["So11UIResponderC", "Database"]
 - ["So11UIResponderC", "Int"]
+- !private ["So11UIResponderC", "String"]
 - ["So11UIResponderC", "UISwitch"]
 - ["So11UIResponderC", "UITableView"]
 - !private ["So11UIResponderC", "UIView"]
@@ -356,12 +400,12 @@ depends-member:
 - ["So11UIResponderC", "newMessageToggle"]
 - ["So11UIResponderC", "newMessagesSwitch"]
 - ["So11UIResponderC", "numberOfSections"]
-- !private ["So11UIResponderC", "print"]
-- ["So11UIResponderC", "ref"]
 - !private ["So11UIResponderC", "tableFooterView"]
 - ["So11UIResponderC", "tableView"]
+- ["So11UIResponderC", "user"]
+- ["So11UIResponderC", "userProfilesRef"]
 - ["So11UIResponderC", "viewDidLoad"]
-- !private ["So30UIResponderStandardEditActionsP", "Auth"]
+- ["So30UIResponderStandardEditActionsP", "Auth"]
 - ["So30UIResponderStandardEditActionsP", "Database"]
 - !private ["So30UIResponderStandardEditActionsP", "UIView"]
 - ["So30UIResponderStandardEditActionsP", ""]
@@ -371,14 +415,14 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "isOn"]
 - !private ["So30UIResponderStandardEditActionsP", "newMatchesSwitch"]
 - !private ["So30UIResponderStandardEditActionsP", "newMessagesSwitch"]
-- !private ["So30UIResponderStandardEditActionsP", "print"]
-- !private ["So30UIResponderStandardEditActionsP", "ref"]
 - !private ["So30UIResponderStandardEditActionsP", "tableFooterView"]
 - !private ["So30UIResponderStandardEditActionsP", "tableView"]
+- !private ["So30UIResponderStandardEditActionsP", "user"]
+- !private ["So30UIResponderStandardEditActionsP", "userProfilesRef"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - !private ["So12UIScrollViewC", "allowsSelection"]
 - !private ["So12UIScrollViewC", "tableFooterView"]
-- !private ["So20UIScrollViewDelegateP", "Auth"]
+- ["So20UIScrollViewDelegateP", "Auth"]
 - ["So20UIScrollViewDelegateP", "Database"]
 - !private ["So20UIScrollViewDelegateP", "UIView"]
 - ["So20UIScrollViewDelegateP", ""]
@@ -386,13 +430,13 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "newMatchesSwitch"]
 - !private ["So20UIScrollViewDelegateP", "newMessagesSwitch"]
-- !private ["So20UIScrollViewDelegateP", "print"]
-- !private ["So20UIScrollViewDelegateP", "ref"]
 - !private ["So20UIScrollViewDelegateP", "tableView"]
+- !private ["So20UIScrollViewDelegateP", "user"]
+- !private ["So20UIScrollViewDelegateP", "userProfilesRef"]
 - !private ["So20UIScrollViewDelegateP", "viewDidLoad"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "allowsSelection"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "tableFooterView"]
-- !private ["So16UIStateRestoringP", "Auth"]
+- ["So16UIStateRestoringP", "Auth"]
 - ["So16UIStateRestoringP", "Database"]
 - !private ["So16UIStateRestoringP", "UIView"]
 - ["So16UIStateRestoringP", ""]
@@ -400,16 +444,19 @@ depends-member:
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "newMatchesSwitch"]
 - !private ["So16UIStateRestoringP", "newMessagesSwitch"]
-- !private ["So16UIStateRestoringP", "print"]
-- !private ["So16UIStateRestoringP", "ref"]
 - !private ["So16UIStateRestoringP", "tableView"]
+- !private ["So16UIStateRestoringP", "user"]
+- !private ["So16UIStateRestoringP", "userProfilesRef"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So8UISwitchC", "isOn"]
 - !private ["So11UITableViewC", "allowsSelection"]
 - !private ["So11UITableViewC", "tableFooterView"]
-- !private ["So21UITableViewControllerC", "Auth"]
+- !private ["So21UITableViewControllerC", "AnyObject"]
+- ["So21UITableViewControllerC", "Auth"]
+- !private ["So21UITableViewControllerC", "Bool"]
 - ["So21UITableViewControllerC", "Database"]
 - ["So21UITableViewControllerC", "Int"]
+- !private ["So21UITableViewControllerC", "String"]
 - ["So21UITableViewControllerC", "UISwitch"]
 - ["So21UITableViewControllerC", "UITableView"]
 - !private ["So21UITableViewControllerC", "UIView"]
@@ -421,11 +468,11 @@ depends-member:
 - ["So21UITableViewControllerC", "newMessageToggle"]
 - ["So21UITableViewControllerC", "newMessagesSwitch"]
 - ["So21UITableViewControllerC", "numberOfSections"]
-- !private ["So21UITableViewControllerC", "print"]
-- ["So21UITableViewControllerC", "ref"]
 - ["So21UITableViewControllerC", "tableView"]
+- ["So21UITableViewControllerC", "user"]
+- ["So21UITableViewControllerC", "userProfilesRef"]
 - ["So21UITableViewControllerC", "viewDidLoad"]
-- !private ["So21UITableViewDataSourceP", "Auth"]
+- ["So21UITableViewDataSourceP", "Auth"]
 - ["So21UITableViewDataSourceP", "Database"]
 - !private ["So21UITableViewDataSourceP", "UIView"]
 - ["So21UITableViewDataSourceP", ""]
@@ -433,11 +480,11 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "init"]
 - !private ["So21UITableViewDataSourceP", "newMatchesSwitch"]
 - !private ["So21UITableViewDataSourceP", "newMessagesSwitch"]
-- !private ["So21UITableViewDataSourceP", "print"]
-- !private ["So21UITableViewDataSourceP", "ref"]
 - !private ["So21UITableViewDataSourceP", "tableView"]
+- !private ["So21UITableViewDataSourceP", "user"]
+- !private ["So21UITableViewDataSourceP", "userProfilesRef"]
 - !private ["So21UITableViewDataSourceP", "viewDidLoad"]
-- !private ["So19UITableViewDelegateP", "Auth"]
+- ["So19UITableViewDelegateP", "Auth"]
 - ["So19UITableViewDelegateP", "Database"]
 - !private ["So19UITableViewDelegateP", "UIView"]
 - ["So19UITableViewDelegateP", ""]
@@ -445,11 +492,11 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "init"]
 - !private ["So19UITableViewDelegateP", "newMatchesSwitch"]
 - !private ["So19UITableViewDelegateP", "newMessagesSwitch"]
-- !private ["So19UITableViewDelegateP", "print"]
-- !private ["So19UITableViewDelegateP", "ref"]
 - !private ["So19UITableViewDelegateP", "tableView"]
+- !private ["So19UITableViewDelegateP", "user"]
+- !private ["So19UITableViewDelegateP", "userProfilesRef"]
 - !private ["So19UITableViewDelegateP", "viewDidLoad"]
-- !private ["So18UITraitEnvironmentP", "Auth"]
+- ["So18UITraitEnvironmentP", "Auth"]
 - ["So18UITraitEnvironmentP", "Database"]
 - !private ["So18UITraitEnvironmentP", "UIView"]
 - ["So18UITraitEnvironmentP", ""]
@@ -459,12 +506,12 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "isOn"]
 - !private ["So18UITraitEnvironmentP", "newMatchesSwitch"]
 - !private ["So18UITraitEnvironmentP", "newMessagesSwitch"]
-- !private ["So18UITraitEnvironmentP", "print"]
-- !private ["So18UITraitEnvironmentP", "ref"]
 - !private ["So18UITraitEnvironmentP", "tableFooterView"]
 - !private ["So18UITraitEnvironmentP", "tableView"]
+- !private ["So18UITraitEnvironmentP", "user"]
+- !private ["So18UITraitEnvironmentP", "userProfilesRef"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
-- !private ["So23UIUserActivityRestoringP", "Auth"]
+- ["So23UIUserActivityRestoringP", "Auth"]
 - ["So23UIUserActivityRestoringP", "Database"]
 - !private ["So23UIUserActivityRestoringP", "UIView"]
 - ["So23UIUserActivityRestoringP", ""]
@@ -474,18 +521,21 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "isOn"]
 - !private ["So23UIUserActivityRestoringP", "newMatchesSwitch"]
 - !private ["So23UIUserActivityRestoringP", "newMessagesSwitch"]
-- !private ["So23UIUserActivityRestoringP", "print"]
-- !private ["So23UIUserActivityRestoringP", "ref"]
 - !private ["So23UIUserActivityRestoringP", "tableFooterView"]
 - !private ["So23UIUserActivityRestoringP", "tableView"]
+- !private ["So23UIUserActivityRestoringP", "user"]
+- !private ["So23UIUserActivityRestoringP", "userProfilesRef"]
 - !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
 - !private ["So6UIViewC", "allowsSelection"]
 - !private ["So6UIViewC", "init"]
 - !private ["So6UIViewC", "isOn"]
 - !private ["So6UIViewC", "tableFooterView"]
-- !private ["So16UIViewControllerC", "Auth"]
+- !private ["So16UIViewControllerC", "AnyObject"]
+- ["So16UIViewControllerC", "Auth"]
+- !private ["So16UIViewControllerC", "Bool"]
 - ["So16UIViewControllerC", "Database"]
 - ["So16UIViewControllerC", "Int"]
+- !private ["So16UIViewControllerC", "String"]
 - ["So16UIViewControllerC", "UISwitch"]
 - ["So16UIViewControllerC", "UITableView"]
 - !private ["So16UIViewControllerC", "UIView"]
@@ -496,54 +546,63 @@ depends-member:
 - ["So16UIViewControllerC", "newMessageToggle"]
 - ["So16UIViewControllerC", "newMessagesSwitch"]
 - ["So16UIViewControllerC", "numberOfSections"]
-- !private ["So16UIViewControllerC", "print"]
-- ["So16UIViewControllerC", "ref"]
 - ["So16UIViewControllerC", "tableView"]
+- ["So16UIViewControllerC", "user"]
+- ["So16UIViewControllerC", "userProfilesRef"]
 - ["So16UIViewControllerC", "viewDidLoad"]
-- !private ["So7FIRUserC", "uid"]
-- !private ["So11FIRUserInfoP", "uid"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "Auth"]
+- ["So7FIRUserC", "uid"]
+- ["So11FIRUserInfoP", "uid"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Auth"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Database"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "allowsSelection"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "child"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "database"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isOn"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "newMatchesSwitch"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "newMessagesSwitch"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "ref"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "observe"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "reference"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tableFooterView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tableView"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "uid"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "uid"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "updateChildValues"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "user"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userProfilesRef"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["s21_ObjectiveCBridgeableP", "allowsSelection"]
 - !private ["s21_ObjectiveCBridgeableP", "isOn"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "tableFooterView"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "allowsSelection"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "isOn"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "tableFooterView"]
 depends-nominal:
-- !private "So7FIRAuthC"
+- "So7FIRAuthC"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
+- !private "Sl"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "So16FIRDataEventTypeV"
+- !private "So15FIRDataSnapshotC"
 - "So11FIRDatabaseC"
 - !private "So16FIRDatabaseQueryC"
 - !private "So20FIRDatabaseReferenceC"
 - !private "Se"
+- !private "SD"
 - !private "SE"
 - "SQ"
+- !private "s30ExpressibleByDictionaryLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
 - "SH"
 - "So8NSCodingP"
@@ -552,6 +611,8 @@ depends-nominal:
 - "So8NSObjectP"
 - "4Lamp32NotificationsTableViewControllerC"
 - !private "Sq"
+- !private "SY"
+- !private "ST"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -580,17 +641,22 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
-- !private "So7FIRUserC"
-- !private "So11FIRUserInfoP"
+- "So7FIRUserC"
+- "So11FIRUserInfoP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Modules/Koloda.swiftmodule/x86_64.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/MessageInputBar.swiftmodule/x86_64.swiftmodule"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/RangeUISlider.swiftmodule/x86_64.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/MessageKit.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
@@ -598,7 +664,9 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
@@ -612,7 +680,9 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/pop-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
@@ -671,7 +741,9 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers/Koloda-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
@@ -687,10 +759,13 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
@@ -699,9 +774,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "16f1f750290e80a3e72abad1b1312679"
+interface-hash: "a232919c984717221ee246f1f0f89f2f"

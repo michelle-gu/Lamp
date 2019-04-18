@@ -46,7 +46,6 @@ depends-top-level:
 - "UITableViewDataSource"
 - "UITableViewDelegate"
 - "UIViewController"
-- !private "print"
 depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "joined"]
@@ -115,7 +114,6 @@ depends-member:
 - !private ["s7CVarArgP", "otherLabel"]
 - !private ["s7CVarArgP", "petsLabel"]
 - !private ["s7CVarArgP", "phoneLabel"]
-- !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "profileTableView"]
 - !private ["s7CVarArgP", "ref"]
 - !private ["s7CVarArgP", "reference"]
@@ -155,6 +153,8 @@ depends-member:
 - !private ["Sl", "subscript"]
 - !private ["SL", "init"]
 - !private ["SL", "row"]
+- !private ["10Foundation8CalendarV9ComponentO", "day"]
+- !private ["10Foundation8CalendarV9ComponentO", "month"]
 - !private ["10Foundation8CalendarV9ComponentO", "year"]
 - !private ["4Lamp24ContactInfoTableViewCellC", "emailLabel"]
 - !private ["4Lamp24ContactInfoTableViewCellC", "facebookLabel"]
@@ -206,7 +206,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "otherLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "petsLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "phoneLabel"]
-- !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "profileTableView"]
 - !private ["s28CustomDebugStringConvertibleP", "ref"]
 - !private ["s28CustomDebugStringConvertibleP", "reference"]
@@ -299,7 +298,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "otherLabel"]
 - !private ["s23CustomStringConvertibleP", "petsLabel"]
 - !private ["s23CustomStringConvertibleP", "phoneLabel"]
-- !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "profileTableView"]
 - !private ["s23CustomStringConvertibleP", "ref"]
 - !private ["s23CustomStringConvertibleP", "reference"]
@@ -400,6 +398,7 @@ depends-member:
 - !private ["SQ", "date"]
 - !private ["SQ", "dateComponents"]
 - !private ["SQ", "dateFormat"]
+- !private ["SQ", "day"]
 - !private ["SQ", "delegate"]
 - !private ["SQ", "dequeueReusableCell"]
 - !private ["SQ", "didReceiveMemoryWarning"]
@@ -413,6 +412,7 @@ depends-member:
 - !private ["SQ", "init"]
 - !private ["SQ", "joined"]
 - !private ["SQ", "lifestylePrefsTableViewCellIdentifier"]
+- !private ["SQ", "month"]
 - !private ["SQ", "nameAgeLabel"]
 - !private ["SQ", "numBedroomsLabel"]
 - ["SQ", "numberOfSections"]
@@ -422,7 +422,6 @@ depends-member:
 - !private ["SQ", "otherLabel"]
 - !private ["SQ", "petsLabel"]
 - !private ["SQ", "phoneLabel"]
-- !private ["SQ", "print"]
 - !private ["SQ", "profileTableView"]
 - !private ["SQ", "ref"]
 - !private ["SQ", "reference"]
@@ -494,6 +493,7 @@ depends-member:
 - !private ["SH", "date"]
 - !private ["SH", "dateComponents"]
 - !private ["SH", "dateFormat"]
+- !private ["SH", "day"]
 - !private ["SH", "delegate"]
 - !private ["SH", "dequeueReusableCell"]
 - !private ["SH", "didReceiveMemoryWarning"]
@@ -507,6 +507,7 @@ depends-member:
 - !private ["SH", "init"]
 - !private ["SH", "joined"]
 - !private ["SH", "lifestylePrefsTableViewCellIdentifier"]
+- !private ["SH", "month"]
 - !private ["SH", "nameAgeLabel"]
 - !private ["SH", "numBedroomsLabel"]
 - ["SH", "numberOfSections"]
@@ -516,7 +517,6 @@ depends-member:
 - !private ["SH", "otherLabel"]
 - !private ["SH", "petsLabel"]
 - !private ["SH", "phoneLabel"]
-- !private ["SH", "print"]
 - !private ["SH", "profileTableView"]
 - !private ["SH", "ref"]
 - !private ["SH", "reference"]
@@ -596,7 +596,6 @@ depends-member:
 - !private ["So8NSCodingP", "otherLabel"]
 - !private ["So8NSCodingP", "petsLabel"]
 - !private ["So8NSCodingP", "phoneLabel"]
-- !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "profileTableView"]
 - !private ["So8NSCodingP", "ref"]
 - !private ["So8NSCodingP", "reloadData"]
@@ -648,7 +647,6 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "numberOfSections"]
 - ["So26NSExtensionRequestHandlingP", "numberOfSectionsInTableView"]
 - !private ["So26NSExtensionRequestHandlingP", "occupationLabel"]
-- !private ["So26NSExtensionRequestHandlingP", "print"]
 - !private ["So26NSExtensionRequestHandlingP", "profileTableView"]
 - !private ["So26NSExtensionRequestHandlingP", "ref"]
 - ["So26NSExtensionRequestHandlingP", "scrollViewDidChangeAdjustedContentInset"]
@@ -726,7 +724,6 @@ depends-member:
 - !private ["So8NSObjectC", "otherLabel"]
 - !private ["So8NSObjectC", "petsLabel"]
 - !private ["So8NSObjectC", "phoneLabel"]
-- !private ["So8NSObjectC", "print"]
 - ["So8NSObjectC", "profilePicture"]
 - ["So8NSObjectC", "profileTableView"]
 - ["So8NSObjectC", "ref"]
@@ -797,7 +794,6 @@ depends-member:
 - !private ["So8NSObjectP", "otherLabel"]
 - !private ["So8NSObjectP", "petsLabel"]
 - !private ["So8NSObjectP", "phoneLabel"]
-- !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "profileTableView"]
 - !private ["So8NSObjectP", "ref"]
 - !private ["So8NSObjectP", "reference"]
@@ -870,7 +866,6 @@ depends-member:
 - ["4Lamp21ProfileViewControllerC", "numberOfSections"]
 - ["4Lamp21ProfileViewControllerC", "numberOfSectionsInTableView"]
 - ["4Lamp21ProfileViewControllerC", "occupationLabel"]
-- !private ["4Lamp21ProfileViewControllerC", "print"]
 - ["4Lamp21ProfileViewControllerC", "profilePicture"]
 - ["4Lamp21ProfileViewControllerC", "profileTableView"]
 - ["4Lamp21ProfileViewControllerC", "ref"]
@@ -982,7 +977,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "otherLabel"]
 - !private ["So21UIAppearanceContainerP", "petsLabel"]
 - !private ["So21UIAppearanceContainerP", "phoneLabel"]
-- !private ["So21UIAppearanceContainerP", "print"]
 - !private ["So21UIAppearanceContainerP", "profileTableView"]
 - !private ["So21UIAppearanceContainerP", "ref"]
 - !private ["So21UIAppearanceContainerP", "reloadData"]
@@ -1031,7 +1025,6 @@ depends-member:
 - ["So18UIContentContainerP", "numberOfSections"]
 - ["So18UIContentContainerP", "numberOfSectionsInTableView"]
 - !private ["So18UIContentContainerP", "occupationLabel"]
-- !private ["So18UIContentContainerP", "print"]
 - !private ["So18UIContentContainerP", "profileTableView"]
 - !private ["So18UIContentContainerP", "ref"]
 - ["So18UIContentContainerP", "scrollViewDidChangeAdjustedContentInset"]
@@ -1123,7 +1116,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "otherLabel"]
 - !private ["So18UIFocusEnvironmentP", "petsLabel"]
 - !private ["So18UIFocusEnvironmentP", "phoneLabel"]
-- !private ["So18UIFocusEnvironmentP", "print"]
 - !private ["So18UIFocusEnvironmentP", "profileTableView"]
 - !private ["So18UIFocusEnvironmentP", "ref"]
 - !private ["So18UIFocusEnvironmentP", "reloadData"]
@@ -1228,7 +1220,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "otherLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "petsLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "phoneLabel"]
-- !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "profileTableView"]
 - !private ["So30UIPasteConfigurationSupportingP", "ref"]
 - !private ["So30UIPasteConfigurationSupportingP", "reloadData"]
@@ -1303,7 +1294,6 @@ depends-member:
 - !private ["So11UIResponderC", "otherLabel"]
 - !private ["So11UIResponderC", "petsLabel"]
 - !private ["So11UIResponderC", "phoneLabel"]
-- !private ["So11UIResponderC", "print"]
 - ["So11UIResponderC", "profilePicture"]
 - ["So11UIResponderC", "profileTableView"]
 - ["So11UIResponderC", "ref"]
@@ -1364,7 +1354,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "otherLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "petsLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "phoneLabel"]
-- !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "profileTableView"]
 - !private ["So30UIResponderStandardEditActionsP", "ref"]
 - !private ["So30UIResponderStandardEditActionsP", "reloadData"]
@@ -1415,7 +1404,6 @@ depends-member:
 - ["So20UIScrollViewDelegateP", "numberOfSections"]
 - ["So20UIScrollViewDelegateP", "numberOfSectionsInTableView"]
 - !private ["So20UIScrollViewDelegateP", "occupationLabel"]
-- !private ["So20UIScrollViewDelegateP", "print"]
 - !private ["So20UIScrollViewDelegateP", "profileTableView"]
 - !private ["So20UIScrollViewDelegateP", "ref"]
 - ["So20UIScrollViewDelegateP", "scrollViewDidChangeAdjustedContentInset"]
@@ -1464,7 +1452,6 @@ depends-member:
 - ["So16UIStateRestoringP", "numberOfSections"]
 - ["So16UIStateRestoringP", "numberOfSectionsInTableView"]
 - !private ["So16UIStateRestoringP", "occupationLabel"]
-- !private ["So16UIStateRestoringP", "print"]
 - !private ["So16UIStateRestoringP", "profileTableView"]
 - !private ["So16UIStateRestoringP", "ref"]
 - ["So16UIStateRestoringP", "scrollViewDidChangeAdjustedContentInset"]
@@ -1520,7 +1507,6 @@ depends-member:
 - ["So21UITableViewDataSourceP", "numberOfSections"]
 - ["So21UITableViewDataSourceP", "numberOfSectionsInTableView"]
 - !private ["So21UITableViewDataSourceP", "occupationLabel"]
-- !private ["So21UITableViewDataSourceP", "print"]
 - !private ["So21UITableViewDataSourceP", "profileTableView"]
 - !private ["So21UITableViewDataSourceP", "ref"]
 - ["So21UITableViewDataSourceP", "scrollViewDidChangeAdjustedContentInset"]
@@ -1561,7 +1547,6 @@ depends-member:
 - ["So19UITableViewDelegateP", "numberOfSections"]
 - ["So19UITableViewDelegateP", "numberOfSectionsInTableView"]
 - !private ["So19UITableViewDelegateP", "occupationLabel"]
-- !private ["So19UITableViewDelegateP", "print"]
 - !private ["So19UITableViewDelegateP", "profileTableView"]
 - !private ["So19UITableViewDelegateP", "ref"]
 - ["So19UITableViewDelegateP", "scrollViewDidChangeAdjustedContentInset"]
@@ -1616,7 +1601,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "otherLabel"]
 - !private ["So18UITraitEnvironmentP", "petsLabel"]
 - !private ["So18UITraitEnvironmentP", "phoneLabel"]
-- !private ["So18UITraitEnvironmentP", "print"]
 - !private ["So18UITraitEnvironmentP", "profileTableView"]
 - !private ["So18UITraitEnvironmentP", "ref"]
 - !private ["So18UITraitEnvironmentP", "reloadData"]
@@ -1676,7 +1660,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "otherLabel"]
 - !private ["So23UIUserActivityRestoringP", "petsLabel"]
 - !private ["So23UIUserActivityRestoringP", "phoneLabel"]
-- !private ["So23UIUserActivityRestoringP", "print"]
 - !private ["So23UIUserActivityRestoringP", "profileTableView"]
 - !private ["So23UIUserActivityRestoringP", "ref"]
 - !private ["So23UIUserActivityRestoringP", "reloadData"]
@@ -1756,7 +1739,6 @@ depends-member:
 - ["So16UIViewControllerC", "numberOfSections"]
 - ["So16UIViewControllerC", "numberOfSectionsInTableView"]
 - ["So16UIViewControllerC", "occupationLabel"]
-- !private ["So16UIViewControllerC", "print"]
 - ["So16UIViewControllerC", "profilePicture"]
 - ["So16UIViewControllerC", "profileTableView"]
 - ["So16UIViewControllerC", "ref"]
@@ -1836,7 +1818,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "otherLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "petsLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "phoneLabel"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "profileTableView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ref"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reference"]
@@ -2007,9 +1988,13 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Modules/Koloda.swiftmodule/x86_64.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/MessageInputBar.swiftmodule/x86_64.swiftmodule"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/RangeUISlider.swiftmodule/x86_64.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/MessageKit.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
@@ -2017,7 +2002,9 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
@@ -2031,7 +2018,9 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/pop-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
@@ -2090,7 +2079,9 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers/Koloda-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
@@ -2106,10 +2097,13 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
@@ -2118,9 +2112,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "53d650872392fa7498e0a0d692ca2cce"

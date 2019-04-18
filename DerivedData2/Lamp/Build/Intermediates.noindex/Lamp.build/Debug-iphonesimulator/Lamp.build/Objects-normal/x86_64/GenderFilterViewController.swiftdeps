@@ -14,9 +14,12 @@ depends-top-level:
 - !private "-"
 - !private "..."
 - !private "=="
+- !private "??"
+- !private "AnyObject"
 - "AssignmentPrecedence"
-- !private "Auth"
+- "Auth"
 - "Bool"
+- !private "CastingPrecedence"
 - "Database"
 - "GenderFilterViewController"
 - "IndexPath"
@@ -33,8 +36,8 @@ depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "contains"]
 - !private ["Sa", "subscript"]
-- !private ["So7FIRAuthC", "auth"]
-- !private ["So7FIRAuthC", "currentUser"]
+- ["So7FIRAuthC", "auth"]
+- ["So7FIRAuthC", "currentUser"]
 - !private ["SK", "append"]
 - !private ["SK", "contains"]
 - !private ["SK", "init"]
@@ -48,17 +51,17 @@ depends-member:
 - !private ["So15CALayerDelegateP", "isSelected"]
 - !private ["So15CALayerDelegateP", "text"]
 - !private ["So15CALayerDelegateP", "textLabel"]
-- !private ["s7CVarArgP", "Auth"]
+- ["s7CVarArgP", "Auth"]
 - ["s7CVarArgP", "Database"]
 - !private ["s7CVarArgP", "IndexPath"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "accessoryType"]
 - !private ["s7CVarArgP", "append"]
-- !private ["s7CVarArgP", "auth"]
+- ["s7CVarArgP", "auth"]
 - !private ["s7CVarArgP", "cellForRow"]
 - !private ["s7CVarArgP", "child"]
 - !private ["s7CVarArgP", "contains"]
-- !private ["s7CVarArgP", "currentUser"]
+- ["s7CVarArgP", "currentUser"]
 - !private ["s7CVarArgP", "dataSource"]
 - ["s7CVarArgP", "database"]
 - !private ["s7CVarArgP", "delegate"]
@@ -74,6 +77,7 @@ depends-member:
 - !private ["s7CVarArgP", "numGenders"]
 - ["s7CVarArgP", "numberOfSections"]
 - ["s7CVarArgP", "numberOfSectionsInTableView"]
+- !private ["s7CVarArgP", "observe"]
 - !private ["s7CVarArgP", "profilesRef"]
 - ["s7CVarArgP", "reference"]
 - ["s7CVarArgP", "scrollViewDidChangeAdjustedContentInset"]
@@ -97,8 +101,10 @@ depends-member:
 - ["s7CVarArgP", "tableView"]
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "textLabel"]
-- !private ["s7CVarArgP", "uid"]
+- ["s7CVarArgP", "uid"]
 - !private ["s7CVarArgP", "updateChildValues"]
+- !private ["s7CVarArgP", "user"]
+- !private ["s7CVarArgP", "value"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - ["s7CVarArgP", "viewForZooming"]
 - ["s7CVarArgP", "viewForZoomingInScrollView"]
@@ -112,17 +118,18 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "append"]
 - !private ["10Foundation15ContiguousBytesP", "contains"]
 - !private ["10Foundation15ContiguousBytesP", "subscript"]
-- !private ["s28CustomDebugStringConvertibleP", "Auth"]
+- ["s28CustomDebugStringConvertibleP", "Auth"]
 - ["s28CustomDebugStringConvertibleP", "Database"]
 - !private ["s28CustomDebugStringConvertibleP", "IndexPath"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "accessoryType"]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
-- !private ["s28CustomDebugStringConvertibleP", "auth"]
+- ["s28CustomDebugStringConvertibleP", "auth"]
 - !private ["s28CustomDebugStringConvertibleP", "cellForRow"]
+- !private ["s28CustomDebugStringConvertibleP", "checkmark"]
 - !private ["s28CustomDebugStringConvertibleP", "child"]
 - !private ["s28CustomDebugStringConvertibleP", "contains"]
-- !private ["s28CustomDebugStringConvertibleP", "currentUser"]
+- ["s28CustomDebugStringConvertibleP", "currentUser"]
 - !private ["s28CustomDebugStringConvertibleP", "dataSource"]
 - ["s28CustomDebugStringConvertibleP", "database"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
@@ -138,6 +145,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "numGenders"]
 - ["s28CustomDebugStringConvertibleP", "numberOfSections"]
 - ["s28CustomDebugStringConvertibleP", "numberOfSectionsInTableView"]
+- !private ["s28CustomDebugStringConvertibleP", "observe"]
 - !private ["s28CustomDebugStringConvertibleP", "profilesRef"]
 - ["s28CustomDebugStringConvertibleP", "reference"]
 - !private ["s28CustomDebugStringConvertibleP", "row"]
@@ -162,30 +170,33 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "tableView"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "textLabel"]
-- !private ["s28CustomDebugStringConvertibleP", "uid"]
+- ["s28CustomDebugStringConvertibleP", "uid"]
 - !private ["s28CustomDebugStringConvertibleP", "updateChildValues"]
+- !private ["s28CustomDebugStringConvertibleP", "user"]
+- !private ["s28CustomDebugStringConvertibleP", "value"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - ["s28CustomDebugStringConvertibleP", "viewForZooming"]
 - ["s28CustomDebugStringConvertibleP", "viewForZoomingInScrollView"]
 - !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "cellForRow"]
+- !private ["s17CustomReflectableP", "checkmark"]
 - !private ["s17CustomReflectableP", "contains"]
 - !private ["s17CustomReflectableP", "dataSource"]
 - !private ["s17CustomReflectableP", "delegate"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "row"]
 - !private ["s17CustomReflectableP", "subscript"]
-- !private ["s23CustomStringConvertibleP", "Auth"]
+- ["s23CustomStringConvertibleP", "Auth"]
 - ["s23CustomStringConvertibleP", "Database"]
 - !private ["s23CustomStringConvertibleP", "IndexPath"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "accessoryType"]
 - !private ["s23CustomStringConvertibleP", "append"]
-- !private ["s23CustomStringConvertibleP", "auth"]
+- ["s23CustomStringConvertibleP", "auth"]
 - !private ["s23CustomStringConvertibleP", "cellForRow"]
 - !private ["s23CustomStringConvertibleP", "child"]
 - !private ["s23CustomStringConvertibleP", "contains"]
-- !private ["s23CustomStringConvertibleP", "currentUser"]
+- ["s23CustomStringConvertibleP", "currentUser"]
 - !private ["s23CustomStringConvertibleP", "dataSource"]
 - ["s23CustomStringConvertibleP", "database"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
@@ -201,6 +212,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "numGenders"]
 - ["s23CustomStringConvertibleP", "numberOfSections"]
 - ["s23CustomStringConvertibleP", "numberOfSectionsInTableView"]
+- !private ["s23CustomStringConvertibleP", "observe"]
 - !private ["s23CustomStringConvertibleP", "profilesRef"]
 - ["s23CustomStringConvertibleP", "reference"]
 - !private ["s23CustomStringConvertibleP", "row"]
@@ -225,50 +237,59 @@ depends-member:
 - ["s23CustomStringConvertibleP", "tableView"]
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "textLabel"]
-- !private ["s23CustomStringConvertibleP", "uid"]
+- ["s23CustomStringConvertibleP", "uid"]
 - !private ["s23CustomStringConvertibleP", "updateChildValues"]
+- !private ["s23CustomStringConvertibleP", "user"]
+- !private ["s23CustomStringConvertibleP", "value"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - ["s23CustomStringConvertibleP", "viewForZooming"]
 - ["s23CustomStringConvertibleP", "viewForZoomingInScrollView"]
+- !private ["So16FIRDataEventTypeV", "value"]
 - !private ["10Foundation12DataProtocolP", "append"]
 - !private ["10Foundation12DataProtocolP", "contains"]
 - !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["So15FIRDataSnapshotC", "value"]
 - ["So11FIRDatabaseC", "database"]
 - ["So11FIRDatabaseC", "reference"]
 - !private ["So16FIRDatabaseQueryC", "child"]
+- !private ["So16FIRDatabaseQueryC", "observe"]
 - !private ["So16FIRDatabaseQueryC", "setValue"]
 - !private ["So16FIRDatabaseQueryC", "updateChildValues"]
 - !private ["So20FIRDatabaseReferenceC", "child"]
+- !private ["So20FIRDatabaseReferenceC", "observe"]
 - !private ["So20FIRDatabaseReferenceC", "setValue"]
 - !private ["So20FIRDatabaseReferenceC", "updateChildValues"]
 - !private ["Se", "append"]
 - !private ["Se", "cellForRow"]
+- !private ["Se", "checkmark"]
 - !private ["Se", "contains"]
 - !private ["Se", "dataSource"]
 - !private ["Se", "delegate"]
 - !private ["Se", "init"]
 - !private ["Se", "row"]
 - !private ["Se", "subscript"]
+- !private ["SD", "subscript"]
 - !private ["SE", "append"]
 - !private ["SE", "cellForRow"]
+- !private ["SE", "checkmark"]
 - !private ["SE", "contains"]
 - !private ["SE", "dataSource"]
 - !private ["SE", "delegate"]
 - !private ["SE", "init"]
 - !private ["SE", "row"]
 - !private ["SE", "subscript"]
-- !private ["SQ", "Auth"]
+- ["SQ", "Auth"]
 - ["SQ", "Database"]
 - !private ["SQ", "IndexPath"]
 - ["SQ", ""]
 - !private ["SQ", "accessoryType"]
 - !private ["SQ", "append"]
-- !private ["SQ", "auth"]
+- ["SQ", "auth"]
 - !private ["SQ", "cellForRow"]
 - !private ["SQ", "checkmark"]
 - !private ["SQ", "child"]
 - !private ["SQ", "contains"]
-- !private ["SQ", "currentUser"]
+- ["SQ", "currentUser"]
 - !private ["SQ", "dataSource"]
 - ["SQ", "database"]
 - !private ["SQ", "delegate"]
@@ -285,6 +306,7 @@ depends-member:
 - !private ["SQ", "numGenders"]
 - ["SQ", "numberOfSections"]
 - ["SQ", "numberOfSectionsInTableView"]
+- !private ["SQ", "observe"]
 - !private ["SQ", "profilesRef"]
 - ["SQ", "reference"]
 - !private ["SQ", "row"]
@@ -309,8 +331,10 @@ depends-member:
 - ["SQ", "tableView"]
 - !private ["SQ", "text"]
 - !private ["SQ", "textLabel"]
-- !private ["SQ", "uid"]
+- ["SQ", "uid"]
 - !private ["SQ", "updateChildValues"]
+- !private ["SQ", "user"]
+- !private ["SQ", "value"]
 - !private ["SQ", "viewDidLoad"]
 - ["SQ", "viewForZooming"]
 - ["SQ", "viewForZoomingInScrollView"]
@@ -319,10 +343,13 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "row"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s23ExpressibleByNilLiteralP", "cellForRow"]
+- !private ["s23ExpressibleByNilLiteralP", "checkmark"]
 - !private ["s23ExpressibleByNilLiteralP", "dataSource"]
 - !private ["s23ExpressibleByNilLiteralP", "delegate"]
-- !private ["4Lamp26GenderFilterViewControllerC", "Auth"]
+- !private ["4Lamp26GenderFilterViewControllerC", "AnyObject"]
+- ["4Lamp26GenderFilterViewControllerC", "Auth"]
 - ["4Lamp26GenderFilterViewControllerC", "Bool"]
 - ["4Lamp26GenderFilterViewControllerC", "Database"]
 - ["4Lamp26GenderFilterViewControllerC", "IndexPath"]
@@ -358,22 +385,23 @@ depends-member:
 - ["4Lamp26GenderFilterViewControllerC", "sectionIndexTitlesForTableView"]
 - ["4Lamp26GenderFilterViewControllerC", "selectAllSelected"]
 - ["4Lamp26GenderFilterViewControllerC", "tableView"]
+- ["4Lamp26GenderFilterViewControllerC", "user"]
 - ["4Lamp26GenderFilterViewControllerC", "viewDidLoad"]
 - ["4Lamp26GenderFilterViewControllerC", "viewForZooming"]
 - ["4Lamp26GenderFilterViewControllerC", "viewForZoomingInScrollView"]
 - ["4Lamp26GenderFilterViewControllerC", "viewWillDisappear"]
-- !private ["SH", "Auth"]
+- ["SH", "Auth"]
 - ["SH", "Database"]
 - !private ["SH", "IndexPath"]
 - ["SH", ""]
 - !private ["SH", "accessoryType"]
 - !private ["SH", "append"]
-- !private ["SH", "auth"]
+- ["SH", "auth"]
 - !private ["SH", "cellForRow"]
 - !private ["SH", "checkmark"]
 - !private ["SH", "child"]
 - !private ["SH", "contains"]
-- !private ["SH", "currentUser"]
+- ["SH", "currentUser"]
 - !private ["SH", "dataSource"]
 - ["SH", "database"]
 - !private ["SH", "delegate"]
@@ -390,6 +418,7 @@ depends-member:
 - !private ["SH", "numGenders"]
 - ["SH", "numberOfSections"]
 - ["SH", "numberOfSectionsInTableView"]
+- !private ["SH", "observe"]
 - !private ["SH", "profilesRef"]
 - ["SH", "reference"]
 - !private ["SH", "row"]
@@ -414,8 +443,10 @@ depends-member:
 - ["SH", "tableView"]
 - !private ["SH", "text"]
 - !private ["SH", "textLabel"]
-- !private ["SH", "uid"]
+- ["SH", "uid"]
 - !private ["SH", "updateChildValues"]
+- !private ["SH", "user"]
+- !private ["SH", "value"]
 - !private ["SH", "viewDidLoad"]
 - ["SH", "viewForZooming"]
 - ["SH", "viewForZoomingInScrollView"]
@@ -429,7 +460,7 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "append"]
 - !private ["10Foundation19MutableDataProtocolP", "contains"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
-- !private ["So8NSCodingP", "Auth"]
+- ["So8NSCodingP", "Auth"]
 - ["So8NSCodingP", "Database"]
 - !private ["So8NSCodingP", "IndexPath"]
 - ["So8NSCodingP", ""]
@@ -469,10 +500,11 @@ depends-member:
 - ["So8NSCodingP", "tableView"]
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "textLabel"]
+- !private ["So8NSCodingP", "user"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - ["So8NSCodingP", "viewForZooming"]
 - ["So8NSCodingP", "viewForZoomingInScrollView"]
-- !private ["So26NSExtensionRequestHandlingP", "Auth"]
+- ["So26NSExtensionRequestHandlingP", "Auth"]
 - ["So26NSExtensionRequestHandlingP", "Database"]
 - !private ["So26NSExtensionRequestHandlingP", "IndexPath"]
 - ["So26NSExtensionRequestHandlingP", ""]
@@ -504,10 +536,12 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "sectionIndexTitlesForTableView"]
 - !private ["So26NSExtensionRequestHandlingP", "selectAllSelected"]
 - ["So26NSExtensionRequestHandlingP", "tableView"]
+- !private ["So26NSExtensionRequestHandlingP", "user"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - ["So26NSExtensionRequestHandlingP", "viewForZooming"]
 - ["So26NSExtensionRequestHandlingP", "viewForZoomingInScrollView"]
-- !private ["So8NSObjectC", "Auth"]
+- !private ["So8NSObjectC", "AnyObject"]
+- ["So8NSObjectC", "Auth"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "Database"]
 - ["So8NSObjectC", "IndexPath"]
@@ -516,10 +550,10 @@ depends-member:
 - ["So8NSObjectC", "UITableView"]
 - ["So8NSObjectC", "UITableViewCell"]
 - !private ["So8NSObjectC", "accessoryType"]
-- !private ["So8NSObjectC", "auth"]
+- ["So8NSObjectC", "auth"]
 - !private ["So8NSObjectC", "cellForRow"]
 - !private ["So8NSObjectC", "child"]
-- !private ["So8NSObjectC", "currentUser"]
+- ["So8NSObjectC", "currentUser"]
 - !private ["So8NSObjectC", "dataSource"]
 - ["So8NSObjectC", "database"]
 - !private ["So8NSObjectC", "delegate"]
@@ -535,6 +569,7 @@ depends-member:
 - ["So8NSObjectC", "numGenders"]
 - ["So8NSObjectC", "numberOfSections"]
 - ["So8NSObjectC", "numberOfSectionsInTableView"]
+- !private ["So8NSObjectC", "observe"]
 - ["So8NSObjectC", "profilesRef"]
 - ["So8NSObjectC", "reference"]
 - ["So8NSObjectC", "scrollViewDidChangeAdjustedContentInset"]
@@ -557,21 +592,23 @@ depends-member:
 - ["So8NSObjectC", "tableView"]
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "textLabel"]
-- !private ["So8NSObjectC", "uid"]
+- ["So8NSObjectC", "uid"]
 - !private ["So8NSObjectC", "updateChildValues"]
+- ["So8NSObjectC", "user"]
+- !private ["So8NSObjectC", "value"]
 - ["So8NSObjectC", "viewDidLoad"]
 - ["So8NSObjectC", "viewForZooming"]
 - ["So8NSObjectC", "viewForZoomingInScrollView"]
 - ["So8NSObjectC", "viewWillDisappear"]
-- !private ["So8NSObjectP", "Auth"]
+- ["So8NSObjectP", "Auth"]
 - ["So8NSObjectP", "Database"]
 - !private ["So8NSObjectP", "IndexPath"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "accessoryType"]
-- !private ["So8NSObjectP", "auth"]
+- ["So8NSObjectP", "auth"]
 - !private ["So8NSObjectP", "cellForRow"]
 - !private ["So8NSObjectP", "child"]
-- !private ["So8NSObjectP", "currentUser"]
+- ["So8NSObjectP", "currentUser"]
 - !private ["So8NSObjectP", "dataSource"]
 - ["So8NSObjectP", "database"]
 - !private ["So8NSObjectP", "delegate"]
@@ -587,6 +624,7 @@ depends-member:
 - !private ["So8NSObjectP", "numGenders"]
 - ["So8NSObjectP", "numberOfSections"]
 - ["So8NSObjectP", "numberOfSectionsInTableView"]
+- !private ["So8NSObjectP", "observe"]
 - !private ["So8NSObjectP", "profilesRef"]
 - ["So8NSObjectP", "reference"]
 - ["So8NSObjectP", "scrollViewDidChangeAdjustedContentInset"]
@@ -609,12 +647,15 @@ depends-member:
 - ["So8NSObjectP", "tableView"]
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "textLabel"]
-- !private ["So8NSObjectP", "uid"]
+- ["So8NSObjectP", "uid"]
 - !private ["So8NSObjectP", "updateChildValues"]
+- !private ["So8NSObjectP", "user"]
+- !private ["So8NSObjectP", "value"]
 - !private ["So8NSObjectP", "viewDidLoad"]
 - ["So8NSObjectP", "viewForZooming"]
 - ["So8NSObjectP", "viewForZoomingInScrollView"]
 - !private ["Sq", "cellForRow"]
+- !private ["Sq", "checkmark"]
 - !private ["Sq", "dataSource"]
 - !private ["Sq", "delegate"]
 - !private ["Sk", "append"]
@@ -627,6 +668,7 @@ depends-member:
 - !private ["Sm", "subscript"]
 - !private ["SY", "checkmark"]
 - !private ["SY", "none"]
+- !private ["SY", "value"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
 - !private ["ST", "append"]
@@ -650,7 +692,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "isSelected"]
 - !private ["So12UIAppearanceP", "text"]
 - !private ["So12UIAppearanceP", "textLabel"]
-- !private ["So21UIAppearanceContainerP", "Auth"]
+- ["So21UIAppearanceContainerP", "Auth"]
 - ["So21UIAppearanceContainerP", "Database"]
 - !private ["So21UIAppearanceContainerP", "IndexPath"]
 - ["So21UIAppearanceContainerP", ""]
@@ -690,10 +732,11 @@ depends-member:
 - ["So21UIAppearanceContainerP", "tableView"]
 - !private ["So21UIAppearanceContainerP", "text"]
 - !private ["So21UIAppearanceContainerP", "textLabel"]
+- !private ["So21UIAppearanceContainerP", "user"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
 - ["So21UIAppearanceContainerP", "viewForZooming"]
 - ["So21UIAppearanceContainerP", "viewForZoomingInScrollView"]
-- !private ["So18UIContentContainerP", "Auth"]
+- ["So18UIContentContainerP", "Auth"]
 - ["So18UIContentContainerP", "Database"]
 - !private ["So18UIContentContainerP", "IndexPath"]
 - ["So18UIContentContainerP", ""]
@@ -725,6 +768,7 @@ depends-member:
 - ["So18UIContentContainerP", "sectionIndexTitlesForTableView"]
 - !private ["So18UIContentContainerP", "selectAllSelected"]
 - ["So18UIContentContainerP", "tableView"]
+- !private ["So18UIContentContainerP", "user"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - ["So18UIContentContainerP", "viewForZooming"]
 - ["So18UIContentContainerP", "viewForZoomingInScrollView"]
@@ -749,7 +793,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "isSelected"]
 - !private ["So13UIDynamicItemP", "text"]
 - !private ["So13UIDynamicItemP", "textLabel"]
-- !private ["So18UIFocusEnvironmentP", "Auth"]
+- ["So18UIFocusEnvironmentP", "Auth"]
 - ["So18UIFocusEnvironmentP", "Database"]
 - !private ["So18UIFocusEnvironmentP", "IndexPath"]
 - ["So18UIFocusEnvironmentP", ""]
@@ -789,6 +833,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "tableView"]
 - !private ["So18UIFocusEnvironmentP", "text"]
 - !private ["So18UIFocusEnvironmentP", "textLabel"]
+- !private ["So18UIFocusEnvironmentP", "user"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - ["So18UIFocusEnvironmentP", "viewForZooming"]
 - ["So18UIFocusEnvironmentP", "viewForZoomingInScrollView"]
@@ -816,7 +861,7 @@ depends-member:
 - !private ["So27UIGestureRecognizerDelegateP", "isSelected"]
 - !private ["So27UIGestureRecognizerDelegateP", "textLabel"]
 - !private ["So7UILabelC", "text"]
-- !private ["So30UIPasteConfigurationSupportingP", "Auth"]
+- ["So30UIPasteConfigurationSupportingP", "Auth"]
 - ["So30UIPasteConfigurationSupportingP", "Database"]
 - !private ["So30UIPasteConfigurationSupportingP", "IndexPath"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -856,10 +901,12 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "tableView"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "textLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "user"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - ["So30UIPasteConfigurationSupportingP", "viewForZooming"]
 - ["So30UIPasteConfigurationSupportingP", "viewForZoomingInScrollView"]
-- !private ["So11UIResponderC", "Auth"]
+- !private ["So11UIResponderC", "AnyObject"]
+- ["So11UIResponderC", "Auth"]
 - ["So11UIResponderC", "Bool"]
 - ["So11UIResponderC", "Database"]
 - ["So11UIResponderC", "IndexPath"]
@@ -903,11 +950,12 @@ depends-member:
 - ["So11UIResponderC", "tableView"]
 - !private ["So11UIResponderC", "text"]
 - !private ["So11UIResponderC", "textLabel"]
+- ["So11UIResponderC", "user"]
 - ["So11UIResponderC", "viewDidLoad"]
 - ["So11UIResponderC", "viewForZooming"]
 - ["So11UIResponderC", "viewForZoomingInScrollView"]
 - ["So11UIResponderC", "viewWillDisappear"]
-- !private ["So30UIResponderStandardEditActionsP", "Auth"]
+- ["So30UIResponderStandardEditActionsP", "Auth"]
 - ["So30UIResponderStandardEditActionsP", "Database"]
 - !private ["So30UIResponderStandardEditActionsP", "IndexPath"]
 - ["So30UIResponderStandardEditActionsP", ""]
@@ -947,6 +995,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "tableView"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
 - !private ["So30UIResponderStandardEditActionsP", "textLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "user"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - ["So30UIResponderStandardEditActionsP", "viewForZooming"]
 - ["So30UIResponderStandardEditActionsP", "viewForZoomingInScrollView"]
@@ -954,7 +1003,7 @@ depends-member:
 - !private ["So12UIScrollViewC", "dataSource"]
 - !private ["So12UIScrollViewC", "delegate"]
 - !private ["So12UIScrollViewC", "dequeueReusableCell"]
-- !private ["So20UIScrollViewDelegateP", "Auth"]
+- ["So20UIScrollViewDelegateP", "Auth"]
 - ["So20UIScrollViewDelegateP", "Database"]
 - !private ["So20UIScrollViewDelegateP", "IndexPath"]
 - ["So20UIScrollViewDelegateP", ""]
@@ -984,13 +1033,14 @@ depends-member:
 - ["So20UIScrollViewDelegateP", "sectionIndexTitlesForTableView"]
 - !private ["So20UIScrollViewDelegateP", "selectAllSelected"]
 - ["So20UIScrollViewDelegateP", "tableView"]
+- !private ["So20UIScrollViewDelegateP", "user"]
 - ["So20UIScrollViewDelegateP", "viewForZooming"]
 - ["So20UIScrollViewDelegateP", "viewForZoomingInScrollView"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "cellForRow"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "dataSource"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "delegate"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "dequeueReusableCell"]
-- !private ["So16UIStateRestoringP", "Auth"]
+- ["So16UIStateRestoringP", "Auth"]
 - ["So16UIStateRestoringP", "Database"]
 - !private ["So16UIStateRestoringP", "IndexPath"]
 - ["So16UIStateRestoringP", ""]
@@ -1022,6 +1072,7 @@ depends-member:
 - ["So16UIStateRestoringP", "sectionIndexTitlesForTableView"]
 - !private ["So16UIStateRestoringP", "selectAllSelected"]
 - ["So16UIStateRestoringP", "tableView"]
+- !private ["So16UIStateRestoringP", "user"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - ["So16UIStateRestoringP", "viewForZooming"]
 - ["So16UIStateRestoringP", "viewForZoomingInScrollView"]
@@ -1032,7 +1083,7 @@ depends-member:
 - !private ["So15UITableViewCellC", "accessoryType"]
 - !private ["So15UITableViewCellC", "isSelected"]
 - !private ["So15UITableViewCellC", "textLabel"]
-- !private ["So21UITableViewDataSourceP", "Auth"]
+- ["So21UITableViewDataSourceP", "Auth"]
 - ["So21UITableViewDataSourceP", "Database"]
 - !private ["So21UITableViewDataSourceP", "IndexPath"]
 - ["So21UITableViewDataSourceP", ""]
@@ -1062,9 +1113,10 @@ depends-member:
 - ["So21UITableViewDataSourceP", "sectionIndexTitlesForTableView"]
 - !private ["So21UITableViewDataSourceP", "selectAllSelected"]
 - ["So21UITableViewDataSourceP", "tableView"]
+- !private ["So21UITableViewDataSourceP", "user"]
 - ["So21UITableViewDataSourceP", "viewForZooming"]
 - ["So21UITableViewDataSourceP", "viewForZoomingInScrollView"]
-- !private ["So19UITableViewDelegateP", "Auth"]
+- ["So19UITableViewDelegateP", "Auth"]
 - ["So19UITableViewDelegateP", "Database"]
 - !private ["So19UITableViewDelegateP", "IndexPath"]
 - ["So19UITableViewDelegateP", ""]
@@ -1094,9 +1146,10 @@ depends-member:
 - ["So19UITableViewDelegateP", "sectionIndexTitlesForTableView"]
 - !private ["So19UITableViewDelegateP", "selectAllSelected"]
 - ["So19UITableViewDelegateP", "tableView"]
+- !private ["So19UITableViewDelegateP", "user"]
 - ["So19UITableViewDelegateP", "viewForZooming"]
 - ["So19UITableViewDelegateP", "viewForZoomingInScrollView"]
-- !private ["So18UITraitEnvironmentP", "Auth"]
+- ["So18UITraitEnvironmentP", "Auth"]
 - ["So18UITraitEnvironmentP", "Database"]
 - !private ["So18UITraitEnvironmentP", "IndexPath"]
 - ["So18UITraitEnvironmentP", ""]
@@ -1136,10 +1189,11 @@ depends-member:
 - ["So18UITraitEnvironmentP", "tableView"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "textLabel"]
+- !private ["So18UITraitEnvironmentP", "user"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
 - ["So18UITraitEnvironmentP", "viewForZooming"]
 - ["So18UITraitEnvironmentP", "viewForZoomingInScrollView"]
-- !private ["So23UIUserActivityRestoringP", "Auth"]
+- ["So23UIUserActivityRestoringP", "Auth"]
 - ["So23UIUserActivityRestoringP", "Database"]
 - !private ["So23UIUserActivityRestoringP", "IndexPath"]
 - ["So23UIUserActivityRestoringP", ""]
@@ -1179,6 +1233,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "tableView"]
 - !private ["So23UIUserActivityRestoringP", "text"]
 - !private ["So23UIUserActivityRestoringP", "textLabel"]
+- !private ["So23UIUserActivityRestoringP", "user"]
 - !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
 - ["So23UIUserActivityRestoringP", "viewForZooming"]
 - ["So23UIUserActivityRestoringP", "viewForZoomingInScrollView"]
@@ -1190,7 +1245,8 @@ depends-member:
 - !private ["So6UIViewC", "isSelected"]
 - !private ["So6UIViewC", "text"]
 - !private ["So6UIViewC", "textLabel"]
-- !private ["So16UIViewControllerC", "Auth"]
+- !private ["So16UIViewControllerC", "AnyObject"]
+- ["So16UIViewControllerC", "Auth"]
 - ["So16UIViewControllerC", "Bool"]
 - ["So16UIViewControllerC", "Database"]
 - ["So16UIViewControllerC", "IndexPath"]
@@ -1227,12 +1283,13 @@ depends-member:
 - ["So16UIViewControllerC", "sectionIndexTitlesForTableView"]
 - ["So16UIViewControllerC", "selectAllSelected"]
 - ["So16UIViewControllerC", "tableView"]
+- ["So16UIViewControllerC", "user"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", "viewForZooming"]
 - ["So16UIViewControllerC", "viewForZoomingInScrollView"]
 - ["So16UIViewControllerC", "viewWillDisappear"]
-- !private ["So7FIRUserC", "uid"]
-- !private ["So11FIRUserInfoP", "uid"]
+- ["So7FIRUserC", "uid"]
+- ["So11FIRUserInfoP", "uid"]
 - !private ["s14_ArrayProtocolP", "append"]
 - !private ["s14_ArrayProtocolP", "contains"]
 - !private ["s14_ArrayProtocolP", "subscript"]
@@ -1245,15 +1302,15 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "contains"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "Auth"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Auth"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Database"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "IndexPath"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "accessoryType"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cellForRow"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "child"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dataSource"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "database"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
@@ -1269,6 +1326,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "numGenders"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "numberOfSections"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "numberOfSectionsInTableView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "observe"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "profilesRef"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "reference"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "scrollViewDidChangeAdjustedContentInset"]
@@ -1291,19 +1349,23 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "tableView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "textLabel"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "uid"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "uid"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "updateChildValues"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "user"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewForZooming"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewForZoomingInScrollView"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "cellForRow"]
+- !private ["s21_ObjectiveCBridgeableP", "checkmark"]
 - !private ["s21_ObjectiveCBridgeableP", "contains"]
 - !private ["s21_ObjectiveCBridgeableP", "dataSource"]
 - !private ["s21_ObjectiveCBridgeableP", "delegate"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "row"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s26_OptionalNilComparisonTypeV", "checkmark"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "accessoryType"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "cellForRow"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "dataSource"]
@@ -1315,7 +1377,7 @@ depends-member:
 depends-nominal:
 - !private "So28UITableViewCellAccessoryTypeV"
 - !private "Sa"
-- !private "So7FIRAuthC"
+- "So7FIRAuthC"
 - !private "SK"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
@@ -1325,14 +1387,18 @@ depends-nominal:
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "So16FIRDataEventTypeV"
 - !private "10Foundation12DataProtocolP"
+- !private "So15FIRDataSnapshotC"
 - "So11FIRDatabaseC"
 - !private "So16FIRDatabaseQueryC"
 - !private "So20FIRDatabaseReferenceC"
 - !private "Se"
+- !private "SD"
 - !private "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
 - "4Lamp26GenderFilterViewControllerC"
 - "SH"
@@ -1378,21 +1444,27 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
-- !private "So7FIRUserC"
-- !private "So11FIRUserInfoP"
+- "So7FIRUserC"
+- "So11FIRUserInfoP"
 - !private "s14_ArrayProtocolP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
+- !private "s26_OptionalNilComparisonTypeV"
 - !private "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
+- !private "boolValue"
 depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Modules/Koloda.swiftmodule/x86_64.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/MessageInputBar.swiftmodule/x86_64.swiftmodule"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/RangeUISlider.swiftmodule/x86_64.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/MessageKit.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
@@ -1400,7 +1472,9 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
@@ -1414,7 +1488,9 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/pop-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
@@ -1473,7 +1549,9 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers/Koloda-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
@@ -1489,10 +1567,13 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
@@ -1501,9 +1582,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "8eedac012eca170d0bfa248ee06067a8"
+interface-hash: "762d4f885b04cd79e7a5dd3bdd2fe33e"

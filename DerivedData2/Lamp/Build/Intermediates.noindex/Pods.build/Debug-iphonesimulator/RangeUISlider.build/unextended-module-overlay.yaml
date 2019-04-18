@@ -3,11 +3,11 @@
   'case-sensitive': 'false',
   'roots': [{
     'type': 'directory',
-    'name': '/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules'
+    'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules"
     'contents': [{
       'type': 'file',
-      'name': 'module.modulemap',
-      'external-contents': '/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/RangeUISlider.build/unextended-module.modulemap',
+      'name': "module.modulemap",
+      'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/RangeUISlider.build/unextended-module.modulemap",
     }]
   }]
 }

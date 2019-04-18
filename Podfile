@@ -13,5 +13,6 @@ target 'Lamp' do
   pod 'RangeUISlider', '~> 1.8'
   pod 'FBSDKLoginKit'
   pod 'Koloda'
+  pod 'MessageKit'
 
 end

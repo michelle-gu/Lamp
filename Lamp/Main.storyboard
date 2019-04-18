@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-8v-AgN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lTz-nd-Fti">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -2191,7 +2191,7 @@
         <!--Messages-->
         <scene sceneID="5Q1-Ma-qcG">
             <objects>
-                <viewController id="lTz-nd-Fti" customClass="MessagesViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lTz-nd-Fti" customClass="MessageListViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sO8-MT-cSF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2215,6 +2215,14 @@
                                         <rect key="frame" x="106" y="47" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdw-Ey-F9x">
+                                        <rect key="frame" x="246" y="17" width="108" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Test Messaging"/>
+                                        <connections>
+                                            <segue destination="LfB-JI-5g8" kind="show" id="13C-oS-rf1"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -2522,9 +2530,17 @@
             </objects>
             <point key="canvasLocation" x="9293.6000000000004" y="1764.5320197044337"/>
         </scene>
+        <!--Messaging-->
+        <scene sceneID="cqg-BR-XqT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Messaging" id="LfB-JI-5g8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Fl-46-4na" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8806" y="2250"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="LogoColor" width="199" height="242"/>
+        <image name="LogoColor" width="398" height="484"/>
         <image name="girl-3" width="5370" height="3390"/>
         <image name="girl-4" width="2000" height="1333"/>
         <image name="girl-5" width="6000" height="4000"/>
