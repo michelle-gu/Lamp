@@ -175,18 +175,22 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
     }
     
     @IBAction func addCityButtonPressed(_ sender: Any) {
-        cities.append(currentCity)
+        if (currentCity != "") {
+            cities.append(currentCity)
+        }
         
-        if (futureCity1.isHidden == true) {
+        if (futureCity1.isHidden == true && currentCity != "") {
             futureCity1.setTitle(currentCity, for: .normal)
             futureCity1.isHidden = false
-        } else if (futureCity2.isHidden == true) {
+        } else if (futureCity2.isHidden == true && currentCity != "") {
             futureCity2.setTitle(currentCity, for: .normal)
             futureCity2.isHidden = false
-        } else if (futureCity3.isHidden == true) {
+        } else if (futureCity3.isHidden == true && currentCity != "") {
             futureCity3.setTitle(currentCity, for: .normal)
             futureCity3.isHidden = false
         }
+        
+        currentCity = ""
         
         if (futureCity1.isHidden == false && futureCity2.isHidden == false && futureCity3.isHidden == false) {
             addButton.isHidden = true
@@ -297,5 +301,16 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
         
         self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    // code to dismiss keyboard when user clicks on background
+    
+    func textFieldShouldReturn(textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
