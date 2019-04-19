@@ -3,7 +3,7 @@ Roommate finder for students and alumni at UT Austin.
 # Final Release README
 
 ## Contributions:
- Lindsey Thompson (%)
+    Lindsey Thompson (%)
         * 
     Maria Ocanas (%)
         * 
