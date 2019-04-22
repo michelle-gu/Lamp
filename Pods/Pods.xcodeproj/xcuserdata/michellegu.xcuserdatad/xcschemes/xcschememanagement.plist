@@ -149,6 +149,21 @@
 			<key>orderHint</key>
 			<integer>15</integer>
 		</dict>
+		<key>MessageInputBar.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>17</integer>
+		</dict>
+		<key>MessageKit-MessageKitAssets.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>19</integer>
+		</dict>
+		<key>MessageKit.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>18</integer>
+		</dict>
 		<key>Pods-Lamp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -157,7 +172,7 @@
 		<key>Pods-Lamp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>18</integer>
+			<integer>21</integer>
 		</dict>
 		<key>RangeUISlider.xcscheme</key>
 		<dict>
@@ -167,7 +182,7 @@
 		<key>RangeUISlider.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>23</integer>
 		</dict>
 		<key>leveldb-library.xcscheme</key>
 		<dict>
@@ -187,12 +202,12 @@
 		<key>nanopb.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>20</integer>
 		</dict>
 		<key>pop.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>22</integer>
 		</dict>
 	</dict>
 </dict>

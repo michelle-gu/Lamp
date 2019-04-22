@@ -11,21 +11,95 @@ import Firebase
 
 let genderPickerData = [String](arrayLiteral: "Female", "Male", "Other", "Prefer not to say")
 
-class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    // MARK: Constants
+    // MARK: - Constants
     let showLocationInfoScreen = "showLocationInfoScreen"
+    let imagePicker = UIImagePickerController()
     
-    // MARK: Properties
+    // MARK: - Properties
     let userProfilesRef = Database.database().reference(withPath: "user-profiles")
     let gendersRef = Database.database().reference(withPath: "genders")
 
-    // MARK: Outlets
+    // MARK: - Outlets
     @IBOutlet weak var profilePictureView: UIImageView!
     @IBOutlet weak var changePictureButton: UIButton!
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var birthdayTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
+    
+    // MARK: - Actions
+    @IBAction func changePictureButtonPressed(_ sender: Any) {
+        let actionSheet = UIAlertController(title: "Change Profile Picture", message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Remove Current Photo", style: .destructive, handler:
+            { action in
+                // Remove photo from profile picture view
+                self.profilePictureView.image = UIImage(named: "profile-pic-blank")
+                // TODO: Remove photo from Firebase Storage
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Import from Facebook", style: .default, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Take Photo", style: .default, handler:
+            { action in
+                if UIImagePickerController.availableCaptureModes(for: .rear) != nil {
+                    // Whole picture, not an edited version
+                    self.imagePicker.allowsEditing = false
+                    self.imagePicker.sourceType = .camera
+                    self.imagePicker.cameraCaptureMode = .photo
+                    
+                    // Present camera as popover
+                    self.present(self.imagePicker, animated: true, completion: nil)
+                } else {
+                    self.noCamera()
+                }
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Choose from Library", style: .default, handler:
+            { action in
+                // Whole picture, not an edited version
+                self.imagePicker.allowsEditing = false
+                self.imagePicker.sourceType = .photoLibrary
+                
+                // Present the picker in a full screen popover
+                self.imagePicker.modalPresentationStyle = .popover
+                self.present(self.imagePicker, animated: true, completion: nil)
+                self.imagePicker.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(actionSheet, animated: true)
+    }
+    
+    // MARK: - Functions
+    // No camera available on device alert
+    func noCamera(){
+        let alertVC = UIAlertController(
+            title: "No Camera",
+            message: "Sorry, this device has no camera",
+            preferredStyle: .alert)
+        let okAction = UIAlertAction(
+            title: "OK",
+            style:.default,
+            handler: nil)
+        alertVC.addAction(okAction)
+        present(alertVC, animated: true, completion: nil)
+    }
+    
+    internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // Get the selected photo
+        let chosenImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        
+        // Set profile picture view to the photo
+        profilePictureView.image = chosenImage
+        
+        // TODO: Add photo to Firebase Storage
+        
+        // Dismiss the popover when done
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // Dismiss popover on cancel
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -56,6 +130,9 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ProfileCreationViewController.viewTapped(gestureRecognizer:)))
         view.addGestureRecognizer(tapGesture)
         birthdayTextField.inputView = datePicker
+        
+        // Image Picker
+        imagePicker.delegate = self
         
         // Pre-populate with values from Firebase
         let user = Auth.auth().currentUser?.uid
