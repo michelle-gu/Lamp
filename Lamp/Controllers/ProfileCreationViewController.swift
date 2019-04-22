@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
 
 let genderPickerData = [String](arrayLiteral: "Female", "Male", "Other", "Prefer not to say")
 
@@ -68,6 +69,31 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     }
     
     // MARK: - Functions
+    func uploadImage(_ image: UIImage, at reference: StorageReference, completion: @escaping (URL?) -> Void) {
+        // Change UIImage to data
+        guard let imageData = image.jpegData(compressionQuality: 0.1) else {
+            return completion(nil)
+        }
+        
+        // upload data to path
+        reference.putData(imageData, metadata: nil, completion: { (metadata, error) in
+            // Handle errors
+            if let error = error {
+                assertionFailure(error.localizedDescription)
+                return completion(nil)
+            }
+            
+            // Return URL
+            reference.downloadURL(completion: { (url, error) in
+                if let error = error {
+                    assertionFailure(error.localizedDescription)
+                    return completion(nil)
+                }
+                completion(url)
+            })
+        })
+    }
+    
     // No camera available on device alert
     func noCamera(){
         let alertVC = UIAlertController(
@@ -89,7 +115,17 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         // Set profile picture view to the photo
         profilePictureView.image = chosenImage
         
-        // TODO: Add photo to Firebase Storage
+        // Add photo to Firebase Storage
+        let imageRef = Storage.storage().reference().child("test_image.jpg")
+        uploadImage(chosenImage, at: imageRef) { (downloadURL) in
+            guard let downloadURL = downloadURL else {
+                return
+            }
+            
+            // TODO: Add download URL to profile in database
+            let urlString = downloadURL.absoluteString
+            print("image url: \(urlString)")
+        }
         
         // Dismiss the popover when done
         dismiss(animated: true, completion: nil)
