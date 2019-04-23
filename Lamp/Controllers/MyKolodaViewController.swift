@@ -67,11 +67,13 @@ class MyKolodaViewController: UIViewController {
             "liked": true,
             "swiped": true
         ]
+        //update user's swipe values
         ref.child("swipes").child(user!).child(ids[index]).updateChildValues(swipeValues)
         
+        //set up the dictionary of people the other user has swiped on 
         let swipe = ref.child("swipes").child(ids[index]).child(user!)
-        let matchingSelf = ref.child(user!).child("matches")
-        let matchingTarget = ref.child(ids[index]).child("matches")
+        let matchingSelf = ref.child("user-profiles").child(user!).child("matches")
+        let matchingTarget = ref.child("user-profiles").child(ids[index]).child("matches")
         
         swipe.observe(.value, with: {(snapshot) in
             let swipingDict = snapshot.value as? [String : AnyObject] ?? [:]
@@ -138,12 +140,6 @@ extension MyKolodaViewController: KolodaViewDelegate {
 //        let id =
         
         if direction == .right{
-            //record it as a right swipe
-//            let swipeValues = [
-//                ids[index]: true
-//            ]
-//            ref.child(user!).child("matches").updateChildValues(swipeValues)
-            //updates the swiping values
             let swipeValues = [
                 "liked": true,
                 "swiped": true
@@ -173,13 +169,11 @@ extension MyKolodaViewController: KolodaViewDataSource {
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let card:CardView =  CardView.create()
-//        let profile = images[index]
-//        getIds()
+
         let profile = ref.child("user-profiles").child(ids[index]).child("profile")
         print(ids[index])
         profile.observe(.value, with: {(snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
-//            print(profileDict["firstName"])
             let firstName = profileDict["firstName"] as! String
             let job:String = profileDict["occupation"] as! String
             var location:String = ""
