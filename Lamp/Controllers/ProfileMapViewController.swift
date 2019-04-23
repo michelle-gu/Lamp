@@ -252,8 +252,11 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 //remove from Firebase
                 let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                 profileLocs.child(currentCity).removeValue()
+                
                 let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
                 discoverySettingsRef.child(currentCity).removeValue()
+                
+                citiesRef.child(currentCity).child(user!).removeValue()
             }
             n += 1
         }
@@ -278,8 +281,11 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 //remove from Firebase
                 let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                 profileLocs.child(currentCity).removeValue()
+                
                 let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
                 discoverySettingsRef.child(currentCity).removeValue()
+                
+                citiesRef.child(currentCity).child(user!).removeValue()
             }
             n += 1
         }
@@ -304,8 +310,11 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 //remove from Firebase
                 let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                 profileLocs.child(currentCity).removeValue()
+                
                 let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
                 discoverySettingsRef.child(currentCity).removeValue()
+                
+                citiesRef.child(currentCity).child(user!).removeValue()
             }
             n += 1
         }

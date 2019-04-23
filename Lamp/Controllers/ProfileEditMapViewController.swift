@@ -221,21 +221,38 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
     
     // Click to Remove City
     @IBAction func city1Pressed(_ sender: Any) {
-        if (futureCity1.isHidden == false) {
-            futureCity1.isHidden = true
-        }
         var n = 0
         for currentCity in cities {
             if (currentCity == futureCity1.titleLabel?.text) {
-                // remove city from array
-                cities.remove(at: n)
-                n -= 1
-                
-                //remove from Firebase
-                let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
-                profileLocs.child(currentCity).removeValue()
-                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
-                discoverySettingsRef.child(currentCity).removeValue()
+                // if trying to remove last city, send alert
+                if (cities.count == 1) {
+                    let alert = UIAlertController(
+                        title: "You must select at least one city to relocate to.",
+                        message: "Please add another city if you wish to remove this one.",
+                        preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                } else {
+                    // hide the button
+                    if (futureCity1.isHidden == false) {
+                        futureCity1.isHidden = true
+                    }
+                    
+                    // remove city from array
+                    cities.remove(at: n)
+                    n -= 1
+                    
+                    //remove from Firebase
+                    let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
+                    profileLocs.child(currentCity).removeValue()
+                    
+                    let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
+                    discoverySettingsRef.child(currentCity).removeValue()
+                    
+                    citiesRef.child(currentCity).child(user!).removeValue()
+                }
             }
             n += 1
         }
@@ -246,22 +263,38 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
     }
     
     @IBAction func city2Pressed(_ sender: Any) {
-        if (futureCity2.isHidden == false) {
-            futureCity2.isHidden = true
-        }
-        
         var n = 0
         for currentCity in cities {
             if (currentCity == futureCity2.titleLabel?.text) {
-                // remove city from array
-                cities.remove(at: n)
-                n -= 1
-                
-                //remove from Firebase
-                let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
-                profileLocs.child(currentCity).removeValue()
-                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
-                discoverySettingsRef.child(currentCity).removeValue()
+                // if trying to remove last city, send alert
+                if (cities.count == 1) {
+                    let alert = UIAlertController(
+                        title: "You must select at least one city to relocate to.",
+                        message: "Please add another city if you wish to remove this one.",
+                        preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                } else {
+                    // hide the button
+                    if (futureCity2.isHidden == false) {
+                        futureCity2.isHidden = true
+                    }
+                    
+                    // remove city from array
+                    cities.remove(at: n)
+                    n -= 1
+                    
+                    //remove from Firebase
+                    let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
+                    profileLocs.child(currentCity).removeValue()
+                    
+                    let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
+                    discoverySettingsRef.child(currentCity).removeValue()
+                    
+                    citiesRef.child(currentCity).child(user!).removeValue()
+                }
             }
             n += 1
         }
@@ -272,22 +305,38 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
     }
     
     @IBAction func city3Pressed(_ sender: Any) {
-        if (futureCity3.isHidden == false) {
-            futureCity3.isHidden = true
-        }
-        
         var n = 0
         for currentCity in cities {
             if (currentCity == futureCity3.titleLabel?.text) {
-                // remove city from array
-                cities.remove(at: n)
-                n -= 1
-                
-                //remove from Firebase
-                let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
-                profileLocs.child(currentCity).removeValue()
-                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
-                discoverySettingsRef.child(currentCity).removeValue()
+                // if trying to remove last city, send alert
+                if (cities.count == 1) {
+                    let alert = UIAlertController(
+                        title: "You must select at least one city to relocate to.",
+                        message: "Please add another city if you wish to remove this one.",
+                        preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                } else {
+                    // hide the button
+                    if (futureCity3.isHidden == false) {
+                        futureCity3.isHidden = true
+                    }
+                    
+                    // remove city from array
+                    cities.remove(at: n)
+                    n -= 1
+                    
+                    //remove from Firebase
+                    let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
+                    profileLocs.child(currentCity).removeValue()
+                    
+                    let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
+                    discoverySettingsRef.child(currentCity).removeValue()
+                    
+                    citiesRef.child(currentCity).child(user!).removeValue()
+                }
             }
             n += 1
         }
@@ -299,7 +348,6 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
     
     // MARK: - Navigation
     @IBAction func saveButtonPressed(_ sender: Any) {
-        //let locationRef = self.citiesRef
         let profileRef = self.userRef.child(user!).child("profile")
         let discoverySettingsRef = userRef.child(user!).child("settings").child("discovery")
         
@@ -309,8 +357,8 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
                 currentCity: true
             ]
             
-            // updated locations
-            //locationRef.updateChildValues(locationValues)
+            // update locations
+            citiesRef.updateChildValues(values)
             
             // update locations nested in user>profile>futureLoc
             profileRef.child("futureLoc").updateChildValues(values)
