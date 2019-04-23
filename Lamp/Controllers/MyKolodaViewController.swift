@@ -174,12 +174,31 @@ extension MyKolodaViewController: KolodaViewDataSource {
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let card:CardView =  CardView.create()
 //        let profile = images[index]
+//        getIds()
         let profile = ref.child("user-profiles").child(ids[index]).child("profile")
+        print(ids[index])
         profile.observe(.value, with: {(snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+//            print(profileDict["firstName"])
             let firstName = profileDict["firstName"] as! String
-            let job = "Student"
-            let location = "Austin"
+            let job:String = profileDict["occupation"] as! String
+            var location:String = ""
+            let locationList = self.ref.child("user-profiles").child(self.ids[index]).child("profile").child("futureLoc")
+            locationList.observe(.value, with: {(snapshot) in
+                let locationDict = snapshot.value as? [String : AnyObject] ?? [:]
+                var counter = 0
+                for (key,value) in locationDict{
+                    counter += 1
+                    if counter == 1{
+                        location = "\(key)"
+                    }
+                    else {
+                        location = "\(location), \(key)"
+                    }
+                }
+                card.locationLabel.text = location
+            })
+//            //let location = "Austin"
             card.image.image = UIImage(named: "empty")
             card.nameLabel.text = firstName
             card.jobLabel.text = job
