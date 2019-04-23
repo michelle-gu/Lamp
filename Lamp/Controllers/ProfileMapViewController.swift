@@ -180,7 +180,16 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 
                 // Create pinpoint
                 let pinpoint = MKPointAnnotation()
-                pinpoint.title = searchBar.text
+                
+                self.location = CLLocation(latitude: latitude!, longitude: longitude!)
+                
+                // convert coordinates to city name
+                self.fetchCityAndCountry(from: self.location) { city, country, error in
+                    guard let city = city, error == nil else { return }
+                    self.currentCity = city
+                    pinpoint.title = self.currentCity
+                }
+                
                 pinpoint.coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
                 self.mapView.addAnnotation(pinpoint)
                 
@@ -189,15 +198,6 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
                 let region = MKCoordinateRegion(center: coordinate, span: span)
                 self.mapView.setRegion(region, animated: true)
-                
-                self.location = CLLocation(latitude: latitude!, longitude: longitude!)
-                
-                // convert coordinates to city name
-                // add city to array of cities
-                self.fetchCityAndCountry(from: self.location) { city, country, error in
-                    guard let city = city, error == nil else { return }
-                    self.currentCity = city
-                }
             }
         }
     }
