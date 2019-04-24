@@ -135,7 +135,7 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
         myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
         
         let headerView = UIView()
-        headerView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1) // Use default
+        headerView.backgroundColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 0.1)
         headerView.addSubview(myLabel)
         
         return headerView

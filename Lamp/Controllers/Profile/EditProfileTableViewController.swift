@@ -39,6 +39,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var facebookField: UITextField!
     @IBOutlet weak var otherContactField: UITextField!
+    @IBOutlet weak var changeProfilePicButton: UIButton!
     
     // MARK: - Actions
     @IBAction func changeProfilePicPressed(_ sender: Any) {
@@ -290,9 +291,16 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         tableView.tableFooterView = UIView()
         
         // Format profile picture view
-        let borderRadius = profilePicView.bounds.height / 2
-        profilePicView.layer.cornerRadius = borderRadius
+        let proPicRadius = profilePicView.bounds.height / 2
+        profilePicView.layer.cornerRadius = proPicRadius
         profilePicView.clipsToBounds = true
+        
+        // Format change profile picture button
+        let changePicRadius = changeProfilePicButton.bounds.height / 5
+        changeProfilePicButton.layer.cornerRadius = changePicRadius
+        changeProfilePicButton.clipsToBounds = true
+        changeProfilePicButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
+        changeProfilePicButton.layer.borderWidth = 1
 
         // Populate data
         let profile = userProfilesRef.child(user!).child("profile")
@@ -367,7 +375,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
         
         let headerView = UIView()
-        headerView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1) // Use default
+        headerView.backgroundColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 0.1)
         headerView.addSubview(myLabel)
         
         return headerView

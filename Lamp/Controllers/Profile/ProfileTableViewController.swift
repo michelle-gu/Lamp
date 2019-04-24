@@ -7,15 +7,46 @@
 //
 
 import UIKit
-//import Firebase
+import Firebase
+import Kingfisher
 
 class ProfileTableViewController: UITableViewController {
 
     // MARK: - Constants
-    //    let user = Auth.auth().currentUser?.uid
-    //    let userProfilesRef = Database.database().reference(withPath: "user-profiles")
-    
+    let user = Auth.auth().currentUser?.uid
+    let userProfilesRef = Database.database().reference(withPath: "user-profiles")
+
     // MARK: - Outlets
+    @IBOutlet weak var profilePicView: UIImageView!
+    @IBOutlet weak var nameAgeLabel: UILabel!
+    @IBOutlet weak var futureLocsLabel: UILabel!
+    @IBOutlet weak var occupationLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var uniLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
+    @IBOutlet weak var budgetLabel: UILabel!
+    @IBOutlet weak var numBedroomsLabel: UILabel!
+    @IBOutlet weak var petsLabel: UILabel!
+    @IBOutlet weak var smokingLabel: UILabel!
+    @IBOutlet weak var otherPrefsLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var fbLabel: UILabel!
+    @IBOutlet weak var otherContactLabel: UILabel!
+    @IBOutlet weak var editProfileButton: UIButton!
+    
+    // MARK: - Functions
+    // Get age from birthday string
+    func getAgeStr(birthday: String) -> String {
+        let now = Date()
+        let calendar = Calendar.current
+        let myDateFormatter = DateFormatter()
+        myDateFormatter.dateFormat = "MM/dd/yyyy"
+        let birthdayDate = myDateFormatter.date(from: birthday)!
+        let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthdayDate, to: now)
+        let age = ageComponents.year!
+        return String(age)
+    }
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -24,7 +55,75 @@ class ProfileTableViewController: UITableViewController {
         // Remove empty cells at bottom
         tableView.tableFooterView = UIView()
         
-        // TODO: Populate data
+        // Format edit button
+        let editButtonRadius = profilePicView.bounds.height / 20
+        editProfileButton.layer.cornerRadius = editButtonRadius
+        editProfileButton.clipsToBounds = true
+        editProfileButton.layer.backgroundColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 0.7).cgColor
+        
+        // TODO: Auto-size Biotext label cell
+        
+        // Populate data
+        let profile = userProfilesRef.child(user!).child("profile")
+        profile.observe(.value, with: { (snapshot) in
+            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+            
+            if let profilePicVal = profileDict["profilePicture"] as? String {
+                if profilePicVal != "" {
+                    let profilePicURL = URL(string: profilePicVal)
+                    self.profilePicView.kf.setImage(with: profilePicURL)
+                }
+            }
+            if let nameVal = profileDict["firstName"] as? String,
+               let birthdayVal = profileDict["birthday"] as? String {
+                self.nameAgeLabel.text = "\(nameVal), \(self.getAgeStr(birthday: birthdayVal))"
+            }
+            if let genderVal = profileDict["gender"] as? String {
+                self.genderLabel.text = genderVal
+            }
+            if let uniVal = profileDict["uni"] as? String {
+                self.uniLabel.text = uniVal
+            }
+            var locArr: [String] = []
+            for city in profileDict["futureLoc"] as! [String: Bool] {
+                locArr.append(city.key)
+            }
+            let futureLocStr = locArr.joined(separator: ", ")
+            self.futureLocsLabel.text = futureLocStr
+            if let occupationVal = profileDict["occupation"] as? String {
+                self.occupationLabel.text = occupationVal
+            }
+            if let bioVal = profileDict["bio"] as? String {
+                self.bioLabel.text = bioVal
+            }
+            if let budgetVal = profileDict["budget"] as? String {
+                self.budgetLabel.text = budgetVal
+            }
+            if let numBedroomsVal = profileDict["numBedrooms"] as? String {
+                self.numBedroomsLabel.text = numBedroomsVal
+            }
+            if let petsVal = profileDict["pets"] as? String {
+                self.petsLabel.text = petsVal
+            }
+            if let smokingVal = profileDict["smoking"] as? String {
+                self.smokingLabel.text = smokingVal
+            }
+            if let otherLifestyleVal = profileDict["otherLifestylePrefs"] as? String {
+                self.otherPrefsLabel.text = otherLifestyleVal
+            }
+            if let phoneVal = profileDict["phone"] as? String {
+                self.phoneLabel.text = phoneVal
+            }
+            if let emailVal = profileDict["email"] as? String {
+                self.emailLabel.text = emailVal
+            }
+            if let facebookVal = profileDict["facebook"] as? String {
+                self.fbLabel.text = facebookVal
+            }
+            if let otherContactVal = profileDict["otherContact"] as? String {
+                self.otherContactLabel.text = otherContactVal
+            }
+        })
     }
 
     // MARK: - Table view data source
@@ -36,7 +135,7 @@ class ProfileTableViewController: UITableViewController {
         myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
         
         let headerView = UIView()
-        headerView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1) // Use default
+        headerView.backgroundColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 0.1)
         headerView.addSubview(myLabel)
         
         return headerView
@@ -62,60 +161,5 @@ class ProfileTableViewController: UITableViewController {
             return 0
         }
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
