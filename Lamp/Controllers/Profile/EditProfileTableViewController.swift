@@ -112,8 +112,22 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             let phone = phoneField.text,
             let email = emailField.text,
             let facebook = facebookField.text,
-            let otherContact = otherContactField.text
+            let otherContact = otherContactField.text,
+            name.count > 0,
+            gender.count > 0,
+            birthday.count > 0,
+            university.count > 0,
+            futureLoc.count > 0,
+            occupation.count > 0,
+            isValidBirthday(birthday: birthday)
             else {
+                let alert = UIAlertController(
+                    title: "Edit Profile Failed",
+                    message: "Please fill in all basic info fields. You also must be at least 13 years old to use this app.",
+                    preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
                 return
         }
         
