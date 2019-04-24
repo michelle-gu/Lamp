@@ -68,6 +68,7 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     
     override func viewWillAppear(_ animated: Bool) {
         getLocationText()
+        uniTextField.reloadInputViews()
     }
     
     // MARK: - Database Retrieval
