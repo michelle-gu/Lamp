@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: Constants
     let showSignUpScreen = "showSignUpScreen"
@@ -18,7 +18,15 @@ class LogInViewController: UIViewController {
     
     let ref = Database.database().reference(withPath: "user-profiles")
     
-    // MARK: Properties
+    // MARK: - Functions
+    func textFieldShouldReturn(textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     // MARK: Outlets
     @IBOutlet weak var emailField: UITextField!
@@ -31,7 +39,6 @@ class LogInViewController: UIViewController {
         print("Unwind segue to login triggered!")
     }
 
-    
     @IBAction func logInDidTouch(_ sender: Any) {
         guard
             let email = emailField.text,
@@ -66,7 +73,7 @@ class LogInViewController: UIViewController {
                 if let userID = user?.user.uid {
                     self.ref.child(userID).child("profile").observe(.value, with: { (snapshot) in
                         let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
-                        if profileDict.isEmpty {
+                        if profileDict["uni"] == nil {
                             self.performSegue(withIdentifier: self.showSocialMediaScreen, sender: nil)
                         } else {
                             self.performSegue(withIdentifier: self.showProfileSegueIdentifier, sender: nil)
@@ -95,7 +102,7 @@ class LogInViewController: UIViewController {
                     print ("UserID exists")
                     self.ref.child(userID).child("profile").observe(.value, with: { (snapshot) in
                         let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
-                        if profileDict.isEmpty {
+                        if profileDict["uni"] == nil {
                             self.performSegue(withIdentifier: self.showSocialMediaScreen, sender: nil)
                         } else {
                             self.performSegue(withIdentifier: self.showProfileSegueIdentifier, sender: nil)

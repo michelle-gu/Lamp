@@ -6,8 +6,8 @@
 	<string>SceneKit</string>
 	<string>FirebaseCore</string>
 	<string>Bolts</string>
-	<string>WebKit</string>
 	<string>libkern</string>
+	<string>WebKit</string>
 	<string>FirebaseStorage</string>
 	<string>FirebaseInAppMessaging</string>
 	<string>CoreLocation</string>
@@ -23,20 +23,20 @@
 	<string>AVFoundation</string>
 	<string>FirebaseMessaging</string>
 	<string>GoogleMobileAds</string>
-	<string>WatchKit</string>
 	<string>MobileCoreServices</string>
+	<string>WatchKit</string>
 	<string>FirebaseInstanceID</string>
 	<string>FirebaseMLVisionFaceModel</string>
-	<string>FirebaseMLNaturalLanguage</string>
+	<string>AdSupport</string>
 	<string>FirebaseAuthInterop</string>
-	<string>FirebaseAuth</string>
-	<string>FBSDKLoginKit</string>
+	<string>CoreText</string>
+	<string>FirebaseMLNaturalLanguage</string>
 	<string>FirebaseMLVisionLabelModel</string>
 	<string>AppKit</string>
-	<string>FirebaseInvites</string>
+	<string>FBSDKLoginKit</string>
 	<string>FBSDKCoreKit</string>
-	<string>AdSupport</string>
-	<string>CoreText</string>
+	<string>FirebaseAuth</string>
+	<string>FirebaseInvites</string>
 	<string>FirebasePerformance</string>
 	<string>Crashlytics</string>
 	<string>Accounts</string>
@@ -49,16 +49,16 @@
 	<string>pop</string>
 	<string>FirebaseMLVision</string>
 	<string>FirebaseCrash</string>
+	<string>GTMSessionFetcher</string>
 	<string>FirebaseMLNLLanguageID</string>
-	<string>AudioToolbox</string>
 	<string>QuartzCore</string>
 	<string>SystemConfiguration</string>
-	<string>FirebaseAnalytics</string>
-	<string>GTMSessionFetcher</string>
-	<string>Security</string>
 	<string>MessageKit</string>
-	<string>CoreGraphics</string>
+	<string>FirebaseAnalytics</string>
+	<string>Security</string>
+	<string>AudioToolbox</string>
 	<string>Koloda</string>
+	<string>CoreGraphics</string>
 	<string>objc</string>
 	<string>FirebaseDynamicLinks</string>
 	<string>RangeUISlider</string>

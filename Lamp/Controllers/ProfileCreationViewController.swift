@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
+import Kingfisher
 
 let genderPickerData = [String](arrayLiteral: "Female", "Male", "Other", "Prefer not to say")
 
@@ -16,10 +18,9 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     // MARK: - Constants
     let showLocationInfoScreen = "showLocationInfoScreen"
     let imagePicker = UIImagePickerController()
-    
-    // MARK: - Properties
     let userProfilesRef = Database.database().reference(withPath: "user-profiles")
     let gendersRef = Database.database().reference(withPath: "genders")
+    let user = Auth.auth().currentUser?.uid
 
     // MARK: - Outlets
     @IBOutlet weak var profilePictureView: UIImageView!
@@ -35,7 +36,22 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
             { action in
                 // Remove photo from profile picture view
                 self.profilePictureView.image = UIImage(named: "profile-pic-blank")
-                // TODO: Remove photo from Firebase Storage
+                // Profile reference
+                let profileRef = self.userProfilesRef.child(self.user!).child("profile")
+
+                // Remove photo from Firebase Storage
+                let profilePicRef = Storage.storage().reference().child("profilePictures").child("\(self.user!).jpg")
+                profilePicRef.delete { error in
+                    if let error = error {
+                        print(error)
+                    } else {
+                        // File deleted successfully
+                    }
+                }
+
+                // Remove profile picture from database
+                let values = ["profilePicture": ""]
+                profileRef.updateChildValues(values)
         }))
         actionSheet.addAction(UIAlertAction(title: "Import from Facebook", style: .default, handler: nil))
         actionSheet.addAction(UIAlertAction(title: "Take Photo", style: .default, handler:
@@ -67,7 +83,84 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         self.present(actionSheet, animated: true)
     }
     
+    // Upon completion of filling in profile fields and Next button is pressed
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        guard
+            let firstName = firstNameTextField.text,
+            let birthday = birthdayTextField.text,
+            let gender = genderTextField.text,
+            //let profilePicture = profilePictureView.image,
+            firstName.count > 0,
+            birthday.count > 0,
+            gender.count > 0,
+            isValidBirthday(birthday: birthday)
+            else {
+                let alert = UIAlertController(
+                    title: "Profile Creation Failed",
+                    message: "Please fill in all fields. You must be at least 13 years old to use this app.",
+                    preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+                return
+        }
+        
+        // Create profile using profilePic value from Firebase
+        let values = [
+            "firstName": firstName,
+            "birthday": birthday,
+            "gender": gender,
+            ]
+        let settings = Settings()
+        
+        let userRef = self.userProfilesRef.child(self.user!)
+        userRef.child("profile").updateChildValues(values)
+        userRef.updateChildValues(settings.toAnyObject() as! [AnyHashable : Any])
+
+        let genderValues = [
+            gender: [
+                user: true
+            ]
+        ]
+        gendersRef.updateChildValues(genderValues)
+        
+    }
+
     // MARK: - Functions
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func uploadImage(_ image: UIImage, at reference: StorageReference, completion: @escaping (URL?) -> Void) {
+        // Change UIImage to data
+        guard let imageData = image.jpegData(compressionQuality: 0.1) else {
+            return completion(nil)
+        }
+        
+        // upload data to path
+        reference.putData(imageData, metadata: nil, completion: { (metadata, error) in
+            // Handle errors
+            if let error = error {
+                assertionFailure(error.localizedDescription)
+                return completion(nil)
+            }
+            
+            // Return URL
+            reference.downloadURL(completion: { (url, error) in
+                if let error = error {
+                    assertionFailure(error.localizedDescription)
+                    return completion(nil)
+                }
+                completion(url)
+            })
+        })
+    }
+    
     // No camera available on device alert
     func noCamera(){
         let alertVC = UIAlertController(
@@ -89,7 +182,20 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         // Set profile picture view to the photo
         profilePictureView.image = chosenImage
         
-        // TODO: Add photo to Firebase Storage
+        // Add photo to Firebase Storage
+        let imageRef = Storage.storage().reference().child("profilePictures").child("\(self.user!).jpg")
+        // No need to remove old photo because this replaces the old photo
+        // in Firebase Storage
+        uploadImage(chosenImage, at: imageRef) { (downloadURL) in
+            guard let downloadURL = downloadURL else {
+                return
+            }
+            
+            let urlString: String = downloadURL.absoluteString
+            let profileRef = self.userProfilesRef.child(self.user!).child("profile")
+            let values = ["profilePicture": urlString]
+            profileRef.updateChildValues(values)
+        }
         
         // Dismiss the popover when done
         dismiss(animated: true, completion: nil)
@@ -135,7 +241,6 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         imagePicker.delegate = self
         
         // Pre-populate with values from Firebase
-        let user = Auth.auth().currentUser?.uid
         let profile = userProfilesRef.child(user!).child("profile")
         profile.observe(.value, with: { (snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
@@ -147,6 +252,12 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
             }
             if let birthdayVal = profileDict["birthday"] as? String {
                 self.birthdayTextField?.text = birthdayVal
+            }
+            if let profilePicVal = profileDict["profilePicture"] as? String {
+                if profilePicVal != "" {
+                    let profilePicURL = URL(string: profilePicVal)
+                    self.profilePictureView.kf.setImage(with: profilePicURL)
+                }
             }
         })
         
@@ -195,46 +306,6 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthdayDate, to: now)
         let age = ageComponents.year!
         return age >= 13
-    }
-
-    // Upon completion of filling in profile fields and Next button is pressed
-    @IBAction func nextButtonPressed(_ sender: Any) {
-        guard
-            let firstName = firstNameTextField.text,
-            let birthday = birthdayTextField.text,
-            let gender = genderTextField.text,
-            //let profilePicture = profilePictureView.image,
-            firstName.count > 0,
-            birthday.count > 0,
-            gender.count > 0,
-            isValidBirthday(birthday: birthday)
-            else {
-                let alert = UIAlertController(
-                    title: "Profile Creation Failed",
-                    message: "Please fill in all fields. You must be at least 13 years old to use this app.",
-                    preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(alert, animated: true, completion: nil)
-                return
-        }
-        
-        let user = Auth.auth().currentUser?.uid
-        
-        let profile = Profile(firstName: firstName, birthday: birthday, gender: gender, uni: "", futureLoc: [:], occupation: "")
-        let settings = Settings()
-        
-        let userRef = self.userProfilesRef.child(user!)
-        userRef.updateChildValues(profile.toAnyObject() as! [AnyHashable : Any])
-        userRef.updateChildValues(settings.toAnyObject() as! [AnyHashable : Any])
-        
-        let genderValues = [
-            gender: [
-                user: true
-            ]
-        ]
-        gendersRef.updateChildValues(genderValues)
-
     }
     
     // MARK: - Text Field delegate

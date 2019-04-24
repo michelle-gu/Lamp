@@ -7,13 +7,18 @@ provides-member:
 - ["4Lamp20MessageTableViewCellC", ""]
 provides-dynamic-lookup:
 - "awakeFromNib"
+- "lastMessageLabel"
 - "nameLabel"
 - "profileImageView"
 - "setSelected"
+- "timeLabel"
 depends-top-level:
 - !private "/"
 - "AssignmentPrecedence"
 - "Bool"
+- !private "BooleanLiteralType"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
 - "MessageTableViewCell"
 - "UIImageView"
 - "UILabel"
@@ -104,9 +109,11 @@ depends-member:
 - ["4Lamp20MessageTableViewCellC", "awakeFromNib"]
 - ["4Lamp20MessageTableViewCellC", "deinit"]
 - ["4Lamp20MessageTableViewCellC", "init"]
+- ["4Lamp20MessageTableViewCellC", "lastMessageLabel"]
 - ["4Lamp20MessageTableViewCellC", "nameLabel"]
 - ["4Lamp20MessageTableViewCellC", "profileImageView"]
 - ["4Lamp20MessageTableViewCellC", "setSelected"]
+- ["4Lamp20MessageTableViewCellC", "timeLabel"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "awakeFromNib"]
 - !private ["So8NSCodingP", "bounds"]
@@ -126,10 +133,12 @@ depends-member:
 - !private ["So8NSObjectC", "cornerRadius"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "lastMessageLabel"]
 - !private ["So8NSObjectC", "layer"]
 - ["So8NSObjectC", "nameLabel"]
 - ["So8NSObjectC", "profileImageView"]
 - ["So8NSObjectC", "setSelected"]
+- ["So8NSObjectC", "timeLabel"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "awakeFromNib"]
 - !private ["So8NSObjectP", "bounds"]
@@ -245,10 +254,12 @@ depends-member:
 - !private ["So11UIResponderC", "clipsToBounds"]
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "lastMessageLabel"]
 - !private ["So11UIResponderC", "layer"]
 - ["So11UIResponderC", "nameLabel"]
 - ["So11UIResponderC", "profileImageView"]
 - ["So11UIResponderC", "setSelected"]
+- ["So11UIResponderC", "timeLabel"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "awakeFromNib"]
 - !private ["So30UIResponderStandardEditActionsP", "bounds"]
@@ -265,9 +276,11 @@ depends-member:
 - ["So15UITableViewCellC", "awakeFromNib"]
 - ["So15UITableViewCellC", "init"]
 - !private ["So15UITableViewCellC", "init"]
+- ["So15UITableViewCellC", "lastMessageLabel"]
 - ["So15UITableViewCellC", "nameLabel"]
 - ["So15UITableViewCellC", "profileImageView"]
 - ["So15UITableViewCellC", "setSelected"]
+- ["So15UITableViewCellC", "timeLabel"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "awakeFromNib"]
 - !private ["So18UITraitEnvironmentP", "bounds"]
@@ -294,10 +307,12 @@ depends-member:
 - !private ["So6UIViewC", "clipsToBounds"]
 - ["So6UIViewC", "init"]
 - !private ["So6UIViewC", "init"]
+- ["So6UIViewC", "lastMessageLabel"]
 - !private ["So6UIViewC", "layer"]
 - ["So6UIViewC", "nameLabel"]
 - ["So6UIViewC", "profileImageView"]
 - ["So6UIViewC", "setSelected"]
+- ["So6UIViewC", "timeLabel"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "height"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "awakeFromNib"]
@@ -499,4 +514,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "f8620050917cdebfccc6819be54907f7"
+interface-hash: "b925cb986716a70640a10f1cda5b2310"

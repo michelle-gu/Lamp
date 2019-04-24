@@ -15,14 +15,13 @@ struct Member {
     let color: UIColor
 }
 
-struct Message {
+// MessageKit works with messages that conform to the MessageType protocol
+struct Message: MessageType {
+    
     let member: Member
     let text: String
     let messageId: String
-}
-
-// MessageKit works with messages that conform to the MessageType protocol
-extension Message: MessageType {
+    
     var sender: Sender {
         return Sender(id: member.name, displayName: member.name)
     }

@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Firebase
 import MessageKit
 import MessageInputBar
 
 class MessageInstanceViewController: MessagesViewController {
+
+    let db = Database.database()
 
     var messages: [Message] = []
     var member: Member!
