@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-8v-AgN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-8v-AgN">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -2248,14 +2248,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="xyo-cP-NUj" kind="relationship" relationship="rootViewController" id="6Ed-sd-96H"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bto-im-ZXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2661.5999999999999" y="1764.5320197044337"/>
         </scene>
+        <!--Profile Edit Map View Controller-->
         <scene sceneID="gzz-qA-kxP">
             <objects>
                 <viewController id="zA6-ti-gFg" customClass="ProfileEditMapViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
@@ -2370,7 +2368,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QMM-V7-FIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6042" y="1779"/>
+            <point key="canvasLocation" x="6206" y="1779"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XVv-mI-Z37">
@@ -2569,13 +2567,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Future Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aCH-Rr-gNZ">
-                                                    <rect key="frame" x="145" y="6" width="214" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Future Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCG-tS-zJU">
                                                     <rect key="frame" x="16" y="12" width="107" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2583,6 +2574,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uyt-6K-N2s">
+                                                    <rect key="frame" x="145" y="6" width="214" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                    <state key="normal" title="Add Location">
+                                                        <color key="titleColor" red="0.78024488690000005" green="0.78007096050000002" blue="0.80069750549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="zA6-ti-gFg" kind="show" id="Whl-g2-xg2"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2877,7 +2879,7 @@
                         <outlet property="changeProfilePicButton" destination="a2K-cX-ucz" id="mio-id-KUi"/>
                         <outlet property="emailField" destination="MH3-nP-6Di" id="pvi-hK-ygh"/>
                         <outlet property="facebookField" destination="ESj-um-THs" id="JF8-R1-heR"/>
-                        <outlet property="futureLocationField" destination="aCH-Rr-gNZ" id="tsp-EK-7vU"/>
+                        <outlet property="futureLocationField" destination="Uyt-6K-N2s" id="hg4-eY-yOG"/>
                         <outlet property="genderField" destination="X2j-A3-VpF" id="KHK-xo-KF4"/>
                         <outlet property="nameField" destination="rCi-gN-oYj" id="lbL-Gv-zx1"/>
                         <outlet property="numBedroomsField" destination="JEO-A1-roN" id="edt-w2-P5u"/>
@@ -2915,14 +2917,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LogoColor" width="398" height="484"/>
+        <image name="LogoColor" width="199" height="242"/>
         <image name="girl-3" width="5370" height="3390"/>
         <image name="girl-5" width="6000" height="4000"/>
         <image name="profile-pic-blank" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YS3-yl-8TS"/>
-        <segue reference="ABV-LS-boM"/>
+        <segue reference="P1N-dK-ZZG"/>
         <segue reference="PA3-YF-Hx5"/>
         <segue reference="IdY-Gv-dXt"/>
     </inferredMetricsTieBreakers>
