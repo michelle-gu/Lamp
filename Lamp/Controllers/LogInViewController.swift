@@ -66,7 +66,7 @@ class LogInViewController: UIViewController {
                 if let userID = user?.user.uid {
                     self.ref.child(userID).child("profile").observe(.value, with: { (snapshot) in
                         let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
-                        if profileDict.isEmpty {
+                        if profileDict["uni"] == nil {
                             self.performSegue(withIdentifier: self.showSocialMediaScreen, sender: nil)
                         } else {
                             self.performSegue(withIdentifier: self.showProfileSegueIdentifier, sender: nil)
@@ -95,7 +95,7 @@ class LogInViewController: UIViewController {
                     print ("UserID exists")
                     self.ref.child(userID).child("profile").observe(.value, with: { (snapshot) in
                         let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
-                        if profileDict.isEmpty {
+                        if profileDict["uni"] == nil {
                             self.performSegue(withIdentifier: self.showSocialMediaScreen, sender: nil)
                         } else {
                             self.performSegue(withIdentifier: self.showProfileSegueIdentifier, sender: nil)

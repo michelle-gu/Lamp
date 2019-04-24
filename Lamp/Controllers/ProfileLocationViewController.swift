@@ -58,7 +58,7 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
             if let uniVal = profileDict["uni"] as? String {
                 self.uniTextField?.text = uniVal
             }
-            self.getLocationText()
+//            self.getLocationText()
             if let occupationVal = profileDict["occupation"] as? String {
                 self.occupationTextField?.text = occupationVal
             }
@@ -69,9 +69,7 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
                     self.profilePictureView.kf.setImage(with: profilePicURL)
                 }
             }
-
         })
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -160,7 +158,6 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         
         let futureLocArr: [String] = futureLoc.components(separatedBy: ", ")
         for loc in futureLocArr {
-            print("Pressing done & saving data!")
             // Set future location and default location filter
             let locFilterVal = [
                 loc: true // Flowermound, AUstin: true
