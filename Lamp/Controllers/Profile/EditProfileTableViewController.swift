@@ -51,7 +51,7 @@ class EditProfileTableViewController: UITableViewController {
         case 0:
             return 1
         case 1:
-            return 4
+            return 5
         case 2:
             return 1
         case 3:
