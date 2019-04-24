@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: Constants
     let showSignUpScreen = "showSignUpScreen"
@@ -39,7 +39,6 @@ class LogInViewController: UIViewController {
         print("Unwind segue to login triggered!")
     }
 
-    
     @IBAction func logInDidTouch(_ sender: Any) {
         guard
             let email = emailField.text,

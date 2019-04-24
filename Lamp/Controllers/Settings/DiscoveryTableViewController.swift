@@ -171,42 +171,4 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
         }
     }
 
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        var cell: UITableViewCell
-//
-//        switch indexPath.section {
-//        case 0:
-//            switch indexPath.row {
-//            case 0:
-//                cell = tableView.dequeueReusableCell(withIdentifier: "futureLocationCellIdentifier", for: indexPath)
-//            case 1:
-//                cell = tableView.dequeueReusableCell(withIdentifier: "maxDistanceCellIdentifier", for: indexPath)
-//            default:
-//                cell = UITableViewCell()
-//            }
-//        case 1:
-//            switch indexPath.row {
-//            case 0:
-//                cell = tableView.dequeueReusableCell(withIdentifier: "universitiesCellIdentifier", for: indexPath)
-//            case 1:
-//                cell = tableView.dequeueReusableCell(withIdentifier: "genderCellIdentifier", for: indexPath)
-//            case 2:
-//                cell = tableView.dequeueReusableCell(withIdentifier: "ageRangeCellIdentifier", for: indexPath)
-//            default:
-//                cell = UITableViewCell()
-//            }
-//        case 2:
-//            switch indexPath.row {
-//            case 0:
-//                cell = tableView.dequeueReusableCell(withIdentifier: "showMyProfileCellIdentifier", for: indexPath)
-//            default:
-//                cell = UITableViewCell()
-//            }
-//        default:
-//            cell = UITableViewCell()
-//        }
-//
-//        return cell
-//    }
-
 }

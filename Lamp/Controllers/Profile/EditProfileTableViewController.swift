@@ -7,29 +7,60 @@
 //
 
 import UIKit
+//import Firebase
 
 class EditProfileTableViewController: UITableViewController {
 
+    // MARK: - Constants
+//    let user = Auth.auth().currentUser?.uid
+//    let userProfilesRef = Database.database().reference(withPath: "user-profiles")
+    
+    // MARK: - Outlets
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        // Remove empty cells at bottom
+        tableView.tableFooterView = UIView()
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // TODO: Populate data
     }
 
     // MARK: - Table view data source
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let myLabel = UILabel()
+        myLabel.frame = CGRect(x: 20, y: 8, width: 320, height: 17)
+        myLabel.font = UIFont(name: "Avenir-Heavy", size: 17)
+        
+        myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+        
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1) // Use default
+        headerView.addSubview(myLabel)
+        
+        return headerView
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 5
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            return 4
+        case 2:
+            return 1
+        case 3:
+            return 5
+        case 4:
+            return 4
+        default:
+            return 0
+        }
     }
 
     /*

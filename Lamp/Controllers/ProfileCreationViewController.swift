@@ -126,9 +126,8 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         
     }
 
-    
     // MARK: - Functions
-    func textFieldShouldReturn(textField:UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
