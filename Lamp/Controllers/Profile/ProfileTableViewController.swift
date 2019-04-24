@@ -17,11 +17,14 @@ class ProfileTableViewController: UITableViewController {
     
     // MARK: - Outlets
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Remove empty cells at bottom
         tableView.tableFooterView = UIView()
+        
+        // TODO: Populate data
     }
 
     // MARK: - Table view data source
@@ -48,7 +51,7 @@ class ProfileTableViewController: UITableViewController {
         case 0:
             return 1
         case 1:
-            return 5
+            return 1
         case 2:
             return 1
         case 3:
