@@ -128,6 +128,15 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
 
     
     // MARK: - Functions
+    func textFieldShouldReturn(textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func uploadImage(_ image: UIImage, at reference: StorageReference, completion: @escaping (URL?) -> Void) {
         // Change UIImage to data
         guard let imageData = image.jpegData(compressionQuality: 0.1) else {

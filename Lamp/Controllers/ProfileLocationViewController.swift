@@ -34,6 +34,16 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     @IBOutlet weak var futureLocTextField: UITextField!
     @IBOutlet weak var occupationTextField: UITextField!
     
+    // MARK: - Functions
+    func textFieldShouldReturn(textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -18,7 +18,15 @@ class LogInViewController: UIViewController {
     
     let ref = Database.database().reference(withPath: "user-profiles")
     
-    // MARK: Properties
+    // MARK: - Functions
+    func textFieldShouldReturn(textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     // MARK: Outlets
     @IBOutlet weak var emailField: UITextField!
