@@ -12,8 +12,10 @@ import Firebase
 
 class MessageListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var channelDict: [String : NSObject] = [:]
+    
     // user match list
-    var channelIds: [String] = ["channel-id-two", "channel-id-one"]
+    var channelIds: [String] = []
     
     // MARK: Properties
     var ref: DatabaseReference!
@@ -29,17 +31,27 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         
-        //updateChannelIdList()
-
+        ref = Database.database().reference(withPath: "user-profiles")
+        
+        updateChannelIdList()
     }
     
     // MARK: Helpers
     func updateChannelIdList() {
-        // loop through channels in "channels"
         
-        // add channelids to list
-        
-        // sort by timestamp
+        // get current user
+        let user = Auth.auth().currentUser?.uid
+        let channels = ref.child(user!).child("channels")
+
+        // goes through user's channel list
+        channels.queryOrderedByKey().observe(.value, with: { (snapshot) in
+            self.channelDict = snapshot.value as? [String : NSObject] ?? [:]
+            // adds all channel ids to global list
+            for (key, _) in self.channelDict {
+                self.channelIds.append(key)
+            }
+            self.tableView.reloadData()
+        })
     }
     
     
@@ -57,7 +69,7 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
         // create a new cell if needed or reuse an old one
         let cell = tableView.dequeueReusableCell(withIdentifier: customTableViewCellIdentifier, for: indexPath as IndexPath) as! MessageTableViewCell
         
-        ref = Database.database().reference().child("channels")
+        ref = Database.database().reference().child("messaging").child("channels")
         
         let channelId = channelIds[indexPath.row]
         
