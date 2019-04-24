@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import Firebase
 
-class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
+class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, CLLocationManagerDelegate {
 
     // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
@@ -29,16 +29,36 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     
     // MARK: Properties
     var cities:[String] = []
-    let regionRadius: CLLocationDistance = 10000
+    //let regionRadius: CLLocationDistance = 10000
     let locationManager = CLLocationManager()
     var location = CLLocation()
     var currentCity: String = ""
-    let searchRadius: CLLocationDistance = 2000
-    let initialLocation = CLLocation(latitude: 37.773972, longitude: -122.431297)
+    //let searchRadius: CLLocationDistance = 2000
+    //let initialLocation = CLLocation(latitude: 37.773972, longitude: -122.431297)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        //update user location
+        mapView.showsUserLocation = true
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.delegate = self
+        // Get user authorization
+        if (CLLocationManager.locationServicesEnabled()) {
+            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
+        }
+        // Zoom to user location
+        if let userLocation = locationManager.location?.coordinate {
+            let viewRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 4000, longitudinalMeters: 4000)
+            mapView.setRegion(viewRegion, animated: false)
+        }
+        
+        // Update location
+        DispatchQueue.main.async {
+            self.locationManager.startUpdatingLocation()
+        }
         
         getCities() { (citiesArray) in
             self.cities = citiesArray
@@ -65,7 +85,7 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
             }
         }
         
-        centerMapOnLocation(location: initialLocation)
+        //centerMapOnLocation(location: initialLocation)
         
         // button styling
         addButton.layer.borderWidth = 1
@@ -81,6 +101,15 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         radiusOkButton.layer.cornerRadius = addButton.bounds.height / 3
         radiusOkButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor */
         
+    }
+    
+    // updates a user's location and shows it on the map!
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        let location = locations.last as! CLLocation
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        var region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        region.center = mapView.userLocation.coordinate
+        mapView.setRegion(region, animated: true)
     }
     
     // populate the cities array with cities currently in Firebase
@@ -100,10 +129,10 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     }
     
     // helper method that sets the rectangular view of the map based on region radius
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-        mapView.setRegion(coordinateRegion, animated: true)
-    }
+//    func centerMapOnLocation(location: CLLocation) {
+//        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+//        mapView.setRegion(coordinateRegion, animated: true)
+//    }
     
     // when the Add button is pressed, the Search bar is brought up
     @IBAction func searchButtonPressed(_ sender: Any) {
@@ -151,7 +180,16 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 
                 // Create pinpoint
                 let pinpoint = MKPointAnnotation()
-                pinpoint.title = searchBar.text
+                
+                self.location = CLLocation(latitude: latitude!, longitude: longitude!)
+                
+                // convert coordinates to city name
+                self.fetchCityAndCountry(from: self.location) { city, country, error in
+                    guard let city = city, error == nil else { return }
+                    self.currentCity = city
+                    pinpoint.title = self.currentCity
+                }
+                
                 pinpoint.coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
                 self.mapView.addAnnotation(pinpoint)
                 
@@ -160,15 +198,6 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
                 let region = MKCoordinateRegion(center: coordinate, span: span)
                 self.mapView.setRegion(region, animated: true)
-                
-                self.location = CLLocation(latitude: latitude!, longitude: longitude!)
-                
-                // convert coordinates to city name
-                // add city to array of cities
-                self.fetchCityAndCountry(from: self.location) { city, country, error in
-                    guard let city = city, error == nil else { return }
-                    self.currentCity = city
-                }
             }
         }
     }
@@ -184,23 +213,22 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     
     // Add to list of cities
     @IBAction func addCityToListButtonPressed(_ sender: Any) {
-        cities.append(currentCity)
-        /*
-        let size = cities.count
-        for n in 1...size {
-            
-        } */
+        if (currentCity != "") {
+            cities.append(currentCity)
+        }
         
-        if (futureCity1.isHidden == true) {
+        if (futureCity1.isHidden == true && currentCity != "") {
             futureCity1.setTitle(currentCity, for: .normal)
             futureCity1.isHidden = false
-        } else if (futureCity2.isHidden == true) {
+        } else if (futureCity2.isHidden == true && currentCity != "") {
             futureCity2.setTitle(currentCity, for: .normal)
             futureCity2.isHidden = false
-        } else if (futureCity3.isHidden == true) {
+        } else if (futureCity3.isHidden == true && currentCity != "") {
             futureCity3.setTitle(currentCity, for: .normal)
             futureCity3.isHidden = false
         }
+        
+        currentCity = ""
         
         if (futureCity1.isHidden == false && futureCity2.isHidden == false && futureCity3.isHidden == false) {
             addButton.isHidden = true
@@ -224,8 +252,11 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 //remove from Firebase
                 let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                 profileLocs.child(currentCity).removeValue()
+                
                 let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
                 discoverySettingsRef.child(currentCity).removeValue()
+                
+                citiesRef.child(currentCity).child(user!).removeValue()
             }
             n += 1
         }
@@ -250,8 +281,11 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 //remove from Firebase
                 let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                 profileLocs.child(currentCity).removeValue()
+                
                 let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
                 discoverySettingsRef.child(currentCity).removeValue()
+                
+                citiesRef.child(currentCity).child(user!).removeValue()
             }
             n += 1
         }
@@ -276,8 +310,11 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 //remove from Firebase
                 let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                 profileLocs.child(currentCity).removeValue()
+                
                 let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
                 discoverySettingsRef.child(currentCity).removeValue()
+                
+                citiesRef.child(currentCity).child(user!).removeValue()
             }
             n += 1
         }
@@ -355,4 +392,14 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         checkLocationAuthorizationStatus()
     }
 
+    // code to dismiss keyboard when user clicks on background
+    
+    func textFieldShouldReturn(textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }

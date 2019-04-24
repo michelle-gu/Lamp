@@ -97,6 +97,10 @@ class ProfileEditViewController: UIViewController, UITextViewDelegate {
         })
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        setLocationText()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

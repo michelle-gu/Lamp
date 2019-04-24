@@ -27,7 +27,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     @IBOutlet weak var genderField: UITextField!
     @IBOutlet weak var birthdayField: UITextField!
     @IBOutlet weak var universityField: UITextField!
-    @IBOutlet weak var futureLocationField: UITextField!
+    @IBOutlet weak var futureLocationField: UIButton!
     @IBOutlet weak var occupationField: UITextField!
     @IBOutlet weak var bioField: UITextView!
     @IBOutlet weak var budgetField: UITextField!
@@ -102,7 +102,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             let gender = genderField.text,
             let birthday = birthdayField.text,
             let university = universityField.text,
-            let futureLoc = futureLocationField.text,
+            let futureLoc = futureLocationField.titleLabel?.text,
             let occupation = occupationField.text,
             let bio = bioField.text,
             let budget = budgetField.text,
@@ -326,6 +326,8 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                 self.universityField.text = uniVal
             }
             self.setLocationText()
+            self.futureLocationField.setTitleColor(UIColor.black, for: .normal)
+
             if let occupationVal = profileDict["occupation"] as? String {
                 self.occupationField.text = occupationVal
             }
@@ -410,7 +412,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             self.cities = citiesArray
             locationText = self.cities.joined(separator: ", ")
             
-            self.futureLocationField.text = locationText
+            self.futureLocationField.setTitle(locationText, for: .normal)
         }
     }
     

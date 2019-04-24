@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-8v-AgN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-8v-AgN">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -397,17 +397,6 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNK-Ik-8dX">
-                                <rect key="frame" x="296" y="415" width="35" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                <state key="normal" title="MAP">
-                                    <color key="titleColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="t7y-ra-mxw" kind="show" identifier="openMap" id="e4G-g4-Um8"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5m-lV-bIu">
                                 <rect key="frame" x="99" y="597" width="177" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -431,6 +420,17 @@
                                 <color key="backgroundColor" red="0.96808308359999995" green="0.56691890950000001" blue="0.72591620680000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNK-Ik-8dX">
+                                <rect key="frame" x="217" y="409" width="121" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <state key="normal" title="ADD LOCATION">
+                                    <color key="titleColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="t7y-ra-mxw" kind="show" identifier="openMap" id="e4G-g4-Um8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tJO-Nj-4HI"/>
@@ -2135,7 +2135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gb3-Jb-Yhe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10236" y="1764.5320197044337"/>
+            <point key="canvasLocation" x="11178.4" y="1764.5320197044337"/>
         </scene>
         <!--Match Message View Controller-->
         <scene sceneID="BdU-na-0W9">
@@ -2239,6 +2239,138 @@
             <point key="canvasLocation" x="3436" y="922"/>
         </scene>
         <!--Navigation Controller-->
+        <scene sceneID="0c3-aF-mhj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PwM-K5-2cI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jHe-ZU-uAg">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bto-im-ZXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2661.5999999999999" y="1764.5320197044337"/>
+        </scene>
+        <!--Profile Edit Map View Controller-->
+        <scene sceneID="gzz-qA-kxP">
+            <objects>
+                <viewController id="zA6-ti-gFg" customClass="ProfileEditMapViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1eT-6o-FVH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Locations (Click to Remove)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6a-Hz-BPi">
+                                <rect key="frame" x="16" y="104" width="228" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rU5-GZ-gO1">
+                                <rect key="frame" x="329" y="100" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="zA6-ti-gFg" eventType="touchUpInside" id="2Hi-VI-lCH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06w-12-paP">
+                                <rect key="frame" x="16" y="135" width="110" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="city1ButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="EO1-lc-D4L"/>
+                                    <action selector="city1Pressed:" destination="zA6-ti-gFg" eventType="touchUpInside" id="N8q-GK-2sN"/>
+                                    <action selector="city1Pressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="lLx-Vv-W0G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40R-62-8oj">
+                                <rect key="frame" x="132" y="135" width="110" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="city1ButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="JbP-3R-aR0"/>
+                                    <action selector="city1Pressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="bGy-ea-szK"/>
+                                    <action selector="city2Pressed:" destination="zA6-ti-gFg" eventType="touchUpInside" id="Imy-4s-5rr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsf-FQ-4j9">
+                                <rect key="frame" x="249" y="135" width="110" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="city1ButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="NcA-xv-gG5"/>
+                                    <action selector="city1Pressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="KNP-Fd-HzG"/>
+                                    <action selector="city3Pressed:" destination="zA6-ti-gFg" eventType="touchUpInside" id="A2W-Jf-Iqc"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QQU-vT-O2u">
+                                <rect key="frame" x="0.0" y="183" width="375" height="629"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxh-N3-EL7">
+                                <rect key="frame" x="276" y="738" width="84" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <state key="normal" title="Add City">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCityButtonPressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="IaR-LK-R2E"/>
+                                    <action selector="addCityButtonPressed:" destination="zA6-ti-gFg" eventType="touchUpInside" id="L0B-f7-nig"/>
+                                    <action selector="addCityToListButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="KFw-SQ-MY2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TlZ-JP-APG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Dn-6c-cOq">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="GdE-jb-hv4">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="zA6-ti-gFg" id="eyH-im-F41"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="rU5-GZ-gO1" id="vrD-Lb-OQN"/>
+                        <outlet property="addCityToList" destination="Xxh-N3-EL7" id="iaO-of-Vb5"/>
+                        <outlet property="futureCity1" destination="06w-12-paP" id="kxP-vw-TZc"/>
+                        <outlet property="futureCity2" destination="40R-62-8oj" id="5E4-vS-Fmh"/>
+                        <outlet property="futureCity3" destination="lsf-FQ-4j9" id="f8T-mQ-EYA"/>
+                        <outlet property="mapView" destination="QQU-vT-O2u" id="rk2-yP-jHN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QMM-V7-FIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6206" y="1779"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="XVv-mI-Z37">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eWr-FF-ddu" sceneMemberID="viewController">
@@ -2254,7 +2386,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPE-0C-J9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6767.1999999999998" y="1764.5320197044337"/>
+            <point key="canvasLocation" x="7709.6000000000004" y="1764.5320197044337"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gR3-iv-1DW">
@@ -2290,7 +2422,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dB-zO-zR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9293.6000000000004" y="1764.5320197044337"/>
+            <point key="canvasLocation" x="10236" y="1764.5320197044337"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="pVX-Gb-cRt">
@@ -2435,13 +2567,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Future Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aCH-Rr-gNZ">
-                                                    <rect key="frame" x="145" y="6" width="214" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Future Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCG-tS-zJU">
                                                     <rect key="frame" x="16" y="12" width="107" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2449,6 +2574,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uyt-6K-N2s">
+                                                    <rect key="frame" x="145" y="6" width="214" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                    <state key="normal" title="Add Location">
+                                                        <color key="titleColor" red="0.78024488690000005" green="0.78007096050000002" blue="0.80069750549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="zA6-ti-gFg" kind="show" id="Whl-g2-xg2"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2743,7 +2879,7 @@
                         <outlet property="changeProfilePicButton" destination="a2K-cX-ucz" id="mio-id-KUi"/>
                         <outlet property="emailField" destination="MH3-nP-6Di" id="pvi-hK-ygh"/>
                         <outlet property="facebookField" destination="ESj-um-THs" id="JF8-R1-heR"/>
-                        <outlet property="futureLocationField" destination="aCH-Rr-gNZ" id="tsp-EK-7vU"/>
+                        <outlet property="futureLocationField" destination="Uyt-6K-N2s" id="hg4-eY-yOG"/>
                         <outlet property="genderField" destination="X2j-A3-VpF" id="KHK-xo-KF4"/>
                         <outlet property="nameField" destination="rCi-gN-oYj" id="lbL-Gv-zx1"/>
                         <outlet property="numBedroomsField" destination="JEO-A1-roN" id="edt-w2-P5u"/>
@@ -2781,14 +2917,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LogoColor" width="398" height="484"/>
+        <image name="LogoColor" width="199" height="242"/>
         <image name="girl-3" width="5370" height="3390"/>
         <image name="girl-5" width="6000" height="4000"/>
         <image name="profile-pic-blank" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YS3-yl-8TS"/>
-        <segue reference="ABV-LS-boM"/>
+        <segue reference="P1N-dK-ZZG"/>
         <segue reference="PA3-YF-Hx5"/>
         <segue reference="IdY-Gv-dXt"/>
     </inferredMetricsTieBreakers>
