@@ -298,6 +298,8 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         let profileRef = self.userRef.child(user!).child("profile")
         let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery")
         
+        print("Current cities array: ", cities)
+        
         // add each city in array to Firebase
         for currentCity in cities {
             let locationValues: [String : Any] = [
@@ -312,12 +314,22 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 currentCity: true
             ]
             
+            print("updating locations with value: ", values)
+            
             // update locations nested in user>profile>futureLoc
             profileRef.child("futureLoc").updateChildValues(values)
             
             // update locations nested in user>settings>discovery>futureLoc
             discoverySettingsRef.child("futureLoc").updateChildValues(values)
-        }
+        }        
+        
+        profileRef.observe(.value, with: { (snapshot) in
+            // Read snapshot
+            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+            // If value exists, pre-populate newMessages switch
+            
+            print("Current profile: ", profileDict)
+        })
         
         self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)

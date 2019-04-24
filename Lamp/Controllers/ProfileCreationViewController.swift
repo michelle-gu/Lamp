@@ -106,19 +106,16 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         }
         
         // Create profile using profilePic value from Firebase
-        let profileRef = userProfilesRef.child(user!).child("profile")
-        profileRef.observe(.value, with: { (snapshot) in
-            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
-            if let profilePicVal = profileDict["profilePicture"] as? String {
-                
-                let profile = Profile(firstName: firstName, birthday: birthday, gender: gender, uni: "", futureLoc: [:], occupation: "", profilePicture: profilePicVal)
-                let settings = Settings()
-                
-                let userRef = self.userProfilesRef.child(self.user!)
-                userRef.updateChildValues(profile.toAnyObject() as! [AnyHashable : Any])
-                userRef.updateChildValues(settings.toAnyObject() as! [AnyHashable : Any])
-            }
-        })
+        let values = [
+            "firstName": firstName,
+            "birthday": birthday,
+            "gender": gender,
+            ]
+        let settings = Settings()
+        
+        let userRef = self.userProfilesRef.child(self.user!)
+        userRef.child("profile").updateChildValues(values)
+        userRef.updateChildValues(settings.toAnyObject() as! [AnyHashable : Any])
 
         let genderValues = [
             gender: [
@@ -129,8 +126,16 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         
     }
 
-    
     // MARK: - Functions
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func uploadImage(_ image: UIImage, at reference: StorageReference, completion: @escaping (URL?) -> Void) {
         // Change UIImage to data
         guard let imageData = image.jpegData(compressionQuality: 0.1) else {
