@@ -124,6 +124,21 @@
 			<key>orderHint</key>
 			<integer>17</integer>
 		</dict>
+		<key>MessageInputBar.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>20</integer>
+		</dict>
+		<key>MessageKit-MessageKitAssets.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>23</integer>
+		</dict>
+		<key>MessageKit.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>22</integer>
+		</dict>
 		<key>Pods-Lamp.xcscheme</key>
 		<dict>
 			<key>isShown</key>

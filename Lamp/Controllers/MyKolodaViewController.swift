@@ -52,7 +52,9 @@ class MyKolodaViewController: UIViewController {
             self.idDict = snapshot.value as? [String : NSObject] ?? [:]
             
             for (key, _) in self.idDict {
-                self.ids.append(key)
+                if key != Auth.auth().currentUser?.uid{
+                    self.ids.append(key)
+                }
             }
         })
         self.kolodaView.reloadData()
@@ -67,11 +69,13 @@ class MyKolodaViewController: UIViewController {
             "liked": true,
             "swiped": true
         ]
+        //update user's swipe values
         ref.child("swipes").child(user!).child(ids[index]).updateChildValues(swipeValues)
         
+        //set up the dictionary of people the other user has swiped on
         let swipe = ref.child("swipes").child(ids[index]).child(user!)
-        let matchingSelf = ref.child(user!).child("matches")
-        let matchingTarget = ref.child(ids[index]).child("matches")
+        let matchingSelf = ref.child("user-profiles").child(user!).child("matches")
+        let matchingTarget = ref.child("user-profiles").child(ids[index]).child("matches")
         
         swipe.observe(.value, with: {(snapshot) in
             let swipingDict = snapshot.value as? [String : AnyObject] ?? [:]
@@ -131,19 +135,10 @@ extension MyKolodaViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
- 
-//        let profile = ref.child("user-profiles").child(ids[index])
 
         let user = Auth.auth().currentUser?.uid
-//        let id =
         
         if direction == .right{
-            //record it as a right swipe
-//            let swipeValues = [
-//                ids[index]: true
-//            ]
-//            ref.child(user!).child("matches").updateChildValues(swipeValues)
-            //updates the swiping values
             let swipeValues = [
                 "liked": true,
                 "swiped": true
@@ -173,13 +168,30 @@ extension MyKolodaViewController: KolodaViewDataSource {
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let card:CardView =  CardView.create()
-//        let profile = images[index]
+
         let profile = ref.child("user-profiles").child(ids[index]).child("profile")
+        print(ids[index])
         profile.observe(.value, with: {(snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
             let firstName = profileDict["firstName"] as! String
-            let job = "Student"
-            let location = "Austin"
+            let job:String = profileDict["occupation"] as! String
+            var location:String = ""
+            let locationList = self.ref.child("user-profiles").child(self.ids[index]).child("profile").child("futureLoc")
+            locationList.observe(.value, with: {(snapshot) in
+                let locationDict = snapshot.value as? [String : AnyObject] ?? [:]
+                var counter = 0
+                for (key,value) in locationDict{
+                    counter += 1
+                    if counter == 1{
+                        location = "\(key)"
+                    }
+                    else {
+                        location = "\(location), \(key)"
+                    }
+                }
+                card.locationLabel.text = location
+            })
+//            //let location = "Austin"
             card.image.image = UIImage(named: "empty")
             card.nameLabel.text = firstName
             card.jobLabel.text = job
