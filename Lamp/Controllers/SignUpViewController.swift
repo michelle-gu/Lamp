@@ -22,6 +22,16 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
+    // MARK: - Functions
+    func textFieldShouldReturn(textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     // MARK: - Actions
     @IBAction func logInDidTouch(_ sender: Any) {
         

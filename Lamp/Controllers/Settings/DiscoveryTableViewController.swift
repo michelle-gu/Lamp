@@ -135,7 +135,7 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
         myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
         
         let headerView = UIView()
-        headerView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1) // Use default
+        headerView.backgroundColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 0.1)
         headerView.addSubview(myLabel)
         
         return headerView
@@ -170,43 +170,5 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
             return 0
         }
     }
-
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        var cell: UITableViewCell
-//
-//        switch indexPath.section {
-//        case 0:
-//            switch indexPath.row {
-//            case 0:
-//                cell = tableView.dequeueReusableCell(withIdentifier: "futureLocationCellIdentifier", for: indexPath)
-//            case 1:
-//                cell = tableView.dequeueReusableCell(withIdentifier: "maxDistanceCellIdentifier", for: indexPath)
-//            default:
-//                cell = UITableViewCell()
-//            }
-//        case 1:
-//            switch indexPath.row {
-//            case 0:
-//                cell = tableView.dequeueReusableCell(withIdentifier: "universitiesCellIdentifier", for: indexPath)
-//            case 1:
-//                cell = tableView.dequeueReusableCell(withIdentifier: "genderCellIdentifier", for: indexPath)
-//            case 2:
-//                cell = tableView.dequeueReusableCell(withIdentifier: "ageRangeCellIdentifier", for: indexPath)
-//            default:
-//                cell = UITableViewCell()
-//            }
-//        case 2:
-//            switch indexPath.row {
-//            case 0:
-//                cell = tableView.dequeueReusableCell(withIdentifier: "showMyProfileCellIdentifier", for: indexPath)
-//            default:
-//                cell = UITableViewCell()
-//            }
-//        default:
-//            cell = UITableViewCell()
-//        }
-//
-//        return cell
-//    }
 
 }
