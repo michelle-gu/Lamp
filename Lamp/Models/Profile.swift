@@ -26,7 +26,7 @@ struct Profile {
     let occupation: String
     let bio: String
     let budget: String
-    //let profilePicture: UIImage
+    let profilePicture: String
     
     // Lifestyle preferences
     let numBedrooms: String
@@ -57,7 +57,7 @@ struct Profile {
         self.occupation = occupation
         self.bio = ""
         self.budget = ""
-        //self.profilePicture = profilePicture
+        self.profilePicture = ""
         
         // Initialize Lifestyle Preferences
         self.numBedrooms = ""
@@ -84,7 +84,7 @@ struct Profile {
             let occupation = value["occupation"] as? String,
             let bio = value["bio"] as? String,
             let budget = value["budget"] as? String,
-            //let profilePicture = value["profilePicture"] as? UIImage
+            let profilePicture = value["profilePicture"] as? String,
             let numBedrooms = value["numBedrooms"] as? String,
             let pets = value["pets"] as? String,
             let smoking = value["smoking"] as? String,
@@ -109,7 +109,7 @@ struct Profile {
         self.occupation = occupation
         self.bio = bio
         self.budget = budget
-        //self.profilePicture = profilePicture
+        self.profilePicture = profilePicture
         
         // Lifestyle Preferences
         self.numBedrooms = numBedrooms
@@ -138,7 +138,7 @@ struct Profile {
                 "occupation": occupation,
                 "bio": bio,
                 "budget": budget,
-                //"profilePicture": profilePicture,
+                "profilePicture": profilePicture,
                 // Lifestyle Prefs
                 "numBedrooms": numBedrooms,
                 "pets": pets,

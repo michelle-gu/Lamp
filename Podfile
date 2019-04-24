@@ -15,5 +15,6 @@ target 'Lamp' do
   pod 'FBSDKLoginKit'
   pod 'Koloda'
   pod 'MessageKit'
+  pod 'Kingfisher', '~> 5.0'
 
 end

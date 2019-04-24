@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import Kingfisher
 
 let genderPickerData = [String](arrayLiteral: "Female", "Male", "Other", "Prefer not to say")
 
@@ -21,6 +22,7 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     // MARK: - Properties
     let userProfilesRef = Database.database().reference(withPath: "user-profiles")
     let gendersRef = Database.database().reference(withPath: "genders")
+    let user = Auth.auth().currentUser?.uid
 
     // MARK: - Outlets
     @IBOutlet weak var profilePictureView: UIImageView!
@@ -37,6 +39,22 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
                 // Remove photo from profile picture view
                 self.profilePictureView.image = UIImage(named: "profile-pic-blank")
                 // TODO: Remove photo from Firebase Storage
+                // Profile reference
+                let profileRef = self.userProfilesRef.child(self.user!).child("profile")
+
+                // Remove photo from Firebase Storage
+                let profilePicRef = Storage.storage().reference().child("profilePictures").child("\(self.user!).jpg")
+                profilePicRef.delete { error in
+                    if let error = error {
+                        print(error)
+                    } else {
+                        // File deleted successfully
+                    }
+                }
+
+                // Remove profile picture from database
+                let values = ["profilePicture": ""]
+                profileRef.updateChildValues(values)
         }))
         actionSheet.addAction(UIAlertAction(title: "Import from Facebook", style: .default, handler: nil))
         actionSheet.addAction(UIAlertAction(title: "Take Photo", style: .default, handler:
@@ -116,15 +134,18 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         profilePictureView.image = chosenImage
         
         // Add photo to Firebase Storage
-        let imageRef = Storage.storage().reference().child("test_image.jpg")
+        let imageRef = Storage.storage().reference().child("profilePictures").child("\(self.user!).jpg")
+        // No need to remove old photo because this replaces the old photo
+        // in Firebase Storage
         uploadImage(chosenImage, at: imageRef) { (downloadURL) in
             guard let downloadURL = downloadURL else {
                 return
             }
             
-            // TODO: Add download URL to profile in database
-            let urlString = downloadURL.absoluteString
-            print("image url: \(urlString)")
+            let urlString: String = downloadURL.absoluteString
+            let profileRef = self.userProfilesRef.child(self.user!).child("profile")
+            let values = ["profilePicture": urlString]
+            profileRef.updateChildValues(values)
         }
         
         // Dismiss the popover when done
@@ -183,6 +204,12 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
             }
             if let birthdayVal = profileDict["birthday"] as? String {
                 self.birthdayTextField?.text = birthdayVal
+            }
+            if let profilePicVal = profileDict["profilePicture"] as? String {
+                if profilePicVal != "" {
+                    let profilePicURL = URL(string: profilePicVal)
+                    self.profilePictureView.kf.setImage(with: profilePicURL)
+                }
             }
         })
         

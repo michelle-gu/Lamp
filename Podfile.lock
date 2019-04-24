@@ -79,6 +79,7 @@ PODS:
   - GoogleUtilities/UserDefaults (5.7.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.1)
+  - Kingfisher (5.3.1)
   - Koloda (4.7):
     - pop (~> 1.0)
   - leveldb-library (1.20)
@@ -100,6 +101,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - Kingfisher (~> 5.0)
   - Koloda
   - MessageKit
   - RangeUISlider (~> 1.8)
@@ -121,6 +123,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - GTMSessionFetcher
+    - Kingfisher
     - Koloda
     - leveldb-library
     - MessageInputBar
@@ -145,6 +148,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: ffe513e90551844a739e7bcbb1d2aca1c28a4338
   GoogleUtilities: 273e67030e0de313e7304f6dcfa96fc5214f6c23
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   Koloda: f456d003d2ce15ef9f10c2874a444f1f570b490c
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
@@ -153,6 +157,6 @@ SPEC CHECKSUMS:
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   RangeUISlider: 8556803cbb331373bc2530647998fa87a370dbe7
 
-PODFILE CHECKSUM: 1528ac35b84db314d274fa274517fa39e22e58f6
+PODFILE CHECKSUM: 03c92bb7b496003473e58e796b27e35856bd67b8
 
 COCOAPODS: 1.7.0.beta.3
