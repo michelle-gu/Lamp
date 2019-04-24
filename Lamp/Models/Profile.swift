@@ -43,7 +43,7 @@ struct Profile {
     // MARK: Initializers
     
     // Initializer
-    init(key: String = "", firstName: String, birthday: String, gender: String, uni: String, futureLoc: [String : Bool] = [:], occupation: String) {
+    init(key: String = "", firstName: String, birthday: String, gender: String, uni: String, futureLoc: [String : Bool] = [:], occupation: String, profilePicture: String) {
         // Initialize Firebase ref/key
         self.ref = nil
         self.key = key
@@ -57,7 +57,7 @@ struct Profile {
         self.occupation = occupation
         self.bio = ""
         self.budget = ""
-        self.profilePicture = ""
+        self.profilePicture = profilePicture
         
         // Initialize Lifestyle Preferences
         self.numBedrooms = ""

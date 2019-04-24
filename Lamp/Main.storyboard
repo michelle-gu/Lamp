@@ -425,7 +425,7 @@
                                     <segue destination="Sef-mb-ngf" kind="show" identifier="showHomePage" id="P1N-dK-ZZG"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="girl-3" translatesAutoresizingMaskIntoConstraints="NO" id="2kC-M0-PXD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-pic-blank" translatesAutoresizingMaskIntoConstraints="NO" id="2kC-M0-PXD">
                                 <rect key="frame" x="127" y="147" width="121" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96808308359999995" green="0.56691890950000001" blue="0.72591620680000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2512,9 +2512,8 @@
         <image name="profile-pic-blank" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6so-PU-pzB"/>
         <segue reference="YS3-yl-8TS"/>
-        <segue reference="c5S-Za-6zN"/>
+        <segue reference="P1N-dK-ZZG"/>
         <segue reference="Huo-mK-HWW"/>
         <segue reference="IdY-Gv-dXt"/>
     </inferredMetricsTieBreakers>

@@ -62,6 +62,14 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
             if let occupationVal = profileDict["occupation"] as? String {
                 self.occupationTextField?.text = occupationVal
             }
+            
+            if let profilePicVal = profileDict["profilePicture"] as? String {
+                if profilePicVal != "" {
+                    let profilePicURL = URL(string: profilePicVal)
+                    self.profilePictureView.kf.setImage(with: profilePicURL)
+                }
+            }
+
         })
 
     }

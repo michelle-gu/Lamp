@@ -18,8 +18,6 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     // MARK: - Constants
     let showLocationInfoScreen = "showLocationInfoScreen"
     let imagePicker = UIImagePickerController()
-    
-    // MARK: - Properties
     let userProfilesRef = Database.database().reference(withPath: "user-profiles")
     let gendersRef = Database.database().reference(withPath: "genders")
     let user = Auth.auth().currentUser?.uid
@@ -38,7 +36,6 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
             { action in
                 // Remove photo from profile picture view
                 self.profilePictureView.image = UIImage(named: "profile-pic-blank")
-                // TODO: Remove photo from Firebase Storage
                 // Profile reference
                 let profileRef = self.userProfilesRef.child(self.user!).child("profile")
 
@@ -85,6 +82,53 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(actionSheet, animated: true)
     }
+    
+    // Upon completion of filling in profile fields and Next button is pressed
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        guard
+            let firstName = firstNameTextField.text,
+            let birthday = birthdayTextField.text,
+            let gender = genderTextField.text,
+            //let profilePicture = profilePictureView.image,
+            firstName.count > 0,
+            birthday.count > 0,
+            gender.count > 0,
+            isValidBirthday(birthday: birthday)
+            else {
+                let alert = UIAlertController(
+                    title: "Profile Creation Failed",
+                    message: "Please fill in all fields. You must be at least 13 years old to use this app.",
+                    preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+                return
+        }
+        
+        // Create profile using profilePic value from Firebase
+        let profileRef = userProfilesRef.child(user!).child("profile")
+        profileRef.observe(.value, with: { (snapshot) in
+            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+            if let profilePicVal = profileDict["profilePicture"] as? String {
+                
+                let profile = Profile(firstName: firstName, birthday: birthday, gender: gender, uni: "", futureLoc: [:], occupation: "", profilePicture: profilePicVal)
+                let settings = Settings()
+                
+                let userRef = self.userProfilesRef.child(self.user!)
+                userRef.updateChildValues(profile.toAnyObject() as! [AnyHashable : Any])
+                userRef.updateChildValues(settings.toAnyObject() as! [AnyHashable : Any])
+            }
+        })
+
+        let genderValues = [
+            gender: [
+                user: true
+            ]
+        ]
+        gendersRef.updateChildValues(genderValues)
+        
+    }
+
     
     // MARK: - Functions
     func uploadImage(_ image: UIImage, at reference: StorageReference, completion: @escaping (URL?) -> Void) {
@@ -192,7 +236,6 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         imagePicker.delegate = self
         
         // Pre-populate with values from Firebase
-        let user = Auth.auth().currentUser?.uid
         let profile = userProfilesRef.child(user!).child("profile")
         profile.observe(.value, with: { (snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
@@ -258,46 +301,6 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthdayDate, to: now)
         let age = ageComponents.year!
         return age >= 13
-    }
-
-    // Upon completion of filling in profile fields and Next button is pressed
-    @IBAction func nextButtonPressed(_ sender: Any) {
-        guard
-            let firstName = firstNameTextField.text,
-            let birthday = birthdayTextField.text,
-            let gender = genderTextField.text,
-            //let profilePicture = profilePictureView.image,
-            firstName.count > 0,
-            birthday.count > 0,
-            gender.count > 0,
-            isValidBirthday(birthday: birthday)
-            else {
-                let alert = UIAlertController(
-                    title: "Profile Creation Failed",
-                    message: "Please fill in all fields. You must be at least 13 years old to use this app.",
-                    preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(alert, animated: true, completion: nil)
-                return
-        }
-        
-        let user = Auth.auth().currentUser?.uid
-        
-        let profile = Profile(firstName: firstName, birthday: birthday, gender: gender, uni: "", futureLoc: [:], occupation: "")
-        let settings = Settings()
-        
-        let userRef = self.userProfilesRef.child(user!)
-        userRef.updateChildValues(profile.toAnyObject() as! [AnyHashable : Any])
-        userRef.updateChildValues(settings.toAnyObject() as! [AnyHashable : Any])
-        
-        let genderValues = [
-            gender: [
-                user: true
-            ]
-        ]
-        gendersRef.updateChildValues(genderValues)
-
     }
     
     // MARK: - Text Field delegate
