@@ -9,10 +9,12 @@ target 'Lamp' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   pod 'Eureka'
   pod 'RangeUISlider', '~> 1.8'
   pod 'FBSDKLoginKit'
   pod 'Koloda'
   pod 'MessageKit'
+  pod 'Kingfisher', '~> 5.0'
 
 end
