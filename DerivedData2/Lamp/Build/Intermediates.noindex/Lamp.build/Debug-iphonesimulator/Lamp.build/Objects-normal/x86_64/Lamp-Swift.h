@@ -499,17 +499,21 @@ SWIFT_CLASS("_TtC4Lamp32NotificationsTableViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIImagePickerController;
 @class UITapGestureRecognizer;
 @class UIDatePicker;
 @class UIPickerView;
 
 SWIFT_CLASS("_TtC4Lamp29ProfileCreationViewController")
-@interface ProfileCreationViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
+@interface ProfileCreationViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified profilePictureView;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified changePictureButton;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified genderTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified birthdayTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified firstNameTextField;
+- (IBAction)changePictureButtonPressed:(id _Nonnull)sender;
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
+- (void)imagePickerControllerDidCancel:(UIImagePickerController * _Nonnull)picker;
 - (void)viewDidLoad;
 - (void)viewTappedWithGestureRecognizer:(UITapGestureRecognizer * _Nonnull)gestureRecognizer;
 - (void)dateChangedWithDatePicker:(UIDatePicker * _Nonnull)datePicker;

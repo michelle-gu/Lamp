@@ -13,7 +13,7 @@ import Firebase
 class MessageListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // user match list
-    var messagedUsers: [String] = ["5RAnK9zEAORdQLJUMRsezwkjD8A3", "O5tkewRsPUQTNBFdq2WMwQTD7Gi2", "iVFU2mH3npgjxvzIndiOT6BDBJ02", "ubCnU8kdafc82CqU5ndWV4vNb1i1"]
+    var messagedUsers: [String] = ["5RAnK9zEAORdQLJUMRsezwkjD8A3", "O5tkewRsPUQTNBFdq2WMwQTD7Gi2", "rIsvpGs8FuhgwOLCrx2e5OWMZ7A3"]
     
     // MARK: Properties
     var ref: DatabaseReference!
