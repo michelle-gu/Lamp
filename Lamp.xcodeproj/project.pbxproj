@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0704BF222268EF03005F6394 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704BF212268EF03005F6394 /* Message.swift */; };
 		07131722224554F3000CDD33 /* MatchMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07131721224554F3000CDD33 /* MatchMessageViewController.swift */; };
+		076FB9F5226FF19200E0A204 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076FB9F4226FF19200E0A204 /* Channel.swift */; };
 		0788127E225EEC4E00DCA246 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788127D225EEC4E00DCA246 /* MessageTableViewCell.swift */; };
 		07AB86A0224921D9001EE449 /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AB869F224921D9001EE449 /* MessageListViewController.swift */; };
 		07AB86A2224994BD001EE449 /* MessageInstanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		0704BF212268EF03005F6394 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		07131721224554F3000CDD33 /* MatchMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchMessageViewController.swift; sourceTree = "<group>"; };
+		076FB9F4226FF19200E0A204 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		0788127D225EEC4E00DCA246 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		07AB869F224921D9001EE449 /* MessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
 		07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInstanceViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				B6B897122233025600164801 /* User.swift */,
 				571B426A224AC8EF00F9F42B /* Profile.swift */,
 				B6DFE9C92257C92D0086BCE6 /* Settings.swift */,
+				076FB9F4226FF19200E0A204 /* Channel.swift */,
 				0704BF212268EF03005F6394 /* Message.swift */,
 			);
 			path = Models;
@@ -407,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				571B426F224B401E00F9F42B /* ProfileEditViewController.swift in Sources */,
+				076FB9F5226FF19200E0A204 /* Channel.swift in Sources */,
 				B6DFE9CC225884150086BCE6 /* NotificationsTableViewController.swift in Sources */,
 				B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */,
 				B62C34E82255588B00C5348F /* ChangePasswordViewController.swift in Sources */,

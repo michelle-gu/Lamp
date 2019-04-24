@@ -13,21 +13,15 @@ import Firebase
 class MessageListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // user match list
-    var messagedUsers: [String] = ["5RAnK9zEAORdQLJUMRsezwkjD8A3", "O5tkewRsPUQTNBFdq2WMwQTD7Gi2", "rIsvpGs8FuhgwOLCrx2e5OWMZ7A3"]
+    var channelIds: [String] = ["channel-id-two", "channel-id-one"]
     
     // MARK: Properties
     var ref: DatabaseReference!
     
     let customTableViewCellIdentifier = "userCell"
     let goToMessagesSegueId = "goToMessagesSegueId"
-    
-    var selectedIndex = 0
-    
+        
     @IBOutlet weak var tableView: UITableView!
-    
-    // profiles in new matches
-    @IBOutlet weak var profile1PicView: UIImageView!
-    @IBOutlet weak var profile2PicView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,32 +29,53 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         
-        //setUpNavigationBarItems()
-        // profile picture styling
-        
-        styleElements()
+        //updateChannelIdList()
+
     }
     
+    // MARK: Helpers
+    func updateChannelIdList() {
+        // loop through channels in "channels"
+        
+        // add channelids to list
+        
+        // sort by timestamp
+    }
+    
+    
+    // MARK: Table View Methods
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messagedUsers.count
+        return channelIds.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // create a new cell if needed or reuse an old one
         let cell = tableView.dequeueReusableCell(withIdentifier: customTableViewCellIdentifier, for: indexPath as IndexPath) as! MessageTableViewCell
         
-        ref = Database.database().reference().child("user-profiles")
-        let userId = messagedUsers[indexPath.row]
-        let messagingUser = ref.child(userId).child("profile")
+        ref = Database.database().reference().child("channels")
         
-        messagingUser.observe(.value, with: { (snapshot) in
-            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
-            let firstName = profileDict["firstName"] as! String
-            cell.nameLabel.text = firstName
+        let channelId = channelIds[indexPath.row]
+        
+        let currentChannel = ref.child(channelId).child("channel")
+        
+        currentChannel.observe(.value, with: { (snapshot) in
+            let channelDict = snapshot.value as? [String : AnyObject] ?? [:]
+            
+            // set channel title
+            let channelName = channelDict["title"] as! String
+            cell.nameLabel.text = channelName
+            
+            let channelMessage = channelDict["last-message"] as! String
+            cell.lastMessageLabel.text = channelMessage
+            
+            let time = channelDict["time"] as! String
+            cell.timeLabel.text = time
+
         })
         
         // grab timestamp from last message
@@ -79,26 +94,17 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
     
     // user clicks on a row
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedIndex = indexPath.row
         self.performSegue(withIdentifier: goToMessagesSegueId, sender: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == goToMessagesSegueId,
-            let controller = segue.destination as? MessageInstanceViewController {
-            
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == goToMessagesSegueId,
+//            let controller = segue.destination as? MessageInstanceViewController {
+//
+//        }
+//    }
     
-    
-    // styling
-    private func styleElements() {
-        let profileBorderRadius = profile1PicView.bounds.height / 2
-        profile1PicView.layer.cornerRadius = profileBorderRadius
-        profile2PicView.layer.cornerRadius = profileBorderRadius
-        profile1PicView.clipsToBounds = true
-        profile2PicView.clipsToBounds = true
-    }
+    // MARK: Styling
     
     private func setUpNavigationBarItems() {
         // back to main card page button
@@ -107,8 +113,5 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
         backButton.widthAnchor.constraint(equalToConstant: 28).isActive = true
         backButton.heightAnchor.constraint(equalToConstant: 34).isActive = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
-        
     }
-    
-    
 }
