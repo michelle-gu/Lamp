@@ -52,7 +52,9 @@ class MyKolodaViewController: UIViewController {
             self.idDict = snapshot.value as? [String : NSObject] ?? [:]
             
             for (key, _) in self.idDict {
-                self.ids.append(key)
+                if key != Auth.auth().currentUser?.uid{
+                    self.ids.append(key)
+                }
             }
         })
         self.kolodaView.reloadData()
@@ -70,7 +72,7 @@ class MyKolodaViewController: UIViewController {
         //update user's swipe values
         ref.child("swipes").child(user!).child(ids[index]).updateChildValues(swipeValues)
         
-        //set up the dictionary of people the other user has swiped on 
+        //set up the dictionary of people the other user has swiped on
         let swipe = ref.child("swipes").child(ids[index]).child(user!)
         let matchingSelf = ref.child("user-profiles").child(user!).child("matches")
         let matchingTarget = ref.child("user-profiles").child(ids[index]).child("matches")
@@ -133,11 +135,8 @@ extension MyKolodaViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
- 
-//        let profile = ref.child("user-profiles").child(ids[index])
 
         let user = Auth.auth().currentUser?.uid
-//        let id =
         
         if direction == .right{
             let swipeValues = [
