@@ -267,6 +267,17 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery")
         
         if (currentCity != "") {
+            if (cities.contains(currentCity)) {
+                let alert = UIAlertController(
+                    title: "Oops!",
+                    message: "You've already added this city.",
+                    preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
             cities.append(currentCity)
             
             for currentCity in cities {
@@ -308,12 +319,6 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         }
         
         currentCity = ""
-        
-        if (futureCity1.isHidden == false && futureCity2.isHidden == false && futureCity3.isHidden == false) {
-            addButton.isHidden = true
-        } else {
-            addButton.isHidden = false
-        }
     }
     
     // Click to Remove City
@@ -338,10 +343,6 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 citiesRef.child(currentCity).child(user!).removeValue()
             }
             n += 1
-        }
-        
-        if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
-            addButton.isHidden = false
         }
     }
     
@@ -368,10 +369,6 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
             }
             n += 1
         }
-        
-        if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
-            addButton.isHidden = false
-        }
     }
     
     @IBAction func city3ButtonPressed(_ sender: Any) {
@@ -396,10 +393,6 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 citiesRef.child(currentCity).child(user!).removeValue()
             }
             n += 1
-        }
-        
-        if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
-            addButton.isHidden = false
         }
     }
     

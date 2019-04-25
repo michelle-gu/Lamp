@@ -253,6 +253,17 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
         let discoverySettingsRef = userRef.child(user!).child("settings").child("discovery")
         
         if (currentCity != "") {
+            if (cities.contains(currentCity)) {
+                let alert = UIAlertController(
+                    title: "Oops!",
+                    message: "You've already added this city.",
+                    preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
             cities.append(currentCity)
             
             for currentCity in cities {
@@ -283,12 +294,6 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
         }
         
         currentCity = ""
-        
-        if (futureCity1.isHidden == false && futureCity2.isHidden == false && futureCity3.isHidden == false) {
-            addButton.isHidden = true
-        } else {
-            addButton.isHidden = false
-        }
     }
     
     // Click to Remove City
@@ -328,10 +333,6 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
             }
             n += 1
         }
-        
-        if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
-            addButton.isHidden = false
-        }
     }
     
     @IBAction func city2Pressed(_ sender: Any) {
@@ -370,10 +371,6 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
             }
             n += 1
         }
-        
-        if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
-            addButton.isHidden = false
-        }
     }
     
     @IBAction func city3Pressed(_ sender: Any) {
@@ -411,10 +408,6 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
                 }
             }
             n += 1
-        }
-        
-        if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
-            addButton.isHidden = false
         }
     }
     

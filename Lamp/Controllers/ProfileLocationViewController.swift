@@ -60,7 +60,7 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         uniPicker.delegate = self
         uniTextField.inputView = uniPicker
         
-        self.mapButton.setTitle("Add a location", for: .normal)
+        self.mapButton.setTitle("Where are you moving?", for: .normal)
         self.mapButton.setTitleColor(UIColor(red: 0.78, green: 0.78, blue: 0.80, alpha: 1), for: .normal)
         self.mapButton.layer.borderWidth = 0.25
         self.mapButton.layer.cornerRadius = self.mapButton.bounds.height / 5
@@ -89,7 +89,6 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     
     override func viewWillAppear(_ animated: Bool) {
         getLocationText()
-        uniTextField.reloadInputViews()
     }
     
     // MARK: - Database Retrieval
@@ -99,9 +98,11 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         getCities() { (citiesArray) in
             self.cities = citiesArray
             locationText = self.cities.joined(separator: ", ")
+            if (locationText.isEmpty == false) {
+                self.mapButton.setTitle(locationText, for: .normal)
+                self.mapButton.setTitleColor(UIColor.black, for: .normal)
+            }
             
-            self.mapButton.setTitle(locationText, for: .normal)
-            self.mapButton.setTitleColor(UIColor.black, for: .normal)
         }
     }
     
