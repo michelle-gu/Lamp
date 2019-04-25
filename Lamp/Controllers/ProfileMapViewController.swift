@@ -85,6 +85,10 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
             }
         }
         
+        // tap gesture recognizer
+        let tapRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(recognizeTapGesture(recognizer:)))
+        self.mapView.addGestureRecognizer(tapRecognizer)
+        
         //centerMapOnLocation(location: initialLocation)
         
         // button styling
@@ -95,11 +99,6 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         addCityToList.layer.borderWidth = 1
         addCityToList.layer.cornerRadius = addButton.bounds.height / 1.5
         addCityToList.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
-        
-        /*
-        radiusOkButton.layer.borderWidth = 1
-        radiusOkButton.layer.cornerRadius = addButton.bounds.height / 3
-        radiusOkButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor */
         
     }
     
@@ -195,11 +194,41 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 
                 // Zoom in on map to the pinpoint
                 let coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
-                let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+                let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
                 let region = MKCoordinateRegion(center: coordinate, span: span)
                 self.mapView.setRegion(region, animated: true)
             }
         }
+    }
+    
+    // pinpoint via gesture
+    @IBAction func recognizeTapGesture(recognizer: UITapGestureRecognizer) {
+        // Remove existing pinpoints
+        let pinpoints = self.mapView.annotations
+        self.mapView.removeAnnotations(pinpoints)
+        
+        // Create pinpoint
+        let pinpoint = MKPointAnnotation()
+        let touchPoint: CGPoint = recognizer.location(in: mapView)
+        let newCoordinate: CLLocationCoordinate2D = mapView.convert(touchPoint, toCoordinateFrom: mapView)
+        pinpoint.coordinate = newCoordinate
+        
+        
+        self.location = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
+        
+        // convert coordinates to city name
+        self.fetchCityAndCountry(from: self.location) { city, country, error in
+            guard let city = city, error == nil else { return }
+            self.currentCity = city
+            pinpoint.title = self.currentCity
+        }
+        
+        self.mapView.addAnnotation(pinpoint)
+        
+        // Zoom in on map to the pinpoint
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: newCoordinate, span: span)
+        self.mapView.setRegion(region, animated: true)
     }
     
     // Convert a Coordinate into a Placemark
