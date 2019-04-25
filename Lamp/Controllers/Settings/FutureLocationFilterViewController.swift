@@ -30,6 +30,7 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
     let locationManager = CLLocationManager()
     var location = CLLocation()
     var currentCity: String = ""
+    let searchIcon = UIImage(named: "add_search_icon")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,11 +85,10 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
         let tapRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(recognizeTapGesture(recognizer:)))
         self.mapView.addGestureRecognizer(tapRecognizer)
         
-        // button styling
-        addButton.layer.borderWidth = 1
-        addButton.layer.cornerRadius = addButton.bounds.height / 2
-        addButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
+        addButton.setImage(searchIcon, for: .normal)
+        addButton.imageView?.contentMode = .scaleAspectFit
         
+        // button styling
         addCityToList.layer.borderWidth = 1
         addCityToList.layer.cornerRadius = addButton.bounds.height / 1.5
         addCityToList.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor

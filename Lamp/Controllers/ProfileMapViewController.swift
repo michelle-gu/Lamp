@@ -35,6 +35,7 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     var currentCity: String = ""
     //let searchRadius: CLLocationDistance = 2000
     //let initialLocation = CLLocation(latitude: 37.773972, longitude: -122.431297)
+    let searchIcon = UIImage(named: "add_search_icon")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,11 +92,14 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         
         //centerMapOnLocation(location: initialLocation)
         
-        // button styling
-        addButton.layer.borderWidth = 1
-        addButton.layer.cornerRadius = addButton.bounds.height / 2
-        addButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
+//        addButton.layer.borderWidth = 1
+//        addButton.layer.cornerRadius = addButton.bounds.height / 2
+//        addButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
         
+        addButton.setImage(searchIcon, for: .normal)
+        addButton.imageView?.contentMode = .scaleAspectFit
+        
+        // button styling
         addCityToList.layer.borderWidth = 1
         addCityToList.layer.cornerRadius = addButton.bounds.height / 1.5
         addCityToList.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor

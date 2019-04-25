@@ -30,6 +30,9 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
     var locationManager = CLLocationManager()
     var location = CLLocation()
     var currentCity: String = ""
+    let searchIcon = UIImage(named: "search_icon")!
+    let screenWidth = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,14 +87,27 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
         let tapRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(recognizeTapGesture(recognizer:)))
         self.mapView.addGestureRecognizer(tapRecognizer)
         
+        // add icon to search button
+        view.bringSubviewToFront(addButton)
+        addButton.setImage(searchIcon, for: .normal)
+        addButton.imageView?.contentMode = .scaleAspectFit
+        addButton.imageEdgeInsets = UIEdgeInsets(top: 17, left: 17, bottom: 17, right: 17)
+        
         // button styling
         addButton.layer.borderWidth = 1
         addButton.layer.cornerRadius = addButton.bounds.height / 2
         addButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
         
+        
         addCityToList.layer.borderWidth = 1
-        addCityToList.layer.cornerRadius = addButton.bounds.height / 1.5
+        addCityToList.layer.cornerRadius = addButton.bounds.height / 2
         addCityToList.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
+        
+        // button constraints
+        addButton.frame.origin.x = screenWidth - 75
+        addButton.frame.origin.y = screenHeight - 112
+        addCityToList.frame.origin.x = screenWidth - 75
+        addCityToList.frame.origin.y = screenHeight - 184
     }
     
     // updates a user's location and shows it on the map!
