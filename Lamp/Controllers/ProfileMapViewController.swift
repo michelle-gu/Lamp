@@ -35,7 +35,9 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     var currentCity: String = ""
     //let searchRadius: CLLocationDistance = 2000
     //let initialLocation = CLLocation(latitude: 37.773972, longitude: -122.431297)
-    let searchIcon = UIImage(named: "add_search_icon")!
+    let searchIcon = UIImage(named: "search_icon")!
+    let screenWidth = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +61,10 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         // Update location
         DispatchQueue.main.async {
             self.locationManager.startUpdatingLocation()
+        }
+        
+        if (currentCity.isEmpty) {
+            addCityToList.isHidden = true
         }
         
         getCities() { (citiesArray) in
@@ -92,17 +98,25 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         
         //centerMapOnLocation(location: initialLocation)
         
-//        addButton.layer.borderWidth = 1
-//        addButton.layer.cornerRadius = addButton.bounds.height / 2
-//        addButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
-        
+        // add icon to search button
+        view.bringSubviewToFront(addButton)
         addButton.setImage(searchIcon, for: .normal)
         addButton.imageView?.contentMode = .scaleAspectFit
+        addButton.imageEdgeInsets = UIEdgeInsets(top: 17, left: 17, bottom: 17, right: 17)
         
         // button styling
+        addButton.layer.borderWidth = 1
+        addButton.layer.cornerRadius = addButton.bounds.height / 2
+        addButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
         addCityToList.layer.borderWidth = 1
-        addCityToList.layer.cornerRadius = addButton.bounds.height / 1.5
+        addCityToList.layer.cornerRadius = addButton.bounds.height / 2
         addCityToList.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
+        
+        // button constraints
+        addButton.frame.origin.x = screenWidth - 75
+        addButton.frame.origin.y = screenHeight - 112
+        addCityToList.frame.origin.x = screenWidth - 75
+        addCityToList.frame.origin.y = screenHeight - 184
         
     }
     
@@ -195,6 +209,7 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 
                 pinpoint.coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
                 self.mapView.addAnnotation(pinpoint)
+                self.addCityToList.isHidden = false
                 
                 // Zoom in on map to the pinpoint
                 let coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
@@ -228,6 +243,7 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         }
         
         self.mapView.addAnnotation(pinpoint)
+        addCityToList.isHidden = false
         
         // Zoom in on map to the pinpoint
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
@@ -246,8 +262,38 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     
     // Add to list of cities
     @IBAction func addCityToListButtonPressed(_ sender: Any) {
+        let locationRef = self.citiesRef
+        let profileRef = self.userRef.child(user!).child("profile")
+        let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery")
+        
         if (currentCity != "") {
             cities.append(currentCity)
+            
+            for currentCity in cities {
+                let locationValues: [String : Any] = [
+                    currentCity : [
+                        user : true
+                    ]
+                ]
+                // updated locations
+                locationRef.updateChildValues(locationValues)
+                
+                let values: [String : Any] = [
+                    currentCity: true
+                ]
+                
+                // update locations nested in user>profile>futureLoc
+                profileRef.child("futureLoc").updateChildValues(values)
+                
+                // update locations nested in user>settings>discovery>futureLoc
+                discoverySettingsRef.child("futureLoc").updateChildValues(values)
+            }
+            
+            profileRef.observe(.value, with: { (snapshot) in
+                // Read snapshot
+                let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+                // If value exists, pre-populate newMessages switch
+            })
         }
         
         if (futureCity1.isHidden == true && currentCity != "") {
@@ -363,48 +409,6 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
     } */
     
     // MARK: Navigation
-    @IBAction func saveButtonClicked(_ sender: Any) {
-        let locationRef = self.citiesRef
-        let profileRef = self.userRef.child(user!).child("profile")
-        let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery")
-        
-        print("Current cities array: ", cities)
-        
-        // add each city in array to Firebase
-        for currentCity in cities {
-            let locationValues: [String : Any] = [
-                currentCity : [
-                    user : true
-                ]
-            ]
-            // updated locations
-            locationRef.updateChildValues(locationValues)
-            
-            let values: [String : Any] = [
-                currentCity: true
-            ]
-            
-            print("updating locations with value: ", values)
-            
-            // update locations nested in user>profile>futureLoc
-            profileRef.child("futureLoc").updateChildValues(values)
-            
-            // update locations nested in user>settings>discovery>futureLoc
-            discoverySettingsRef.child("futureLoc").updateChildValues(values)
-        }        
-        
-        profileRef.observe(.value, with: { (snapshot) in
-            // Read snapshot
-            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
-            // If value exists, pre-populate newMessages switch
-            
-            print("Current profile: ", profileDict)
-        })
-        
-        self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func cancelButtonClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)

@@ -31,8 +31,8 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     // MARK: - Outlets
     @IBOutlet weak var profilePictureView: UIImageView!
     @IBOutlet weak var uniTextField: UITextField!
-    @IBOutlet weak var futureLocTextField: UITextField!
     @IBOutlet weak var occupationTextField: UITextField!
+    @IBOutlet weak var mapButton: UIButton!
     
     // MARK: - Functions
     func textFieldShouldReturn(textField:UITextField) -> Bool {
@@ -49,7 +49,6 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         super.viewDidLoad()
 
         // TextField Delegates
-        futureLocTextField.delegate = self
         uniTextField.delegate = self
         
         // Do any additional setup after loading the view.
@@ -61,6 +60,12 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         uniPicker.delegate = self
         uniTextField.inputView = uniPicker
         
+        self.mapButton.setTitle("Add a location", for: .normal)
+        self.mapButton.setTitleColor(UIColor(red: 0.78, green: 0.78, blue: 0.80, alpha: 1), for: .normal)
+        self.mapButton.layer.borderWidth = 0.25
+        self.mapButton.layer.cornerRadius = self.mapButton.bounds.height / 5
+        self.mapButton.layer.borderColor = UIColor(red: 0.78, green: 0.78, blue: 0.80, alpha: 1).cgColor
+        
         // Pre-populate with values from Firebase
         let profile = profilesRef.child(user!).child("profile")
         profile.observe(.value, with: { (snapshot) in
@@ -68,7 +73,7 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
             if let uniVal = profileDict["uni"] as? String {
                 self.uniTextField?.text = uniVal
             }
-//            self.getLocationText()
+            
             if let occupationVal = profileDict["occupation"] as? String {
                 self.occupationTextField?.text = occupationVal
             }
@@ -95,7 +100,8 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
             self.cities = citiesArray
             locationText = self.cities.joined(separator: ", ")
             
-            self.futureLocTextField.text = locationText
+            self.mapButton.setTitle(locationText, for: .normal)
+            self.mapButton.setTitleColor(UIColor.black, for: .normal)
         }
     }
     
@@ -141,7 +147,7 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     @IBAction func doneButtonPressed(_ sender: Any) {
         guard
             let uni = uniTextField.text,
-            let futureLoc = futureLocTextField.text,
+            let futureLoc = mapButton.titleLabel?.text,
             let occupation = occupationTextField.text,
             uni.count > 0,
             futureLoc.count > 0,

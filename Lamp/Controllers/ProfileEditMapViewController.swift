@@ -58,6 +58,10 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
             self.locationManager.startUpdatingLocation()
         }
         
+        if (currentCity.isEmpty) {
+            addCityToList.isHidden = true
+        }
+        
         getCities() { (citiesArray) in
             self.cities = citiesArray
             
@@ -193,6 +197,7 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
                 
                 pinpoint.coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
                 self.mapView.addAnnotation(pinpoint)
+                self.addCityToList.isHidden = false
                 
                 // Zoom in on map to the pinpoint
                 let coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
@@ -226,6 +231,7 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
         }
         
         self.mapView.addAnnotation(pinpoint)
+        addCityToList.isHidden = false
         
         // Zoom in on map to the pinpoint
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
@@ -243,8 +249,26 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
     }
     
     @IBAction func addCityButtonPressed(_ sender: Any) {
+        let profileRef = self.userRef.child(user!).child("profile")
+        let discoverySettingsRef = userRef.child(user!).child("settings").child("discovery")
+        
         if (currentCity != "") {
             cities.append(currentCity)
+            
+            for currentCity in cities {
+                let values: [String : Any] = [
+                    currentCity: true
+                ]
+                
+                // update locations
+                citiesRef.updateChildValues(values)
+                
+                // update locations nested in user>profile>futureLoc
+                profileRef.child("futureLoc").updateChildValues(values)
+                
+                // update locations nested in user>settings>discovery>futureLocs
+                discoverySettingsRef.child("futureLoc").updateChildValues(values)
+            }
         }
         
         if (futureCity1.isHidden == true && currentCity != "") {
@@ -392,31 +416,6 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
         if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
             addButton.isHidden = false
         }
-    }
-    
-    // MARK: - Navigation
-    @IBAction func saveButtonPressed(_ sender: Any) {
-        let profileRef = self.userRef.child(user!).child("profile")
-        let discoverySettingsRef = userRef.child(user!).child("settings").child("discovery")
-        
-        // add each city in array to Firebase
-        for currentCity in cities {
-            let values: [String : Any] = [
-                currentCity: true
-            ]
-            
-            // update locations
-            citiesRef.updateChildValues(values)
-            
-            // update locations nested in user>profile>futureLoc
-            profileRef.child("futureLoc").updateChildValues(values)
-            
-            // update locations nested in user>settings>discovery>futureLocs
-            discoverySettingsRef.child("futureLoc").updateChildValues(values)
-        }
-        
-        self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true, completion: nil)
     }
     
     // code to dismiss keyboard when user clicks on background
