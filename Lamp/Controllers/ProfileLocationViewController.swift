@@ -66,7 +66,14 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         self.mapButton.layer.cornerRadius = self.mapButton.bounds.height / 5
         self.mapButton.layer.borderColor = UIColor(red: 0.78, green: 0.78, blue: 0.80, alpha: 1).cgColor
         
-        // Pre-populate with values from Firebase
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // populate the future location value from Firebase
+        getLocationText()
+        
+        // populate the uni and job values from Firebase
         let profile = profilesRef.child(user!).child("profile")
         profile.observe(.value, with: { (snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
@@ -85,10 +92,6 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
                 }
             }
         })
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        getLocationText()
     }
     
     // MARK: - Database Retrieval
