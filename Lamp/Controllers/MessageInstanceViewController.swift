@@ -36,34 +36,8 @@ class MessageInstanceViewController: MessagesViewController {
         
         reference = db.collection(["channels", channelId, "thread"].joined(separator: "/"))
 
-        let testMessage = Message(userId: userId, content: "I love pizza, what is your favorite kind?")
-        insertNewMessage(testMessage)
-        
-        // set up current profile info
-//        profileRef = Database.database().reference(withPath: "user-profiles")
-//        let user = Auth.auth().currentUser?.uid
-//        let profile = profileRef.child(user!).child("profile")
-
-//        profile.observe(.value, with: { (snapshot) in
-//            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
-//
-//            // set channel title
-//            let profileName = profileDict["firstName"] as! String
-//            self.member = Member(memberID: user ?? "no user id", name: profileName, color: .blue)
-//
-//            let myMessage = Message(member: self.member, text: "Hello!!", messageId: UUID().uuidString)
-//            self.insertNewMessage(myMessage)
-//
-//        })
-
-//        let testMessage = Message(userId: "1234567890", text: "hellooooo", messageId: UUID().uuidString)
-//        let testMessage2 = Message(userId: "2345678901", text: "bye felicia", messageId: UUID().uuidString)
-//        let testMessage3 = Message(userId: "3456789012", text: "you are cool", messageId: UUID().uuidString)
-
+//        let testMessage = Message(userId: userId, content: "I love pizza, what is your favorite kind?")
 //        insertNewMessage(testMessage)
-//        insertNewMessage(testMessage2)
-//        insertNewMessage(testMessage3)
-
         
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
@@ -203,16 +177,25 @@ extension MessageInstanceViewController: MessagesDisplayDelegate {
     }
 }
 
-
 extension MessageInstanceViewController: MessageInputBarDelegate {
     func messageInputBar(
         _ inputBar: MessageInputBar,
         didPressSendButtonWith text: String) {
         
-        let newMessage = Message(userId: userId, content: text)
+//        let newMessage = Message(userId: userId, content: text)
+//
+//        messages.append(newMessage)
+//        inputBar.inputTextView.text = ""
         
-        messages.append(newMessage)
+        // 1
+        let message = Message(userId: userId, content: text)
+        
+        // 2
+        save(message)
+        
+        // 3
         inputBar.inputTextView.text = ""
+        
         messagesCollectionView.reloadData()
         messagesCollectionView.scrollToBottom(animated: true)
     }
