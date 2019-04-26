@@ -30,6 +30,9 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
     let locationManager = CLLocationManager()
     var location = CLLocation()
     var currentCity: String = ""
+    let searchIcon = UIImage(named: "search_icon")!
+    let screenWidth = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +56,10 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
         // Update location
         DispatchQueue.main.async {
             self.locationManager.startUpdatingLocation()
+        }
+        
+        if (currentCity.isEmpty) {
+            addCityToList.isHidden = true
         }
         
         getCities() { (citiesArray) in
@@ -80,14 +87,29 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
             }
         }
         
+        // tap gesture recognizer
+        let tapRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(recognizeTapGesture(recognizer:)))
+        self.mapView.addGestureRecognizer(tapRecognizer)
+        
+        // add icon to search button
+        view.bringSubviewToFront(addButton)
+        addButton.setImage(searchIcon, for: .normal)
+        addButton.imageView?.contentMode = .scaleAspectFit
+        addButton.imageEdgeInsets = UIEdgeInsets(top: 17, left: 17, bottom: 17, right: 17)
+        
         // button styling
         addButton.layer.borderWidth = 1
         addButton.layer.cornerRadius = addButton.bounds.height / 2
         addButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
-        
         addCityToList.layer.borderWidth = 1
-        addCityToList.layer.cornerRadius = addButton.bounds.height / 1.5
+        addCityToList.layer.cornerRadius = addButton.bounds.height / 2
         addCityToList.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
+        
+        // button constraints
+        addButton.frame.origin.x = screenWidth - 75
+        addButton.frame.origin.y = screenHeight - 112
+        addCityToList.frame.origin.x = screenWidth - 75
+        addCityToList.frame.origin.y = screenHeight - 184
     }
     
     // updates a user's location and shows it on the map!
@@ -173,14 +195,46 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
                 
                 pinpoint.coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
                 self.mapView.addAnnotation(pinpoint)
+                self.addCityToList.isHidden = false
                 
                 // Zoom in on map to the pinpoint
                 let coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
-                let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+                let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
                 let region = MKCoordinateRegion(center: coordinate, span: span)
                 self.mapView.setRegion(region, animated: true)
             }
         }
+    }
+    
+    // pinpoint via gesture
+    @IBAction func recognizeTapGesture(recognizer: UITapGestureRecognizer) {
+        // Remove existing pinpoints
+        let pinpoints = self.mapView.annotations
+        self.mapView.removeAnnotations(pinpoints)
+        
+        // Create pinpoint
+        let pinpoint = MKPointAnnotation()
+        let touchPoint: CGPoint = recognizer.location(in: mapView)
+        let newCoordinate: CLLocationCoordinate2D = mapView.convert(touchPoint, toCoordinateFrom: mapView)
+        pinpoint.coordinate = newCoordinate
+        
+        
+        self.location = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
+        
+        // convert coordinates to city name
+        self.fetchCityAndCountry(from: self.location) { city, country, error in
+            guard let city = city, error == nil else { return }
+            self.currentCity = city
+            pinpoint.title = self.currentCity
+        }
+        
+        self.mapView.addAnnotation(pinpoint)
+        addCityToList.isHidden = false
+        
+        // Zoom in on map to the pinpoint
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: newCoordinate, span: span)
+        self.mapView.setRegion(region, animated: true)
     }
     
     // Convert a Coordinate into a Placemark
@@ -193,8 +247,37 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
     }
     
     @IBAction func addCityButtonPressed(_ sender: Any) {
+        let profileRef = self.userRef.child(user!).child("profile")
+        let discoverySettingsRef = userRef.child(user!).child("settings").child("discovery")
+        
         if (currentCity != "") {
+            if (cities.contains(currentCity)) {
+                let alert = UIAlertController(
+                    title: "Oops!",
+                    message: "You've already added this city.",
+                    preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
             cities.append(currentCity)
+            
+            for currentCity in cities {
+                let values: [String : Any] = [
+                    currentCity: true
+                ]
+                
+                // update locations
+                citiesRef.child(user!).updateChildValues(values)
+                
+                // update locations nested in user>profile>futureLoc
+                profileRef.child("futureLoc").updateChildValues(values)
+                
+                // update locations nested in user>settings>discovery>futureLocs
+                discoverySettingsRef.child("futureLoc").updateChildValues(values)
+            }
         }
         
         if (futureCity1.isHidden == true && currentCity != "") {
@@ -209,12 +292,6 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
         }
         
         currentCity = ""
-        
-        if (futureCity1.isHidden == false && futureCity2.isHidden == false && futureCity3.isHidden == false) {
-            addButton.isHidden = true
-        } else {
-            addButton.isHidden = false
-        }
     }
     
     // Click to Remove City
@@ -254,10 +331,6 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
             }
             n += 1
         }
-        
-        if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
-            addButton.isHidden = false
-        }
     }
     
     @IBAction func city2Pressed(_ sender: Any) {
@@ -295,10 +368,6 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
                 }
             }
             n += 1
-        }
-        
-        if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
-            addButton.isHidden = false
         }
     }
     
@@ -338,35 +407,6 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
             }
             n += 1
         }
-        
-        if (futureCity1.isHidden == true || futureCity2.isHidden == true || futureCity3.isHidden == true) {
-            addButton.isHidden = false
-        }
-    }
-    
-    // MARK: - Navigation
-    @IBAction func saveButtonPressed(_ sender: Any) {
-        let profileRef = self.userRef.child(user!).child("profile")
-        let discoverySettingsRef = userRef.child(user!).child("settings").child("discovery")
-        
-        // add each city in array to Firebase
-        for currentCity in cities {
-            let values: [String : Any] = [
-                currentCity: true
-            ]
-            
-            // update locations
-            citiesRef.child(user!).updateChildValues(values)
-            
-            // update locations nested in user>profile>futureLoc
-            profileRef.child("futureLoc").updateChildValues(values)
-            
-            // update locations nested in user>settings>discovery>futureLocs
-            discoverySettingsRef.child("futureLoc").updateChildValues(values)
-        }
-        
-        self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true, completion: nil)
     }
     
     // code to dismiss keyboard when user clicks on background

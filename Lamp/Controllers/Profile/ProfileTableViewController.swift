@@ -87,6 +87,9 @@ class ProfileTableViewController: UITableViewController {
             var locArr: [String] = []
             for city in profileDict["futureLoc"] as! [String: Bool] {
                 locArr.append(city.key)
+                if (locArr.count == 0) {
+                    locArr.append("temp")
+                }
             }
             let futureLocStr = locArr.joined(separator: ", ")
             self.futureLocsLabel.text = futureLocStr
