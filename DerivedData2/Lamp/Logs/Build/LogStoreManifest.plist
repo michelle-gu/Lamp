@@ -70,6 +70,38 @@
 			<key>uniqueIdentifier</key>
 			<string>0AF72BA7-94AD-4E76-BE92-9BF8B63BFD63</string>
 		</dict>
+		<key>0B8C1CB6-71D9-4CEF-8891-FFDD8D3DB197</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>0B8C1CB6-71D9-4CEF-8891-FFDD8D3DB197.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578004159.36663902</real>
+			<key>timeStoppedRecording</key>
+			<real>578004166.61791301</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>0B8C1CB6-71D9-4CEF-8891-FFDD8D3DB197</string>
+		</dict>
 		<key>0EB54BF8-4781-4BA4-BE63-47319365CDD3</key>
 		<dict>
 			<key>className</key>
@@ -870,6 +902,38 @@
 			<key>uniqueIdentifier</key>
 			<string>5755B52E-AD89-4B5E-8D25-64FAA524B998</string>
 		</dict>
+		<key>58433A1F-34B0-4463-B8D7-63A6681E98C5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>58433A1F-34B0-4463-B8D7-63A6681E98C5.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578004465.78644001</real>
+			<key>timeStoppedRecording</key>
+			<real>578004472.83386099</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>58433A1F-34B0-4463-B8D7-63A6681E98C5</string>
+		</dict>
 		<key>5946677C-107C-430A-B0DB-D399F9DC8567</key>
 		<dict>
 			<key>className</key>
@@ -965,6 +1029,38 @@
 			<string>Build Lamp</string>
 			<key>uniqueIdentifier</key>
 			<string>5B67759B-50CF-45D4-859C-88C57B9DFA45</string>
+		</dict>
+		<key>5F044A7F-AA94-47F4-BA24-73361EE9DAB5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>5F044A7F-AA94-47F4-BA24-73361EE9DAB5.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578004053.74596095</real>
+			<key>timeStoppedRecording</key>
+			<real>578004057.470456</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>5F044A7F-AA94-47F4-BA24-73361EE9DAB5</string>
 		</dict>
 		<key>60C5956A-6C3A-4780-9063-8CDE32B54E3A</key>
 		<dict>
@@ -1158,6 +1254,70 @@
 			<key>uniqueIdentifier</key>
 			<string>6CC53541-9AEC-457A-88BC-B5E9166661C2</string>
 		</dict>
+		<key>6FE6ABC5-442F-4836-9D6C-E7B1E313C4B4</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6FE6ABC5-442F-4836-9D6C-E7B1E313C4B4.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578002792.30557299</real>
+			<key>timeStoppedRecording</key>
+			<real>578002799.03126895</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>6FE6ABC5-442F-4836-9D6C-E7B1E313C4B4</string>
+		</dict>
+		<key>71A4B3BD-5D7A-40A5-A84C-263EF9AD5FA2</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>71A4B3BD-5D7A-40A5-A84C-263EF9AD5FA2.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578004410.07656503</real>
+			<key>timeStoppedRecording</key>
+			<real>578004417.01845098</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>71A4B3BD-5D7A-40A5-A84C-263EF9AD5FA2</string>
+		</dict>
 		<key>740C28E9-698D-4292-8224-18998AB3D376</key>
 		<dict>
 			<key>className</key>
@@ -1253,6 +1413,38 @@
 			<string>Build Lamp</string>
 			<key>uniqueIdentifier</key>
 			<string>777BF328-9190-4739-8080-B74B892FD50A</string>
+		</dict>
+		<key>80784172-28FD-40D7-814B-A3615D77D8E5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>80784172-28FD-40D7-814B-A3615D77D8E5.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578002740.17526901</real>
+			<key>timeStoppedRecording</key>
+			<real>578002746.95847595</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>80784172-28FD-40D7-814B-A3615D77D8E5</string>
 		</dict>
 		<key>81C8C4CA-FDE6-4005-9726-88F19CF916DD</key>
 		<dict>
@@ -1702,6 +1894,38 @@
 			<key>uniqueIdentifier</key>
 			<string>98CB907B-C82C-4253-AC00-F3AB3D3912FB</string>
 		</dict>
+		<key>99660BEC-44BF-4629-8B2C-03A7320FC64F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>99660BEC-44BF-4629-8B2C-03A7320FC64F.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578004272.30767405</real>
+			<key>timeStoppedRecording</key>
+			<real>578004279.34357905</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>99660BEC-44BF-4629-8B2C-03A7320FC64F</string>
+		</dict>
 		<key>9A81993A-0FFA-44A7-B43D-A5D2641DE669</key>
 		<dict>
 			<key>className</key>
@@ -1765,6 +1989,38 @@
 			<string>Build Lamp</string>
 			<key>uniqueIdentifier</key>
 			<string>9B40CE3E-B914-4CE8-BCB7-583FFD4EFFA1</string>
+		</dict>
+		<key>9B935540-A6BC-40FF-986E-B68FB36DE492</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9B935540-A6BC-40FF-986E-B68FB36DE492.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578004073.629421</real>
+			<key>timeStoppedRecording</key>
+			<real>578004080.72370005</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>9B935540-A6BC-40FF-986E-B68FB36DE492</string>
 		</dict>
 		<key>9BFD6BD9-AE42-4749-BCDA-CAAFEF2DC6E3</key>
 		<dict>
@@ -2438,6 +2694,38 @@
 			<key>uniqueIdentifier</key>
 			<string>C53FD13A-868B-45C6-BA14-7110E8699638</string>
 		</dict>
+		<key>C54D5F97-4D62-4CA7-A2D0-4ED84C343448</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C54D5F97-4D62-4CA7-A2D0-4ED84C343448.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578004554.58365202</real>
+			<key>timeStoppedRecording</key>
+			<real>578004561.70797706</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>C54D5F97-4D62-4CA7-A2D0-4ED84C343448</string>
+		</dict>
 		<key>C56188BF-46F2-464A-8889-691392764641</key>
 		<dict>
 			<key>className</key>
@@ -2469,6 +2757,38 @@
 			<string>Build Lamp</string>
 			<key>uniqueIdentifier</key>
 			<string>C56188BF-46F2-464A-8889-691392764641</string>
+		</dict>
+		<key>C5F53261-F31C-4FA7-8BFA-6460880860AE</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C5F53261-F31C-4FA7-8BFA-6460880860AE.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578004642.62948596</real>
+			<key>timeStoppedRecording</key>
+			<real>578004649.84682798</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>C5F53261-F31C-4FA7-8BFA-6460880860AE</string>
 		</dict>
 		<key>C69D256E-F414-48F0-8968-DE562EBBAA2F</key>
 		<dict>
@@ -2533,6 +2853,38 @@
 			<string>Build Lamp</string>
 			<key>uniqueIdentifier</key>
 			<string>CC1FDF62-8C32-4509-8049-359FB80B2880</string>
+		</dict>
+		<key>D15753C8-C626-4BFE-A7DC-1C1E162ED61F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D15753C8-C626-4BFE-A7DC-1C1E162ED61F.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578002821.42783499</real>
+			<key>timeStoppedRecording</key>
+			<real>578002828.11723495</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>D15753C8-C626-4BFE-A7DC-1C1E162ED61F</string>
 		</dict>
 		<key>D2B9012E-66BE-460D-8C09-F240C03BA6B5</key>
 		<dict>
@@ -3045,6 +3397,38 @@
 			<string>Build Lamp</string>
 			<key>uniqueIdentifier</key>
 			<string>F1EF844A-4286-4DB4-B195-B02CDCBD5FD5</string>
+		</dict>
+		<key>F8341466-E925-4DAE-A4BE-B4AAAA1D6AFE</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F8341466-E925-4DAE-A4BE-B4AAAA1D6AFE.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578002856.58968103</real>
+			<key>timeStoppedRecording</key>
+			<real>578002863.32625401</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>F8341466-E925-4DAE-A4BE-B4AAAA1D6AFE</string>
 		</dict>
 		<key>FDD9706E-B58D-48E7-8310-8626C87B7B05</key>
 		<dict>

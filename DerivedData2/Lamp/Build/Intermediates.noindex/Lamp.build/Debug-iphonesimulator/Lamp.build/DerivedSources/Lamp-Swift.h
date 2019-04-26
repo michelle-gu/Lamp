@@ -770,8 +770,6 @@ SWIFT_CLASS("_TtC4Lamp19ToggleTableViewCell")
 @end
 
 
-
-
 SWIFT_CLASS("_TtC4Lamp32UniversitiesFilterViewController")
 @interface UniversitiesFilterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;

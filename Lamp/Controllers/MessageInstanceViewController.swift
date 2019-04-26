@@ -10,23 +10,39 @@ import UIKit
 import Firebase
 import MessageKit
 import MessageInputBar
+import FirebaseFirestore
 
 class MessageInstanceViewController: MessagesViewController {
 
     var profileRef: DatabaseReference!
-    let db = Database.database()
 
-    var messages: [Message] = []
+//    var messages: [Message] = []
     
-    var userId: String = ""
-
+    var userId: String = "JHanuudAYNg4hTvMbLS9poOdCrx1"
+    
+    // MARK: Firestore
+    private let db = Firestore.firestore()
+    private var reference: CollectionReference?
+    private let storage = Storage.storage().reference()
+    
+    private var messages: [Message] = []
+    private var messageListener: ListenerRegistration?
+    
+//    private let user: User
+    private let channelId: String = "FK3etvRW7SmKraOgQB6L"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        reference = db.collection(["channels", channelId, "thread"].joined(separator: "/"))
+
+        let testMessage = Message(userId: userId, content: "I love pizza, what is your favorite kind?")
+        insertNewMessage(testMessage)
+        
         // set up current profile info
-        profileRef = Database.database().reference(withPath: "user-profiles")
-        let user = Auth.auth().currentUser?.uid
-        let profile = profileRef.child(user!).child("profile")
+//        profileRef = Database.database().reference(withPath: "user-profiles")
+//        let user = Auth.auth().currentUser?.uid
+//        let profile = profileRef.child(user!).child("profile")
 
 //        profile.observe(.value, with: { (snapshot) in
 //            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
@@ -40,13 +56,13 @@ class MessageInstanceViewController: MessagesViewController {
 //
 //        })
 
-        let testMessage = Message(userId: "1234567890", text: "hellooooo", messageId: UUID().uuidString)
-        let testMessage2 = Message(userId: "2345678901", text: "bye felicia", messageId: UUID().uuidString)
-        let testMessage3 = Message(userId: "3456789012", text: "you are cool", messageId: UUID().uuidString)
+//        let testMessage = Message(userId: "1234567890", text: "hellooooo", messageId: UUID().uuidString)
+//        let testMessage2 = Message(userId: "2345678901", text: "bye felicia", messageId: UUID().uuidString)
+//        let testMessage3 = Message(userId: "3456789012", text: "you are cool", messageId: UUID().uuidString)
 
-        insertNewMessage(testMessage)
-        insertNewMessage(testMessage2)
-        insertNewMessage(testMessage3)
+//        insertNewMessage(testMessage)
+//        insertNewMessage(testMessage2)
+//        insertNewMessage(testMessage3)
 
         
         messagesCollectionView.messagesDataSource = self
@@ -57,6 +73,17 @@ class MessageInstanceViewController: MessagesViewController {
         styleChatRoom()
     }
     
+    // MARK: Helpers
+    private func save(_ message: Message) {
+        reference?.addDocument(data: message.representation) { error in
+            if let e = error {
+                print("Error sending message: \(e.localizedDescription)")
+                return
+            }
+            
+            self.messagesCollectionView.scrollToBottom()
+        }
+    }
     
     private func insertNewMessage(_ message: Message) {
         messages.append(message)
@@ -92,7 +119,7 @@ extension MessageInstanceViewController: MessagesDataSource {
     }
     
     func currentSender() -> Sender {
-        return Sender(id: "1234567890", displayName: "")
+        return Sender(id: userId, displayName: "")
     }
     
     func messageForItem(
@@ -123,15 +150,13 @@ extension MessageInstanceViewController: MessagesLayoutDelegate {
     
     func avatarSize(for message: MessageType, at indexPath: IndexPath,
                     in messagesCollectionView: MessagesCollectionView) -> CGSize {
-        
-        // 1
+
         return .zero
     }
     
     func footerViewSize(for message: MessageType, at indexPath: IndexPath,
                         in messagesCollectionView: MessagesCollectionView) -> CGSize {
-        
-        // 2
+
         return CGSize(width: 0, height: 8)
     }
 
@@ -139,7 +164,6 @@ extension MessageInstanceViewController: MessagesLayoutDelegate {
                            at indexPath: IndexPath,
                            with maxWidth: CGFloat,
                            in messagesCollectionView: MessagesCollectionView) -> CGFloat {
-        
         return 0
     }
 }
@@ -185,16 +209,7 @@ extension MessageInstanceViewController: MessageInputBarDelegate {
         _ inputBar: MessageInputBar,
         didPressSendButtonWith text: String) {
         
-//        let newMessage = Message(
-//            key: UUID().uuidString,
-//            user: (Auth.auth().currentUser)!,
-//            content: text)
-//
-        
-        let newMessage = Message(
-            userId: userId,
-            text: text,
-            messageId: UUID().uuidString)
+        let newMessage = Message(userId: "1234567890", content: text)
         
         messages.append(newMessage)
         inputBar.inputTextView.text = ""
