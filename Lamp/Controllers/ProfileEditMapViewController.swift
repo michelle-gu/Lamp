@@ -107,7 +107,8 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
         addCityToList.layer.cornerRadius = addButton.bounds.height / 2
         addCityToList.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
         
-        // button constraints
+        // constraints
+        mapView.frame.size.width = screenWidth
         addButton.frame.origin.x = screenWidth - 75
         addButton.frame.origin.y = screenHeight - 112
         addCityToList.frame.origin.x = screenWidth - 75
