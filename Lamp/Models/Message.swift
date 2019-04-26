@@ -10,20 +10,15 @@ import Foundation
 import UIKit
 import MessageKit
 
-struct Member {
-    let memberID: String
-    let name: String
-}
-
 // MessageKit works with messages that conform to the MessageType protocol
 struct Message: MessageType {
     
-    let member: Member
+    let userId: String
     let text: String
     let messageId: String
     
     var sender: Sender {
-        return Sender(id: member.name, displayName: member.name)
+        return Sender(id: userId, displayName: "")
     }
     
     var sentDate: Date {

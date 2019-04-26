@@ -17,9 +17,8 @@ class MessageInstanceViewController: MessagesViewController {
     let db = Database.database()
 
     var messages: [Message] = []
-    var member: Member!
-    var member2: Member!
-    var member3: Member!
+    
+    var userId: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,15 +40,10 @@ class MessageInstanceViewController: MessagesViewController {
 //
 //        })
 
-        member = Member(memberID: "profile-id", name: "Jessica")
-        let testMessage = Message(member: member, text: "This is my message", messageId: UUID().uuidString)
-        
-        member2 = Member(memberID: "profile-id2", name: "James")
-        let testMessage2 = Message(member: member2, text: "Hey!", messageId: UUID().uuidString)
-        
-        member3 = Member(memberID: "profile-id3", name: "Frannie")
-        let testMessage3 = Message(member: member3, text: "I love pizza", messageId: UUID().uuidString)
-        
+        let testMessage = Message(userId: "1234567890", text: "hellooooo", messageId: UUID().uuidString)
+        let testMessage2 = Message(userId: "2345678901", text: "bye felicia", messageId: UUID().uuidString)
+        let testMessage3 = Message(userId: "3456789012", text: "you are cool", messageId: UUID().uuidString)
+
         insertNewMessage(testMessage)
         insertNewMessage(testMessage2)
         insertNewMessage(testMessage3)
@@ -98,7 +92,7 @@ extension MessageInstanceViewController: MessagesDataSource {
     }
     
     func currentSender() -> Sender {
-        return Sender(id: member.name, displayName: member.name) // variable member not being set!! ******************
+        return Sender(id: "1234567890", displayName: "")
     }
     
     func messageForItem(
@@ -126,6 +120,21 @@ extension MessageInstanceViewController: MessagesDataSource {
 
 
 extension MessageInstanceViewController: MessagesLayoutDelegate {
+    
+    func avatarSize(for message: MessageType, at indexPath: IndexPath,
+                    in messagesCollectionView: MessagesCollectionView) -> CGSize {
+        
+        // 1
+        return .zero
+    }
+    
+    func footerViewSize(for message: MessageType, at indexPath: IndexPath,
+                        in messagesCollectionView: MessagesCollectionView) -> CGSize {
+        
+        // 2
+        return CGSize(width: 0, height: 8)
+    }
+
     func heightForLocation(message: MessageType,
                            at indexPath: IndexPath,
                            with maxWidth: CGFloat,
@@ -137,15 +146,36 @@ extension MessageInstanceViewController: MessagesLayoutDelegate {
 
 
 extension MessageInstanceViewController: MessagesDisplayDelegate {
+    // bubble background colors
+    func backgroundColor(for message: MessageType, at indexPath: IndexPath,
+                         in messagesCollectionView: MessagesCollectionView) -> UIColor {
+        let senderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1)
+        let receiverColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
+        return isFromCurrentSender(message: message) ? senderColor : receiverColor
+    }
+    
+    // bubble headers display
+    func shouldDisplayHeader(for message: MessageType, at indexPath: IndexPath,
+                             in messagesCollectionView: MessagesCollectionView) -> Bool {
+        return false
+    }
+    
+    // bubble tail style
+    func messageStyle(for message: MessageType, at indexPath: IndexPath,
+                      in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
+        let corner: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
+        return .bubbleTail(corner, .curved)
+    }
+    
     func configureAvatarView(
         _ avatarView: AvatarView,
         for message: MessageType,
         at indexPath: IndexPath,
         in messagesCollectionView: MessagesCollectionView) {
         
-//        let message = messages[indexPath.section]
-//        let color = message.member.color
-//        avatarView.backgroundColor = color
+        let senderInitials = "S"
+        let receiverInitials = "R"
+        avatarView.initials = isFromCurrentSender(message: message) ? senderInitials : receiverInitials
     }
 }
 
@@ -162,7 +192,7 @@ extension MessageInstanceViewController: MessageInputBarDelegate {
 //
         
         let newMessage = Message(
-            member: member,
+            userId: userId,
             text: text,
             messageId: UUID().uuidString)
         

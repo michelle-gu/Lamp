@@ -3,6 +3,7 @@
 <plist version="1.0">
 <array>
 	<string>MapKit</string>
+	<string>Protobuf</string>
 	<string>SceneKit</string>
 	<string>FirebaseCore</string>
 	<string>Bolts</string>
@@ -21,6 +22,7 @@
 	<string>FirebaseMLVisionTextModel</string>
 	<string>SafariServices</string>
 	<string>FirebaseMLModelInterpreter</string>
+	<string>mach</string>
 	<string>AVFoundation</string>
 	<string>FirebaseMessaging</string>
 	<string>GoogleMobileAds</string>
@@ -39,6 +41,7 @@
 	<string>FirebaseInvites</string>
 	<string>CoreImage</string>
 	<string>AdSupport</string>
+	<string>CoreFoundation</string>
 	<string>FirebasePerformance</string>
 	<string>Kingfisher</string>
 	<string>Crashlytics</string>
@@ -71,8 +74,8 @@
 	<string>UIKit</string>
 	<string>Fabric</string>
 	<string>CoreTelephony</string>
-	<string>FirebaseMLVisionBarcodeModel</string>
 	<string>Foundation</string>
+	<string>FirebaseMLVisionBarcodeModel</string>
 	<string>sys</string>
 	<string>FirebaseFirestore</string>
 </array>
