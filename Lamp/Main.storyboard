@@ -511,13 +511,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Use the map to add locations" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8QG-ze-MQh">
-                                <rect key="frame" x="37" y="440" width="301" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job Title / Occupation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAB-LW-Qd5">
                                 <rect key="frame" x="37" y="488" width="161" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -532,17 +525,6 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNK-Ik-8dX">
-                                <rect key="frame" x="296" y="415" width="35" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                <state key="normal" title="MAP">
-                                    <color key="titleColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="t7y-ra-mxw" kind="show" identifier="openMap" id="e4G-g4-Um8"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5m-lV-bIu">
                                 <rect key="frame" x="99" y="597" width="177" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -566,12 +548,23 @@
                                 <color key="backgroundColor" red="0.96808308359999995" green="0.56691890950000001" blue="0.72591620680000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNK-Ik-8dX">
+                                <rect key="frame" x="37" y="440" width="301" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <state key="normal" title="Add a location">
+                                    <color key="titleColor" red="0.78024488687515259" green="0.780070960521698" blue="0.80069750547409058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="t7y-ra-mxw" kind="show" identifier="openMap" id="e4G-g4-Um8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tJO-Nj-4HI"/>
                     </view>
                     <connections>
-                        <outlet property="futureLocTextField" destination="8QG-ze-MQh" id="eHk-eT-KLT"/>
+                        <outlet property="mapButton" destination="DNK-Ik-8dX" id="SjQ-9U-znJ"/>
                         <outlet property="occupationTextField" destination="sDn-mk-5Xb" id="n18-GJ-BOD"/>
                         <outlet property="profilePictureView" destination="2kC-M0-PXD" id="HRl-so-oCe"/>
                         <outlet property="uniTextField" destination="FNH-AD-iAe" id="0bU-mB-gLK"/>
@@ -619,11 +612,11 @@
                                 </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmE-Z9-3W0">
-                                <rect key="frame" x="276" y="738" width="84" height="40"/>
+                                <rect key="frame" x="299" y="628" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
-                                <state key="normal" title="Add City">
+                                <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -661,10 +654,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kS-bJ-mXd">
-                                <rect key="frame" x="329" y="100" width="30" height="30"/>
+                                <rect key="frame" x="299" y="700" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <state key="normal" title="+">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
                                     <color key="titleColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -676,16 +671,10 @@
                         <viewLayoutGuide key="safeArea" id="Sl4-cr-Yek"/>
                     </view>
                     <navigationItem key="navigationItem" title="Future Location" id="NWJ-T3-hoW">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="SXC-S1-0gN">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="SXC-S1-0gN">
                             <color key="tintColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="cancelButtonClicked:" destination="uT8-Ch-rGB" id="Eda-a0-7E1"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="sac-02-C9P">
-                            <color key="tintColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="saveButtonClicked:" destination="uT8-Ch-rGB" id="JMI-MK-gbJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1188,11 +1177,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNU-ev-Mof">
-                                <rect key="frame" x="276" y="738" width="84" height="40"/>
+                                <rect key="frame" x="299" y="628" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
-                                <state key="normal" title="Add City">
+                                <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -1201,10 +1190,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duY-KN-N3J">
-                                <rect key="frame" x="330" y="100" width="30" height="30"/>
+                                <rect key="frame" x="299" y="700" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <state key="normal" title="+"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="searchButtonPressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="mh1-6j-iT1"/>
                                 </connections>
@@ -1214,11 +1204,7 @@
                         <viewLayoutGuide key="safeArea" id="Ttz-jR-AjW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Future Location" id="lJK-QL-JmZ">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="Tc8-YX-AcG">
-                            <connections>
-                                <action selector="saveButtonPressed:" destination="eve-d7-OLb" id="6pZ-mk-XB7"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="backBarButtonItem" title="Done" id="0Dl-Gm-USn"/>
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="duY-KN-N3J" id="sIb-eA-RjJ"/>
@@ -2618,7 +2604,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gb3-Jb-Yhe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10236" y="1764.5320197044337"/>
+            <point key="canvasLocation" x="11178.4" y="1764.5320197044337"/>
         </scene>
         <!--Match Message View Controller-->
         <scene sceneID="BdU-na-0W9">
@@ -2722,6 +2708,136 @@
             <point key="canvasLocation" x="3436" y="922"/>
         </scene>
         <!--Navigation Controller-->
+        <scene sceneID="0c3-aF-mhj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PwM-K5-2cI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jHe-ZU-uAg">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bto-im-ZXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2661.5999999999999" y="1764.5320197044337"/>
+        </scene>
+        <!--Profile Edit Map View Controller-->
+        <scene sceneID="gzz-qA-kxP">
+            <objects>
+                <viewController id="zA6-ti-gFg" customClass="ProfileEditMapViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1eT-6o-FVH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Locations (Click to Remove)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6a-Hz-BPi">
+                                <rect key="frame" x="16" y="104" width="228" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rU5-GZ-gO1">
+                                <rect key="frame" x="299" y="700" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="zA6-ti-gFg" eventType="touchUpInside" id="2Hi-VI-lCH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06w-12-paP">
+                                <rect key="frame" x="16" y="135" width="110" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="city1ButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="EO1-lc-D4L"/>
+                                    <action selector="city1Pressed:" destination="zA6-ti-gFg" eventType="touchUpInside" id="N8q-GK-2sN"/>
+                                    <action selector="city1Pressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="lLx-Vv-W0G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40R-62-8oj">
+                                <rect key="frame" x="132" y="135" width="110" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="city1ButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="JbP-3R-aR0"/>
+                                    <action selector="city1Pressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="bGy-ea-szK"/>
+                                    <action selector="city2Pressed:" destination="zA6-ti-gFg" eventType="touchUpInside" id="Imy-4s-5rr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsf-FQ-4j9">
+                                <rect key="frame" x="249" y="135" width="110" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="city1ButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="NcA-xv-gG5"/>
+                                    <action selector="city1Pressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="KNP-Fd-HzG"/>
+                                    <action selector="city3Pressed:" destination="zA6-ti-gFg" eventType="touchUpInside" id="A2W-Jf-Iqc"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QQU-vT-O2u">
+                                <rect key="frame" x="0.0" y="183" width="375" height="629"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxh-N3-EL7">
+                                <rect key="frame" x="299" y="628" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCityButtonPressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="IaR-LK-R2E"/>
+                                    <action selector="addCityButtonPressed:" destination="zA6-ti-gFg" eventType="touchUpInside" id="L0B-f7-nig"/>
+                                    <action selector="addCityToListButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="KFw-SQ-MY2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TlZ-JP-APG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Dn-6c-cOq"/>
+                    <connections>
+                        <outlet property="addButton" destination="rU5-GZ-gO1" id="vrD-Lb-OQN"/>
+                        <outlet property="addCityToList" destination="Xxh-N3-EL7" id="iaO-of-Vb5"/>
+                        <outlet property="futureCity1" destination="06w-12-paP" id="kxP-vw-TZc"/>
+                        <outlet property="futureCity2" destination="40R-62-8oj" id="5E4-vS-Fmh"/>
+                        <outlet property="futureCity3" destination="lsf-FQ-4j9" id="f8T-mQ-EYA"/>
+                        <outlet property="mapView" destination="QQU-vT-O2u" id="rk2-yP-jHN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QMM-V7-FIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6206" y="1779"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="XVv-mI-Z37">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eWr-FF-ddu" sceneMemberID="viewController">
@@ -2737,7 +2853,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPE-0C-J9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6767.1999999999998" y="1764.5320197044337"/>
+            <point key="canvasLocation" x="7709.6000000000004" y="1764.5320197044337"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gR3-iv-1DW">
@@ -2773,7 +2889,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dB-zO-zR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9293.6000000000004" y="1764.5320197044337"/>
+            <point key="canvasLocation" x="10236" y="1764.5320197044337"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="pVX-Gb-cRt">
@@ -2918,13 +3034,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Future Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aCH-Rr-gNZ">
-                                                    <rect key="frame" x="145" y="6" width="214" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Future Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCG-tS-zJU">
                                                     <rect key="frame" x="16" y="12" width="107" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2932,6 +3041,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uyt-6K-N2s">
+                                                    <rect key="frame" x="145" y="6" width="214" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                    <state key="normal" title="Add Location">
+                                                        <color key="titleColor" red="0.78024488690000005" green="0.78007096050000002" blue="0.80069750549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="zA6-ti-gFg" kind="show" id="Whl-g2-xg2"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -3226,7 +3346,7 @@
                         <outlet property="changeProfilePicButton" destination="a2K-cX-ucz" id="mio-id-KUi"/>
                         <outlet property="emailField" destination="MH3-nP-6Di" id="pvi-hK-ygh"/>
                         <outlet property="facebookField" destination="ESj-um-THs" id="JF8-R1-heR"/>
-                        <outlet property="futureLocationField" destination="aCH-Rr-gNZ" id="tsp-EK-7vU"/>
+                        <outlet property="futureLocationField" destination="Uyt-6K-N2s" id="hg4-eY-yOG"/>
                         <outlet property="genderField" destination="X2j-A3-VpF" id="KHK-xo-KF4"/>
                         <outlet property="nameField" destination="rCi-gN-oYj" id="lbL-Gv-zx1"/>
                         <outlet property="numBedroomsField" destination="JEO-A1-roN" id="edt-w2-P5u"/>
@@ -3271,7 +3391,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YS3-yl-8TS"/>
-        <segue reference="ABV-LS-boM"/>
+        <segue reference="P1N-dK-ZZG"/>
         <segue reference="PA3-YF-Hx5"/>
         <segue reference="IdY-Gv-dXt"/>
     </inferredMetricsTieBreakers>

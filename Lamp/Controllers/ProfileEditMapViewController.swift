@@ -1,8 +1,8 @@
 //
-//  FutureLocationFilterViewController.swift
+//  ProfileEditMapViewController.swift
 //  Lamp
 //
-//  Created by Michelle Gu on 4/9/19.
+//  Created by Pearl Xie on 4/17/19.
 //  Copyright © 2019 LaMMP. All rights reserved.
 //
 
@@ -10,8 +10,8 @@ import UIKit
 import MapKit
 import Firebase
 
-class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, CLLocationManagerDelegate {
-
+class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, CLLocationManagerDelegate {
+    
     // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addButton: UIButton!
@@ -27,7 +27,7 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
     
     // MARK: Properties
     var cities:[String] = []
-    let locationManager = CLLocationManager()
+    var locationManager = CLLocationManager()
     var location = CLLocation()
     var currentCity: String = ""
     let searchIcon = UIImage(named: "search_icon")!
@@ -101,6 +101,8 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
         addButton.layer.borderWidth = 1
         addButton.layer.cornerRadius = addButton.bounds.height / 2
         addButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
+        
+        
         addCityToList.layer.borderWidth = 1
         addCityToList.layer.cornerRadius = addButton.bounds.height / 2
         addCityToList.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
@@ -270,7 +272,7 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
                 ]
                 
                 // update locations
-                citiesRef.child(user!).updateChildValues(values)
+                citiesRef.updateChildValues(values)
                 
                 // update locations nested in user>profile>futureLoc
                 profileRef.child("futureLoc").updateChildValues(values)
@@ -419,5 +421,4 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-
 }
