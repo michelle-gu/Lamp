@@ -124,7 +124,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             else {
                 let alert = UIAlertController(
                     title: "Edit Profile Failed",
-                    message: "Please fill in all basic info fields. You also must be at least 13 years old to use this app.",
+                    message: "Please fill in all basic info fields. You also must be at least 18 years old to use this app.",
                     preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -271,7 +271,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         let birthdayDate = myDateFormatter.date(from: birthday)!
         let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthdayDate, to: now)
         let age = ageComponents.year!
-        return age >= 13
+        return age >= 18
     }
 
     
