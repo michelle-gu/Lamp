@@ -22,22 +22,33 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var logOutButton: UIBarButtonItem!
     
     @IBAction func logOutButtonPressed(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-            print("Logged out")
-            self.performSegue(withIdentifier: "unwindToLoginSegueIdentifier", sender: self)
-
-        } catch (let error) {
-            print("Logged out error")
-            // FIXME: Test if this works
-            let alert = UIAlertController(
-                title: "Log Out Failed",
-                message: error.localizedDescription,
-                preferredStyle: .alert)
+        
+        let alert = UIAlertController(
+            title: "Log Out",
+            message: "Are you sure you want to log out?",
+            preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Log Out", style: .default, handler: { [weak alert] (_) in
+            do {
+                try Auth.auth().signOut()
+                print("Logged out")
+                self.performSegue(withIdentifier: "unwindToLoginSegueIdentifier", sender: self)
+                
+            } catch (let error) {
+                print("Logged out error")
+                // FIXME: Test if this works
+                let alert = UIAlertController(
+                    title: "Log Out Failed",
+                    message: error.localizedDescription,
+                    preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }))
             
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
-            self.present(alert, animated: true, completion: nil)
-        }
+        self.present(alert, animated: true, completion: nil)
     }
     
     // MARK: Lifecycle
