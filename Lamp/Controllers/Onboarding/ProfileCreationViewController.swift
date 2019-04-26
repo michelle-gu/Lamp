@@ -97,7 +97,7 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
             else {
                 let alert = UIAlertController(
                     title: "Profile Creation Failed",
-                    message: "Please fill in all fields. You must be at least 13 years old to use this app.",
+                    message: "Please fill in all fields. You must be at least 18 years old to use this app.",
                     preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -305,7 +305,7 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         let birthdayDate = myDateFormatter.date(from: birthday)!
         let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthdayDate, to: now)
         let age = ageComponents.year!
-        return age >= 13
+        return age >= 18
     }
     
     // MARK: - Text Field delegate
