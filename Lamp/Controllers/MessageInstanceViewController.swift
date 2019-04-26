@@ -54,15 +54,15 @@ class MessageInstanceViewController: MessagesViewController {
         insertNewMessage(testMessage2)
         insertNewMessage(testMessage3)
 
+        
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messageInputBar.delegate = self
         messagesCollectionView.messagesDisplayDelegate = self
 
-//        setUpNavigationBarItems()
+        styleChatRoom()
     }
     
-    // MARK: Styling
     
     private func insertNewMessage(_ message: Message) {
         messages.append(message)
@@ -71,6 +71,12 @@ class MessageInstanceViewController: MessagesViewController {
     
     // MARK: Styling
     
+    private func styleChatRoom() {
+        maintainPositionOnKeyboardFrameChanged = true
+        messageInputBar.inputTextView.tintColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1)
+        messageInputBar.sendButton.setTitleColor(UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1), for: .normal)
+    }
+
     private func setUpNavigationBarItems() {
         let imageView = UIImageView()
         imageView.widthAnchor.constraint(equalToConstant: 34).isActive = true

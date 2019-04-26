@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "2342c16b1e310ed959c659826578aa39"
-build_time: [1556255389, 460426000]
+build_time: [1556256066, 708268000]
 inputs:
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Profile/ProfileEditViewController.swift": [1556137694, 108263297]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Models/Channel.swift": [1556076598, 908522228]
@@ -43,5 +43,5 @@ inputs:
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Models/User.swift": [1553726760, 944726470]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Views/BioTableViewCell.swift": [1554488239, 717492924]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Views/CardView/CardView.swift": [1554953209, 810945645]
-  "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/MessageInstanceViewController.swift": [1556255389, 134633331]
+  "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/MessageInstanceViewController.swift": [1556256066, 362442848]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Profile/ProfileTableViewController.swift": [1556137694, 108554913]

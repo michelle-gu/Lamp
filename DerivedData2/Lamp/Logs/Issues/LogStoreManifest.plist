@@ -214,32 +214,6 @@
 			<key>uniqueIdentifier</key>
 			<string>558A2F41-E7C1-4DCD-836E-0F73D2921FC9</string>
 		</dict>
-		<key>66F2078E-B831-40CA-85C8-1B6614671BB7</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>66F2078E-B831-40CA-85C8-1B6614671BB7.xcactivitylog</string>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>Lamp-grkaaykclbgyxuanpupppowssgfe</string>
-			<key>timeStartedRecording</key>
-			<real>577948189.62987006</real>
-			<key>timeStoppedRecording</key>
-			<real>577948193.215729</real>
-			<key>title</key>
-			<string>Build target Lamp</string>
-			<key>uniqueIdentifier</key>
-			<string>66F2078E-B831-40CA-85C8-1B6614671BB7</string>
-		</dict>
 		<key>6E5D88E5-4CDE-429E-987E-BE64446C148B</key>
 		<dict>
 			<key>className</key>
@@ -525,6 +499,32 @@
 			<string>Build target MessageKit</string>
 			<key>uniqueIdentifier</key>
 			<string>D69C7099-556C-423B-BA2A-7943D1E6E700</string>
+		</dict>
+		<key>E9B51696-3B93-41FB-8DC1-B2259FDE0DC0</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>E9B51696-3B93-41FB-8DC1-B2259FDE0DC0.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>Lamp-grkaaykclbgyxuanpupppowssgfe</string>
+			<key>timeStartedRecording</key>
+			<real>577948866.80517197</real>
+			<key>timeStoppedRecording</key>
+			<real>577948870.46097803</real>
+			<key>title</key>
+			<string>Build target Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>E9B51696-3B93-41FB-8DC1-B2259FDE0DC0</string>
 		</dict>
 		<key>EBB068D0-2EF1-4156-908E-940845453252</key>
 		<dict>
