@@ -44,6 +44,7 @@ depends-top-level:
 - "NSLayoutConstraintSet"
 - !private "NotificationCenter"
 - "SeparatorLine"
+- "StringLiteralType"
 - "TernaryPrecedence"
 - "UIBlurEffect"
 - "UIColor"
