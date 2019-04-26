@@ -16,6 +16,13 @@ class MyKolodaViewController: UIViewController {
     var ref: DatabaseReference!
     var idDict: [String : NSObject] = [:]
     var ids: [String] = []
+    var genders: [String] = []
+    var locations: [String] = []
+    var universities: [String] = []
+    var min:Int = 0
+    var max:Int = 0
+    var matches:Set<String> = Set<String>()
+    
     
     @IBOutlet weak var kolodaView: KolodaView!
     
@@ -27,6 +34,7 @@ class MyKolodaViewController: UIViewController {
         kolodaView.dataSource = self
         kolodaView.delegate = self
         
+        setUserPref()
         getIds()
         getData()
 //        getIds()
@@ -46,6 +54,7 @@ class MyKolodaViewController: UIViewController {
         }
         
     }
+    
     func getIds() {
         ref.child("user-profiles").queryOrderedByKey().observe(.value, with: { (snapshot) in
 //            self.ids = snapshot
@@ -53,12 +62,72 @@ class MyKolodaViewController: UIViewController {
             
             for (key, _) in self.idDict {
                 if key != Auth.auth().currentUser?.uid{
+                    
                     self.ids.append(key)
                 }
             }
         })
         self.kolodaView.reloadData()
     }
+    
+    func setUserPref(){
+        let user = Auth.auth().currentUser?.uid
+        let preferences = ref.child("user-profiles").child(user!).child("settings").child("discovery")
+        preferences.observe(.value, with: {(snapshot) in
+            let prefDict = snapshot.value as? [String : AnyObject] ?? [:]
+            //let min and max age preferences to filter by
+            let ageMin = prefDict["ageMin"]
+            let ageMax = prefDict["ageMax"]
+            //get a list of the preferred future locations
+            let futureLoc = self.ref.child("user-profiles").child(user!).child("settings").child("discovery").child("futureLoc")
+            futureLoc.observe(.value, with: {(snapshot) in
+                let locDict = snapshot.value as? [String : AnyObject] ?? [:]
+                for (key,_) in locDict{
+                    self.locations.append(key)
+                }
+            })
+            //make a list of preferred genders
+            let gen = self.ref.child("user-profiles").child(user!).child("settings").child("discovery").child("genders")
+            gen.observe(.value, with: {(snapshot) in
+                let genDict = snapshot.value as? [String: AnyObject] ?? [:]
+                for (key, value) in genDict{
+                    let x = value as? Bool ?? false
+                    if x{
+                        self.genders.append(key)
+                    }
+                }
+            })
+            //make a list of universities
+            let uni = self.ref.child("user-profiles").child(user!).child("settings").child("discovery").child("universities")
+            uni.observe(.value, with: {(snapshot) in
+                let uniDict = snapshot.value as? [String:AnyObject] ?? [:]
+                for (key, _) in uniDict{
+                    self.universities.append(key)
+                }
+            })
+            
+            
+            self.min = ageMin as! Int
+            self.max = ageMax as! Int
+            //            loc = futureloc
+            
+        })
+        
+    }
+    
+    func filtering() {
+        //check each of the lists and labels to make sets
+//        let user = Auth.auth().currentUser?.uid
+        let genderMatches = self.ref.child("genders")// this is reaching into the genders dict
+        genderMatches.observe(.value, with: {(snapshot) in
+            //this is a dictionary of gender w/ list of users w/ booleans
+            let gendersDict = snapshot.value as? [String : AnyObject ] ?? [:]
+            
+        })
+        
+        
+    }
+    
     
     //should check if the other user has also "liked" this user
     @IBAction func yesButtonPressed(_ sender: Any) {
@@ -180,7 +249,7 @@ extension MyKolodaViewController: KolodaViewDataSource {
             locationList.observe(.value, with: {(snapshot) in
                 let locationDict = snapshot.value as? [String : AnyObject] ?? [:]
                 var counter = 0
-                for (key,value) in locationDict{
+                for (key,_) in locationDict{
                     counter += 1
                     if counter == 1{
                         location = "\(key)"
