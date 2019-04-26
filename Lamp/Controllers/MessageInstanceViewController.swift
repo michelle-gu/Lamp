@@ -209,7 +209,7 @@ extension MessageInstanceViewController: MessageInputBarDelegate {
         _ inputBar: MessageInputBar,
         didPressSendButtonWith text: String) {
         
-        let newMessage = Message(userId: "1234567890", content: text)
+        let newMessage = Message(userId: userId, content: text)
         
         messages.append(newMessage)
         inputBar.inputTextView.text = ""

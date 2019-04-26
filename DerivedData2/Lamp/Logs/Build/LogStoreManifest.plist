@@ -2982,6 +2982,38 @@
 			<key>uniqueIdentifier</key>
 			<string>DADD86AE-9757-463F-A5B0-1D30B38425A5</string>
 		</dict>
+		<key>DCFAE29E-211D-4A42-9938-232D841A6956</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DCFAE29E-211D-4A42-9938-232D841A6956.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578004770.06808603</real>
+			<key>timeStoppedRecording</key>
+			<real>578004777.62608397</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>DCFAE29E-211D-4A42-9938-232D841A6956</string>
+		</dict>
 		<key>DE70B0ED-8786-45B0-BF99-CE0EE6FFB64B</key>
 		<dict>
 			<key>className</key>
