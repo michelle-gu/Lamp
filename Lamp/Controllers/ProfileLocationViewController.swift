@@ -154,7 +154,7 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
             let futureLoc = mapButton.titleLabel?.text,
             let occupation = occupationTextField.text,
             uni.count > 0,
-            futureLoc.count > 0,
+            futureLoc != "Where are you moving?",
             occupation.count > 0
             //let profilePicture = profilePictureView.image
             else {
