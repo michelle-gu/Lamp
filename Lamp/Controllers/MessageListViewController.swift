@@ -15,7 +15,7 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
     var channelDict: [String : NSObject] = [:]
     
     // user match list
-    var channelIds: [String] = []
+    private var channelIds: [String] = []
     
     // MARK: Properties
     var ref: DatabaseReference!

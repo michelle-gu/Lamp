@@ -23,7 +23,6 @@ provides-dynamic-lookup:
 - "universitiesListLabel"
 - "viewDidLoad"
 depends-top-level:
-- !private "/"
 - !private "??"
 - !private "AnyObject"
 - "AssignmentPrecedence"
@@ -106,6 +105,7 @@ depends-member:
 - !private ["s7CVarArgP", "minAgeLabel"]
 - !private ["s7CVarArgP", "observe"]
 - ["s7CVarArgP", "rangeChangeFinished"]
+- ["s7CVarArgP", "rangeChangeStarted"]
 - ["s7CVarArgP", "rangeIsChanging"]
 - ["s7CVarArgP", "reference"]
 - !private ["s7CVarArgP", "scaleMaxValue"]
@@ -162,6 +162,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "minAgeLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "observe"]
 - ["s28CustomDebugStringConvertibleP", "rangeChangeFinished"]
+- ["s28CustomDebugStringConvertibleP", "rangeChangeStarted"]
 - ["s28CustomDebugStringConvertibleP", "rangeIsChanging"]
 - ["s28CustomDebugStringConvertibleP", "reference"]
 - !private ["s28CustomDebugStringConvertibleP", "scaleMaxValue"]
@@ -225,6 +226,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "minAgeLabel"]
 - !private ["s23CustomStringConvertibleP", "observe"]
 - ["s23CustomStringConvertibleP", "rangeChangeFinished"]
+- ["s23CustomStringConvertibleP", "rangeChangeStarted"]
 - ["s23CustomStringConvertibleP", "rangeIsChanging"]
 - ["s23CustomStringConvertibleP", "reference"]
 - !private ["s23CustomStringConvertibleP", "scaleMaxValue"]
@@ -296,6 +298,7 @@ depends-member:
 - ["4Lamp28DiscoveryTableViewControllerC", "minAgeLabel"]
 - ["4Lamp28DiscoveryTableViewControllerC", "numberOfSections"]
 - ["4Lamp28DiscoveryTableViewControllerC", "rangeChangeFinished"]
+- ["4Lamp28DiscoveryTableViewControllerC", "rangeChangeStarted"]
 - ["4Lamp28DiscoveryTableViewControllerC", "rangeIsChanging"]
 - ["4Lamp28DiscoveryTableViewControllerC", "selectFutureLocationSegueIdentifier"]
 - ["4Lamp28DiscoveryTableViewControllerC", "selectGenderSegueIdentifier"]
@@ -352,6 +355,7 @@ depends-member:
 - !private ["SQ", "minAgeLabel"]
 - !private ["SQ", "observe"]
 - ["SQ", "rangeChangeFinished"]
+- ["SQ", "rangeChangeStarted"]
 - ["SQ", "rangeIsChanging"]
 - ["SQ", "reference"]
 - !private ["SQ", "scaleMaxValue"]
@@ -414,6 +418,7 @@ depends-member:
 - !private ["SH", "minAgeLabel"]
 - !private ["SH", "observe"]
 - ["SH", "rangeChangeFinished"]
+- ["SH", "rangeChangeStarted"]
 - ["SH", "rangeIsChanging"]
 - ["SH", "reference"]
 - !private ["SH", "scaleMaxValue"]
@@ -464,6 +469,7 @@ depends-member:
 - !private ["So8NSCodingP", "maxDistanceValueLabel"]
 - !private ["So8NSCodingP", "minAgeLabel"]
 - ["So8NSCodingP", "rangeChangeFinished"]
+- ["So8NSCodingP", "rangeChangeStarted"]
 - ["So8NSCodingP", "rangeIsChanging"]
 - !private ["So8NSCodingP", "scaleMaxValue"]
 - !private ["So8NSCodingP", "scaleMinValue"]
@@ -496,6 +502,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "maxDistanceValueLabel"]
 - !private ["So26NSExtensionRequestHandlingP", "minAgeLabel"]
 - ["So26NSExtensionRequestHandlingP", "rangeChangeFinished"]
+- ["So26NSExtensionRequestHandlingP", "rangeChangeStarted"]
 - ["So26NSExtensionRequestHandlingP", "rangeIsChanging"]
 - !private ["So26NSExtensionRequestHandlingP", "showMyProfileSwitch"]
 - !private ["So26NSExtensionRequestHandlingP", "tableView"]
@@ -547,6 +554,7 @@ depends-member:
 - ["So8NSObjectC", "numberOfSections"]
 - !private ["So8NSObjectC", "observe"]
 - ["So8NSObjectC", "rangeChangeFinished"]
+- ["So8NSObjectC", "rangeChangeStarted"]
 - ["So8NSObjectC", "rangeIsChanging"]
 - ["So8NSObjectC", "reference"]
 - !private ["So8NSObjectC", "scaleMaxValue"]
@@ -598,6 +606,7 @@ depends-member:
 - !private ["So8NSObjectP", "minAgeLabel"]
 - !private ["So8NSObjectP", "observe"]
 - ["So8NSObjectP", "rangeChangeFinished"]
+- ["So8NSObjectP", "rangeChangeStarted"]
 - ["So8NSObjectP", "rangeIsChanging"]
 - ["So8NSObjectP", "reference"]
 - !private ["So8NSObjectP", "scaleMaxValue"]
@@ -648,6 +657,7 @@ depends-member:
 - !private ["13RangeUISlider0aB8DelegateP", "maxDistanceValueLabel"]
 - !private ["13RangeUISlider0aB8DelegateP", "minAgeLabel"]
 - ["13RangeUISlider0aB8DelegateP", "rangeChangeFinished"]
+- ["13RangeUISlider0aB8DelegateP", "rangeChangeStarted"]
 - ["13RangeUISlider0aB8DelegateP", "rangeIsChanging"]
 - !private ["13RangeUISlider0aB8DelegateP", "showMyProfileSwitch"]
 - !private ["13RangeUISlider0aB8DelegateP", "tableView"]
@@ -721,6 +731,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "maxDistanceValueLabel"]
 - !private ["So21UIAppearanceContainerP", "minAgeLabel"]
 - ["So21UIAppearanceContainerP", "rangeChangeFinished"]
+- ["So21UIAppearanceContainerP", "rangeChangeStarted"]
 - ["So21UIAppearanceContainerP", "rangeIsChanging"]
 - !private ["So21UIAppearanceContainerP", "scaleMaxValue"]
 - !private ["So21UIAppearanceContainerP", "scaleMinValue"]
@@ -753,6 +764,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "maxDistanceValueLabel"]
 - !private ["So18UIContentContainerP", "minAgeLabel"]
 - ["So18UIContentContainerP", "rangeChangeFinished"]
+- ["So18UIContentContainerP", "rangeChangeStarted"]
 - ["So18UIContentContainerP", "rangeIsChanging"]
 - !private ["So18UIContentContainerP", "showMyProfileSwitch"]
 - !private ["So18UIContentContainerP", "tableView"]
@@ -822,6 +834,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "maxDistanceValueLabel"]
 - !private ["So18UIFocusEnvironmentP", "minAgeLabel"]
 - ["So18UIFocusEnvironmentP", "rangeChangeFinished"]
+- ["So18UIFocusEnvironmentP", "rangeChangeStarted"]
 - ["So18UIFocusEnvironmentP", "rangeIsChanging"]
 - !private ["So18UIFocusEnvironmentP", "scaleMaxValue"]
 - !private ["So18UIFocusEnvironmentP", "scaleMinValue"]
@@ -895,6 +908,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "maxDistanceValueLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "minAgeLabel"]
 - ["So30UIPasteConfigurationSupportingP", "rangeChangeFinished"]
+- ["So30UIPasteConfigurationSupportingP", "rangeChangeStarted"]
 - ["So30UIPasteConfigurationSupportingP", "rangeIsChanging"]
 - !private ["So30UIPasteConfigurationSupportingP", "scaleMaxValue"]
 - !private ["So30UIPasteConfigurationSupportingP", "scaleMinValue"]
@@ -944,6 +958,7 @@ depends-member:
 - ["So11UIResponderC", "minAgeLabel"]
 - ["So11UIResponderC", "numberOfSections"]
 - ["So11UIResponderC", "rangeChangeFinished"]
+- ["So11UIResponderC", "rangeChangeStarted"]
 - ["So11UIResponderC", "rangeIsChanging"]
 - !private ["So11UIResponderC", "scaleMaxValue"]
 - !private ["So11UIResponderC", "scaleMinValue"]
@@ -987,6 +1002,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "maxDistanceValueLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "minAgeLabel"]
 - ["So30UIResponderStandardEditActionsP", "rangeChangeFinished"]
+- ["So30UIResponderStandardEditActionsP", "rangeChangeStarted"]
 - ["So30UIResponderStandardEditActionsP", "rangeIsChanging"]
 - !private ["So30UIResponderStandardEditActionsP", "scaleMaxValue"]
 - !private ["So30UIResponderStandardEditActionsP", "scaleMinValue"]
@@ -1019,6 +1035,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "maxDistanceValueLabel"]
 - !private ["So20UIScrollViewDelegateP", "minAgeLabel"]
 - ["So20UIScrollViewDelegateP", "rangeChangeFinished"]
+- ["So20UIScrollViewDelegateP", "rangeChangeStarted"]
 - ["So20UIScrollViewDelegateP", "rangeIsChanging"]
 - !private ["So20UIScrollViewDelegateP", "showMyProfileSwitch"]
 - !private ["So20UIScrollViewDelegateP", "tableView"]
@@ -1047,6 +1064,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "maxDistanceValueLabel"]
 - !private ["So16UIStateRestoringP", "minAgeLabel"]
 - ["So16UIStateRestoringP", "rangeChangeFinished"]
+- ["So16UIStateRestoringP", "rangeChangeStarted"]
 - ["So16UIStateRestoringP", "rangeIsChanging"]
 - !private ["So16UIStateRestoringP", "showMyProfileSwitch"]
 - !private ["So16UIStateRestoringP", "tableView"]
@@ -1086,6 +1104,7 @@ depends-member:
 - ["So21UITableViewControllerC", "minAgeLabel"]
 - ["So21UITableViewControllerC", "numberOfSections"]
 - ["So21UITableViewControllerC", "rangeChangeFinished"]
+- ["So21UITableViewControllerC", "rangeChangeStarted"]
 - ["So21UITableViewControllerC", "rangeIsChanging"]
 - ["So21UITableViewControllerC", "selectFutureLocationSegueIdentifier"]
 - ["So21UITableViewControllerC", "selectGenderSegueIdentifier"]
@@ -1116,6 +1135,7 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "maxDistanceValueLabel"]
 - !private ["So21UITableViewDataSourceP", "minAgeLabel"]
 - ["So21UITableViewDataSourceP", "rangeChangeFinished"]
+- ["So21UITableViewDataSourceP", "rangeChangeStarted"]
 - ["So21UITableViewDataSourceP", "rangeIsChanging"]
 - !private ["So21UITableViewDataSourceP", "showMyProfileSwitch"]
 - !private ["So21UITableViewDataSourceP", "tableView"]
@@ -1142,6 +1162,7 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "maxDistanceValueLabel"]
 - !private ["So19UITableViewDelegateP", "minAgeLabel"]
 - ["So19UITableViewDelegateP", "rangeChangeFinished"]
+- ["So19UITableViewDelegateP", "rangeChangeStarted"]
 - ["So19UITableViewDelegateP", "rangeIsChanging"]
 - !private ["So19UITableViewDelegateP", "showMyProfileSwitch"]
 - !private ["So19UITableViewDelegateP", "tableView"]
@@ -1176,6 +1197,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "maxDistanceValueLabel"]
 - !private ["So18UITraitEnvironmentP", "minAgeLabel"]
 - ["So18UITraitEnvironmentP", "rangeChangeFinished"]
+- ["So18UITraitEnvironmentP", "rangeChangeStarted"]
 - ["So18UITraitEnvironmentP", "rangeIsChanging"]
 - !private ["So18UITraitEnvironmentP", "scaleMaxValue"]
 - !private ["So18UITraitEnvironmentP", "scaleMinValue"]
@@ -1215,6 +1237,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "maxDistanceValueLabel"]
 - !private ["So23UIUserActivityRestoringP", "minAgeLabel"]
 - ["So23UIUserActivityRestoringP", "rangeChangeFinished"]
+- ["So23UIUserActivityRestoringP", "rangeChangeStarted"]
 - ["So23UIUserActivityRestoringP", "rangeIsChanging"]
 - !private ["So23UIUserActivityRestoringP", "scaleMaxValue"]
 - !private ["So23UIUserActivityRestoringP", "scaleMinValue"]
@@ -1270,6 +1293,7 @@ depends-member:
 - ["So16UIViewControllerC", "minAgeLabel"]
 - ["So16UIViewControllerC", "numberOfSections"]
 - ["So16UIViewControllerC", "rangeChangeFinished"]
+- ["So16UIViewControllerC", "rangeChangeStarted"]
 - ["So16UIViewControllerC", "rangeIsChanging"]
 - ["So16UIViewControllerC", "selectFutureLocationSegueIdentifier"]
 - ["So16UIViewControllerC", "selectGenderSegueIdentifier"]
@@ -1328,6 +1352,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "minAgeLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "observe"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "rangeChangeFinished"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "rangeChangeStarted"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "rangeIsChanging"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "reference"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "scaleMaxValue"]
@@ -1479,6 +1504,7 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Modules/Koloda.swiftmodule/x86_64.swiftmodule"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/MessageInputBar.swiftmodule/x86_64.swiftmodule"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/RangeUISlider.swiftmodule/x86_64.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/Kingfisher.swiftmodule/x86_64.swiftmodule"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/MessageKit.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
@@ -1486,6 +1512,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Accelerate.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
@@ -1495,24 +1522,32 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MapKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
-- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POP.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FirebaseInstanceID-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers/Koloda-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/pop-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageReference.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
@@ -1524,6 +1559,10 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRServerValue.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthCredential.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
@@ -1551,6 +1590,7 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGameCenterAuthProvider.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimator.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPVector.h"
@@ -1567,27 +1607,32 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers/Koloda-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimationEvent.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPGeometry.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimatableProperty.h"
 - "/Users/lindseythompson/Desktop/Lamp/Pods/Firebase/CoreOnly/Sources/module.modulemap"
-- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
@@ -1596,6 +1641,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Accelerate.framework/Headers/Accelerate.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
@@ -1603,6 +1649,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"

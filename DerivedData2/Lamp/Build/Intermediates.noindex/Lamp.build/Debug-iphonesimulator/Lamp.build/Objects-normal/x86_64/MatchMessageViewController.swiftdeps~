@@ -16,6 +16,8 @@ depends-top-level:
 - !private "/"
 - "AssignmentPrecedence"
 - !private "BooleanLiteralType"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
 - "MatchMessageViewController"
 - "UIButton"
 - !private "UIColor"

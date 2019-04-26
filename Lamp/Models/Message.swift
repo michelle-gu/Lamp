@@ -11,8 +11,8 @@ import UIKit
 import MessageKit
 
 struct Member {
+    let memberID: String
     let name: String
-    let color: UIColor
 }
 
 // MessageKit works with messages that conform to the MessageType protocol

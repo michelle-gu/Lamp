@@ -6,14 +6,15 @@
 	<string>SceneKit</string>
 	<string>FirebaseCore</string>
 	<string>Bolts</string>
-	<string>libkern</string>
 	<string>WebKit</string>
+	<string>libkern</string>
 	<string>FirebaseStorage</string>
 	<string>FirebaseInAppMessaging</string>
 	<string>CoreLocation</string>
 	<string>GameKit</string>
-	<string>FirebaseDatabase</string>
+	<string>ImageIO</string>
 	<string>StoreKit</string>
+	<string>FirebaseDatabase</string>
 	<string>Firebase</string>
 	<string>CoreServices</string>
 	<string>FirebaseFunctions</string>
@@ -26,22 +27,26 @@
 	<string>MobileCoreServices</string>
 	<string>WatchKit</string>
 	<string>FirebaseInstanceID</string>
-	<string>FirebaseMLVisionFaceModel</string>
-	<string>AdSupport</string>
-	<string>FirebaseAuthInterop</string>
 	<string>CoreText</string>
+	<string>FirebaseMLVisionFaceModel</string>
+	<string>FirebaseAuthInterop</string>
+	<string>FBSDKLoginKit</string>
 	<string>FirebaseMLNaturalLanguage</string>
 	<string>FirebaseMLVisionLabelModel</string>
 	<string>AppKit</string>
-	<string>FBSDKLoginKit</string>
 	<string>FBSDKCoreKit</string>
 	<string>FirebaseAuth</string>
 	<string>FirebaseInvites</string>
+	<string>CoreImage</string>
+	<string>AdSupport</string>
 	<string>FirebasePerformance</string>
+	<string>Kingfisher</string>
 	<string>Crashlytics</string>
 	<string>Accounts</string>
 	<string>CoreData</string>
 	<string>netinet</string>
+	<string>Accelerate</string>
+	<string>FirebaseMLNLSmartReply</string>
 	<string>CommonCrypto</string>
 	<string>GoogleUtilities</string>
 	<string>FirebaseRemoteConfig</string>
@@ -50,15 +55,15 @@
 	<string>FirebaseMLVision</string>
 	<string>FirebaseCrash</string>
 	<string>GTMSessionFetcher</string>
+	<string>AudioToolbox</string>
 	<string>FirebaseMLNLLanguageID</string>
 	<string>QuartzCore</string>
-	<string>SystemConfiguration</string>
 	<string>MessageKit</string>
-	<string>FirebaseAnalytics</string>
+	<string>SystemConfiguration</string>
 	<string>Security</string>
-	<string>AudioToolbox</string>
-	<string>Koloda</string>
+	<string>FirebaseAnalytics</string>
 	<string>CoreGraphics</string>
+	<string>Koloda</string>
 	<string>objc</string>
 	<string>FirebaseDynamicLinks</string>
 	<string>RangeUISlider</string>

@@ -618,6 +618,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "beginAnimations"]
 - ["s28CustomDebugStringConvertibleP", "beginEditing"]
 - !private ["s28CustomDebugStringConvertibleP", "beginUpdates"]
+- !private ["s28CustomDebugStringConvertibleP", "bottom"]
 - !private ["s28CustomDebugStringConvertibleP", "bounds"]
 - !private ["s28CustomDebugStringConvertibleP", "callbackOnCellHighlightChanged"]
 - !private ["s28CustomDebugStringConvertibleP", "cellBecomeFirstResponder"]
@@ -769,6 +770,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "addSubview"]
 - !private ["s17CustomReflectableP", "allowsSelectionDuringEditing"]
 - !private ["s17CustomReflectableP", "autoresizingMask"]
+- !private ["s17CustomReflectableP", "bottom"]
 - !private ["s17CustomReflectableP", "bounds"]
 - !private ["s17CustomReflectableP", "callbackOnCellHighlightChanged"]
 - !private ["s17CustomReflectableP", "cellBecomeFirstResponder"]
@@ -1479,6 +1481,7 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "addSubview"]
 - !private ["s23ExpressibleByNilLiteralP", "allowsSelectionDuringEditing"]
 - !private ["s23ExpressibleByNilLiteralP", "autoresizingMask"]
+- !private ["s23ExpressibleByNilLiteralP", "bottom"]
 - !private ["s23ExpressibleByNilLiteralP", "bounds"]
 - !private ["s23ExpressibleByNilLiteralP", "callbackOnCellHighlightChanged"]
 - !private ["s23ExpressibleByNilLiteralP", "cellBecomeFirstResponder"]
@@ -2837,6 +2840,7 @@ depends-member:
 - !private ["Sq", "addSubview"]
 - !private ["Sq", "allowsSelectionDuringEditing"]
 - !private ["Sq", "autoresizingMask"]
+- !private ["Sq", "bottom"]
 - !private ["Sq", "bounds"]
 - !private ["Sq", "callbackOnCellHighlightChanged"]
 - !private ["Sq", "cellBecomeFirstResponder"]
@@ -5992,4 +5996,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "4d750e06b37c3067fd0b340a7200b4cb"
+interface-hash: "1c7296669b8e9e962e295e6590035811"

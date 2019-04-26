@@ -19,6 +19,7 @@
 		07B43E6C22348C9900BB8548 /* ProfileLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B43E6B22348C9900BB8548 /* ProfileLocationViewController.swift */; };
 		07B43E6E22348CCC00BB8548 /* ProfileMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B43E6D22348CCC00BB8548 /* ProfileMapViewController.swift */; };
 		07B43E7022348D0900BB8548 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B43E6F22348D0900BB8548 /* CardsViewController.swift */; };
+		07DFE4ED227242950089071C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFE4EC227242950089071C /* Extensions.swift */; };
 		484D1178B6C8C9141158E82C /* Pods_Lamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADB058DDDBB271D44C9F82B /* Pods_Lamp.framework */; };
 		571B426B224AC8EF00F9F42B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B426A224AC8EF00F9F42B /* Profile.swift */; };
 		571B426F224B401E00F9F42B /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B426E224B401E00F9F42B /* ProfileEditViewController.swift */; };
@@ -70,6 +71,7 @@
 		07B43E6B22348C9900BB8548 /* ProfileLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLocationViewController.swift; sourceTree = "<group>"; };
 		07B43E6D22348CCC00BB8548 /* ProfileMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMapViewController.swift; sourceTree = "<group>"; };
 		07B43E6F22348D0900BB8548 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		07DFE4EC227242950089071C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		571B426A224AC8EF00F9F42B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		571B426E224B401E00F9F42B /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		571B4270224BD66300F9F42B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				B6DFE9C92257C92D0086BCE6 /* Settings.swift */,
 				076FB9F4226FF19200E0A204 /* Channel.swift */,
 				0704BF212268EF03005F6394 /* Message.swift */,
+				07DFE4EC227242950089071C /* Extensions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				B6B89717223303E100164801 /* LogInViewController.swift in Sources */,
 				95132AC2224B47D9006C1A84 /* RangeSliderTableViewCell.swift in Sources */,
 				95412745224B0254003343D4 /* SettingsViewController.swift in Sources */,
+				07DFE4ED227242950089071C /* Extensions.swift in Sources */,
 				B61FE836225C6DC4002BDDD7 /* GenderFilterViewController.swift in Sources */,
 				95412749224B12C9003343D4 /* AccountViewController.swift in Sources */,
 				95E4E7E1225D799D00A45EC4 /* XibCreatable.swift in Sources */,

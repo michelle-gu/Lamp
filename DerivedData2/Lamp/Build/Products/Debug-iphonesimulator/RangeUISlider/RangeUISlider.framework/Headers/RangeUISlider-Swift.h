@@ -185,8 +185,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-@class UIImage;
 @class UIColor;
+@class UIImage;
 @class NSCoder;
 @class UIPanGestureRecognizer;
 
@@ -200,10 +200,14 @@ SWIFT_CLASS("_TtC13RangeUISlider13RangeUISlider")
 @property (nonatomic) CGFloat scaleMinValue;
 /// Scale maximum value.
 @property (nonatomic) CGFloat scaleMaxValue;
+/// Step increment value. If different from 0 RangeUISlider will let the user drag by step increment.
+@property (nonatomic) CGFloat stepIncrement;
 /// Default left knob starting value.
 @property (nonatomic) CGFloat defaultValueLeftKnob;
 /// Default right knob starting value.
 @property (nonatomic) CGFloat defaultValueRightKnob;
+/// Selected range color.
+@property (nonatomic, strong) UIColor * _Nonnull rangeSelectedColor;
 /// Background range selected strechable image.
 @property (nonatomic, strong) UIImage * _Nullable rangeSelectedBackgroundImage;
 /// Background range selected top edge insect for background image.
@@ -332,18 +336,11 @@ SWIFT_CLASS("_TtC13RangeUISlider13RangeUISlider")
 /// \param frame the frame used to init the slider.
 ///
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-/// Method used to prepare fake values for interface builder preview.
+/// Prepare RangeUISlider to be drawn in Interface Builder.
 - (void)prepareForInterfaceBuilder;
-/// Method used to layout precisely the subview.
-/// Used here to set the starting values of the knob.
+/// Custom layout subviews to set the default values for the know of RangeUISlider
 - (void)layoutSubviews;
-/// Method used to respond to the gesture recognizer attached on the left knob.
-/// \param gestureRecognizer the gesture recognizer that uses this method as selector.
-///
 - (void)moveLeftKnobWithGestureRecognizer:(UIPanGestureRecognizer * _Nonnull)gestureRecognizer;
-/// Method used to respond to the gesture recognizer attached on the right knob.
-/// \param gestureRecognizer the gesture recognizer that uses this method as selector.
-///
 - (void)moveRightKnobWithGestureRecognizer:(UIPanGestureRecognizer * _Nonnull)gestureRecognizer;
 @end
 
@@ -354,6 +351,8 @@ SWIFT_CLASS("_TtC13RangeUISlider13RangeUISlider")
 SWIFT_PROTOCOL("_TtP13RangeUISlider21RangeUISliderDelegate_")
 @protocol RangeUISliderDelegate
 @optional
+/// Calls the delegate when the user has started the change of the range.
+- (void)rangeChangeStarted;
 /// Calls the delegate when the user is changing the range by moving the knobs.
 /// \param minValueSelected the minimum value selected.
 ///

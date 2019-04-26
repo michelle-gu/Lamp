@@ -1,10 +1,11 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "586cfb480a9e3890ee3ff0fe3fd60a48"
-build_time: [1555607080, 149189000]
+build_time: [1556142640, 834992000]
 inputs:
-  "/Users/lindseythompson/Desktop/Lamp/Pods/RangeUISlider/Source/Bar.swift": [1554908663, 777521563]
-  "/Users/lindseythompson/Desktop/Lamp/Pods/RangeUISlider/Source/Gradient.swift": [1554908663, 777833626]
-  "/Users/lindseythompson/Desktop/Lamp/Pods/RangeUISlider/Source/Knob.swift": [1554953211, 780107]
-  "/Users/lindseythompson/Desktop/Lamp/Pods/RangeUISlider/Source/Progress.swift": [1554953211, 1206124]
-  "/Users/lindseythompson/Desktop/Lamp/Pods/RangeUISlider/Source/RangeUISlider.swift": [1554953211, 1718270]
-  "/Users/lindseythompson/Desktop/Lamp/Pods/RangeUISlider/Source/RangeUISliderDelegate.swift": [1554953211, 2136180]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/RangeUISlider/Source/Bar.swift": [1556137694, 567822946]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/RangeUISlider/Source/Gradient.swift": [1556137694, 568395045]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/RangeUISlider/Source/Knob.swift": [1556137694, 569052051]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/RangeUISlider/Source/Progress.swift": [1556137694, 569500921]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/RangeUISlider/Source/RangeSelectedCalculator.swift": [9223372036, 854775807]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/RangeUISlider/Source/RangeUISlider.swift": [1556137694, 571250583]
+  "/Users/lindseythompson/Desktop/Lamp/Pods/RangeUISlider/Source/RangeUISliderDelegate.swift": [1556137694, 571549590]

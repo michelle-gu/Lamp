@@ -13,15 +13,47 @@ import MessageInputBar
 
 class MessageInstanceViewController: MessagesViewController {
 
+    var profileRef: DatabaseReference!
     let db = Database.database()
 
     var messages: [Message] = []
     var member: Member!
-    
+    var member2: Member!
+    var member3: Member!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        member = Member(name: "Lindsey", color: .blue)
+        // set up current profile info
+        profileRef = Database.database().reference(withPath: "user-profiles")
+        let user = Auth.auth().currentUser?.uid
+        let profile = profileRef.child(user!).child("profile")
+
+//        profile.observe(.value, with: { (snapshot) in
+//            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+//
+//            // set channel title
+//            let profileName = profileDict["firstName"] as! String
+//            self.member = Member(memberID: user ?? "no user id", name: profileName, color: .blue)
+//
+//            let myMessage = Message(member: self.member, text: "Hello!!", messageId: UUID().uuidString)
+//            self.insertNewMessage(myMessage)
+//
+//        })
+
+        member = Member(memberID: "profile-id", name: "Jessica")
+        let testMessage = Message(member: member, text: "This is my message", messageId: UUID().uuidString)
+        
+        member2 = Member(memberID: "profile-id2", name: "James")
+        let testMessage2 = Message(member: member2, text: "Hey!", messageId: UUID().uuidString)
+        
+        member3 = Member(memberID: "profile-id3", name: "Frannie")
+        let testMessage3 = Message(member: member3, text: "I love pizza", messageId: UUID().uuidString)
+        
+        insertNewMessage(testMessage)
+        insertNewMessage(testMessage2)
+        insertNewMessage(testMessage3)
+
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messageInputBar.delegate = self
@@ -29,6 +61,15 @@ class MessageInstanceViewController: MessagesViewController {
 
 //        setUpNavigationBarItems()
     }
+    
+    // MARK: Styling
+    
+    private func insertNewMessage(_ message: Message) {
+        messages.append(message)
+        messagesCollectionView.reloadData()
+    }
+    
+    // MARK: Styling
     
     private func setUpNavigationBarItems() {
         let imageView = UIImageView()
@@ -40,6 +81,7 @@ class MessageInstanceViewController: MessagesViewController {
         
         navigationItem.titleView = imageView
     }
+    
 }
 
 
@@ -50,7 +92,7 @@ extension MessageInstanceViewController: MessagesDataSource {
     }
     
     func currentSender() -> Sender {
-        return Sender(id: member.name, displayName: member.name)
+        return Sender(id: member.name, displayName: member.name) // variable member not being set!! ******************
     }
     
     func messageForItem(
@@ -95,9 +137,9 @@ extension MessageInstanceViewController: MessagesDisplayDelegate {
         at indexPath: IndexPath,
         in messagesCollectionView: MessagesCollectionView) {
         
-        let message = messages[indexPath.section]
-        let color = message.member.color
-        avatarView.backgroundColor = color
+//        let message = messages[indexPath.section]
+//        let color = message.member.color
+//        avatarView.backgroundColor = color
     }
 }
 
@@ -106,6 +148,12 @@ extension MessageInstanceViewController: MessageInputBarDelegate {
     func messageInputBar(
         _ inputBar: MessageInputBar,
         didPressSendButtonWith text: String) {
+        
+//        let newMessage = Message(
+//            key: UUID().uuidString,
+//            user: (Auth.auth().currentUser)!,
+//            content: text)
+//
         
         let newMessage = Message(
             member: member,

@@ -9,10 +9,12 @@ provides-dynamic-lookup:
 - "viewDidLoad"
 depends-top-level:
 - "AssignmentPrecedence"
+- !private "Auth"
 - "AvatarView"
 - !private "BooleanLiteralType"
 - "CGFloat"
 - "Database"
+- "DatabaseReference"
 - !private "FloatLiteralType"
 - "IndexPath"
 - "Int"
@@ -40,12 +42,12 @@ depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "count"]
 - !private ["Sa", "subscript"]
-- !private ["10MessageKit10AvatarViewC", "backgroundColor"]
+- !private ["So7FIRAuthC", "auth"]
+- !private ["So7FIRAuthC", "currentUser"]
 - !private ["SK", "append"]
 - !private ["SK", "count"]
 - !private ["SK", "section"]
 - !private ["SK", "subscript"]
-- !private ["So15CALayerDelegateP", "backgroundColor"]
 - !private ["So15CALayerDelegateP", "delegate"]
 - !private ["So15CALayerDelegateP", "heightAnchor"]
 - !private ["So15CALayerDelegateP", "image"]
@@ -58,6 +60,7 @@ depends-member:
 - !private ["So15CALayerDelegateP", "scrollToBottom"]
 - !private ["So15CALayerDelegateP", "text"]
 - !private ["So15CALayerDelegateP", "widthAnchor"]
+- !private ["s7CVarArgP", "Auth"]
 - ["s7CVarArgP", "Database"]
 - !private ["s7CVarArgP", "Member"]
 - !private ["s7CVarArgP", "Message"]
@@ -71,16 +74,18 @@ depends-member:
 - ["s7CVarArgP", "animationBlockForLocation"]
 - ["s7CVarArgP", "annotationViewForLocation"]
 - !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "auth"]
 - ["s7CVarArgP", "backgroundColor"]
-- !private ["s7CVarArgP", "blue"]
 - ["s7CVarArgP", "cellTopLabelAttributedText"]
 - ["s7CVarArgP", "cellTopLabelHeight"]
+- !private ["s7CVarArgP", "child"]
 - ["s7CVarArgP", "configureAccessoryView"]
 - ["s7CVarArgP", "configureAvatarView"]
 - ["s7CVarArgP", "configureMediaMessageImageView"]
 - !private ["s7CVarArgP", "constraint"]
 - !private ["s7CVarArgP", "count"]
 - ["s7CVarArgP", "currentSender"]
+- !private ["s7CVarArgP", "currentUser"]
 - ["s7CVarArgP", "customCell"]
 - ["s7CVarArgP", "customCellSizeCalculator"]
 - ["s7CVarArgP", "database"]
@@ -94,9 +99,12 @@ depends-member:
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "inputTextView"]
+- !private ["s7CVarArgP", "insertNewMessage"]
 - !private ["s7CVarArgP", "isActive"]
 - ["s7CVarArgP", "isFromCurrentSender"]
 - !private ["s7CVarArgP", "member"]
+- !private ["s7CVarArgP", "member2"]
+- !private ["s7CVarArgP", "member3"]
 - ["s7CVarArgP", "messageBottomLabelAttributedText"]
 - ["s7CVarArgP", "messageBottomLabelHeight"]
 - ["s7CVarArgP", "messageFooterView"]
@@ -114,6 +122,8 @@ depends-member:
 - !private ["s7CVarArgP", "navigationItem"]
 - ["s7CVarArgP", "numberOfItems"]
 - ["s7CVarArgP", "numberOfSections"]
+- !private ["s7CVarArgP", "profileRef"]
+- !private ["s7CVarArgP", "reference"]
 - !private ["s7CVarArgP", "reloadData"]
 - !private ["s7CVarArgP", "scrollToBottom"]
 - ["s7CVarArgP", "snapshotOptionsForLocation"]
@@ -122,8 +132,10 @@ depends-member:
 - !private ["s7CVarArgP", "text"]
 - ["s7CVarArgP", "textColor"]
 - !private ["s7CVarArgP", "titleView"]
+- !private ["s7CVarArgP", "uid"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["s7CVarArgP", "widthAnchor"]
+- !private ["10Kingfisher19CacheCostCalculableP", "init"]
 - !private ["Sl", "append"]
 - !private ["Sl", "count"]
 - !private ["Sl", "section"]
@@ -132,6 +144,7 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "append"]
 - !private ["10Foundation15ContiguousBytesP", "count"]
 - !private ["10Foundation15ContiguousBytesP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "Auth"]
 - ["s28CustomDebugStringConvertibleP", "Database"]
 - !private ["s28CustomDebugStringConvertibleP", "Member"]
 - !private ["s28CustomDebugStringConvertibleP", "Message"]
@@ -145,16 +158,18 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "animationBlockForLocation"]
 - ["s28CustomDebugStringConvertibleP", "annotationViewForLocation"]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "auth"]
 - ["s28CustomDebugStringConvertibleP", "backgroundColor"]
-- !private ["s28CustomDebugStringConvertibleP", "blue"]
 - ["s28CustomDebugStringConvertibleP", "cellTopLabelAttributedText"]
 - ["s28CustomDebugStringConvertibleP", "cellTopLabelHeight"]
+- !private ["s28CustomDebugStringConvertibleP", "child"]
 - ["s28CustomDebugStringConvertibleP", "configureAccessoryView"]
 - ["s28CustomDebugStringConvertibleP", "configureAvatarView"]
 - ["s28CustomDebugStringConvertibleP", "configureMediaMessageImageView"]
 - !private ["s28CustomDebugStringConvertibleP", "constraint"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
 - ["s28CustomDebugStringConvertibleP", "currentSender"]
+- !private ["s28CustomDebugStringConvertibleP", "currentUser"]
 - ["s28CustomDebugStringConvertibleP", "customCell"]
 - ["s28CustomDebugStringConvertibleP", "customCellSizeCalculator"]
 - ["s28CustomDebugStringConvertibleP", "database"]
@@ -168,9 +183,12 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "inputTextView"]
+- !private ["s28CustomDebugStringConvertibleP", "insertNewMessage"]
 - !private ["s28CustomDebugStringConvertibleP", "isActive"]
 - ["s28CustomDebugStringConvertibleP", "isFromCurrentSender"]
 - !private ["s28CustomDebugStringConvertibleP", "member"]
+- !private ["s28CustomDebugStringConvertibleP", "member2"]
+- !private ["s28CustomDebugStringConvertibleP", "member3"]
 - ["s28CustomDebugStringConvertibleP", "messageBottomLabelAttributedText"]
 - ["s28CustomDebugStringConvertibleP", "messageBottomLabelHeight"]
 - ["s28CustomDebugStringConvertibleP", "messageFooterView"]
@@ -189,6 +207,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "navigationItem"]
 - ["s28CustomDebugStringConvertibleP", "numberOfItems"]
 - ["s28CustomDebugStringConvertibleP", "numberOfSections"]
+- !private ["s28CustomDebugStringConvertibleP", "profileRef"]
+- !private ["s28CustomDebugStringConvertibleP", "reference"]
 - !private ["s28CustomDebugStringConvertibleP", "reloadData"]
 - !private ["s28CustomDebugStringConvertibleP", "scrollToBottom"]
 - !private ["s28CustomDebugStringConvertibleP", "section"]
@@ -198,16 +218,19 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - ["s28CustomDebugStringConvertibleP", "textColor"]
 - !private ["s28CustomDebugStringConvertibleP", "titleView"]
+- !private ["s28CustomDebugStringConvertibleP", "uid"]
 - !private ["s28CustomDebugStringConvertibleP", "uuidString"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - !private ["s28CustomDebugStringConvertibleP", "widthAnchor"]
 - !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "child"]
 - !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "name"]
 - !private ["s17CustomReflectableP", "section"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "uuidString"]
+- !private ["s23CustomStringConvertibleP", "Auth"]
 - ["s23CustomStringConvertibleP", "Database"]
 - !private ["s23CustomStringConvertibleP", "Member"]
 - !private ["s23CustomStringConvertibleP", "Message"]
@@ -221,16 +244,18 @@ depends-member:
 - ["s23CustomStringConvertibleP", "animationBlockForLocation"]
 - ["s23CustomStringConvertibleP", "annotationViewForLocation"]
 - !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "auth"]
 - ["s23CustomStringConvertibleP", "backgroundColor"]
-- !private ["s23CustomStringConvertibleP", "blue"]
 - ["s23CustomStringConvertibleP", "cellTopLabelAttributedText"]
 - ["s23CustomStringConvertibleP", "cellTopLabelHeight"]
+- !private ["s23CustomStringConvertibleP", "child"]
 - ["s23CustomStringConvertibleP", "configureAccessoryView"]
 - ["s23CustomStringConvertibleP", "configureAvatarView"]
 - ["s23CustomStringConvertibleP", "configureMediaMessageImageView"]
 - !private ["s23CustomStringConvertibleP", "constraint"]
 - !private ["s23CustomStringConvertibleP", "count"]
 - ["s23CustomStringConvertibleP", "currentSender"]
+- !private ["s23CustomStringConvertibleP", "currentUser"]
 - ["s23CustomStringConvertibleP", "customCell"]
 - ["s23CustomStringConvertibleP", "customCellSizeCalculator"]
 - ["s23CustomStringConvertibleP", "database"]
@@ -244,9 +269,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "inputTextView"]
+- !private ["s23CustomStringConvertibleP", "insertNewMessage"]
 - !private ["s23CustomStringConvertibleP", "isActive"]
 - ["s23CustomStringConvertibleP", "isFromCurrentSender"]
 - !private ["s23CustomStringConvertibleP", "member"]
+- !private ["s23CustomStringConvertibleP", "member2"]
+- !private ["s23CustomStringConvertibleP", "member3"]
 - ["s23CustomStringConvertibleP", "messageBottomLabelAttributedText"]
 - ["s23CustomStringConvertibleP", "messageBottomLabelHeight"]
 - ["s23CustomStringConvertibleP", "messageFooterView"]
@@ -264,6 +292,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "navigationItem"]
 - ["s23CustomStringConvertibleP", "numberOfItems"]
 - ["s23CustomStringConvertibleP", "numberOfSections"]
+- !private ["s23CustomStringConvertibleP", "profileRef"]
+- !private ["s23CustomStringConvertibleP", "reference"]
 - !private ["s23CustomStringConvertibleP", "reloadData"]
 - !private ["s23CustomStringConvertibleP", "scrollToBottom"]
 - !private ["s23CustomStringConvertibleP", "section"]
@@ -273,6 +303,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "text"]
 - ["s23CustomStringConvertibleP", "textColor"]
 - !private ["s23CustomStringConvertibleP", "titleView"]
+- !private ["s23CustomStringConvertibleP", "uid"]
 - !private ["s23CustomStringConvertibleP", "uuidString"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - !private ["s23CustomStringConvertibleP", "widthAnchor"]
@@ -280,7 +311,11 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", "count"]
 - !private ["10Foundation12DataProtocolP", "subscript"]
 - ["So11FIRDatabaseC", "database"]
+- !private ["So11FIRDatabaseC", "reference"]
+- !private ["So16FIRDatabaseQueryC", "child"]
+- !private ["So20FIRDatabaseReferenceC", "child"]
 - !private ["Se", "append"]
+- !private ["Se", "child"]
 - !private ["Se", "count"]
 - !private ["Se", "init"]
 - !private ["Se", "name"]
@@ -288,12 +323,14 @@ depends-member:
 - !private ["Se", "subscript"]
 - !private ["Se", "uuidString"]
 - !private ["SE", "append"]
+- !private ["SE", "child"]
 - !private ["SE", "count"]
 - !private ["SE", "init"]
 - !private ["SE", "name"]
 - !private ["SE", "section"]
 - !private ["SE", "subscript"]
 - !private ["SE", "uuidString"]
+- !private ["SQ", "Auth"]
 - ["SQ", "Database"]
 - !private ["SQ", "Member"]
 - !private ["SQ", "Message"]
@@ -307,16 +344,18 @@ depends-member:
 - ["SQ", "animationBlockForLocation"]
 - ["SQ", "annotationViewForLocation"]
 - !private ["SQ", "append"]
+- !private ["SQ", "auth"]
 - ["SQ", "backgroundColor"]
-- !private ["SQ", "blue"]
 - ["SQ", "cellTopLabelAttributedText"]
 - ["SQ", "cellTopLabelHeight"]
+- !private ["SQ", "child"]
 - ["SQ", "configureAccessoryView"]
 - ["SQ", "configureAvatarView"]
 - ["SQ", "configureMediaMessageImageView"]
 - !private ["SQ", "constraint"]
 - !private ["SQ", "count"]
 - ["SQ", "currentSender"]
+- !private ["SQ", "currentUser"]
 - ["SQ", "customCell"]
 - ["SQ", "customCellSizeCalculator"]
 - ["SQ", "database"]
@@ -332,9 +371,12 @@ depends-member:
 - !private ["SQ", "init"]
 - !private ["SQ", "init"]
 - !private ["SQ", "inputTextView"]
+- !private ["SQ", "insertNewMessage"]
 - !private ["SQ", "isActive"]
 - ["SQ", "isFromCurrentSender"]
 - !private ["SQ", "member"]
+- !private ["SQ", "member2"]
+- !private ["SQ", "member3"]
 - ["SQ", "messageBottomLabelAttributedText"]
 - ["SQ", "messageBottomLabelHeight"]
 - ["SQ", "messageFooterView"]
@@ -353,6 +395,8 @@ depends-member:
 - !private ["SQ", "navigationItem"]
 - ["SQ", "numberOfItems"]
 - ["SQ", "numberOfSections"]
+- !private ["SQ", "profileRef"]
+- !private ["SQ", "reference"]
 - !private ["SQ", "reloadData"]
 - !private ["SQ", "scrollToBottom"]
 - !private ["SQ", "section"]
@@ -362,6 +406,7 @@ depends-member:
 - !private ["SQ", "text"]
 - ["SQ", "textColor"]
 - !private ["SQ", "titleView"]
+- !private ["SQ", "uid"]
 - !private ["SQ", "uuidString"]
 - !private ["SQ", "viewDidLoad"]
 - !private ["SQ", "widthAnchor"]
@@ -369,7 +414,9 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s25ExpressibleByArrayLiteralP", "section"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s23ExpressibleByNilLiteralP", "child"]
 - !private ["s23ExpressibleByNilLiteralP", "name"]
+- !private ["SH", "Auth"]
 - ["SH", "Database"]
 - !private ["SH", "Member"]
 - !private ["SH", "Message"]
@@ -383,16 +430,18 @@ depends-member:
 - ["SH", "animationBlockForLocation"]
 - ["SH", "annotationViewForLocation"]
 - !private ["SH", "append"]
+- !private ["SH", "auth"]
 - ["SH", "backgroundColor"]
-- !private ["SH", "blue"]
 - ["SH", "cellTopLabelAttributedText"]
 - ["SH", "cellTopLabelHeight"]
+- !private ["SH", "child"]
 - ["SH", "configureAccessoryView"]
 - ["SH", "configureAvatarView"]
 - ["SH", "configureMediaMessageImageView"]
 - !private ["SH", "constraint"]
 - !private ["SH", "count"]
 - ["SH", "currentSender"]
+- !private ["SH", "currentUser"]
 - ["SH", "customCell"]
 - ["SH", "customCellSizeCalculator"]
 - ["SH", "database"]
@@ -407,9 +456,12 @@ depends-member:
 - !private ["SH", "init"]
 - !private ["SH", "init"]
 - !private ["SH", "inputTextView"]
+- !private ["SH", "insertNewMessage"]
 - !private ["SH", "isActive"]
 - ["SH", "isFromCurrentSender"]
 - !private ["SH", "member"]
+- !private ["SH", "member2"]
+- !private ["SH", "member3"]
 - ["SH", "messageBottomLabelAttributedText"]
 - ["SH", "messageBottomLabelHeight"]
 - ["SH", "messageFooterView"]
@@ -428,6 +480,8 @@ depends-member:
 - !private ["SH", "navigationItem"]
 - ["SH", "numberOfItems"]
 - ["SH", "numberOfSections"]
+- !private ["SH", "profileRef"]
+- !private ["SH", "reference"]
 - !private ["SH", "reloadData"]
 - !private ["SH", "scrollToBottom"]
 - !private ["SH", "section"]
@@ -437,20 +491,24 @@ depends-member:
 - !private ["SH", "text"]
 - ["SH", "textColor"]
 - !private ["SH", "titleView"]
+- !private ["SH", "uid"]
 - !private ["SH", "uuidString"]
 - !private ["SH", "viewDidLoad"]
 - !private ["SH", "widthAnchor"]
 - !private ["10Foundation9IndexPathV", "section"]
 - !private ["15MessageInputBar0B8TextViewC", "text"]
 - !private ["So21NSAttributedStringKeya", "font"]
-- !private ["4Lamp6MemberV", "color"]
+- !private ["10Kingfisher0A10CompatibleP", "heightAnchor"]
+- !private ["10Kingfisher0A10CompatibleP", "image"]
+- !private ["10Kingfisher0A10CompatibleP", "init"]
+- !private ["10Kingfisher0A10CompatibleP", "widthAnchor"]
 - !private ["4Lamp6MemberV", "init"]
 - !private ["4Lamp6MemberV", "name"]
 - !private ["4Lamp7MessageV", "deinit"]
 - !private ["4Lamp7MessageV", "init"]
-- !private ["4Lamp7MessageV", "member"]
 - !private ["15MessageInputBarAAC", "delegate"]
 - !private ["15MessageInputBarAAC", "inputTextView"]
+- !private ["15MessageInputBar0abC8DelegateP", "Auth"]
 - ["15MessageInputBar0abC8DelegateP", "Database"]
 - !private ["15MessageInputBar0abC8DelegateP", "Member"]
 - !private ["15MessageInputBar0abC8DelegateP", "Message"]
@@ -476,8 +534,11 @@ depends-member:
 - ["15MessageInputBar0abC8DelegateP", "enabledDetectors"]
 - ["15MessageInputBar0abC8DelegateP", "footerViewSize"]
 - ["15MessageInputBar0abC8DelegateP", "headerViewSize"]
+- !private ["15MessageInputBar0abC8DelegateP", "insertNewMessage"]
 - ["15MessageInputBar0abC8DelegateP", "isFromCurrentSender"]
 - !private ["15MessageInputBar0abC8DelegateP", "member"]
+- !private ["15MessageInputBar0abC8DelegateP", "member2"]
+- !private ["15MessageInputBar0abC8DelegateP", "member3"]
 - ["15MessageInputBar0abC8DelegateP", "messageBottomLabelAttributedText"]
 - ["15MessageInputBar0abC8DelegateP", "messageBottomLabelHeight"]
 - ["15MessageInputBar0abC8DelegateP", "messageFooterView"]
@@ -492,11 +553,14 @@ depends-member:
 - !private ["15MessageInputBar0abC8DelegateP", "navigationItem"]
 - ["15MessageInputBar0abC8DelegateP", "numberOfItems"]
 - ["15MessageInputBar0abC8DelegateP", "numberOfSections"]
+- !private ["15MessageInputBar0abC8DelegateP", "profileRef"]
 - ["15MessageInputBar0abC8DelegateP", "snapshotOptionsForLocation"]
 - ["15MessageInputBar0abC8DelegateP", "textColor"]
+- !private ["4Lamp29MessageInstanceViewControllerC", "Auth"]
 - ["4Lamp29MessageInstanceViewControllerC", "AvatarView"]
 - ["4Lamp29MessageInstanceViewControllerC", "CGFloat"]
 - ["4Lamp29MessageInstanceViewControllerC", "Database"]
+- ["4Lamp29MessageInstanceViewControllerC", "DatabaseReference"]
 - ["4Lamp29MessageInstanceViewControllerC", "IndexPath"]
 - ["4Lamp29MessageInstanceViewControllerC", "Int"]
 - ["4Lamp29MessageInstanceViewControllerC", "Member"]
@@ -530,8 +594,11 @@ depends-member:
 - ["4Lamp29MessageInstanceViewControllerC", "headerViewSize"]
 - ["4Lamp29MessageInstanceViewControllerC", "heightForLocation"]
 - ["4Lamp29MessageInstanceViewControllerC", "init"]
+- !private ["4Lamp29MessageInstanceViewControllerC", "insertNewMessage"]
 - ["4Lamp29MessageInstanceViewControllerC", "isFromCurrentSender"]
 - ["4Lamp29MessageInstanceViewControllerC", "member"]
+- ["4Lamp29MessageInstanceViewControllerC", "member2"]
+- ["4Lamp29MessageInstanceViewControllerC", "member3"]
 - ["4Lamp29MessageInstanceViewControllerC", "messageBottomLabelAttributedText"]
 - ["4Lamp29MessageInstanceViewControllerC", "messageBottomLabelHeight"]
 - ["4Lamp29MessageInstanceViewControllerC", "messageFooterView"]
@@ -546,18 +613,19 @@ depends-member:
 - !private ["4Lamp29MessageInstanceViewControllerC", "navigationItem"]
 - ["4Lamp29MessageInstanceViewControllerC", "numberOfItems"]
 - ["4Lamp29MessageInstanceViewControllerC", "numberOfSections"]
+- ["4Lamp29MessageInstanceViewControllerC", "profileRef"]
 - !private ["4Lamp29MessageInstanceViewControllerC", "setUpNavigationBarItems"]
 - ["4Lamp29MessageInstanceViewControllerC", "snapshotOptionsForLocation"]
 - ["4Lamp29MessageInstanceViewControllerC", "textColor"]
 - ["4Lamp29MessageInstanceViewControllerC", "viewDidLoad"]
 - !private ["10MessageKit0A4TypeP", "init"]
-- !private ["10MessageKit0A4TypeP", "member"]
 - !private ["10MessageKit0A4TypeP", "sender"]
 - !private ["10MessageKit22MessagesCollectionViewC", "messagesDataSource"]
 - !private ["10MessageKit22MessagesCollectionViewC", "messagesDisplayDelegate"]
 - !private ["10MessageKit22MessagesCollectionViewC", "messagesLayoutDelegate"]
 - !private ["10MessageKit22MessagesCollectionViewC", "reloadData"]
 - !private ["10MessageKit22MessagesCollectionViewC", "scrollToBottom"]
+- !private ["10MessageKit18MessagesDataSourceP", "Auth"]
 - ["10MessageKit18MessagesDataSourceP", "Database"]
 - !private ["10MessageKit18MessagesDataSourceP", "Member"]
 - !private ["10MessageKit18MessagesDataSourceP", "Message"]
@@ -583,8 +651,11 @@ depends-member:
 - ["10MessageKit18MessagesDataSourceP", "enabledDetectors"]
 - ["10MessageKit18MessagesDataSourceP", "footerViewSize"]
 - ["10MessageKit18MessagesDataSourceP", "headerViewSize"]
+- !private ["10MessageKit18MessagesDataSourceP", "insertNewMessage"]
 - ["10MessageKit18MessagesDataSourceP", "isFromCurrentSender"]
 - !private ["10MessageKit18MessagesDataSourceP", "member"]
+- !private ["10MessageKit18MessagesDataSourceP", "member2"]
+- !private ["10MessageKit18MessagesDataSourceP", "member3"]
 - ["10MessageKit18MessagesDataSourceP", "messageBottomLabelAttributedText"]
 - ["10MessageKit18MessagesDataSourceP", "messageBottomLabelHeight"]
 - ["10MessageKit18MessagesDataSourceP", "messageFooterView"]
@@ -599,8 +670,10 @@ depends-member:
 - !private ["10MessageKit18MessagesDataSourceP", "navigationItem"]
 - ["10MessageKit18MessagesDataSourceP", "numberOfItems"]
 - ["10MessageKit18MessagesDataSourceP", "numberOfSections"]
+- !private ["10MessageKit18MessagesDataSourceP", "profileRef"]
 - ["10MessageKit18MessagesDataSourceP", "snapshotOptionsForLocation"]
 - ["10MessageKit18MessagesDataSourceP", "textColor"]
+- !private ["10MessageKit23MessagesDisplayDelegateP", "Auth"]
 - ["10MessageKit23MessagesDisplayDelegateP", "Database"]
 - !private ["10MessageKit23MessagesDisplayDelegateP", "Member"]
 - !private ["10MessageKit23MessagesDisplayDelegateP", "Message"]
@@ -626,8 +699,11 @@ depends-member:
 - ["10MessageKit23MessagesDisplayDelegateP", "enabledDetectors"]
 - ["10MessageKit23MessagesDisplayDelegateP", "footerViewSize"]
 - ["10MessageKit23MessagesDisplayDelegateP", "headerViewSize"]
+- !private ["10MessageKit23MessagesDisplayDelegateP", "insertNewMessage"]
 - ["10MessageKit23MessagesDisplayDelegateP", "isFromCurrentSender"]
 - !private ["10MessageKit23MessagesDisplayDelegateP", "member"]
+- !private ["10MessageKit23MessagesDisplayDelegateP", "member2"]
+- !private ["10MessageKit23MessagesDisplayDelegateP", "member3"]
 - ["10MessageKit23MessagesDisplayDelegateP", "messageBottomLabelAttributedText"]
 - ["10MessageKit23MessagesDisplayDelegateP", "messageBottomLabelHeight"]
 - ["10MessageKit23MessagesDisplayDelegateP", "messageFooterView"]
@@ -642,8 +718,10 @@ depends-member:
 - !private ["10MessageKit23MessagesDisplayDelegateP", "navigationItem"]
 - ["10MessageKit23MessagesDisplayDelegateP", "numberOfItems"]
 - ["10MessageKit23MessagesDisplayDelegateP", "numberOfSections"]
+- !private ["10MessageKit23MessagesDisplayDelegateP", "profileRef"]
 - ["10MessageKit23MessagesDisplayDelegateP", "snapshotOptionsForLocation"]
 - ["10MessageKit23MessagesDisplayDelegateP", "textColor"]
+- !private ["10MessageKit22MessagesLayoutDelegateP", "Auth"]
 - ["10MessageKit22MessagesLayoutDelegateP", "Database"]
 - !private ["10MessageKit22MessagesLayoutDelegateP", "Member"]
 - !private ["10MessageKit22MessagesLayoutDelegateP", "Message"]
@@ -669,8 +747,11 @@ depends-member:
 - ["10MessageKit22MessagesLayoutDelegateP", "enabledDetectors"]
 - ["10MessageKit22MessagesLayoutDelegateP", "footerViewSize"]
 - ["10MessageKit22MessagesLayoutDelegateP", "headerViewSize"]
+- !private ["10MessageKit22MessagesLayoutDelegateP", "insertNewMessage"]
 - ["10MessageKit22MessagesLayoutDelegateP", "isFromCurrentSender"]
 - !private ["10MessageKit22MessagesLayoutDelegateP", "member"]
+- !private ["10MessageKit22MessagesLayoutDelegateP", "member2"]
+- !private ["10MessageKit22MessagesLayoutDelegateP", "member3"]
 - ["10MessageKit22MessagesLayoutDelegateP", "messageBottomLabelAttributedText"]
 - ["10MessageKit22MessagesLayoutDelegateP", "messageBottomLabelHeight"]
 - ["10MessageKit22MessagesLayoutDelegateP", "messageFooterView"]
@@ -685,11 +766,14 @@ depends-member:
 - !private ["10MessageKit22MessagesLayoutDelegateP", "navigationItem"]
 - ["10MessageKit22MessagesLayoutDelegateP", "numberOfItems"]
 - ["10MessageKit22MessagesLayoutDelegateP", "numberOfSections"]
+- !private ["10MessageKit22MessagesLayoutDelegateP", "profileRef"]
 - ["10MessageKit22MessagesLayoutDelegateP", "snapshotOptionsForLocation"]
 - ["10MessageKit22MessagesLayoutDelegateP", "textColor"]
+- !private ["10MessageKit22MessagesViewControllerC", "Auth"]
 - ["10MessageKit22MessagesViewControllerC", "AvatarView"]
 - ["10MessageKit22MessagesViewControllerC", "CGFloat"]
 - ["10MessageKit22MessagesViewControllerC", "Database"]
+- ["10MessageKit22MessagesViewControllerC", "DatabaseReference"]
 - ["10MessageKit22MessagesViewControllerC", "IndexPath"]
 - ["10MessageKit22MessagesViewControllerC", "Int"]
 - ["10MessageKit22MessagesViewControllerC", "Member"]
@@ -724,8 +808,11 @@ depends-member:
 - ["10MessageKit22MessagesViewControllerC", "heightForLocation"]
 - ["10MessageKit22MessagesViewControllerC", "init"]
 - !private ["10MessageKit22MessagesViewControllerC", "init"]
+- ["10MessageKit22MessagesViewControllerC", "insertNewMessage"]
 - ["10MessageKit22MessagesViewControllerC", "isFromCurrentSender"]
 - ["10MessageKit22MessagesViewControllerC", "member"]
+- ["10MessageKit22MessagesViewControllerC", "member2"]
+- ["10MessageKit22MessagesViewControllerC", "member3"]
 - ["10MessageKit22MessagesViewControllerC", "messageBottomLabelAttributedText"]
 - ["10MessageKit22MessagesViewControllerC", "messageBottomLabelHeight"]
 - ["10MessageKit22MessagesViewControllerC", "messageFooterView"]
@@ -740,6 +827,7 @@ depends-member:
 - !private ["10MessageKit22MessagesViewControllerC", "navigationItem"]
 - ["10MessageKit22MessagesViewControllerC", "numberOfItems"]
 - ["10MessageKit22MessagesViewControllerC", "numberOfSections"]
+- ["10MessageKit22MessagesViewControllerC", "profileRef"]
 - ["10MessageKit22MessagesViewControllerC", "setUpNavigationBarItems"]
 - ["10MessageKit22MessagesViewControllerC", "snapshotOptionsForLocation"]
 - ["10MessageKit22MessagesViewControllerC", "textColor"]
@@ -752,6 +840,7 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "count"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
 - !private ["So18NSAttributedStringC", "init"]
+- !private ["So8NSCodingP", "Auth"]
 - ["So8NSCodingP", "Database"]
 - !private ["So8NSCodingP", "Member"]
 - !private ["So8NSCodingP", "Message"]
@@ -765,7 +854,6 @@ depends-member:
 - ["So8NSCodingP", "animationBlockForLocation"]
 - ["So8NSCodingP", "annotationViewForLocation"]
 - ["So8NSCodingP", "backgroundColor"]
-- !private ["So8NSCodingP", "blue"]
 - ["So8NSCodingP", "cellTopLabelAttributedText"]
 - ["So8NSCodingP", "cellTopLabelHeight"]
 - ["So8NSCodingP", "configureAccessoryView"]
@@ -784,8 +872,11 @@ depends-member:
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "inputTextView"]
+- !private ["So8NSCodingP", "insertNewMessage"]
 - ["So8NSCodingP", "isFromCurrentSender"]
 - !private ["So8NSCodingP", "member"]
+- !private ["So8NSCodingP", "member2"]
+- !private ["So8NSCodingP", "member3"]
 - ["So8NSCodingP", "messageBottomLabelAttributedText"]
 - ["So8NSCodingP", "messageBottomLabelHeight"]
 - ["So8NSCodingP", "messageFooterView"]
@@ -803,6 +894,7 @@ depends-member:
 - !private ["So8NSCodingP", "navigationItem"]
 - ["So8NSCodingP", "numberOfItems"]
 - ["So8NSCodingP", "numberOfSections"]
+- !private ["So8NSCodingP", "profileRef"]
 - !private ["So8NSCodingP", "reloadData"]
 - !private ["So8NSCodingP", "scrollToBottom"]
 - ["So8NSCodingP", "snapshotOptionsForLocation"]
@@ -811,9 +903,9 @@ depends-member:
 - !private ["So8NSCodingP", "titleView"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - !private ["So8NSCodingP", "widthAnchor"]
-- !private ["So9NSCopyingP", "blue"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "systemFont"]
+- !private ["So26NSExtensionRequestHandlingP", "Auth"]
 - ["So26NSExtensionRequestHandlingP", "Database"]
 - !private ["So26NSExtensionRequestHandlingP", "Member"]
 - !private ["So26NSExtensionRequestHandlingP", "Message"]
@@ -841,8 +933,11 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "headerViewSize"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "insertNewMessage"]
 - ["So26NSExtensionRequestHandlingP", "isFromCurrentSender"]
 - !private ["So26NSExtensionRequestHandlingP", "member"]
+- !private ["So26NSExtensionRequestHandlingP", "member2"]
+- !private ["So26NSExtensionRequestHandlingP", "member3"]
 - ["So26NSExtensionRequestHandlingP", "messageBottomLabelAttributedText"]
 - ["So26NSExtensionRequestHandlingP", "messageBottomLabelHeight"]
 - ["So26NSExtensionRequestHandlingP", "messageFooterView"]
@@ -857,20 +952,21 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "navigationItem"]
 - ["So26NSExtensionRequestHandlingP", "numberOfItems"]
 - ["So26NSExtensionRequestHandlingP", "numberOfSections"]
+- !private ["So26NSExtensionRequestHandlingP", "profileRef"]
 - ["So26NSExtensionRequestHandlingP", "snapshotOptionsForLocation"]
 - ["So26NSExtensionRequestHandlingP", "textColor"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
-- !private ["So21NSItemProviderReadingP", "blue"]
 - !private ["So21NSItemProviderReadingP", "init"]
-- !private ["So21NSItemProviderWritingP", "blue"]
 - !private ["So21NSItemProviderWritingP", "init"]
 - !private ["So14NSLayoutAnchorC", "constraint"]
 - !private ["So18NSLayoutConstraintC", "isActive"]
 - !private ["So17NSLayoutDimensionC", "constraint"]
 - !private ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSObjectC", "Auth"]
 - ["So8NSObjectC", "AvatarView"]
 - ["So8NSObjectC", "CGFloat"]
 - ["So8NSObjectC", "Database"]
+- ["So8NSObjectC", "DatabaseReference"]
 - ["So8NSObjectC", "IndexPath"]
 - ["So8NSObjectC", "Int"]
 - ["So8NSObjectC", "Member"]
@@ -887,15 +983,17 @@ depends-member:
 - !private ["So8NSObjectC", "UUID"]
 - ["So8NSObjectC", "animationBlockForLocation"]
 - ["So8NSObjectC", "annotationViewForLocation"]
+- !private ["So8NSObjectC", "auth"]
 - ["So8NSObjectC", "backgroundColor"]
-- !private ["So8NSObjectC", "blue"]
 - ["So8NSObjectC", "cellTopLabelAttributedText"]
 - ["So8NSObjectC", "cellTopLabelHeight"]
+- !private ["So8NSObjectC", "child"]
 - ["So8NSObjectC", "configureAccessoryView"]
 - ["So8NSObjectC", "configureAvatarView"]
 - ["So8NSObjectC", "configureMediaMessageImageView"]
 - !private ["So8NSObjectC", "constraint"]
 - ["So8NSObjectC", "currentSender"]
+- !private ["So8NSObjectC", "currentUser"]
 - ["So8NSObjectC", "customCell"]
 - ["So8NSObjectC", "customCellSizeCalculator"]
 - ["So8NSObjectC", "database"]
@@ -911,9 +1009,12 @@ depends-member:
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "inputTextView"]
+- ["So8NSObjectC", "insertNewMessage"]
 - !private ["So8NSObjectC", "isActive"]
 - ["So8NSObjectC", "isFromCurrentSender"]
 - ["So8NSObjectC", "member"]
+- ["So8NSObjectC", "member2"]
+- ["So8NSObjectC", "member3"]
 - ["So8NSObjectC", "messageBottomLabelAttributedText"]
 - ["So8NSObjectC", "messageBottomLabelHeight"]
 - ["So8NSObjectC", "messageFooterView"]
@@ -931,6 +1032,8 @@ depends-member:
 - !private ["So8NSObjectC", "navigationItem"]
 - ["So8NSObjectC", "numberOfItems"]
 - ["So8NSObjectC", "numberOfSections"]
+- ["So8NSObjectC", "profileRef"]
+- !private ["So8NSObjectC", "reference"]
 - !private ["So8NSObjectC", "reloadData"]
 - !private ["So8NSObjectC", "scrollToBottom"]
 - ["So8NSObjectC", "setUpNavigationBarItems"]
@@ -939,8 +1042,10 @@ depends-member:
 - !private ["So8NSObjectC", "text"]
 - ["So8NSObjectC", "textColor"]
 - !private ["So8NSObjectC", "titleView"]
+- !private ["So8NSObjectC", "uid"]
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectC", "widthAnchor"]
+- !private ["So8NSObjectP", "Auth"]
 - ["So8NSObjectP", "Database"]
 - !private ["So8NSObjectP", "Member"]
 - !private ["So8NSObjectP", "Message"]
@@ -953,15 +1058,17 @@ depends-member:
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "animationBlockForLocation"]
 - ["So8NSObjectP", "annotationViewForLocation"]
+- !private ["So8NSObjectP", "auth"]
 - ["So8NSObjectP", "backgroundColor"]
-- !private ["So8NSObjectP", "blue"]
 - ["So8NSObjectP", "cellTopLabelAttributedText"]
 - ["So8NSObjectP", "cellTopLabelHeight"]
+- !private ["So8NSObjectP", "child"]
 - ["So8NSObjectP", "configureAccessoryView"]
 - ["So8NSObjectP", "configureAvatarView"]
 - ["So8NSObjectP", "configureMediaMessageImageView"]
 - !private ["So8NSObjectP", "constraint"]
 - ["So8NSObjectP", "currentSender"]
+- !private ["So8NSObjectP", "currentUser"]
 - ["So8NSObjectP", "customCell"]
 - ["So8NSObjectP", "customCellSizeCalculator"]
 - ["So8NSObjectP", "database"]
@@ -975,9 +1082,12 @@ depends-member:
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "inputTextView"]
+- !private ["So8NSObjectP", "insertNewMessage"]
 - !private ["So8NSObjectP", "isActive"]
 - ["So8NSObjectP", "isFromCurrentSender"]
 - !private ["So8NSObjectP", "member"]
+- !private ["So8NSObjectP", "member2"]
+- !private ["So8NSObjectP", "member3"]
 - ["So8NSObjectP", "messageBottomLabelAttributedText"]
 - ["So8NSObjectP", "messageBottomLabelHeight"]
 - ["So8NSObjectP", "messageFooterView"]
@@ -995,6 +1105,8 @@ depends-member:
 - !private ["So8NSObjectP", "navigationItem"]
 - ["So8NSObjectP", "numberOfItems"]
 - ["So8NSObjectP", "numberOfSections"]
+- !private ["So8NSObjectP", "profileRef"]
+- !private ["So8NSObjectP", "reference"]
 - !private ["So8NSObjectP", "reloadData"]
 - !private ["So8NSObjectP", "scrollToBottom"]
 - ["So8NSObjectP", "snapshotOptionsForLocation"]
@@ -1002,11 +1114,13 @@ depends-member:
 - !private ["So8NSObjectP", "text"]
 - ["So8NSObjectP", "textColor"]
 - !private ["So8NSObjectP", "titleView"]
+- !private ["So8NSObjectP", "uid"]
 - !private ["So8NSObjectP", "viewDidLoad"]
 - !private ["So8NSObjectP", "widthAnchor"]
-- !private ["So14NSSecureCodingP", "blue"]
 - !private ["So14NSSecureCodingP", "init"]
+- !private ["Sq", "child"]
 - !private ["Sq", "name"]
+- !private ["10Kingfisher11PlaceholderP", "init"]
 - !private ["Sk", "append"]
 - !private ["Sk", "count"]
 - !private ["Sk", "section"]
@@ -1024,12 +1138,10 @@ depends-member:
 - !private ["ST", "count"]
 - !private ["ST", "section"]
 - !private ["ST", "subscript"]
-- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "backgroundColor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "heightAnchor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "init"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "widthAnchor"]
-- !private ["So29UIAccessibilityIdentificationP", "backgroundColor"]
 - !private ["So29UIAccessibilityIdentificationP", "delegate"]
 - !private ["So29UIAccessibilityIdentificationP", "heightAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "image"]
@@ -1042,7 +1154,6 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "scrollToBottom"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So29UIAccessibilityIdentificationP", "widthAnchor"]
-- !private ["So12UIAppearanceP", "backgroundColor"]
 - !private ["So12UIAppearanceP", "delegate"]
 - !private ["So12UIAppearanceP", "heightAnchor"]
 - !private ["So12UIAppearanceP", "image"]
@@ -1055,6 +1166,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "scrollToBottom"]
 - !private ["So12UIAppearanceP", "text"]
 - !private ["So12UIAppearanceP", "widthAnchor"]
+- !private ["So21UIAppearanceContainerP", "Auth"]
 - ["So21UIAppearanceContainerP", "Database"]
 - !private ["So21UIAppearanceContainerP", "Member"]
 - !private ["So21UIAppearanceContainerP", "Message"]
@@ -1086,8 +1198,11 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "inputTextView"]
+- !private ["So21UIAppearanceContainerP", "insertNewMessage"]
 - ["So21UIAppearanceContainerP", "isFromCurrentSender"]
 - !private ["So21UIAppearanceContainerP", "member"]
+- !private ["So21UIAppearanceContainerP", "member2"]
+- !private ["So21UIAppearanceContainerP", "member3"]
 - ["So21UIAppearanceContainerP", "messageBottomLabelAttributedText"]
 - ["So21UIAppearanceContainerP", "messageBottomLabelHeight"]
 - ["So21UIAppearanceContainerP", "messageFooterView"]
@@ -1105,6 +1220,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "navigationItem"]
 - ["So21UIAppearanceContainerP", "numberOfItems"]
 - ["So21UIAppearanceContainerP", "numberOfSections"]
+- !private ["So21UIAppearanceContainerP", "profileRef"]
 - !private ["So21UIAppearanceContainerP", "reloadData"]
 - !private ["So21UIAppearanceContainerP", "scrollToBottom"]
 - ["So21UIAppearanceContainerP", "snapshotOptionsForLocation"]
@@ -1117,6 +1233,7 @@ depends-member:
 - !private ["So16UICollectionViewC", "messagesLayoutDelegate"]
 - !private ["So16UICollectionViewC", "reloadData"]
 - !private ["So16UICollectionViewC", "scrollToBottom"]
+- !private ["So26UICollectionViewDataSourceP", "Auth"]
 - ["So26UICollectionViewDataSourceP", "Database"]
 - !private ["So26UICollectionViewDataSourceP", "Member"]
 - !private ["So26UICollectionViewDataSourceP", "Message"]
@@ -1144,8 +1261,11 @@ depends-member:
 - ["So26UICollectionViewDataSourceP", "headerViewSize"]
 - !private ["So26UICollectionViewDataSourceP", "init"]
 - !private ["So26UICollectionViewDataSourceP", "init"]
+- !private ["So26UICollectionViewDataSourceP", "insertNewMessage"]
 - ["So26UICollectionViewDataSourceP", "isFromCurrentSender"]
 - !private ["So26UICollectionViewDataSourceP", "member"]
+- !private ["So26UICollectionViewDataSourceP", "member2"]
+- !private ["So26UICollectionViewDataSourceP", "member3"]
 - ["So26UICollectionViewDataSourceP", "messageBottomLabelAttributedText"]
 - ["So26UICollectionViewDataSourceP", "messageBottomLabelHeight"]
 - ["So26UICollectionViewDataSourceP", "messageFooterView"]
@@ -1160,9 +1280,11 @@ depends-member:
 - !private ["So26UICollectionViewDataSourceP", "navigationItem"]
 - ["So26UICollectionViewDataSourceP", "numberOfItems"]
 - ["So26UICollectionViewDataSourceP", "numberOfSections"]
+- !private ["So26UICollectionViewDataSourceP", "profileRef"]
 - ["So26UICollectionViewDataSourceP", "snapshotOptionsForLocation"]
 - ["So26UICollectionViewDataSourceP", "textColor"]
 - !private ["So26UICollectionViewDataSourceP", "viewDidLoad"]
+- !private ["So24UICollectionViewDelegateP", "Auth"]
 - ["So24UICollectionViewDelegateP", "Database"]
 - !private ["So24UICollectionViewDelegateP", "Member"]
 - !private ["So24UICollectionViewDelegateP", "Message"]
@@ -1190,8 +1312,11 @@ depends-member:
 - ["So24UICollectionViewDelegateP", "headerViewSize"]
 - !private ["So24UICollectionViewDelegateP", "init"]
 - !private ["So24UICollectionViewDelegateP", "init"]
+- !private ["So24UICollectionViewDelegateP", "insertNewMessage"]
 - ["So24UICollectionViewDelegateP", "isFromCurrentSender"]
 - !private ["So24UICollectionViewDelegateP", "member"]
+- !private ["So24UICollectionViewDelegateP", "member2"]
+- !private ["So24UICollectionViewDelegateP", "member3"]
 - ["So24UICollectionViewDelegateP", "messageBottomLabelAttributedText"]
 - ["So24UICollectionViewDelegateP", "messageBottomLabelHeight"]
 - ["So24UICollectionViewDelegateP", "messageFooterView"]
@@ -1206,9 +1331,11 @@ depends-member:
 - !private ["So24UICollectionViewDelegateP", "navigationItem"]
 - ["So24UICollectionViewDelegateP", "numberOfItems"]
 - ["So24UICollectionViewDelegateP", "numberOfSections"]
+- !private ["So24UICollectionViewDelegateP", "profileRef"]
 - ["So24UICollectionViewDelegateP", "snapshotOptionsForLocation"]
 - ["So24UICollectionViewDelegateP", "textColor"]
 - !private ["So24UICollectionViewDelegateP", "viewDidLoad"]
+- !private ["So34UICollectionViewDelegateFlowLayoutP", "Auth"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "Database"]
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "Member"]
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "Message"]
@@ -1236,8 +1363,11 @@ depends-member:
 - ["So34UICollectionViewDelegateFlowLayoutP", "headerViewSize"]
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "init"]
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "init"]
+- !private ["So34UICollectionViewDelegateFlowLayoutP", "insertNewMessage"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "isFromCurrentSender"]
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "member"]
+- !private ["So34UICollectionViewDelegateFlowLayoutP", "member2"]
+- !private ["So34UICollectionViewDelegateFlowLayoutP", "member3"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "messageBottomLabelAttributedText"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "messageBottomLabelHeight"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "messageFooterView"]
@@ -1252,10 +1382,11 @@ depends-member:
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "navigationItem"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "numberOfItems"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "numberOfSections"]
+- !private ["So34UICollectionViewDelegateFlowLayoutP", "profileRef"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "snapshotOptionsForLocation"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "textColor"]
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "viewDidLoad"]
-- !private ["So7UIColorC", "blue"]
+- !private ["So18UIContentContainerP", "Auth"]
 - ["So18UIContentContainerP", "Database"]
 - !private ["So18UIContentContainerP", "Member"]
 - !private ["So18UIContentContainerP", "Message"]
@@ -1283,8 +1414,11 @@ depends-member:
 - ["So18UIContentContainerP", "headerViewSize"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "insertNewMessage"]
 - ["So18UIContentContainerP", "isFromCurrentSender"]
 - !private ["So18UIContentContainerP", "member"]
+- !private ["So18UIContentContainerP", "member2"]
+- !private ["So18UIContentContainerP", "member3"]
 - ["So18UIContentContainerP", "messageBottomLabelAttributedText"]
 - ["So18UIContentContainerP", "messageBottomLabelHeight"]
 - ["So18UIContentContainerP", "messageFooterView"]
@@ -1299,11 +1433,11 @@ depends-member:
 - !private ["So18UIContentContainerP", "navigationItem"]
 - ["So18UIContentContainerP", "numberOfItems"]
 - ["So18UIContentContainerP", "numberOfSections"]
+- !private ["So18UIContentContainerP", "profileRef"]
 - ["So18UIContentContainerP", "snapshotOptionsForLocation"]
 - ["So18UIContentContainerP", "textColor"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
-- !private ["So17UICoordinateSpaceP", "backgroundColor"]
 - !private ["So17UICoordinateSpaceP", "delegate"]
 - !private ["So17UICoordinateSpaceP", "heightAnchor"]
 - !private ["So17UICoordinateSpaceP", "image"]
@@ -1321,7 +1455,6 @@ depends-member:
 - !private ["So23UIDataSourceTranslatingP", "messagesLayoutDelegate"]
 - !private ["So23UIDataSourceTranslatingP", "reloadData"]
 - !private ["So23UIDataSourceTranslatingP", "scrollToBottom"]
-- !private ["So13UIDynamicItemP", "backgroundColor"]
 - !private ["So13UIDynamicItemP", "delegate"]
 - !private ["So13UIDynamicItemP", "heightAnchor"]
 - !private ["So13UIDynamicItemP", "image"]
@@ -1334,6 +1467,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "scrollToBottom"]
 - !private ["So13UIDynamicItemP", "text"]
 - !private ["So13UIDynamicItemP", "widthAnchor"]
+- !private ["So18UIFocusEnvironmentP", "Auth"]
 - ["So18UIFocusEnvironmentP", "Database"]
 - !private ["So18UIFocusEnvironmentP", "Member"]
 - !private ["So18UIFocusEnvironmentP", "Message"]
@@ -1365,8 +1499,11 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "inputTextView"]
+- !private ["So18UIFocusEnvironmentP", "insertNewMessage"]
 - ["So18UIFocusEnvironmentP", "isFromCurrentSender"]
 - !private ["So18UIFocusEnvironmentP", "member"]
+- !private ["So18UIFocusEnvironmentP", "member2"]
+- !private ["So18UIFocusEnvironmentP", "member3"]
 - ["So18UIFocusEnvironmentP", "messageBottomLabelAttributedText"]
 - ["So18UIFocusEnvironmentP", "messageBottomLabelHeight"]
 - ["So18UIFocusEnvironmentP", "messageFooterView"]
@@ -1384,6 +1521,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "navigationItem"]
 - ["So18UIFocusEnvironmentP", "numberOfItems"]
 - ["So18UIFocusEnvironmentP", "numberOfSections"]
+- !private ["So18UIFocusEnvironmentP", "profileRef"]
 - !private ["So18UIFocusEnvironmentP", "reloadData"]
 - !private ["So18UIFocusEnvironmentP", "scrollToBottom"]
 - ["So18UIFocusEnvironmentP", "snapshotOptionsForLocation"]
@@ -1391,7 +1529,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "textColor"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - !private ["So18UIFocusEnvironmentP", "widthAnchor"]
-- !private ["So11UIFocusItemP", "backgroundColor"]
 - !private ["So11UIFocusItemP", "delegate"]
 - !private ["So11UIFocusItemP", "heightAnchor"]
 - !private ["So11UIFocusItemP", "image"]
@@ -1404,7 +1541,6 @@ depends-member:
 - !private ["So11UIFocusItemP", "scrollToBottom"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So11UIFocusItemP", "widthAnchor"]
-- !private ["So20UIFocusItemContainerP", "backgroundColor"]
 - !private ["So20UIFocusItemContainerP", "delegate"]
 - !private ["So20UIFocusItemContainerP", "heightAnchor"]
 - !private ["So20UIFocusItemContainerP", "image"]
@@ -1425,7 +1561,6 @@ depends-member:
 - !private ["So30UIFocusItemScrollableContainerP", "text"]
 - !private ["So6UIFontC", "systemFont"]
 - !private ["So7UIImageC", "init"]
-- !private ["So11UIImageViewC", "backgroundColor"]
 - !private ["So11UIImageViewC", "heightAnchor"]
 - !private ["So11UIImageViewC", "image"]
 - !private ["So11UIImageViewC", "init"]
@@ -1433,6 +1568,7 @@ depends-member:
 - !private ["So39UIItemProviderPresentationSizeProvidingP", "init"]
 - !private ["So10UIKeyInputP", "text"]
 - !private ["So16UINavigationItemC", "titleView"]
+- !private ["So30UIPasteConfigurationSupportingP", "Auth"]
 - ["So30UIPasteConfigurationSupportingP", "Database"]
 - !private ["So30UIPasteConfigurationSupportingP", "Member"]
 - !private ["So30UIPasteConfigurationSupportingP", "Message"]
@@ -1464,8 +1600,11 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "inputTextView"]
+- !private ["So30UIPasteConfigurationSupportingP", "insertNewMessage"]
 - ["So30UIPasteConfigurationSupportingP", "isFromCurrentSender"]
 - !private ["So30UIPasteConfigurationSupportingP", "member"]
+- !private ["So30UIPasteConfigurationSupportingP", "member2"]
+- !private ["So30UIPasteConfigurationSupportingP", "member3"]
 - ["So30UIPasteConfigurationSupportingP", "messageBottomLabelAttributedText"]
 - ["So30UIPasteConfigurationSupportingP", "messageBottomLabelHeight"]
 - ["So30UIPasteConfigurationSupportingP", "messageFooterView"]
@@ -1483,6 +1622,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "navigationItem"]
 - ["So30UIPasteConfigurationSupportingP", "numberOfItems"]
 - ["So30UIPasteConfigurationSupportingP", "numberOfSections"]
+- !private ["So30UIPasteConfigurationSupportingP", "profileRef"]
 - !private ["So30UIPasteConfigurationSupportingP", "reloadData"]
 - !private ["So30UIPasteConfigurationSupportingP", "scrollToBottom"]
 - ["So30UIPasteConfigurationSupportingP", "snapshotOptionsForLocation"]
@@ -1490,9 +1630,11 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "textColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - !private ["So30UIPasteConfigurationSupportingP", "widthAnchor"]
+- !private ["So11UIResponderC", "Auth"]
 - ["So11UIResponderC", "AvatarView"]
 - ["So11UIResponderC", "CGFloat"]
 - ["So11UIResponderC", "Database"]
+- ["So11UIResponderC", "DatabaseReference"]
 - ["So11UIResponderC", "IndexPath"]
 - ["So11UIResponderC", "Int"]
 - ["So11UIResponderC", "Member"]
@@ -1530,8 +1672,11 @@ depends-member:
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "inputTextView"]
+- ["So11UIResponderC", "insertNewMessage"]
 - ["So11UIResponderC", "isFromCurrentSender"]
 - ["So11UIResponderC", "member"]
+- ["So11UIResponderC", "member2"]
+- ["So11UIResponderC", "member3"]
 - ["So11UIResponderC", "messageBottomLabelAttributedText"]
 - ["So11UIResponderC", "messageBottomLabelHeight"]
 - ["So11UIResponderC", "messageFooterView"]
@@ -1549,6 +1694,7 @@ depends-member:
 - !private ["So11UIResponderC", "navigationItem"]
 - ["So11UIResponderC", "numberOfItems"]
 - ["So11UIResponderC", "numberOfSections"]
+- ["So11UIResponderC", "profileRef"]
 - !private ["So11UIResponderC", "reloadData"]
 - !private ["So11UIResponderC", "scrollToBottom"]
 - ["So11UIResponderC", "setUpNavigationBarItems"]
@@ -1557,6 +1703,7 @@ depends-member:
 - ["So11UIResponderC", "textColor"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So11UIResponderC", "widthAnchor"]
+- !private ["So30UIResponderStandardEditActionsP", "Auth"]
 - ["So30UIResponderStandardEditActionsP", "Database"]
 - !private ["So30UIResponderStandardEditActionsP", "Member"]
 - !private ["So30UIResponderStandardEditActionsP", "Message"]
@@ -1588,8 +1735,11 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "inputTextView"]
+- !private ["So30UIResponderStandardEditActionsP", "insertNewMessage"]
 - ["So30UIResponderStandardEditActionsP", "isFromCurrentSender"]
 - !private ["So30UIResponderStandardEditActionsP", "member"]
+- !private ["So30UIResponderStandardEditActionsP", "member2"]
+- !private ["So30UIResponderStandardEditActionsP", "member3"]
 - ["So30UIResponderStandardEditActionsP", "messageBottomLabelAttributedText"]
 - ["So30UIResponderStandardEditActionsP", "messageBottomLabelHeight"]
 - ["So30UIResponderStandardEditActionsP", "messageFooterView"]
@@ -1607,6 +1757,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "navigationItem"]
 - ["So30UIResponderStandardEditActionsP", "numberOfItems"]
 - ["So30UIResponderStandardEditActionsP", "numberOfSections"]
+- !private ["So30UIResponderStandardEditActionsP", "profileRef"]
 - !private ["So30UIResponderStandardEditActionsP", "reloadData"]
 - !private ["So30UIResponderStandardEditActionsP", "scrollToBottom"]
 - ["So30UIResponderStandardEditActionsP", "snapshotOptionsForLocation"]
@@ -1620,6 +1771,7 @@ depends-member:
 - !private ["So12UIScrollViewC", "reloadData"]
 - !private ["So12UIScrollViewC", "scrollToBottom"]
 - !private ["So12UIScrollViewC", "text"]
+- !private ["So20UIScrollViewDelegateP", "Auth"]
 - ["So20UIScrollViewDelegateP", "Database"]
 - !private ["So20UIScrollViewDelegateP", "Member"]
 - !private ["So20UIScrollViewDelegateP", "Message"]
@@ -1647,8 +1799,11 @@ depends-member:
 - ["So20UIScrollViewDelegateP", "headerViewSize"]
 - !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "init"]
+- !private ["So20UIScrollViewDelegateP", "insertNewMessage"]
 - ["So20UIScrollViewDelegateP", "isFromCurrentSender"]
 - !private ["So20UIScrollViewDelegateP", "member"]
+- !private ["So20UIScrollViewDelegateP", "member2"]
+- !private ["So20UIScrollViewDelegateP", "member3"]
 - ["So20UIScrollViewDelegateP", "messageBottomLabelAttributedText"]
 - ["So20UIScrollViewDelegateP", "messageBottomLabelHeight"]
 - ["So20UIScrollViewDelegateP", "messageFooterView"]
@@ -1663,6 +1818,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "navigationItem"]
 - ["So20UIScrollViewDelegateP", "numberOfItems"]
 - ["So20UIScrollViewDelegateP", "numberOfSections"]
+- !private ["So20UIScrollViewDelegateP", "profileRef"]
 - ["So20UIScrollViewDelegateP", "snapshotOptionsForLocation"]
 - ["So20UIScrollViewDelegateP", "textColor"]
 - !private ["So20UIScrollViewDelegateP", "viewDidLoad"]
@@ -1671,6 +1827,7 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "messagesLayoutDelegate"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "reloadData"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "scrollToBottom"]
+- !private ["So16UIStateRestoringP", "Auth"]
 - ["So16UIStateRestoringP", "Database"]
 - !private ["So16UIStateRestoringP", "Member"]
 - !private ["So16UIStateRestoringP", "Message"]
@@ -1698,8 +1855,11 @@ depends-member:
 - ["So16UIStateRestoringP", "headerViewSize"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "insertNewMessage"]
 - ["So16UIStateRestoringP", "isFromCurrentSender"]
 - !private ["So16UIStateRestoringP", "member"]
+- !private ["So16UIStateRestoringP", "member2"]
+- !private ["So16UIStateRestoringP", "member3"]
 - ["So16UIStateRestoringP", "messageBottomLabelAttributedText"]
 - ["So16UIStateRestoringP", "messageBottomLabelHeight"]
 - ["So16UIStateRestoringP", "messageFooterView"]
@@ -1714,6 +1874,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "navigationItem"]
 - ["So16UIStateRestoringP", "numberOfItems"]
 - ["So16UIStateRestoringP", "numberOfSections"]
+- !private ["So16UIStateRestoringP", "profileRef"]
 - ["So16UIStateRestoringP", "snapshotOptionsForLocation"]
 - ["So16UIStateRestoringP", "textColor"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
@@ -1723,6 +1884,7 @@ depends-member:
 - !private ["So17UITextInputTraitsP", "text"]
 - !private ["So34UITextPasteConfigurationSupportingP", "text"]
 - !private ["So10UITextViewC", "text"]
+- !private ["So18UITraitEnvironmentP", "Auth"]
 - ["So18UITraitEnvironmentP", "Database"]
 - !private ["So18UITraitEnvironmentP", "Member"]
 - !private ["So18UITraitEnvironmentP", "Message"]
@@ -1754,8 +1916,11 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "inputTextView"]
+- !private ["So18UITraitEnvironmentP", "insertNewMessage"]
 - ["So18UITraitEnvironmentP", "isFromCurrentSender"]
 - !private ["So18UITraitEnvironmentP", "member"]
+- !private ["So18UITraitEnvironmentP", "member2"]
+- !private ["So18UITraitEnvironmentP", "member3"]
 - ["So18UITraitEnvironmentP", "messageBottomLabelAttributedText"]
 - ["So18UITraitEnvironmentP", "messageBottomLabelHeight"]
 - ["So18UITraitEnvironmentP", "messageFooterView"]
@@ -1773,6 +1938,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "navigationItem"]
 - ["So18UITraitEnvironmentP", "numberOfItems"]
 - ["So18UITraitEnvironmentP", "numberOfSections"]
+- !private ["So18UITraitEnvironmentP", "profileRef"]
 - !private ["So18UITraitEnvironmentP", "reloadData"]
 - !private ["So18UITraitEnvironmentP", "scrollToBottom"]
 - ["So18UITraitEnvironmentP", "snapshotOptionsForLocation"]
@@ -1780,6 +1946,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "textColor"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
 - !private ["So18UITraitEnvironmentP", "widthAnchor"]
+- !private ["So23UIUserActivityRestoringP", "Auth"]
 - ["So23UIUserActivityRestoringP", "Database"]
 - !private ["So23UIUserActivityRestoringP", "Member"]
 - !private ["So23UIUserActivityRestoringP", "Message"]
@@ -1811,8 +1978,11 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "inputTextView"]
+- !private ["So23UIUserActivityRestoringP", "insertNewMessage"]
 - ["So23UIUserActivityRestoringP", "isFromCurrentSender"]
 - !private ["So23UIUserActivityRestoringP", "member"]
+- !private ["So23UIUserActivityRestoringP", "member2"]
+- !private ["So23UIUserActivityRestoringP", "member3"]
 - ["So23UIUserActivityRestoringP", "messageBottomLabelAttributedText"]
 - ["So23UIUserActivityRestoringP", "messageBottomLabelHeight"]
 - ["So23UIUserActivityRestoringP", "messageFooterView"]
@@ -1830,6 +2000,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "navigationItem"]
 - ["So23UIUserActivityRestoringP", "numberOfItems"]
 - ["So23UIUserActivityRestoringP", "numberOfSections"]
+- !private ["So23UIUserActivityRestoringP", "profileRef"]
 - !private ["So23UIUserActivityRestoringP", "reloadData"]
 - !private ["So23UIUserActivityRestoringP", "scrollToBottom"]
 - ["So23UIUserActivityRestoringP", "snapshotOptionsForLocation"]
@@ -1837,7 +2008,6 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "textColor"]
 - !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
 - !private ["So23UIUserActivityRestoringP", "widthAnchor"]
-- !private ["So6UIViewC", "backgroundColor"]
 - !private ["So6UIViewC", "delegate"]
 - !private ["So6UIViewC", "heightAnchor"]
 - !private ["So6UIViewC", "image"]
@@ -1850,9 +2020,11 @@ depends-member:
 - !private ["So6UIViewC", "scrollToBottom"]
 - !private ["So6UIViewC", "text"]
 - !private ["So6UIViewC", "widthAnchor"]
+- !private ["So16UIViewControllerC", "Auth"]
 - ["So16UIViewControllerC", "AvatarView"]
 - ["So16UIViewControllerC", "CGFloat"]
 - ["So16UIViewControllerC", "Database"]
+- ["So16UIViewControllerC", "DatabaseReference"]
 - ["So16UIViewControllerC", "IndexPath"]
 - ["So16UIViewControllerC", "Int"]
 - ["So16UIViewControllerC", "Member"]
@@ -1886,8 +2058,11 @@ depends-member:
 - ["So16UIViewControllerC", "heightForLocation"]
 - ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "insertNewMessage"]
 - ["So16UIViewControllerC", "isFromCurrentSender"]
 - ["So16UIViewControllerC", "member"]
+- ["So16UIViewControllerC", "member2"]
+- ["So16UIViewControllerC", "member3"]
 - ["So16UIViewControllerC", "messageBottomLabelAttributedText"]
 - ["So16UIViewControllerC", "messageBottomLabelHeight"]
 - ["So16UIViewControllerC", "messageFooterView"]
@@ -1902,19 +2077,21 @@ depends-member:
 - !private ["So16UIViewControllerC", "navigationItem"]
 - ["So16UIViewControllerC", "numberOfItems"]
 - ["So16UIViewControllerC", "numberOfSections"]
+- ["So16UIViewControllerC", "profileRef"]
 - ["So16UIViewControllerC", "setUpNavigationBarItems"]
 - ["So16UIViewControllerC", "snapshotOptionsForLocation"]
 - ["So16UIViewControllerC", "textColor"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - !private ["10Foundation4UUIDV", "init"]
 - !private ["10Foundation4UUIDV", "uuidString"]
+- !private ["So7FIRUserC", "uid"]
+- !private ["So11FIRUserInfoP", "uid"]
 - !private ["s14_ArrayProtocolP", "append"]
 - !private ["s14_ArrayProtocolP", "count"]
 - !private ["s14_ArrayProtocolP", "subscript"]
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s24_DestructorSafeContainerP", "count"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
-- !private ["s26_ExpressibleByColorLiteralP", "blue"]
 - !private ["s26_ExpressibleByImageLiteralP", "init"]
 - !private ["s19_HasContiguousBytesP", "append"]
 - !private ["s19_HasContiguousBytesP", "count"]
@@ -1923,6 +2100,7 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "font"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Auth"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Database"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Member"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Message"]
@@ -1935,15 +2113,17 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - ["10Foundation27_KeyValueCodingAndObservingP", "animationBlockForLocation"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "annotationViewForLocation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "blue"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "cellTopLabelAttributedText"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "cellTopLabelHeight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "child"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "configureAccessoryView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "configureAvatarView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "configureMediaMessageImageView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "constraint"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "currentSender"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "customCell"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "customCellSizeCalculator"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "database"]
@@ -1957,9 +2137,12 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "inputTextView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "insertNewMessage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isActive"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "isFromCurrentSender"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "member"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "member2"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "member3"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "messageBottomLabelAttributedText"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "messageBottomLabelHeight"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "messageFooterView"]
@@ -1977,6 +2160,8 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationItem"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "numberOfItems"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "numberOfSections"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "profileRef"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reference"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reloadData"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "scrollToBottom"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "snapshotOptionsForLocation"]
@@ -1984,9 +2169,11 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "titleView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "uid"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "widthAnchor"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "child"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "font"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
@@ -1995,7 +2182,6 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "uuidString"]
 - !private ["s20_SwiftNewtypeWrapperP", "font"]
-- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "delegate"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "heightAnchor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "image"]
@@ -2010,10 +2196,11 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "widthAnchor"]
 depends-nominal:
 - !private "Sa"
-- !private "10MessageKit10AvatarViewC"
+- !private "So7FIRAuthC"
 - !private "SK"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
+- !private "10Kingfisher19CacheCostCalculableP"
 - !private "Sl"
 - !private "SL"
 - !private "10Foundation15ContiguousBytesP"
@@ -2022,6 +2209,8 @@ depends-nominal:
 - "s23CustomStringConvertibleP"
 - !private "10Foundation12DataProtocolP"
 - "So11FIRDatabaseC"
+- !private "So16FIRDatabaseQueryC"
+- !private "So20FIRDatabaseReferenceC"
 - !private "Se"
 - !private "SE"
 - "SQ"
@@ -2031,6 +2220,7 @@ depends-nominal:
 - !private "10Foundation9IndexPathV"
 - !private "15MessageInputBar0B8TextViewC"
 - !private "So21NSAttributedStringKeya"
+- !private "10Kingfisher0A10CompatibleP"
 - !private "4Lamp6MemberV"
 - !private "4Lamp7MessageV"
 - !private "15MessageInputBarAAC"
@@ -2058,6 +2248,7 @@ depends-nominal:
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - !private "Sq"
+- !private "10Kingfisher11PlaceholderP"
 - !private "Sk"
 - !private "Sm"
 - !private "SY"
@@ -2072,7 +2263,6 @@ depends-nominal:
 - "So26UICollectionViewDataSourceP"
 - "So24UICollectionViewDelegateP"
 - "So34UICollectionViewDelegateFlowLayoutP"
-- !private "So7UIColorC"
 - "So18UIContentContainerP"
 - !private "So30UIContentSizeCategoryAdjustingP"
 - !private "So17UICoordinateSpaceP"
@@ -2106,9 +2296,10 @@ depends-nominal:
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "10Foundation4UUIDV"
+- !private "So7FIRUserC"
+- !private "So11FIRUserInfoP"
 - !private "s14_ArrayProtocolP"
 - !private "s24_DestructorSafeContainerP"
-- !private "s26_ExpressibleByColorLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
@@ -2121,6 +2312,7 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Modules/Koloda.swiftmodule/x86_64.swiftmodule"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/MessageInputBar.swiftmodule/x86_64.swiftmodule"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/RangeUISlider.swiftmodule/x86_64.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/Kingfisher.swiftmodule/x86_64.swiftmodule"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/MessageKit.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
@@ -2128,6 +2320,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Accelerate.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
@@ -2137,24 +2330,32 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MapKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
-- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POP.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FirebaseInstanceID-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers/Koloda-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/pop-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-umbrella.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageReference.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
@@ -2166,6 +2367,10 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRServerValue.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthCredential.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
@@ -2193,6 +2398,7 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGameCenterAuthProvider.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimator.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPVector.h"
@@ -2209,27 +2415,32 @@ depends-external:
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers/Koloda-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-Swift.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimationEvent.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPGeometry.h"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimatableProperty.h"
 - "/Users/lindseythompson/Desktop/Lamp/Pods/Firebase/CoreOnly/Sources/module.modulemap"
-- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
 - "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
@@ -2238,6 +2449,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Accelerate.framework/Headers/Accelerate.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
@@ -2245,10 +2457,11 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "e9315492d37b43f4a97ffd97aa1c5ca7"
+interface-hash: "719dce90f0497a289a893a4bdd9edf3d"

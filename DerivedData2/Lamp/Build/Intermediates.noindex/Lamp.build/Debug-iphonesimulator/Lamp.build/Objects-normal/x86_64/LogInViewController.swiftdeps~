@@ -22,6 +22,7 @@ depends-top-level:
 - !private "AnyObject"
 - !private "AssignmentPrecedence"
 - !private "Auth"
+- !private "BooleanLiteralType"
 - !private "CastingPrecedence"
 - "Database"
 - "LogInViewController"

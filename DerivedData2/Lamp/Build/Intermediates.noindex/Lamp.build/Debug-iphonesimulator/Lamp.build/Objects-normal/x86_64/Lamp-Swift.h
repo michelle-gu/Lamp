@@ -332,6 +332,46 @@ SWIFT_CLASS("_TtC4Lamp28DiscoveryTableViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITextView;
+@class UIImagePickerController;
+@class UITouch;
+@class UIEvent;
+
+SWIFT_CLASS("_TtC4Lamp30EditProfileTableViewController")
+@interface EditProfileTableViewController : UITableViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified profilePicView;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified nameField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified genderField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified birthdayField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified universityField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified futureLocationField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified occupationField;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified bioField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified budgetField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified numBedroomsField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified petsField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified smokingField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified otherPreferencesField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified phoneField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified emailField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified facebookField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified otherContactField;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified changeProfilePicButton;
+- (IBAction)changeProfilePicPressed:(id _Nonnull)sender;
+- (IBAction)doneButtonPressed:(id _Nonnull)sender;
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
+- (void)imagePickerControllerDidCancel:(UIImagePickerController * _Nonnull)picker;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+- (void)viewDidLoad;
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC4Lamp31EmailConfirmationViewController")
 @interface EmailConfirmationViewController : UIViewController
@@ -398,7 +438,8 @@ SWIFT_CLASS("_TtC4Lamp33LifestylePreferencesTableViewCell")
 
 
 SWIFT_CLASS("_TtC4Lamp19LogInViewController")
-@interface LogInViewController : UIViewController
+@interface LogInViewController : UIViewController <UITextFieldDelegate>
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified emailField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified passwordField;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified logInButton;
@@ -498,7 +539,6 @@ SWIFT_CLASS("_TtC4Lamp32NotificationsTableViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIImagePickerController;
 @class UITapGestureRecognizer;
 @class UIDatePicker;
 @class UIPickerView;
@@ -511,6 +551,9 @@ SWIFT_CLASS("_TtC4Lamp29ProfileCreationViewController")
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified birthdayTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified firstNameTextField;
 - (IBAction)changePictureButtonPressed:(id _Nonnull)sender;
+- (IBAction)nextButtonPressed:(id _Nonnull)sender;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
 - (void)imagePickerControllerDidCancel:(UIImagePickerController * _Nonnull)picker;
 - (void)viewDidLoad;
@@ -520,13 +563,11 @@ SWIFT_CLASS("_TtC4Lamp29ProfileCreationViewController")
 - (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
 - (void)pickerView:(UIPickerView * _Nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
-- (IBAction)nextButtonPressed:(id _Nonnull)sender;
 - (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITextView;
 
 SWIFT_CLASS("_TtC4Lamp25ProfileEditViewController")
 @interface ProfileEditViewController : UIViewController <UITextViewDelegate>
@@ -561,6 +602,7 @@ SWIFT_CLASS("_TtC4Lamp29ProfileLocationViewController")
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified uniTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified futureLocTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified occupationTextField;
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;
@@ -592,6 +634,35 @@ SWIFT_CLASS("_TtC4Lamp24ProfileMapViewController")
 - (IBAction)saveButtonClicked:(id _Nonnull)sender;
 - (IBAction)cancelButtonClicked:(id _Nonnull)sender;
 - (void)viewDidAppear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC4Lamp26ProfileTableViewController")
+@interface ProfileTableViewController : UITableViewController
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified profilePicView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified nameAgeLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified futureLocsLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified occupationLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified genderLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified uniLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified bioLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified budgetLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified numBedroomsLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified petsLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified smokingLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified otherPrefsLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified phoneLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified emailLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified fbLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified otherContactLabel;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified editProfileButton;
+- (void)viewDidLoad;
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -649,6 +720,7 @@ SWIFT_CLASS("_TtC4Lamp20SignUpViewController")
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified confirmPasswordField;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified logInButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified signUpButton;
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (IBAction)logInDidTouch:(id _Nonnull)sender;
 - (IBAction)signUpDidTouch:(id _Nonnull)sender;
 - (void)viewDidLoad;
@@ -696,6 +768,8 @@ SWIFT_CLASS("_TtC4Lamp19ToggleTableViewCell")
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 
 SWIFT_CLASS("_TtC4Lamp32UniversitiesFilterViewController")
