@@ -15,8 +15,6 @@ import FirebaseFirestore
 class MessageInstanceViewController: MessagesViewController {
 
     var profileRef: DatabaseReference!
-
-//    var messages: [Message] = []
     
     var userId: String = "JHanuudAYNg4hTvMbLS9poOdCrx1"
     
@@ -28,16 +26,29 @@ class MessageInstanceViewController: MessagesViewController {
     private var messages: [Message] = []
     private var messageListener: ListenerRegistration?
     
-//    private let user: User
     private let channelId: String = "FK3etvRW7SmKraOgQB6L"
+    
+    // clean up for listener
+    deinit {
+        messageListener?.remove()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         reference = db.collection(["channels", channelId, "thread"].joined(separator: "/"))
 
-//        let testMessage = Message(userId: userId, content: "I love pizza, what is your favorite kind?")
-//        insertNewMessage(testMessage)
+        // calls snapshot listener whenever there is a change to the database
+        messageListener = reference?.order(by: "created", descending: false).addSnapshotListener { querySnapshot, error in
+            guard let snapshot = querySnapshot else {
+                print("Error listening for channel updates: \(error?.localizedDescription ?? "No error")")
+                return
+            }
+            
+            snapshot.documentChanges.forEach { change in
+                self.handleDocumentChange(change)
+            }
+        }
         
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
@@ -48,21 +59,35 @@ class MessageInstanceViewController: MessagesViewController {
     }
     
     // MARK: Helpers
+    
+    // saves text from messageInputBar to database
     private func save(_ message: Message) {
         reference?.addDocument(data: message.representation) { error in
             if let e = error {
                 print("Error sending message: \(e.localizedDescription)")
                 return
             }
-            
             self.messagesCollectionView.scrollToBottom()
         }
     }
     
+    // inserts new message to message collection
     private func insertNewMessage(_ message: Message) {
+        guard !messages.contains(message) else {
+            return
+        }
         messages.append(message)
         messagesCollectionView.reloadData()
     }
+    
+    // observes new database changes
+    private func handleDocumentChange(_ change: DocumentChange) {
+        guard let message = Message(document: change.document) else {
+            return
+        }
+        insertNewMessage(message)
+    }
+
     
     // MARK: Styling
     
@@ -182,11 +207,6 @@ extension MessageInstanceViewController: MessageInputBarDelegate {
         _ inputBar: MessageInputBar,
         didPressSendButtonWith text: String) {
         
-//        let newMessage = Message(userId: userId, content: text)
-//
-//        messages.append(newMessage)
-//        inputBar.inputTextView.text = ""
-        
         // 1
         let message = Message(userId: userId, content: text)
         
@@ -195,8 +215,5 @@ extension MessageInstanceViewController: MessageInputBarDelegate {
         
         // 3
         inputBar.inputTextView.text = ""
-        
-        messagesCollectionView.reloadData()
-        messagesCollectionView.scrollToBottom(animated: true)
     }
 }

@@ -37,19 +37,21 @@ struct Message: MessageType {
     init?(document: QueryDocumentSnapshot) {
         let data = document.data()
         
-        guard let sentDate = data["created"] as? Date else {
+        guard let sentTimestamp = data["created"] as? Timestamp else {
             return nil
         }
+        
         guard let senderID = data["senderID"] as? String else {
             return nil
         }
+
         guard let senderName = data["senderName"] as? String else {
             return nil
         }
         
         id = document.documentID
-        
-        self.sentDate = sentDate
+
+        self.sentDate = sentTimestamp.dateValue()
         sender = Sender(id: senderID, displayName: senderName)
         
         if let content = data["content"] as? String {
@@ -58,21 +60,6 @@ struct Message: MessageType {
             return nil
         }
     }
-//    let userId: String
-//    let text: String
-//    let messageId: String
-//
-//    var sender: Sender {
-//        return Sender(id: userId, displayName: "")
-//    }
-//
-//    var sentDate: Date {
-//        return Date()
-//    }
-//
-//    var kind: MessageKind {
-//        return .text(text)
-//    }
 }
 
 protocol DatabaseRepresentation {
