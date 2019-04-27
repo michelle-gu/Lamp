@@ -1,0 +1,1878 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Bolts/Bolts.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "BFAppLink.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFAppLink.h"
+        },
+        {
+          'type': 'file',
+          'name': "BFAppLinkNavigation.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFAppLinkNavigation.h"
+        },
+        {
+          'type': 'file',
+          'name': "BFAppLinkResolving.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFAppLinkResolving.h"
+        },
+        {
+          'type': 'file',
+          'name': "BFAppLinkReturnToRefererController.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFAppLinkReturnToRefererController.h"
+        },
+        {
+          'type': 'file',
+          'name': "BFAppLinkReturnToRefererView.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFAppLinkReturnToRefererView.h"
+        },
+        {
+          'type': 'file',
+          'name': "BFAppLinkTarget.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFAppLinkTarget.h"
+        },
+        {
+          'type': 'file',
+          'name': "BFCancellationToken.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/BFCancellationToken.h"
+        },
+        {
+          'type': 'file',
+          'name': "BFCancellationTokenRegistration.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/BFCancellationTokenRegistration.h"
+        },
+        {
+          'type': 'file',
+          'name': "BFCancellationTokenSource.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/BFCancellationTokenSource.h"
+        },
+        {
+          'type': 'file',
+          'name': "BFExecutor.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/BFExecutor.h"
+        },
+        {
+          'type': 'file',
+          'name': "BFGeneric.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/BFGeneric.h"
+        },
+        {
+          'type': 'file',
+          'name': "BFMeasurementEvent.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFMeasurementEvent.h"
+        },
+        {
+          'type': 'file',
+          'name': "BFTask.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/BFTask.h"
+        },
+        {
+          'type': 'file',
+          'name': "BFTaskCompletionSource.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/BFTaskCompletionSource.h"
+        },
+        {
+          'type': 'file',
+          'name': "BFURL.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFURL.h"
+        },
+        {
+          'type': 'file',
+          'name': "BFWebViewAppLinkResolver.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/iOS/BFWebViewAppLinkResolver.h"
+        },
+        {
+          'type': 'file',
+          'name': "Bolts-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Bolts/Bolts.framework/Headers/Bolts-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Bolts-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Bolts/Bolts-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Bolts.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Bolts/Bolts/Common/Bolts.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Bolts/Bolts.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Bolts.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/BoringSSL-GRPC/openssl_grpc.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "openssl_grpc-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/BoringSSL-GRPC/openssl_grpc.framework/Headers/openssl_grpc-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/BoringSSL-GRPC/openssl_grpc.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/BoringSSL-GRPC.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Eureka/Eureka.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Eureka-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Eureka/Eureka.framework/Headers/Eureka-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Eureka-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Eureka/Eureka-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Eureka/Eureka.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Eureka.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FBSDKCoreKit/FBSDKCoreKit.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FBSDKAccessToken.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKAccessToken.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKAppEvents.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppEvents/FBSDKAppEvents.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKAppLink.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLink.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKAppLinkNavigation.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLinkNavigation.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKAppLinkResolver.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLinkResolver.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKAppLinkResolving.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLinkResolving.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKAppLinkReturnToRefererController.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLinkReturnToRefererController.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKAppLinkReturnToRefererView.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLinkReturnToRefererView.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKAppLinkTarget.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLinkTarget.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKAppLinkUtility.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLinkUtility.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKApplicationDelegate.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKApplicationDelegate.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKButton.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKButton.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKConstants.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKConstants.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKCopying.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKCopying.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKCoreKit-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FBSDKCoreKit/FBSDKCoreKit.framework/Headers/FBSDKCoreKit-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKCoreKit-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/FBSDKCoreKit/FBSDKCoreKit-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKCoreKit.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKGraphErrorRecoveryProcessor.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphErrorRecoveryProcessor.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKGraphRequest.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequest.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKGraphRequestConnection.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequestConnection.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKGraphRequestDataAttachment.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequestDataAttachment.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKMacros.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKMacros.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKMeasurementEvent.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKMeasurementEvent.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKMutableCopying.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKMutableCopying.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKProfile.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKProfile.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKProfilePictureView.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKProfilePictureView.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKSettings.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKSettings.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKTestUsersManager.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKTestUsersManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKURL.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKURL.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKUtility.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKUtility.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKWebViewAppLinkResolver.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKWebViewAppLinkResolver.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FBSDKCoreKit/FBSDKCoreKit.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FBSDKCoreKit.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FBSDKLoginKit/FBSDKLoginKit.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FBSDKDeviceLoginCodeInfo.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginKit/FBSDKDeviceLoginCodeInfo.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKDeviceLoginManager.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginKit/FBSDKDeviceLoginManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKDeviceLoginManagerResult.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginKit/FBSDKDeviceLoginManagerResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKLoginButton.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginButton.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKLoginConstants.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginConstants.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKLoginKit-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FBSDKLoginKit/FBSDKLoginKit.framework/Headers/FBSDKLoginKit-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKLoginKit-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/FBSDKLoginKit/FBSDKLoginKit-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKLoginKit.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginKit.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKLoginManager.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKLoginManagerLoginResult.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginManagerLoginResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKLoginTooltipView.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginTooltipView.h"
+        },
+        {
+          'type': 'file',
+          'name': "FBSDKTooltipView.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginKit/FBSDKTooltipView.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FBSDKLoginKit/FBSDKLoginKit.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FBSDKLoginKit.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FIRActionCodeSettings.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRActionCodeSettings.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRAdditionalUserInfo.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAdditionalUserInfo.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRAuth.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuth.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRAuthAPNSTokenType.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthAPNSTokenType.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRAuthCredential.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthCredential.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRAuthDataResult.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthDataResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRAuthErrors.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthErrors.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRAuthSettings.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthSettings.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRAuthTokenResult.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthTokenResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRAuthUIDelegate.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthUIDelegate.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIREmailAuthProvider.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIREmailAuthProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRFacebookAuthProvider.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRFacebookAuthProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRFederatedAuthProvider.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRFederatedAuthProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRGameCenterAuthProvider.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRGameCenterAuthProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRGitHubAuthProvider.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRGitHubAuthProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRGoogleAuthProvider.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRGoogleAuthProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIROAuthCredential.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIROAuthCredential.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIROAuthProvider.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIROAuthProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRPhoneAuthCredential.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRPhoneAuthCredential.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRPhoneAuthProvider.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRPhoneAuthProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRTwitterAuthProvider.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRTwitterAuthProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRUser.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRUser.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRUserInfo.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRUserInfo.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRUserMetadata.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRUserMetadata.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseAuth-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseAuth-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/FirebaseAuth/FirebaseAuth-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseAuth.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FirebaseAuth.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseAuthVersion.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FirebaseAuthVersion.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseAuth.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FIRAnalyticsConfiguration.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRAnalyticsConfiguration.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRApp.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRConfiguration.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRLoggerLevel.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIROptions.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseCore-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseCore-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/FirebaseCore/FirebaseCore-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseCore.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/PrivateHeaders",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FIRAnalyticsConfiguration+Internal.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRAnalyticsConfiguration+Internal.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRAppAssociationRegistration.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRAppAssociationRegistration.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRAppInternal.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRAppInternal.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRBundleUtil.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRBundleUtil.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRComponent.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRComponent.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRComponentContainer.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRComponentContainer.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRComponentContainerInternal.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRComponentContainerInternal.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRComponentType.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRComponentType.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRDependency.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRDependency.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRErrorCode.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRErrorCode.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRErrors.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRErrors.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRLibrary.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRLibrary.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRLogger.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRLogger.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIROptionsInternal.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIROptionsInternal.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRVersion.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseCore/Firebase/Core/Private/FIRVersion.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FIRDataEventType.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataEventType.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRDataSnapshot.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataSnapshot.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRDatabase.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDatabase.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRDatabaseQuery.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDatabaseQuery.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRDatabaseReference.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDatabaseReference.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRMutableData.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Public/FIRMutableData.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRServerValue.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Public/FIRServerValue.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRTransactionResult.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Public/FIRTransactionResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseDatabase-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseDatabase-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/FirebaseDatabase/FirebaseDatabase-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseDatabase.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseDatabase/Firebase/Database/Public/FirebaseDatabase.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseDatabase.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FIRCollectionReference.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRCollectionReference.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRDocumentChange.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRDocumentChange.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRDocumentReference.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRDocumentReference.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRDocumentSnapshot.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRDocumentSnapshot.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRFieldPath.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFieldPath.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRFieldValue.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFieldValue.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRFirestore.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFirestore.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRFirestoreErrors.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFirestoreErrors.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRFirestoreSettings.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFirestoreSettings.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRFirestoreSource.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFirestoreSource.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRGeoPoint.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRGeoPoint.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRListenerRegistration.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRListenerRegistration.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRQuery.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRQuery.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRQuerySnapshot.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRQuerySnapshot.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRSnapshotMetadata.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRSnapshotMetadata.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRTimestamp.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRTimestamp.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRTransaction.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRTransaction.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRWriteBatch.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FIRWriteBatch.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseFirestore-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseFirestore-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/FirebaseFirestore/FirebaseFirestore-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseFirestore.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseFirestore/Firestore/Source/Public/FirebaseFirestore.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseFirestore.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FIRInstanceID.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/Public/FIRInstanceID.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseInstanceID-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FirebaseInstanceID-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseInstanceID-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/FirebaseInstanceID/FirebaseInstanceID-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseInstanceID.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseInstanceID/Firebase/InstanceID/Public/FirebaseInstanceID.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseInstanceID.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FIRStorage.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorage.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRStorageConstants.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageConstants.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRStorageDownloadTask.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageDownloadTask.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRStorageMetadata.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageMetadata.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRStorageObservableTask.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageObservableTask.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRStorageReference.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageReference.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRStorageTask.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageTask.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRStorageTaskSnapshot.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageTaskSnapshot.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRStorageUploadTask.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageUploadTask.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseStorage-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseStorage-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/FirebaseStorage/FirebaseStorage-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseStorage.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseStorage/Firebase/Storage/Public/FirebaseStorage.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseStorage.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "GTMSessionFetcher-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcher-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMSessionFetcher-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMSessionFetcher.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GTMSessionFetcher/Source/GTMSessionFetcher.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMSessionFetcherLogging.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMSessionFetcherService.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMSessionUploadFetcher.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/GTMSessionFetcher.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/GoogleUtilities/GoogleUtilities.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "GULLoggerCodes.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/Common/GULLoggerCodes.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULLoggerLevel.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/Logger/Public/GULLoggerLevel.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULNSData+zlib.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/NSData+zlib/GULNSData+zlib.h"
+        },
+        {
+          'type': 'file',
+          'name': "GoogleUtilities-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/GoogleUtilities/GoogleUtilities.framework/Headers/GoogleUtilities-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "GoogleUtilities-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/GoogleUtilities/GoogleUtilities-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/GoogleUtilities/GoogleUtilities.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/GoogleUtilities.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/GoogleUtilities/GoogleUtilities.framework/PrivateHeaders",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "GULAppDelegateSwizzler.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/AppDelegateSwizzler/Private/GULAppDelegateSwizzler.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULAppEnvironmentUtil.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULLogger.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/Logger/Private/GULLogger.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULMutableDictionary.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULMutableDictionary.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULNetwork.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULNetwork.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULNetworkConstants.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULNetworkConstants.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULNetworkLoggerProtocol.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULNetworkLoggerProtocol.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULNetworkMessageCode.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULNetworkMessageCode.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULNetworkURLSession.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULNetworkURLSession.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULOriginalIMPConvenienceMacros.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/MethodSwizzler/Private/GULOriginalIMPConvenienceMacros.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULReachabilityChecker.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/Reachability/Private/GULReachabilityChecker.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULReachabilityMessageCode.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/Reachability/Private/GULReachabilityMessageCode.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULSwizzler.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/MethodSwizzler/Private/GULSwizzler.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULUserDefaults.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/GoogleUtilities/GoogleUtilities/UserDefaults/Private/GULUserDefaults.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Kingfisher-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Kingfisher-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Kingfisher/Kingfisher-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Kingfisher.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Kingfisher/Sources/Kingfisher.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Kingfisher.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Koloda-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers/Koloda-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Koloda-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Koloda/Koloda-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Koloda.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "MessageInputBar-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "MessageInputBar-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/MessageInputBar/MessageInputBar-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/MessageInputBar.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "MessageKit-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "MessageKit-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/MessageKit/MessageKit-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/MessageKit.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Pods_Lamp.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-Lamp-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Pods-Lamp/Pods-Lamp-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_Lamp-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Pods_Lamp.framework/Headers/Pods_Lamp-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Pods_Lamp.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Pods-Lamp.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Protobuf/Protobuf.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Any.pbobjc.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/google/protobuf/Any.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "Api.pbobjc.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/google/protobuf/Api.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "Duration.pbobjc.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/google/protobuf/Duration.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "Empty.pbobjc.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/google/protobuf/Empty.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "FieldMask.pbobjc.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/google/protobuf/FieldMask.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBArray.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBArray.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBArray_PackagePrivate.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBArray_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBBootstrap.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBBootstrap.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBCodedInputStream.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBCodedInputStream.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBCodedInputStream_PackagePrivate.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBCodedInputStream_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBCodedOutputStream.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBCodedOutputStream.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBCodedOutputStream_PackagePrivate.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBCodedOutputStream_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBDescriptor.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBDescriptor.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBDescriptor_PackagePrivate.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBDescriptor_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBDictionary.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBDictionary.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBDictionary_PackagePrivate.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBDictionary_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBExtensionInternals.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBExtensionInternals.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBExtensionRegistry.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBExtensionRegistry.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBMessage.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBMessage.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBMessage_PackagePrivate.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBMessage_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBProtocolBuffers.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBProtocolBuffers.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBProtocolBuffers_RuntimeSupport.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBProtocolBuffers_RuntimeSupport.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBRootObject.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBRootObject.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBRootObject_PackagePrivate.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBRootObject_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBRuntimeTypes.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBRuntimeTypes.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBUnknownField.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBUnknownField.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBUnknownFieldSet.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBUnknownFieldSet.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBUnknownFieldSet_PackagePrivate.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBUnknownFieldSet_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBUnknownField_PackagePrivate.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBUnknownField_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBUtilities.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBUtilities.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBUtilities_PackagePrivate.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBUtilities_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBWellKnownTypes.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBWellKnownTypes.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBWireFormat.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/GPBWireFormat.h"
+        },
+        {
+          'type': 'file',
+          'name': "Protobuf-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Protobuf/Protobuf.framework/Headers/Protobuf-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Protobuf-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/Protobuf/Protobuf-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "SourceContext.pbobjc.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/google/protobuf/SourceContext.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "Struct.pbobjc.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/google/protobuf/Struct.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "Timestamp.pbobjc.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/google/protobuf/Timestamp.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "Type.pbobjc.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/google/protobuf/Type.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "Wrappers.pbobjc.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Protobuf/objectivec/google/protobuf/Wrappers.pbobjc.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Protobuf/Protobuf.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Protobuf.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "RangeUISlider-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "RangeUISlider-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/RangeUISlider/RangeUISlider-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "RangeUISlider.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/RangeUISlider/Source/RangeUISlider.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/RangeUISlider.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/gRPC-C++/grpcpp.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "gRPC-C++-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/gRPC-C++/gRPC-C++-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "grpcpp-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/gRPC-C++/grpcpp.framework/Headers/grpcpp-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/gRPC-C++/grpcpp.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/gRPC-C++.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/gRPC-Core/grpc.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "grpc-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/gRPC-Core/grpc.framework/Headers/grpc-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/gRPC-Core/grpc.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/gRPC-Core.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/leveldb-library/leveldb.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "c.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/leveldb-library/include/leveldb/c.h"
+        },
+        {
+          'type': 'file',
+          'name': "cache.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/leveldb-library/include/leveldb/cache.h"
+        },
+        {
+          'type': 'file',
+          'name': "comparator.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/leveldb-library/include/leveldb/comparator.h"
+        },
+        {
+          'type': 'file',
+          'name': "db.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/leveldb-library/include/leveldb/db.h"
+        },
+        {
+          'type': 'file',
+          'name': "dumpfile.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/leveldb-library/include/leveldb/dumpfile.h"
+        },
+        {
+          'type': 'file',
+          'name': "env.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/leveldb-library/include/leveldb/env.h"
+        },
+        {
+          'type': 'file',
+          'name': "filter_policy.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/leveldb-library/include/leveldb/filter_policy.h"
+        },
+        {
+          'type': 'file',
+          'name': "iterator.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/leveldb-library/include/leveldb/iterator.h"
+        },
+        {
+          'type': 'file',
+          'name': "leveldb-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/leveldb-library/leveldb.framework/Headers/leveldb-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "leveldb-library-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/leveldb-library/leveldb-library-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "options.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/leveldb-library/include/leveldb/options.h"
+        },
+        {
+          'type': 'file',
+          'name': "slice.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/leveldb-library/include/leveldb/slice.h"
+        },
+        {
+          'type': 'file',
+          'name': "status.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/leveldb-library/include/leveldb/status.h"
+        },
+        {
+          'type': 'file',
+          'name': "table.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/leveldb-library/include/leveldb/table.h"
+        },
+        {
+          'type': 'file',
+          'name': "table_builder.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/leveldb-library/include/leveldb/table_builder.h"
+        },
+        {
+          'type': 'file',
+          'name': "write_batch.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/leveldb-library/include/leveldb/write_batch.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/leveldb-library/leveldb.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/leveldb-library.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/nanopb/nanopb.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "nanopb-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/nanopb/nanopb.framework/Headers/nanopb-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "nanopb-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/nanopb/nanopb-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "pb.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/nanopb/pb.h"
+        },
+        {
+          'type': 'file',
+          'name': "pb_common.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/nanopb/pb_common.h"
+        },
+        {
+          'type': 'file',
+          'name': "pb_decode.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/nanopb/pb_decode.h"
+        },
+        {
+          'type': 'file',
+          'name': "pb_encode.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/nanopb/pb_encode.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/nanopb/nanopb.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/nanopb.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "POP.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POP.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPAnimatableProperty.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimatableProperty.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPAnimatablePropertyTypes.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimatablePropertyTypes.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPAnimation.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimation.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPAnimationEvent.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimationEvent.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPAnimationExtras.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimationExtras.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPAnimationTracer.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimationTracer.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPAnimator.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPAnimator.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPBasicAnimation.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPBasicAnimation.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPCustomAnimation.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPCustomAnimation.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPDecayAnimation.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPDecayAnimation.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPDefines.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPDefines.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPGeometry.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPGeometry.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPLayerExtras.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPLayerExtras.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPPropertyAnimation.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPPropertyAnimation.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPSpringAnimation.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPSpringAnimation.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPVector.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/pop/pop/POPVector.h"
+        },
+        {
+          'type': 'file',
+          'name': "pop-Swift.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/pop-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "pop-umbrella.h",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/Pods/Target Support Files/pop/pop-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/pop.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}
