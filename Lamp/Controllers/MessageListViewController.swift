@@ -9,13 +9,14 @@
 import UIKit
 import CoreData
 import Firebase
+import FirebaseFirestore
 
 class MessageListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var channelDict: [String : NSObject] = [:]
     
     // user match list
-    var channelIds: [String] = []
+    private var channelIds: [String] = []
     
     // MARK: Properties
     var ref: DatabaseReference!
