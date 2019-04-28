@@ -582,9 +582,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7T-2Y-JFg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7T-2Y-JFg">
                                 <rect key="frame" x="16" y="135" width="110" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -597,16 +596,14 @@
                                     <action selector="city1ButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="3wf-YD-wan"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Locations (Click to Remove)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZb-M6-86T">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Locations (Click to Remove)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZb-M6-86T">
                                 <rect key="frame" x="16" y="104" width="228" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6r8-zn-yKR">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6r8-zn-yKR">
                                 <rect key="frame" x="0.0" y="183" width="375" height="629"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="uT8-Ch-rGB" id="t8I-Fi-EIu"/>
                                 </connections>
@@ -623,9 +620,8 @@
                                     <action selector="addCityToListButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="JAs-sJ-IH8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcJ-IV-RKO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcJ-IV-RKO">
                                 <rect key="frame" x="132" y="135" width="110" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -638,9 +634,8 @@
                                     <action selector="city2ButtonPressed:" destination="uT8-Ch-rGB" eventType="touchUpInside" id="t4E-Sv-gEP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDz-sG-ldj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDz-sG-ldj">
                                 <rect key="frame" x="249" y="135" width="110" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -668,6 +663,26 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="g7T-2Y-JFg" firstAttribute="width" secondItem="fcJ-IV-RKO" secondAttribute="height" multiplier="11:4" id="0El-gT-oWf"/>
+                            <constraint firstItem="6r8-zn-yKR" firstAttribute="top" secondItem="g7T-2Y-JFg" secondAttribute="bottom" constant="8" id="1ps-rE-JEL"/>
+                            <constraint firstItem="g7T-2Y-JFg" firstAttribute="top" secondItem="ZZb-M6-86T" secondAttribute="bottom" constant="9" id="4RT-0M-MJN"/>
+                            <constraint firstItem="fcJ-IV-RKO" firstAttribute="leading" secondItem="g7T-2Y-JFg" secondAttribute="trailing" constant="6" id="5H5-Tb-j63"/>
+                            <constraint firstItem="ZZb-M6-86T" firstAttribute="leading" secondItem="Sl4-cr-Yek" secondAttribute="leading" constant="16" id="8be-CX-Ghx"/>
+                            <constraint firstItem="6r8-zn-yKR" firstAttribute="trailing" secondItem="Sl4-cr-Yek" secondAttribute="trailing" id="8xN-nC-pra"/>
+                            <constraint firstItem="fcJ-IV-RKO" firstAttribute="width" secondItem="LDz-sG-ldj" secondAttribute="width" id="A0N-xE-mhB"/>
+                            <constraint firstItem="fcJ-IV-RKO" firstAttribute="top" secondItem="ZZb-M6-86T" secondAttribute="bottom" constant="9" id="L9T-pZ-mhg"/>
+                            <constraint firstItem="6r8-zn-yKR" firstAttribute="leading" secondItem="Sl4-cr-Yek" secondAttribute="leading" id="PCp-gA-QXa"/>
+                            <constraint firstItem="fcJ-IV-RKO" firstAttribute="height" secondItem="LDz-sG-ldj" secondAttribute="height" id="h0B-yf-SQH"/>
+                            <constraint firstItem="g7T-2Y-JFg" firstAttribute="height" secondItem="fcJ-IV-RKO" secondAttribute="height" id="hxV-fK-K1i"/>
+                            <constraint firstItem="LDz-sG-ldj" firstAttribute="leading" secondItem="fcJ-IV-RKO" secondAttribute="trailing" constant="7" id="jB9-7a-sgW"/>
+                            <constraint firstItem="g7T-2Y-JFg" firstAttribute="width" secondItem="fcJ-IV-RKO" secondAttribute="width" id="kjp-Ws-ibL"/>
+                            <constraint firstItem="ZZb-M6-86T" firstAttribute="top" secondItem="Sl4-cr-Yek" secondAttribute="top" constant="16" id="mbG-m8-lf2"/>
+                            <constraint firstItem="Sl4-cr-Yek" firstAttribute="trailing" secondItem="LDz-sG-ldj" secondAttribute="trailing" constant="16" id="npD-0X-bfR"/>
+                            <constraint firstItem="LDz-sG-ldj" firstAttribute="top" secondItem="ZZb-M6-86T" secondAttribute="bottom" constant="9" id="oYx-lp-KD0"/>
+                            <constraint firstAttribute="bottom" secondItem="6r8-zn-yKR" secondAttribute="bottom" id="r21-9x-wFB"/>
+                            <constraint firstItem="g7T-2Y-JFg" firstAttribute="leading" secondItem="Sl4-cr-Yek" secondAttribute="leading" constant="16" id="sdR-VA-VMu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Sl4-cr-Yek"/>
                     </view>
                     <navigationItem key="navigationItem" title="Future Location" id="NWJ-T3-hoW">
@@ -1117,20 +1132,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="odY-CZ-gVt">
-                                <rect key="frame" x="0.0" y="183" width="375" height="629"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="odY-CZ-gVt">
+                                <rect key="frame" x="0.0" y="139" width="375" height="673"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Locations (Click to Remove)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfQ-NI-wLz">
-                                <rect key="frame" x="16" y="104" width="228" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Locations (Click to Remove)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfQ-NI-wLz">
+                                <rect key="frame" x="16" y="60" width="228" height="22"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0Y-Z3-9Di">
-                                <rect key="frame" x="16" y="135" width="110" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0Y-Z3-9Di">
+                                <rect key="frame" x="16" y="91" width="110" height="40"/>
                                 <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1144,9 +1156,8 @@
                                     <action selector="city1Pressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="icc-Vy-JP0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38m-jU-781">
-                                <rect key="frame" x="132" y="135" width="110" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38m-jU-781">
+                                <rect key="frame" x="132" y="91" width="110" height="40"/>
                                 <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1160,9 +1171,8 @@
                                     <action selector="city2Pressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="Os7-xk-jxh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EpC-gK-aTT">
-                                <rect key="frame" x="249" y="135" width="110" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EpC-gK-aTT">
+                                <rect key="frame" x="249" y="91" width="110" height="40"/>
                                 <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1201,6 +1211,26 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EpC-gK-aTT" firstAttribute="leading" secondItem="38m-jU-781" secondAttribute="trailing" constant="7" id="45p-sK-tfY"/>
+                            <constraint firstItem="K0Y-Z3-9Di" firstAttribute="width" secondItem="38m-jU-781" secondAttribute="height" multiplier="11:4" id="74W-iI-lEh"/>
+                            <constraint firstItem="RfQ-NI-wLz" firstAttribute="leading" secondItem="Ttz-jR-AjW" secondAttribute="leading" constant="16" id="7Fo-y0-QJ2"/>
+                            <constraint firstItem="38m-jU-781" firstAttribute="leading" secondItem="K0Y-Z3-9Di" secondAttribute="trailing" constant="6" id="9Tn-HS-d8j"/>
+                            <constraint firstItem="EpC-gK-aTT" firstAttribute="top" secondItem="RfQ-NI-wLz" secondAttribute="bottom" constant="9" id="CNP-Ni-pz1"/>
+                            <constraint firstItem="38m-jU-781" firstAttribute="width" secondItem="EpC-gK-aTT" secondAttribute="width" id="EaT-BL-Mpy"/>
+                            <constraint firstItem="K0Y-Z3-9Di" firstAttribute="width" secondItem="38m-jU-781" secondAttribute="width" id="KSH-DT-4PR"/>
+                            <constraint firstItem="38m-jU-781" firstAttribute="top" secondItem="RfQ-NI-wLz" secondAttribute="bottom" constant="9" id="M59-Wb-Anb"/>
+                            <constraint firstAttribute="bottom" secondItem="odY-CZ-gVt" secondAttribute="bottom" id="O4c-aE-eh9"/>
+                            <constraint firstItem="K0Y-Z3-9Di" firstAttribute="height" secondItem="38m-jU-781" secondAttribute="height" id="PlF-SS-29K"/>
+                            <constraint firstItem="odY-CZ-gVt" firstAttribute="trailing" secondItem="Ttz-jR-AjW" secondAttribute="trailing" id="Vfn-az-wVu"/>
+                            <constraint firstItem="K0Y-Z3-9Di" firstAttribute="leading" secondItem="Ttz-jR-AjW" secondAttribute="leading" constant="16" id="aH1-T0-WiF"/>
+                            <constraint firstItem="Ttz-jR-AjW" firstAttribute="trailing" secondItem="EpC-gK-aTT" secondAttribute="trailing" constant="16" id="aQh-wX-QS6"/>
+                            <constraint firstItem="odY-CZ-gVt" firstAttribute="top" secondItem="K0Y-Z3-9Di" secondAttribute="bottom" constant="8" id="k3A-qD-QcP"/>
+                            <constraint firstItem="odY-CZ-gVt" firstAttribute="leading" secondItem="Ttz-jR-AjW" secondAttribute="leading" id="kkT-UK-8wF"/>
+                            <constraint firstItem="38m-jU-781" firstAttribute="height" secondItem="EpC-gK-aTT" secondAttribute="height" id="l6L-j4-iWJ"/>
+                            <constraint firstItem="RfQ-NI-wLz" firstAttribute="top" secondItem="Ttz-jR-AjW" secondAttribute="top" constant="16" id="qoW-1I-9VA"/>
+                            <constraint firstItem="K0Y-Z3-9Di" firstAttribute="top" secondItem="RfQ-NI-wLz" secondAttribute="bottom" constant="9" id="woQ-Wf-ESU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ttz-jR-AjW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Future Location" id="lJK-QL-JmZ">
@@ -1875,11 +1905,11 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="142" id="kzl-lB-CWK">
                                         <rect key="frame" x="0.0" y="506" width="375" height="142"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kzl-lB-CWK" id="VKY-LA-Urg">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kzl-lB-CWK" id="VKY-LA-Urg">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="141.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is my bio." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmc-Ch-fn0">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is my bio." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmc-Ch-fn0">
                                                     <rect key="frame" x="16" y="11" width="344" height="120"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
@@ -2730,9 +2760,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Locations (Click to Remove)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6a-Hz-BPi">
-                                <rect key="frame" x="16" y="104" width="228" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Locations (Click to Remove)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6a-Hz-BPi">
+                                <rect key="frame" x="16" y="60" width="228" height="22"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -2750,9 +2779,8 @@
                                     <action selector="searchButtonPressed:" destination="zA6-ti-gFg" eventType="touchUpInside" id="2Hi-VI-lCH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06w-12-paP">
-                                <rect key="frame" x="16" y="135" width="110" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06w-12-paP">
+                                <rect key="frame" x="16" y="91" width="110" height="40"/>
                                 <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2767,9 +2795,8 @@
                                     <action selector="city1Pressed:" destination="eve-d7-OLb" eventType="touchUpInside" id="lLx-Vv-W0G"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40R-62-8oj">
-                                <rect key="frame" x="132" y="135" width="110" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40R-62-8oj">
+                                <rect key="frame" x="132" y="91" width="110" height="40"/>
                                 <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2784,9 +2811,8 @@
                                     <action selector="city2Pressed:" destination="zA6-ti-gFg" eventType="touchUpInside" id="Imy-4s-5rr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsf-FQ-4j9">
-                                <rect key="frame" x="249" y="135" width="110" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsf-FQ-4j9">
+                                <rect key="frame" x="249" y="91" width="110" height="40"/>
                                 <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2801,9 +2827,8 @@
                                     <action selector="city3Pressed:" destination="zA6-ti-gFg" eventType="touchUpInside" id="A2W-Jf-Iqc"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QQU-vT-O2u">
-                                <rect key="frame" x="0.0" y="183" width="375" height="629"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QQU-vT-O2u">
+                                <rect key="frame" x="0.0" y="139" width="375" height="673"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxh-N3-EL7">
                                 <rect key="frame" x="299" y="628" width="60" height="60"/>
@@ -2821,6 +2846,26 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lsf-FQ-4j9" firstAttribute="top" secondItem="w6a-Hz-BPi" secondAttribute="bottom" constant="9" id="7Ke-ip-amy"/>
+                            <constraint firstItem="06w-12-paP" firstAttribute="width" secondItem="40R-62-8oj" secondAttribute="width" id="7OT-zt-tsh"/>
+                            <constraint firstAttribute="bottom" secondItem="QQU-vT-O2u" secondAttribute="bottom" id="BTO-5A-hMb"/>
+                            <constraint firstItem="40R-62-8oj" firstAttribute="height" secondItem="lsf-FQ-4j9" secondAttribute="height" id="C4b-nb-mJ7"/>
+                            <constraint firstItem="40R-62-8oj" firstAttribute="width" secondItem="lsf-FQ-4j9" secondAttribute="width" id="DcV-jC-zgs"/>
+                            <constraint firstItem="06w-12-paP" firstAttribute="width" secondItem="40R-62-8oj" secondAttribute="height" multiplier="11:4" id="GNx-nq-FLM"/>
+                            <constraint firstItem="QQU-vT-O2u" firstAttribute="leading" secondItem="TlZ-JP-APG" secondAttribute="leading" id="GmE-R0-6Dl"/>
+                            <constraint firstItem="06w-12-paP" firstAttribute="leading" secondItem="TlZ-JP-APG" secondAttribute="leading" constant="16" id="In9-jc-I4A"/>
+                            <constraint firstItem="06w-12-paP" firstAttribute="top" secondItem="w6a-Hz-BPi" secondAttribute="bottom" constant="9" id="Jy2-7O-AIy"/>
+                            <constraint firstItem="40R-62-8oj" firstAttribute="leading" secondItem="06w-12-paP" secondAttribute="trailing" constant="6" id="KjE-xJ-CD4"/>
+                            <constraint firstItem="lsf-FQ-4j9" firstAttribute="leading" secondItem="40R-62-8oj" secondAttribute="trailing" constant="7" id="NdD-AM-tEU"/>
+                            <constraint firstItem="w6a-Hz-BPi" firstAttribute="top" secondItem="TlZ-JP-APG" secondAttribute="top" constant="16" id="P0I-hD-WEP"/>
+                            <constraint firstItem="QQU-vT-O2u" firstAttribute="top" secondItem="06w-12-paP" secondAttribute="bottom" constant="8" id="Rnc-41-6HC"/>
+                            <constraint firstItem="40R-62-8oj" firstAttribute="top" secondItem="w6a-Hz-BPi" secondAttribute="bottom" constant="9" id="Ub9-Ho-9Nq"/>
+                            <constraint firstItem="06w-12-paP" firstAttribute="height" secondItem="40R-62-8oj" secondAttribute="height" id="Yt6-Oq-6y4"/>
+                            <constraint firstItem="w6a-Hz-BPi" firstAttribute="leading" secondItem="TlZ-JP-APG" secondAttribute="leading" constant="16" id="frp-l8-ZP4"/>
+                            <constraint firstItem="QQU-vT-O2u" firstAttribute="trailing" secondItem="TlZ-JP-APG" secondAttribute="trailing" id="gG4-gF-43H"/>
+                            <constraint firstItem="TlZ-JP-APG" firstAttribute="trailing" secondItem="lsf-FQ-4j9" secondAttribute="trailing" constant="16" id="qox-jV-agO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TlZ-JP-APG"/>
                     </view>
                     <navigationItem key="navigationItem" id="8Dn-6c-cOq"/>
@@ -3391,7 +3436,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YS3-yl-8TS"/>
-        <segue reference="P1N-dK-ZZG"/>
+        <segue reference="ABV-LS-boM"/>
         <segue reference="PA3-YF-Hx5"/>
         <segue reference="IdY-Gv-dXt"/>
     </inferredMetricsTieBreakers>
