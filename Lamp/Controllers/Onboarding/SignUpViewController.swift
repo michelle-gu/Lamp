@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Constants
     let sendEmailConfirm = "sendEmailConfirm"
@@ -22,16 +22,24 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
-    // MARK: - Functions
-    func textFieldShouldReturn(textField:UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    // MARK: - Text Field Delegate
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+            signUpButton.sendActions(for: .touchUpInside)
+        }
+        // Do not add a line break
+        return false
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
+
     // MARK: - Actions
     @IBAction func logInDidTouch(_ sender: Any) {
         
@@ -76,22 +84,18 @@ class SignUpViewController: UIViewController {
                 self.performSegue(withIdentifier: self.sendEmailConfirm, sender: nil)
             }
         }
-        
-        // Add default user info to Firebase
-//        let user = Auth.auth().currentUser?.uid
-//        let settings = Settings()
-//        let userRef = ref.child(user!)
-//        userRef.setValue(settings.toAnyObject())
     }
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        // tap.cancelsTouchesInView = false
-//        view.addGestureRecognizer(tap)
-
+        emailField.delegate = self
+        emailField.tag = 0
+        passwordField.delegate = self
+        passwordField.tag = 1
+        confirmPasswordField.delegate = self
+        confirmPasswordField.tag = 2
         
         // Checks if user is already logged in
         Auth.auth().addStateDidChangeListener() { auth, user in
@@ -104,10 +108,4 @@ class SignUpViewController: UIViewController {
         }
     }
     
-//    // Calls this function when the tap is recognized.
-//    func dismissKeyboard() {
-//        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-//        view.endEditing(true)
-//    }
-
 }
