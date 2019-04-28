@@ -35,6 +35,7 @@ class MyKolodaViewController: UIViewController {
         kolodaView.delegate = self
         
         setUserPref()
+        filtering()
         getIds()
         getData()
 //        getIds()
@@ -121,11 +122,36 @@ class MyKolodaViewController: UIViewController {
         let genderMatches = self.ref.child("genders")// this is reaching into the genders dict
         genderMatches.observe(.value, with: {(snapshot) in
             //this is a dictionary of gender w/ list of users w/ booleans
-            let gendersDict = snapshot.value as? [String : AnyObject ] ?? [:]
-            
+//            let gendersDict = snapshot.value as? [String : AnyObject] ?? [:]
+            for gen in self.genders{
+//                print("gender picker \(gen)")
+                let userList = self.ref.child("genders").child(gen)
+                userList.observe(.value, with: {(snapshot) in
+                    let userDict = snapshot.value as? [String : AnyObject] ?? [:]
+                    for (key, _) in userDict {
+//                        print("key to enter: \(key)")
+                        self.matches.insert(key)
+//                        print("matches in set: \(self.matches)")
+                    }
+//                    print("entering these users: \(self.matches)")
+                    self.ids = Array(self.matches)
+                    
+                })
+            }
+            print("these are the ids: \(self.ids)")
+//            print(gendersDict)
+//            print(self.genders)
+//            print("matches in set: \(self.matches)")
+//            self.ids = Array(self.matches)
+//            print("matching ids: \(self.matches)")
         })
+//        let locationMatches = self.ref.child("locations")
+//        locationMatches.observe(.value, with: {(snapshot) in
+//
+//        })
         
         
+//        print("ids: \(self.ids)")
     }
     
     
@@ -239,7 +265,7 @@ extension MyKolodaViewController: KolodaViewDataSource {
         let card:CardView =  CardView.create()
 
         let profile = ref.child("user-profiles").child(ids[index]).child("profile")
-        print(ids[index])
+//        print(ids[index])
         profile.observe(.value, with: {(snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
             let firstName = profileDict["firstName"] as! String
