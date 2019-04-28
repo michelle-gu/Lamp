@@ -14,7 +14,6 @@ depends-top-level:
 - "Bool"
 - "RangeSliderTableViewCell"
 - "RangeUISlider"
-- "StringLiteralType"
 - "UILabel"
 - "UITableViewCell"
 depends-member:

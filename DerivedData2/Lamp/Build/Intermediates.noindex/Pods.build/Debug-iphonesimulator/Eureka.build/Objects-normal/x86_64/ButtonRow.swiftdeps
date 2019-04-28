@@ -26,6 +26,7 @@ depends-top-level:
 - "Cell"
 - "CellType"
 - "Equatable"
+- !private "FloatLiteralType"
 - "NSCoder"
 - "PresentationMode"
 - "Row"

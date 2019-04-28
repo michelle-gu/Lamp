@@ -23,59 +23,59 @@
 	<string>SafariServices</string>
 	<string>FirebaseMLModelInterpreter</string>
 	<string>mach</string>
-	<string>FirebaseMessaging</string>
 	<string>AVFoundation</string>
+	<string>FirebaseMessaging</string>
 	<string>GoogleMobileAds</string>
 	<string>MobileCoreServices</string>
 	<string>WatchKit</string>
 	<string>FirebaseInstanceID</string>
-	<string>FirebaseMLVisionFaceModel</string>
+	<string>CoreText</string>
 	<string>AdSupport</string>
 	<string>FirebaseAuthInterop</string>
-	<string>FirebaseMLNaturalLanguage</string>
 	<string>FBSDKLoginKit</string>
+	<string>FirebaseMLVisionFaceModel</string>
 	<string>FirebaseMLVisionLabelModel</string>
 	<string>AppKit</string>
 	<string>FBSDKCoreKit</string>
+	<string>FirebaseMLNaturalLanguage</string>
 	<string>FirebaseAuth</string>
-	<string>FirebaseInvites</string>
 	<string>CoreImage</string>
-	<string>CoreText</string>
+	<string>FirebaseInvites</string>
 	<string>CoreFoundation</string>
 	<string>FirebasePerformance</string>
 	<string>Kingfisher</string>
 	<string>Crashlytics</string>
 	<string>Accounts</string>
-	<string>netinet</string>
 	<string>CoreData</string>
+	<string>netinet</string>
 	<string>Accelerate</string>
 	<string>FirebaseMLNLSmartReply</string>
+	<string>CommonCrypto</string>
 	<string>GoogleUtilities</string>
 	<string>FirebaseRemoteConfig</string>
-	<string>CommonCrypto</string>
 	<string>unicode</string>
 	<string>pop</string>
 	<string>FirebaseMLVision</string>
 	<string>FirebaseCrash</string>
 	<string>GTMSessionFetcher</string>
-	<string>FirebaseMLNLLanguageID</string>
+	<string>AudioToolbox</string>
 	<string>QuartzCore</string>
 	<string>SystemConfiguration</string>
-	<string>FirebaseAnalytics</string>
 	<string>MessageKit</string>
+	<string>FirebaseMLNLLanguageID</string>
 	<string>Security</string>
-	<string>AudioToolbox</string>
-	<string>CoreGraphics</string>
+	<string>FirebaseAnalytics</string>
 	<string>Koloda</string>
+	<string>CoreGraphics</string>
 	<string>objc</string>
 	<string>FirebaseDynamicLinks</string>
-	<string>MessageInputBar</string>
 	<string>RangeUISlider</string>
+	<string>MessageInputBar</string>
 	<string>UIKit</string>
 	<string>Fabric</string>
-	<string>FirebaseMLVisionBarcodeModel</string>
-	<string>Foundation</string>
 	<string>CoreTelephony</string>
+	<string>Foundation</string>
+	<string>FirebaseMLVisionBarcodeModel</string>
 	<string>sys</string>
 	<string>FirebaseFirestore</string>
 </array>

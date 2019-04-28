@@ -15,7 +15,6 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "/"
 - "AssignmentPrecedence"
-- !private "BooleanLiteralType"
 - "MatchMessageViewController"
 - "UIButton"
 - !private "UIColor"

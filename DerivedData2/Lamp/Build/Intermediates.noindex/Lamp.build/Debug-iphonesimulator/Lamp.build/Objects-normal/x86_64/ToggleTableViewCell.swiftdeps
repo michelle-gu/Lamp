@@ -12,6 +12,7 @@ provides-dynamic-lookup:
 - "toggle"
 depends-top-level:
 - "Bool"
+- "StringLiteralType"
 - "ToggleTableViewCell"
 - "UILabel"
 - "UISwitch"

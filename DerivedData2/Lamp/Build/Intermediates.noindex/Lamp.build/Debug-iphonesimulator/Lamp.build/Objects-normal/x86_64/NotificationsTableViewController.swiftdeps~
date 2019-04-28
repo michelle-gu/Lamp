@@ -19,6 +19,7 @@ depends-top-level:
 - "AssignmentPrecedence"
 - "Auth"
 - !private "Bool"
+- !private "BooleanLiteralType"
 - !private "CastingPrecedence"
 - "Database"
 - "Int"

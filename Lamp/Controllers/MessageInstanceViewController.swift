@@ -16,7 +16,7 @@ class MessageInstanceViewController: MessagesViewController {
 
     var profileRef: DatabaseReference!
     
-    var userId: String = "JHanuudAYNg4hTvMbLS9poOdCrx1"
+    var userId: String = ""
     
     // MARK: Firestore
     private let db = Firestore.firestore()
@@ -26,7 +26,7 @@ class MessageInstanceViewController: MessagesViewController {
     private var messages: [Message] = []
     private var messageListener: ListenerRegistration?
     
-    private let channelId: String = "FK3etvRW7SmKraOgQB6L"
+    private let channelId: String = "FK3etvRW7SmKraOgQB6L" // TO DO: Pass channel ID!!
     
     // clean up for listener
     deinit {
@@ -36,6 +36,9 @@ class MessageInstanceViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        userId = Auth.auth().currentUser!.uid
+        
+        // reference to firestore message db
         reference = db.collection(["channels", channelId, "thread"].joined(separator: "/"))
 
         // calls snapshot listener whenever there is a change to the database
@@ -44,11 +47,13 @@ class MessageInstanceViewController: MessagesViewController {
                 print("Error listening for channel updates: \(error?.localizedDescription ?? "No error")")
                 return
             }
-            
+            // loops through each message snapshot in thread list
             snapshot.documentChanges.forEach { change in
                 self.handleDocumentChange(change)
             }
         }
+        
+        self.messagesCollectionView.scrollToBottom() // TODO: messages do not scroll to bottom
         
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
@@ -67,7 +72,7 @@ class MessageInstanceViewController: MessagesViewController {
                 print("Error sending message: \(e.localizedDescription)")
                 return
             }
-            self.messagesCollectionView.scrollToBottom()
+            self.messagesCollectionView.scrollToBottom() // this works
         }
     }
     
@@ -207,13 +212,11 @@ extension MessageInstanceViewController: MessageInputBarDelegate {
         _ inputBar: MessageInputBar,
         didPressSendButtonWith text: String) {
         
-        // 1
+        // creates message form input bar and saves to db
         let message = Message(userId: userId, content: text)
-        
-        // 2
         save(message)
         
-        // 3
+        // clears message input bar
         inputBar.inputTextView.text = ""
     }
 }

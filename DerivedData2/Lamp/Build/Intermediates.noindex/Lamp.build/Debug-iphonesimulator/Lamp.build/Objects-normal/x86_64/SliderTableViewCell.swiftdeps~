@@ -13,7 +13,6 @@ provides-dynamic-lookup:
 depends-top-level:
 - "Bool"
 - "SliderTableViewCell"
-- "StringLiteralType"
 - "UILabel"
 - "UISlider"
 - "UITableViewCell"

@@ -22,7 +22,6 @@ depends-top-level:
 - "String"
 - !private "UITableViewCell"
 - "UIView"
-- !private "UnicodeScalarType"
 depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "init"]

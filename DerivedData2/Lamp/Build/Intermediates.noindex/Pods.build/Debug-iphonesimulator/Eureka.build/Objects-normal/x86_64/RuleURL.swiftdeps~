@@ -11,13 +11,11 @@ depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
 - "Bool"
-- "BooleanLiteralType"
 - !private "NSPredicate"
 - !private "RegExprPattern"
 - "RuleType"
 - "RuleURL"
 - "String"
-- "StringLiteralType"
 - "URL"
 - "ValidationError"
 depends-member:

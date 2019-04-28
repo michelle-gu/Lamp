@@ -9,6 +9,7 @@ provides-dynamic-lookup:
 - "viewDidLoad"
 depends-top-level:
 - "SocialMediaConnectViewController"
+- "StringLiteralType"
 - "UIViewController"
 depends-member:
 - ["s7CVarArgP", ""]

@@ -10,6 +10,7 @@ depends-top-level:
 - !private "AnyObject"
 - "AssignmentPrecedence"
 - "Bool"
+- "BooleanLiteralType"
 - "CastingPrecedence"
 - "DataSnapshot"
 - "DatabaseReference"

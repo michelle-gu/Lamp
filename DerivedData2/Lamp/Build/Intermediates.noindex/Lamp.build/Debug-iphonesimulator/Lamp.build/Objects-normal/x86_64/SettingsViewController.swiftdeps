@@ -15,7 +15,6 @@ depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
 - !private "Auth"
-- !private "BooleanLiteralType"
 - "CastingPrecedence"
 - "IndexPath"
 - "Int"

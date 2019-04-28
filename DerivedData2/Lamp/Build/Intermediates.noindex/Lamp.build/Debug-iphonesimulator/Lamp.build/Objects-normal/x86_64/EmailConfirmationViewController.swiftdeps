@@ -10,6 +10,7 @@ provides-dynamic-lookup:
 - "viewDidLoad"
 depends-top-level:
 - "EmailConfirmationViewController"
+- "StringLiteralType"
 - "UIButton"
 - "UIViewController"
 depends-member:

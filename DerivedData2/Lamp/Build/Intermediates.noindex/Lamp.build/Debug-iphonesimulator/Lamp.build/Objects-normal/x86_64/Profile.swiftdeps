@@ -15,7 +15,6 @@ depends-top-level:
 - "DatabaseReference"
 - "Profile"
 - "String"
-- "StringLiteralType"
 depends-member:
 - !private ["s7CVarArgP", "key"]
 - !private ["s7CVarArgP", "ref"]
