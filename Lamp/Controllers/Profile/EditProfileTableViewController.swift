@@ -190,7 +190,6 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                 // Add the user's locations to list of all locations
                 citiesRef.child(city).child(user!).setValue(true)
             } else {
-                print("other")
                 profile.child("futureLoc").child(city).setValue(false)
                 userSettingsRef.child("discovery").child("futureLoc").child(city).setValue(false)
                 citiesRef.child(city).child(user!).setValue(false)
@@ -315,7 +314,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         dismiss(animated: true, completion: nil)
     }
     
-    // Birthday is at least 13 years old
+    // Birthday is at least 18 years old
     func isValidBirthday(birthday: String) -> Bool {
         let now = Date()
         let calendar = Calendar.current
@@ -588,7 +587,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             case unis.count + 1:
                 var newUni: String = ""
                 let alert = UIAlertController(
-                    title: "Add a university",
+                    title: "Add a University",
                     message: "Unable to find your uni? Add it here! (Please ensure your university is not already in the list with a different spelling.)",
                     preferredStyle: .alert)
                 
@@ -600,24 +599,33 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                 alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
                     newUni = alert!.textFields![0].text ?? ""
                     
-                    let confirmUniAlert = UIAlertController(title: "Add a university", message: "Are you sure you want to add \"\(newUni)\"?", preferredStyle: .alert)
-                    confirmUniAlert.addAction(UIAlertAction(title: "No", style: .cancel))
-                    confirmUniAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
-                        
-                        if newUni != "" {
-                            print("Adding new uni: ", newUni)
-                            if !self.unis.contains(newUni) {
-                                self.unis.append(newUni)
-                                self.unis.sort()
+                    if newUni.contains(".") ||
+                        newUni.contains("$") ||
+                        newUni.contains("[") ||
+                        newUni.contains("]") ||
+                        newUni.contains("#") {
+                        let invalidCharsAlert = UIAlertController(title: "Failed to Add University", message: "\"\(newUni)\" contains invalid characters \'.$[]#\'.", preferredStyle: .alert)
+                        invalidCharsAlert.addAction(UIAlertAction(title: "OK", style: .default))
+                    } else {
+                        let confirmUniAlert = UIAlertController(title: "Add a University", message: "Are you sure you want to add \"\(newUni)\"?", preferredStyle: .alert)
+                        confirmUniAlert.addAction(UIAlertAction(title: "No", style: .cancel))
+                        confirmUniAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
+                            
+                            if newUni != "" {
+                                print("Adding new uni: ", newUni)
+                                if !self.unis.contains(newUni) {
+                                    self.unis.append(newUni)
+                                    self.unis.sort()
+                                }
+                                self.uniPicker.reloadComponent(0)
+                                let index = self.unis.firstIndex(of: newUni) ?? self.unis.count
+                                print("Index for new uni: ", index + 1)
+                                self.uniPicker.selectRow(index + 1, inComponent: 0, animated: true)
+                                self.universityField.text = newUni
                             }
-                            self.uniPicker.reloadComponent(0)
-                            let index = self.unis.firstIndex(of: newUni) ?? self.unis.count
-                            print("Index for new uni: ", index + 1)
-                            self.uniPicker.selectRow(index + 1, inComponent: 0, animated: true)
-                            self.universityField.text = newUni
-                        }
-                    }))
-                    self.present(confirmUniAlert, animated: true, completion: nil)
+                        }))
+                        self.present(confirmUniAlert, animated: true, completion: nil)
+                    }
                 }))
                 self.present(alert, animated: true, completion: nil)
             default:

@@ -10,19 +10,26 @@ import UIKit
 import Firebase
 import Kingfisher
 
-let genderPickerData = [String](arrayLiteral: "Female", "Male", "Other", "Prefer not to say")
-
 class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     // MARK: - Constants
     // Segue Identifiers
     let showLocationInfoScreen = "showLocationInfoScreen"
-    // Pickers
-    let imagePicker = UIImagePickerController()
     // Firebase References
     let userProfilesRef = Database.database().reference(withPath: "user-profiles")
     let gendersRef = Database.database().reference(withPath: "genders")
     let user = Auth.auth().currentUser?.uid
+    
+    // MARK: Pickers
+    let imagePicker = UIImagePickerController()
+    let genderPicker = UIPickerView()
+    let birthdayPicker = UIDatePicker()
+    
+    // MARK: - Variables
+    var allCities: [String] = []
+    var cities: [String] = []
+    var unis: [String] = []
+    var genders: [String] = []
 
     // MARK: - Outlets
     @IBOutlet weak var profilePictureView: UIImageView!
@@ -119,23 +126,28 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         userRef.child("profile").updateChildValues(values)
         userRef.updateChildValues(settings.toAnyObject() as! [AnyHashable : Any])
 
-        let genderValues = [
-            gender: [
-                user: true
-            ]
-        ]
-        gendersRef.updateChildValues(genderValues)
-        
+        // Add user's gender to genders and set others to false
+        for gen in genders {
+            if gen == gender {
+                gendersRef.child(gen).child(user!).setValue(true)
+            } else {
+                gendersRef.child(gen).child(user!).setValue(false)
+            }
+        }
+
     }
 
     // MARK: - Functions
-    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+    // Birthday is at least 18 years old
+    func isValidBirthday(birthday: String) -> Bool {
+        let now = Date()
+        let calendar = Calendar.current
+        let myDateFormatter = DateFormatter()
+        myDateFormatter.dateFormat = "MM/dd/yyyy"
+        let birthdayDate = myDateFormatter.date(from: birthday)!
+        let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthdayDate, to: now)
+        let age = ageComponents.year!
+        return age >= 18
     }
     
     func uploadImage(_ image: UIImage, at reference: StorageReference, completion: @escaping (URL?) -> Void) {
@@ -214,6 +226,7 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         super.viewDidLoad()
         
         // Textfield delegates
+        firstNameTextField.delegate = self
         genderTextField.delegate = self
         birthdayTextField.delegate = self
         
@@ -225,22 +238,22 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         changePictureButton.layer.borderWidth = 1
         changePictureButton.layer.cornerRadius = changePictureButton.bounds.height / 2
         changePictureButton.layer.borderColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 1).cgColor
+        
+        // Image Picker
+        imagePicker.delegate = self
 
         // Gender picker setup
-        let genderPicker = UIPickerView()
         genderPicker.delegate = self
         genderTextField.inputView = genderPicker
         
         // Birthday Date picker setup
-        let datePicker = UIDatePicker()
-        datePicker.datePickerMode = .date
-        datePicker.addTarget(self, action: #selector(ProfileCreationViewController.dateChanged(datePicker:)), for: .valueChanged)
+        birthdayPicker.datePickerMode = .date
+        birthdayPicker.addTarget(self, action: #selector(ProfileCreationViewController.dateChanged(datePicker:)), for: .valueChanged)
+        birthdayTextField.inputView = birthdayPicker
+        
+        // Tap to dismiss pickers
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ProfileCreationViewController.viewTapped(gestureRecognizer:)))
         view.addGestureRecognizer(tapGesture)
-        birthdayTextField.inputView = datePicker
-        
-        // Image Picker
-        imagePicker.delegate = self
         
         // Pre-populate with values from Firebase
         let profile = userProfilesRef.child(user!).child("profile")
@@ -262,8 +275,15 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
                 }
             }
         })
-        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // Populate genders array
+        getGenders() { (gendersArray) in
+            self.genders = gendersArray
+        }
+    }
+
     
     // MARK: - Picker delegate
     // when outside of picker is tapped, it will dismiss
@@ -285,33 +305,58 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     
     // Number of elements
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return genderPickerData.count
+        switch pickerView {
+        case genderPicker:
+            return genders.count + 1
+        default:
+            return 0
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return genderPickerData[row]
+        switch pickerView {
+        case genderPicker:
+            switch row {
+            case 0:
+                return "- Choose a gender -"
+            default:
+                return genders[row - 1]
+            }
+        default:
+            return ""
+        }
     }
     
-    // Sets gender text field to selection
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        genderTextField.text = genderPickerData[row]
+        switch pickerView {
+        case genderPicker:
+            switch row {
+            case 0:
+                genderTextField.text = ""
+            default:
+                genderTextField.text = genders[row - 1]
+            }
+        default:
+            return
+        }
     }
-    
-    // Birthday is at least 13 years old
-    func isValidBirthday(birthday: String) -> Bool {
-        let now = Date()
-        let calendar = Calendar.current
-        let myDateFormatter = DateFormatter()
-        myDateFormatter.dateFormat = "MM/dd/yyyy"
-        let birthdayDate = myDateFormatter.date(from: birthday)!
-        let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthdayDate, to: now)
-        let age = ageComponents.year!
-        return age >= 18
-    }
-    
+
     // MARK: - Text Field delegate
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        return false
+        if textField == genderTextField {
+            return false
+        }
+        return true
+    }
+    
+    // Dismiss keyboard on tap
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     // MARK: - Data Retrieval
