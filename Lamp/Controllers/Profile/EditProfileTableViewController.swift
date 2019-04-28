@@ -10,16 +10,26 @@ import UIKit
 import Firebase
 import Kingfisher
 
-class EditProfileTableViewController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+class EditProfileTableViewController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     // MARK: - Constants
+    // MARK: Database References
     let user = Auth.auth().currentUser?.uid
     let userProfilesRef = Database.database().reference(withPath: "user-profiles")
     let citiesRef = Database.database().reference(withPath: "locations")
+    let uniRef = Database.database().reference(withPath: "universities")
+    let gendersRef = Database.database().reference(withPath: "genders")
+    
+    // MARK: Pickers
     let imagePicker = UIImagePickerController()
+    let genderPicker = UIPickerView()
+    let birthdayPicker = UIDatePicker()
+    let uniPicker = UIPickerView()
 
     // MARK: - Variables
     var cities: [String] = []
+    var unis: [String] = []
+    var genders: [String] = []
     
     // MARK: - Outlets
     @IBOutlet weak var profilePicView: UIImageView!
@@ -124,7 +134,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             else {
                 let alert = UIAlertController(
                     title: "Edit Profile Failed",
-                    message: "Please fill in all basic info fields. You also must be at least 13 years old to use this app.",
+                    message: "Please fill in all basic info fields. You also must be at least 18 years old to use this app.",
                     preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -175,6 +185,15 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                 ]
             ]
             citiesRef.updateChildValues(locValues)
+        }
+        
+        // Add user's university to universities and set others to false
+        for uni in unis {
+            if uni == university {
+                uniRef.child(uni).child(user!).setValue(true)
+            } else {
+                uniRef.child(uni).child(user!).setValue(false)
+            }
         }
         
         navigationController?.popViewController(animated: true)
@@ -271,22 +290,48 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         let birthdayDate = myDateFormatter.date(from: birthday)!
         let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthdayDate, to: now)
         let age = ageComponents.year!
-        return age >= 13
+        return age >= 18
     }
 
-    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set delegates
+        // Textfield delegates
         nameField.delegate = self
-        // TODO: Textfield delegates
-        imagePicker.delegate = self
-        // TODO: Add Bio text placeholder
+        genderField.delegate = self
+        birthdayField.delegate = self
+        universityField.delegate = self
+        occupationField.delegate = self
+        budgetField.delegate = self
+        numBedroomsField.delegate = self
+        petsField.delegate = self
+        smokingField.delegate = self
+        otherPreferencesField.delegate = self
+        phoneField.delegate = self
+        emailField.delegate = self
+        facebookField.delegate = self
+        otherContactField.delegate = self
         
-        // TODO: Add pickers for Birthday, Gender, Uni, etc.
+        // TODO: Add Bio text placeholder
+        //        bioField.delegate = self
 
+        // TODO: Add pickers for Birthday, Gender, Uni, etc.
+        imagePicker.delegate = self
+        
+        genderPicker.delegate = self
+        genderField.inputView = genderPicker
+        uniPicker.delegate = self
+        universityField.inputView = uniPicker
+        
+        birthdayPicker.datePickerMode = .date
+        birthdayPicker.addTarget(self, action: #selector(EditProfileTableViewController.dateChanged(datePicker:)), for: .valueChanged)
+        birthdayField.inputView = birthdayPicker
+        
+        // Tap to dismiss pickers
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(EditProfileTableViewController.viewTapped(gestureRecognizer:)))
+        view.addGestureRecognizer(tapGesture)
+        
         // Remove empty cells at bottom
         tableView.tableFooterView = UIView()
         
@@ -367,6 +412,17 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             }
         })
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // Populate gender and uni arrays
+        getGenders() { (gendersArray) in
+            self.genders = gendersArray
+        }
+        
+        getUniversities() { (unisArray) in
+            self.unis = unisArray
+        }
+    }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -404,6 +460,123 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         }
     }
     
+    // MARK: - DatePicker functions
+    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    // for date picker
+    @objc func dateChanged(datePicker: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        birthdayField.text = dateFormatter.string(from: datePicker.date)
+    }
+    
+    // MARK: - PickerView Delegate
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        switch pickerView {
+        case genderPicker:
+            return genders.count + 1
+        case uniPicker:
+            return unis.count + 2
+        default:
+            return 0
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch pickerView {
+        case genderPicker:
+            switch row {
+            case 0:
+                return "- Choose a gender -"
+            default:
+                return genders[row - 1]
+            }
+
+        case uniPicker:
+            switch row {
+            case 0:
+                return "- Choose a university -"
+            case unis.count + 1:
+                return "- Add a university -"
+            default:
+                return unis[row - 1]
+            }
+        default:
+            return ""
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch pickerView {
+        case genderPicker:
+            switch row {
+            case 0:
+                genderField.text = ""
+            default:
+                genderField.text = genders[row - 1]
+            }
+        case uniPicker:
+            switch row {
+            case 0:
+                universityField.text = ""
+            case unis.count + 1:
+                var newUni: String = ""
+                let alert = UIAlertController(
+                    title: "Add a university",
+                    message: "Unable to find your uni? Add it here! (Please ensure your university is not already in the list with a different spelling.)",
+                    preferredStyle: .alert)
+                
+                alert.addTextField { (textField) in
+                    textField.placeholder = "New University Name"
+                }
+                
+                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
+                    newUni = alert!.textFields![0].text ?? ""
+                    
+                    let confirmUniAlert = UIAlertController(title: "Add a university", message: "Are you sure you want to add \"\(newUni)\"?", preferredStyle: .alert)
+                    confirmUniAlert.addAction(UIAlertAction(title: "No", style: .cancel))
+                    confirmUniAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
+                        
+                        if newUni != "" {
+                            print("Adding new uni: ", newUni)
+                            if !self.unis.contains(newUni) {
+                                self.unis.append(newUni)
+                                self.unis.sort()
+                            }
+                            self.uniPicker.reloadComponent(0)
+                            let index = self.unis.firstIndex(of: newUni) ?? self.unis.count
+                            print("Index for new uni: ", index + 1)
+                            self.uniPicker.selectRow(index + 1, inComponent: 0, animated: true)
+                            self.universityField.text = newUni
+                        }
+                    }))
+                    self.present(confirmUniAlert, animated: true, completion: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            default:
+                universityField.text = unis[row - 1]
+            }
+        default:
+            return
+        }
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // MARK: - Text Field delegate
+    // Prevents typing in picker fields
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == genderField || textField == birthdayField || textField == universityField {
+            return false
+        }
+        return true
+    }
+    
     // MARK: - Database Retrieval
     // update the location text to show user's preferences
     func setLocationText() {
@@ -431,5 +604,36 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             completion(citiesArray)
         })
     }
+    
+    func getGenders(completion: @escaping ([String]) -> Void) {
+        gendersRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let gendersDict = snapshot.value as? [String : AnyObject] else {
+                return completion([])
+            }
+            
+            var gendersArray: [String] = []
+            for gender in gendersDict {
+                gendersArray.append(gender.key)
+            }
+            gendersArray.sort()
+            completion(gendersArray)
+        })
+    }
+    
+    func getUniversities(completion: @escaping ([String]) -> Void) {
+        uniRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let unisDict = snapshot.value as? [String : AnyObject] else {
+                return completion([])
+            }
+            
+            var unisArray: [String] = []
+            for uni in unisDict {
+                unisArray.append(uni.key)
+            }
+            unisArray.sort()
+            completion(unisArray)
+        })
+    }
+
     
 }

@@ -10,7 +10,22 @@ Roommate finder for students and alumni at UT Austin.
     Michelle Gu (%)
         * 
     Pearl Xie (%)
-        * 
+        * Include a Map View Controller accessible from the Edit Profile page
+        * Drop a pin to add location to maps
+        * Update location displays with cities stored in Firebase in following locations: Create Profile label, Profile View label, Profile Edit text field, Settings
+        * Redesign search and add city buttons
+            * Hide/Unhide the search and add buttons when appropriate (add button doesn’t appear until a city is searched and able to be added)
+        * Error checking/Debugging:
+            * Setting the initial map view to the user's location as opposed to having it hardcoded to San Francisco 
+            * “Add City” button when no city is searched adds a blank button (and crashes) 
+            * Various Firebase update/retrieval errors
+            * Alerts: Don’t allow adding two of the same cities, don’t allow removing all cities in any map update 
+            * When locations are updated via map, the university chosen disappears when it returns to profile location VC
+        * Cleanup
+            * Change map buttons to a text field that takes you to map controller
+            * Placemark annotation is the formal city name and not the search name
+            * Tap to dismiss keyboard and return to submit
+            * Add constraints to be viewable in different screen sizes
         
 ## Deviations:
     *

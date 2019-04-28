@@ -56,6 +56,24 @@ class GenderFilterViewController: UIViewController, UITableViewDataSource, UITab
                 otherCell!.isSelected = true
                 otherCell!.accessoryType = .checkmark
             }
+        } else {
+            var allSelected: Bool = true
+            for row in 1...numGenders {
+                let indexPathForRow = IndexPath(row: row, section: 0)
+                let otherCell = tableView.cellForRow(at: indexPathForRow)
+                if otherCell?.accessoryType != UITableViewCell.AccessoryType.checkmark {
+                    allSelected = false
+                    break
+                }
+            }
+
+            if allSelected { // Tick selectAll cell
+                selectAllSelected = true
+                let indexPathForRow = IndexPath(row: 0, section: 0)
+                let selectAllCell = tableView.cellForRow(at: indexPathForRow)
+                selectAllCell!.isSelected = true
+                selectAllCell!.accessoryType = .checkmark
+            }
         }
     }
     
