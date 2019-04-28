@@ -37,6 +37,7 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var birthdayTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
     
     // MARK: - Actions
     @IBAction func changePictureButtonPressed(_ sender: Any) {
@@ -227,8 +228,11 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         
         // Textfield delegates
         firstNameTextField.delegate = self
+        firstNameTextField.tag = 0
         genderTextField.delegate = self
+        genderTextField.tag = 1
         birthdayTextField.delegate = self
+        birthdayTextField.tag = 2
         
         // profile picture styling
         profilePictureView.layer.cornerRadius = profilePictureView.bounds.height / 2
@@ -351,8 +355,17 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     
     // Dismiss keyboard on tap
     func textFieldShouldReturn(_ textField:UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+            nextButton.sendActions(for: .touchUpInside)
+            
+        }
+        // Do not add a line break
+        return false
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

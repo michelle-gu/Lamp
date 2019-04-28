@@ -19,9 +19,17 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     let ref = Database.database().reference(withPath: "user-profiles")
     
     // MARK: - Functions
-    func textFieldShouldReturn(textField:UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+            logInButton.sendActions(for: .touchUpInside)
+        }
+        // Do not add a line break
+        return false
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -91,15 +99,19 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     // MARK: UIViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailField.delegate = self
+        emailField.tag = 0
+        passwordField.delegate = self
+        passwordField.tag = 1
+        
         // Checks if user is already logged in
         Auth.auth().addStateDidChangeListener() { auth, user in
             if user != nil {
                 self.emailField.text = nil
                 self.passwordField.text = nil
                 
-                print ("Already logged in!!!!")
                 if let userID = user?.uid {
-                    print ("UserID exists")
                     self.ref.child(userID).child("profile").observe(.value, with: { (snapshot) in
                         let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
                         if profileDict["uni"] == nil {

@@ -37,6 +37,7 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     @IBOutlet weak var uniTextField: UITextField!
     @IBOutlet weak var occupationTextField: UITextField!
     @IBOutlet weak var mapButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -44,7 +45,9 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
 
         // TextField Delegates
         uniTextField.delegate = self
+        uniTextField.tag = 0
         occupationTextField.delegate = self
+        occupationTextField.tag = 0
         
         // Do any additional setup after loading the view.
         profilePictureView.layer.cornerRadius = profilePictureView.bounds.height / 2
@@ -264,8 +267,16 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     
     // Dismiss keyboard on tap
     func textFieldShouldReturn(_ textField:UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+            doneButton.sendActions(for: .touchUpInside)
+        }
+        // Do not add a line break
+        return false
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

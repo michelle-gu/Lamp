@@ -475,6 +475,7 @@
                         <outlet property="changePictureButton" destination="V04-gP-XNv" id="SGJ-Hc-qZn"/>
                         <outlet property="firstNameTextField" destination="ov7-8j-oYj" id="5an-vX-hmD"/>
                         <outlet property="genderTextField" destination="s00-dv-s8A" id="P9N-2z-Uhv"/>
+                        <outlet property="nextButton" destination="gUe-52-RAX" id="rpJ-kS-FfB"/>
                         <outlet property="profilePictureView" destination="pkP-2H-sCP" id="iPk-Rc-fZi"/>
                     </connections>
                 </viewController>
@@ -564,6 +565,7 @@
                         <viewLayoutGuide key="safeArea" id="tJO-Nj-4HI"/>
                     </view>
                     <connections>
+                        <outlet property="doneButton" destination="D5m-lV-bIu" id="P8b-wr-vwZ"/>
                         <outlet property="mapButton" destination="DNK-Ik-8dX" id="SjQ-9U-znJ"/>
                         <outlet property="occupationTextField" destination="sDn-mk-5Xb" id="n18-GJ-BOD"/>
                         <outlet property="profilePictureView" destination="2kC-M0-PXD" id="HRl-so-oCe"/>
@@ -2761,7 +2763,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Locations (Click to Remove)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6a-Hz-BPi">
-                                <rect key="frame" x="16" y="60" width="228" height="22"/>
+                                <rect key="frame" x="16" y="104" width="228" height="22"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -2780,7 +2782,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06w-12-paP">
-                                <rect key="frame" x="16" y="91" width="110" height="40"/>
+                                <rect key="frame" x="16" y="135" width="110" height="40"/>
                                 <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2796,7 +2798,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40R-62-8oj">
-                                <rect key="frame" x="132" y="91" width="110" height="40"/>
+                                <rect key="frame" x="132" y="135" width="110" height="40"/>
                                 <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2812,7 +2814,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsf-FQ-4j9">
-                                <rect key="frame" x="249" y="91" width="110" height="40"/>
+                                <rect key="frame" x="249" y="135" width="110" height="40"/>
                                 <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2828,7 +2830,7 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QQU-vT-O2u">
-                                <rect key="frame" x="0.0" y="139" width="375" height="673"/>
+                                <rect key="frame" x="0.0" y="183" width="375" height="629"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxh-N3-EL7">
                                 <rect key="frame" x="299" y="628" width="60" height="60"/>
@@ -3964,7 +3966,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YS3-yl-8TS"/>
-        <segue reference="ABV-LS-boM"/>
+        <segue reference="P1N-dK-ZZG"/>
         <segue reference="PA3-YF-Hx5"/>
         <segue reference="IdY-Gv-dXt"/>
     </inferredMetricsTieBreakers>
