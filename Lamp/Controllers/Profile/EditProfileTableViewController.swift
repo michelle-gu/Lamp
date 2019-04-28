@@ -27,6 +27,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     let uniPicker = UIPickerView()
 
     // MARK: - Variables
+    var allCities: [String] = []
     var cities: [String] = []
     var unis: [String] = []
     var genders: [String] = []
@@ -180,7 +181,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         // Update futureLoc value
         let userSettingsRef = userProfilesRef.child(user!).child("settings")
         let futureLocArr: [String] = futureLoc.components(separatedBy: ", ")
-        for city in cities {
+        for city in allCities {
             if futureLocArr.contains(city) {
                 // Set future location and default location filter
                 profile.child("futureLoc").child(city).setValue(true)
@@ -189,6 +190,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                 // Add the user's locations to list of all locations
                 citiesRef.child(city).child(user!).setValue(true)
             } else {
+                print("other")
                 profile.child("futureLoc").child(city).setValue(false)
                 userSettingsRef.child("discovery").child("futureLoc").child(city).setValue(false)
                 citiesRef.child(city).child(user!).setValue(false)
@@ -196,11 +198,14 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         }
         
         // Add user's university to universities and set others to false
+        // Update filter settings
         for uni in unis {
             if uni == university {
                 uniRef.child(uni).child(user!).setValue(true)
+                userSettingsRef.child("discovery").child("universities").child(uni).setValue(true)
             } else {
                 uniRef.child(uni).child(user!).setValue(false)
+                userSettingsRef.child("discovery").child("universities").child(uni).setValue(false)
             }
         }
         
@@ -465,7 +470,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // Populate genders, unis, cities arrays
+        // Populate genders, unis, cities, and all cities arrays
         getGenders() { (gendersArray) in
             self.genders = gendersArray
         }
@@ -476,6 +481,10 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         
         getCities() { (citiesArray) in
             self.cities = citiesArray
+        }
+        
+        getAllCities() { (citiesArray) in
+            self.allCities = citiesArray
         }
     }
 
@@ -699,6 +708,22 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             }
             unisArray.sort()
             completion(unisArray)
+        })
+    }
+    
+    // Retrieve a list of genders from Firebase
+    func getAllCities(completion: @escaping ([String]) -> Void) {
+        citiesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let citiesDict = snapshot.value as? [String : AnyObject] else {
+                return completion([])
+            }
+            
+            var citiesArray: [String] = []
+            for city in citiesDict {
+                citiesArray.append(city.key)
+            }
+            citiesArray.sort()
+            completion(citiesArray)
         })
     }
 
