@@ -109,11 +109,25 @@ class ProfileTableViewController: UITableViewController {
             if let bioVal = profileDict["bio"] as? String {
                 self.setProfileInfo(label: self.bioLabel, text: bioVal)
             }
-            if let budgetVal = profileDict["budget"] as? String {
-                self.setProfileInfo(label: self.budgetLabel, text: budgetVal)
+            if let budgetVal = profileDict["budget"] as? Int {
+                switch budgetVal {
+                case 500:
+                    self.setProfileInfo(label: self.budgetLabel, text: "$500-")
+                case 3000:
+                    self.setProfileInfo(label: self.budgetLabel, text: "$3000+")
+                default:
+                    self.setProfileInfo(label: self.budgetLabel, text: "$\(Int(budgetVal))")
+                }
             }
-            if let numBedroomsVal = profileDict["numBedrooms"] as? String {
-                self.setProfileInfo(label: self.numBedroomsLabel, text: numBedroomsVal)
+            if let numBedroomsVal = profileDict["numBedrooms"] as? Int {
+                switch numBedroomsVal {
+                case 0:
+                    self.setProfileInfo(label: self.numBedroomsLabel, text: "Studio")
+                case 5:
+                    self.setProfileInfo(label: self.numBedroomsLabel, text: "5+")
+                default:
+                    self.setProfileInfo(label: self.numBedroomsLabel, text: "\(Int(numBedroomsVal))")
+                }
             }
             if let petsVal = profileDict["pets"] as? String {
                 self.setProfileInfo(label: self.petsLabel, text: petsVal)

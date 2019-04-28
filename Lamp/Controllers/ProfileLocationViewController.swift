@@ -19,6 +19,7 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     let profilesRef = Database.database().reference(withPath: "user-profiles")
     let dbRef = Database.database()
     let citiesRef = Database.database().reference(withPath: "locations")
+    let uniRef = Database.database().reference(withPath: "universities")
     let user = Auth.auth().currentUser?.uid
     
     // MARK: Segues
@@ -126,6 +127,22 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
                 citiesArray.append(city.key)
             }
             completion(citiesArray)
+        })
+    }
+    
+    // Retrieve a list of universities from Firebase
+    func getUniversities(completion: @escaping ([String]) -> Void) {
+        uniRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let unisDict = snapshot.value as? [String : AnyObject] else {
+                return completion([])
+            }
+            
+            var unisArray: [String] = []
+            for uni in unisDict {
+                unisArray.append(uni.key)
+            }
+            unisArray.sort()
+            completion(unisArray)
         })
     }
     

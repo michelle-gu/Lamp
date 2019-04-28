@@ -40,10 +40,12 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     @IBOutlet weak var futureLocationField: UIButton!
     @IBOutlet weak var occupationField: UITextField!
     @IBOutlet weak var bioField: UITextView!
-    @IBOutlet weak var budgetField: UITextField!
-    @IBOutlet weak var numBedroomsField: UITextField!
+    @IBOutlet weak var budgetSlider: UISlider!
+    @IBOutlet weak var budgetLabel: UILabel!
+    @IBOutlet weak var numBedsSlider: UISlider!
+    @IBOutlet weak var numBedsLabel: UILabel!
     @IBOutlet weak var petsField: UITextField!
-    @IBOutlet weak var smokingField: UITextField!
+    @IBOutlet weak var smokingSegCtrl: UISegmentedControl!
     @IBOutlet weak var otherPreferencesField: UITextField!
     @IBOutlet weak var phoneField: UITextField!
     @IBOutlet weak var emailField: UITextField!
@@ -54,12 +56,11 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     // MARK: - Actions
     @IBAction func changeProfilePicPressed(_ sender: Any) {
         let actionSheet = UIAlertController(title: "Change Profile Picture", message: nil, preferredStyle: .actionSheet)
+        
         actionSheet.addAction(UIAlertAction(title: "Remove Current Photo", style: .destructive, handler:
             { action in
                 // Remove photo from profile picture view
                 self.profilePicView.image = UIImage(named: "profile-pic-blank")
-                // Profile reference
-                let profileRef = self.userProfilesRef.child(self.user!).child("profile")
                 
                 // Remove photo from Firebase Storage
                 let profilePicRef = Storage.storage().reference().child("profilePictures").child("\(self.user!).jpg")
@@ -73,9 +74,12 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                 
                 // Remove profile picture from database
                 let values = ["profilePicture": ""]
+                let profileRef = self.userProfilesRef.child(self.user!).child("profile")
                 profileRef.updateChildValues(values)
         }))
+        
         actionSheet.addAction(UIAlertAction(title: "Import from Facebook", style: .default, handler: nil))
+        
         actionSheet.addAction(UIAlertAction(title: "Take Photo", style: .default, handler:
             { action in
                 if UIImagePickerController.availableCaptureModes(for: .rear) != nil {
@@ -90,6 +94,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                     self.noCamera()
                 }
         }))
+        
         actionSheet.addAction(UIAlertAction(title: "Choose from Library", style: .default, handler:
             { action in
                 // Whole picture, not an edited version
@@ -101,9 +106,10 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                 self.present(self.imagePicker, animated: true, completion: nil)
                 self.imagePicker.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
         }))
+        
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
         self.present(actionSheet, animated: true)
-
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
@@ -115,10 +121,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             let futureLoc = futureLocationField.titleLabel?.text,
             let occupation = occupationField.text,
             let bio = bioField.text,
-            let budget = budgetField.text,
-            let numBedrooms = numBedroomsField.text,
             let pets = petsField.text,
-            let smoking = smokingField.text,
             let otherLifestylePrefs = otherPreferencesField.text,
             let phone = phoneField.text,
             let email = emailField.text,
@@ -142,6 +145,14 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                 return
         }
         
+        let smoking: String
+        let smokingIndex = smokingSegCtrl.selectedSegmentIndex
+        if smokingIndex < 0 || smokingIndex > 2 {
+            smoking = ""
+        } else {
+            smoking = smokingSegCtrl.titleForSegment(at: smokingIndex) ?? ""
+        }
+        
         // Update all but futureLoc val
         let profile = userProfilesRef.child(user!).child("profile")
         let values = [
@@ -153,8 +164,8 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             "occupation": occupation,
             "bio": bio,
             // Living Prefs
-            "budget": budget,
-            "numBedrooms": numBedrooms,
+            "budget": Int(budgetSlider.value),
+            "numBedrooms": Int(numBedsSlider.value),
             "pets": pets,
             "smoking": smoking,
             "otherLifestylePrefs": otherLifestylePrefs,
@@ -169,22 +180,19 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         // Update futureLoc value
         let userSettingsRef = userProfilesRef.child(user!).child("settings")
         let futureLocArr: [String] = futureLoc.components(separatedBy: ", ")
-        for loc in futureLocArr {
-            print("Pressing done & saving data!")
-            // Set future location and default location filter
-            let locFilterVal = [
-                loc: true
-            ]
-            profile.child("futureLoc").updateChildValues(locFilterVal)
-            userSettingsRef.child("discovery").child("futureLoc").updateChildValues(locFilterVal)
-
-            // Add the user's locations to list of all locations
-            let locValues = [
-                loc: [
-                    user: true
-                ]
-            ]
-            citiesRef.updateChildValues(locValues)
+        for city in cities {
+            if futureLocArr.contains(city) {
+                // Set future location and default location filter
+                profile.child("futureLoc").child(city).setValue(true)
+                userSettingsRef.child("discovery").child("futureLoc").child(city).setValue(true)
+                
+                // Add the user's locations to list of all locations
+                citiesRef.child(city).child(user!).setValue(true)
+            } else {
+                profile.child("futureLoc").child(city).setValue(false)
+                userSettingsRef.child("discovery").child("futureLoc").child(city).setValue(false)
+                citiesRef.child(city).child(user!).setValue(false)
+            }
         }
         
         // Add user's university to universities and set others to false
@@ -196,9 +204,41 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             }
         }
         
+        // Add user's gender to genders and set others to false
+        for gen in genders {
+            if gen == gender {
+                gendersRef.child(gen).child(user!).setValue(true)
+            } else {
+                gendersRef.child(gen).child(user!).setValue(false)
+            }
+        }
+
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func budgetSliderChanged(_ sender: Any) {
+        let budget = budgetSlider.value
+        switch budget {
+        case 500:
+            budgetLabel.text = "$\(Int(budget))-"
+        case 3000:
+            budgetLabel.text = "$\(Int(budget))+"
+        default:
+            budgetLabel.text = "$\(Int(budget))"
+        }
+    }
+    
+    @IBAction func numBedsSliderChanged(_ sender: Any) {
+        let numBeds = numBedsSlider.value
+        switch numBeds {
+        case 0:
+            numBedsLabel.text = "Studio"
+        case 5:
+            numBedsLabel.text = "\(Int(numBeds))+"
+        default:
+            numBedsLabel.text = "\(Int(numBeds))"
+        }
+    }
     
     // MARK: - Functions
     func uploadImage(_ image: UIImage, at reference: StorageReference, completion: @escaping (URL?) -> Void) {
@@ -249,8 +289,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         
         // Add photo to Firebase Storage
         let imageRef = Storage.storage().reference().child("profilePictures").child("\(self.user!).jpg")
-        // No need to remove old photo because this replaces the old photo
-        // in Firebase Storage
+        // No need to remove old photo because this replaces the old photo in Firebase
         uploadImage(chosenImage, at: imageRef) { (downloadURL) in
             guard let downloadURL = downloadURL else {
                 return
@@ -303,10 +342,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         birthdayField.delegate = self
         universityField.delegate = self
         occupationField.delegate = self
-        budgetField.delegate = self
-        numBedroomsField.delegate = self
         petsField.delegate = self
-        smokingField.delegate = self
         otherPreferencesField.delegate = self
         phoneField.delegate = self
         emailField.delegate = self
@@ -383,17 +419,42 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
 //                self.bioText.textColor = UIColor.black
 //            }
             }
-            if let budgetVal = profileDict["budget"] as? String {
-                self.budgetField.text = budgetVal
+            if let budgetVal = profileDict["budget"] as? Int {
+                self.budgetSlider.setValue(Float(budgetVal), animated: true)
+                switch budgetVal {
+                case 500:
+                    self.budgetLabel.text = "$\(Int(budgetVal))-"
+                case 3000:
+                    self.budgetLabel.text = "$\(Int(budgetVal))+"
+                default:
+                    self.budgetLabel.text = "$\(Int(budgetVal))"
+                }
             }
-            if let numBedroomsVal = profileDict["numBedrooms"] as? String {
-                self.numBedroomsField.text = numBedroomsVal
+            if let numBedroomsVal = profileDict["numBedrooms"] as? Int {
+                self.numBedsSlider.setValue(Float(numBedroomsVal), animated: true)
+                switch numBedroomsVal {
+                case 0:
+                    self.numBedsLabel.text = "Studio"
+                case 5:
+                    self.numBedsLabel.text = "\(Int(numBedroomsVal))+"
+                default:
+                    self.numBedsLabel.text = "\(Int(numBedroomsVal))"
+                }
             }
             if let petsVal = profileDict["pets"] as? String {
                 self.petsField.text = petsVal
             }
             if let smokingVal = profileDict["smoking"] as? String {
-                self.smokingField.text = smokingVal
+                switch smokingVal {
+                case "No":
+                    self.smokingSegCtrl.selectedSegmentIndex = 0
+                case "Sometimes":
+                    self.smokingSegCtrl.selectedSegmentIndex = 1
+                case "Yes":
+                    self.smokingSegCtrl.selectedSegmentIndex = 2
+                default:
+                    break
+                }
             }
             if let otherLifestyleVal = profileDict["otherLifestylePrefs"] as? String {
                 self.otherPreferencesField.text = otherLifestyleVal
@@ -414,13 +475,17 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // Populate gender and uni arrays
+        // Populate genders, unis, cities arrays
         getGenders() { (gendersArray) in
             self.genders = gendersArray
         }
         
         getUniversities() { (unisArray) in
             self.unis = unisArray
+        }
+        
+        getCities() { (citiesArray) in
+            self.cities = citiesArray
         }
     }
 
@@ -605,6 +670,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         })
     }
     
+    // Retrieve a list of genders from Firebase
     func getGenders(completion: @escaping ([String]) -> Void) {
         gendersRef.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let gendersDict = snapshot.value as? [String : AnyObject] else {
@@ -620,6 +686,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         })
     }
     
+    // Retrieve a list of universities from Firebase
     func getUniversities(completion: @escaping ([String]) -> Void) {
         uniRef.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let unisDict = snapshot.value as? [String : AnyObject] else {
@@ -635,5 +702,4 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         })
     }
 
-    
 }

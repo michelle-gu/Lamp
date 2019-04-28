@@ -3156,21 +3156,43 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Budget" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AH1-ts-6yH">
-                                                    <rect key="frame" x="145" y="6" width="214" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jz2-j5-HRZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jz2-j5-HRZ">
                                                     <rect key="frame" x="16" y="10" width="51" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="51" id="CoE-5G-Hdy"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minValue="500" maxValue="3000" translatesAutoresizingMaskIntoConstraints="NO" id="VHs-CQ-JBY">
+                                                    <rect key="frame" x="143" y="7" width="157" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="153" id="p3g-px-ovn"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="budgetSliderChanged:" destination="Qqq-Yz-t8p" eventType="valueChanged" id="ni9-SL-YOr"/>
+                                                    </connections>
+                                                </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd3-rX-g8z">
+                                                    <rect key="frame" x="306" y="12" width="65" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="VHs-CQ-JBY" secondAttribute="bottom" constant="6.6666666666666643" id="0OQ-2Y-h7R"/>
+                                                <constraint firstItem="VHs-CQ-JBY" firstAttribute="leading" secondItem="Jz2-j5-HRZ" secondAttribute="trailing" constant="78" id="JbW-Nj-NBj"/>
+                                                <constraint firstItem="VHs-CQ-JBY" firstAttribute="top" secondItem="YMX-1z-zai" secondAttribute="top" constant="7" id="Nxv-Qq-CKh"/>
+                                                <constraint firstAttribute="trailing" secondItem="wd3-rX-g8z" secondAttribute="trailing" constant="4" id="Tkt-Nn-vP7"/>
+                                                <constraint firstItem="Jz2-j5-HRZ" firstAttribute="top" secondItem="YMX-1z-zai" secondAttribute="top" constant="10" id="YZM-cA-Dl6"/>
+                                                <constraint firstItem="wd3-rX-g8z" firstAttribute="leading" secondItem="VHs-CQ-JBY" secondAttribute="trailing" constant="8" id="ccT-2B-ohM"/>
+                                                <constraint firstItem="wd3-rX-g8z" firstAttribute="top" secondItem="YMX-1z-zai" secondAttribute="top" constant="12" id="lFW-DN-avx"/>
+                                                <constraint firstItem="Jz2-j5-HRZ" firstAttribute="leading" secondItem="YMX-1z-zai" secondAttribute="leading" constant="16" id="lSi-zS-Hi1"/>
+                                                <constraint firstAttribute="bottom" secondItem="wd3-rX-g8z" secondAttribute="bottom" constant="10.666666666666664" id="qSH-cE-lZo"/>
+                                                <constraint firstAttribute="bottom" secondItem="Jz2-j5-HRZ" secondAttribute="bottom" constant="12.666666666666664" id="zWb-oH-Spa"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vhQ-4w-tUU">
@@ -3180,21 +3202,43 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="# of Bedrooms" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JEO-A1-roN">
-                                                    <rect key="frame" x="145" y="8" width="214" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# of Bedrooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wz8-rf-ell">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of Bedrooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wz8-rf-ell">
                                                     <rect key="frame" x="16" y="11" width="101" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="101" id="aft-A0-RuU"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="x3z-Tp-8b2">
+                                                    <rect key="frame" x="143" y="6" width="157" height="31"/>
+                                                    <connections>
+                                                        <action selector="numBedsSliderChanged:" destination="Qqq-Yz-t8p" eventType="valueChanged" id="4y6-ya-wlD"/>
+                                                    </connections>
+                                                </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUa-er-4Ka">
+                                                    <rect key="frame" x="306" y="11" width="53" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="53" id="far-j2-1by"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="wz8-rf-ell" secondAttribute="bottom" constant="11.666666666666664" id="OyE-AV-y0F"/>
+                                                <constraint firstAttribute="trailing" secondItem="KUa-er-4Ka" secondAttribute="trailing" constant="16" id="Y74-Jr-Wxt"/>
+                                                <constraint firstItem="x3z-Tp-8b2" firstAttribute="leading" secondItem="wz8-rf-ell" secondAttribute="trailing" constant="28" id="bco-f5-wY1"/>
+                                                <constraint firstAttribute="bottom" secondItem="KUa-er-4Ka" secondAttribute="bottom" constant="11.666666666666664" id="kXI-ew-eqw"/>
+                                                <constraint firstItem="wz8-rf-ell" firstAttribute="leading" secondItem="xCh-nO-gSr" secondAttribute="leading" constant="16" id="lP9-2y-qDz"/>
+                                                <constraint firstItem="KUa-er-4Ka" firstAttribute="leading" secondItem="x3z-Tp-8b2" secondAttribute="trailing" constant="8" id="qsJ-W3-rH8"/>
+                                                <constraint firstItem="KUa-er-4Ka" firstAttribute="top" secondItem="xCh-nO-gSr" secondAttribute="top" constant="11" id="vgh-iw-ZtG"/>
+                                                <constraint firstItem="wz8-rf-ell" firstAttribute="top" secondItem="xCh-nO-gSr" secondAttribute="top" constant="11" id="yuX-D3-ZFl"/>
+                                                <constraint firstItem="x3z-Tp-8b2" firstAttribute="top" secondItem="xCh-nO-gSr" secondAttribute="top" constant="6" id="zEn-IZ-TGJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="x3z-Tp-8b2" secondAttribute="bottom" constant="7.6666666666666643" id="zS1-K4-tFc"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Xn8-ll-GAC">
@@ -3228,13 +3272,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Smoking (Yes, No, etc.)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="McW-bv-kVX">
-                                                    <rect key="frame" x="145" y="7" width="214" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smoking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Km-DH-LaN">
                                                     <rect key="frame" x="16" y="12" width="59" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3242,6 +3279,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Vxz-ue-YVa">
+                                                    <rect key="frame" x="143" y="8" width="218" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <segments>
+                                                        <segment title="No"/>
+                                                        <segment title="Sometimes"/>
+                                                        <segment title="Yes"/>
+                                                    </segments>
+                                                </segmentedControl>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -3387,21 +3433,23 @@
                     <connections>
                         <outlet property="bioField" destination="atw-zK-GdS" id="DFb-JR-QgO"/>
                         <outlet property="birthdayField" destination="BT5-zE-Ris" id="whC-9q-kxg"/>
-                        <outlet property="budgetField" destination="AH1-ts-6yH" id="98b-ho-v12"/>
+                        <outlet property="budgetLabel" destination="wd3-rX-g8z" id="PJF-zQ-ZsJ"/>
+                        <outlet property="budgetSlider" destination="VHs-CQ-JBY" id="TbW-jH-h9q"/>
                         <outlet property="changeProfilePicButton" destination="a2K-cX-ucz" id="mio-id-KUi"/>
                         <outlet property="emailField" destination="MH3-nP-6Di" id="pvi-hK-ygh"/>
                         <outlet property="facebookField" destination="ESj-um-THs" id="JF8-R1-heR"/>
                         <outlet property="futureLocationField" destination="Uyt-6K-N2s" id="hg4-eY-yOG"/>
                         <outlet property="genderField" destination="X2j-A3-VpF" id="KHK-xo-KF4"/>
                         <outlet property="nameField" destination="rCi-gN-oYj" id="lbL-Gv-zx1"/>
-                        <outlet property="numBedroomsField" destination="JEO-A1-roN" id="edt-w2-P5u"/>
+                        <outlet property="numBedsLabel" destination="KUa-er-4Ka" id="l65-4p-nXg"/>
+                        <outlet property="numBedsSlider" destination="x3z-Tp-8b2" id="lnd-zk-p4i"/>
                         <outlet property="occupationField" destination="rCO-6F-qhg" id="W7l-I0-ZnT"/>
                         <outlet property="otherContactField" destination="48t-RL-ykz" id="1ZP-hq-4t4"/>
                         <outlet property="otherPreferencesField" destination="cot-rt-n3M" id="RUK-rZ-5Dz"/>
                         <outlet property="petsField" destination="dBb-Ye-NQd" id="620-gT-aah"/>
                         <outlet property="phoneField" destination="Izc-a1-AwU" id="r1v-FR-WoV"/>
                         <outlet property="profilePicView" destination="agT-jc-egC" id="Mhe-Nv-H8A"/>
-                        <outlet property="smokingField" destination="McW-bv-kVX" id="x3d-oe-H6M"/>
+                        <outlet property="smokingSegCtrl" destination="Vxz-ue-YVa" id="xbI-gb-ulT"/>
                         <outlet property="universityField" destination="nlR-N6-f6o" id="pKv-iV-yrr"/>
                     </connections>
                 </tableViewController>

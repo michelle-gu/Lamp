@@ -313,5 +313,22 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return false
     }
-
+    
+    // MARK: - Data Retrieval
+    // Retrieve a list of genders from Firebase
+    func getGenders(completion: @escaping ([String]) -> Void) {
+        gendersRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let gendersDict = snapshot.value as? [String : AnyObject] else {
+                return completion([])
+            }
+            
+            var gendersArray: [String] = []
+            for gender in gendersDict {
+                gendersArray.append(gender.key)
+            }
+            gendersArray.sort()
+            completion(gendersArray)
+        })
+    }
+    
 }
