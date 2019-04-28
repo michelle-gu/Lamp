@@ -33,7 +33,11 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
     // MARK: Actions
     func rangeIsChanging(minValueSelected: CGFloat, maxValueSelected: CGFloat, slider: RangeUISlider) {
         minAgeLabel.text = "\(Int(minValueSelected))"
-        maxAgeLabel.text = "\(Int(maxValueSelected))"
+        if maxValueSelected >= 65 {
+            maxAgeLabel.text = "65+"
+        } else {
+            maxAgeLabel.text = "\(Int(maxValueSelected))"
+        }
     }
     func rangeChangeFinished(minValueSelected: CGFloat, maxValueSelected: CGFloat, slider: RangeUISlider) {
         let discoverySettingsRef = userProfilesRef.child(user!).child("settings").child("discovery")
@@ -64,8 +68,8 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
         tableView.tableFooterView = UIView()
         // Set age range slider delegate
         ageRangeSlider.delegate = self
-        ageRangeSlider.scaleMinValue = 0
-        ageRangeSlider.scaleMaxValue = 50
+        ageRangeSlider.scaleMinValue = 18
+        ageRangeSlider.scaleMaxValue = 65
         
         // Retrieve discovery settings values from Firebase
         let discoverySettingsRef = userProfilesRef.child(user!).child("settings").child("discovery")

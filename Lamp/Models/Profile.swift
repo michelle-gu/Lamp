@@ -25,11 +25,11 @@ struct Profile {
     let futureLoc: [String : Bool]
     let occupation: String
     let bio: String
-    let budget: String
+    let budget: Int
     let profilePicture: String
     
     // Lifestyle preferences
-    let numBedrooms: String
+    let numBedrooms: Int
     let pets: String
     let smoking: String
     let otherLifestylePrefs: String
@@ -43,7 +43,7 @@ struct Profile {
     // MARK: Initializers
     
     // Initializer
-    init(key: String = "", firstName: String, birthday: String, gender: String, uni: String, futureLoc: [String : Bool] = [:], occupation: String, profilePicture: String) {
+    init(key: String = "", firstName: String, birthday: String, gender: String, uni: String, futureLoc: [String : Bool] = [:], occupation: String) {
         // Initialize Firebase ref/key
         self.ref = nil
         self.key = key
@@ -56,11 +56,11 @@ struct Profile {
         self.futureLoc = futureLoc
         self.occupation = occupation
         self.bio = ""
-        self.budget = ""
-        self.profilePicture = profilePicture
+        self.budget = 1000
+        self.profilePicture = ""
         
         // Initialize Lifestyle Preferences
-        self.numBedrooms = ""
+        self.numBedrooms = 2
         self.pets = ""
         self.smoking = ""
         self.otherLifestylePrefs = ""
@@ -83,9 +83,9 @@ struct Profile {
             let futureLoc = value["futureLoc"] as? [String : Bool],
             let occupation = value["occupation"] as? String,
             let bio = value["bio"] as? String,
-            let budget = value["budget"] as? String,
+            let budget = value["budget"] as? Int,
             let profilePicture = value["profilePicture"] as? String,
-            let numBedrooms = value["numBedrooms"] as? String,
+            let numBedrooms = value["numBedrooms"] as? Int,
             let pets = value["pets"] as? String,
             let smoking = value["smoking"] as? String,
             let otherLifestylePrefs = value["otherLifestylePrefs"] as? String,

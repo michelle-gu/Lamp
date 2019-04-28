@@ -73,7 +73,6 @@ depends-top-level:
 - "Section"
 - "Sequence"
 - "String"
-- !private "StringLiteralType"
 - "Taggable"
 - "TernaryPrecedence"
 - "UnsafeMutableRawPointer"

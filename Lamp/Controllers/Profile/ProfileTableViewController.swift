@@ -48,6 +48,16 @@ class ProfileTableViewController: UITableViewController {
         return String(age)
     }
     
+    func setProfileInfo(label: UILabel, text: String) {
+        if text == "" {
+            label.textColor = UIColor.lightGray
+            label.text = "Not specified"
+        } else {
+            label.textColor = UIColor.black
+            label.text = text
+        }
+    }
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +97,9 @@ class ProfileTableViewController: UITableViewController {
             var locArr: [String] = []
             for city in profileDict["futureLoc"] as! [String: Bool] {
                 locArr.append(city.key)
+                if (locArr.count == 0) {
+                    locArr.append("temp")
+                }
             }
             let futureLocStr = locArr.joined(separator: ", ")
             self.futureLocsLabel.text = futureLocStr
@@ -94,34 +107,48 @@ class ProfileTableViewController: UITableViewController {
                 self.occupationLabel.text = occupationVal
             }
             if let bioVal = profileDict["bio"] as? String {
-                self.bioLabel.text = bioVal
+                self.setProfileInfo(label: self.bioLabel, text: bioVal)
             }
-            if let budgetVal = profileDict["budget"] as? String {
-                self.budgetLabel.text = budgetVal
+            if let budgetVal = profileDict["budget"] as? Int {
+                switch budgetVal {
+                case 500:
+                    self.setProfileInfo(label: self.budgetLabel, text: "$500-")
+                case 3000:
+                    self.setProfileInfo(label: self.budgetLabel, text: "$3000+")
+                default:
+                    self.setProfileInfo(label: self.budgetLabel, text: "$\(Int(budgetVal))")
+                }
             }
-            if let numBedroomsVal = profileDict["numBedrooms"] as? String {
-                self.numBedroomsLabel.text = numBedroomsVal
+            if let numBedroomsVal = profileDict["numBedrooms"] as? Int {
+                switch numBedroomsVal {
+                case 0:
+                    self.setProfileInfo(label: self.numBedroomsLabel, text: "Studio")
+                case 5:
+                    self.setProfileInfo(label: self.numBedroomsLabel, text: "5+")
+                default:
+                    self.setProfileInfo(label: self.numBedroomsLabel, text: "\(Int(numBedroomsVal))")
+                }
             }
             if let petsVal = profileDict["pets"] as? String {
-                self.petsLabel.text = petsVal
+                self.setProfileInfo(label: self.petsLabel, text: petsVal)
             }
             if let smokingVal = profileDict["smoking"] as? String {
-                self.smokingLabel.text = smokingVal
+                self.setProfileInfo(label: self.smokingLabel, text: smokingVal)
             }
             if let otherLifestyleVal = profileDict["otherLifestylePrefs"] as? String {
-                self.otherPrefsLabel.text = otherLifestyleVal
+                self.setProfileInfo(label: self.otherPrefsLabel, text: otherLifestyleVal)
             }
             if let phoneVal = profileDict["phone"] as? String {
-                self.phoneLabel.text = phoneVal
+                self.setProfileInfo(label: self.phoneLabel, text: phoneVal)
             }
             if let emailVal = profileDict["email"] as? String {
-                self.emailLabel.text = emailVal
+                self.setProfileInfo(label: self.emailLabel, text: emailVal)
             }
             if let facebookVal = profileDict["facebook"] as? String {
-                self.fbLabel.text = facebookVal
+                self.setProfileInfo(label: self.fbLabel, text: facebookVal)
             }
             if let otherContactVal = profileDict["otherContact"] as? String {
-                self.otherContactLabel.text = otherContactVal
+                self.setProfileInfo(label: self.otherContactLabel, text: otherContactVal)
             }
         })
     }
