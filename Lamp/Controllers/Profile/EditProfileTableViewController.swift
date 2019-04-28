@@ -310,16 +310,6 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         dismiss(animated: true, completion: nil)
     }
     
-    // Dismiss keyboard on tap
-    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
     // Birthday is at least 13 years old
     func isValidBirthday(birthday: String) -> Bool {
         let now = Date()
@@ -640,6 +630,16 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             return false
         }
         return true
+    }
+    
+    // Dismiss keyboard on tap
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     // MARK: - Database Retrieval

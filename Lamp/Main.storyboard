@@ -3478,7 +3478,7 @@
         <!--User Profile-->
         <scene sceneID="13X-2g-zPY">
             <objects>
-                <tableViewController title="User Profile" id="FBq-63-VfL" sceneMemberID="viewController">
+                <tableViewController title="User Profile" id="FBq-63-VfL" customClass="UserProfileTableViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="m3T-x2-QIt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3933,27 +3933,27 @@
                         <barButtonItem key="rightBarButtonItem" title="Home" id="wRh-TF-E5a"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="bioLabel" destination="6Jl-7k-ml0" id="cgr-1a-9Xg"/>
-                        <outlet property="budgetLabel" destination="0w2-Fr-9Z5" id="WpM-vM-7Ym"/>
-                        <outlet property="emailLabel" destination="dYN-GU-h1p" id="UYL-kn-unh"/>
-                        <outlet property="fbLabel" destination="YiI-tS-mu2" id="2p4-4k-qBr"/>
-                        <outlet property="futureLocsLabel" destination="AVr-CZ-bkh" id="fGz-U8-KAs"/>
-                        <outlet property="genderLabel" destination="sRS-Ro-pdV" id="1oy-1L-zBe"/>
-                        <outlet property="nameAgeLabel" destination="OyP-u0-fL3" id="VKU-MF-MX0"/>
-                        <outlet property="numBedroomsLabel" destination="gNp-wW-M1J" id="RIf-j3-Qpq"/>
-                        <outlet property="occupationLabel" destination="Djk-Nq-xR1" id="gJ7-kj-2uW"/>
-                        <outlet property="otherContactLabel" destination="kue-I8-xYg" id="iiZ-xm-c2S"/>
-                        <outlet property="otherPrefsLabel" destination="FkI-Ct-AwY" id="Yj8-oe-RrZ"/>
-                        <outlet property="petsLabel" destination="qmy-Iz-kky" id="wMO-v2-SPn"/>
-                        <outlet property="phoneLabel" destination="ROX-CH-WLC" id="4l1-jo-gzL"/>
-                        <outlet property="profilePicView" destination="Wr3-QH-xaX" id="Gvt-5s-mIJ"/>
-                        <outlet property="smokingLabel" destination="ZgD-xW-kqU" id="pul-pm-ll2"/>
-                        <outlet property="uniLabel" destination="l8c-Vt-4aU" id="L6c-uG-p3H"/>
+                        <outlet property="bioLabel" destination="6Jl-7k-ml0" id="eww-J7-yRR"/>
+                        <outlet property="budgetLabel" destination="0w2-Fr-9Z5" id="ida-Qw-evY"/>
+                        <outlet property="emailLabel" destination="dYN-GU-h1p" id="t3b-GX-FD5"/>
+                        <outlet property="fbLabel" destination="YiI-tS-mu2" id="1wG-3f-X8n"/>
+                        <outlet property="futureLocsLabel" destination="AVr-CZ-bkh" id="urc-t0-fLq"/>
+                        <outlet property="genderLabel" destination="sRS-Ro-pdV" id="N0c-DU-eOn"/>
+                        <outlet property="nameAgeLabel" destination="OyP-u0-fL3" id="FQZ-hW-M2Z"/>
+                        <outlet property="numBedroomsLabel" destination="gNp-wW-M1J" id="6WA-aE-ALT"/>
+                        <outlet property="occupationLabel" destination="Djk-Nq-xR1" id="FrL-NB-LO2"/>
+                        <outlet property="otherContactLabel" destination="kue-I8-xYg" id="Xtj-zz-3XF"/>
+                        <outlet property="otherPrefsLabel" destination="FkI-Ct-AwY" id="K7q-d1-kcC"/>
+                        <outlet property="petsLabel" destination="qmy-Iz-kky" id="oWW-6C-tZm"/>
+                        <outlet property="phoneLabel" destination="ROX-CH-WLC" id="1Fl-6F-pkI"/>
+                        <outlet property="profilePicView" destination="Wr3-QH-xaX" id="WjZ-gz-9hT"/>
+                        <outlet property="smokingLabel" destination="ZgD-xW-kqU" id="8QU-lV-2KH"/>
+                        <outlet property="uniLabel" destination="l8c-Vt-4aU" id="rbW-MS-nmN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2h-aN-dXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8926" y="921"/>
+            <point key="canvasLocation" x="8767" y="923"/>
         </scene>
     </scenes>
     <resources>
