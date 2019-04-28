@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseStorage
 import Kingfisher
 
 let genderPickerData = [String](arrayLiteral: "Female", "Male", "Other", "Prefer not to say")
@@ -16,8 +15,11 @@ let genderPickerData = [String](arrayLiteral: "Female", "Male", "Other", "Prefer
 class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     // MARK: - Constants
+    // Segue Identifiers
     let showLocationInfoScreen = "showLocationInfoScreen"
+    // Pickers
     let imagePicker = UIImagePickerController()
+    // Firebase References
     let userProfilesRef = Database.database().reference(withPath: "user-profiles")
     let gendersRef = Database.database().reference(withPath: "genders")
     let user = Auth.auth().currentUser?.uid
@@ -274,7 +276,6 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         birthdayTextField.text = dateFormatter.string(from: datePicker.date)
-        view.endEditing(true)
     }
     
     // UI Picker delegate methods

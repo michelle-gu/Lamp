@@ -60,6 +60,10 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         uniPicker.delegate = self
         uniTextField.inputView = uniPicker
         
+        // Dismiss pickers on view tap
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ProfileLocationViewController.viewTapped(gestureRecognizer:)))
+        view.addGestureRecognizer(tapGesture)
+        
         self.mapButton.setTitle("Where are you moving?", for: .normal)
         self.mapButton.setTitleColor(UIColor(red: 0.78, green: 0.78, blue: 0.80, alpha: 1), for: .normal)
         self.mapButton.layer.borderWidth = 0.25
@@ -126,6 +130,9 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     }
     
     // MARK: - PickerView Delegate
+    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
     
     // for uni picker delegate
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
