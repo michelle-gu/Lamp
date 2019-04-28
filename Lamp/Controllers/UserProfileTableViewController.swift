@@ -1,8 +1,8 @@
 //
-//  ProfileTableViewController.swift
+//  UserProfileTableViewController.swift
 //  Lamp
 //
-//  Created by Michelle Gu on 4/24/19.
+//  Created by Michelle Gu on 4/28/19.
 //  Copyright © 2019 LaMMP. All rights reserved.
 //
 
@@ -10,13 +10,15 @@ import UIKit
 import Firebase
 import Kingfisher
 
-class ProfileTableViewController: UITableViewController {
-
+class UserProfileTableViewController: UITableViewController {
+    
     // MARK: - Constants
-    let user = Auth.auth().currentUser?.uid
     let userProfilesRef = Database.database().reference(withPath: "user-profiles")
-
-    // MARK: - Outlets
+    
+    // MARK: - Variables
+    var user = String() // Pass in through segue
+    
+    // TODO: MARK: - Outlets
     @IBOutlet weak var profilePicView: UIImageView!
     @IBOutlet weak var nameAgeLabel: UILabel!
     @IBOutlet weak var futureLocsLabel: UILabel!
@@ -33,7 +35,6 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var fbLabel: UILabel!
     @IBOutlet weak var otherContactLabel: UILabel!
-    @IBOutlet weak var editProfileButton: UIButton!
     
     // MARK: - Functions
     // Get age from birthday string
@@ -61,20 +62,14 @@ class ProfileTableViewController: UITableViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Remove empty cells at bottom
         tableView.tableFooterView = UIView()
-        
-        // Format edit button
-        let editButtonRadius = profilePicView.bounds.height / 20
-        editProfileButton.layer.cornerRadius = editButtonRadius
-        editProfileButton.clipsToBounds = true
-        editProfileButton.layer.backgroundColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 0.7).cgColor
         
         // TODO: Auto-size Biotext label cell
         
         // Populate data
-        let profile = userProfilesRef.child(user!).child("profile")
+        let profile = userProfilesRef.child(user).child("profile")
         profile.observe(.value, with: { (snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
             
@@ -85,7 +80,7 @@ class ProfileTableViewController: UITableViewController {
                 }
             }
             if let nameVal = profileDict["firstName"] as? String,
-               let birthdayVal = profileDict["birthday"] as? String {
+                let birthdayVal = profileDict["birthday"] as? String {
                 self.nameAgeLabel.text = "\(nameVal), \(self.getAgeStr(birthday: birthdayVal))"
             }
             if let genderVal = profileDict["gender"] as? String {
@@ -152,7 +147,7 @@ class ProfileTableViewController: UITableViewController {
             }
         })
     }
-
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let myLabel = UILabel()
@@ -167,11 +162,11 @@ class ProfileTableViewController: UITableViewController {
         
         return headerView
     }
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 5
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
@@ -188,5 +183,5 @@ class ProfileTableViewController: UITableViewController {
             return 0
         }
     }
-
+    
 }

@@ -19,9 +19,17 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     let ref = Database.database().reference(withPath: "user-profiles")
     
     // MARK: - Functions
-    func textFieldShouldReturn(textField:UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+//            logInButton.sendActions(for: .touchUpInside)
+        }
+        // Do not add a line break
+        return false
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -33,6 +41,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
+//    @IBOutlet var keyboardHeightLayoutConstraint: NSLayoutConstraint?
+
     
     // MARK: Actions
     @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
@@ -88,18 +98,49 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func signUpDidTouch(_ sender: Any) {
     }
     
+//    deinit {
+//        NotificationCenter.default.removeObserver(self)
+//    }
+//
+//    @objc func keyboardNotification(notification: NSNotification) {
+//        if let userInfo = notification.userInfo {
+//            let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+//            let endFrameY = endFrame!.origin.y ?? 0
+//            let duration:TimeInterval = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+//            let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
+//            let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
+//            let animationCurve:UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
+//            if endFrameY >= UIScreen.main.bounds.size.height {
+//                self.keyboardHeightLayoutConstraint?.constant = 0.0
+//            } else {
+//                self.keyboardHeightLayoutConstraint?.constant = endFrame?.size.height ?? 0.0
+//            }
+//            UIView.animate(withDuration: duration,
+//                           delay: TimeInterval(0),
+//                           options: animationCurve,
+//                           animations: { self.view.layoutIfNeeded() },
+//                           completion: nil)
+//        }
+//    }
+    
     // MARK: UIViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailField.delegate = self
+        emailField.tag = 0
+        passwordField.delegate = self
+        passwordField.tag = 1
+        
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
         // Checks if user is already logged in
         Auth.auth().addStateDidChangeListener() { auth, user in
             if user != nil {
                 self.emailField.text = nil
                 self.passwordField.text = nil
                 
-                print ("Already logged in!!!!")
                 if let userID = user?.uid {
-                    print ("UserID exists")
                     self.ref.child(userID).child("profile").observe(.value, with: { (snapshot) in
                         let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
                         if profileDict["uni"] == nil {
