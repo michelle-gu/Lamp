@@ -598,7 +598,6 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                 alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
                 alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
                     newUni = alert!.textFields![0].text ?? ""
-                    
                     if newUni.contains(".") ||
                         newUni.contains("$") ||
                         newUni.contains("[") ||
@@ -606,6 +605,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                         newUni.contains("#") {
                         let invalidCharsAlert = UIAlertController(title: "Failed to Add University", message: "\"\(newUni)\" contains invalid characters \'.$[]#\'.", preferredStyle: .alert)
                         invalidCharsAlert.addAction(UIAlertAction(title: "OK", style: .default))
+                        self.present(invalidCharsAlert, animated: true, completion: nil)
                     } else {
                         let confirmUniAlert = UIAlertController(title: "Add a University", message: "Are you sure you want to add \"\(newUni)\"?", preferredStyle: .alert)
                         confirmUniAlert.addAction(UIAlertAction(title: "No", style: .cancel))
