@@ -73,7 +73,6 @@ class MessageInstanceViewController: MessagesViewController {
     
     // sends back last message for the Message List VC to update values
     override func viewWillDisappear(_ animated: Bool) {
-        print("In view disappear")
         let lastMessage = messages[messages.endIndex - 1]
         messageDelegate.updateChannelInfo(lastMessage: lastMessage, channelId: channelId)
     }

@@ -45,12 +45,15 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
     func updateChannelInfo(lastMessage: Message, channelId: String) {
         print("DATE = \(lastMessage.sentDate)")
         
+        // convert date to time HH:mm aa
+        let time = convertTime(timestamp: lastMessage.sentDate)
+        
         // write to database
         ref = Database.database().reference(withPath: "messaging").child("channels")
         let channel = ref.child(channelId).child("channel")
         
         channel.updateChildValues(["last-message" : lastMessage.content])
-//        channel.updateChildValues(["time" : time])
+        channel.updateChildValues(["time" : time])
 
         // load table again
         
@@ -71,6 +74,15 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
             }
             self.tableView.reloadData()
         })
+    }
+    
+    func convertTime(timestamp: Date) -> String {
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "h:mm a"
+        timeFormatter.amSymbol = "AM"
+        timeFormatter.pmSymbol = "PM"
+        
+        return timeFormatter.string(from: timestamp)
     }
     
     
@@ -108,13 +120,6 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
             cell.timeLabel.text = time
 
         })
-        
-        // grab timestamp from last message
-        
-        
-        // grab last message text from last message
-        
-        
         return cell
     }
     
@@ -136,8 +141,6 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
             controller.channelId = channelIds[channelIndex.row]
         }
     }
-    
-
     
     // MARK: Styling
     

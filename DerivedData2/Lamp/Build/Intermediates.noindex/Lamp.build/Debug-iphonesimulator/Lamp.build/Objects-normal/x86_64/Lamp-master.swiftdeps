@@ -1,13 +1,13 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "ba6a77538f8873c3970e4b50ecdd481a"
-build_time: [1556510976, 998950000]
+build_time: [1556511905, 721134000]
 inputs:
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Models/Channel.swift": [1556076598, 908522228]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Settings/NotificationsTableViewController.swift": [1555607003, 994507509]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/AppDelegate.swift": [1553726760, 789920422]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Settings/ChangePasswordViewController.swift": [1554953209, 803968054]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Settings/FutureLocationFilterViewController.swift": [1556482461, 189996909]
-  "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Messaging/MessageListViewController.swift": [1556510903, 155812370]
+  "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Messaging/MessageListViewController.swift": [1556511710, 42274837]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Onboarding/SignUpViewController.swift": [1556482462, 331947569]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Models/Message.swift": [1556403071, 847193111]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Models/Profile.swift": [1556482461, 192159532]
@@ -32,5 +32,5 @@ inputs:
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Onboarding/ProfileLocationViewController.swift": [1556503749, 251093036]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Onboarding/SocialMediaConnectViewController.swift": [1556482462, 331424274]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Views/CardView/CardView.swift": [1554953209, 810945645]
-  "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Messaging/MessageInstanceViewController.swift": [1556510974, 589889868]
+  "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Messaging/MessageInstanceViewController.swift": [1556511903, 219669280]
   "/Users/lindseythompson/Desktop/Lamp/Lamp/Controllers/Profile/ProfileTableViewController.swift": [1556482461, 188561638]
