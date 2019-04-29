@@ -140,7 +140,9 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
             
             var citiesArray: [String] = []
             for city in citiesDict {
-                citiesArray.append(city.key)
+                if ((city.value as? Bool)!) {
+                    citiesArray.append(city.key)
+                }
             }
             completion(citiesArray)
         })
@@ -186,7 +188,7 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
             UIApplication.shared.endIgnoringInteractionEvents()
             
             if response == nil {
-                print("oops")
+                print("Shouldn't reach this")
             } else {
                 // Remove existing pinpoints
                 let pinpoints = self.mapView.annotations
@@ -282,13 +284,8 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
             cities.append(currentCity)
             
             for currentCity in cities {
-                let locationValues: [String : Any] = [
-                    currentCity : [
-                        user : true
-                    ]
-                ]
                 // updated locations
-                locationRef.updateChildValues(locationValues)
+                locationRef.child(currentCity).child(user!).setValue(true)
                 
                 let values: [String : Any] = [
                     currentCity: true

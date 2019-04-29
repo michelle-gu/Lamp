@@ -10,12 +10,19 @@ import UIKit
 import Koloda
 import Firebase
 
-class MyKolodaViewController: UIViewController {
+class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaViewDelegate {
+    
+    // MARK: - Constants
+    let userRef = Database.database().reference(withPath: "user-profiles")
+    let user = Auth.auth().currentUser?.uid
+    
+    let ref: DatabaseReference = Database.database().reference()
+
+    // MARK: - Variables
+    var ids: [String] = []
     
     var images: [Profile] = []
-    var ref: DatabaseReference!
     var idDict: [String : NSObject] = [:]
-    var ids: [String] = []
     var genders: [String] = []
     var locations: [String] = []
     var universities: [String] = []
@@ -31,103 +38,157 @@ class MyKolodaViewController: UIViewController {
     var idsLocationSet:Set<String> = Set<String>()
     var idsUniversitiesSet:Set<String> = Set<String>()
     
-    
+    // MARK: - Outlets
     @IBOutlet weak var kolodaView: KolodaView!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.view.bringSubviewToFront(kolodaView)
-        ref = Database.database().reference()
         
+        // Set delegates/data sources
         kolodaView.dataSource = self
         kolodaView.delegate = self
         
-        setUserPref()
-//        filtering()
-        getUsers()
-        getIds()
-        getData()
-        self.kolodaView.reloadData()
-//        getIds()
-        
-    }
-    
-    func getData() {
-        
-        ref.child("user-profiles").queryOrderedByKey().observe(.value) { snapshot in
+        // Get a list of all IDs in the database
+        getIds() { (idsArray) in
             
-            self.images = snapshot.children.compactMap { child in
-                guard let snap = child as? DataSnapshot else { return nil }
-                return Profile(snapshot: snap)
-            }
+            self.ids = idsArray
             
+            // Do stuff to the ids array
+            // Setting our list of ids to filtered idsArray
+            //            self.ids = getFilteredIds(idsArray)
+
+            // Reload the swipe view with our new list
             self.kolodaView.reloadData()
         }
         
+        setUserPref()
+//        getUsers()
     }
     
-    func getIds() {
-        ref.child("user-profiles").queryOrderedByKey().observe(.value, with: { (snapshot) in
-//            self.ids = snapshot
-            self.idDict = snapshot.value as? [String : NSObject] ?? [:]
-            //returns a list of filtered objects
-//            let filtered = self.filtering()
-//            print("these are the filtered ids: \(self.filtered)")
-//            for value in self.filtered{
-//                self.ids.append(value)
+    func getFilteredIds(ids: [String]) -> [String] {
+        // Code
+        return []
+    }
+    
+    // Retrieve a list of universities from Firebase
+    func getIds(completion: @escaping ([String]) -> Void) {
+        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let profilesDict = snapshot.value as? [String : AnyObject] else {
+                return completion([])
+            }
+            
+            var idsArray: [String] = []
+            for profile in profilesDict {
+                idsArray.append(profile.key)
+            }
+            completion(idsArray)
+        })
+    }
+    
+    // MARK: - Data Retrieval
+//    func getData() {
+//
+//        ref.child("user-profiles").queryOrderedByKey().observe(.value) { snapshot in
+//
+//            self.images = snapshot.children.compactMap { child in
+//                guard let snap = child as? DataSnapshot else { return nil }
+//                return Profile(snapshot: snap)
 //            }
-            for (key, value) in self.listGender{
-                if self.genders.contains(key){
-                    for(k, v) in self.listGender[key]!{
-                        if v && (k != Auth.auth().currentUser?.uid){
-//                            self.ids.append(k)
-                            self.idsGenderSet.insert(k)
-                        }
-                    }
-                }
-            }
-            for (key, value) in self.listLocations{
-                if self.locations.contains(key){
-                    for(k, v) in self.listLocations[key]!{
-                        if v && (k != Auth.auth().currentUser?.uid){
-                            self.idsLocationSet.insert(k)
-                        }
-                    }
-                }
-            }
-            for (key, value) in self.listUniversities{
-                if self.universities.contains(key){
-                    for(k, v) in self.listUniversities[key]!{
-                        if v && (k != Auth.auth().currentUser?.uid){
-                            self.idsUniversitiesSet.insert(k)
-                        }
-                    }
-                }
-            }
-            self.idsSet = self.idsGenderSet.intersection(self.idsLocationSet)
-            self.idsSet = self.idsSet.intersection(self.idsUniversitiesSet)
-            self.ids = Array(self.idsSet)
+//            for (key, value) in self.listGender{
+//                if self.genders.contains(key){
+//                    for(k, v) in self.listGender[key]!{
+//                        if v && (k != Auth.auth().currentUser?.uid){
+////                            self.ids.append(k)
+//                            self.idsGenderSet.insert(k)
+//                        }
+//                    }
+//                }
+////
+////            self.kolodaView.reloadData()
+////        }
+////
+////    }
+//            }
+//            for (key, value) in self.listLocations{
+//                if self.locations.contains(key){
+//                    for(k, v) in self.listLocations[key]!{
+//                        if v && (k != Auth.auth().currentUser?.uid){
+//                            self.idsLocationSet.insert(k)
+//                        }
+//                    }
+//                }
+//            }
+//            for (key, value) in self.listUniversities{
+//                if self.universities.contains(key){
+//                    for(k, v) in self.listUniversities[key]!{
+//                        if v && (k != Auth.auth().currentUser?.uid){
+//                            self.idsUniversitiesSet.insert(k)
+//                        }
+//                    }
+//                }
+//            }
+//            self.idsSet = self.idsGenderSet.intersection(self.idsLocationSet)
+//            self.idsSet = self.idsSet.intersection(self.idsUniversitiesSet)
+//            self.ids = Array(self.idsSet)
 //            print("these are the valid gender ids (in set form): \(self.idsGenderSet)")
 //            print("these are the valid location ids (in set form): \(self.idsLocationSet)")
 //            print("these are the valid university ids (in set form): \(self.idsUniversitiesSet)")
 //            print("these are the valid ids (in set form): \(self.idsSet)")
 //            print("these are the valid ids (in array form): \(self.ids)")
             
-//            for (key, _) in self.idDict {
-//                
-//                
-//                if key != Auth.auth().currentUser?.uid{
-////                    var k:String = ""
-//                   
-//                    self.ids.append(key)
-//                print("These are the ids: \(self.ids)")
+
+//    func getIds() {
+//        ref.child("user-profiles").queryOrderedByKey().observe(.value, with: { (snapshot) in
+////            self.ids = snapshot
+//            self.idDict = snapshot.value as? [String : NSObject] ?? [:]
+//            //returns a list of filtered objects
+////            let filtered = self.filtering()
+////            print("these are the filtered ids: \(self.filtered)")
+////            for value in self.filtered{
+////                self.ids.append(value)
+////            }
+//            for (key, value) in self.listGender{
+//                if self.genders.contains(key){
+//                    for(k, v) in self.listGender[key]!{
+//                        if v && (k != Auth.auth().currentUser?.uid){
+//                            self.ids.append(k)
+//                        }
+//                    }
 //                }
 //            }
-        })
-        
-        self.kolodaView.reloadData()
-    }
+//
+////            for (key, _) in self.idDict {
+////                if key != Auth.auth().currentUser?.uid{
+//////                    var k:String = ""
+////
+////                    self.ids.append(key)
+////                print("These are the ids: \(self.ids)")
+////                }
+////            }
+//        })
+//
+//        self.kolodaView.reloadData()
+//    }
     
+    // Gets dictionary of all gender information
+//    func getUsers(){
+//        let userGenders = ref.child("genders")
+//        userGenders.observe(.value, with: {(snapshot) in
+//            let genderDict = snapshot.value as? [String : AnyObject] ?? [:]
+//            for (key, value) in genderDict{
+//                //                print("this is a list: \(value)")
+//                self.listGender[key] = value as! [String : Bool]
+//                //                print("gendered list of people without knowing their values: \(self.listGender)")
+//                //                for (k, v) in self.listGender[key]!{
+//                //                    print("Key: \(k) Value: \(v)")
+//                //                }
+//            }
+//        })
+//    }
+
+    // Filtering
     func setUserPref(){
         let user = Auth.auth().currentUser?.uid
         let preferences = ref.child("user-profiles").child(user!).child("settings").child("discovery")
@@ -206,8 +267,6 @@ class MyKolodaViewController: UIViewController {
         
     }
     
-    
-    
     //should check if the other user has also "liked" this user
     @IBAction func yesButtonPressed(_ sender: Any) {
         let user = Auth.auth().currentUser?.uid
@@ -263,21 +322,64 @@ class MyKolodaViewController: UIViewController {
         
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Koloda View Data Source
+    func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
+        return ids.count
     }
-    */
-
-}
-
-extension MyKolodaViewController: KolodaViewDelegate {
+    
+    func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
+        return .slow
+    }
+    
+    func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
+        let card:CardView =  CardView.create()
+        
+        let profile = ref.child("user-profiles").child(ids[index]).child("profile")
+        profile.observe(.value, with: {(snapshot) in
+            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+            if let firstName = profileDict["firstName"] as? String {
+                card.nameLabel.text = firstName
+            }
+            if let job = profileDict["occupation"] as? String {
+                card.jobLabel.text = job
+            }
+            
+            if let profilePicVal = profileDict["profilePicture"] as? String {
+                if profilePicVal != "" {
+                    let profilePicURL = URL(string: profilePicVal)
+                    card.image.kf.setImage(with: profilePicURL)
+                }
+            }
+            
+            var location:String = ""
+            let locationList = self.ref.child("user-profiles").child(self.ids[index]).child("profile").child("futureLoc")
+            locationList.observe(.value, with: {(snapshot) in
+                let locationDict = snapshot.value as? [String : AnyObject] ?? [:]
+                var counter = 0
+                for (key,_) in locationDict{
+                    counter += 1
+                    if counter == 1{
+                        location = "\(key)"
+                    }
+                    else {
+                        location = "\(location), \(key)"
+                    }
+                }
+                card.locationLabel.text = location
+            })
+            //            TODO: //let location = "Austin"
+            card.locationLabel.text = location
+        })
+        
+        return card
+    }
+    
+    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
+        return nil //Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)![0] as? OverlayView
+    }
+    
+    // MARK: - Koloda View Delegate
+    
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
         koloda.reloadData()
     }
@@ -288,11 +390,11 @@ extension MyKolodaViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
-
+        
         let user = Auth.auth().currentUser?.uid
         
         if direction == .right{
-//            let user = Auth.auth().currentUser?.uid
+            //            let user = Auth.auth().currentUser?.uid
             let index = kolodaView.currentCardIndex
             
             let swipeValues = [
@@ -321,7 +423,6 @@ extension MyKolodaViewController: KolodaViewDelegate {
                     matchingTarget.updateChildValues(match2)
                     print("would segue: \(self.ids[index-1])")
                     self.performSegue(withIdentifier: "matchSegue", sender:self)
-                    
                 }
                 else{
                     print("would not segue: \(self.ids[index-1])")
@@ -338,63 +439,6 @@ extension MyKolodaViewController: KolodaViewDelegate {
             //don't record for now, will probably change this
         }
     }
+
+
 }
-
-extension MyKolodaViewController: KolodaViewDataSource {
-    
-    func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
-        return ids.count
-    }
-    
-    func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
-        return .slow
-    }
-    
-    func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        let card:CardView =  CardView.create()
-
-        let profile = ref.child("user-profiles").child(ids[index]).child("profile")
-        profile.observe(.value, with: {(snapshot) in
-            let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
-            if let firstName = profileDict["firstName"] as? String {
-                card.nameLabel.text = firstName
-            }
-            if let job = profileDict["occupation"] as? String {
-                card.jobLabel.text = job
-            }
-            
-            if let profilePicVal = profileDict["profilePicture"] as? String {
-                if profilePicVal != "" {
-                    let profilePicURL = URL(string: profilePicVal)
-                    card.image.kf.setImage(with: profilePicURL)
-                }
-            }
-
-            var location:String = ""
-            let locationList = self.ref.child("user-profiles").child(self.ids[index]).child("profile").child("futureLoc")
-            locationList.observe(.value, with: {(snapshot) in
-                let locationDict = snapshot.value as? [String : AnyObject] ?? [:]
-                var counter = 0
-                for (key,_) in locationDict{
-                    counter += 1
-                    if counter == 1{
-                        location = "\(key)"
-                    }
-                    else {
-                        location = "\(location), \(key)"
-                    }
-                }
-                card.locationLabel.text = location
-            })
-            //            TODO: //let location = "Austin"
-            card.locationLabel.text = location
-            
-        })
-        return card
-    }
-    
-    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
-        return nil //Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)![0] as? OverlayView
-    }
-}
-

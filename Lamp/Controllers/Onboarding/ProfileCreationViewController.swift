@@ -29,7 +29,7 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     var allCities: [String] = []
     var cities: [String] = []
     var unis: [String] = []
-    var genders: [String] = ["Female", "Male", "Other", "Prefer not to Say"]
+    var genders: [String] = ["Female", "Male", "Other", "Prefer not to say"]
 
     // MARK: - Outlets
     @IBOutlet weak var profilePictureView: UIImageView!
@@ -53,7 +53,7 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
                 let profilePicRef = Storage.storage().reference().child("profilePictures").child("\(self.user!).jpg")
                 profilePicRef.delete { error in
                     if let error = error {
-                        print(error)
+                        print("Error:", error)
                     } else {
                         // File deleted successfully
                     }
