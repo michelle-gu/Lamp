@@ -132,7 +132,9 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
             
             var citiesArray: [String] = []
             for city in citiesDict {
-                citiesArray.append(city.key)
+                if ((city.value as? Bool)!) {
+                    citiesArray.append(city.key)
+                }
             }
             completion(citiesArray)
         })
@@ -172,7 +174,7 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
             UIApplication.shared.endIgnoringInteractionEvents()
             
             if response == nil {
-                print("oops")
+                print("Shouldn't reach this")
             } else {
                 // Remove existing pinpoints
                 let pinpoints = self.mapView.annotations

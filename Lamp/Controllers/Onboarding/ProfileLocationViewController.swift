@@ -15,7 +15,6 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     // MARK: - Constants
     // MARK: Database References
     let user = Auth.auth().currentUser?.uid
-    let ref = Database.database().reference()
     let userProfilesRef = Database.database().reference(withPath: "user-profiles")
     let citiesRef = Database.database().reference(withPath: "locations")
     let uniRef = Database.database().reference(withPath: "universities")
@@ -149,14 +148,13 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
             }
         }
         
-        // Add user's university to universities and set others to false
-        // Update filter settings
+        // Add user's university to universities and update filter settings
+        uniRef.child(uni).child(user!).setValue(true)
+        userSettingsRef.child("discovery").child("universities").child(uni).setValue(true)
+        // Set others to false
         for university in unis {
-            if university == uni {
-                ref.child("universities").child(university).child(user!).setValue(true)
-                userSettingsRef.child("discovery").child("universities").child(university).setValue(true)
-            } else {
-                ref.child("universities").child(university).child(user!).setValue(false)
+            if university != uni {
+                uniRef.child(university).child(user!).setValue(false)
                 userSettingsRef.child("discovery").child("universities").child(university).setValue(false)
             }
         }
@@ -235,14 +233,12 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
                         confirmUniAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
                             
                             if newUni != "" {
-                                print("Adding new uni: ", newUni)
                                 if !self.unis.contains(newUni) {
                                     self.unis.append(newUni)
                                     self.unis.sort()
                                 }
                                 self.uniPicker.reloadComponent(0)
                                 let index = self.unis.firstIndex(of: newUni) ?? self.unis.count
-                                print("Index for new uni: ", index + 1)
                                 self.uniPicker.selectRow(index + 1, inComponent: 0, animated: true)
                                 self.uniTextField.text = newUni
                             }
@@ -309,7 +305,9 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
             
             var citiesArray: [String] = []
             for city in citiesDict {
-                citiesArray.append(city.key)
+                if ((city.value as? Bool)!) {
+                    citiesArray.append(city.key)
+                }
             }
             completion(citiesArray)
         })

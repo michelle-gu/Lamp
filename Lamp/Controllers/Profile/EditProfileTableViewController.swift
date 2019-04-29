@@ -31,7 +31,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     var allCities: [String] = []
     var cities: [String] = []
     var unis: [String] = []
-    var genders: [String] = ["Female", "Male", "Other", "Prefer not to Say"]
+    var genders: [String] = ["Female", "Male", "Other", "Prefer not to say"]
     
     // MARK: - Outlets
     @IBOutlet weak var profilePicView: UIImageView!
@@ -68,7 +68,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                 let profilePicRef = Storage.storage().reference().child("profilePictures").child("\(self.user!).jpg")
                 profilePicRef.delete { error in
                     if let error = error {
-                        print(error)
+                        print("Error:", error)
                     } else {
                         // File deleted successfully
                     }
@@ -197,18 +197,17 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             }
         }
         
-        // Add user's university to universities and set others to false
-        // Update filter settings
-        for uni in unis {
-            if uni == university {
-                ref.child("universities").child(uni).child(user!).setValue(true)
-                userSettingsRef.child("discovery").child("universities").child(uni).setValue(true)
-            } else {
-                ref.child("universities").child(uni).child(user!).setValue(false)
-                userSettingsRef.child("discovery").child("universities").child(uni).setValue(false)
+        // Add user's university to universities and update filter settings
+        uniRef.child(uni).child(user!).setValue(true)
+        userSettingsRef.child("discovery").child("universities").child(uni).setValue(true)
+        // Set others to false
+        for university in unis {
+            if university != uni {
+                uniRef.child(university).child(user!).setValue(false)
+                userSettingsRef.child("discovery").child("universities").child(university).setValue(false)
             }
         }
-        
+
         // Add user's gender to genders and set others to false
         for gen in genders {
             if gen == gender {
@@ -609,14 +608,12 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                         confirmUniAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
                             
                             if newUni != "" {
-                                print("Adding new uni: ", newUni)
                                 if !self.unis.contains(newUni) {
                                     self.unis.append(newUni)
                                     self.unis.sort()
                                 }
                                 self.uniPicker.reloadComponent(0)
                                 let index = self.unis.firstIndex(of: newUni) ?? self.unis.count
-                                print("Index for new uni: ", index + 1)
                                 self.uniPicker.selectRow(index + 1, inComponent: 0, animated: true)
                                 self.universityField.text = newUni
                             }
@@ -678,7 +675,9 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             
             var citiesArray: [String] = []
             for city in citiesDict {
-                citiesArray.append(city.key)
+                if ((city.value as? Bool)!) {
+                    citiesArray.append(city.key)
+                }
             }
             completion(citiesArray)
         })

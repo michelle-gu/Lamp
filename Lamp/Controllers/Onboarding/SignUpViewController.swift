@@ -70,7 +70,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         Auth.auth().createUser(withEmail: email, password: password) { user, error in
             
             if let error = error, user == nil {
-                print("\nError signing up\n")
                 let alert = UIAlertController(
                     title: "Sign Up Failed",
                     message: error.localizedDescription,
@@ -80,7 +79,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 self.present(alert, animated: true, completion: nil)
                 return
             } else {
-                print("\nSuccess! Using segue\n")
                 self.performSegue(withIdentifier: self.sendEmailConfirm, sender: nil)
             }
         }
