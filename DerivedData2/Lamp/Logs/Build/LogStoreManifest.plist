@@ -1190,6 +1190,38 @@
 			<key>uniqueIdentifier</key>
 			<string>95D2EAE0-1B46-4BF2-9DC3-953CE5CD0217</string>
 		</dict>
+		<key>95EF0CE4-44E2-4657-9EEC-45EB1F4E7E19</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>95EF0CE4-44E2-4657-9EEC-45EB1F4E7E19.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578270903.06096494</real>
+			<key>timeStoppedRecording</key>
+			<real>578270909.85088599</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>95EF0CE4-44E2-4657-9EEC-45EB1F4E7E19</string>
+		</dict>
 		<key>986CA446-85B1-44C9-838E-5051667CF7A2</key>
 		<dict>
 			<key>className</key>
@@ -1445,6 +1477,38 @@
 			<string>Build Lamp</string>
 			<key>uniqueIdentifier</key>
 			<string>C07511BA-959E-4924-A9EB-272D77F86477</string>
+		</dict>
+		<key>C77B5079-B4C7-4B64-A3ED-E3779128B346</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C77B5079-B4C7-4B64-A3ED-E3779128B346.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578270935.69411397</real>
+			<key>timeStoppedRecording</key>
+			<real>578270942.87462604</real>
+			<key>title</key>
+			<string>Build Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>C77B5079-B4C7-4B64-A3ED-E3779128B346</string>
 		</dict>
 		<key>CA58F805-9D41-4E5C-8C4B-3CC1EF30320F</key>
 		<dict>

@@ -614,6 +614,38 @@
 			<key>uniqueIdentifier</key>
 			<string>7E0F70A2-1D7E-4A1E-A04A-358A19D34D0A</string>
 		</dict>
+		<key>7EB5102B-1C6D-4390-B968-79AA52F77388</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>7EB5102B-1C6D-4390-B968-79AA52F77388.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578270942.74047899</real>
+			<key>timeStoppedRecording</key>
+			<real>578270958.25927806</real>
+			<key>title</key>
+			<string>Debug Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>7EB5102B-1C6D-4390-B968-79AA52F77388</string>
+		</dict>
 		<key>7F3E4AD6-5668-43DC-A4B8-CC5D248A713F</key>
 		<dict>
 			<key>className</key>
@@ -1157,6 +1189,38 @@
 			<string>Debug Lamp</string>
 			<key>uniqueIdentifier</key>
 			<string>BABF0B71-3C6F-4C66-B438-26EFCBD18F66</string>
+		</dict>
+		<key>BACB5D1E-2A28-4222-BB23-4B648116FD47</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BACB5D1E-2A28-4222-BB23-4B648116FD47.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Lamp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Lamp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug Lamp</string>
+			<key>timeStartedRecording</key>
+			<real>578270909.72415602</real>
+			<key>timeStoppedRecording</key>
+			<real>578270935.74842203</real>
+			<key>title</key>
+			<string>Debug Lamp</string>
+			<key>uniqueIdentifier</key>
+			<string>BACB5D1E-2A28-4222-BB23-4B648116FD47</string>
 		</dict>
 		<key>BD6B1863-8B65-4F35-BCFF-DF02B9FD9A83</key>
 		<dict>

@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Firebase
 import FirebaseFirestore
+import Kingfisher
 
 class MessageListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageSentDelegate {
     
@@ -143,9 +144,12 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
                 cell.nameLabel.text = matchName
                 
                 // set channel profile pic
-                //            let channelMessage = profileDict["last-message"] as! String
-                //            cell.lastMessageLabel.text = channelMessage
-                
+                if let profilePicVal = profileDict["profilePicture"] as? String {
+                    if profilePicVal != "" {
+                        let profilePicURL = URL(string: profilePicVal)
+                        cell.profileImageView.kf.setImage(with: profilePicURL)
+                    }
+                }
             })
         })
         
@@ -154,7 +158,7 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
     
     // table cell height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 95.0
+        return 90.0
     }
     
     // user clicks on a row
