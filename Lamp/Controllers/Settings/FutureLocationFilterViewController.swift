@@ -272,12 +272,6 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
                     currentCity: true
                 ]
                 
-                // update locations
-                citiesRef.child(user!).updateChildValues(values)
-                
-                // update locations nested in user>profile>futureLoc
-                profileRef.child("futureLoc").updateChildValues(values)
-                
                 // update locations nested in user>settings>discovery>futureLocs
                 discoverySettingsRef.child("futureLoc").updateChildValues(values)
             }
@@ -295,6 +289,13 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
         }
         
         currentCity = ""
+        
+        // Remove existing pinpoints
+        let pinpoints = self.mapView.annotations
+        self.mapView.removeAnnotations(pinpoints)
+        
+        // Hide Add Button
+        addCityToList.isHidden = true
     }
     
     // Click to Remove City
@@ -323,13 +324,8 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
                     n -= 1
                     
                     //remove from Firebase
-                    let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
-                    profileLocs.child(currentCity).removeValue()
-                    
                     let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
                     discoverySettingsRef.child(currentCity).removeValue()
-                    
-                    citiesRef.child(currentCity).child(user!).removeValue()
                 }
             }
             n += 1
@@ -361,13 +357,8 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
                     n -= 1
                     
                     //remove from Firebase
-                    let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
-                    profileLocs.child(currentCity).removeValue()
-                    
                     let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
                     discoverySettingsRef.child(currentCity).removeValue()
-                    
-                    citiesRef.child(currentCity).child(user!).removeValue()
                 }
             }
             n += 1
@@ -399,13 +390,8 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
                     n -= 1
                     
                     //remove from Firebase
-                    let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
-                    profileLocs.child(currentCity).removeValue()
-                    
                     let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
                     discoverySettingsRef.child(currentCity).removeValue()
-                    
-                    citiesRef.child(currentCity).child(user!).removeValue()
                 }
             }
             n += 1
