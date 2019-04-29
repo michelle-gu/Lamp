@@ -17,6 +17,7 @@ depends-top-level:
 - !private "AuthCredential"
 - "CastingPrecedence"
 - "Database"
+- !private "EmailAuthProvider"
 - "IndexPath"
 - "Int"
 - !private "UIAlertAction"
@@ -36,6 +37,7 @@ depends-member:
 - !private ["4Lamp21AccountViewControllerC", "Auth"]
 - !private ["4Lamp21AccountViewControllerC", "AuthCredential"]
 - ["4Lamp21AccountViewControllerC", "Database"]
+- !private ["4Lamp21AccountViewControllerC", "EmailAuthProvider"]
 - ["4Lamp21AccountViewControllerC", "IndexPath"]
 - ["4Lamp21AccountViewControllerC", "Int"]
 - !private ["4Lamp21AccountViewControllerC", "UIAlertAction"]
@@ -58,6 +60,7 @@ depends-member:
 - ["4Lamp21AccountViewControllerC", "prepare"]
 - !private ["4Lamp21AccountViewControllerC", "present"]
 - !private ["4Lamp21AccountViewControllerC", "print"]
+- ["4Lamp21AccountViewControllerC", "ref"]
 - ["4Lamp21AccountViewControllerC", "scrollViewDidChangeAdjustedContentInset"]
 - ["4Lamp21AccountViewControllerC", "scrollViewDidEndDecelerating"]
 - ["4Lamp21AccountViewControllerC", "scrollViewDidEndDragging"]
@@ -80,6 +83,8 @@ depends-member:
 - ["4Lamp21AccountViewControllerC", "viewForZoomingInScrollView"]
 - !private ["Sa", "count"]
 - !private ["Sa", "subscript"]
+- !private ["So7FIRAuthC", "auth"]
+- !private ["So7FIRAuthC", "currentUser"]
 - !private ["SK", "count"]
 - !private ["SK", "row"]
 - !private ["SK", "subscript"]
@@ -97,8 +102,8 @@ depends-member:
 - !private ["So15CALayerDelegateP", "textLabel"]
 - !private ["s7CVarArgP", "AccessoryType"]
 - !private ["s7CVarArgP", "Auth"]
-- !private ["s7CVarArgP", "AuthCredential"]
 - ["s7CVarArgP", "Database"]
+- !private ["s7CVarArgP", "EmailAuthProvider"]
 - !private ["s7CVarArgP", "UIAlertAction"]
 - !private ["s7CVarArgP", "UIAlertController"]
 - !private ["s7CVarArgP", "UIColor"]
@@ -110,11 +115,18 @@ depends-member:
 - !private ["s7CVarArgP", "accountSettings"]
 - !private ["s7CVarArgP", "addAction"]
 - !private ["s7CVarArgP", "addTextField"]
+- !private ["s7CVarArgP", "auth"]
+- !private ["s7CVarArgP", "child"]
 - !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "credential"]
+- !private ["s7CVarArgP", "currentUser"]
 - !private ["s7CVarArgP", "dataSource"]
+- ["s7CVarArgP", "database"]
 - !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "delete"]
 - !private ["s7CVarArgP", "dequeueReusableCell"]
 - !private ["s7CVarArgP", "deselectRow"]
+- !private ["s7CVarArgP", "email"]
 - !private ["s7CVarArgP", "font"]
 - ["s7CVarArgP", "indexPathForPreferredFocusedView"]
 - ["s7CVarArgP", "indexPathForPreferredFocusedViewInTableView"]
@@ -127,7 +139,11 @@ depends-member:
 - !private ["s7CVarArgP", "placeholder"]
 - !private ["s7CVarArgP", "present"]
 - !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "reauthenticateAndRetrieveData"]
 - !private ["s7CVarArgP", "red"]
+- !private ["s7CVarArgP", "ref"]
+- ["s7CVarArgP", "reference"]
+- !private ["s7CVarArgP", "removeValue"]
 - ["s7CVarArgP", "scrollViewDidChangeAdjustedContentInset"]
 - ["s7CVarArgP", "scrollViewDidEndDecelerating"]
 - ["s7CVarArgP", "scrollViewDidEndDragging"]
@@ -149,6 +165,7 @@ depends-member:
 - !private ["s7CVarArgP", "textColor"]
 - !private ["s7CVarArgP", "textFields"]
 - !private ["s7CVarArgP", "textLabel"]
+- !private ["s7CVarArgP", "uid"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - ["s7CVarArgP", "viewForZooming"]
 - ["s7CVarArgP", "viewForZoomingInScrollView"]
@@ -160,8 +177,8 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "AccessoryType"]
 - !private ["s28CustomDebugStringConvertibleP", "Auth"]
-- !private ["s28CustomDebugStringConvertibleP", "AuthCredential"]
 - ["s28CustomDebugStringConvertibleP", "Database"]
+- !private ["s28CustomDebugStringConvertibleP", "EmailAuthProvider"]
 - !private ["s28CustomDebugStringConvertibleP", "UIAlertAction"]
 - !private ["s28CustomDebugStringConvertibleP", "UIAlertController"]
 - !private ["s28CustomDebugStringConvertibleP", "UIColor"]
@@ -173,11 +190,18 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "accountSettings"]
 - !private ["s28CustomDebugStringConvertibleP", "addAction"]
 - !private ["s28CustomDebugStringConvertibleP", "addTextField"]
+- !private ["s28CustomDebugStringConvertibleP", "auth"]
+- !private ["s28CustomDebugStringConvertibleP", "child"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "credential"]
+- !private ["s28CustomDebugStringConvertibleP", "currentUser"]
 - !private ["s28CustomDebugStringConvertibleP", "dataSource"]
+- ["s28CustomDebugStringConvertibleP", "database"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "delete"]
 - !private ["s28CustomDebugStringConvertibleP", "dequeueReusableCell"]
 - !private ["s28CustomDebugStringConvertibleP", "deselectRow"]
+- !private ["s28CustomDebugStringConvertibleP", "email"]
 - !private ["s28CustomDebugStringConvertibleP", "font"]
 - ["s28CustomDebugStringConvertibleP", "indexPathForPreferredFocusedView"]
 - ["s28CustomDebugStringConvertibleP", "indexPathForPreferredFocusedViewInTableView"]
@@ -190,7 +214,11 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "placeholder"]
 - !private ["s28CustomDebugStringConvertibleP", "present"]
 - !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "reauthenticateAndRetrieveData"]
 - !private ["s28CustomDebugStringConvertibleP", "red"]
+- !private ["s28CustomDebugStringConvertibleP", "ref"]
+- ["s28CustomDebugStringConvertibleP", "reference"]
+- !private ["s28CustomDebugStringConvertibleP", "removeValue"]
 - !private ["s28CustomDebugStringConvertibleP", "row"]
 - ["s28CustomDebugStringConvertibleP", "scrollViewDidChangeAdjustedContentInset"]
 - ["s28CustomDebugStringConvertibleP", "scrollViewDidEndDecelerating"]
@@ -213,6 +241,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "textColor"]
 - !private ["s28CustomDebugStringConvertibleP", "textFields"]
 - !private ["s28CustomDebugStringConvertibleP", "textLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "uid"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - ["s28CustomDebugStringConvertibleP", "viewForZooming"]
 - ["s28CustomDebugStringConvertibleP", "viewForZoomingInScrollView"]
@@ -223,8 +252,8 @@ depends-member:
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "AccessoryType"]
 - !private ["s23CustomStringConvertibleP", "Auth"]
-- !private ["s23CustomStringConvertibleP", "AuthCredential"]
 - ["s23CustomStringConvertibleP", "Database"]
+- !private ["s23CustomStringConvertibleP", "EmailAuthProvider"]
 - !private ["s23CustomStringConvertibleP", "UIAlertAction"]
 - !private ["s23CustomStringConvertibleP", "UIAlertController"]
 - !private ["s23CustomStringConvertibleP", "UIColor"]
@@ -236,11 +265,18 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "accountSettings"]
 - !private ["s23CustomStringConvertibleP", "addAction"]
 - !private ["s23CustomStringConvertibleP", "addTextField"]
+- !private ["s23CustomStringConvertibleP", "auth"]
+- !private ["s23CustomStringConvertibleP", "child"]
 - !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "credential"]
+- !private ["s23CustomStringConvertibleP", "currentUser"]
 - !private ["s23CustomStringConvertibleP", "dataSource"]
+- ["s23CustomStringConvertibleP", "database"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "delete"]
 - !private ["s23CustomStringConvertibleP", "dequeueReusableCell"]
 - !private ["s23CustomStringConvertibleP", "deselectRow"]
+- !private ["s23CustomStringConvertibleP", "email"]
 - !private ["s23CustomStringConvertibleP", "font"]
 - ["s23CustomStringConvertibleP", "indexPathForPreferredFocusedView"]
 - ["s23CustomStringConvertibleP", "indexPathForPreferredFocusedViewInTableView"]
@@ -253,7 +289,11 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "placeholder"]
 - !private ["s23CustomStringConvertibleP", "present"]
 - !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "reauthenticateAndRetrieveData"]
 - !private ["s23CustomStringConvertibleP", "red"]
+- !private ["s23CustomStringConvertibleP", "ref"]
+- ["s23CustomStringConvertibleP", "reference"]
+- !private ["s23CustomStringConvertibleP", "removeValue"]
 - !private ["s23CustomStringConvertibleP", "row"]
 - ["s23CustomStringConvertibleP", "scrollViewDidChangeAdjustedContentInset"]
 - ["s23CustomStringConvertibleP", "scrollViewDidEndDecelerating"]
@@ -276,16 +316,24 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "textColor"]
 - !private ["s23CustomStringConvertibleP", "textFields"]
 - !private ["s23CustomStringConvertibleP", "textLabel"]
+- !private ["s23CustomStringConvertibleP", "uid"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - ["s23CustomStringConvertibleP", "viewForZooming"]
 - ["s23CustomStringConvertibleP", "viewForZoomingInScrollView"]
 - !private ["10Foundation12DataProtocolP", "count"]
 - !private ["10Foundation12DataProtocolP", "subscript"]
+- ["So11FIRDatabaseC", "database"]
+- ["So11FIRDatabaseC", "reference"]
+- !private ["So16FIRDatabaseQueryC", "child"]
+- !private ["So16FIRDatabaseQueryC", "removeValue"]
+- !private ["So20FIRDatabaseReferenceC", "child"]
+- !private ["So20FIRDatabaseReferenceC", "removeValue"]
 - !private ["Se", "count"]
 - !private ["Se", "dataSource"]
 - !private ["Se", "delegate"]
 - !private ["Se", "row"]
 - !private ["Se", "subscript"]
+- !private ["So20FIREmailAuthProviderC", "credential"]
 - !private ["SE", "count"]
 - !private ["SE", "dataSource"]
 - !private ["SE", "delegate"]
@@ -293,8 +341,8 @@ depends-member:
 - !private ["SE", "subscript"]
 - !private ["SQ", "AccessoryType"]
 - !private ["SQ", "Auth"]
-- !private ["SQ", "AuthCredential"]
 - ["SQ", "Database"]
+- !private ["SQ", "EmailAuthProvider"]
 - !private ["SQ", "UIAlertAction"]
 - !private ["SQ", "UIAlertController"]
 - !private ["SQ", "UIColor"]
@@ -307,14 +355,22 @@ depends-member:
 - !private ["SQ", "addAction"]
 - !private ["SQ", "addTextField"]
 - !private ["SQ", "alert"]
+- !private ["SQ", "auth"]
 - !private ["SQ", "cancel"]
+- !private ["SQ", "child"]
 - !private ["SQ", "count"]
+- !private ["SQ", "credential"]
+- !private ["SQ", "currentUser"]
 - !private ["SQ", "dataSource"]
+- ["SQ", "database"]
+- !private ["SQ", "default"]
 - !private ["SQ", "delegate"]
+- !private ["SQ", "delete"]
 - !private ["SQ", "dequeueReusableCell"]
 - !private ["SQ", "deselectRow"]
 - !private ["SQ", "destructive"]
 - !private ["SQ", "disclosureIndicator"]
+- !private ["SQ", "email"]
 - !private ["SQ", "font"]
 - ["SQ", "indexPathForPreferredFocusedView"]
 - ["SQ", "indexPathForPreferredFocusedViewInTableView"]
@@ -327,7 +383,11 @@ depends-member:
 - !private ["SQ", "placeholder"]
 - !private ["SQ", "present"]
 - !private ["SQ", "print"]
+- !private ["SQ", "reauthenticateAndRetrieveData"]
 - !private ["SQ", "red"]
+- !private ["SQ", "ref"]
+- ["SQ", "reference"]
+- !private ["SQ", "removeValue"]
 - !private ["SQ", "row"]
 - ["SQ", "scrollViewDidChangeAdjustedContentInset"]
 - ["SQ", "scrollViewDidEndDecelerating"]
@@ -350,9 +410,11 @@ depends-member:
 - !private ["SQ", "textColor"]
 - !private ["SQ", "textFields"]
 - !private ["SQ", "textLabel"]
+- !private ["SQ", "uid"]
 - !private ["SQ", "viewDidLoad"]
 - ["SQ", "viewForZooming"]
 - ["SQ", "viewForZoomingInScrollView"]
+- !private ["s5ErrorP", "localizedDescription"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s25ExpressibleByArrayLiteralP", "row"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
@@ -360,8 +422,8 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "delegate"]
 - !private ["SH", "AccessoryType"]
 - !private ["SH", "Auth"]
-- !private ["SH", "AuthCredential"]
 - ["SH", "Database"]
+- !private ["SH", "EmailAuthProvider"]
 - !private ["SH", "UIAlertAction"]
 - !private ["SH", "UIAlertController"]
 - !private ["SH", "UIColor"]
@@ -374,14 +436,22 @@ depends-member:
 - !private ["SH", "addAction"]
 - !private ["SH", "addTextField"]
 - !private ["SH", "alert"]
+- !private ["SH", "auth"]
 - !private ["SH", "cancel"]
+- !private ["SH", "child"]
 - !private ["SH", "count"]
+- !private ["SH", "credential"]
+- !private ["SH", "currentUser"]
 - !private ["SH", "dataSource"]
+- ["SH", "database"]
+- !private ["SH", "default"]
 - !private ["SH", "delegate"]
+- !private ["SH", "delete"]
 - !private ["SH", "dequeueReusableCell"]
 - !private ["SH", "deselectRow"]
 - !private ["SH", "destructive"]
 - !private ["SH", "disclosureIndicator"]
+- !private ["SH", "email"]
 - !private ["SH", "font"]
 - ["SH", "indexPathForPreferredFocusedView"]
 - ["SH", "indexPathForPreferredFocusedViewInTableView"]
@@ -394,7 +464,11 @@ depends-member:
 - !private ["SH", "placeholder"]
 - !private ["SH", "present"]
 - !private ["SH", "print"]
+- !private ["SH", "reauthenticateAndRetrieveData"]
 - !private ["SH", "red"]
+- !private ["SH", "ref"]
+- ["SH", "reference"]
+- !private ["SH", "removeValue"]
 - !private ["SH", "row"]
 - ["SH", "scrollViewDidChangeAdjustedContentInset"]
 - ["SH", "scrollViewDidEndDecelerating"]
@@ -417,6 +491,7 @@ depends-member:
 - !private ["SH", "textColor"]
 - !private ["SH", "textFields"]
 - !private ["SH", "textLabel"]
+- !private ["SH", "uid"]
 - !private ["SH", "viewDidLoad"]
 - ["SH", "viewForZooming"]
 - ["SH", "viewForZoomingInScrollView"]
@@ -428,8 +503,8 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
 - !private ["So8NSCodingP", "AccessoryType"]
 - !private ["So8NSCodingP", "Auth"]
-- !private ["So8NSCodingP", "AuthCredential"]
 - ["So8NSCodingP", "Database"]
+- !private ["So8NSCodingP", "EmailAuthProvider"]
 - !private ["So8NSCodingP", "UIAlertAction"]
 - !private ["So8NSCodingP", "UIAlertController"]
 - !private ["So8NSCodingP", "UIColor"]
@@ -458,6 +533,7 @@ depends-member:
 - !private ["So8NSCodingP", "present"]
 - !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "red"]
+- !private ["So8NSCodingP", "ref"]
 - ["So8NSCodingP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So8NSCodingP", "scrollViewDidEndDecelerating"]
 - ["So8NSCodingP", "scrollViewDidEndDragging"]
@@ -484,8 +560,8 @@ depends-member:
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "red"]
 - !private ["So26NSExtensionRequestHandlingP", "Auth"]
-- !private ["So26NSExtensionRequestHandlingP", "AuthCredential"]
 - ["So26NSExtensionRequestHandlingP", "Database"]
+- !private ["So26NSExtensionRequestHandlingP", "EmailAuthProvider"]
 - !private ["So26NSExtensionRequestHandlingP", "UIAlertAction"]
 - !private ["So26NSExtensionRequestHandlingP", "UIAlertController"]
 - !private ["So26NSExtensionRequestHandlingP", "UIColor"]
@@ -505,6 +581,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "performSegue"]
 - !private ["So26NSExtensionRequestHandlingP", "present"]
 - !private ["So26NSExtensionRequestHandlingP", "print"]
+- !private ["So26NSExtensionRequestHandlingP", "ref"]
 - ["So26NSExtensionRequestHandlingP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So26NSExtensionRequestHandlingP", "scrollViewDidEndDecelerating"]
 - ["So26NSExtensionRequestHandlingP", "scrollViewDidEndDragging"]
@@ -531,6 +608,7 @@ depends-member:
 - !private ["So8NSObjectC", "Auth"]
 - !private ["So8NSObjectC", "AuthCredential"]
 - ["So8NSObjectC", "Database"]
+- !private ["So8NSObjectC", "EmailAuthProvider"]
 - ["So8NSObjectC", "IndexPath"]
 - ["So8NSObjectC", "Int"]
 - !private ["So8NSObjectC", "UIAlertAction"]
@@ -545,11 +623,18 @@ depends-member:
 - ["So8NSObjectC", "accountSettings"]
 - !private ["So8NSObjectC", "addAction"]
 - !private ["So8NSObjectC", "addTextField"]
+- !private ["So8NSObjectC", "auth"]
 - ["So8NSObjectC", "changePasswordSegueIdentifier"]
+- !private ["So8NSObjectC", "child"]
+- !private ["So8NSObjectC", "credential"]
+- !private ["So8NSObjectC", "currentUser"]
 - !private ["So8NSObjectC", "dataSource"]
+- ["So8NSObjectC", "database"]
 - !private ["So8NSObjectC", "delegate"]
+- !private ["So8NSObjectC", "delete"]
 - !private ["So8NSObjectC", "dequeueReusableCell"]
 - !private ["So8NSObjectC", "deselectRow"]
+- !private ["So8NSObjectC", "email"]
 - !private ["So8NSObjectC", "font"]
 - ["So8NSObjectC", "indexPathForPreferredFocusedView"]
 - ["So8NSObjectC", "indexPathForPreferredFocusedViewInTableView"]
@@ -563,7 +648,11 @@ depends-member:
 - ["So8NSObjectC", "prepare"]
 - !private ["So8NSObjectC", "present"]
 - !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "reauthenticateAndRetrieveData"]
 - !private ["So8NSObjectC", "red"]
+- ["So8NSObjectC", "ref"]
+- ["So8NSObjectC", "reference"]
+- !private ["So8NSObjectC", "removeValue"]
 - ["So8NSObjectC", "scrollViewDidChangeAdjustedContentInset"]
 - ["So8NSObjectC", "scrollViewDidEndDecelerating"]
 - ["So8NSObjectC", "scrollViewDidEndDragging"]
@@ -584,14 +673,15 @@ depends-member:
 - !private ["So8NSObjectC", "textColor"]
 - !private ["So8NSObjectC", "textFields"]
 - !private ["So8NSObjectC", "textLabel"]
+- !private ["So8NSObjectC", "uid"]
 - ["So8NSObjectC", "unwindToLoginSegueIdentifier"]
 - ["So8NSObjectC", "viewDidLoad"]
 - ["So8NSObjectC", "viewForZooming"]
 - ["So8NSObjectC", "viewForZoomingInScrollView"]
 - !private ["So8NSObjectP", "AccessoryType"]
 - !private ["So8NSObjectP", "Auth"]
-- !private ["So8NSObjectP", "AuthCredential"]
 - ["So8NSObjectP", "Database"]
+- !private ["So8NSObjectP", "EmailAuthProvider"]
 - !private ["So8NSObjectP", "UIAlertAction"]
 - !private ["So8NSObjectP", "UIAlertController"]
 - !private ["So8NSObjectP", "UIColor"]
@@ -603,10 +693,17 @@ depends-member:
 - !private ["So8NSObjectP", "accountSettings"]
 - !private ["So8NSObjectP", "addAction"]
 - !private ["So8NSObjectP", "addTextField"]
+- !private ["So8NSObjectP", "auth"]
+- !private ["So8NSObjectP", "child"]
+- !private ["So8NSObjectP", "credential"]
+- !private ["So8NSObjectP", "currentUser"]
 - !private ["So8NSObjectP", "dataSource"]
+- ["So8NSObjectP", "database"]
 - !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "delete"]
 - !private ["So8NSObjectP", "dequeueReusableCell"]
 - !private ["So8NSObjectP", "deselectRow"]
+- !private ["So8NSObjectP", "email"]
 - !private ["So8NSObjectP", "font"]
 - ["So8NSObjectP", "indexPathForPreferredFocusedView"]
 - ["So8NSObjectP", "indexPathForPreferredFocusedViewInTableView"]
@@ -619,7 +716,11 @@ depends-member:
 - !private ["So8NSObjectP", "placeholder"]
 - !private ["So8NSObjectP", "present"]
 - !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "reauthenticateAndRetrieveData"]
 - !private ["So8NSObjectP", "red"]
+- !private ["So8NSObjectP", "ref"]
+- ["So8NSObjectP", "reference"]
+- !private ["So8NSObjectP", "removeValue"]
 - ["So8NSObjectP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So8NSObjectP", "scrollViewDidEndDecelerating"]
 - ["So8NSObjectP", "scrollViewDidEndDragging"]
@@ -640,6 +741,7 @@ depends-member:
 - !private ["So8NSObjectP", "textColor"]
 - !private ["So8NSObjectP", "textFields"]
 - !private ["So8NSObjectP", "textLabel"]
+- !private ["So8NSObjectP", "uid"]
 - !private ["So8NSObjectP", "viewDidLoad"]
 - ["So8NSObjectP", "viewForZooming"]
 - ["So8NSObjectP", "viewForZoomingInScrollView"]
@@ -653,6 +755,7 @@ depends-member:
 - !private ["Sm", "subscript"]
 - !private ["SY", "alert"]
 - !private ["SY", "cancel"]
+- !private ["SY", "default"]
 - !private ["SY", "destructive"]
 - !private ["SY", "disclosureIndicator"]
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
@@ -661,6 +764,7 @@ depends-member:
 - !private ["ST", "subscript"]
 - !private ["So22UIAlertControllerStyleV", "alert"]
 - !private ["So18UIAlertActionStyleV", "cancel"]
+- !private ["So18UIAlertActionStyleV", "default"]
 - !private ["So18UIAlertActionStyleV", "destructive"]
 - !private ["So29UIAccessibilityIdentificationP", "AccessoryType"]
 - !private ["So29UIAccessibilityIdentificationP", "accessoryType"]
@@ -693,8 +797,8 @@ depends-member:
 - !private ["So12UIAppearanceP", "textLabel"]
 - !private ["So21UIAppearanceContainerP", "AccessoryType"]
 - !private ["So21UIAppearanceContainerP", "Auth"]
-- !private ["So21UIAppearanceContainerP", "AuthCredential"]
 - ["So21UIAppearanceContainerP", "Database"]
+- !private ["So21UIAppearanceContainerP", "EmailAuthProvider"]
 - !private ["So21UIAppearanceContainerP", "UIAlertAction"]
 - !private ["So21UIAppearanceContainerP", "UIAlertController"]
 - !private ["So21UIAppearanceContainerP", "UIColor"]
@@ -722,6 +826,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "placeholder"]
 - !private ["So21UIAppearanceContainerP", "present"]
 - !private ["So21UIAppearanceContainerP", "print"]
+- !private ["So21UIAppearanceContainerP", "ref"]
 - ["So21UIAppearanceContainerP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So21UIAppearanceContainerP", "scrollViewDidEndDecelerating"]
 - ["So21UIAppearanceContainerP", "scrollViewDidEndDragging"]
@@ -747,8 +852,8 @@ depends-member:
 - ["So21UIAppearanceContainerP", "viewForZoomingInScrollView"]
 - !private ["So7UIColorC", "red"]
 - !private ["So18UIContentContainerP", "Auth"]
-- !private ["So18UIContentContainerP", "AuthCredential"]
 - ["So18UIContentContainerP", "Database"]
+- !private ["So18UIContentContainerP", "EmailAuthProvider"]
 - !private ["So18UIContentContainerP", "UIAlertAction"]
 - !private ["So18UIContentContainerP", "UIAlertController"]
 - !private ["So18UIContentContainerP", "UIColor"]
@@ -768,6 +873,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "performSegue"]
 - !private ["So18UIContentContainerP", "present"]
 - !private ["So18UIContentContainerP", "print"]
+- !private ["So18UIContentContainerP", "ref"]
 - ["So18UIContentContainerP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So18UIContentContainerP", "scrollViewDidEndDecelerating"]
 - ["So18UIContentContainerP", "scrollViewDidEndDragging"]
@@ -795,6 +901,7 @@ depends-member:
 - !private ["So30UIContentSizeCategoryAdjustingP", "textColor"]
 - !private ["So9UIControlC", "isSecureTextEntry"]
 - !private ["So9UIControlC", "placeholder"]
+- !private ["So9UIControlC", "text"]
 - !private ["So17UICoordinateSpaceP", "AccessoryType"]
 - !private ["So17UICoordinateSpaceP", "accessoryType"]
 - !private ["So17UICoordinateSpaceP", "dataSource"]
@@ -825,8 +932,8 @@ depends-member:
 - !private ["So13UIDynamicItemP", "textLabel"]
 - !private ["So18UIFocusEnvironmentP", "AccessoryType"]
 - !private ["So18UIFocusEnvironmentP", "Auth"]
-- !private ["So18UIFocusEnvironmentP", "AuthCredential"]
 - ["So18UIFocusEnvironmentP", "Database"]
+- !private ["So18UIFocusEnvironmentP", "EmailAuthProvider"]
 - !private ["So18UIFocusEnvironmentP", "UIAlertAction"]
 - !private ["So18UIFocusEnvironmentP", "UIAlertController"]
 - !private ["So18UIFocusEnvironmentP", "UIColor"]
@@ -854,6 +961,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "placeholder"]
 - !private ["So18UIFocusEnvironmentP", "present"]
 - !private ["So18UIFocusEnvironmentP", "print"]
+- !private ["So18UIFocusEnvironmentP", "ref"]
 - ["So18UIFocusEnvironmentP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So18UIFocusEnvironmentP", "scrollViewDidEndDecelerating"]
 - ["So18UIFocusEnvironmentP", "scrollViewDidEndDragging"]
@@ -911,13 +1019,14 @@ depends-member:
 - !private ["So27UIGestureRecognizerDelegateP", "textLabel"]
 - !private ["So10UIKeyInputP", "isSecureTextEntry"]
 - !private ["So10UIKeyInputP", "placeholder"]
+- !private ["So10UIKeyInputP", "text"]
 - !private ["So7UILabelC", "font"]
 - !private ["So7UILabelC", "text"]
 - !private ["So7UILabelC", "textColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "AccessoryType"]
 - !private ["So30UIPasteConfigurationSupportingP", "Auth"]
-- !private ["So30UIPasteConfigurationSupportingP", "AuthCredential"]
 - ["So30UIPasteConfigurationSupportingP", "Database"]
+- !private ["So30UIPasteConfigurationSupportingP", "EmailAuthProvider"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIAlertAction"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIAlertController"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIColor"]
@@ -945,6 +1054,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "placeholder"]
 - !private ["So30UIPasteConfigurationSupportingP", "present"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
+- !private ["So30UIPasteConfigurationSupportingP", "ref"]
 - ["So30UIPasteConfigurationSupportingP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So30UIPasteConfigurationSupportingP", "scrollViewDidEndDecelerating"]
 - ["So30UIPasteConfigurationSupportingP", "scrollViewDidEndDragging"]
@@ -972,6 +1082,7 @@ depends-member:
 - !private ["So11UIResponderC", "Auth"]
 - !private ["So11UIResponderC", "AuthCredential"]
 - ["So11UIResponderC", "Database"]
+- !private ["So11UIResponderC", "EmailAuthProvider"]
 - ["So11UIResponderC", "IndexPath"]
 - ["So11UIResponderC", "Int"]
 - !private ["So11UIResponderC", "UIAlertAction"]
@@ -1004,6 +1115,7 @@ depends-member:
 - ["So11UIResponderC", "prepare"]
 - !private ["So11UIResponderC", "present"]
 - !private ["So11UIResponderC", "print"]
+- ["So11UIResponderC", "ref"]
 - ["So11UIResponderC", "scrollViewDidChangeAdjustedContentInset"]
 - ["So11UIResponderC", "scrollViewDidEndDecelerating"]
 - ["So11UIResponderC", "scrollViewDidEndDragging"]
@@ -1030,8 +1142,8 @@ depends-member:
 - ["So11UIResponderC", "viewForZoomingInScrollView"]
 - !private ["So30UIResponderStandardEditActionsP", "AccessoryType"]
 - !private ["So30UIResponderStandardEditActionsP", "Auth"]
-- !private ["So30UIResponderStandardEditActionsP", "AuthCredential"]
 - ["So30UIResponderStandardEditActionsP", "Database"]
+- !private ["So30UIResponderStandardEditActionsP", "EmailAuthProvider"]
 - !private ["So30UIResponderStandardEditActionsP", "UIAlertAction"]
 - !private ["So30UIResponderStandardEditActionsP", "UIAlertController"]
 - !private ["So30UIResponderStandardEditActionsP", "UIColor"]
@@ -1059,6 +1171,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "placeholder"]
 - !private ["So30UIResponderStandardEditActionsP", "present"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
+- !private ["So30UIResponderStandardEditActionsP", "ref"]
 - ["So30UIResponderStandardEditActionsP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So30UIResponderStandardEditActionsP", "scrollViewDidEndDecelerating"]
 - ["So30UIResponderStandardEditActionsP", "scrollViewDidEndDragging"]
@@ -1087,8 +1200,8 @@ depends-member:
 - !private ["So12UIScrollViewC", "dequeueReusableCell"]
 - !private ["So12UIScrollViewC", "deselectRow"]
 - !private ["So20UIScrollViewDelegateP", "Auth"]
-- !private ["So20UIScrollViewDelegateP", "AuthCredential"]
 - ["So20UIScrollViewDelegateP", "Database"]
+- !private ["So20UIScrollViewDelegateP", "EmailAuthProvider"]
 - !private ["So20UIScrollViewDelegateP", "UIAlertAction"]
 - !private ["So20UIScrollViewDelegateP", "UIAlertController"]
 - !private ["So20UIScrollViewDelegateP", "UIColor"]
@@ -1104,6 +1217,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "performSegue"]
 - !private ["So20UIScrollViewDelegateP", "present"]
 - !private ["So20UIScrollViewDelegateP", "print"]
+- !private ["So20UIScrollViewDelegateP", "ref"]
 - ["So20UIScrollViewDelegateP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So20UIScrollViewDelegateP", "scrollViewDidEndDecelerating"]
 - ["So20UIScrollViewDelegateP", "scrollViewDidEndDragging"]
@@ -1131,8 +1245,8 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "init"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "textFields"]
 - !private ["So16UIStateRestoringP", "Auth"]
-- !private ["So16UIStateRestoringP", "AuthCredential"]
 - ["So16UIStateRestoringP", "Database"]
+- !private ["So16UIStateRestoringP", "EmailAuthProvider"]
 - !private ["So16UIStateRestoringP", "UIAlertAction"]
 - !private ["So16UIStateRestoringP", "UIAlertController"]
 - !private ["So16UIStateRestoringP", "UIColor"]
@@ -1152,6 +1266,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "performSegue"]
 - !private ["So16UIStateRestoringP", "present"]
 - !private ["So16UIStateRestoringP", "print"]
+- !private ["So16UIStateRestoringP", "ref"]
 - ["So16UIStateRestoringP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So16UIStateRestoringP", "scrollViewDidEndDecelerating"]
 - ["So16UIStateRestoringP", "scrollViewDidEndDragging"]
@@ -1180,8 +1295,8 @@ depends-member:
 - !private ["So15UITableViewCellC", "accessoryType"]
 - !private ["So15UITableViewCellC", "textLabel"]
 - !private ["So21UITableViewDataSourceP", "Auth"]
-- !private ["So21UITableViewDataSourceP", "AuthCredential"]
 - ["So21UITableViewDataSourceP", "Database"]
+- !private ["So21UITableViewDataSourceP", "EmailAuthProvider"]
 - !private ["So21UITableViewDataSourceP", "UIAlertAction"]
 - !private ["So21UITableViewDataSourceP", "UIAlertController"]
 - !private ["So21UITableViewDataSourceP", "UIColor"]
@@ -1197,6 +1312,7 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "performSegue"]
 - !private ["So21UITableViewDataSourceP", "present"]
 - !private ["So21UITableViewDataSourceP", "print"]
+- !private ["So21UITableViewDataSourceP", "ref"]
 - ["So21UITableViewDataSourceP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So21UITableViewDataSourceP", "scrollViewDidEndDecelerating"]
 - ["So21UITableViewDataSourceP", "scrollViewDidEndDragging"]
@@ -1216,8 +1332,8 @@ depends-member:
 - ["So21UITableViewDataSourceP", "viewForZooming"]
 - ["So21UITableViewDataSourceP", "viewForZoomingInScrollView"]
 - !private ["So19UITableViewDelegateP", "Auth"]
-- !private ["So19UITableViewDelegateP", "AuthCredential"]
 - ["So19UITableViewDelegateP", "Database"]
+- !private ["So19UITableViewDelegateP", "EmailAuthProvider"]
 - !private ["So19UITableViewDelegateP", "UIAlertAction"]
 - !private ["So19UITableViewDelegateP", "UIAlertController"]
 - !private ["So19UITableViewDelegateP", "UIColor"]
@@ -1233,6 +1349,7 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "performSegue"]
 - !private ["So19UITableViewDelegateP", "present"]
 - !private ["So19UITableViewDelegateP", "print"]
+- !private ["So19UITableViewDelegateP", "ref"]
 - ["So19UITableViewDelegateP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So19UITableViewDelegateP", "scrollViewDidEndDecelerating"]
 - ["So19UITableViewDelegateP", "scrollViewDidEndDragging"]
@@ -1253,20 +1370,26 @@ depends-member:
 - ["So19UITableViewDelegateP", "viewForZoomingInScrollView"]
 - !private ["So15UITextDraggableP", "isSecureTextEntry"]
 - !private ["So15UITextDraggableP", "placeholder"]
+- !private ["So15UITextDraggableP", "text"]
 - !private ["So15UITextDroppableP", "isSecureTextEntry"]
 - !private ["So15UITextDroppableP", "placeholder"]
+- !private ["So15UITextDroppableP", "text"]
 - !private ["So11UITextFieldC", "isSecureTextEntry"]
 - !private ["So11UITextFieldC", "placeholder"]
+- !private ["So11UITextFieldC", "text"]
 - !private ["So11UITextInputP", "isSecureTextEntry"]
 - !private ["So11UITextInputP", "placeholder"]
+- !private ["So11UITextInputP", "text"]
 - !private ["So17UITextInputTraitsP", "isSecureTextEntry"]
 - !private ["So17UITextInputTraitsP", "placeholder"]
+- !private ["So17UITextInputTraitsP", "text"]
 - !private ["So34UITextPasteConfigurationSupportingP", "isSecureTextEntry"]
 - !private ["So34UITextPasteConfigurationSupportingP", "placeholder"]
+- !private ["So34UITextPasteConfigurationSupportingP", "text"]
 - !private ["So18UITraitEnvironmentP", "AccessoryType"]
 - !private ["So18UITraitEnvironmentP", "Auth"]
-- !private ["So18UITraitEnvironmentP", "AuthCredential"]
 - ["So18UITraitEnvironmentP", "Database"]
+- !private ["So18UITraitEnvironmentP", "EmailAuthProvider"]
 - !private ["So18UITraitEnvironmentP", "UIAlertAction"]
 - !private ["So18UITraitEnvironmentP", "UIAlertController"]
 - !private ["So18UITraitEnvironmentP", "UIColor"]
@@ -1294,6 +1417,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "placeholder"]
 - !private ["So18UITraitEnvironmentP", "present"]
 - !private ["So18UITraitEnvironmentP", "print"]
+- !private ["So18UITraitEnvironmentP", "ref"]
 - ["So18UITraitEnvironmentP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So18UITraitEnvironmentP", "scrollViewDidEndDecelerating"]
 - ["So18UITraitEnvironmentP", "scrollViewDidEndDragging"]
@@ -1319,8 +1443,8 @@ depends-member:
 - ["So18UITraitEnvironmentP", "viewForZoomingInScrollView"]
 - !private ["So23UIUserActivityRestoringP", "AccessoryType"]
 - !private ["So23UIUserActivityRestoringP", "Auth"]
-- !private ["So23UIUserActivityRestoringP", "AuthCredential"]
 - ["So23UIUserActivityRestoringP", "Database"]
+- !private ["So23UIUserActivityRestoringP", "EmailAuthProvider"]
 - !private ["So23UIUserActivityRestoringP", "UIAlertAction"]
 - !private ["So23UIUserActivityRestoringP", "UIAlertController"]
 - !private ["So23UIUserActivityRestoringP", "UIColor"]
@@ -1348,6 +1472,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "placeholder"]
 - !private ["So23UIUserActivityRestoringP", "present"]
 - !private ["So23UIUserActivityRestoringP", "print"]
+- !private ["So23UIUserActivityRestoringP", "ref"]
 - ["So23UIUserActivityRestoringP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So23UIUserActivityRestoringP", "scrollViewDidEndDecelerating"]
 - ["So23UIUserActivityRestoringP", "scrollViewDidEndDragging"]
@@ -1386,6 +1511,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "Auth"]
 - !private ["So16UIViewControllerC", "AuthCredential"]
 - ["So16UIViewControllerC", "Database"]
+- !private ["So16UIViewControllerC", "EmailAuthProvider"]
 - ["So16UIViewControllerC", "IndexPath"]
 - ["So16UIViewControllerC", "Int"]
 - !private ["So16UIViewControllerC", "UIAlertAction"]
@@ -1411,6 +1537,7 @@ depends-member:
 - ["So16UIViewControllerC", "prepare"]
 - !private ["So16UIViewControllerC", "present"]
 - !private ["So16UIViewControllerC", "print"]
+- ["So16UIViewControllerC", "ref"]
 - ["So16UIViewControllerC", "scrollViewDidChangeAdjustedContentInset"]
 - ["So16UIViewControllerC", "scrollViewDidEndDecelerating"]
 - ["So16UIViewControllerC", "scrollViewDidEndDragging"]
@@ -1432,6 +1559,14 @@ depends-member:
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", "viewForZooming"]
 - ["So16UIViewControllerC", "viewForZoomingInScrollView"]
+- !private ["So7FIRUserC", "delete"]
+- !private ["So7FIRUserC", "email"]
+- !private ["So7FIRUserC", "reauthenticateAndRetrieveData"]
+- !private ["So7FIRUserC", "uid"]
+- !private ["So11FIRUserInfoP", "delete"]
+- !private ["So11FIRUserInfoP", "email"]
+- !private ["So11FIRUserInfoP", "reauthenticateAndRetrieveData"]
+- !private ["So11FIRUserInfoP", "uid"]
 - !private ["s14_ArrayProtocolP", "count"]
 - !private ["s14_ArrayProtocolP", "subscript"]
 - !private ["s24_DestructorSafeContainerP", "count"]
@@ -1443,8 +1578,8 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AccessoryType"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Auth"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "AuthCredential"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Database"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "EmailAuthProvider"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIAlertAction"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIAlertController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
@@ -1456,10 +1591,17 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "accountSettings"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addAction"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addTextField"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "child"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "credential"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dataSource"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "database"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delete"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dequeueReusableCell"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "deselectRow"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "email"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "font"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "indexPathForPreferredFocusedView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "indexPathForPreferredFocusedViewInTableView"]
@@ -1472,7 +1614,11 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "placeholder"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reauthenticateAndRetrieveData"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "red"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ref"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "reference"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeValue"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "scrollViewDidChangeAdjustedContentInset"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "scrollViewDidEndDecelerating"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "scrollViewDidEndDragging"]
@@ -1493,6 +1639,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "textColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "textFields"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "textLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "uid"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewForZooming"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewForZoomingInScrollView"]
@@ -1517,6 +1664,7 @@ depends-nominal:
 - !private "So28UITableViewCellAccessoryTypeV"
 - "4Lamp21AccountViewControllerC"
 - !private "Sa"
+- !private "So7FIRAuthC"
 - !private "SK"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
@@ -1527,9 +1675,14 @@ depends-nominal:
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "10Foundation12DataProtocolP"
+- "So11FIRDatabaseC"
+- !private "So16FIRDatabaseQueryC"
+- !private "So20FIRDatabaseReferenceC"
 - !private "Se"
+- !private "So20FIREmailAuthProviderC"
 - !private "SE"
 - "SQ"
+- !private "s5ErrorP"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
 - "SH"
@@ -1593,6 +1746,8 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
+- !private "So7FIRUserC"
+- !private "So11FIRUserInfoP"
 - !private "s14_ArrayProtocolP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s26_ExpressibleByColorLiteralP"
@@ -1629,7 +1784,135 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MapKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POP.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FirebaseInstanceID-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers/Koloda-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/pop-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSource.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestore.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthCredential.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPBasicAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPSpringAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPCustomAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPDecayAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPPropertyAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTransaction.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTimestamp.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimationTracer.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFederatedAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGameCenterAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimator.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPVector.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimationExtras.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPLayerExtras.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPDefines.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimatablePropertyTypes.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers/Koloda-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimationEvent.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuery.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPGeometry.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimatableProperty.h"
 - "/Users/lindseythompson/Desktop/Lamp/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"

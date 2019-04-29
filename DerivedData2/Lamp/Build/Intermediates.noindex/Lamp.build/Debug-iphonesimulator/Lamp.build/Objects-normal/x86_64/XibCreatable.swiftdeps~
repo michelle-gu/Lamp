@@ -10,9 +10,6 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "Bundle"
 - "CastingPrecedence"
-- !private "FloatLiteralType"
-- !private "IntegerLiteralType"
-- !private "StringLiteralType"
 - !private "UINib"
 - "UIView"
 - "XibCreatable"

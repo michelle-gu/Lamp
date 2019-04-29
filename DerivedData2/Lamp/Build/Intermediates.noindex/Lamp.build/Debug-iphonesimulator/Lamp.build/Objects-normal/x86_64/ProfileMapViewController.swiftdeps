@@ -31,6 +31,7 @@ depends-top-level:
 - !private "-="
 - !private "/"
 - !private "=="
+- !private "??"
 - "AnyObject"
 - "AssignmentPrecedence"
 - "Auth"
@@ -84,6 +85,8 @@ depends-member:
 - !private ["Sa", "last"]
 - !private ["Sa", "remove"]
 - !private ["Sa", "subscript"]
+- ["So7FIRAuthC", "auth"]
+- ["So7FIRAuthC", "currentUser"]
 - !private ["SK", "append"]
 - !private ["SK", "contains"]
 - !private ["SK", "count"]
@@ -260,6 +263,7 @@ depends-member:
 - !private ["s7CVarArgP", "annotations"]
 - !private ["s7CVarArgP", "append"]
 - !private ["s7CVarArgP", "async"]
+- ["s7CVarArgP", "auth"]
 - !private ["s7CVarArgP", "authorizationStatus"]
 - !private ["s7CVarArgP", "beginIgnoringInteractionEvents"]
 - !private ["s7CVarArgP", "borderColor"]
@@ -270,6 +274,7 @@ depends-member:
 - !private ["s7CVarArgP", "center"]
 - !private ["s7CVarArgP", "cgColor"]
 - !private ["s7CVarArgP", "checkLocationAuthorizationStatus"]
+- !private ["s7CVarArgP", "child"]
 - !private ["s7CVarArgP", "cities"]
 - !private ["s7CVarArgP", "citiesRef"]
 - !private ["s7CVarArgP", "contains"]
@@ -280,6 +285,8 @@ depends-member:
 - !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "country"]
 - !private ["s7CVarArgP", "currentCity"]
+- ["s7CVarArgP", "currentUser"]
+- ["s7CVarArgP", "database"]
 - !private ["s7CVarArgP", "delegate"]
 - !private ["s7CVarArgP", "desiredAccuracy"]
 - !private ["s7CVarArgP", "dismiss"]
@@ -321,14 +328,18 @@ depends-member:
 - ["s7CVarArgP", "mapViewWillStartRenderingMap"]
 - !private ["s7CVarArgP", "naturalLanguageQuery"]
 - !private ["s7CVarArgP", "navigationController"]
+- !private ["s7CVarArgP", "observe"]
+- !private ["s7CVarArgP", "observeSingleEvent"]
 - !private ["s7CVarArgP", "popViewController"]
 - ["s7CVarArgP", "position"]
 - ["s7CVarArgP", "positionForBar"]
 - !private ["s7CVarArgP", "present"]
 - !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "recognizeTapGesture"]
+- ["s7CVarArgP", "reference"]
 - !private ["s7CVarArgP", "remove"]
 - !private ["s7CVarArgP", "removeAnnotations"]
+- !private ["s7CVarArgP", "removeValue"]
 - !private ["s7CVarArgP", "requestAlwaysAuthorization"]
 - !private ["s7CVarArgP", "requestWhenInUseAuthorization"]
 - !private ["s7CVarArgP", "resignFirstResponder"]
@@ -359,12 +370,16 @@ depends-member:
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "title"]
 - !private ["s7CVarArgP", "titleLabel"]
+- ["s7CVarArgP", "uid"]
+- !private ["s7CVarArgP", "updateChildValues"]
 - !private ["s7CVarArgP", "user"]
 - !private ["s7CVarArgP", "userLocation"]
 - !private ["s7CVarArgP", "userRef"]
+- !private ["s7CVarArgP", "value"]
 - !private ["s7CVarArgP", "view"]
 - !private ["s7CVarArgP", "viewDidAppear"]
 - !private ["s7CVarArgP", "viewDidLoad"]
+- ["10Kingfisher19CacheCostCalculableP", "init"]
 - !private ["Sl", "append"]
 - !private ["Sl", "contains"]
 - !private ["Sl", "count"]
@@ -416,6 +431,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "annotations"]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
 - !private ["s28CustomDebugStringConvertibleP", "async"]
+- ["s28CustomDebugStringConvertibleP", "auth"]
 - !private ["s28CustomDebugStringConvertibleP", "authorizationStatus"]
 - !private ["s28CustomDebugStringConvertibleP", "beginIgnoringInteractionEvents"]
 - !private ["s28CustomDebugStringConvertibleP", "borderColor"]
@@ -426,6 +442,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "center"]
 - !private ["s28CustomDebugStringConvertibleP", "cgColor"]
 - !private ["s28CustomDebugStringConvertibleP", "checkLocationAuthorizationStatus"]
+- !private ["s28CustomDebugStringConvertibleP", "child"]
 - !private ["s28CustomDebugStringConvertibleP", "cities"]
 - !private ["s28CustomDebugStringConvertibleP", "citiesRef"]
 - !private ["s28CustomDebugStringConvertibleP", "contains"]
@@ -436,6 +453,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "country"]
 - !private ["s28CustomDebugStringConvertibleP", "currentCity"]
+- ["s28CustomDebugStringConvertibleP", "currentUser"]
+- ["s28CustomDebugStringConvertibleP", "database"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
 - !private ["s28CustomDebugStringConvertibleP", "desiredAccuracy"]
 - !private ["s28CustomDebugStringConvertibleP", "dismiss"]
@@ -478,6 +497,8 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "mapViewWillStartRenderingMap"]
 - !private ["s28CustomDebugStringConvertibleP", "naturalLanguageQuery"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationController"]
+- !private ["s28CustomDebugStringConvertibleP", "observe"]
+- !private ["s28CustomDebugStringConvertibleP", "observeSingleEvent"]
 - !private ["s28CustomDebugStringConvertibleP", "origin"]
 - !private ["s28CustomDebugStringConvertibleP", "popViewController"]
 - ["s28CustomDebugStringConvertibleP", "position"]
@@ -485,8 +506,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "present"]
 - !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "recognizeTapGesture"]
+- ["s28CustomDebugStringConvertibleP", "reference"]
 - !private ["s28CustomDebugStringConvertibleP", "remove"]
 - !private ["s28CustomDebugStringConvertibleP", "removeAnnotations"]
+- !private ["s28CustomDebugStringConvertibleP", "removeValue"]
 - !private ["s28CustomDebugStringConvertibleP", "requestAlwaysAuthorization"]
 - !private ["s28CustomDebugStringConvertibleP", "requestWhenInUseAuthorization"]
 - !private ["s28CustomDebugStringConvertibleP", "resignFirstResponder"]
@@ -518,9 +541,12 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "title"]
 - !private ["s28CustomDebugStringConvertibleP", "titleLabel"]
+- ["s28CustomDebugStringConvertibleP", "uid"]
+- !private ["s28CustomDebugStringConvertibleP", "updateChildValues"]
 - !private ["s28CustomDebugStringConvertibleP", "user"]
 - !private ["s28CustomDebugStringConvertibleP", "userLocation"]
 - !private ["s28CustomDebugStringConvertibleP", "userRef"]
+- !private ["s28CustomDebugStringConvertibleP", "value"]
 - !private ["s28CustomDebugStringConvertibleP", "view"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidAppear"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
@@ -597,6 +623,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "annotations"]
 - !private ["s23CustomStringConvertibleP", "append"]
 - !private ["s23CustomStringConvertibleP", "async"]
+- ["s23CustomStringConvertibleP", "auth"]
 - !private ["s23CustomStringConvertibleP", "authorizationStatus"]
 - !private ["s23CustomStringConvertibleP", "beginIgnoringInteractionEvents"]
 - !private ["s23CustomStringConvertibleP", "borderColor"]
@@ -607,6 +634,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "center"]
 - !private ["s23CustomStringConvertibleP", "cgColor"]
 - !private ["s23CustomStringConvertibleP", "checkLocationAuthorizationStatus"]
+- !private ["s23CustomStringConvertibleP", "child"]
 - !private ["s23CustomStringConvertibleP", "cities"]
 - !private ["s23CustomStringConvertibleP", "citiesRef"]
 - !private ["s23CustomStringConvertibleP", "contains"]
@@ -617,6 +645,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "country"]
 - !private ["s23CustomStringConvertibleP", "currentCity"]
+- ["s23CustomStringConvertibleP", "currentUser"]
+- ["s23CustomStringConvertibleP", "database"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
 - !private ["s23CustomStringConvertibleP", "desiredAccuracy"]
 - !private ["s23CustomStringConvertibleP", "dismiss"]
@@ -658,14 +688,18 @@ depends-member:
 - ["s23CustomStringConvertibleP", "mapViewWillStartRenderingMap"]
 - !private ["s23CustomStringConvertibleP", "naturalLanguageQuery"]
 - !private ["s23CustomStringConvertibleP", "navigationController"]
+- !private ["s23CustomStringConvertibleP", "observe"]
+- !private ["s23CustomStringConvertibleP", "observeSingleEvent"]
 - !private ["s23CustomStringConvertibleP", "popViewController"]
 - ["s23CustomStringConvertibleP", "position"]
 - ["s23CustomStringConvertibleP", "positionForBar"]
 - !private ["s23CustomStringConvertibleP", "present"]
 - !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "recognizeTapGesture"]
+- ["s23CustomStringConvertibleP", "reference"]
 - !private ["s23CustomStringConvertibleP", "remove"]
 - !private ["s23CustomStringConvertibleP", "removeAnnotations"]
+- !private ["s23CustomStringConvertibleP", "removeValue"]
 - !private ["s23CustomStringConvertibleP", "requestAlwaysAuthorization"]
 - !private ["s23CustomStringConvertibleP", "requestWhenInUseAuthorization"]
 - !private ["s23CustomStringConvertibleP", "resignFirstResponder"]
@@ -696,12 +730,16 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "title"]
 - !private ["s23CustomStringConvertibleP", "titleLabel"]
+- ["s23CustomStringConvertibleP", "uid"]
+- !private ["s23CustomStringConvertibleP", "updateChildValues"]
 - !private ["s23CustomStringConvertibleP", "user"]
 - !private ["s23CustomStringConvertibleP", "userLocation"]
 - !private ["s23CustomStringConvertibleP", "userRef"]
+- !private ["s23CustomStringConvertibleP", "value"]
 - !private ["s23CustomStringConvertibleP", "view"]
 - !private ["s23CustomStringConvertibleP", "viewDidAppear"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["So16FIRDataEventTypeV", "value"]
 - !private ["10Foundation12DataProtocolP", "append"]
 - !private ["10Foundation12DataProtocolP", "contains"]
 - !private ["10Foundation12DataProtocolP", "count"]
@@ -709,6 +747,19 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", "last"]
 - !private ["10Foundation12DataProtocolP", "remove"]
 - !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["So15FIRDataSnapshotC", "value"]
+- ["So11FIRDatabaseC", "database"]
+- ["So11FIRDatabaseC", "reference"]
+- !private ["So16FIRDatabaseQueryC", "child"]
+- !private ["So16FIRDatabaseQueryC", "observe"]
+- !private ["So16FIRDatabaseQueryC", "observeSingleEvent"]
+- !private ["So16FIRDatabaseQueryC", "removeValue"]
+- !private ["So16FIRDatabaseQueryC", "updateChildValues"]
+- !private ["So20FIRDatabaseReferenceC", "child"]
+- !private ["So20FIRDatabaseReferenceC", "observe"]
+- !private ["So20FIRDatabaseReferenceC", "observeSingleEvent"]
+- !private ["So20FIRDatabaseReferenceC", "removeValue"]
+- !private ["So20FIRDatabaseReferenceC", "updateChildValues"]
 - !private ["Se", "addAnnotation"]
 - !private ["Se", "addGestureRecognizer"]
 - !private ["Se", "addSubview"]
@@ -822,6 +873,7 @@ depends-member:
 - !private ["SQ", "annotations"]
 - !private ["SQ", "append"]
 - !private ["SQ", "async"]
+- ["SQ", "auth"]
 - !private ["SQ", "authorizationStatus"]
 - !private ["SQ", "authorizedWhenInUse"]
 - !private ["SQ", "beginIgnoringInteractionEvents"]
@@ -833,6 +885,7 @@ depends-member:
 - !private ["SQ", "center"]
 - !private ["SQ", "cgColor"]
 - !private ["SQ", "checkLocationAuthorizationStatus"]
+- !private ["SQ", "child"]
 - !private ["SQ", "cities"]
 - !private ["SQ", "citiesRef"]
 - !private ["SQ", "contains"]
@@ -843,6 +896,8 @@ depends-member:
 - !private ["SQ", "count"]
 - !private ["SQ", "country"]
 - !private ["SQ", "currentCity"]
+- ["SQ", "currentUser"]
+- ["SQ", "database"]
 - !private ["SQ", "default"]
 - !private ["SQ", "delegate"]
 - !private ["SQ", "desiredAccuracy"]
@@ -888,6 +943,8 @@ depends-member:
 - !private ["SQ", "naturalLanguageQuery"]
 - !private ["SQ", "navigationController"]
 - !private ["SQ", "normal"]
+- !private ["SQ", "observe"]
+- !private ["SQ", "observeSingleEvent"]
 - !private ["SQ", "origin"]
 - !private ["SQ", "popViewController"]
 - ["SQ", "position"]
@@ -895,8 +952,10 @@ depends-member:
 - !private ["SQ", "present"]
 - !private ["SQ", "print"]
 - !private ["SQ", "recognizeTapGesture"]
+- ["SQ", "reference"]
 - !private ["SQ", "remove"]
 - !private ["SQ", "removeAnnotations"]
+- !private ["SQ", "removeValue"]
 - !private ["SQ", "requestAlwaysAuthorization"]
 - !private ["SQ", "requestWhenInUseAuthorization"]
 - !private ["SQ", "resignFirstResponder"]
@@ -929,9 +988,12 @@ depends-member:
 - !private ["SQ", "text"]
 - !private ["SQ", "title"]
 - !private ["SQ", "titleLabel"]
+- ["SQ", "uid"]
+- !private ["SQ", "updateChildValues"]
 - !private ["SQ", "user"]
 - !private ["SQ", "userLocation"]
 - !private ["SQ", "userRef"]
+- !private ["SQ", "value"]
 - !private ["SQ", "view"]
 - !private ["SQ", "viewDidAppear"]
 - !private ["SQ", "viewDidLoad"]
@@ -1008,6 +1070,7 @@ depends-member:
 - !private ["SH", "annotations"]
 - !private ["SH", "append"]
 - !private ["SH", "async"]
+- ["SH", "auth"]
 - !private ["SH", "authorizationStatus"]
 - !private ["SH", "authorizedWhenInUse"]
 - !private ["SH", "beginIgnoringInteractionEvents"]
@@ -1019,6 +1082,7 @@ depends-member:
 - !private ["SH", "center"]
 - !private ["SH", "cgColor"]
 - !private ["SH", "checkLocationAuthorizationStatus"]
+- !private ["SH", "child"]
 - !private ["SH", "cities"]
 - !private ["SH", "citiesRef"]
 - !private ["SH", "contains"]
@@ -1029,6 +1093,8 @@ depends-member:
 - !private ["SH", "count"]
 - !private ["SH", "country"]
 - !private ["SH", "currentCity"]
+- ["SH", "currentUser"]
+- ["SH", "database"]
 - !private ["SH", "default"]
 - !private ["SH", "delegate"]
 - !private ["SH", "desiredAccuracy"]
@@ -1072,14 +1138,18 @@ depends-member:
 - ["SH", "mapViewWillStartRenderingMap"]
 - !private ["SH", "naturalLanguageQuery"]
 - !private ["SH", "navigationController"]
+- !private ["SH", "observe"]
+- !private ["SH", "observeSingleEvent"]
 - !private ["SH", "popViewController"]
 - ["SH", "position"]
 - ["SH", "positionForBar"]
 - !private ["SH", "present"]
 - !private ["SH", "print"]
 - !private ["SH", "recognizeTapGesture"]
+- ["SH", "reference"]
 - !private ["SH", "remove"]
 - !private ["SH", "removeAnnotations"]
+- !private ["SH", "removeValue"]
 - !private ["SH", "requestAlwaysAuthorization"]
 - !private ["SH", "requestWhenInUseAuthorization"]
 - !private ["SH", "resignFirstResponder"]
@@ -1111,12 +1181,31 @@ depends-member:
 - !private ["SH", "text"]
 - !private ["SH", "title"]
 - !private ["SH", "titleLabel"]
+- ["SH", "uid"]
+- !private ["SH", "updateChildValues"]
 - !private ["SH", "user"]
 - !private ["SH", "userLocation"]
 - !private ["SH", "userRef"]
+- !private ["SH", "value"]
 - !private ["SH", "view"]
 - !private ["SH", "viewDidAppear"]
 - !private ["SH", "viewDidLoad"]
+- !private ["10Kingfisher0A10CompatibleP", "beginIgnoringInteractionEvents"]
+- !private ["10Kingfisher0A10CompatibleP", "bounds"]
+- !private ["10Kingfisher0A10CompatibleP", "contentMode"]
+- !private ["10Kingfisher0A10CompatibleP", "endIgnoringInteractionEvents"]
+- !private ["10Kingfisher0A10CompatibleP", "frame"]
+- !private ["10Kingfisher0A10CompatibleP", "imageEdgeInsets"]
+- !private ["10Kingfisher0A10CompatibleP", "imageView"]
+- ["10Kingfisher0A10CompatibleP", "init"]
+- !private ["10Kingfisher0A10CompatibleP", "isHidden"]
+- !private ["10Kingfisher0A10CompatibleP", "layer"]
+- !private ["10Kingfisher0A10CompatibleP", "setImage"]
+- !private ["10Kingfisher0A10CompatibleP", "setTitle"]
+- !private ["10Kingfisher0A10CompatibleP", "shared"]
+- !private ["10Kingfisher0A10CompatibleP", "titleLabel"]
+- !private ["10Kingfisher0A15CompatibleValueP", "isEmpty"]
+- !private ["10Kingfisher0A15CompatibleValueP", "width"]
 - !private ["s25LosslessStringConvertibleP", "isEmpty"]
 - !private ["So12MKAnnotationP", "coordinate"]
 - !private ["So12MKAnnotationP", "init"]
@@ -1483,6 +1572,7 @@ depends-member:
 - !private ["So8NSObjectC", "addSubview"]
 - !private ["So8NSObjectC", "annotations"]
 - !private ["So8NSObjectC", "async"]
+- ["So8NSObjectC", "auth"]
 - !private ["So8NSObjectC", "authorizationStatus"]
 - !private ["So8NSObjectC", "beginIgnoringInteractionEvents"]
 - !private ["So8NSObjectC", "borderColor"]
@@ -1494,8 +1584,9 @@ depends-member:
 - !private ["So8NSObjectC", "center"]
 - !private ["So8NSObjectC", "cgColor"]
 - ["So8NSObjectC", "checkLocationAuthorizationStatus"]
+- !private ["So8NSObjectC", "child"]
 - ["So8NSObjectC", "cities"]
-- !private ["So8NSObjectC", "citiesRef"]
+- ["So8NSObjectC", "citiesRef"]
 - ["So8NSObjectC", "city1ButtonPressed"]
 - ["So8NSObjectC", "city2ButtonPressed"]
 - ["So8NSObjectC", "city3ButtonPressed"]
@@ -1505,6 +1596,8 @@ depends-member:
 - !private ["So8NSObjectC", "cornerRadius"]
 - !private ["So8NSObjectC", "country"]
 - ["So8NSObjectC", "currentCity"]
+- ["So8NSObjectC", "currentUser"]
+- ["So8NSObjectC", "database"]
 - !private ["So8NSObjectC", "delegate"]
 - !private ["So8NSObjectC", "desiredAccuracy"]
 - !private ["So8NSObjectC", "dismiss"]
@@ -1544,13 +1637,17 @@ depends-member:
 - ["So8NSObjectC", "mapViewWillStartRenderingMap"]
 - !private ["So8NSObjectC", "naturalLanguageQuery"]
 - !private ["So8NSObjectC", "navigationController"]
+- !private ["So8NSObjectC", "observe"]
+- !private ["So8NSObjectC", "observeSingleEvent"]
 - !private ["So8NSObjectC", "popViewController"]
 - ["So8NSObjectC", "position"]
 - ["So8NSObjectC", "positionForBar"]
 - !private ["So8NSObjectC", "present"]
 - !private ["So8NSObjectC", "print"]
 - ["So8NSObjectC", "recognizeTapGesture"]
+- ["So8NSObjectC", "reference"]
 - !private ["So8NSObjectC", "removeAnnotations"]
+- !private ["So8NSObjectC", "removeValue"]
 - !private ["So8NSObjectC", "requestAlwaysAuthorization"]
 - !private ["So8NSObjectC", "requestWhenInUseAuthorization"]
 - !private ["So8NSObjectC", "resignFirstResponder"]
@@ -1583,9 +1680,12 @@ depends-member:
 - !private ["So8NSObjectC", "title"]
 - !private ["So8NSObjectC", "titleLabel"]
 - ["So8NSObjectC", "touchesBegan"]
-- !private ["So8NSObjectC", "user"]
+- ["So8NSObjectC", "uid"]
+- !private ["So8NSObjectC", "updateChildValues"]
+- ["So8NSObjectC", "user"]
 - !private ["So8NSObjectC", "userLocation"]
-- !private ["So8NSObjectC", "userRef"]
+- ["So8NSObjectC", "userRef"]
+- !private ["So8NSObjectC", "value"]
 - !private ["So8NSObjectC", "view"]
 - ["So8NSObjectC", "viewDidAppear"]
 - ["So8NSObjectC", "viewDidLoad"]
@@ -1622,6 +1722,7 @@ depends-member:
 - !private ["So8NSObjectP", "addSubview"]
 - !private ["So8NSObjectP", "annotations"]
 - !private ["So8NSObjectP", "async"]
+- ["So8NSObjectP", "auth"]
 - !private ["So8NSObjectP", "authorizationStatus"]
 - !private ["So8NSObjectP", "beginIgnoringInteractionEvents"]
 - !private ["So8NSObjectP", "borderColor"]
@@ -1632,6 +1733,7 @@ depends-member:
 - !private ["So8NSObjectP", "center"]
 - !private ["So8NSObjectP", "cgColor"]
 - !private ["So8NSObjectP", "checkLocationAuthorizationStatus"]
+- !private ["So8NSObjectP", "child"]
 - !private ["So8NSObjectP", "cities"]
 - !private ["So8NSObjectP", "citiesRef"]
 - !private ["So8NSObjectP", "contentMode"]
@@ -1640,6 +1742,8 @@ depends-member:
 - !private ["So8NSObjectP", "cornerRadius"]
 - !private ["So8NSObjectP", "country"]
 - !private ["So8NSObjectP", "currentCity"]
+- ["So8NSObjectP", "currentUser"]
+- ["So8NSObjectP", "database"]
 - !private ["So8NSObjectP", "delegate"]
 - !private ["So8NSObjectP", "desiredAccuracy"]
 - !private ["So8NSObjectP", "dismiss"]
@@ -1679,13 +1783,17 @@ depends-member:
 - ["So8NSObjectP", "mapViewWillStartRenderingMap"]
 - !private ["So8NSObjectP", "naturalLanguageQuery"]
 - !private ["So8NSObjectP", "navigationController"]
+- !private ["So8NSObjectP", "observe"]
+- !private ["So8NSObjectP", "observeSingleEvent"]
 - !private ["So8NSObjectP", "popViewController"]
 - ["So8NSObjectP", "position"]
 - ["So8NSObjectP", "positionForBar"]
 - !private ["So8NSObjectP", "present"]
 - !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "recognizeTapGesture"]
+- ["So8NSObjectP", "reference"]
 - !private ["So8NSObjectP", "removeAnnotations"]
+- !private ["So8NSObjectP", "removeValue"]
 - !private ["So8NSObjectP", "requestAlwaysAuthorization"]
 - !private ["So8NSObjectP", "requestWhenInUseAuthorization"]
 - !private ["So8NSObjectP", "resignFirstResponder"]
@@ -1715,9 +1823,12 @@ depends-member:
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "title"]
 - !private ["So8NSObjectP", "titleLabel"]
+- ["So8NSObjectP", "uid"]
+- !private ["So8NSObjectP", "updateChildValues"]
 - !private ["So8NSObjectP", "user"]
 - !private ["So8NSObjectP", "userLocation"]
 - !private ["So8NSObjectP", "userRef"]
+- !private ["So8NSObjectP", "value"]
 - !private ["So8NSObjectP", "view"]
 - !private ["So8NSObjectP", "viewDidAppear"]
 - !private ["So8NSObjectP", "viewDidLoad"]
@@ -1757,6 +1868,7 @@ depends-member:
 - !private ["Sq", "showsUserLocation"]
 - !private ["Sq", "titleLabel"]
 - !private ["Sq", "userLocation"]
+- ["10Kingfisher11PlaceholderP", "init"]
 - ["4Lamp24ProfileMapViewControllerC", "AnyObject"]
 - ["4Lamp24ProfileMapViewControllerC", "Auth"]
 - ["4Lamp24ProfileMapViewControllerC", "Bool"]
@@ -1799,7 +1911,7 @@ depends-member:
 - ["4Lamp24ProfileMapViewControllerC", "cancelButtonClicked"]
 - ["4Lamp24ProfileMapViewControllerC", "checkLocationAuthorizationStatus"]
 - ["4Lamp24ProfileMapViewControllerC", "cities"]
-- !private ["4Lamp24ProfileMapViewControllerC", "citiesRef"]
+- ["4Lamp24ProfileMapViewControllerC", "citiesRef"]
 - ["4Lamp24ProfileMapViewControllerC", "city1ButtonPressed"]
 - ["4Lamp24ProfileMapViewControllerC", "city2ButtonPressed"]
 - ["4Lamp24ProfileMapViewControllerC", "city3ButtonPressed"]
@@ -1848,8 +1960,8 @@ depends-member:
 - ["4Lamp24ProfileMapViewControllerC", "searchIcon"]
 - ["4Lamp24ProfileMapViewControllerC", "textFieldShouldReturn"]
 - ["4Lamp24ProfileMapViewControllerC", "touchesBegan"]
-- !private ["4Lamp24ProfileMapViewControllerC", "user"]
-- !private ["4Lamp24ProfileMapViewControllerC", "userRef"]
+- ["4Lamp24ProfileMapViewControllerC", "user"]
+- ["4Lamp24ProfileMapViewControllerC", "userRef"]
 - !private ["4Lamp24ProfileMapViewControllerC", "view"]
 - ["4Lamp24ProfileMapViewControllerC", "viewDidAppear"]
 - ["4Lamp24ProfileMapViewControllerC", "viewDidLoad"]
@@ -1874,6 +1986,7 @@ depends-member:
 - !private ["SY", "gray"]
 - !private ["SY", "normal"]
 - !private ["SY", "scaleAspectFit"]
+- !private ["SY", "value"]
 - !private ["So20MKLocalSearchRequestC", "init"]
 - !private ["So20MKLocalSearchRequestC", "naturalLanguageQuery"]
 - !private ["So21MKLocalSearchResponseC", "boundingRegion"]
@@ -2663,7 +2776,7 @@ depends-member:
 - !private ["So11UIResponderC", "center"]
 - ["So11UIResponderC", "checkLocationAuthorizationStatus"]
 - ["So11UIResponderC", "cities"]
-- !private ["So11UIResponderC", "citiesRef"]
+- ["So11UIResponderC", "citiesRef"]
 - ["So11UIResponderC", "city1ButtonPressed"]
 - ["So11UIResponderC", "city2ButtonPressed"]
 - ["So11UIResponderC", "city3ButtonPressed"]
@@ -2736,9 +2849,9 @@ depends-member:
 - ["So11UIResponderC", "textFieldShouldReturn"]
 - !private ["So11UIResponderC", "titleLabel"]
 - ["So11UIResponderC", "touchesBegan"]
-- !private ["So11UIResponderC", "user"]
+- ["So11UIResponderC", "user"]
 - !private ["So11UIResponderC", "userLocation"]
-- !private ["So11UIResponderC", "userRef"]
+- ["So11UIResponderC", "userRef"]
 - !private ["So11UIResponderC", "view"]
 - ["So11UIResponderC", "viewDidAppear"]
 - ["So11UIResponderC", "viewDidLoad"]
@@ -3320,7 +3433,7 @@ depends-member:
 - ["So16UIViewControllerC", "cancelButtonClicked"]
 - ["So16UIViewControllerC", "checkLocationAuthorizationStatus"]
 - ["So16UIViewControllerC", "cities"]
-- !private ["So16UIViewControllerC", "citiesRef"]
+- ["So16UIViewControllerC", "citiesRef"]
 - ["So16UIViewControllerC", "city1ButtonPressed"]
 - ["So16UIViewControllerC", "city2ButtonPressed"]
 - ["So16UIViewControllerC", "city3ButtonPressed"]
@@ -3370,8 +3483,8 @@ depends-member:
 - ["So16UIViewControllerC", "searchIcon"]
 - ["So16UIViewControllerC", "textFieldShouldReturn"]
 - ["So16UIViewControllerC", "touchesBegan"]
-- !private ["So16UIViewControllerC", "user"]
-- !private ["So16UIViewControllerC", "userRef"]
+- ["So16UIViewControllerC", "user"]
+- ["So16UIViewControllerC", "userRef"]
 - !private ["So16UIViewControllerC", "view"]
 - ["So16UIViewControllerC", "viewDidAppear"]
 - ["So16UIViewControllerC", "viewDidLoad"]
@@ -3379,6 +3492,8 @@ depends-member:
 - !private ["So37UIViewControllerAnimatedTransitioningP", "searchBar"]
 - !private ["So37UIViewControllerTransitioningDelegateP", "init"]
 - !private ["So37UIViewControllerTransitioningDelegateP", "searchBar"]
+- ["So7FIRUserC", "uid"]
+- ["So11FIRUserInfoP", "uid"]
 - !private ["s14_ArrayProtocolP", "append"]
 - !private ["s14_ArrayProtocolP", "contains"]
 - !private ["s14_ArrayProtocolP", "count"]
@@ -3455,6 +3570,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addSubview"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "annotations"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "authorizationStatus"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "beginIgnoringInteractionEvents"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "borderColor"]
@@ -3465,6 +3581,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "center"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cgColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "checkLocationAuthorizationStatus"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "child"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cities"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "citiesRef"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "contentMode"]
@@ -3473,6 +3590,8 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cornerRadius"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "country"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "currentCity"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "database"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "desiredAccuracy"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
@@ -3512,13 +3631,17 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "mapViewWillStartRenderingMap"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "naturalLanguageQuery"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "observe"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "observeSingleEvent"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "popViewController"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "position"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "positionForBar"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "recognizeTapGesture"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "reference"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "removeAnnotations"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeValue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "requestAlwaysAuthorization"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "requestWhenInUseAuthorization"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "resignFirstResponder"]
@@ -3548,9 +3671,12 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "titleLabel"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "uid"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "updateChildValues"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "user"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "userLocation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "userRef"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidAppear"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
@@ -3626,6 +3752,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "userLocation"]
 depends-nominal:
 - !private "Sa"
+- "So7FIRAuthC"
 - !private "SK"
 - !private "So7CALayerC"
 - !private "So15CALayerDelegateP"
@@ -3641,6 +3768,7 @@ depends-nominal:
 - "So25CLLocationManagerDelegateP"
 - !private "So11CLPlacemarkC"
 - "s7CVarArgP"
+- "10Kingfisher19CacheCostCalculableP"
 - !private "Sl"
 - !private "SL"
 - !private "So17UIViewContentModeV"
@@ -3648,7 +3776,12 @@ depends-nominal:
 - "s28CustomDebugStringConvertibleP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "So16FIRDataEventTypeV"
 - !private "10Foundation12DataProtocolP"
+- !private "So15FIRDataSnapshotC"
+- "So11FIRDatabaseC"
+- !private "So16FIRDatabaseQueryC"
+- !private "So20FIRDatabaseReferenceC"
 - "Se"
 - !private "So18OS_dispatch_objectC"
 - !private "So17OS_dispatch_queueC"
@@ -3661,6 +3794,8 @@ depends-nominal:
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - "SH"
+- "10Kingfisher0A10CompatibleP"
+- !private "10Kingfisher0A15CompatibleValueP"
 - !private "s25LosslessStringConvertibleP"
 - !private "So12MKAnnotationP"
 - !private "So18MKCoordinateRegiona"
@@ -3687,6 +3822,7 @@ depends-nominal:
 - !private "So9OS_objectC"
 - !private "s9OptionSetP"
 - !private "Sq"
+- "10Kingfisher11PlaceholderP"
 - "4Lamp24ProfileMapViewControllerC"
 - !private "Sk"
 - !private "Sm"
@@ -3754,6 +3890,8 @@ depends-nominal:
 - "So16UIViewControllerC"
 - !private "So37UIViewControllerAnimatedTransitioningP"
 - !private "So37UIViewControllerTransitioningDelegateP"
+- "So7FIRUserC"
+- "So11FIRUserInfoP"
 - !private "s14_ArrayProtocolP"
 - "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
@@ -3795,7 +3933,135 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MapKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POP.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FirebaseInstanceID-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers/Koloda-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/pop-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-umbrella.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSource.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestore.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthCredential.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPBasicAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPSpringAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPCustomAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPDecayAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPPropertyAnimation.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTransaction.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTimestamp.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimationTracer.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFederatedAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGameCenterAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimator.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPVector.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimationExtras.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPLayerExtras.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPDefines.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimatablePropertyTypes.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Headers/Koloda-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Headers/MessageInputBar-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Headers/RangeUISlider-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Headers/MessageKit-Swift.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimationEvent.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuery.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPGeometry.h"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Headers/POPAnimatableProperty.h"
 - "/Users/lindseythompson/Desktop/Lamp/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Koloda/Koloda.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/pop/pop.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageInputBar/MessageInputBar.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/RangeUISlider/RangeUISlider.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/lindseythompson/Desktop/Lamp/DerivedData2/Lamp/Build/Products/Debug-iphonesimulator/MessageKit/MessageKit.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"

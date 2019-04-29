@@ -10,7 +10,6 @@ depends-top-level:
 - !private "AnyObject"
 - "AssignmentPrecedence"
 - "Bool"
-- "BooleanLiteralType"
 - "CastingPrecedence"
 - "DataSnapshot"
 - "DatabaseReference"
@@ -278,4 +277,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "432119ecd6bb8f278a92943fb71ec08e"
+interface-hash: "2659114079b43ba069d9bf0080531126"
