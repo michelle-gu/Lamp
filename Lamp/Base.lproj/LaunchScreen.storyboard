@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,12 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoKO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztd-ev-2nD">
-                                <rect key="frame" x="137" y="301" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-bg" translatesAutoresizingMaskIntoConstraints="NO" id="qts-53-OmU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoKO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztd-ev-2nD">
+                                <rect key="frame" x="137.66666666666666" y="301" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="VD2-hh-Bgo"/>
+                                    <constraint firstAttribute="width" constant="100" id="iC7-ne-P1l"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qts-53-OmU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4Zl-GH-TfM"/>
+                            <constraint firstItem="qts-53-OmU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Esc-vk-Fqk"/>
+                            <constraint firstItem="qts-53-OmU" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Sn9-B9-YNh"/>
+                            <constraint firstAttribute="bottom" secondItem="qts-53-OmU" secondAttribute="bottom" id="lC7-hy-GtS"/>
+                            <constraint firstItem="Ztd-ev-2nD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sRb-n9-RG7"/>
+                            <constraint firstItem="Ztd-ev-2nD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-55" id="ySW-Dj-eJC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -33,6 +47,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LogoKO" width="199" height="242"/>
+        <image name="LogoKO" width="398" height="484"/>
+        <image name="gradient-bg" width="878" height="1471"/>
     </resources>
 </document>
