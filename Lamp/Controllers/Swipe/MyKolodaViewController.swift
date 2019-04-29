@@ -27,11 +27,16 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     var locations: [String] = []
     var universities: [String] = []
     var listGender: [String : Dictionary<String,Bool>] = [:] as! [String : Dictionary]
+    var listLocations: [String : Dictionary<String,Bool>] = [:] as! [String : Dictionary]
+    var listUniversities: [String : Dictionary<String,Bool>] = [:] as! [String : Dictionary]
     var min:Int = 0
     var max:Int = 0
     var matches:Set<String> = Set<String>()
     var filtered:[String] = []
-    var match:Bool = false
+    var idsSet:Set<String> = Set<String>()
+    var idsGenderSet:Set<String> = Set<String>()
+    var idsLocationSet:Set<String> = Set<String>()
+    var idsUniversitiesSet:Set<String> = Set<String>()
     
     // MARK: - Outlets
     @IBOutlet weak var kolodaView: KolodaView!
@@ -47,32 +52,25 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         
         // Get a list of all IDs in the database
         getIds() { (idsArray) in
+            
             self.ids = idsArray
+            
+            // Do stuff to the ids array
+            // Setting our list of ids to filtered idsArray
+            //            self.ids = getFilteredIds(idsArray)
+
+            // Reload the swipe view with our new list
             self.kolodaView.reloadData()
         }
         
-        // TODO: Filter list of all IDs
-        // Filtering from Discovery settings
-//        setUserPref()
-        // Populate a dict with all the "Genders" data
+        setUserPref()
 //        getUsers()
-//        getData()
     }
     
-    // MARK: - Data Retrieval
-//    func getData() {
-//
-//        ref.child("user-profiles").queryOrderedByKey().observe(.value) { snapshot in
-//
-//            self.images = snapshot.children.compactMap { child in
-//                guard let snap = child as? DataSnapshot else { return nil }
-//                return Profile(snapshot: snap)
-//            }
-//
-//            self.kolodaView.reloadData()
-//        }
-//
-//    }
+    func getFilteredIds(ids: [String]) -> [String] {
+        // Code
+        return []
+    }
     
     // Retrieve a list of universities from Firebase
     func getIds(completion: @escaping ([String]) -> Void) {
@@ -89,6 +87,58 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         })
     }
     
+    // MARK: - Data Retrieval
+//    func getData() {
+//
+//        ref.child("user-profiles").queryOrderedByKey().observe(.value) { snapshot in
+//
+//            self.images = snapshot.children.compactMap { child in
+//                guard let snap = child as? DataSnapshot else { return nil }
+//                return Profile(snapshot: snap)
+//            }
+//            for (key, value) in self.listGender{
+//                if self.genders.contains(key){
+//                    for(k, v) in self.listGender[key]!{
+//                        if v && (k != Auth.auth().currentUser?.uid){
+////                            self.ids.append(k)
+//                            self.idsGenderSet.insert(k)
+//                        }
+//                    }
+//                }
+////
+////            self.kolodaView.reloadData()
+////        }
+////
+////    }
+//            }
+//            for (key, value) in self.listLocations{
+//                if self.locations.contains(key){
+//                    for(k, v) in self.listLocations[key]!{
+//                        if v && (k != Auth.auth().currentUser?.uid){
+//                            self.idsLocationSet.insert(k)
+//                        }
+//                    }
+//                }
+//            }
+//            for (key, value) in self.listUniversities{
+//                if self.universities.contains(key){
+//                    for(k, v) in self.listUniversities[key]!{
+//                        if v && (k != Auth.auth().currentUser?.uid){
+//                            self.idsUniversitiesSet.insert(k)
+//                        }
+//                    }
+//                }
+//            }
+//            self.idsSet = self.idsGenderSet.intersection(self.idsLocationSet)
+//            self.idsSet = self.idsSet.intersection(self.idsUniversitiesSet)
+//            self.ids = Array(self.idsSet)
+//            print("these are the valid gender ids (in set form): \(self.idsGenderSet)")
+//            print("these are the valid location ids (in set form): \(self.idsLocationSet)")
+//            print("these are the valid university ids (in set form): \(self.idsUniversitiesSet)")
+//            print("these are the valid ids (in set form): \(self.idsSet)")
+//            print("these are the valid ids (in array form): \(self.ids)")
+            
+
 //    func getIds() {
 //        ref.child("user-profiles").queryOrderedByKey().observe(.value, with: { (snapshot) in
 ////            self.ids = snapshot
@@ -181,6 +231,39 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             //            loc = futureloc
             
         })
+        self.kolodaView.reloadData()
+        
+    }
+    
+    func getUsers(){
+        let user = Auth.auth().currentUser?.uid
+        let userGenders = ref.child("genders")
+        userGenders.observe(.value, with: {(snapshot) in
+            let genderDict = snapshot.value as? [String : AnyObject] ?? [:]
+            for (key, value) in genderDict{
+//                print("this is a list: \(value)")
+                self.listGender[key] = value as! [String : Bool]
+//                print("gendered list of people without knowing their values: \(self.listGender)")
+//                for (k, v) in self.listGender[key]!{
+//                    print("Key: \(k) Value: \(v)")
+//                }
+            }
+        })
+        let userLocations = ref.child("locations")
+        userLocations.observe(.value, with: {(snapshot) in
+            let locationsDict = snapshot.value as? [String : AnyObject] ?? [:]
+            for (key, value) in locationsDict{
+                self.listLocations[key] = value as! [String : Bool]
+            }
+        })
+        let userUniversities = ref.child("universities")
+        userUniversities.observe(.value, with: {(snapshot) in
+            let universitiesDict = snapshot.value as? [String : AnyObject] ?? [:]
+            for (key, value) in universitiesDict{
+                self.listUniversities[key] = value as! [String : Bool]
+            }
+        })
+        
         
     }
     
@@ -237,32 +320,6 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         //don't record for now, will probably change this
         kolodaView.swipe(.left)
         
-    }
-    
-    func checkMatch()-> Bool{
-        let user = Auth.auth().currentUser?.uid
-        let index = kolodaView.currentCardIndex
-//        set up the dictionary of people the other user has swiped on
-        let swipe = ref.child("swipes").child(ids[index]).child(user!)
-        let matchingSelf = ref.child("user-profiles").child(user!).child("matches")
-        let matchingTarget = ref.child("user-profiles").child(ids[index]).child("matches")
-
-        swipe.observe(.value, with: {(snapshot) in
-            let swipingDict = snapshot.value as? [String : AnyObject] ?? [:]
-            let liked = swipingDict["liked"] as? Bool ?? false
-            if liked{
-                let match = [
-                    self.ids[index]: true
-                ]
-                matchingSelf.updateChildValues(match)
-                let match2 = [
-                    user: true
-                ]
-                matchingTarget.updateChildValues(match2)
-//                self.performSegue(withIdentifier: "matchSegue", sender:sender)
-            }
-        })
-        return false
     }
     
     // MARK: - Koloda View Data Source
@@ -365,8 +422,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                     ]
                     matchingTarget.updateChildValues(match2)
                     print("would segue: \(self.ids[index-1])")
-                    //                    self.performSegue(withIdentifier: "matchSegue", sender:sender)
-                    
+                    self.performSegue(withIdentifier: "matchSegue", sender:self)
                 }
                 else{
                     print("would not segue: \(self.ids[index-1])")
@@ -386,12 +442,3 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 
 
 }
-//// MARK: - Koloda Delegate
-//extension MyKolodaViewController: KolodaViewDelegate {
-//}
-
-//// MARK: - Koloda Data Source
-//extension MyKolodaViewController: KolodaViewDataSource {
-//
-//}
-
