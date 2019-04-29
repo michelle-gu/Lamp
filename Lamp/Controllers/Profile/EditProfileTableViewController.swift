@@ -15,6 +15,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     // MARK: - Constants
     // MARK: Database References
     let user = Auth.auth().currentUser?.uid
+    let ref = Database.database().reference()
     let userProfilesRef = Database.database().reference(withPath: "user-profiles")
     let citiesRef = Database.database().reference(withPath: "locations")
     let uniRef = Database.database().reference(withPath: "universities")
@@ -200,10 +201,10 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         // Update filter settings
         for uni in unis {
             if uni == university {
-                uniRef.child(uni).child(user!).setValue(true)
+                ref.child("universities").child(uni).child(user!).setValue(true)
                 userSettingsRef.child("discovery").child("universities").child(uni).setValue(true)
             } else {
-                uniRef.child(uni).child(user!).setValue(false)
+                ref.child("universities").child(uni).child(user!).setValue(false)
                 userSettingsRef.child("discovery").child("universities").child(uni).setValue(false)
             }
         }
@@ -686,7 +687,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     
     // Retrieve a list of universities from Firebase
     func getUniversities(completion: @escaping ([String]) -> Void) {
-        uniRef.observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("universities").observeSingleEvent(of: .value, with: { (snapshot) in
             guard let unisDict = snapshot.value as? [String : AnyObject] else {
                 return completion([])
             }
