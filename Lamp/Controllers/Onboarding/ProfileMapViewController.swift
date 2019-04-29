@@ -282,13 +282,8 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
             cities.append(currentCity)
             
             for currentCity in cities {
-                let locationValues: [String : Any] = [
-                    currentCity : [
-                        user : true
-                    ]
-                ]
                 // updated locations
-                locationRef.updateChildValues(locationValues)
+                locationRef.child(currentCity).child(user!).setValue(true)
                 
                 let values: [String : Any] = [
                     currentCity: true
