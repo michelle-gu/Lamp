@@ -20,11 +20,16 @@ class MyKolodaViewController: UIViewController {
     var locations: [String] = []
     var universities: [String] = []
     var listGender: [String : Dictionary<String,Bool>] = [:] as! [String : Dictionary]
+    var listLocations: [String : Dictionary<String,Bool>] = [:] as! [String : Dictionary]
+    var listUniversities: [String : Dictionary<String,Bool>] = [:] as! [String : Dictionary]
     var min:Int = 0
     var max:Int = 0
     var matches:Set<String> = Set<String>()
     var filtered:[String] = []
-    var match:Bool = false
+    var idsSet:Set<String> = Set<String>()
+    var idsGenderSet:Set<String> = Set<String>()
+    var idsLocationSet:Set<String> = Set<String>()
+    var idsUniversitiesSet:Set<String> = Set<String>()
     
     
     @IBOutlet weak var kolodaView: KolodaView!
@@ -42,7 +47,7 @@ class MyKolodaViewController: UIViewController {
         getUsers()
         getIds()
         getData()
-        
+        self.kolodaView.reloadData()
 //        getIds()
         
     }
@@ -75,11 +80,38 @@ class MyKolodaViewController: UIViewController {
                 if self.genders.contains(key){
                     for(k, v) in self.listGender[key]!{
                         if v && (k != Auth.auth().currentUser?.uid){
-                            self.ids.append(k)
+//                            self.ids.append(k)
+                            self.idsGenderSet.insert(k)
                         }
                     }
                 }
             }
+            for (key, value) in self.listLocations{
+                if self.locations.contains(key){
+                    for(k, v) in self.listLocations[key]!{
+                        if v && (k != Auth.auth().currentUser?.uid){
+                            self.idsLocationSet.insert(k)
+                        }
+                    }
+                }
+            }
+            for (key, value) in self.listUniversities{
+                if self.universities.contains(key){
+                    for(k, v) in self.listUniversities[key]!{
+                        if v && (k != Auth.auth().currentUser?.uid){
+                            self.idsUniversitiesSet.insert(k)
+                        }
+                    }
+                }
+            }
+            self.idsSet = self.idsGenderSet.intersection(self.idsLocationSet)
+            self.idsSet = self.idsSet.intersection(self.idsUniversitiesSet)
+            self.ids = Array(self.idsSet)
+//            print("these are the valid gender ids (in set form): \(self.idsGenderSet)")
+//            print("these are the valid location ids (in set form): \(self.idsLocationSet)")
+//            print("these are the valid university ids (in set form): \(self.idsUniversitiesSet)")
+//            print("these are the valid ids (in set form): \(self.idsSet)")
+//            print("these are the valid ids (in array form): \(self.ids)")
             
 //            for (key, _) in self.idDict {
 //                
@@ -138,6 +170,7 @@ class MyKolodaViewController: UIViewController {
             //            loc = futureloc
             
         })
+        self.kolodaView.reloadData()
         
     }
     
@@ -153,6 +186,20 @@ class MyKolodaViewController: UIViewController {
 //                for (k, v) in self.listGender[key]!{
 //                    print("Key: \(k) Value: \(v)")
 //                }
+            }
+        })
+        let userLocations = ref.child("locations")
+        userLocations.observe(.value, with: {(snapshot) in
+            let locationsDict = snapshot.value as? [String : AnyObject] ?? [:]
+            for (key, value) in locationsDict{
+                self.listLocations[key] = value as! [String : Bool]
+            }
+        })
+        let userUniversities = ref.child("universities")
+        userUniversities.observe(.value, with: {(snapshot) in
+            let universitiesDict = snapshot.value as? [String : AnyObject] ?? [:]
+            for (key, value) in universitiesDict{
+                self.listUniversities[key] = value as! [String : Bool]
             }
         })
         
@@ -216,33 +263,7 @@ class MyKolodaViewController: UIViewController {
         
     }
     
-    func checkMatch()-> Bool{
-        let user = Auth.auth().currentUser?.uid
-        let index = kolodaView.currentCardIndex
-//        set up the dictionary of people the other user has swiped on
-        let swipe = ref.child("swipes").child(ids[index]).child(user!)
-        let matchingSelf = ref.child("user-profiles").child(user!).child("matches")
-        let matchingTarget = ref.child("user-profiles").child(ids[index]).child("matches")
-
-        swipe.observe(.value, with: {(snapshot) in
-            let swipingDict = snapshot.value as? [String : AnyObject] ?? [:]
-            let liked = swipingDict["liked"] as? Bool ?? false
-            if liked{
-                let match = [
-                    self.ids[index]: true
-                ]
-                matchingSelf.updateChildValues(match)
-                let match2 = [
-                    user: true
-                ]
-                matchingTarget.updateChildValues(match2)
-//                self.performSegue(withIdentifier: "matchSegue", sender:sender)
-
-            }
-
-        })
-        return false
-    }
+    
 
     /*
     // MARK: - Navigation
