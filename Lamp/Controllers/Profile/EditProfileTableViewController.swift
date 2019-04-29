@@ -198,13 +198,13 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         }
         
         // Add user's university to universities and update filter settings
-        uniRef.child(uni).child(user!).setValue(true)
-        userSettingsRef.child("discovery").child("universities").child(uni).setValue(true)
+        uniRef.child(university).child(user!).setValue(true)
+        userSettingsRef.child("discovery").child("universities").child(university).setValue(true)
         // Set others to false
-        for university in unis {
-            if university != uni {
-                uniRef.child(university).child(user!).setValue(false)
-                userSettingsRef.child("discovery").child("universities").child(university).setValue(false)
+        for uni in unis {
+            if uni != university {
+                uniRef.child(uni).child(user!).setValue(false)
+                userSettingsRef.child("discovery").child("universities").child(uni).setValue(false)
             }
         }
 
