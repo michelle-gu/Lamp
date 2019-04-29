@@ -61,9 +61,9 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ProfileLocationViewController.viewTapped(gestureRecognizer:)))
         view.addGestureRecognizer(tapGesture)
         
-        self.mapButton.setTitle("Where are you moving?", for: .normal)
+        self.mapButton.setTitle(" Where are you moving?", for: .normal)
         self.mapButton.setTitleColor(UIColor(red: 0.78, green: 0.78, blue: 0.80, alpha: 1), for: .normal)
-        self.mapButton.layer.borderWidth = 0.25
+        self.mapButton.layer.borderWidth = 0.50
         self.mapButton.layer.cornerRadius = self.mapButton.bounds.height / 5
         self.mapButton.layer.borderColor = UIColor(red: 0.78, green: 0.78, blue: 0.80, alpha: 1).cgColor
         
@@ -110,7 +110,7 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
             let futureLoc = mapButton.titleLabel?.text,
             let occupation = occupationTextField.text,
             uni.count > 0,
-            futureLoc != "Where are you moving?",
+            futureLoc != " Where are you moving?",
             occupation.count > 0
             else {
                 let alert = UIAlertController(
