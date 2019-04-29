@@ -19,6 +19,7 @@ class MyKolodaViewController: UIViewController {
     var genders: [String] = []
     var locations: [String] = []
     var universities: [String] = []
+    var listGender: [String : Dictionary<String,Bool>] = [:] as! [String : Dictionary]
     var min:Int = 0
     var max:Int = 0
     var matches:Set<String> = Set<String>()
@@ -37,8 +38,10 @@ class MyKolodaViewController: UIViewController {
         
         setUserPref()
 //        filtering()
+        getUsers()
         getIds()
         getData()
+        
 //        getIds()
         
     }
@@ -67,20 +70,26 @@ class MyKolodaViewController: UIViewController {
 //            for value in self.filtered{
 //                self.ids.append(value)
 //            }
-            for (key, _) in self.idDict {
-                if key != Auth.auth().currentUser?.uid{
-//                    var k:String = ""
-                    let potentialMatch = self.ref.child("user-profiles").child(key).child("profile")
-                    potentialMatch.observe(.value, with: {(snapshot) in
-                        let matchDict = snapshot.value as? [String: AnyObject] ?? [:]
-                        if self.genders.contains(matchDict["gender"] as! String) {
-                            self.ids.append(key)
+            for (key, value) in self.listGender{
+                if self.genders.contains(key){
+                    for(k, v) in self.listGender[key]!{
+                        if v && (k != Auth.auth().currentUser?.uid){
+                            self.ids.append(k)
                         }
-                    })
-                    self.ids.append(key)
-                print("These are the ids: \(self.ids)")
+                    }
                 }
             }
+            
+//            for (key, _) in self.idDict {
+//                
+//                
+//                if key != Auth.auth().currentUser?.uid{
+////                    var k:String = ""
+//                   
+//                    self.ids.append(key)
+//                print("These are the ids: \(self.ids)")
+//                }
+//            }
         })
         
         self.kolodaView.reloadData()
@@ -130,6 +139,26 @@ class MyKolodaViewController: UIViewController {
         })
         
     }
+    
+    func getUsers(){
+        let user = Auth.auth().currentUser?.uid
+        let userGenders = ref.child("genders")
+        userGenders.observe(.value, with: {(snapshot) in
+            let genderDict = snapshot.value as? [String : AnyObject] ?? [:]
+            for (key, value) in genderDict{
+//                print("this is a list: \(value)")
+                self.listGender[key] = value as! [String : Bool]
+//                print("gendered list of people without knowing their values: \(self.listGender)")
+//                for (k, v) in self.listGender[key]!{
+//                    print("Key: \(k) Value: \(v)")
+//                }
+            }
+        })
+        
+        
+    }
+    
+    
     
     func filtering(){
         //check each of the lists and labels to make sets
