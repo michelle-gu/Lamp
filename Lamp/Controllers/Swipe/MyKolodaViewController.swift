@@ -63,7 +63,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             self.kolodaView.reloadData()
         }
         
-        setUserPref()
+//        setUserPref()
 //        getUsers()
     }
     
@@ -189,15 +189,12 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 //    }
 
     // Filtering
-    func setUserPref(){
+    func setUserPref(completion: @escaping ([String]) -> Void){
         let user = Auth.auth().currentUser?.uid
         let preferences = ref.child("user-profiles").child(user!).child("settings").child("discovery")
         preferences.observe(.value, with: {(snapshot) in
             let prefDict = snapshot.value as? [String : AnyObject] ?? [:]
-            //let min and max age preferences to filter by
-            let ageMin = prefDict["ageMin"]
-            let ageMax = prefDict["ageMax"]
-            //get a list of the preferred future locations
+            
             let futureLoc = self.ref.child("user-profiles").child(user!).child("settings").child("discovery").child("futureLoc")
             futureLoc.observe(.value, with: {(snapshot) in
                 let locDict = snapshot.value as? [String : AnyObject] ?? [:]
@@ -224,11 +221,8 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                     self.universities.append(key)
                 }
             })
-            
-            
-            self.min = ageMin as! Int
-            self.max = ageMax as! Int
             //            loc = futureloc
+            completion(self.locations)
             
         })
         self.kolodaView.reloadData()
