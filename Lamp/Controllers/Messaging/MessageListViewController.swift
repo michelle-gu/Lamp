@@ -124,7 +124,6 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
         // goes through members of channel
         members.queryOrderedByKey().observe(.value, with: { (snapshot) in
             self.membersDict = snapshot.value as? [String : NSObject] ?? [:]
-            print("membersDict snapshot = \(snapshot)")
             
             // loop through all members (two) ids to dict
             var matchUserId = "nil"

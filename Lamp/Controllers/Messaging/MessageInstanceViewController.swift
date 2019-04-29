@@ -73,8 +73,10 @@ class MessageInstanceViewController: MessagesViewController {
     
     // sends back last message for the Message List VC to update values
     override func viewWillDisappear(_ animated: Bool) {
-        let lastMessage = messages[messages.endIndex - 1]
-        messageDelegate.updateChannelInfo(lastMessage: lastMessage, channelId: channelId)
+        let index = messages.endIndex - 1
+        if (index >= 0 || index < messages.count) {
+            
+        }
     }
     
     // MARK: Helpers
@@ -86,6 +88,9 @@ class MessageInstanceViewController: MessagesViewController {
                 print("Error sending message: \(e.localizedDescription)")
                 return
             }
+            // if new message gets sent, update channel details by passing data through delegate
+            let lastMessage = self.messages[self.messages.endIndex - 1]
+            self.messageDelegate.updateChannelInfo(lastMessage: lastMessage, channelId: self.channelId)
             self.messagesCollectionView.scrollToBottom() // this works
         }
     }
@@ -230,8 +235,6 @@ extension MessageInstanceViewController: MessageInputBarDelegate {
         // creates message form input bar and saves to db
         let message = Message(userId: userId, content: text)
         save(message)
-        
-        print("**** THIS RUNS *****")
         
         // clears message input bar
         inputBar.inputTextView.text = ""

@@ -14,6 +14,8 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "!"
 - !private "-"
+- !private "<"
+- !private ">="
 - !private "??"
 - "AssignmentPrecedence"
 - !private "Auth"
@@ -55,6 +57,7 @@ depends-top-level:
 - !private "UIImageView"
 - !private "UnicodeScalarType"
 - !private "print"
+- !private "||"
 depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "contains"]
