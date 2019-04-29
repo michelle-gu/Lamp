@@ -14,10 +14,12 @@ import FirebaseFirestore
 class MessageListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageSentDelegate {
     
     var channelDict: [String : NSObject] = [:]
-    
+    var membersDict: [String : NSObject] = [:]
+
     // user match list
     private var channelIds: [String] = []
-    
+    private var memberIds: [String] = []
+
     // MARK: Properties
     var ref: DatabaseReference!
     
@@ -42,9 +44,7 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
     // MARK: Message Delegate
     
     // update specific channels message
-    func updateChannelInfo(lastMessage: Message, channelId: String) {
-        print("DATE = \(lastMessage.sentDate)")
-        
+    func updateChannelInfo(lastMessage: Message, channelId: String) {        
         // convert date to time HH:mm aa
         let time = convertTime(timestamp: lastMessage.sentDate)
         
@@ -100,26 +100,55 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
         // create a new cell if needed or reuse an old one
         let cell = tableView.dequeueReusableCell(withIdentifier: customTableViewCellIdentifier, for: indexPath as IndexPath) as! MessageTableViewCell
         
-        ref = Database.database().reference().child("messaging").child("channels")
+        ref = Database.database().reference().child("messaging")
         
         let channelId = channelIds[indexPath.row]
         
-        let currentChannel = ref.child(channelId).child("channel")
-        
+        // set channel detailed attributes (last message, time)
+        let currentChannel = ref.child("channels").child(channelId).child("channel")
         currentChannel.observe(.value, with: { (snapshot) in
             let channelDict = snapshot.value as? [String : AnyObject] ?? [:]
-            
-            // set channel title
-            let channelName = channelDict["title"] as! String
-            cell.nameLabel.text = channelName
-            
+            // set channel last message
             let channelMessage = channelDict["last-message"] as! String
             cell.lastMessageLabel.text = channelMessage
-            
+            // set channel timestamp
             let time = channelDict["time"] as! String
             cell.timeLabel.text = time
-
         })
+        
+        // find match id
+        let currentUserId = Auth.auth().currentUser?.uid
+        let members = ref.child("members").child(channelId)
+        
+        // goes through members of channel
+        members.queryOrderedByKey().observe(.value, with: { (snapshot) in
+            self.membersDict = snapshot.value as? [String : NSObject] ?? [:]
+            print("membersDict snapshot = \(snapshot)")
+            
+            // loop through all members (two) ids to dict
+            var matchUserId = "nil"
+            for (key, _) in self.membersDict {
+                if key != currentUserId {
+                    matchUserId = key
+                }
+            }
+            
+            // set channel details to match user info (profile pic, title)
+            let matchProfileRef = Database.database().reference().child("user-profiles").child(matchUserId).child("profile")
+            matchProfileRef.observe(.value, with: { (snapshot) in
+                let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+                
+                // set channel title
+                let matchName = profileDict["firstName"] as! String
+                cell.nameLabel.text = matchName
+                
+                // set channel profile pic
+                //            let channelMessage = profileDict["last-message"] as! String
+                //            cell.lastMessageLabel.text = channelMessage
+                
+            })
+        })
+        
         return cell
     }
     

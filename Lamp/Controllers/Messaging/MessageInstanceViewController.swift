@@ -231,6 +231,8 @@ extension MessageInstanceViewController: MessageInputBarDelegate {
         let message = Message(userId: userId, content: text)
         save(message)
         
+        print("**** THIS RUNS *****")
+        
         // clears message input bar
         inputBar.inputTextView.text = ""
     }
