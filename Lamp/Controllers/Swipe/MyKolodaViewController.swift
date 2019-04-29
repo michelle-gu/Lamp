@@ -226,8 +226,8 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             })
             
             
-            self.min = ageMin as! Int
-            self.max = ageMax as! Int
+//            self.min = ageMin as! Int
+//            self.max = ageMax as! Int
             //            loc = futureloc
             
         })
