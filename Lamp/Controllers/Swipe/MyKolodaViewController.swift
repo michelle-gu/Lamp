@@ -123,6 +123,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         }
         for (key, value) in self.listUniversities{
             if self.universities.contains(key){
+                print("these are valid universities: \(key)")
                 for(k, v) in self.listUniversities[key]!{
                     if v && (k != Auth.auth().currentUser?.uid){
                         self.idsUniversitiesSet.insert(k)
@@ -269,8 +270,11 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         prefLoc.observe(.value, with: {(snapshot) in
             let locDict = snapshot.value as? [String : AnyObject] ?? [:]
             var l:[String] = []
-            for (key,_) in locDict{
-                l.append(key)
+            for (key,value) in locDict{
+                let v = value as? Bool ?? false
+                if v{
+                    l.append(key)
+                }
             }
             completion(l)
         })
@@ -281,8 +285,11 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         prefGen.observe(.value, with: {(snapshot) in
             let genDict = snapshot.value as? [String : AnyObject] ?? [:]
             var g:[String] = []
-            for (key,_) in genDict{
-                g.append(key)
+            for (key,value) in genDict{
+                let v = value as? Bool ?? false
+                if v {
+                    g.append(key)
+                }
             }
             completion(g)
         })
@@ -293,8 +300,11 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         prefUni.observe(.value, with: {(snapshot) in
             let uniDict = snapshot.value as? [String : AnyObject] ?? [:]
             var u:[String] = []
-            for (key,_) in uniDict{
-                u.append(key)
+            for (key,value) in uniDict{
+                let v = value as? Bool ?? false
+                if v {
+                    u.append(key)
+                }
             }
             completion(u)
         })
