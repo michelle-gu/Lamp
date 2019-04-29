@@ -333,11 +333,22 @@ extension MyKolodaViewController: KolodaViewDataSource {
         let card:CardView =  CardView.create()
 
         let profile = ref.child("user-profiles").child(ids[index]).child("profile")
-        print("This id is crashing: \(ids[index])")
         profile.observe(.value, with: {(snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
-            let firstName = profileDict["firstName"] as! String
-            let job:String = profileDict["occupation"] as! String
+            if let firstName = profileDict["firstName"] as? String {
+                card.nameLabel.text = firstName
+            }
+            if let job = profileDict["occupation"] as? String {
+                card.jobLabel.text = job
+            }
+            
+            if let profilePicVal = profileDict["profilePicture"] as? String {
+                if profilePicVal != "" {
+                    let profilePicURL = URL(string: profilePicVal)
+                    card.image.kf.setImage(with: profilePicURL)
+                }
+            }
+
             var location:String = ""
             let locationList = self.ref.child("user-profiles").child(self.ids[index]).child("profile").child("futureLoc")
             locationList.observe(.value, with: {(snapshot) in
@@ -354,10 +365,7 @@ extension MyKolodaViewController: KolodaViewDataSource {
                 }
                 card.locationLabel.text = location
             })
-//            //let location = "Austin"
-            card.image.image = UIImage(named: "empty")
-            card.nameLabel.text = firstName
-            card.jobLabel.text = job
+            //            TODO: //let location = "Austin"
             card.locationLabel.text = location
             
         })

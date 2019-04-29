@@ -15,6 +15,7 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     // MARK: - Constants
     // MARK: Database References
     let user = Auth.auth().currentUser?.uid
+    let ref = Database.database().reference()
     let userProfilesRef = Database.database().reference(withPath: "user-profiles")
     let citiesRef = Database.database().reference(withPath: "locations")
     let uniRef = Database.database().reference(withPath: "universities")
@@ -152,10 +153,10 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         // Update filter settings
         for university in unis {
             if university == uni {
-                uniRef.child(university).child(user!).setValue(true)
+                ref.child("universities").child(university).child(user!).setValue(true)
                 userSettingsRef.child("discovery").child("universities").child(university).setValue(true)
             } else {
-                uniRef.child(university).child(user!).setValue(false)
+                ref.child("universities").child(university).child(user!).setValue(false)
                 userSettingsRef.child("discovery").child("universities").child(university).setValue(false)
             }
         }
