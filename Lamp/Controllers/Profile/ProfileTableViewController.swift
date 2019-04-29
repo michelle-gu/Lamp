@@ -26,7 +26,7 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var occupationLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var uniLabel: UILabel!
-    @IBOutlet weak var bioLabel: UILabel!
+    @IBOutlet weak var bioLabel: UITextView!
     @IBOutlet weak var budgetLabel: UILabel!
     @IBOutlet weak var numBedroomsLabel: UILabel!
     @IBOutlet weak var petsLabel: UILabel!
@@ -132,7 +132,13 @@ class ProfileTableViewController: UITableViewController {
                 self.occupationLabel.text = occupationVal
             }
             if let bioVal = profileDict["bio"] as? String {
-                self.setProfileInfo(label: self.bioLabel, text: bioVal)
+                if bioVal == "" {
+                    self.bioLabel.textColor = UIColor.lightGray
+                    self.bioLabel.text = "Not specified"
+                } else {
+                    self.bioLabel.textColor = UIColor.black
+                    self.bioLabel.text = bioVal
+                }
             }
             if let budgetVal = profileDict["budget"] as? Int {
                 switch budgetVal {

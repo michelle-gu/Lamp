@@ -344,6 +344,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                     self.universities.append(key)
                 }
             })
+          
+//            self.min = ageMin as! Int
+//            self.max = ageMax as! Int
             //            loc = futureloc
             print("This is comp: \(comp)")
             completion(comp)
