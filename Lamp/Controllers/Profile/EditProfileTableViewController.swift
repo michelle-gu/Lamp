@@ -30,7 +30,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     var allCities: [String] = []
     var cities: [String] = []
     var unis: [String] = []
-    var genders: [String] = []
+    var genders: [String] = ["Female", "Male", "Other", "Prefer not to Say"]
     
     // MARK: - Outlets
     @IBOutlet weak var profilePicView: UIImageView!
@@ -470,10 +470,6 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         // Populate genders, unis, cities, and all cities arrays
-        getGenders() { (gendersArray) in
-            self.genders = gendersArray
-        }
-        
         getUniversities() { (unisArray) in
             self.unis = unisArray
         }
@@ -687,21 +683,6 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         })
     }
     
-    // Retrieve a list of genders from Firebase
-    func getGenders(completion: @escaping ([String]) -> Void) {
-        gendersRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let gendersDict = snapshot.value as? [String : AnyObject] else {
-                return completion([])
-            }
-            
-            var gendersArray: [String] = []
-            for gender in gendersDict {
-                gendersArray.append(gender.key)
-            }
-            gendersArray.sort()
-            completion(gendersArray)
-        })
-    }
     
     // Retrieve a list of universities from Firebase
     func getUniversities(completion: @escaping ([String]) -> Void) {
