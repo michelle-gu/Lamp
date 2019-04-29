@@ -41,16 +41,16 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
     }
     func rangeChangeFinished(minValueSelected: CGFloat, maxValueSelected: CGFloat, slider: RangeUISlider) {
         let discoverySettingsRef = userProfilesRef.child(user!).child("settings").child("discovery")
-        let values = ["ageMin": minValueSelected,
-                      "ageMax": maxValueSelected]
+        let values = ["ageMin": Int(minValueSelected),
+                      "ageMax": Int(maxValueSelected)]
         discoverySettingsRef.updateChildValues(values)
     }
     
     @IBAction func maxDistanceSliderChanged(_ sender: Any) {
-        let maxDistance = maxDistanceSlider.value
+        let maxDistance = Int(maxDistanceSlider.value)
         let discoverySettingsRef = userProfilesRef.child(user!).child("settings").child("discovery")
         let values = ["maxDistance": maxDistance]
-        maxDistanceValueLabel.text = "\(Int(maxDistance))"
+        maxDistanceValueLabel.text = "\(maxDistance)"
         discoverySettingsRef.updateChildValues(values)
     }
     

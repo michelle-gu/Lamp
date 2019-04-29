@@ -137,7 +137,7 @@ class ProfileTableViewController: UITableViewController {
             if let budgetVal = profileDict["budget"] as? Int {
                 switch budgetVal {
                 case 500:
-                    self.setProfileInfo(label: self.budgetLabel, text: "$500-")
+                    self.setProfileInfo(label: self.budgetLabel, text: "< $500")
                 case 3000:
                     self.setProfileInfo(label: self.budgetLabel, text: "$3000+")
                 default:
