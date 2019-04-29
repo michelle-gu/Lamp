@@ -299,7 +299,7 @@ extension MyKolodaViewController: KolodaViewDelegate {
                     ]
                     matchingTarget.updateChildValues(match2)
                     print("would segue: \(self.ids[index-1])")
-//                    self.performSegue(withIdentifier: "matchSegue", sender:sender)
+                    self.performSegue(withIdentifier: "matchSegue", sender:self)
                     
                 }
                 else{
