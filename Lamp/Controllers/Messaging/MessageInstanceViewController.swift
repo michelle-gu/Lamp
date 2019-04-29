@@ -12,7 +12,15 @@ import MessageKit
 import MessageInputBar
 import FirebaseFirestore
 
+// Message protocol to send information back to Message List View Contoller
+protocol MessageSentDelegate {
+    func updateChannelInfo(lastMessage: Message, channelId: String)
+}
+
 class MessageInstanceViewController: MessagesViewController {
+    
+    // specific delegate for message
+    var messageDelegate: MessageSentDelegate!
 
     var profileRef: DatabaseReference!
     
@@ -26,7 +34,7 @@ class MessageInstanceViewController: MessagesViewController {
     private var messages: [Message] = []
     private var messageListener: ListenerRegistration?
     
-    private let channelId: String = "FK3etvRW7SmKraOgQB6L" // TO DO: Pass channel ID!!
+    var channelId: String = "" // TO DO: Pass channel ID!!
     
     // clean up for listener
     deinit {
@@ -63,6 +71,13 @@ class MessageInstanceViewController: MessagesViewController {
         styleChatRoom()
     }
     
+    // sends back last message for the Message List VC to update values
+    override func viewWillDisappear(_ animated: Bool) {
+        print("In view disappear")
+        let lastMessage = messages[messages.endIndex - 1]
+        messageDelegate.updateChannelInfo(lastMessage: lastMessage, channelId: channelId)
+    }
+    
     // MARK: Helpers
     
     // saves text from messageInputBar to database
@@ -82,6 +97,7 @@ class MessageInstanceViewController: MessagesViewController {
             return
         }
         messages.append(message)
+        // message passed through the delegate to Message List VC
         messagesCollectionView.reloadData()
     }
     

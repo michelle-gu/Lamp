@@ -105,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07F98075227695C100FB5AAD /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				07AB869F224921D9001EE449 /* MessageListViewController.swift */,
+				07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */,
+			);
+			path = Messaging;
+			sourceTree = "<group>";
+		};
 		746D53F767B4961D1D89C5E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,14 +178,13 @@
 		B6B897102233021D00164801 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				07F98075227695C100FB5AAD /* Messaging */,
 				B6E77A322272416C00AA7756 /* Onboarding */,
 				B6165F442270428F00DFF8D2 /* Profile */,
 				B62C34E9225558A000C5348F /* Settings */,
 				9554507F2257FC94003C4448 /* MyKolodaViewController.swift */,
 				07B43E6F22348D0900BB8548 /* CardsViewController.swift */,
 				07131721224554F3000CDD33 /* MatchMessageViewController.swift */,
-				07AB869F224921D9001EE449 /* MessageListViewController.swift */,
-				07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */,
 				B645153E22757FA500F58C96 /* UserProfileTableViewController.swift */,
 			);
 			path = Controllers;

@@ -1,14 +1,19 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "MessageSentDelegate"
 - "MessageInstanceViewController"
 provides-nominal:
+- "4Lamp19MessageSentDelegateP"
 - "4Lamp29MessageInstanceViewControllerC"
 provides-member:
+- ["4Lamp19MessageSentDelegateP", ""]
 - ["4Lamp29MessageInstanceViewControllerC", ""]
 provides-dynamic-lookup:
 - "viewDidLoad"
+- "viewWillDisappear"
 depends-top-level:
 - !private "!"
+- !private "-"
 - !private "??"
 - "AssignmentPrecedence"
 - !private "Auth"
@@ -21,13 +26,16 @@ depends-top-level:
 - "DatabaseReference"
 - "DocumentChange"
 - "Firestore"
+- "FloatLiteralType"
 - "IndexPath"
 - "Int"
+- "IntegerLiteralType"
 - "ListenerRegistration"
 - "Message"
 - "MessageInputBar"
 - "MessageInputBarDelegate"
 - "MessageInstanceViewController"
+- "MessageSentDelegate"
 - "MessageStyle"
 - "MessageType"
 - "MessagesCollectionView"
@@ -39,6 +47,7 @@ depends-top-level:
 - "Sender"
 - "Storage"
 - "String"
+- "StringLiteralType"
 - "TernaryPrecedence"
 - "UIColor"
 - !private "UIFont"
@@ -50,6 +59,7 @@ depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "contains"]
 - !private ["Sa", "count"]
+- !private ["Sa", "endIndex"]
 - !private ["Sa", "forEach"]
 - !private ["Sa", "joined"]
 - !private ["Sa", "subscript"]
@@ -59,6 +69,7 @@ depends-member:
 - !private ["SK", "append"]
 - !private ["SK", "contains"]
 - !private ["SK", "count"]
+- !private ["SK", "endIndex"]
 - !private ["SK", "forEach"]
 - !private ["SK", "joined"]
 - !private ["SK", "section"]
@@ -120,6 +131,7 @@ depends-member:
 - !private ["s7CVarArgP", "document"]
 - !private ["s7CVarArgP", "documentChanges"]
 - ["s7CVarArgP", "enabledDetectors"]
+- !private ["s7CVarArgP", "endIndex"]
 - ["s7CVarArgP", "firestore"]
 - ["s7CVarArgP", "footerViewSize"]
 - !private ["s7CVarArgP", "forEach"]
@@ -138,6 +150,7 @@ depends-member:
 - !private ["s7CVarArgP", "maintainPositionOnKeyboardFrameChanged"]
 - ["s7CVarArgP", "messageBottomLabelAttributedText"]
 - ["s7CVarArgP", "messageBottomLabelHeight"]
+- !private ["s7CVarArgP", "messageDelegate"]
 - ["s7CVarArgP", "messageFooterView"]
 - ["s7CVarArgP", "messageForItem"]
 - ["s7CVarArgP", "messageHeaderView"]
@@ -179,6 +192,7 @@ depends-member:
 - !private ["Sl", "append"]
 - !private ["Sl", "contains"]
 - !private ["Sl", "count"]
+- !private ["Sl", "endIndex"]
 - !private ["Sl", "forEach"]
 - !private ["Sl", "joined"]
 - !private ["Sl", "section"]
@@ -191,6 +205,7 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "append"]
 - !private ["10Foundation15ContiguousBytesP", "contains"]
 - !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "endIndex"]
 - !private ["10Foundation15ContiguousBytesP", "forEach"]
 - !private ["10Foundation15ContiguousBytesP", "joined"]
 - !private ["10Foundation15ContiguousBytesP", "subscript"]
@@ -233,6 +248,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "document"]
 - !private ["s28CustomDebugStringConvertibleP", "documentChanges"]
 - ["s28CustomDebugStringConvertibleP", "enabledDetectors"]
+- !private ["s28CustomDebugStringConvertibleP", "endIndex"]
 - ["s28CustomDebugStringConvertibleP", "firestore"]
 - ["s28CustomDebugStringConvertibleP", "footerViewSize"]
 - !private ["s28CustomDebugStringConvertibleP", "forEach"]
@@ -251,6 +267,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "maintainPositionOnKeyboardFrameChanged"]
 - ["s28CustomDebugStringConvertibleP", "messageBottomLabelAttributedText"]
 - ["s28CustomDebugStringConvertibleP", "messageBottomLabelHeight"]
+- !private ["s28CustomDebugStringConvertibleP", "messageDelegate"]
 - ["s28CustomDebugStringConvertibleP", "messageFooterView"]
 - ["s28CustomDebugStringConvertibleP", "messageForItem"]
 - ["s28CustomDebugStringConvertibleP", "messageHeaderView"]
@@ -286,6 +303,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "tintColor"]
 - !private ["s28CustomDebugStringConvertibleP", "titleView"]
 - !private ["s28CustomDebugStringConvertibleP", "uid"]
+- !private ["s28CustomDebugStringConvertibleP", "updateChannelInfo"]
 - !private ["s28CustomDebugStringConvertibleP", "userId"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - !private ["s28CustomDebugStringConvertibleP", "widthAnchor"]
@@ -293,11 +311,13 @@ depends-member:
 - !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "contains"]
 - !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "endIndex"]
 - !private ["s17CustomReflectableP", "forEach"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "joined"]
 - !private ["s17CustomReflectableP", "section"]
 - !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "updateChannelInfo"]
 - !private ["s17CustomReflectableP", "zero"]
 - !private ["s23CustomStringConvertibleP", "Auth"]
 - !private ["s23CustomStringConvertibleP", "CGSize"]
@@ -340,6 +360,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "document"]
 - !private ["s23CustomStringConvertibleP", "documentChanges"]
 - ["s23CustomStringConvertibleP", "enabledDetectors"]
+- !private ["s23CustomStringConvertibleP", "endIndex"]
 - ["s23CustomStringConvertibleP", "firestore"]
 - ["s23CustomStringConvertibleP", "footerViewSize"]
 - !private ["s23CustomStringConvertibleP", "forEach"]
@@ -358,6 +379,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "maintainPositionOnKeyboardFrameChanged"]
 - ["s23CustomStringConvertibleP", "messageBottomLabelAttributedText"]
 - ["s23CustomStringConvertibleP", "messageBottomLabelHeight"]
+- !private ["s23CustomStringConvertibleP", "messageDelegate"]
 - ["s23CustomStringConvertibleP", "messageFooterView"]
 - ["s23CustomStringConvertibleP", "messageForItem"]
 - ["s23CustomStringConvertibleP", "messageHeaderView"]
@@ -399,6 +421,7 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", "append"]
 - !private ["10Foundation12DataProtocolP", "contains"]
 - !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "endIndex"]
 - !private ["10Foundation12DataProtocolP", "forEach"]
 - !private ["10Foundation12DataProtocolP", "joined"]
 - !private ["10Foundation12DataProtocolP", "subscript"]
@@ -407,11 +430,13 @@ depends-member:
 - !private ["Se", "append"]
 - !private ["Se", "contains"]
 - !private ["Se", "count"]
+- !private ["Se", "endIndex"]
 - !private ["Se", "forEach"]
 - !private ["Se", "init"]
 - !private ["Se", "joined"]
 - !private ["Se", "section"]
 - !private ["Se", "subscript"]
+- !private ["Se", "updateChannelInfo"]
 - !private ["Se", "zero"]
 - !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
 - !private ["s26DefaultStringInterpolationV", "appendLiteral"]
@@ -419,11 +444,13 @@ depends-member:
 - !private ["SE", "append"]
 - !private ["SE", "contains"]
 - !private ["SE", "count"]
+- !private ["SE", "endIndex"]
 - !private ["SE", "forEach"]
 - !private ["SE", "init"]
 - !private ["SE", "joined"]
 - !private ["SE", "section"]
 - !private ["SE", "subscript"]
+- !private ["SE", "updateChannelInfo"]
 - !private ["SE", "zero"]
 - !private ["SQ", "Auth"]
 - !private ["SQ", "CGSize"]
@@ -468,6 +495,7 @@ depends-member:
 - !private ["SQ", "document"]
 - !private ["SQ", "documentChanges"]
 - ["SQ", "enabledDetectors"]
+- !private ["SQ", "endIndex"]
 - ["SQ", "firestore"]
 - !private ["SQ", "font"]
 - ["SQ", "footerViewSize"]
@@ -487,6 +515,7 @@ depends-member:
 - !private ["SQ", "maintainPositionOnKeyboardFrameChanged"]
 - ["SQ", "messageBottomLabelAttributedText"]
 - ["SQ", "messageBottomLabelHeight"]
+- !private ["SQ", "messageDelegate"]
 - ["SQ", "messageFooterView"]
 - ["SQ", "messageForItem"]
 - ["SQ", "messageHeaderView"]
@@ -524,6 +553,7 @@ depends-member:
 - !private ["SQ", "tintColor"]
 - !private ["SQ", "titleView"]
 - !private ["SQ", "uid"]
+- !private ["SQ", "updateChannelInfo"]
 - !private ["SQ", "userId"]
 - !private ["SQ", "viewDidLoad"]
 - !private ["SQ", "widthAnchor"]
@@ -532,11 +562,13 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "contains"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "endIndex"]
 - !private ["s25ExpressibleByArrayLiteralP", "forEach"]
 - !private ["s25ExpressibleByArrayLiteralP", "joined"]
 - !private ["s25ExpressibleByArrayLiteralP", "normal"]
 - !private ["s25ExpressibleByArrayLiteralP", "section"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s23ExpressibleByNilLiteralP", "updateChannelInfo"]
 - !private ["So12FIRFirestoreC", "collection"]
 - ["So12FIRFirestoreC", "firestore"]
 - !private ["SH", "Auth"]
@@ -581,6 +613,7 @@ depends-member:
 - !private ["SH", "document"]
 - !private ["SH", "documentChanges"]
 - ["SH", "enabledDetectors"]
+- !private ["SH", "endIndex"]
 - ["SH", "firestore"]
 - !private ["SH", "font"]
 - ["SH", "footerViewSize"]
@@ -600,6 +633,7 @@ depends-member:
 - !private ["SH", "maintainPositionOnKeyboardFrameChanged"]
 - ["SH", "messageBottomLabelAttributedText"]
 - ["SH", "messageBottomLabelHeight"]
+- !private ["SH", "messageDelegate"]
 - ["SH", "messageFooterView"]
 - ["SH", "messageForItem"]
 - ["SH", "messageHeaderView"]
@@ -635,6 +669,7 @@ depends-member:
 - !private ["SH", "tintColor"]
 - !private ["SH", "titleView"]
 - !private ["SH", "uid"]
+- !private ["SH", "updateChannelInfo"]
 - !private ["SH", "userId"]
 - !private ["SH", "viewDidLoad"]
 - !private ["SH", "widthAnchor"]
@@ -694,6 +729,7 @@ depends-member:
 - !private ["15MessageInputBar0abC8DelegateP", "maintainPositionOnKeyboardFrameChanged"]
 - ["15MessageInputBar0abC8DelegateP", "messageBottomLabelAttributedText"]
 - ["15MessageInputBar0abC8DelegateP", "messageBottomLabelHeight"]
+- !private ["15MessageInputBar0abC8DelegateP", "messageDelegate"]
 - ["15MessageInputBar0abC8DelegateP", "messageFooterView"]
 - ["15MessageInputBar0abC8DelegateP", "messageForItem"]
 - ["15MessageInputBar0abC8DelegateP", "messageHeaderView"]
@@ -728,6 +764,7 @@ depends-member:
 - ["4Lamp29MessageInstanceViewControllerC", "ListenerRegistration"]
 - ["4Lamp29MessageInstanceViewControllerC", "Message"]
 - ["4Lamp29MessageInstanceViewControllerC", "MessageInputBar"]
+- ["4Lamp29MessageInstanceViewControllerC", "MessageSentDelegate"]
 - ["4Lamp29MessageInstanceViewControllerC", "MessageStyle"]
 - ["4Lamp29MessageInstanceViewControllerC", "MessageType"]
 - ["4Lamp29MessageInstanceViewControllerC", "MessagesCollectionView"]
@@ -745,7 +782,7 @@ depends-member:
 - ["4Lamp29MessageInstanceViewControllerC", "backgroundColor"]
 - ["4Lamp29MessageInstanceViewControllerC", "cellTopLabelAttributedText"]
 - ["4Lamp29MessageInstanceViewControllerC", "cellTopLabelHeight"]
-- !private ["4Lamp29MessageInstanceViewControllerC", "channelId"]
+- ["4Lamp29MessageInstanceViewControllerC", "channelId"]
 - ["4Lamp29MessageInstanceViewControllerC", "configureAccessoryView"]
 - ["4Lamp29MessageInstanceViewControllerC", "configureAvatarView"]
 - ["4Lamp29MessageInstanceViewControllerC", "configureMediaMessageImageView"]
@@ -766,6 +803,7 @@ depends-member:
 - !private ["4Lamp29MessageInstanceViewControllerC", "maintainPositionOnKeyboardFrameChanged"]
 - ["4Lamp29MessageInstanceViewControllerC", "messageBottomLabelAttributedText"]
 - ["4Lamp29MessageInstanceViewControllerC", "messageBottomLabelHeight"]
+- ["4Lamp29MessageInstanceViewControllerC", "messageDelegate"]
 - ["4Lamp29MessageInstanceViewControllerC", "messageFooterView"]
 - ["4Lamp29MessageInstanceViewControllerC", "messageForItem"]
 - ["4Lamp29MessageInstanceViewControllerC", "messageHeaderView"]
@@ -791,6 +829,10 @@ depends-member:
 - ["4Lamp29MessageInstanceViewControllerC", "textColor"]
 - ["4Lamp29MessageInstanceViewControllerC", "userId"]
 - ["4Lamp29MessageInstanceViewControllerC", "viewDidLoad"]
+- ["4Lamp29MessageInstanceViewControllerC", "viewWillDisappear"]
+- ["4Lamp19MessageSentDelegateP", "Message"]
+- ["4Lamp19MessageSentDelegateP", "String"]
+- ["4Lamp19MessageSentDelegateP", "updateChannelInfo"]
 - !private ["10MessageKit0A5StyleO", "TailCorner"]
 - !private ["10MessageKit0A5StyleO", "bubbleTail"]
 - !private ["10MessageKit0A4TypeP", "init"]
@@ -836,6 +878,7 @@ depends-member:
 - !private ["10MessageKit18MessagesDataSourceP", "maintainPositionOnKeyboardFrameChanged"]
 - ["10MessageKit18MessagesDataSourceP", "messageBottomLabelAttributedText"]
 - ["10MessageKit18MessagesDataSourceP", "messageBottomLabelHeight"]
+- !private ["10MessageKit18MessagesDataSourceP", "messageDelegate"]
 - ["10MessageKit18MessagesDataSourceP", "messageFooterView"]
 - ["10MessageKit18MessagesDataSourceP", "messageForItem"]
 - ["10MessageKit18MessagesDataSourceP", "messageHeaderView"]
@@ -891,6 +934,7 @@ depends-member:
 - !private ["10MessageKit23MessagesDisplayDelegateP", "maintainPositionOnKeyboardFrameChanged"]
 - ["10MessageKit23MessagesDisplayDelegateP", "messageBottomLabelAttributedText"]
 - ["10MessageKit23MessagesDisplayDelegateP", "messageBottomLabelHeight"]
+- !private ["10MessageKit23MessagesDisplayDelegateP", "messageDelegate"]
 - ["10MessageKit23MessagesDisplayDelegateP", "messageFooterView"]
 - ["10MessageKit23MessagesDisplayDelegateP", "messageForItem"]
 - ["10MessageKit23MessagesDisplayDelegateP", "messageHeaderView"]
@@ -946,6 +990,7 @@ depends-member:
 - !private ["10MessageKit22MessagesLayoutDelegateP", "maintainPositionOnKeyboardFrameChanged"]
 - ["10MessageKit22MessagesLayoutDelegateP", "messageBottomLabelAttributedText"]
 - ["10MessageKit22MessagesLayoutDelegateP", "messageBottomLabelHeight"]
+- !private ["10MessageKit22MessagesLayoutDelegateP", "messageDelegate"]
 - ["10MessageKit22MessagesLayoutDelegateP", "messageFooterView"]
 - ["10MessageKit22MessagesLayoutDelegateP", "messageForItem"]
 - ["10MessageKit22MessagesLayoutDelegateP", "messageHeaderView"]
@@ -980,6 +1025,7 @@ depends-member:
 - ["10MessageKit22MessagesViewControllerC", "ListenerRegistration"]
 - ["10MessageKit22MessagesViewControllerC", "Message"]
 - ["10MessageKit22MessagesViewControllerC", "MessageInputBar"]
+- ["10MessageKit22MessagesViewControllerC", "MessageSentDelegate"]
 - ["10MessageKit22MessagesViewControllerC", "MessageStyle"]
 - ["10MessageKit22MessagesViewControllerC", "MessageType"]
 - ["10MessageKit22MessagesViewControllerC", "MessagesCollectionView"]
@@ -1019,6 +1065,7 @@ depends-member:
 - !private ["10MessageKit22MessagesViewControllerC", "maintainPositionOnKeyboardFrameChanged"]
 - ["10MessageKit22MessagesViewControllerC", "messageBottomLabelAttributedText"]
 - ["10MessageKit22MessagesViewControllerC", "messageBottomLabelHeight"]
+- ["10MessageKit22MessagesViewControllerC", "messageDelegate"]
 - ["10MessageKit22MessagesViewControllerC", "messageFooterView"]
 - ["10MessageKit22MessagesViewControllerC", "messageForItem"]
 - ["10MessageKit22MessagesViewControllerC", "messageHeaderView"]
@@ -1044,9 +1091,11 @@ depends-member:
 - ["10MessageKit22MessagesViewControllerC", "textColor"]
 - ["10MessageKit22MessagesViewControllerC", "userId"]
 - ["10MessageKit22MessagesViewControllerC", "viewDidLoad"]
+- ["10MessageKit22MessagesViewControllerC", "viewWillDisappear"]
 - !private ["SM", "append"]
 - !private ["SM", "contains"]
 - !private ["SM", "count"]
+- !private ["SM", "endIndex"]
 - !private ["SM", "forEach"]
 - !private ["SM", "joined"]
 - !private ["SM", "section"]
@@ -1054,6 +1103,7 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "append"]
 - !private ["10Foundation19MutableDataProtocolP", "contains"]
 - !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "endIndex"]
 - !private ["10Foundation19MutableDataProtocolP", "forEach"]
 - !private ["10Foundation19MutableDataProtocolP", "joined"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
@@ -1100,6 +1150,7 @@ depends-member:
 - !private ["So8NSCodingP", "maintainPositionOnKeyboardFrameChanged"]
 - ["So8NSCodingP", "messageBottomLabelAttributedText"]
 - ["So8NSCodingP", "messageBottomLabelHeight"]
+- !private ["So8NSCodingP", "messageDelegate"]
 - ["So8NSCodingP", "messageFooterView"]
 - ["So8NSCodingP", "messageForItem"]
 - ["So8NSCodingP", "messageHeaderView"]
@@ -1171,6 +1222,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "maintainPositionOnKeyboardFrameChanged"]
 - ["So26NSExtensionRequestHandlingP", "messageBottomLabelAttributedText"]
 - ["So26NSExtensionRequestHandlingP", "messageBottomLabelHeight"]
+- !private ["So26NSExtensionRequestHandlingP", "messageDelegate"]
 - ["So26NSExtensionRequestHandlingP", "messageFooterView"]
 - ["So26NSExtensionRequestHandlingP", "messageForItem"]
 - ["So26NSExtensionRequestHandlingP", "messageHeaderView"]
@@ -1212,6 +1264,7 @@ depends-member:
 - ["So8NSObjectC", "ListenerRegistration"]
 - ["So8NSObjectC", "Message"]
 - ["So8NSObjectC", "MessageInputBar"]
+- ["So8NSObjectC", "MessageSentDelegate"]
 - ["So8NSObjectC", "MessageStyle"]
 - ["So8NSObjectC", "MessageType"]
 - ["So8NSObjectC", "MessagesCollectionView"]
@@ -1265,6 +1318,7 @@ depends-member:
 - !private ["So8NSObjectC", "maintainPositionOnKeyboardFrameChanged"]
 - ["So8NSObjectC", "messageBottomLabelAttributedText"]
 - ["So8NSObjectC", "messageBottomLabelHeight"]
+- ["So8NSObjectC", "messageDelegate"]
 - ["So8NSObjectC", "messageFooterView"]
 - ["So8NSObjectC", "messageForItem"]
 - ["So8NSObjectC", "messageHeaderView"]
@@ -1303,6 +1357,7 @@ depends-member:
 - !private ["So8NSObjectC", "uid"]
 - ["So8NSObjectC", "userId"]
 - ["So8NSObjectC", "viewDidLoad"]
+- ["So8NSObjectC", "viewWillDisappear"]
 - !private ["So8NSObjectC", "widthAnchor"]
 - !private ["So8NSObjectP", "Auth"]
 - !private ["So8NSObjectP", "CGSize"]
@@ -1356,6 +1411,7 @@ depends-member:
 - !private ["So8NSObjectP", "maintainPositionOnKeyboardFrameChanged"]
 - ["So8NSObjectP", "messageBottomLabelAttributedText"]
 - ["So8NSObjectP", "messageBottomLabelHeight"]
+- !private ["So8NSObjectP", "messageDelegate"]
 - ["So8NSObjectP", "messageFooterView"]
 - ["So8NSObjectP", "messageForItem"]
 - ["So8NSObjectP", "messageHeaderView"]
@@ -1395,6 +1451,7 @@ depends-member:
 - !private ["So8NSObjectP", "widthAnchor"]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["s9OptionSetP", "normal"]
+- !private ["Sq", "updateChannelInfo"]
 - !private ["10Kingfisher11PlaceholderP", "init"]
 - !private ["So8FIRQueryC", "addDocument"]
 - !private ["So8FIRQueryC", "addSnapshotListener"]
@@ -1403,6 +1460,7 @@ depends-member:
 - !private ["Sk", "append"]
 - !private ["Sk", "contains"]
 - !private ["Sk", "count"]
+- !private ["Sk", "endIndex"]
 - !private ["Sk", "forEach"]
 - !private ["Sk", "joined"]
 - !private ["Sk", "section"]
@@ -1410,6 +1468,7 @@ depends-member:
 - !private ["Sm", "append"]
 - !private ["Sm", "contains"]
 - !private ["Sm", "count"]
+- !private ["Sm", "endIndex"]
 - !private ["Sm", "forEach"]
 - !private ["Sm", "joined"]
 - !private ["Sm", "subscript"]
@@ -1423,6 +1482,7 @@ depends-member:
 - !private ["ST", "append"]
 - !private ["ST", "contains"]
 - !private ["ST", "count"]
+- !private ["ST", "endIndex"]
 - !private ["ST", "forEach"]
 - !private ["ST", "joined"]
 - !private ["ST", "section"]
@@ -1518,6 +1578,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "maintainPositionOnKeyboardFrameChanged"]
 - ["So21UIAppearanceContainerP", "messageBottomLabelAttributedText"]
 - ["So21UIAppearanceContainerP", "messageBottomLabelHeight"]
+- !private ["So21UIAppearanceContainerP", "messageDelegate"]
 - ["So21UIAppearanceContainerP", "messageFooterView"]
 - ["So21UIAppearanceContainerP", "messageForItem"]
 - ["So21UIAppearanceContainerP", "messageHeaderView"]
@@ -1592,6 +1653,7 @@ depends-member:
 - !private ["So26UICollectionViewDataSourceP", "maintainPositionOnKeyboardFrameChanged"]
 - ["So26UICollectionViewDataSourceP", "messageBottomLabelAttributedText"]
 - ["So26UICollectionViewDataSourceP", "messageBottomLabelHeight"]
+- !private ["So26UICollectionViewDataSourceP", "messageDelegate"]
 - ["So26UICollectionViewDataSourceP", "messageFooterView"]
 - ["So26UICollectionViewDataSourceP", "messageForItem"]
 - ["So26UICollectionViewDataSourceP", "messageHeaderView"]
@@ -1650,6 +1712,7 @@ depends-member:
 - !private ["So24UICollectionViewDelegateP", "maintainPositionOnKeyboardFrameChanged"]
 - ["So24UICollectionViewDelegateP", "messageBottomLabelAttributedText"]
 - ["So24UICollectionViewDelegateP", "messageBottomLabelHeight"]
+- !private ["So24UICollectionViewDelegateP", "messageDelegate"]
 - ["So24UICollectionViewDelegateP", "messageFooterView"]
 - ["So24UICollectionViewDelegateP", "messageForItem"]
 - ["So24UICollectionViewDelegateP", "messageHeaderView"]
@@ -1708,6 +1771,7 @@ depends-member:
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "maintainPositionOnKeyboardFrameChanged"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "messageBottomLabelAttributedText"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "messageBottomLabelHeight"]
+- !private ["So34UICollectionViewDelegateFlowLayoutP", "messageDelegate"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "messageFooterView"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "messageForItem"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "messageHeaderView"]
@@ -1767,6 +1831,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "maintainPositionOnKeyboardFrameChanged"]
 - ["So18UIContentContainerP", "messageBottomLabelAttributedText"]
 - ["So18UIContentContainerP", "messageBottomLabelHeight"]
+- !private ["So18UIContentContainerP", "messageDelegate"]
 - ["So18UIContentContainerP", "messageFooterView"]
 - ["So18UIContentContainerP", "messageForItem"]
 - ["So18UIContentContainerP", "messageHeaderView"]
@@ -1870,6 +1935,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "maintainPositionOnKeyboardFrameChanged"]
 - ["So18UIFocusEnvironmentP", "messageBottomLabelAttributedText"]
 - ["So18UIFocusEnvironmentP", "messageBottomLabelHeight"]
+- !private ["So18UIFocusEnvironmentP", "messageDelegate"]
 - ["So18UIFocusEnvironmentP", "messageFooterView"]
 - ["So18UIFocusEnvironmentP", "messageForItem"]
 - ["So18UIFocusEnvironmentP", "messageHeaderView"]
@@ -1993,6 +2059,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "maintainPositionOnKeyboardFrameChanged"]
 - ["So30UIPasteConfigurationSupportingP", "messageBottomLabelAttributedText"]
 - ["So30UIPasteConfigurationSupportingP", "messageBottomLabelHeight"]
+- !private ["So30UIPasteConfigurationSupportingP", "messageDelegate"]
 - ["So30UIPasteConfigurationSupportingP", "messageFooterView"]
 - ["So30UIPasteConfigurationSupportingP", "messageForItem"]
 - ["So30UIPasteConfigurationSupportingP", "messageHeaderView"]
@@ -2038,6 +2105,7 @@ depends-member:
 - ["So11UIResponderC", "ListenerRegistration"]
 - ["So11UIResponderC", "Message"]
 - ["So11UIResponderC", "MessageInputBar"]
+- ["So11UIResponderC", "MessageSentDelegate"]
 - ["So11UIResponderC", "MessageStyle"]
 - ["So11UIResponderC", "MessageType"]
 - ["So11UIResponderC", "MessagesCollectionView"]
@@ -2081,6 +2149,7 @@ depends-member:
 - !private ["So11UIResponderC", "maintainPositionOnKeyboardFrameChanged"]
 - ["So11UIResponderC", "messageBottomLabelAttributedText"]
 - ["So11UIResponderC", "messageBottomLabelHeight"]
+- ["So11UIResponderC", "messageDelegate"]
 - ["So11UIResponderC", "messageFooterView"]
 - ["So11UIResponderC", "messageForItem"]
 - ["So11UIResponderC", "messageHeaderView"]
@@ -2115,6 +2184,7 @@ depends-member:
 - !private ["So11UIResponderC", "tintColor"]
 - ["So11UIResponderC", "userId"]
 - ["So11UIResponderC", "viewDidLoad"]
+- ["So11UIResponderC", "viewWillDisappear"]
 - !private ["So11UIResponderC", "widthAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "Auth"]
 - !private ["So30UIResponderStandardEditActionsP", "CGSize"]
@@ -2158,6 +2228,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "maintainPositionOnKeyboardFrameChanged"]
 - ["So30UIResponderStandardEditActionsP", "messageBottomLabelAttributedText"]
 - ["So30UIResponderStandardEditActionsP", "messageBottomLabelHeight"]
+- !private ["So30UIResponderStandardEditActionsP", "messageDelegate"]
 - ["So30UIResponderStandardEditActionsP", "messageFooterView"]
 - ["So30UIResponderStandardEditActionsP", "messageForItem"]
 - ["So30UIResponderStandardEditActionsP", "messageHeaderView"]
@@ -2233,6 +2304,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "maintainPositionOnKeyboardFrameChanged"]
 - ["So20UIScrollViewDelegateP", "messageBottomLabelAttributedText"]
 - ["So20UIScrollViewDelegateP", "messageBottomLabelHeight"]
+- !private ["So20UIScrollViewDelegateP", "messageDelegate"]
 - ["So20UIScrollViewDelegateP", "messageFooterView"]
 - ["So20UIScrollViewDelegateP", "messageForItem"]
 - ["So20UIScrollViewDelegateP", "messageHeaderView"]
@@ -2297,6 +2369,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "maintainPositionOnKeyboardFrameChanged"]
 - ["So16UIStateRestoringP", "messageBottomLabelAttributedText"]
 - ["So16UIStateRestoringP", "messageBottomLabelHeight"]
+- !private ["So16UIStateRestoringP", "messageDelegate"]
 - ["So16UIStateRestoringP", "messageFooterView"]
 - ["So16UIStateRestoringP", "messageForItem"]
 - ["So16UIStateRestoringP", "messageHeaderView"]
@@ -2372,6 +2445,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "maintainPositionOnKeyboardFrameChanged"]
 - ["So18UITraitEnvironmentP", "messageBottomLabelAttributedText"]
 - ["So18UITraitEnvironmentP", "messageBottomLabelHeight"]
+- !private ["So18UITraitEnvironmentP", "messageDelegate"]
 - ["So18UITraitEnvironmentP", "messageFooterView"]
 - ["So18UITraitEnvironmentP", "messageForItem"]
 - ["So18UITraitEnvironmentP", "messageHeaderView"]
@@ -2445,6 +2519,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "maintainPositionOnKeyboardFrameChanged"]
 - ["So23UIUserActivityRestoringP", "messageBottomLabelAttributedText"]
 - ["So23UIUserActivityRestoringP", "messageBottomLabelHeight"]
+- !private ["So23UIUserActivityRestoringP", "messageDelegate"]
 - ["So23UIUserActivityRestoringP", "messageFooterView"]
 - ["So23UIUserActivityRestoringP", "messageForItem"]
 - ["So23UIUserActivityRestoringP", "messageHeaderView"]
@@ -2506,6 +2581,7 @@ depends-member:
 - ["So16UIViewControllerC", "ListenerRegistration"]
 - ["So16UIViewControllerC", "Message"]
 - ["So16UIViewControllerC", "MessageInputBar"]
+- ["So16UIViewControllerC", "MessageSentDelegate"]
 - ["So16UIViewControllerC", "MessageStyle"]
 - ["So16UIViewControllerC", "MessageType"]
 - ["So16UIViewControllerC", "MessagesCollectionView"]
@@ -2544,6 +2620,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "maintainPositionOnKeyboardFrameChanged"]
 - ["So16UIViewControllerC", "messageBottomLabelAttributedText"]
 - ["So16UIViewControllerC", "messageBottomLabelHeight"]
+- ["So16UIViewControllerC", "messageDelegate"]
 - ["So16UIViewControllerC", "messageFooterView"]
 - ["So16UIViewControllerC", "messageForItem"]
 - ["So16UIViewControllerC", "messageHeaderView"]
@@ -2569,11 +2646,13 @@ depends-member:
 - ["So16UIViewControllerC", "textColor"]
 - ["So16UIViewControllerC", "userId"]
 - ["So16UIViewControllerC", "viewDidLoad"]
+- ["So16UIViewControllerC", "viewWillDisappear"]
 - !private ["So7FIRUserC", "uid"]
 - !private ["So11FIRUserInfoP", "uid"]
 - !private ["s14_ArrayProtocolP", "append"]
 - !private ["s14_ArrayProtocolP", "contains"]
 - !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "endIndex"]
 - !private ["s14_ArrayProtocolP", "forEach"]
 - !private ["s14_ArrayProtocolP", "joined"]
 - !private ["s14_ArrayProtocolP", "subscript"]
@@ -2582,6 +2661,7 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s24_DestructorSafeContainerP", "contains"]
 - !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "endIndex"]
 - !private ["s24_DestructorSafeContainerP", "forEach"]
 - !private ["s24_DestructorSafeContainerP", "joined"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
@@ -2590,12 +2670,14 @@ depends-member:
 - !private ["s19_HasContiguousBytesP", "append"]
 - !private ["s19_HasContiguousBytesP", "contains"]
 - !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "endIndex"]
 - !private ["s19_HasContiguousBytesP", "forEach"]
 - !private ["s19_HasContiguousBytesP", "joined"]
 - !private ["s19_HasContiguousBytesP", "subscript"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "contains"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "endIndex"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "font"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "forEach"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "joined"]
@@ -2652,6 +2734,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "maintainPositionOnKeyboardFrameChanged"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "messageBottomLabelAttributedText"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "messageBottomLabelHeight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "messageDelegate"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "messageFooterView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "messageForItem"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "messageHeaderView"]
@@ -2691,12 +2774,14 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "contains"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "endIndex"]
 - !private ["s21_ObjectiveCBridgeableP", "font"]
 - !private ["s21_ObjectiveCBridgeableP", "forEach"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "joined"]
 - !private ["s21_ObjectiveCBridgeableP", "section"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "updateChannelInfo"]
 - !private ["s21_ObjectiveCBridgeableP", "zero"]
 - !private ["s20_SwiftNewtypeWrapperP", "font"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "delegate"]
@@ -2740,6 +2825,7 @@ depends-nominal:
 - "SQ"
 - !private "s5ErrorP"
 - !private "s25ExpressibleByArrayLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - "So12FIRFirestoreC"
 - "SH"
 - !private "10Foundation9IndexPathV"
@@ -2754,6 +2840,7 @@ depends-nominal:
 - !private "15MessageInputBarAAC"
 - "15MessageInputBar0abC8DelegateP"
 - "4Lamp29MessageInstanceViewControllerC"
+- "4Lamp19MessageSentDelegateP"
 - !private "10MessageKit0A5StyleO"
 - !private "10MessageKit0A4TypeP"
 - !private "10MessageKit22MessagesCollectionViewC"
@@ -2777,6 +2864,7 @@ depends-nominal:
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - !private "s9OptionSetP"
+- !private "Sq"
 - !private "10Kingfisher11PlaceholderP"
 - !private "So8FIRQueryC"
 - !private "So16FIRQuerySnapshotC"
@@ -3027,4 +3115,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "19f5b636cb40ace4ce30fe0b9864d1cf"
+interface-hash: "2531705f6cd519fbafa6b9aefa5d905e"

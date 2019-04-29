@@ -11,7 +11,7 @@ import CoreData
 import Firebase
 import FirebaseFirestore
 
-class MessageListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MessageListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageSentDelegate {
     
     var channelDict: [String : NSObject] = [:]
     
@@ -23,6 +23,8 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
     
     let customTableViewCellIdentifier = "userCell"
     let goToMessagesSegueId = "goToMessagesSegueId"
+    
+    var channelIndex: NSIndexPath = NSIndexPath()
         
     @IBOutlet weak var tableView: UITableView!
     
@@ -37,9 +39,25 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
         updateChannelIdList()
     }
     
+    // MARK: Message Delegate
+    
+    // update specific channels message
+    func updateChannelInfo(lastMessage: Message, channelId: String) {
+        print("DATE = \(lastMessage.sentDate)")
+        
+        // write to database
+        ref = Database.database().reference(withPath: "messaging").child("channels")
+        let channel = ref.child(channelId).child("channel")
+        
+        channel.updateChildValues(["last-message" : lastMessage.content])
+//        channel.updateChildValues(["time" : time])
+
+        // load table again
+        
+    }
+    
     // MARK: Helpers
     func updateChannelIdList() {
-        
         // get current user
         let user = Auth.auth().currentUser?.uid
         let channels = ref.child(user!).child("channels")
@@ -107,15 +125,19 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
     
     // user clicks on a row
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.channelIndex = indexPath as NSIndexPath
         self.performSegue(withIdentifier: goToMessagesSegueId, sender: nil)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == goToMessagesSegueId,
-//            let controller = segue.destination as? MessageInstanceViewController {
-//
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nav = segue.destination as? UINavigationController,
+            let controller = nav.topViewController as? MessageInstanceViewController {
+            controller.messageDelegate = self
+            controller.channelId = channelIds[channelIndex.row]
+        }
+    }
+    
+
     
     // MARK: Styling
     
