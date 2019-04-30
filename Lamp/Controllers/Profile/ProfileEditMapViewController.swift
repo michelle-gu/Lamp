@@ -411,7 +411,7 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
         return true
     }
     
-    override func touchesBegan(_ touches: SetUITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
 }
