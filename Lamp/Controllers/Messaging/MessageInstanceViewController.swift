@@ -70,14 +70,7 @@ class MessageInstanceViewController: MessagesViewController {
 
         styleChatRoom()
     }
-    
-    // sends back last message for the Message List VC to update values
-    override func viewWillDisappear(_ animated: Bool) {
-        let index = messages.endIndex - 1
-        if (index >= 0 || index < messages.count) {
-            
-        }
-    }
+
     
     // MARK: Helpers
     

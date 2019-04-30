@@ -2788,9 +2788,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="SEND A MESSAGE"/>
                                 <connections>
-                                    <segue destination="JF2-eB-E8V" kind="popoverPresentation" popoverAnchorView="i2m-nD-1hv" id="She-d1-8Jq">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="eWr-FF-ddu" kind="show" id="F8v-IV-bbN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -4047,10 +4045,8 @@
         <image name="profile-pic-blank" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8he-3E-VTa"/>
-        <segue reference="She-d1-8Jq"/>
         <segue reference="c5S-Za-6zN"/>
-        <segue reference="Huo-mK-HWW"/>
+        <segue reference="PA3-YF-Hx5"/>
         <segue reference="9WS-Lc-l6O"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.60796302560000004" green="0.69684332609999999" blue="0.94992285970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
