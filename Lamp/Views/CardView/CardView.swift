@@ -8,8 +8,14 @@
 
 import UIKit
 
+// Protocol for User Profile VC Delegate
+protocol UserProfileVCDelegate: AnyObject {
+    // Send the UID over
+    func didPressInfoButton(uid: String)
+}
 class CardView: UIView, XibCreatable {
 
+    // MARK: - Outlets
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var jobLabel: UILabel!
@@ -17,7 +23,13 @@ class CardView: UIView, XibCreatable {
     @IBOutlet weak var infoButton: UIButton!
     //    @IBOutlet weak var subLabel: UILabel!
     
+    // MARK: - Variables
+    var uid: String = String()
+    weak var delegate: UserProfileVCDelegate?
     
+    @IBAction func infoButtonPressed(_ sender: Any) {
+        self.delegate?.didPressInfoButton(uid: uid)
+    }
     
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
