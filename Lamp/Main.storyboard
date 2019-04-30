@@ -2326,7 +2326,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Profile" id="yG6-7Z-iJu">
-                        <barButtonItem key="backBarButtonItem" title="Cancel" id="dyr-25-S8F"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="dyr-25-S8F"/>
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="VJs-cE-Szg">
                             <connections>
                                 <segue destination="23s-5q-Ryf" kind="show" id="020-Bl-TlF"/>
@@ -3517,13 +3517,7 @@
                             <outlet property="delegate" destination="Qqq-Yz-t8p" id="ow0-zs-Srt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Edit Profile" id="X2r-2K-LPE">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="yCf-ZD-dRE">
-                            <connections>
-                                <action selector="doneButtonPressed:" destination="Qqq-Yz-t8p" id="CKz-sz-wO3"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="X2r-2K-LPE"/>
                     <connections>
                         <outlet property="bioField" destination="atw-zK-GdS" id="DFb-JR-QgO"/>
                         <outlet property="birthdayField" destination="BT5-zE-Ris" id="whC-9q-kxg"/>

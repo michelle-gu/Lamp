@@ -19,7 +19,6 @@ class GenderFilterViewController: UIViewController, UITableViewDataSource, UITab
     
     // MARK: Constants
     let profilesRef = Database.database().reference(withPath: "user-profiles")
-    let gendersRef = Database.database().reference(withPath: "genders")
     let genderCellIdentifier = "genderCellIdentifier"
     let numGenders = 4
     let genderArray = ["Female", "Male", "Other", "Prefer not to say"]
@@ -159,19 +158,11 @@ class GenderFilterViewController: UIViewController, UITableViewDataSource, UITab
         }
 
         for gender in genderArray {
-            let values: [String: Bool]
             if gendersSelected.contains(gender) {
-                values = [
-                    gender: true
-                ]
-                gendersRef.child(gender).child(user!).setValue(true)
+                discoverySettingsRef.child("genders").child(gender).setValue(true)
             } else {
-                values = [
-                    gender: false
-                ]
-                gendersRef.child(gender).child(user!).setValue(false)
+                discoverySettingsRef.child("genders").child(gender).setValue(false)
             }
-            discoverySettingsRef.child("genders").updateChildValues(values)
         }
     }
     

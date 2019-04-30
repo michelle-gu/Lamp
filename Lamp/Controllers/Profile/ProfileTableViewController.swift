@@ -113,6 +113,8 @@ class ProfileTableViewController: UITableViewController {
                 if profilePicVal != "" {
                     let profilePicURL = URL(string: profilePicVal)
                     self.profilePicView.kf.setImage(with: profilePicURL)
+                } else {
+                    self.profilePicView.image = UIImage(named: "profile-pic-blank")
                 }
             }
             if let nameVal = profileDict["firstName"] as? String,

@@ -20,7 +20,6 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     let uniRef = Database.database().reference(withPath: "universities")
     
     // MARK: Pickers
-    let imagePicker = UIImagePickerController()
     let uniPicker = UIPickerView()
     
     // MARK: Segues

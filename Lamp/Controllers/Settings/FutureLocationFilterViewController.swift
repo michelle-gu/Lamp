@@ -268,18 +268,14 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
             cities.append(currentCity)
             
             for currentCity in cities {
-                let values: [String : Any] = [
-                    currentCity: true
-                ]
-                
                 // update locations
-                citiesRef.child(user!).updateChildValues(values)
+                citiesRef.child(currentCity).setValue(true)
                 
                 // update locations nested in user>profile>futureLoc
-                profileRef.child("futureLoc").updateChildValues(values)
+                profileRef.child("futureLoc").child(currentCity).setValue(true)
                 
                 // update locations nested in user>settings>discovery>futureLocs
-                discoverySettingsRef.child("futureLoc").updateChildValues(values)
+                discoverySettingsRef.child("futureLoc").child(currentCity).setValue(true)
             }
         }
         
