@@ -113,6 +113,8 @@ class ProfileTableViewController: UITableViewController {
                 if profilePicVal != "" {
                     let profilePicURL = URL(string: profilePicVal)
                     self.profilePicView.kf.setImage(with: profilePicURL)
+                } else {
+                    self.profilePicView.image = UIImage(named: "profile-pic-blank")
                 }
             }
             if let nameVal = profileDict["firstName"] as? String,
@@ -143,7 +145,7 @@ class ProfileTableViewController: UITableViewController {
             if let budgetVal = profileDict["budget"] as? Int {
                 switch budgetVal {
                 case 500:
-                    self.setProfileInfo(label: self.budgetLabel, text: "$500-")
+                    self.setProfileInfo(label: self.budgetLabel, text: "< $500")
                 case 3000:
                     self.setProfileInfo(label: self.budgetLabel, text: "$3000+")
                 default:
