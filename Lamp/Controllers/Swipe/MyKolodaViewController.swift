@@ -411,9 +411,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 //        ref.child("swipes").child(user!).child(ids[index]).updateChildValues(swipeValues)
 
         //set up the dictionary of people the other user has swiped on
-        let swipe = ref.child("swipes").child(ids[index]).child(user!)
+        let swipe = ref.child("swipes").child(matchId).child(user!)
         let matchingSelf = ref.child("user-profiles").child(user!).child("matches")
-        let matchingTarget = ref.child("user-profiles").child(ids[index]).child("matches")
+        let matchingTarget = ref.child("user-profiles").child(matchId).child("matches")
 
         swipe.observe(.value, with: {(snapshot) in
             let swipingDict = snapshot.value as? [String : AnyObject] ?? [:]
