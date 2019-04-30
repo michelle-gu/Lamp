@@ -40,6 +40,8 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     
     // MARK: - Outlets
     @IBOutlet weak var kolodaView: KolodaView!
+    @IBOutlet weak var noButton: UIButton!
+    @IBOutlet weak var yesButton: UIButton!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -49,7 +51,16 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         // Set delegates/data sources
         kolodaView.dataSource = self
         kolodaView.delegate = self
+        // yes & no button styles
+        yesButton.layer.shadowColor = UIColor.darkGray.cgColor
+        yesButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        yesButton.layer.shadowOpacity = 0.2
+        yesButton.layer.shadowRadius = 2
         
+        noButton.layer.shadowColor = UIColor.darkGray.cgColor
+        noButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        noButton.layer.shadowOpacity = 0.2
+        noButton.layer.shadowRadius = 2
 //        setUserPref() {(comp) in
 //            self.locations = comp
 //            //everything else should be set up
@@ -308,52 +319,6 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             }
             completion(u)
         })
-    }
-    
-    func setUserPref(completion: @escaping ([String]) -> Void){
-        let user = Auth.auth().currentUser?.uid
-        let preferences = ref.child("user-profiles").child(user!).child("settings").child("discovery")
-        preferences.observe(.value, with: {(snapshot) in
-            let prefDict = snapshot.value as? [String : AnyObject] ?? [:]
-            var comp:[String] = []
-            let futureLoc = self.ref.child("user-profiles").child(user!).child("settings").child("discovery").child("futureLoc")
-            futureLoc.observe(.value, with: {(snapshot) in
-                let locDict = snapshot.value as? [String : AnyObject] ?? [:]
-                for (key,_) in locDict{
-                    self.locations.append(key)
-                    comp.append(key)
-                }
-//                comp = self.locations
-            })
-            //make a list of preferred genders
-            let gen = self.ref.child("user-profiles").child(user!).child("settings").child("discovery").child("genders")
-            gen.observe(.value, with: {(snapshot) in
-                let genDict = snapshot.value as? [String: AnyObject] ?? [:]
-                for (key, value) in genDict{
-                    let x = value as? Bool ?? false
-                    if x{
-                        self.genders.append(key)
-                    }
-                }
-            })
-            //make a list of universities
-            let uni = self.ref.child("user-profiles").child(user!).child("settings").child("discovery").child("universities")
-            uni.observe(.value, with: {(snapshot) in
-                let uniDict = snapshot.value as? [String:AnyObject] ?? [:]
-                for (key, _) in uniDict{
-                    self.universities.append(key)
-                }
-            })
-          
-//            self.min = ageMin as! Int
-//            self.max = ageMax as! Int
-            //            loc = futureloc
-            print("This is comp: \(comp)")
-            completion(comp)
-            
-        })
-        self.kolodaView.reloadData()
-        
     }
     
     func getGenderUsers(completion: @escaping ([String : Dictionary<String,Bool>]) -> Void){
