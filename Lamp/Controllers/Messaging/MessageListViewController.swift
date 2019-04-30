@@ -42,23 +42,6 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
         updateChannelIdList()
     }
     
-    // MARK: Message Delegate
-    
-    // update specific channels message
-    func updateChannelInfo(lastMessage: Message, channelId: String) {        
-        // convert date to time HH:mm aa
-        let time = convertTime(timestamp: lastMessage.sentDate)
-        
-        // write to database
-        ref = Database.database().reference(withPath: "messaging").child("channels")
-        let channel = ref.child(channelId).child("channel")
-        
-        channel.updateChildValues(["last-message" : lastMessage.content])
-        channel.updateChildValues(["time" : time])
-
-        // load table again
-        
-    }
     
     // MARK: Helpers
     func updateChannelIdList() {
@@ -86,6 +69,22 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
         return timeFormatter.string(from: timestamp)
     }
     
+    
+    // MARK: Message Delegate
+    // update specific channels message
+    func updateChannelInfo(lastMessage: Message, channelId: String) {
+        // convert date to time HH:mm aa
+        let time = convertTime(timestamp: lastMessage.sentDate)
+        
+        // write to database
+        ref = Database.database().reference(withPath: "messaging").child("channels")
+        let channel = ref.child(channelId).child("channel")
+        
+        channel.updateChildValues(["last-message" : lastMessage.content])
+        channel.updateChildValues(["time" : time])
+        
+        // load table again
+    }
     
     // MARK: Table View Methods
 

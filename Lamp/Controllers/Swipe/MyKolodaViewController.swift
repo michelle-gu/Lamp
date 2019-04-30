@@ -11,16 +11,18 @@ import Koloda
 import Firebase
 
 class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaViewDelegate, UserProfileVCDelegate {
-    
+
     // MARK: - Constants
     let userRef = Database.database().reference(withPath: "user-profiles")
     let user = Auth.auth().currentUser?.uid
-    
+    // set for match message to pass profile picture
+    var matchId = ""
+
     let ref: DatabaseReference = Database.database().reference()
 
     // MARK: - Variables
     var ids: [String] = []
-    
+
     var images: [Profile] = []
     var idDict: [String : NSObject] = [:]
     var genders: [String] = []
@@ -38,17 +40,17 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     var idsLocationSet:Set<String> = Set<String>()
     var idsUniversitiesSet:Set<String> = Set<String>()
     var alreadySwiped:[String] = []
-    
+
     // MARK: - Outlets
     @IBOutlet weak var kolodaView: KolodaView!
     @IBOutlet weak var noButton: UIButton!
     @IBOutlet weak var yesButton: UIButton!
-    
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.view.bringSubviewToFront(kolodaView)
-        
+
         // Set delegates/data sources
         kolodaView.dataSource = self
         kolodaView.delegate = self
@@ -57,7 +59,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         yesButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
         yesButton.layer.shadowOpacity = 0.2
         yesButton.layer.shadowRadius = 2
-        
+
         noButton.layer.shadowColor = UIColor.darkGray.cgColor
         noButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
         noButton.layer.shadowOpacity = 0.2
@@ -88,12 +90,12 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         checkIfSwiped() {(s) in
             self.alreadySwiped = s
         }
-        
+
         // Get a list of all IDs in the database
         getIds() { (idsArray) in
-            
+
             self.ids = self.getFilteredIds(ids: idsArray)
-            
+
             // Do stuff to the ids array
             // Setting our list of ids to filtered idsArray
             //            self.ids = getFilteredIds(idsArray)
@@ -106,11 +108,11 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 //            //everything else should be set up
 //
 //        }
-        
+
 //        setUserPref()
 //        getUsers()
     }
-    
+
     func getFilteredIds(ids: [String]) -> [String] {
         // Code
         var result:[String] = []
@@ -124,7 +126,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                 }
             }
         }
-        
+
         for (key, value) in self.listLocations{
             print("these are my user locations: \(self.locations)")
             if self.locations.contains(key){
@@ -158,17 +160,17 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         print("these are the valid university ids (in set form): \(self.idsUniversitiesSet)")
         print("these are the valid ids (in set form): \(result)")
 //        print("these are the valid ids (in array form): \(self.ids)")
-        
+
         return result
     }
-    
+
     // Retrieve a list of universities from Firebase
     func getIds(completion: @escaping ([String]) -> Void) {
         userRef.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let profilesDict = snapshot.value as? [String : AnyObject] else {
                 return completion([])
             }
-            
+
             var idsArray: [String] = []
             for profile in profilesDict {
                 idsArray.append(profile.key)
@@ -176,7 +178,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             completion(idsArray)
         })
     }
-    
+
     // MARK: - Data Retrieval
 //    func getData() {
 //
@@ -227,7 +229,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 //            print("these are the valid university ids (in set form): \(self.idsUniversitiesSet)")
 //            print("these are the valid ids (in set form): \(self.idsSet)")
 //            print("these are the valid ids (in array form): \(self.ids)")
-            
+
 
 //    func getIds() {
 //        ref.child("user-profiles").queryOrderedByKey().observe(.value, with: { (snapshot) in
@@ -261,7 +263,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 //
 //        self.kolodaView.reloadData()
 //    }
-    
+
     // Gets dictionary of all gender information
 //    func getUsers(){
 //        let userGenders = ref.child("genders")
@@ -324,7 +326,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             completion(u)
         })
     }
-    
+
     func getGenderUsers(completion: @escaping ([String : Dictionary<String,Bool>]) -> Void){
         let user = Auth.auth().currentUser?.uid
         let userGenders = ref.child("genders")
@@ -358,10 +360,10 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             }
             completion(u)
         })
-        
-        
+
+
     }
-    
+
     func checkIfSwiped(completion: @escaping ([String]) -> Void){
         let swipe = ref.child("swipes").child(user!)
         swipe.observeSingleEvent(of: .value, with: {(snapshot) in
@@ -373,11 +375,14 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             completion(s)
         })
     }
-    
+
     //should check if the other user has also "liked" this user
     @IBAction func yesButtonPressed(_ sender: Any) {
         let user = Auth.auth().currentUser?.uid
         let index = kolodaView.currentCardIndex
+
+        // sets global matchId variable to pass in prepare method
+        matchId = ids[index]
 
 //        let swipeValues = [
 //            "liked": true,
@@ -387,9 +392,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 //        ref.child("swipes").child(user!).child(ids[index]).updateChildValues(swipeValues)
 
         //set up the dictionary of people the other user has swiped on
-        let swipe = ref.child("swipes").child(ids[index-1]).child(user!)
+        let swipe = ref.child("swipes").child(matchId).child(user!)
         let matchingSelf = ref.child("user-profiles").child(user!).child("matches")
-        let matchingTarget = ref.child("user-profiles").child(ids[index-1]).child("matches")
+        let matchingTarget = ref.child("user-profiles").child(matchId).child("matches")
 
         swipe.observe(.value, with: {(snapshot) in
             let swipingDict = snapshot.value as? [String : AnyObject] ?? [:]
@@ -405,16 +410,22 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                 matchingTarget.updateChildValues(match2)
                 self.kolodaView.swipe(.right)
                 self.performSegue(withIdentifier: "matchSegue", sender:sender)
-
             }
             else{
                 self.kolodaView.swipe(.right)
             }
-
         })
-        
-//        self.performSegue(withIdentifier: "matchSegue", sender:sender)
+
     }
+
+    // passes match id to match message VC
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "matchSegue" {
+            let controller: MatchMessageViewController = segue.destination as! MatchMessageViewController
+            controller.match = matchId
+        }
+    }
+
     @IBAction func noButtonPressed(_ sender: Any) {
         let user = Auth.auth().currentUser?.uid
         let index = kolodaView.currentCardIndex
@@ -426,25 +437,25 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         ref.child("swipes").child(user!).child(ids[index]).updateChildValues(swipeValues)
         //don't record for now, will probably change this
         kolodaView.swipe(.left)
-        
+
     }
-    
+
     // MARK: - Koloda View Data Source
     func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
         return ids.count
     }
-    
+
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
         return .slow
     }
-    
+
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let card:CardView =  CardView.create()
-        
+
         // Set delegate
         card.delegate = self
         card.uid = ids[index]
-        
+
         let profile = ref.child("user-profiles").child(ids[index]).child("profile")
         profile.observe(.value, with: {(snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
@@ -454,7 +465,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             if let job = profileDict["occupation"] as? String {
                 card.jobLabel.text = job
             }
-            
+
             if let profilePicVal = profileDict["profilePicture"] as? String {
                 if profilePicVal != "" {
                     let profilePicURL = URL(string: profilePicVal)
@@ -466,7 +477,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 //                    card.image =   //UIImageView(named: "empty")
                 }
             }
-            
+
             var location:String = ""
             let locationList = self.ref.child("user-profiles").child(self.ids[index]).child("profile").child("futureLoc")
             locationList.observe(.value, with: {(snapshot) in
@@ -489,45 +500,45 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             //            TODO: //let location = "Austin"
             card.locationLabel.text = location
         })
-        
+
         return card
     }
-    
+
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
         return nil //Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)![0] as? OverlayView
     }
-    
+
     // MARK: - Koloda View Delegate
-    
+
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
         koloda.reloadData()
     }
-    
+
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
         //this should open the profile
-        
+
     }
-    
+
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
-        
+
         let user = Auth.auth().currentUser?.uid
-        
+
         if direction == .right{
             //            let user = Auth.auth().currentUser?.uid
             let index = kolodaView.currentCardIndex
-            
+
             let swipeValues = [
                 "liked": true,
                 "swiped": true
             ]
             //update user's swipe values
             ref.child("swipes").child(user!).child(ids[index-1]).updateChildValues(swipeValues)
-            
+
             //set up the dictionary of people the other user has swiped on
             let swipe = ref.child("swipes").child(ids[index-1]).child(user!)
             let matchingSelf = ref.child("user-profiles").child(user!).child("matches")
             let matchingTarget = ref.child("user-profiles").child(ids[index-1]).child("matches")
-            
+
             swipe.observe(.value, with: {(snapshot) in
                 let swipingDict = snapshot.value as? [String : AnyObject] ?? [:]
                 let liked = swipingDict["liked"] as? Bool ?? false
@@ -540,13 +551,13 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                         user: true
                     ]
                     matchingTarget.updateChildValues(match2)
-                    print("would segue: \(self.ids[index-1])")
-                    self.performSegue(withIdentifier: "matchSegue", sender:self)
+//                    print("would segue: \(self.ids[index-1])")
+//                    self.performSegue(withIdentifier: "matchSegue", sender:self)
                 }
                 else{
-                    print("would not segue: \(self.ids[index-1])")
+//                    print("would not segue: \(self.ids[index-1])")
                 }
-                
+
             })
         }
         else{
