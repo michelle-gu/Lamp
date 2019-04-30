@@ -110,7 +110,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
             }))
             self.present(alert, animated: true, completion: nil)
         default:
-            print("Shouldn't get here!")
+            print("Shouldn't reach this")
         }
         
     }

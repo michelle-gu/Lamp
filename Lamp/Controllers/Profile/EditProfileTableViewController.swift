@@ -15,6 +15,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     // MARK: - Constants
     // MARK: Database References
     let user = Auth.auth().currentUser?.uid
+    let ref = Database.database().reference()
     let userProfilesRef = Database.database().reference(withPath: "user-profiles")
     let citiesRef = Database.database().reference(withPath: "locations")
     let uniRef = Database.database().reference(withPath: "universities")
@@ -30,7 +31,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     var allCities: [String] = []
     var cities: [String] = []
     var unis: [String] = []
-    var genders: [String] = []
+    var genders: [String] = ["Female", "Male", "Other", "Prefer not to say"]
     
     // MARK: - Outlets
     @IBOutlet weak var profilePicView: UIImageView!
@@ -67,7 +68,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                 let profilePicRef = Storage.storage().reference().child("profilePictures").child("\(self.user!).jpg")
                 profilePicRef.delete { error in
                     if let error = error {
-                        print(error)
+                        print("Error:", error)
                     } else {
                         // File deleted successfully
                     }
@@ -111,113 +112,6 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(actionSheet, animated: true)
-    }
-    
-    @IBAction func doneButtonPressed(_ sender: Any) {
-        guard
-            let name = nameField.text,
-            let gender = genderField.text,
-            let birthday = birthdayField.text,
-            let university = universityField.text,
-            let futureLoc = futureLocationField.titleLabel?.text,
-            let occupation = occupationField.text,
-            let bio = bioField.text,
-            let pets = petsField.text,
-            let otherLifestylePrefs = otherPreferencesField.text,
-            let phone = phoneField.text,
-            let email = emailField.text,
-            let facebook = facebookField.text,
-            let otherContact = otherContactField.text,
-            name.count > 0,
-            gender.count > 0,
-            birthday.count > 0,
-            university.count > 0,
-            futureLoc.count > 0,
-            occupation.count > 0,
-            isValidBirthday(birthday: birthday)
-            else {
-                let alert = UIAlertController(
-                    title: "Edit Profile Failed",
-                    message: "Please fill in all basic info fields. You also must be at least 18 years old to use this app.",
-                    preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(alert, animated: true, completion: nil)
-                return
-        }
-        
-        let smoking: String
-        let smokingIndex = smokingSegCtrl.selectedSegmentIndex
-        if smokingIndex < 0 || smokingIndex > 2 {
-            smoking = ""
-        } else {
-            smoking = smokingSegCtrl.titleForSegment(at: smokingIndex) ?? ""
-        }
-        
-        // Update all but futureLoc val
-        let profile = userProfilesRef.child(user!).child("profile")
-        let values = [
-            // Basic Info
-            "firstName": name,
-            "gender": gender,
-            "birthday": birthday,
-            "uni": university,
-            "occupation": occupation,
-            "bio": bio,
-            // Living Prefs
-            "budget": Int(budgetSlider.value),
-            "numBedrooms": Int(numBedsSlider.value),
-            "pets": pets,
-            "smoking": smoking,
-            "otherLifestylePrefs": otherLifestylePrefs,
-            // Contact Info
-            "phone": phone,
-            "email": email,
-            "facebook": facebook,
-            "otherContact": otherContact
-            ] as [String : Any]
-        profile.updateChildValues(values)
-
-        // Update futureLoc value
-        let userSettingsRef = userProfilesRef.child(user!).child("settings")
-        let futureLocArr: [String] = futureLoc.components(separatedBy: ", ")
-        for city in allCities {
-            if futureLocArr.contains(city) {
-                // Set future location and default location filter
-                profile.child("futureLoc").child(city).setValue(true)
-                userSettingsRef.child("discovery").child("futureLoc").child(city).setValue(true)
-                
-                // Add the user's locations to list of all locations
-                citiesRef.child(city).child(user!).setValue(true)
-            } else {
-                profile.child("futureLoc").child(city).setValue(false)
-                userSettingsRef.child("discovery").child("futureLoc").child(city).setValue(false)
-                citiesRef.child(city).child(user!).setValue(false)
-            }
-        }
-        
-        // Add user's university to universities and set others to false
-        // Update filter settings
-        for uni in unis {
-            if uni == university {
-                uniRef.child(uni).child(user!).setValue(true)
-                userSettingsRef.child("discovery").child("universities").child(uni).setValue(true)
-            } else {
-                uniRef.child(uni).child(user!).setValue(false)
-                userSettingsRef.child("discovery").child("universities").child(uni).setValue(false)
-            }
-        }
-        
-        // Add user's gender to genders and set others to false
-        for gen in genders {
-            if gen == gender {
-                gendersRef.child(gen).child(user!).setValue(true)
-            } else {
-                gendersRef.child(gen).child(user!).setValue(false)
-            }
-        }
-
-        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func budgetSliderChanged(_ sender: Any) {
@@ -468,12 +362,112 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         })
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        // Populate genders, unis, cities, and all cities arrays
-        getGenders() { (gendersArray) in
-            self.genders = gendersArray
+    override func viewWillDisappear(_ animated: Bool) {
+        guard
+            let name = nameField.text,
+            let gender = genderField.text,
+            let birthday = birthdayField.text,
+            let university = universityField.text,
+            let futureLoc = futureLocationField.titleLabel?.text,
+            let occupation = occupationField.text,
+            let bio = bioField.text,
+            let pets = petsField.text,
+            let otherLifestylePrefs = otherPreferencesField.text,
+            let phone = phoneField.text,
+            let email = emailField.text,
+            let facebook = facebookField.text,
+            let otherContact = otherContactField.text,
+            name.count > 0,
+            gender.count > 0,
+            birthday.count > 0,
+            university.count > 0,
+            futureLoc.count > 0,
+            occupation.count > 0,
+            isValidBirthday(birthday: birthday)
+            else {
+                let alert = UIAlertController(
+                    title: "Edit Profile Failed",
+                    message: "Please fill in all basic info fields. You also must be at least 18 years old to use this app.",
+                    preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+                return
         }
         
+        let smoking: String
+        let smokingIndex = smokingSegCtrl.selectedSegmentIndex
+        if smokingIndex < 0 || smokingIndex > 2 {
+            smoking = ""
+        } else {
+            smoking = smokingSegCtrl.titleForSegment(at: smokingIndex) ?? ""
+        }
+        
+        // Update all but futureLoc val
+        let profile = userProfilesRef.child(user!).child("profile")
+        let values = [
+            // Basic Info
+            "firstName": name,
+            "gender": gender,
+            "birthday": birthday,
+            "uni": university,
+            "occupation": occupation,
+            "bio": bio,
+            // Living Prefs
+            "budget": Int(budgetSlider.value),
+            "numBedrooms": Int(numBedsSlider.value),
+            "pets": pets,
+            "smoking": smoking,
+            "otherLifestylePrefs": otherLifestylePrefs,
+            // Contact Info
+            "phone": phone,
+            "email": email,
+            "facebook": facebook,
+            "otherContact": otherContact
+            ] as [String : Any]
+        profile.updateChildValues(values)
+        
+        // Update futureLoc value
+        let userSettingsRef = userProfilesRef.child(user!).child("settings")
+        let futureLocArr: [String] = futureLoc.components(separatedBy: ", ")
+        for city in allCities {
+            if futureLocArr.contains(city) {
+                // Set future location and default location filter
+                profile.child("futureLoc").child(city).setValue(true)
+                userSettingsRef.child("discovery").child("futureLoc").child(city).setValue(true)
+                
+                // Add the user's locations to list of all locations
+                citiesRef.child(city).child(user!).setValue(true)
+            } else {
+                profile.child("futureLoc").child(city).setValue(false)
+                userSettingsRef.child("discovery").child("futureLoc").child(city).setValue(false)
+                citiesRef.child(city).child(user!).setValue(false)
+            }
+        }
+        
+        // Add user's university to universities and update filter settings
+        uniRef.child(university).child(user!).setValue(true)
+        userSettingsRef.child("discovery").child("universities").child(university).setValue(true)
+        // Set others to false
+        for uni in unis {
+            if uni != university {
+                uniRef.child(uni).child(user!).setValue(false)
+                userSettingsRef.child("discovery").child("universities").child(uni).setValue(false)
+            }
+        }
+        
+        // Add user's gender to genders and set others to false
+        for gen in genders {
+            if gen == gender {
+                gendersRef.child(gen).child(user!).setValue(true)
+            } else {
+                gendersRef.child(gen).child(user!).setValue(false)
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // Populate genders, unis, cities, and all cities arrays
         getUniversities() { (unisArray) in
             self.unis = unisArray
         }
@@ -612,14 +606,12 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                         confirmUniAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
                             
                             if newUni != "" {
-                                print("Adding new uni: ", newUni)
                                 if !self.unis.contains(newUni) {
                                     self.unis.append(newUni)
                                     self.unis.sort()
                                 }
                                 self.uniPicker.reloadComponent(0)
                                 let index = self.unis.firstIndex(of: newUni) ?? self.unis.count
-                                print("Index for new uni: ", index + 1)
                                 self.uniPicker.selectRow(index + 1, inComponent: 0, animated: true)
                                 self.universityField.text = newUni
                             }
@@ -681,31 +673,18 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             
             var citiesArray: [String] = []
             for city in citiesDict {
-                citiesArray.append(city.key)
+                if ((city.value as? Bool)!) {
+                    citiesArray.append(city.key)
+                }
             }
             completion(citiesArray)
         })
     }
     
-    // Retrieve a list of genders from Firebase
-    func getGenders(completion: @escaping ([String]) -> Void) {
-        gendersRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let gendersDict = snapshot.value as? [String : AnyObject] else {
-                return completion([])
-            }
-            
-            var gendersArray: [String] = []
-            for gender in gendersDict {
-                gendersArray.append(gender.key)
-            }
-            gendersArray.sort()
-            completion(gendersArray)
-        })
-    }
     
     // Retrieve a list of universities from Firebase
     func getUniversities(completion: @escaping ([String]) -> Void) {
-        uniRef.observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("universities").observeSingleEvent(of: .value, with: { (snapshot) in
             guard let unisDict = snapshot.value as? [String : AnyObject] else {
                 return completion([])
             }

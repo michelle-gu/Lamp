@@ -29,7 +29,7 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     var allCities: [String] = []
     var cities: [String] = []
     var unis: [String] = []
-    var genders: [String] = []
+    var genders: [String] = ["Female", "Male", "Other", "Prefer not to say"]
 
     // MARK: - Outlets
     @IBOutlet weak var profilePictureView: UIImageView!
@@ -53,7 +53,7 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
                 let profilePicRef = Storage.storage().reference().child("profilePictures").child("\(self.user!).jpg")
                 profilePicRef.delete { error in
                     if let error = error {
-                        print(error)
+                        print("Error:", error)
                     } else {
                         // File deleted successfully
                     }
@@ -281,13 +281,6 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         })
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        // Populate genders array
-        getGenders() { (gendersArray) in
-            self.genders = gendersArray
-        }
-    }
-
     
     // MARK: - Picker delegate
     // when outside of picker is tapped, it will dismiss
@@ -371,22 +364,5 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    // MARK: - Data Retrieval
-    // Retrieve a list of genders from Firebase
-    func getGenders(completion: @escaping ([String]) -> Void) {
-        gendersRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let gendersDict = snapshot.value as? [String : AnyObject] else {
-                return completion([])
-            }
-            
-            var gendersArray: [String] = []
-            for gender in gendersDict {
-                gendersArray.append(gender.key)
-            }
-            gendersArray.sort()
-            completion(gendersArray)
-        })
-    }
-    
+        
 }

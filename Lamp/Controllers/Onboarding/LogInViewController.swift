@@ -46,7 +46,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Actions
     @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
-        print("Unwind segue to login triggered!")
+        print("Unwind to login.")
     }
 
     @IBAction func logInDidTouch(_ sender: Any) {
@@ -56,7 +56,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             email.count > 0,
             password.count > 0
             else {
-                print("\nError signing with fields!\n")
                 let alert = UIAlertController(
                     title: "Sign In Failed",
                     message: "Please fill in all fields.",
@@ -69,7 +68,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         
         Auth.auth().signIn(withEmail: email, password: password) { user, error in
             if let error = error, user == nil {
-                print("\nError signing in\n")
                 let alert = UIAlertController(
                     title: "Sign In Failed",
                     message: error.localizedDescription,
@@ -79,7 +77,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 self.present(alert, animated: true, completion: nil)
                 return
             } else {
-                print("\nSuccess! Using social media segue\n")
                 if let userID = user?.user.uid {
                     self.ref.child(userID).child("profile").observe(.value, with: { (snapshot) in
                         let profileDict = snapshot.value as? [String : AnyObject] ?? [:]

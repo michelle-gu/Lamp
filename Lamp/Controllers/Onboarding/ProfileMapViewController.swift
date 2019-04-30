@@ -140,7 +140,9 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
             
             var citiesArray: [String] = []
             for city in citiesDict {
-                citiesArray.append(city.key)
+                if ((city.value as? Bool)!) {
+                    citiesArray.append(city.key)
+                }
             }
             completion(citiesArray)
         })
@@ -186,7 +188,7 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
             UIApplication.shared.endIgnoringInteractionEvents()
             
             if response == nil {
-                print("oops")
+                print("Shouldn't reach this")
             } else {
                 // Remove existing pinpoints
                 let pinpoints = self.mapView.annotations
@@ -282,13 +284,8 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
             cities.append(currentCity)
             
             for currentCity in cities {
-                let locationValues: [String : Any] = [
-                    currentCity : [
-                        user : true
-                    ]
-                ]
                 // updated locations
-                locationRef.updateChildValues(locationValues)
+                locationRef.child(currentCity).child(user!).setValue(true)
                 
                 let values: [String : Any] = [
                     currentCity: true
@@ -297,8 +294,6 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 // update locations nested in user>profile>futureLoc
                 profileRef.child("futureLoc").updateChildValues(values)
                 
-                // update locations nested in user>settings>discovery>futureLoc
-                discoverySettingsRef.child("futureLoc").updateChildValues(values)
             }
             
             profileRef.observe(.value, with: { (snapshot) in
@@ -320,6 +315,13 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
         }
         
         currentCity = ""
+        
+        // Remove existing pinpoints
+        let pinpoints = self.mapView.annotations
+        self.mapView.removeAnnotations(pinpoints)
+        
+        // Hide Add Button
+        addCityToList.isHidden = true
     }
     
     // Click to Remove City
@@ -337,9 +339,6 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 //remove from Firebase
                 let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                 profileLocs.child(currentCity).removeValue()
-                
-                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
-                discoverySettingsRef.child(currentCity).removeValue()
                 
                 citiesRef.child(currentCity).child(user!).removeValue()
             }
@@ -363,16 +362,13 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                 profileLocs.child(currentCity).removeValue()
                 
-                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
-                discoverySettingsRef.child(currentCity).removeValue()
-                
                 citiesRef.child(currentCity).child(user!).removeValue()
             }
             n += 1
         }
     }
     
-    @IBAction func city3ButtonPressed(_ sender: Any) {
+    @IBAction func city3ButtonPressed(_ sender: Any) {        
         if (futureCity3.isHidden == false) {
             futureCity3.isHidden = true
         }
@@ -387,9 +383,6 @@ class ProfileMapViewController: UIViewController, MKMapViewDelegate, UISearchBar
                 //remove from Firebase
                 let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                 profileLocs.child(currentCity).removeValue()
-                
-                let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
-                discoverySettingsRef.child(currentCity).removeValue()
                 
                 citiesRef.child(currentCity).child(user!).removeValue()
             }

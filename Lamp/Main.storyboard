@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-8v-AgN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-8v-AgN">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1934,10 +1934,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Associate Accountant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lof-QB-4d3">
-                                                    <rect key="frame" x="16" y="54" width="186" height="21"/>
+                                                    <rect key="frame" x="16" y="54" width="343" height="21"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" constant="343" id="v07-QI-dZX"/>
                                                         <constraint firstAttribute="height" constant="21" id="yWm-dc-cq4"/>
-                                                        <constraint firstAttribute="width" constant="186" id="yYU-ba-Wur"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
@@ -1989,19 +1989,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="141.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is my bio." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmc-Ch-fn0">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Not Specified" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fkO-aT-0S6">
                                                     <rect key="frame" x="16" y="11" width="344" height="120"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Pmc-Ch-fn0" firstAttribute="top" secondItem="VKY-LA-Urg" secondAttribute="top" constant="11" id="5QS-gu-WDz"/>
-                                                <constraint firstAttribute="trailing" secondItem="Pmc-Ch-fn0" secondAttribute="trailing" constant="15" id="O9E-iR-2k2"/>
-                                                <constraint firstAttribute="bottom" secondItem="Pmc-Ch-fn0" secondAttribute="bottom" constant="10.666666666666657" id="dCA-wv-Bmu"/>
-                                                <constraint firstItem="Pmc-Ch-fn0" firstAttribute="leading" secondItem="VKY-LA-Urg" secondAttribute="leading" constant="16" id="x8P-fM-lKG"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -2326,7 +2322,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Profile" id="yG6-7Z-iJu">
-                        <barButtonItem key="backBarButtonItem" title="Cancel" id="dyr-25-S8F"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="dyr-25-S8F"/>
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="VJs-cE-Szg">
                             <connections>
                                 <segue destination="23s-5q-Ryf" kind="show" id="020-Bl-TlF"/>
@@ -2339,7 +2335,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bioLabel" destination="Pmc-Ch-fn0" id="XRg-Ui-oQ9"/>
+                        <outlet property="bioLabel" destination="fkO-aT-0S6" id="TSU-UU-tx3"/>
                         <outlet property="budgetLabel" destination="Ev5-Ol-HIb" id="Fpj-LR-ndq"/>
                         <outlet property="editProfileButton" destination="KXr-J9-uBD" id="A1G-jI-Gps"/>
                         <outlet property="emailLabel" destination="ogn-wp-zDX" id="iZI-Vi-a5G"/>
@@ -2424,10 +2420,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQ1-pP-GfJ" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="16" y="108" width="343" height="520"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuf-TY-otn">
                                 <rect key="frame" x="96" y="636" width="82" height="82"/>
                                 <color key="backgroundColor" red="0.84789663550000005" green="0.58553600309999998" blue="0.82471710440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2467,6 +2459,24 @@
                                     <action selector="yesButtonPressed:" destination="Cyu-ij-Vls" eventType="touchUpInside" id="oPx-a0-frD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Out of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd1-7m-x5A">
+                                <rect key="frame" x="96" y="273" width="183" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="27"/>
+                                <color key="textColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Come back later!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1j-wj-AHV">
+                                <rect key="frame" x="96" y="329" width="183" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <color key="textColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQ1-pP-GfJ" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="16" y="108" width="343" height="520"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -2502,7 +2512,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4G-jc-bdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6826" y="923"/>
+            <point key="canvasLocation" x="6824.8000000000002" y="922.90640394088678"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IY6-xb-0Ar">
@@ -3503,13 +3513,7 @@
                             <outlet property="delegate" destination="Qqq-Yz-t8p" id="ow0-zs-Srt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Edit Profile" id="X2r-2K-LPE">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="yCf-ZD-dRE">
-                            <connections>
-                                <action selector="doneButtonPressed:" destination="Qqq-Yz-t8p" id="CKz-sz-wO3"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="X2r-2K-LPE"/>
                     <connections>
                         <outlet property="bioField" destination="atw-zK-GdS" id="DFb-JR-QgO"/>
                         <outlet property="birthdayField" destination="BT5-zE-Ris" id="whC-9q-kxg"/>
@@ -4043,7 +4047,6 @@
         <image name="profile-pic-blank" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6so-PU-pzB"/>
         <segue reference="YS3-yl-8TS"/>
         <segue reference="c5S-Za-6zN"/>
         <segue reference="Huo-mK-HWW"/>

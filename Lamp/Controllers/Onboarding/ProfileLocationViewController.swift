@@ -20,7 +20,6 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
     let uniRef = Database.database().reference(withPath: "universities")
     
     // MARK: Pickers
-    let imagePicker = UIImagePickerController()
     let uniPicker = UIPickerView()
     
     // MARK: Segues
@@ -148,13 +147,12 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
             }
         }
         
-        // Add user's university to universities and set others to false
-        // Update filter settings
+        // Add user's university to universities and update filter settings
+        uniRef.child(uni).child(user!).setValue(true)
+        userSettingsRef.child("discovery").child("universities").child(uni).setValue(true)
+        // Set others to false
         for university in unis {
-            if university == uni {
-                uniRef.child(university).child(user!).setValue(true)
-                userSettingsRef.child("discovery").child("universities").child(university).setValue(true)
-            } else {
+            if university != uni {
                 uniRef.child(university).child(user!).setValue(false)
                 userSettingsRef.child("discovery").child("universities").child(university).setValue(false)
             }
@@ -234,14 +232,12 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
                         confirmUniAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
                             
                             if newUni != "" {
-                                print("Adding new uni: ", newUni)
                                 if !self.unis.contains(newUni) {
                                     self.unis.append(newUni)
                                     self.unis.sort()
                                 }
                                 self.uniPicker.reloadComponent(0)
                                 let index = self.unis.firstIndex(of: newUni) ?? self.unis.count
-                                print("Index for new uni: ", index + 1)
                                 self.uniPicker.selectRow(index + 1, inComponent: 0, animated: true)
                                 self.uniTextField.text = newUni
                             }
@@ -293,6 +289,9 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
             if (locationText.isEmpty == false) {
                 self.mapButton.setTitle(locationText, for: .normal)
                 self.mapButton.setTitleColor(UIColor.black, for: .normal)
+            } else {
+                self.mapButton.setTitle(" Where are you moving?", for: .normal)
+                self.mapButton.setTitleColor(UIColor(red: 0.78, green: 0.78, blue: 0.80, alpha: 1), for: .normal)
             }
             
         }
@@ -308,7 +307,9 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
             
             var citiesArray: [String] = []
             for city in citiesDict {
-                citiesArray.append(city.key)
+                if ((city.value as? Bool)!) {
+                    citiesArray.append(city.key)
+                }
             }
             completion(citiesArray)
         })

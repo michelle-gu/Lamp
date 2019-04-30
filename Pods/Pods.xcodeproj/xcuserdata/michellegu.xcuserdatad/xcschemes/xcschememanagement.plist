@@ -16,6 +16,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>BoringSSL-GRPC.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>26</integer>
+		</dict>
 		<key>Eureka.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -123,6 +128,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>9</integer>
+		</dict>
+		<key>FirebaseFirestore.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>27</integer>
 		</dict>
 		<key>FirebaseInstanceID.xcscheme</key>
 		<dict>
@@ -246,6 +256,11 @@
 			<key>orderHint</key>
 			<integer>20</integer>
 		</dict>
+		<key>Protobuf.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>31</integer>
+		</dict>
 		<key>RangeUISlider.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -257,6 +272,21 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>22</integer>
+		</dict>
+		<key>gRPC-C++-gRPCCertificates.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>29</integer>
+		</dict>
+		<key>gRPC-C++.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>28</integer>
+		</dict>
+		<key>gRPC-Core.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>30</integer>
 		</dict>
 		<key>leveldb-library.xcscheme</key>
 		<dict>

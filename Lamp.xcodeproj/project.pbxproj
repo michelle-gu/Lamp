@@ -175,6 +175,16 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		B6451541227769C500F58C96 /* Swipe */ = {
+			isa = PBXGroup;
+			children = (
+				9554507F2257FC94003C4448 /* MyKolodaViewController.swift */,
+				07B43E6F22348D0900BB8548 /* CardsViewController.swift */,
+				B645153E22757FA500F58C96 /* UserProfileTableViewController.swift */,
+			);
+			path = Swipe;
+			sourceTree = "<group>";
+		};
 		B6B897102233021D00164801 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,10 +192,10 @@
 				B6E77A322272416C00AA7756 /* Onboarding */,
 				B6165F442270428F00DFF8D2 /* Profile */,
 				B62C34E9225558A000C5348F /* Settings */,
-				9554507F2257FC94003C4448 /* MyKolodaViewController.swift */,
-				07B43E6F22348D0900BB8548 /* CardsViewController.swift */,
+				B6451541227769C500F58C96 /* Swipe */,
+				07AB869F224921D9001EE449 /* MessageListViewController.swift */,
 				07131721224554F3000CDD33 /* MatchMessageViewController.swift */,
-				B645153E22757FA500F58C96 /* UserProfileTableViewController.swift */,
+				07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -594,7 +604,7 @@
 				CODE_SIGN_ENTITLEMENTS = Lamp/Lamp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GY6Y6QSGCU;
+				DEVELOPMENT_TEAM = RHWN2H995S;
 				INFOPLIST_FILE = Lamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -616,7 +626,7 @@
 				CODE_SIGN_ENTITLEMENTS = Lamp/Lamp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GY6Y6QSGCU;
+				DEVELOPMENT_TEAM = RHWN2H995S;
 				INFOPLIST_FILE = Lamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

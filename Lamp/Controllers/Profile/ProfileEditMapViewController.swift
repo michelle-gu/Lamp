@@ -134,7 +134,9 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
             
             var citiesArray: [String] = []
             for city in citiesDict {
-                citiesArray.append(city.key)
+                if ((city.value as? Bool)!) {
+                    citiesArray.append(city.key)
+                }
             }
             completion(citiesArray)
         })
@@ -174,7 +176,7 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
             UIApplication.shared.endIgnoringInteractionEvents()
             
             if response == nil {
-                print("oops")
+                print("Shouldn't reach this")
             } else {
                 // Remove existing pinpoints
                 let pinpoints = self.mapView.annotations
@@ -268,18 +270,11 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
             cities.append(currentCity)
             
             for currentCity in cities {
-                let values: [String : Any] = [
-                    currentCity: true
-                ]
-                
                 // update locations
-                citiesRef.updateChildValues(values)
+                citiesRef.child(currentCity).setValue(true)
                 
                 // update locations nested in user>profile>futureLoc
-                profileRef.child("futureLoc").updateChildValues(values)
-                
-                // update locations nested in user>settings>discovery>futureLocs
-                discoverySettingsRef.child("futureLoc").updateChildValues(values)
+                profileRef.child("futureLoc").child(currentCity).setValue(true)
             }
         }
         
@@ -295,11 +290,17 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
         }
         
         currentCity = ""
+        
+        // Remove existing pinpoints
+        let pinpoints = self.mapView.annotations
+        self.mapView.removeAnnotations(pinpoints)
+        
+        // Hide Add Button
+        addCityToList.isHidden = true
     }
     
     // Click to Remove City
-    @IBAction func city1Pressed(_ sender: Any) {
-        var n = 0
+    @IBAction func city1Pressed(_ sender: Any) {var n = 0
         for currentCity in cities {
             if (currentCity == futureCity1.titleLabel?.text) {
                 // if trying to remove last city, send alert
@@ -325,9 +326,6 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
                     //remove from Firebase
                     let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                     profileLocs.child(currentCity).removeValue()
-                    
-                    let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
-                    discoverySettingsRef.child(currentCity).removeValue()
                     
                     citiesRef.child(currentCity).child(user!).removeValue()
                 }
@@ -364,9 +362,6 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
                     let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                     profileLocs.child(currentCity).removeValue()
                     
-                    let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
-                    discoverySettingsRef.child(currentCity).removeValue()
-                    
                     citiesRef.child(currentCity).child(user!).removeValue()
                 }
             }
@@ -402,9 +397,6 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
                     let profileLocs = userRef.child(user!).child("profile").child("futureLoc")
                     profileLocs.child(currentCity).removeValue()
                     
-                    let discoverySettingsRef = self.userRef.child(user!).child("settings").child("discovery").child("futureLoc")
-                    discoverySettingsRef.child(currentCity).removeValue()
-                    
                     citiesRef.child(currentCity).child(user!).removeValue()
                 }
             }
@@ -419,7 +411,7 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
         return true
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: SetUITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
 }
