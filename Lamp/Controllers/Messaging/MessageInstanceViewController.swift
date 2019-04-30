@@ -21,11 +21,13 @@ class MessageInstanceViewController: MessagesViewController {
     
     // specific delegate for message
     var messageDelegate: MessageSentDelegate!
-
-    var profileRef: DatabaseReference!
     
     var userId: String = ""
+    var userProfileURL = URL(string: "")
     
+    // MARK: Firebase
+    var ref: DatabaseReference!
+
     // MARK: Firestore
     private let db = Firestore.firestore()
     private var reference: CollectionReference?
@@ -34,7 +36,8 @@ class MessageInstanceViewController: MessagesViewController {
     private var messages: [Message] = []
     private var messageListener: ListenerRegistration?
     
-    var channelId: String = "" // TO DO: Pass channel ID!!
+    var channelId: String = ""
+    var matchId = ""
     
     // clean up for listener
     deinit {
@@ -45,7 +48,7 @@ class MessageInstanceViewController: MessagesViewController {
         super.viewDidLoad()
         
         userId = Auth.auth().currentUser!.uid
-        
+
         // reference to firestore message db
         reference = db.collection(["channels", channelId, "thread"].joined(separator: "/"))
 
@@ -61,7 +64,7 @@ class MessageInstanceViewController: MessagesViewController {
             }
         }
         
-        self.messagesCollectionView.scrollToBottom() // TODO: messages do not scroll to bottom
+        messagesCollectionView.scrollToBottom() // TODO: messages do not scroll to bottom
         
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
@@ -69,14 +72,7 @@ class MessageInstanceViewController: MessagesViewController {
         messagesCollectionView.messagesDisplayDelegate = self
 
         styleChatRoom()
-    }
-    
-    // sends back last message for the Message List VC to update values
-    override func viewWillDisappear(_ animated: Bool) {
-        let index = messages.endIndex - 1
-        if (index >= 0 || index < messages.count) {
-            
-        }
+        setUpNavigationBarItems()
     }
     
     // MARK: Helpers
@@ -127,14 +123,34 @@ class MessageInstanceViewController: MessagesViewController {
         imageView.widthAnchor.constraint(equalToConstant: 34).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 34).isActive = true
         
-        let image = UIImage(named: "girl-5")
-        imageView.image = image
+        ref = Database.database().reference(withPath: "messaging")
+        let members = ref.child("members").child(channelId)
         
-        navigationItem.titleView = imageView
-    }
+        // goes through members of channel
+        members.queryOrderedByKey().observe(.value, with: { (snapshot) in
+            let membersDict = snapshot.value as? [String : NSObject] ?? [:]
+            
+            // loop through all members (two) ids to dict
+            var matchUserId = "nil"
+            for (key, _) in membersDict {
+                if key != self.userId {
+                    matchUserId = key
+                }
+            }
+            
+            let profileRef = Database.database().reference().child("user-profiles")
+            let matchProfile = profileRef.child(matchUserId).child("profile")
+            
+            matchProfile.observe(.value, with: { (snapshot) in
+                let matchDict = snapshot.value as? [String : AnyObject] ?? [:]
     
+                if let matchName = matchDict["firstName"] as? String {
+                    self.navigationItem.title = matchName
+                }
+            })
+        })
+    }
 }
-
 
 extension MessageInstanceViewController: MessagesDataSource {
     func numberOfSections(
@@ -221,9 +237,52 @@ extension MessageInstanceViewController: MessagesDisplayDelegate {
         at indexPath: IndexPath,
         in messagesCollectionView: MessagesCollectionView) {
         
-        let senderInitials = "S"
-        let receiverInitials = "R"
-        avatarView.initials = isFromCurrentSender(message: message) ? senderInitials : receiverInitials
+        ref = Database.database().reference(withPath: "messaging")
+        let members = ref.child("members").child(channelId)
+        
+        // goes through members of channel
+        members.queryOrderedByKey().observe(.value, with: { (snapshot) in
+            let membersDict = snapshot.value as? [String : NSObject] ?? [:]
+            
+            // loop through all members (two) ids to dict
+            var matchUserId = "nil"
+            for (key, _) in membersDict {
+                if key != self.userId {
+                    matchUserId = key
+                }
+            }
+            
+            let profileRef = Database.database().reference().child("user-profiles")
+            
+            profileRef.observe(.value, with: { (snapshot) in
+                let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
+                
+                var userPicURL = URL(string: "blank-profile-pic")
+                var matchPicURL = URL(string: "blank-profile-pic")
+                
+                let userData = profileDict[self.userId] as? [String : AnyObject] ?? [:]
+                let userProfile = userData["profile"] as? [String : AnyObject] ?? [:]
+                if let userPicVal = userProfile["profilePicture"] as? String {
+                    if userPicVal != "" {
+                        userPicURL = URL(string: userPicVal)
+                    }
+                }
+                
+                let matchData = profileDict[matchUserId] as? [String : AnyObject] ?? [:]
+                let matchProfile = matchData["profile"] as? [String : AnyObject] ?? [:]
+                if let matchPicVal = matchProfile["profilePicture"] as? String {
+                    if matchPicVal != "" {
+                        matchPicURL = URL(string: matchPicVal)
+                    }
+                }
+                
+                if self.isFromCurrentSender(message: message) {
+                    avatarView.kf.setImage(with: userPicURL)
+                } else {
+                    avatarView.kf.setImage(with: matchPicURL)
+                }
+            })
+        })
     }
 }
 

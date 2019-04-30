@@ -14,6 +14,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     
     // MARK: - Constants
     let user = Auth.auth().currentUser?.uid
+    // set for match message to pass profile picture
+    var matchId = ""
+    
     let ref: DatabaseReference = Database.database().reference()
     let userRef = Database.database().reference(withPath: "user-profiles")
     let locationRef = Database.database().reference(withPath: "locations")
@@ -172,6 +175,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     //should check if the other user has also "liked" this user
     @IBAction func yesButtonPressed(_ sender: Any) {
         let index = kolodaView.currentCardIndex
+        
+        // sets global matchId variable to pass in prepare method
+        matchId = ids[index]
 
 //        let swipeValues = [
 //            "liked": true,
@@ -181,9 +187,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 //        ref.child("swipes").child(user!).child(ids[index]).updateChildValues(swipeValues)
 
         //set up the dictionary of people the other user has swiped on
-        let swipe = ref.child("swipes").child(ids[index-1]).child(user!)
+        let swipe = ref.child("swipes").child(matchId).child(user!)
         let matchingSelf = ref.child("user-profiles").child(user!).child("matches")
-        let matchingTarget = ref.child("user-profiles").child(ids[index-1]).child("matches")
+        let matchingTarget = ref.child("user-profiles").child(matchId).child("matches")
 
         swipe.observe(.value, with: {(snapshot) in
             let swipingDict = snapshot.value as? [String : AnyObject] ?? [:]
@@ -199,18 +205,23 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                 matchingTarget.updateChildValues(match2)
                 self.kolodaView.swipe(.right)
                 self.performSegue(withIdentifier: "matchSegue", sender:sender)
-
             }
             else{
                 self.kolodaView.swipe(.right)
             }
-
         })
         
-//        self.performSegue(withIdentifier: "matchSegue", sender:sender)
     }
     
-    @IBAction func noButtonPressed(_ sender: Any) {
+    // passes match id to match message VC
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "matchSegue" {
+            let controller: MatchMessageViewController = segue.destination as! MatchMessageViewController
+            controller.match = matchId
+        }
+    }
+    
+  @IBAction func noButtonPressed(_ sender: Any) {
         let index = kolodaView.currentCardIndex
         //update the card value
         let swipeValues = [
@@ -331,11 +342,11 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                         self.user: true
                     ]
                     matchingTarget.updateChildValues(match2)
-                    print("would segue: \(self.ids[index-1])")
-                    self.performSegue(withIdentifier: "matchSegue", sender:self)
+//                    print("would segue: \(self.ids[index-1])")
+//                    self.performSegue(withIdentifier: "matchSegue", sender:self)
                 }
                 else{
-                    print("would not segue: \(self.ids[index-1])")
+//                    print("would not segue: \(self.ids[index-1])")
                 }
                 
             })
