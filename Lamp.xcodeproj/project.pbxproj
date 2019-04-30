@@ -11,8 +11,6 @@
 		07131722224554F3000CDD33 /* MatchMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07131721224554F3000CDD33 /* MatchMessageViewController.swift */; };
 		076FB9F5226FF19200E0A204 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076FB9F4226FF19200E0A204 /* Channel.swift */; };
 		0788127E225EEC4E00DCA246 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788127D225EEC4E00DCA246 /* MessageTableViewCell.swift */; };
-		07AB86A0224921D9001EE449 /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AB869F224921D9001EE449 /* MessageListViewController.swift */; };
-		07AB86A2224994BD001EE449 /* MessageInstanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */; };
 		07B43E6622348C0900BB8548 /* EmailConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B43E6522348C0900BB8548 /* EmailConfirmationViewController.swift */; };
 		07B43E6822348C4000BB8548 /* SocialMediaConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B43E6722348C4000BB8548 /* SocialMediaConnectViewController.swift */; };
 		07B43E6A22348C7600BB8548 /* ProfileCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B43E6922348C7600BB8548 /* ProfileCreationViewController.swift */; };
@@ -29,6 +27,8 @@
 		95E4E7DD225D6EEB00A45EC4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4E7DC225D6EEB00A45EC4 /* CardView.swift */; };
 		95E4E7DF225D6EF900A45EC4 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95E4E7DE225D6EF900A45EC4 /* CardView.xib */; };
 		95E4E7E1225D799D00A45EC4 /* XibCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4E7E0225D799D00A45EC4 /* XibCreatable.swift */; };
+		B60A35A4227833E600FE5F3D /* MessageInstanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60A35A2227833E600FE5F3D /* MessageInstanceViewController.swift */; };
+		B60A35A5227833E600FE5F3D /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60A35A3227833E600FE5F3D /* MessageListViewController.swift */; };
 		B6165F46227042BC00DFF8D2 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6165F45227042BC00DFF8D2 /* ProfileTableViewController.swift */; };
 		B6165F4A227042ED00DFF8D2 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6165F49227042ED00DFF8D2 /* EditProfileTableViewController.swift */; };
 		B61FE834225C6637002BDDD7 /* DiscoveryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61FE833225C6637002BDDD7 /* DiscoveryTableViewController.swift */; };
@@ -52,8 +52,6 @@
 		07131721224554F3000CDD33 /* MatchMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchMessageViewController.swift; sourceTree = "<group>"; };
 		076FB9F4226FF19200E0A204 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		0788127D225EEC4E00DCA246 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
-		07AB869F224921D9001EE449 /* MessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
-		07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInstanceViewController.swift; sourceTree = "<group>"; };
 		07B43E6522348C0900BB8548 /* EmailConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailConfirmationViewController.swift; sourceTree = "<group>"; };
 		07B43E6722348C4000BB8548 /* SocialMediaConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaConnectViewController.swift; sourceTree = "<group>"; };
 		07B43E6922348C7600BB8548 /* ProfileCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCreationViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +67,8 @@
 		95E4E7DC225D6EEB00A45EC4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		95E4E7DE225D6EF900A45EC4 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		95E4E7E0225D799D00A45EC4 /* XibCreatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = XibCreatable.swift; path = Lamp/Views/XibCreatable.swift; sourceTree = SOURCE_ROOT; };
+		B60A35A2227833E600FE5F3D /* MessageInstanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageInstanceViewController.swift; sourceTree = "<group>"; };
+		B60A35A3227833E600FE5F3D /* MessageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
 		B6165F45227042BC00DFF8D2 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		B6165F49227042ED00DFF8D2 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		B61FE833225C6637002BDDD7 /* DiscoveryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryTableViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +105,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07F98075227695C100FB5AAD /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				07131721224554F3000CDD33 /* MatchMessageViewController.swift */,
+				B60A35A2227833E600FE5F3D /* MessageInstanceViewController.swift */,
+				B60A35A3227833E600FE5F3D /* MessageListViewController.swift */,
+			);
+			path = Messaging;
+			sourceTree = "<group>";
+		};
 		746D53F767B4961D1D89C5E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,13 +189,11 @@
 		B6B897102233021D00164801 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				07F98075227695C100FB5AAD /* Messaging */,
 				B6E77A322272416C00AA7756 /* Onboarding */,
 				B6165F442270428F00DFF8D2 /* Profile */,
 				B62C34E9225558A000C5348F /* Settings */,
 				B6451541227769C500F58C96 /* Swipe */,
-				07AB869F224921D9001EE449 /* MessageListViewController.swift */,
-				07131721224554F3000CDD33 /* MatchMessageViewController.swift */,
-				07AB86A1224994BD001EE449 /* MessageInstanceViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -423,10 +431,10 @@
 			files = (
 				076FB9F5226FF19200E0A204 /* Channel.swift in Sources */,
 				B6DFE9CC225884150086BCE6 /* NotificationsTableViewController.swift in Sources */,
+				B60A35A4227833E600FE5F3D /* MessageInstanceViewController.swift in Sources */,
 				B6B8971B22331FCA00164801 /* AppDelegate.swift in Sources */,
 				B62C34E82255588B00C5348F /* ChangePasswordViewController.swift in Sources */,
 				B61FE838225C6DF2002BDDD7 /* FutureLocationFilterViewController.swift in Sources */,
-				07AB86A0224921D9001EE449 /* MessageListViewController.swift in Sources */,
 				B6B897152233037300164801 /* SignUpViewController.swift in Sources */,
 				0704BF222268EF03005F6394 /* Message.swift in Sources */,
 				571B426B224AC8EF00F9F42B /* Profile.swift in Sources */,
@@ -447,11 +455,11 @@
 				B6DFE9CA2257C92D0086BCE6 /* Settings.swift in Sources */,
 				B6165F4A227042ED00DFF8D2 /* EditProfileTableViewController.swift in Sources */,
 				955450802257FC94003C4448 /* MyKolodaViewController.swift in Sources */,
+				B60A35A5227833E600FE5F3D /* MessageListViewController.swift in Sources */,
 				07131722224554F3000CDD33 /* MatchMessageViewController.swift in Sources */,
 				07B43E6C22348C9900BB8548 /* ProfileLocationViewController.swift in Sources */,
 				07B43E6822348C4000BB8548 /* SocialMediaConnectViewController.swift in Sources */,
 				95E4E7DD225D6EEB00A45EC4 /* CardView.swift in Sources */,
-				07AB86A2224994BD001EE449 /* MessageInstanceViewController.swift in Sources */,
 				B6165F46227042BC00DFF8D2 /* ProfileTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

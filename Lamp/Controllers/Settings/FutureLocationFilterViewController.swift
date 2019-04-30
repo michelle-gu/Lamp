@@ -271,9 +271,9 @@ class FutureLocationFilterViewController: UIViewController, MKMapViewDelegate, U
                 let values: [String : Any] = [
                     currentCity: true
                 ]
-                
-                // update locations nested in user>settings>discovery>futureLocs
-                discoverySettingsRef.child("futureLoc").updateChildValues(values)
+
+              // update locations nested in user>settings>discovery>futureLocs
+                discoverySettingsRef.child("futureLoc").child(currentCity).setValue(true)
             }
         }
         

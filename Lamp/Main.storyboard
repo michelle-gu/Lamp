@@ -1934,10 +1934,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Associate Accountant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lof-QB-4d3">
-                                                    <rect key="frame" x="16" y="54" width="186" height="21"/>
+                                                    <rect key="frame" x="16" y="54" width="343" height="21"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" constant="343" id="v07-QI-dZX"/>
                                                         <constraint firstAttribute="height" constant="21" id="yWm-dc-cq4"/>
-                                                        <constraint firstAttribute="width" constant="186" id="yYU-ba-Wur"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
@@ -2322,7 +2322,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Profile" id="yG6-7Z-iJu">
-                        <barButtonItem key="backBarButtonItem" title="Cancel" id="dyr-25-S8F"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="dyr-25-S8F"/>
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="VJs-cE-Szg">
                             <connections>
                                 <segue destination="23s-5q-Ryf" kind="show" id="020-Bl-TlF"/>
@@ -2704,7 +2704,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fE0-Vy-20a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8152.8000000000002" y="1778.5714285714287"/>
+            <point key="canvasLocation" x="8532" y="1765"/>
         </scene>
         <!--Name-->
         <scene sceneID="37Z-Ps-Fs4">
@@ -2726,7 +2726,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gb3-Jb-Yhe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11178.4" y="1764.5320197044337"/>
+            <point key="canvasLocation" x="10234" y="1765"/>
         </scene>
         <!--Match Message View Controller-->
         <scene sceneID="BdU-na-0W9">
@@ -3026,7 +3026,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dB-zO-zR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10236" y="1764.5320197044337"/>
+            <point key="canvasLocation" x="9380" y="1765"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="pVX-Gb-cRt">
@@ -3515,13 +3515,7 @@
                             <outlet property="delegate" destination="Qqq-Yz-t8p" id="ow0-zs-Srt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Edit Profile" id="X2r-2K-LPE">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="yCf-ZD-dRE">
-                            <connections>
-                                <action selector="doneButtonPressed:" destination="Qqq-Yz-t8p" id="CKz-sz-wO3"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="X2r-2K-LPE"/>
                     <connections>
                         <outlet property="bioField" destination="atw-zK-GdS" id="DFb-JR-QgO"/>
                         <outlet property="birthdayField" destination="BT5-zE-Ris" id="whC-9q-kxg"/>
@@ -4057,8 +4051,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="3JC-RH-HSz"/>
         <segue reference="YS3-yl-8TS"/>
-        <segue reference="ABV-LS-boM"/>
-        <segue reference="PA3-YF-Hx5"/>
+        <segue reference="c5S-Za-6zN"/>
+        <segue reference="Huo-mK-HWW"/>
         <segue reference="9WS-Lc-l6O"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.60796302560000004" green="0.69684332609999999" blue="0.94992285970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

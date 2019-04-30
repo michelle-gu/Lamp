@@ -270,15 +270,11 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
             cities.append(currentCity)
             
             for currentCity in cities {
-                let values: [String : Any] = [
-                    currentCity: true
-                ]
-                
                 // update locations
-                citiesRef.updateChildValues(values)
+                citiesRef.child(currentCity).child(user!).setValue(true)
                 
                 // update locations nested in user>profile>futureLoc
-                profileRef.child("futureLoc").updateChildValues(values)
+                profileRef.child("futureLoc").child(currentCity).setValue(true)
             }
         }
         
