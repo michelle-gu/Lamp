@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import Kingfisher
 
 class MatchMessageViewController: UIViewController {
 
@@ -16,9 +18,15 @@ class MatchMessageViewController: UIViewController {
     @IBOutlet weak var yourProfilePicView: UIImageView!
     @IBOutlet weak var matchProfilePicView: UIImageView!
     
-    
+    let user = Auth.auth().currentUser?.uid
+    var match = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // set appropriate Profile pictures to Match Message Card
+        print("NEW MATCH ID = \(match)")
+        
         
         styleViewController()
     }

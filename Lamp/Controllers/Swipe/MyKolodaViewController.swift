@@ -15,6 +15,8 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     // MARK: - Constants
     let userRef = Database.database().reference(withPath: "user-profiles")
     let user = Auth.auth().currentUser?.uid
+    // set for match message to pass profile picture
+    var matchId = ""
     
     let ref: DatabaseReference = Database.database().reference()
 
@@ -397,6 +399,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     @IBAction func yesButtonPressed(_ sender: Any) {
         let user = Auth.auth().currentUser?.uid
         let index = kolodaView.currentCardIndex
+        
+        // sets global matchId variable to pass in prepare method
+        matchId = ids[index]
 
 //        let swipeValues = [
 //            "liked": true,
@@ -428,13 +433,18 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             else{
                 self.kolodaView.swipe(.right)
             }
-
         })
         
 //        self.performSegue(withIdentifier: "matchSegue", sender:sender)
     }
     
-    
+    // passes match id to match message VC
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "matchSegue" {
+            let controller: MatchMessageViewController = segue.destination as! MatchMessageViewController
+            controller.match = matchId
+        }
+    }
     
     @IBAction func noButtonPressed(_ sender: Any) {
         let user = Auth.auth().currentUser?.uid
