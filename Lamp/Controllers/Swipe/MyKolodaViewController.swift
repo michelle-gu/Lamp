@@ -468,13 +468,16 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             locationList.observe(.value, with: {(snapshot) in
                 let locationDict = snapshot.value as? [String : AnyObject] ?? [:]
                 var counter = 0
-                for (key,_) in locationDict{
-                    counter += 1
-                    if counter == 1{
-                        location = "\(key)"
-                    }
-                    else {
-                        location = "\(location), \(key)"
+                for (key,value) in locationDict{
+                    let v = value as? Bool ?? false
+                    if v{
+                        counter += 1
+                        if counter == 1{
+                            location = "\(key)"
+                        }
+                        else {
+                            location = "\(location), \(key)"
+                        }
                     }
                 }
                 card.locationLabel.text = location

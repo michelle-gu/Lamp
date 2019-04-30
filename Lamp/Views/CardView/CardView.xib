@@ -19,7 +19,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ll-qt-Yox">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="440"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="300" id="WuB-Tp-MWz"/>
+                        <constraint firstAttribute="height" constant="200" id="WuB-Tp-MWz"/>
                         <constraint firstAttribute="width" constant="375" id="j11-5v-Qly"/>
                     </constraints>
                 </imageView>
