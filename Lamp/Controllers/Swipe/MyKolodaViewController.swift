@@ -37,6 +37,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     var idsGenderSet:Set<String> = Set<String>()
     var idsLocationSet:Set<String> = Set<String>()
     var idsUniversitiesSet:Set<String> = Set<String>()
+    var alreadySwiped:[String] = []
     
     // MARK: - Outlets
     @IBOutlet weak var kolodaView: KolodaView!
@@ -84,6 +85,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         getUniUsers() {(u) in
             self.listUniversities = u
         }
+        checkIfSwiped() {(s) in
+            self.alreadySwiped = s
+        }
         
         // Get a list of all IDs in the database
         getIds() { (idsArray) in
@@ -114,7 +118,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         for (key, value) in self.listGender{
             if self.genders.contains(key){
                 for(k, v) in self.listGender[key]!{
-                    if v && (k != Auth.auth().currentUser?.uid){
+                    if v && (k != Auth.auth().currentUser?.uid) && !alreadySwiped.contains(k){
                         self.idsGenderSet.insert(k)
                     }
                 }
@@ -358,6 +362,18 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         
     }
     
+    func checkIfSwiped(completion: @escaping ([String]) -> Void){
+        let swipe = ref.child("swipes").child(user!)
+        swipe.observeSingleEvent(of: .value, with: {(snapshot) in
+            var s:[String] = []
+            let swipeDict = snapshot.value as? [String : AnyObject] ?? [:]
+            for (key, value) in swipeDict{
+                s.append(key)
+            }
+            completion(s)
+        })
+    }
+    
     //should check if the other user has also "liked" this user
     @IBAction func yesButtonPressed(_ sender: Any) {
         let user = Auth.auth().currentUser?.uid
@@ -371,16 +387,16 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 //        ref.child("swipes").child(user!).child(ids[index]).updateChildValues(swipeValues)
 
         //set up the dictionary of people the other user has swiped on
-        let swipe = ref.child("swipes").child(ids[index]).child(user!)
+        let swipe = ref.child("swipes").child(ids[index-1]).child(user!)
         let matchingSelf = ref.child("user-profiles").child(user!).child("matches")
-        let matchingTarget = ref.child("user-profiles").child(ids[index]).child("matches")
+        let matchingTarget = ref.child("user-profiles").child(ids[index-1]).child("matches")
 
         swipe.observe(.value, with: {(snapshot) in
             let swipingDict = snapshot.value as? [String : AnyObject] ?? [:]
             let liked = swipingDict["liked"] as? Bool ?? false
             if liked{
                 let match = [
-                    self.ids[index]: true
+                    self.ids[index-1]: true
                 ]
                 matchingSelf.updateChildValues(match)
                 let match2 = [
