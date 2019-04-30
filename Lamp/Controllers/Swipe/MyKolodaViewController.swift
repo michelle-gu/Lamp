@@ -435,7 +435,6 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             }
         })
         
-//        self.performSegue(withIdentifier: "matchSegue", sender:sender)
     }
     
     // passes match id to match message VC
@@ -559,11 +558,11 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                         user: true
                     ]
                     matchingTarget.updateChildValues(match2)
-                    print("would segue: \(self.ids[index-1])")
-                    self.performSegue(withIdentifier: "matchSegue", sender:self)
+//                    print("would segue: \(self.ids[index-1])")
+//                    self.performSegue(withIdentifier: "matchSegue", sender:self)
                 }
                 else{
-                    print("would not segue: \(self.ids[index-1])")
+//                    print("would not segue: \(self.ids[index-1])")
                 }
                 
             })

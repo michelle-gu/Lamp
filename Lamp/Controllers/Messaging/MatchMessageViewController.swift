@@ -33,6 +33,8 @@ class MatchMessageViewController: UIViewController {
         setUserProfilePic()
         setMatchProfilePic()
         
+        print("** View did load")
+        
         styleViewController()
     }
 
