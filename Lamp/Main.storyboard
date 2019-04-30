@@ -2474,7 +2474,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQ1-pP-GfJ" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="16" y="108" width="343" height="520"/>
+                                <rect key="frame" x="16" y="108" width="343" height="464"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -2483,10 +2483,10 @@
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="kuf-TY-otn" secondAttribute="bottom" constant="60" id="8OH-kG-LTy"/>
                             <constraint firstItem="WQ1-pP-GfJ" firstAttribute="top" secondItem="rYT-fs-nlh" secondAttribute="top" constant="20" id="Bz3-ro-K9l"/>
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="trailing" secondItem="WQ1-pP-GfJ" secondAttribute="trailing" constant="16" id="J4a-vD-gYb"/>
+                            <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="WQ1-pP-GfJ" secondAttribute="bottom" constant="206" id="R1E-a4-N2G"/>
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="trailing" secondItem="EQJ-UI-ZlV" secondAttribute="trailing" constant="96" id="V2B-uc-6dk"/>
                             <constraint firstItem="kuf-TY-otn" firstAttribute="leading" secondItem="rYT-fs-nlh" secondAttribute="leading" constant="96" id="Zby-UP-JTM"/>
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="EQJ-UI-ZlV" secondAttribute="bottom" constant="60" id="ekD-Ep-Ws9"/>
-                            <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="WQ1-pP-GfJ" secondAttribute="bottom" constant="150" id="nWp-J2-J3F"/>
                             <constraint firstItem="WQ1-pP-GfJ" firstAttribute="leading" secondItem="rYT-fs-nlh" secondAttribute="leading" constant="16" id="x2y-Yh-N1v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rYT-fs-nlh"/>

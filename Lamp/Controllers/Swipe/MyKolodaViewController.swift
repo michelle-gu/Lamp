@@ -440,6 +440,11 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                     let profilePicURL = URL(string: profilePicVal)
                     card.image.kf.setImage(with: profilePicURL)
                 }
+                else {
+                    let profilePicURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/lamp-2c5a7.appspot.com/profilePictures/profile-pic-blank.jpg")
+                    card.image.kf.setImage(with: profilePicURL)
+//                    card.image =   //UIImageView(named: "empty")
+                }
             }
             
             var location:String = ""

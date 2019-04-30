@@ -35,7 +35,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5US-t6-DT9">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5US-t6-DT9">
                     <rect key="frame" x="16" y="522" width="343" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                     <nil key="textColor"/>
@@ -64,6 +64,7 @@
                 <constraint firstItem="lpi-fG-Blx" firstAttribute="top" secondItem="5US-t6-DT9" secondAttribute="bottom" constant="36" id="EUJ-o3-99a"/>
                 <constraint firstItem="lpi-fG-Blx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="FIR-KP-gju"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5Ll-qt-Yox" secondAttribute="trailing" id="U3Q-zO-wFY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5US-t6-DT9" secondAttribute="trailing" constant="16" id="Y22-4a-3jS"/>
                 <constraint firstItem="ihB-LI-XgS" firstAttribute="top" secondItem="QEr-L3-RP6" secondAttribute="bottom" constant="8" id="mpB-e3-awQ"/>
                 <constraint firstItem="5Ll-qt-Yox" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mqU-2a-GKy"/>
                 <constraint firstItem="QEr-L3-RP6" firstAttribute="top" secondItem="5Ll-qt-Yox" secondAttribute="bottom" constant="8" id="mwa-nx-Oyn"/>
