@@ -37,9 +37,12 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     var idsGenderSet:Set<String> = Set<String>()
     var idsLocationSet:Set<String> = Set<String>()
     var idsUniversitiesSet:Set<String> = Set<String>()
+    var alreadySwiped:[String] = []
     
     // MARK: - Outlets
     @IBOutlet weak var kolodaView: KolodaView!
+    @IBOutlet weak var noButton: UIButton!
+    @IBOutlet weak var yesButton: UIButton!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -49,7 +52,16 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         // Set delegates/data sources
         kolodaView.dataSource = self
         kolodaView.delegate = self
+        // yes & no button styles
+        yesButton.layer.shadowColor = UIColor.darkGray.cgColor
+        yesButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        yesButton.layer.shadowOpacity = 0.2
+        yesButton.layer.shadowRadius = 2
         
+        noButton.layer.shadowColor = UIColor.darkGray.cgColor
+        noButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        noButton.layer.shadowOpacity = 0.2
+        noButton.layer.shadowRadius = 2
 //        setUserPref() {(comp) in
 //            self.locations = comp
 //            //everything else should be set up
@@ -72,6 +84,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         }
         getUniUsers() {(u) in
             self.listUniversities = u
+        }
+        checkIfSwiped() {(s) in
+            self.alreadySwiped = s
         }
         
         // Get a list of all IDs in the database
@@ -103,7 +118,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         for (key, value) in self.listGender{
             if self.genders.contains(key){
                 for(k, v) in self.listGender[key]!{
-                    if v && (k != Auth.auth().currentUser?.uid){
+                    if v && (k != Auth.auth().currentUser?.uid) && !alreadySwiped.contains(k){
                         self.idsGenderSet.insert(k)
                     }
                 }
@@ -310,52 +325,6 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         })
     }
     
-    func setUserPref(completion: @escaping ([String]) -> Void){
-        let user = Auth.auth().currentUser?.uid
-        let preferences = ref.child("user-profiles").child(user!).child("settings").child("discovery")
-        preferences.observe(.value, with: {(snapshot) in
-            let prefDict = snapshot.value as? [String : AnyObject] ?? [:]
-            var comp:[String] = []
-            let futureLoc = self.ref.child("user-profiles").child(user!).child("settings").child("discovery").child("futureLoc")
-            futureLoc.observe(.value, with: {(snapshot) in
-                let locDict = snapshot.value as? [String : AnyObject] ?? [:]
-                for (key,_) in locDict{
-                    self.locations.append(key)
-                    comp.append(key)
-                }
-//                comp = self.locations
-            })
-            //make a list of preferred genders
-            let gen = self.ref.child("user-profiles").child(user!).child("settings").child("discovery").child("genders")
-            gen.observe(.value, with: {(snapshot) in
-                let genDict = snapshot.value as? [String: AnyObject] ?? [:]
-                for (key, value) in genDict{
-                    let x = value as? Bool ?? false
-                    if x{
-                        self.genders.append(key)
-                    }
-                }
-            })
-            //make a list of universities
-            let uni = self.ref.child("user-profiles").child(user!).child("settings").child("discovery").child("universities")
-            uni.observe(.value, with: {(snapshot) in
-                let uniDict = snapshot.value as? [String:AnyObject] ?? [:]
-                for (key, _) in uniDict{
-                    self.universities.append(key)
-                }
-            })
-          
-//            self.min = ageMin as! Int
-//            self.max = ageMax as! Int
-            //            loc = futureloc
-            print("This is comp: \(comp)")
-            completion(comp)
-            
-        })
-        self.kolodaView.reloadData()
-        
-    }
-    
     func getGenderUsers(completion: @escaping ([String : Dictionary<String,Bool>]) -> Void){
         let user = Auth.auth().currentUser?.uid
         let userGenders = ref.child("genders")
@@ -393,6 +362,18 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         
     }
     
+    func checkIfSwiped(completion: @escaping ([String]) -> Void){
+        let swipe = ref.child("swipes").child(user!)
+        swipe.observeSingleEvent(of: .value, with: {(snapshot) in
+            var s:[String] = []
+            let swipeDict = snapshot.value as? [String : AnyObject] ?? [:]
+            for (key, value) in swipeDict{
+                s.append(key)
+            }
+            completion(s)
+        })
+    }
+    
     //should check if the other user has also "liked" this user
     @IBAction func yesButtonPressed(_ sender: Any) {
         let user = Auth.auth().currentUser?.uid
@@ -406,16 +387,16 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 //        ref.child("swipes").child(user!).child(ids[index]).updateChildValues(swipeValues)
 
         //set up the dictionary of people the other user has swiped on
-        let swipe = ref.child("swipes").child(ids[index]).child(user!)
+        let swipe = ref.child("swipes").child(ids[index-1]).child(user!)
         let matchingSelf = ref.child("user-profiles").child(user!).child("matches")
-        let matchingTarget = ref.child("user-profiles").child(ids[index]).child("matches")
+        let matchingTarget = ref.child("user-profiles").child(ids[index-1]).child("matches")
 
         swipe.observe(.value, with: {(snapshot) in
             let swipingDict = snapshot.value as? [String : AnyObject] ?? [:]
             let liked = swipingDict["liked"] as? Bool ?? false
             if liked{
                 let match = [
-                    self.ids[index]: true
+                    self.ids[index-1]: true
                 ]
                 matchingSelf.updateChildValues(match)
                 let match2 = [
@@ -475,6 +456,11 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                     let profilePicURL = URL(string: profilePicVal)
                     card.image.kf.setImage(with: profilePicURL)
                 }
+                else {
+                    let profilePicURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/lamp-2c5a7.appspot.com/profilePictures/profile-pic-blank.jpg")
+                    card.image.kf.setImage(with: profilePicURL)
+//                    card.image =   //UIImageView(named: "empty")
+                }
             }
             
             var location:String = ""
@@ -482,13 +468,16 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             locationList.observe(.value, with: {(snapshot) in
                 let locationDict = snapshot.value as? [String : AnyObject] ?? [:]
                 var counter = 0
-                for (key,_) in locationDict{
-                    counter += 1
-                    if counter == 1{
-                        location = "\(key)"
-                    }
-                    else {
-                        location = "\(location), \(key)"
+                for (key,value) in locationDict{
+                    let v = value as? Bool ?? false
+                    if v{
+                        counter += 1
+                        if counter == 1{
+                            location = "\(key)"
+                        }
+                        else {
+                            location = "\(location), \(key)"
+                        }
                     }
                 }
                 card.locationLabel.text = location

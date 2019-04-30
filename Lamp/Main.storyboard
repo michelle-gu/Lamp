@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-8v-AgN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-8v-AgN">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -2459,22 +2459,20 @@
                                     <action selector="yesButtonPressed:" destination="Cyu-ij-Vls" eventType="touchUpInside" id="oPx-a0-frD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Out of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd1-7m-x5A">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Out of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd1-7m-x5A">
                                 <rect key="frame" x="96" y="273" width="183" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="27"/>
                                 <color key="textColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Come back later!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1j-wj-AHV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Come back later!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1j-wj-AHV">
                                 <rect key="frame" x="96" y="329" width="183" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                 <color key="textColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQ1-pP-GfJ" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="16" y="108" width="343" height="520"/>
+                                <rect key="frame" x="16" y="108" width="343" height="500"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -2483,10 +2481,12 @@
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="kuf-TY-otn" secondAttribute="bottom" constant="60" id="8OH-kG-LTy"/>
                             <constraint firstItem="WQ1-pP-GfJ" firstAttribute="top" secondItem="rYT-fs-nlh" secondAttribute="top" constant="20" id="Bz3-ro-K9l"/>
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="trailing" secondItem="WQ1-pP-GfJ" secondAttribute="trailing" constant="16" id="J4a-vD-gYb"/>
+                            <constraint firstItem="cd1-7m-x5A" firstAttribute="centerX" secondItem="rYT-fs-nlh" secondAttribute="centerX" id="Kc9-X0-1jH"/>
+                            <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="WQ1-pP-GfJ" secondAttribute="bottom" constant="170" id="R1E-a4-N2G"/>
+                            <constraint firstItem="J1j-wj-AHV" firstAttribute="centerX" secondItem="rYT-fs-nlh" secondAttribute="centerX" id="TAT-Pg-I0S"/>
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="trailing" secondItem="EQJ-UI-ZlV" secondAttribute="trailing" constant="96" id="V2B-uc-6dk"/>
                             <constraint firstItem="kuf-TY-otn" firstAttribute="leading" secondItem="rYT-fs-nlh" secondAttribute="leading" constant="96" id="Zby-UP-JTM"/>
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="EQJ-UI-ZlV" secondAttribute="bottom" constant="60" id="ekD-Ep-Ws9"/>
-                            <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="WQ1-pP-GfJ" secondAttribute="bottom" constant="150" id="nWp-J2-J3F"/>
                             <constraint firstItem="WQ1-pP-GfJ" firstAttribute="leading" secondItem="rYT-fs-nlh" secondAttribute="leading" constant="16" id="x2y-Yh-N1v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rYT-fs-nlh"/>
@@ -2507,6 +2507,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="kolodaView" destination="WQ1-pP-GfJ" id="A2C-lg-Wbw"/>
+                        <outlet property="noButton" destination="kuf-TY-otn" id="VlL-eK-bAN"/>
+                        <outlet property="yesButton" destination="EQJ-UI-ZlV" id="RxV-EN-M2Y"/>
                         <segue destination="YW5-JA-cCu" kind="presentation" identifier="matchSegue" id="8he-3E-VTa"/>
                     </connections>
                 </viewController>
@@ -4047,6 +4049,7 @@
         <image name="profile-pic-blank" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="3JC-RH-HSz"/>
         <segue reference="YS3-yl-8TS"/>
         <segue reference="c5S-Za-6zN"/>
         <segue reference="Huo-mK-HWW"/>
