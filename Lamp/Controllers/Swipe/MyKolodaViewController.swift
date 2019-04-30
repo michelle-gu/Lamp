@@ -10,7 +10,7 @@ import UIKit
 import Koloda
 import Firebase
 
-class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaViewDelegate {
+class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaViewDelegate, UserProfileVCDelegate {
     
     // MARK: - Constants
     let userRef = Database.database().reference(withPath: "user-profiles")
@@ -441,6 +441,10 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let card:CardView =  CardView.create()
         
+        // Set delegate
+        card.delegate = self
+        card.uid = ids[index]
+        
         let profile = ref.child("user-profiles").child(ids[index]).child("profile")
         profile.observe(.value, with: {(snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
@@ -555,5 +559,12 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         }
     }
 
+    // MARK: - User Profile VC Delegate
+    func didPressInfoButton(uid: String) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let userProfileVC = storyBoard.instantiateViewController(withIdentifier: "userProfileVC") as! UserProfileTableViewController
+        userProfileVC.user = uid
+        self.navigationController?.pushViewController(userProfileVC, animated: true)
+    }
 
 }
