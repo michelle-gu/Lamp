@@ -424,7 +424,6 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                 matchingTarget.updateChildValues(match2)
                 self.kolodaView.swipe(.right)
                 self.performSegue(withIdentifier: "matchSegue", sender:sender)
-
             }
             else{
                 self.kolodaView.swipe(.right)
@@ -434,6 +433,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         
 //        self.performSegue(withIdentifier: "matchSegue", sender:sender)
     }
+    
+    
+    
     @IBAction func noButtonPressed(_ sender: Any) {
         let user = Auth.auth().currentUser?.uid
         let index = kolodaView.currentCardIndex

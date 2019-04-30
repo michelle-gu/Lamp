@@ -20,10 +20,24 @@ class MatchMessageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        styleViewController()
+    }
+
+    // MARK: Helpers
+    
+    @IBAction func keepSwipingButtonClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    // MARK: Styling
+    
+    func styleViewController() {
         // style of profile picture views
         yourProfilePicView.clipsToBounds = true
         matchProfilePicView.clipsToBounds = true
-
+        
         // button styles
         sendMessageButton.layer.cornerRadius = sendMessageButton.bounds.height / 2
         sendMessageButton.layer.borderWidth = 1
@@ -33,23 +47,4 @@ class MatchMessageViewController: UIViewController {
         keepSwipingButton.layer.borderWidth = 1
         keepSwipingButton.layer.borderColor = UIColor(red: 0.44, green: 0.71, blue: 0.99, alpha: 1).cgColor
     }
-    
-    @IBAction func keepSwipingButtonClicked(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
