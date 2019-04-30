@@ -289,6 +289,9 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
             if (locationText.isEmpty == false) {
                 self.mapButton.setTitle(locationText, for: .normal)
                 self.mapButton.setTitleColor(UIColor.black, for: .normal)
+            } else {
+                self.mapButton.setTitle(" Where are you moving?", for: .normal)
+                self.mapButton.setTitleColor(UIColor(red: 0.78, green: 0.78, blue: 0.80, alpha: 1), for: .normal)
             }
             
         }
