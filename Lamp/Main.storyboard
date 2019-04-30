@@ -3557,7 +3557,7 @@
         <!--User Profile-->
         <scene sceneID="13X-2g-zPY">
             <objects>
-                <tableViewController title="User Profile" id="FBq-63-VfL" customClass="UserProfileTableViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="userProfileVC" title="User Profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FBq-63-VfL" customClass="UserProfileTableViewController" customModule="Lamp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="m3T-x2-QIt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4006,11 +4006,7 @@
                             <outlet property="delegate" destination="FBq-63-VfL" id="L8y-TT-heh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Profile" id="yf5-G1-5Gz">
-                        <barButtonItem key="backBarButtonItem" title="Cancel" id="hBi-A0-tOC"/>
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="PCh-G8-kFE"/>
-                        <barButtonItem key="rightBarButtonItem" title="Home" id="wRh-TF-E5a"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Profile" id="yf5-G1-5Gz"/>
                     <connections>
                         <outlet property="bioLabel" destination="6Jl-7k-ml0" id="eww-J7-yRR"/>
                         <outlet property="budgetLabel" destination="0w2-Fr-9Z5" id="ida-Qw-evY"/>

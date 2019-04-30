@@ -10,7 +10,7 @@ import UIKit
 import Koloda
 import Firebase
 
-class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaViewDelegate {
+class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaViewDelegate, UserProfileVCDelegate {
     
     // MARK: - Constants
     let user = Auth.auth().currentUser?.uid
@@ -235,6 +235,10 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let card:CardView =  CardView.create()
         
+        // Set delegate
+        card.delegate = self
+        card.uid = ids[index]
+        
         let profile = ref.child("user-profiles").child(ids[index]).child("profile")
         profile.observe(.value, with: {(snapshot) in
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
@@ -399,6 +403,13 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 //            print("these are the valid ids (in set form): \(self.idsSet)")
 //            print("these are the valid ids (in array form): \(self.ids)")
 
+    // MARK: - User Profile VC Delegate
+    func didPressInfoButton(uid: String) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let userProfileVC = storyBoard.instantiateViewController(withIdentifier: "userProfileVC") as! UserProfileTableViewController
+        userProfileVC.user = uid
+        self.navigationController?.pushViewController(userProfileVC, animated: true)
+    }
 
 //    func getIds() {
 //        ref.child("user-profiles").queryOrderedByKey().observe(.value, with: { (snapshot) in
