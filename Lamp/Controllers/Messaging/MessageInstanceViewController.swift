@@ -70,7 +70,6 @@ class MessageInstanceViewController: MessagesViewController {
 
         styleChatRoom()
     }
-
     
     // MARK: Helpers
     
@@ -214,9 +213,10 @@ extension MessageInstanceViewController: MessagesDisplayDelegate {
         at indexPath: IndexPath,
         in messagesCollectionView: MessagesCollectionView) {
         
-        let senderInitials = "S"
-        let receiverInitials = "R"
-        avatarView.initials = isFromCurrentSender(message: message) ? senderInitials : receiverInitials
+//        let senderInitials = "S"
+//        let receiverInitials = "R"
+//        avatarView.initials = isFromCurrentSender(message: message) ? senderInitials : receiverInitials
+        avatarView.image = UIImage(named: "profile-pic-blank")
     }
 }
 
