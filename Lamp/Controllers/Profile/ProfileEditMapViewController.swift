@@ -271,7 +271,7 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
             
             for currentCity in cities {
                 // update locations
-                citiesRef.child(currentCity).setValue(true)
+                citiesRef.child(currentCity).child(user!).setValue(true)
                 
                 // update locations nested in user>profile>futureLoc
                 profileRef.child("futureLoc").child(currentCity).setValue(true)
@@ -411,7 +411,7 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
         return true
     }
     
-    override func touchesBegan(_ touches: SetUITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
 }

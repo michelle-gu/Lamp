@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -2702,7 +2702,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fE0-Vy-20a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8152.8000000000002" y="1778.5714285714287"/>
+            <point key="canvasLocation" x="8532" y="1765"/>
         </scene>
         <!--Name-->
         <scene sceneID="37Z-Ps-Fs4">
@@ -2724,7 +2724,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gb3-Jb-Yhe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11178.4" y="1764.5320197044337"/>
+            <point key="canvasLocation" x="10234" y="1765"/>
         </scene>
         <!--Match Message View Controller-->
         <scene sceneID="BdU-na-0W9">
@@ -3024,7 +3024,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dB-zO-zR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10236" y="1764.5320197044337"/>
+            <point key="canvasLocation" x="9380" y="1765"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="pVX-Gb-cRt">
@@ -4041,15 +4041,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LogoColor" width="199" height="242"/>
+        <image name="LogoColor" width="398" height="484"/>
         <image name="girl-3" width="5370" height="3390"/>
         <image name="girl-5" width="6000" height="4000"/>
         <image name="profile-pic-blank" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YS3-yl-8TS"/>
-        <segue reference="ABV-LS-boM"/>
-        <segue reference="PA3-YF-Hx5"/>
+        <segue reference="c5S-Za-6zN"/>
+        <segue reference="Huo-mK-HWW"/>
         <segue reference="9WS-Lc-l6O"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.60796302560000004" green="0.69684332609999999" blue="0.94992285970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
