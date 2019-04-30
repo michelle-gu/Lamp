@@ -350,6 +350,14 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         }
     }
     
+    // MARK: - User Profile VC Delegate
+    func didPressInfoButton(uid: String) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let userProfileVC = storyBoard.instantiateViewController(withIdentifier: "userProfileVC") as! UserProfileTableViewController
+        userProfileVC.user = uid
+        self.navigationController?.pushViewController(userProfileVC, animated: true)
+    }
+
 }
 
 // MARK: - Data Retrieval
@@ -403,13 +411,6 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 //            print("these are the valid ids (in set form): \(self.idsSet)")
 //            print("these are the valid ids (in array form): \(self.ids)")
 
-    // MARK: - User Profile VC Delegate
-    func didPressInfoButton(uid: String) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let userProfileVC = storyBoard.instantiateViewController(withIdentifier: "userProfileVC") as! UserProfileTableViewController
-        userProfileVC.user = uid
-        self.navigationController?.pushViewController(userProfileVC, animated: true)
-    }
 
 //    func getIds() {
 //        ref.child("user-profiles").queryOrderedByKey().observe(.value, with: { (snapshot) in
