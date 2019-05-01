@@ -54,16 +54,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         // Set delegates/data sources
         kolodaView.dataSource = self
         kolodaView.delegate = self
-        // yes & no button styles
-        yesButton.layer.shadowColor = UIColor.darkGray.cgColor
-        yesButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-        yesButton.layer.shadowOpacity = 0.2
-        yesButton.layer.shadowRadius = 2
-
-        noButton.layer.shadowColor = UIColor.darkGray.cgColor
-        noButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-        noButton.layer.shadowOpacity = 0.2
-        noButton.layer.shadowRadius = 2
+        
+        cardStyling()
+        
 //        setUserPref() {(comp) in
 //            self.locations = comp
 //            //everything else should be set up
@@ -112,6 +105,32 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 //        setUserPref()
 //        getUsers()
     }
+    
+    
+    func cardStyling() {
+        // yes & no button styles
+        yesButton.layer.shadowColor = UIColor.darkGray.cgColor
+        yesButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        yesButton.layer.shadowOpacity = 0.2
+        yesButton.layer.shadowRadius = 2
+        
+        noButton.layer.shadowColor = UIColor.darkGray.cgColor
+        noButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        noButton.layer.shadowOpacity = 0.2
+        noButton.layer.shadowRadius = 2
+        
+        // add app logo with constraints to nav bar
+        let imageView = UIImageView()
+        imageView.widthAnchor.constraint(equalToConstant: 34).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 34).isActive = true
+        imageView.contentMode = .scaleAspectFit
+        // add logo to navbar
+        let image = UIImage(named: "LogoColor")
+        imageView.image = image
+        
+        self.navigationItem.titleView = imageView
+    }
+    
 
     func getFilteredIds(ids: [String]) -> [String] {
         // Code
@@ -473,8 +492,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                 }
                 else {
                     let profilePicURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/lamp-2c5a7.appspot.com/profilePictures/profile-pic-blank.jpg")
+                    card.image.contentMode = .scaleAspectFill
+                    card.image.clipsToBounds = true
                     card.image.kf.setImage(with: profilePicURL)
-//                    card.image =   //UIImageView(named: "empty")
                 }
             }
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,33 +24,36 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Job" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihB-LI-XgS">
-                    <rect key="frame" x="16" y="521.5" width="343" height="24"/>
+                    <rect key="frame" x="16" y="522" width="343" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5US-t6-DT9">
-                    <rect key="frame" x="16" y="702" width="343" height="24"/>
+                    <rect key="frame" x="16" y="599" width="343" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 Mutual Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpi-fG-Blx">
-                    <rect key="frame" x="16" y="731" width="343" height="24"/>
+                    <rect key="frame" x="16" y="628" width="343" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEr-L3-RP6">
-                    <rect key="frame" x="16" y="486" width="343" height="27.5"/>
+                    <rect key="frame" x="16" y="486" width="343" height="28"/>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mC5-Rf-vxx">
-                    <rect key="frame" x="317" y="605" width="42" height="42"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.3921568627" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mC5-Rf-vxx">
+                    <rect key="frame" x="317" y="609" width="42" height="42"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="1cl-vj-del"/>
+                        <constraint firstAttribute="height" constant="42" id="cWm-J1-ujG"/>
+                    </constraints>
                     <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <state key="normal" title="i">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,6 +69,7 @@
                 <constraint firstItem="5US-t6-DT9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="7gW-FY-H5z"/>
                 <constraint firstItem="lpi-fG-Blx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="FIR-KP-gju"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5Ll-qt-Yox" secondAttribute="bottom" constant="150" id="Lai-On-Eni"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mC5-Rf-vxx" secondAttribute="bottom" constant="16" id="MGS-Jr-3JE"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="lpi-fG-Blx" secondAttribute="bottom" constant="15" id="Soa-WM-AtL"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5Ll-qt-Yox" secondAttribute="trailing" id="U3Q-zO-wFY"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5US-t6-DT9" secondAttribute="trailing" constant="16" id="Y22-4a-3jS"/>
@@ -80,6 +84,7 @@
                 <constraint firstItem="5Ll-qt-Yox" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ueT-6C-Ey4"/>
                 <constraint firstItem="QEr-L3-RP6" firstAttribute="leading" secondItem="5Ll-qt-Yox" secondAttribute="trailing" constant="-359" id="wHj-HC-drW"/>
                 <constraint firstItem="QEr-L3-RP6" firstAttribute="top" secondItem="5Ll-qt-Yox" secondAttribute="bottom" constant="20" id="wa7-2c-wcC"/>
+                <constraint firstItem="mC5-Rf-vxx" firstAttribute="trailing" secondItem="lpi-fG-Blx" secondAttribute="trailing" id="zNn-zl-QGP"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
