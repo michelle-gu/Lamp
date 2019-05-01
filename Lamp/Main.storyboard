@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-8v-AgN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-8v-AgN">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -2445,18 +2445,12 @@
                                     <action selector="yesButtonPressed:" destination="Cyu-ij-Vls" eventType="touchUpInside" id="oPx-a0-frD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Out of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd1-7m-x5A">
-                                <rect key="frame" x="96" y="273" width="183" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Loading Cards..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd1-7m-x5A">
+                                <rect key="frame" x="77" y="318" width="220" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="wfY-oF-QRJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="27"/>
-                                <color key="textColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Come back later!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1j-wj-AHV">
-                                <rect key="frame" x="96" y="329" width="183" height="26"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                 <color key="textColor" red="0.58909779790000005" green="0.63491338490000004" blue="0.98736411329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2467,18 +2461,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cd1-7m-x5A" firstAttribute="top" secondItem="rYT-fs-nlh" secondAttribute="top" constant="185" id="4tj-cE-Eod"/>
-                            <constraint firstItem="cd1-7m-x5A" firstAttribute="leading" secondItem="J1j-wj-AHV" secondAttribute="leading" id="7hX-bZ-xCz"/>
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="kuf-TY-otn" secondAttribute="bottom" constant="60" id="8OH-kG-LTy"/>
                             <constraint firstItem="WQ1-pP-GfJ" firstAttribute="top" secondItem="rYT-fs-nlh" secondAttribute="top" constant="20" id="Bz3-ro-K9l"/>
-                            <constraint firstItem="cd1-7m-x5A" firstAttribute="leading" secondItem="kuf-TY-otn" secondAttribute="leading" id="F5v-x1-rZ7"/>
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="trailing" secondItem="WQ1-pP-GfJ" secondAttribute="trailing" constant="16" id="J4a-vD-gYb"/>
                             <constraint firstItem="cd1-7m-x5A" firstAttribute="centerX" secondItem="rYT-fs-nlh" secondAttribute="centerX" id="Kc9-X0-1jH"/>
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="WQ1-pP-GfJ" secondAttribute="bottom" constant="170" id="R1E-a4-N2G"/>
-                            <constraint firstItem="J1j-wj-AHV" firstAttribute="centerX" secondItem="rYT-fs-nlh" secondAttribute="centerX" id="TAT-Pg-I0S"/>
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="trailing" secondItem="EQJ-UI-ZlV" secondAttribute="trailing" constant="96" id="V2B-uc-6dk"/>
                             <constraint firstItem="kuf-TY-otn" firstAttribute="leading" secondItem="rYT-fs-nlh" secondAttribute="leading" constant="96" id="Zby-UP-JTM"/>
-                            <constraint firstItem="J1j-wj-AHV" firstAttribute="top" secondItem="cd1-7m-x5A" secondAttribute="bottom" constant="8" symbolic="YES" id="bb3-dj-jp6"/>
                             <constraint firstItem="rYT-fs-nlh" firstAttribute="bottom" secondItem="EQJ-UI-ZlV" secondAttribute="bottom" constant="60" id="ekD-Ep-Ws9"/>
                             <constraint firstItem="WQ1-pP-GfJ" firstAttribute="leading" secondItem="rYT-fs-nlh" secondAttribute="leading" constant="16" id="x2y-Yh-N1v"/>
                         </constraints>
@@ -4035,7 +4024,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LogoColor" width="199" height="242"/>
+        <image name="LogoColor" width="398" height="484"/>
         <image name="girl-3" width="5370" height="3390"/>
         <image name="girl-5" width="6000" height="4000"/>
         <image name="profile-pic-blank" width="600" height="600"/>
