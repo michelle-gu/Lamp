@@ -33,7 +33,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Set delegates/data sources
         kolodaView.dataSource = self
         kolodaView.delegate = self
@@ -60,7 +60,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 
             self.ref.observe(.value, with: { (snapshot) in
                 let dict = snapshot.value as? [String : AnyObject] ?? [:]
-
+                
                 if let userProfilesDict = dict["user-profiles"] as? [String: AnyObject],
                     let myProfile = userProfilesDict[self.user!] as? [String: AnyObject],
                     let mySettings = myProfile["settings"] as? [String: AnyObject],
@@ -70,11 +70,11 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                     let allUniversities = myDiscovery["universities"] as? [String: Bool],
                     let locationsDict = dict["locations"] as? [String: AnyObject],
                     let gendersDict = dict["genders"] as? [String: AnyObject],
-                    let universitiesDict = dict["universities"] as? [String: AnyObject],
-                    let allSwipesDict = dict["swipes"] as? [String: AnyObject] {
+                    let universitiesDict = dict["universities"] as? [String: AnyObject] {
 
+                    let allSwipesDict = dict["swipes"] as? [String: AnyObject] ?? [:]
                     let mySwipes = allSwipesDict[self.user!] as? [String: AnyObject] ?? [:]
-
+                    
                     // get users for locations
                     var myLocations: [String] = []
                     for loc in allLocations {
@@ -140,7 +140,6 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 //                            }
 //                        }
 //                    }
-
     
                     // intersect the sets
                     compatibleUsers = usersInMyLocs.intersection(usersWithPrefGender)
@@ -154,7 +153,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                     // Reload the swipe view with our new list
                     //if self.kolodaNumberOfCards(self.kolodaView) == self.kolodaView.currentCardIndex || self.kolodaView.currentCardIndex == 0 {
 
-                        self.kolodaView.reloadData()
+                    self.kolodaView.reloadData()
                     //}
                 }
             })
@@ -250,8 +249,6 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let card:CardView =  CardView.create()
 
-        print("View for card at index: ", index)
-
         // Set delegate
         card.delegate = self
         card.uid = ids[index]
@@ -303,7 +300,6 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     }
 
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
-        print("in did swipe index", index)
         matchId = ids[index]
 
         switch direction {
