@@ -14,9 +14,11 @@ class UserProfileTableViewController: UITableViewController {
     
     // MARK: - Constants
     let userProfilesRef = Database.database().reference(withPath: "user-profiles")
-    
+    let userID = Auth.auth().currentUser?.uid
+
     // MARK: - Variables
     var user = String() // Pass in through segue
+    var cities: [String] = []
     
     // TODO: MARK: - Outlets
     @IBOutlet weak var profilePicView: UIImageView!
@@ -37,6 +39,34 @@ class UserProfileTableViewController: UITableViewController {
     @IBOutlet weak var otherContactLabel: UILabel!
     
     // MARK: - Functions
+    func setLocationText() {
+        var locationText = ""
+        getCities() { (citiesArray) in
+            self.cities = citiesArray
+            locationText = self.cities.joined(separator: ", ")
+            
+            self.futureLocsLabel.text = locationText
+        }
+    }
+    
+    // populate the cities array with cities currently in Firebase
+    func getCities(completion: @escaping ([String]) -> Void) {
+        let profileLocs = userProfilesRef.child(userID!).child("profile").child("futureLoc")
+        profileLocs.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let citiesDict = snapshot.value as? [String : AnyObject] else {
+                return completion([])
+            }
+            
+            var citiesArray: [String] = []
+            for city in citiesDict {
+                if ((city.value as? Bool)!) {
+                    citiesArray.append(city.key)
+                }
+            }
+            completion(citiesArray)
+        })
+    }
+    
     // Get age from birthday string
     func getAgeStr(birthday: String) -> String {
         let now = Date()
@@ -89,15 +119,9 @@ class UserProfileTableViewController: UITableViewController {
             if let uniVal = profileDict["uni"] as? String {
                 self.uniLabel.text = uniVal
             }
-            var locArr: [String] = []
-            for city in profileDict["futureLoc"] as! [String: Bool] {
-                locArr.append(city.key)
-                if (locArr.count == 0) {
-                    locArr.append("temp")
-                }
-            }
-            let futureLocStr = locArr.joined(separator: ", ")
-            self.futureLocsLabel.text = futureLocStr
+
+            self.setLocationText()
+            
             if let occupationVal = profileDict["occupation"] as? String {
                 self.occupationLabel.text = occupationVal
             }
