@@ -141,7 +141,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 //                        }
 //                    }
 
-
+    
                     // intersect the sets
                     compatibleUsers = usersInMyLocs.intersection(usersWithPrefGender)
                     compatibleUsers = compatibleUsers.intersection(usersWithPrefUnis)
@@ -159,6 +159,30 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                 }
             })
         }
+    }
+  
+    func cardStyling() {
+        // yes & no button styles
+        yesButton.layer.shadowColor = UIColor.darkGray.cgColor
+        yesButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        yesButton.layer.shadowOpacity = 0.2
+        yesButton.layer.shadowRadius = 2
+        
+        noButton.layer.shadowColor = UIColor.darkGray.cgColor
+        noButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        noButton.layer.shadowOpacity = 0.2
+        noButton.layer.shadowRadius = 2
+        
+        // add app logo with constraints to nav bar
+        let imageView = UIImageView()
+        imageView.widthAnchor.constraint(equalToConstant: 34).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 34).isActive = true
+        imageView.contentMode = .scaleAspectFit
+        // add logo to navbar
+        let image = UIImage(named: "LogoColor")
+        imageView.image = image
+        
+        self.navigationItem.titleView = imageView
     }
 
     // MARK: - Data Retrieval

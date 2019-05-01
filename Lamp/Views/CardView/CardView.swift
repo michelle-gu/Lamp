@@ -41,11 +41,10 @@ class CardView: UIView, XibCreatable {
         self.layer.shadowOpacity = 0.3
         self.layer.shadowRadius = 8
         
-        infoButton.layer.shadowColor = UIColor.darkGray.cgColor
-        infoButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-        infoButton.layer.shadowOpacity = 0.2
-        infoButton.layer.shadowRadius = 2
         infoButton.layer.cornerRadius = 0.5 * infoButton.bounds.size.width
+        
+        image.contentMode = .scaleAspectFill
+        image.clipsToBounds = true
     }
  
 
