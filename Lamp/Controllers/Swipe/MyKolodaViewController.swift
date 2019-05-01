@@ -14,8 +14,6 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     
     // MARK: - Constants
     let user = Auth.auth().currentUser?.uid
-    // set for match message to pass profile picture
-    var matchId = ""
     
     let ref: DatabaseReference = Database.database().reference()
     let userRef = Database.database().reference(withPath: "user-profiles")
@@ -23,7 +21,10 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 
     // MARK: - Variables
     var ids: [String] = []
-    
+    var cities: [String] = []
+    // set for match message to pass profile picture
+    var matchId: String = String()
+
     // MARK: - Outlets
     @IBOutlet weak var kolodaView: KolodaView!
     @IBOutlet weak var noButton: UIButton!
@@ -70,8 +71,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                     let locationsDict = dict["locations"] as? [String: AnyObject],
                     let gendersDict = dict["genders"] as? [String: AnyObject],
                     let universitiesDict = dict["universities"] as? [String: AnyObject],
-                    let allSwipesDict = dict["swipes"] as? [String: AnyObject],
-                    let mySwipes = allSwipesDict[self.user!]! as? [String: AnyObject] {
+                    let allSwipesDict = dict["swipes"] as? [String: AnyObject] {
+                    
+                    let mySwipes = allSwipesDict[self.user!] as? [String: AnyObject] ?? [:]
                     
                     // get users for locations
                     var myLocations: [String] = []
@@ -122,34 +124,38 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                     }
                     
                     // get users I haven't swiped
-                    var allUsers: [String] = []
-                    for user in userProfilesDict {
-                        allUsers.append(user.key)
-                    }
-                    var usersNotSwipedYet : Set<String> = Set<String>()
-                    for user in allUsers {
-                        let swipedUser = mySwipes[user] as? [String: Bool]
-                        if swipedUser == nil {
-                            usersNotSwipedYet.insert(user)
-                        } else {
-                            let swipedVal: Bool = swipedUser!["swiped"]!
-                            if swipedVal == false {
-                                usersNotSwipedYet.insert(user)
-                            }
-                        }
-                    }
+//                    var allUsers: [String] = []
+//                    for user in userProfilesDict {
+//                        allUsers.append(user.key)
+//                    }
+//                    var usersNotSwipedYet : Set<String> = Set<String>()
+//                    for user in allUsers {
+//                        let swipedUser = mySwipes[user] as? [String: Bool]
+//                        if swipedUser == nil {
+//                            usersNotSwipedYet.insert(user)
+//                        } else {
+//                            let swipedVal: Bool = swipedUser!["swiped"]!
+//                            if swipedVal == false {
+//                                usersNotSwipedYet.insert(user)
+//                            }
+//                        }
+//                    }
 
+                    
                     // intersect the sets
                     compatibleUsers = usersInMyLocs.intersection(usersWithPrefGender)
                     compatibleUsers = compatibleUsers.intersection(usersWithPrefUnis)
-                    compatibleUsers = compatibleUsers.intersection(usersNotSwipedYet)
+//                    compatibleUsers = compatibleUsers.intersection(usersNotSwipedYet)
                     compatibleUsers = compatibleUsers.intersection(ids)
                     
                     // Set self.ids to the filtered array (a modified ids array)
                     self.ids = Array(compatibleUsers)
                     
                     // Reload the swipe view with our new list
-                    self.kolodaView.reloadData()
+                    //if self.kolodaNumberOfCards(self.kolodaView) == self.kolodaView.currentCardIndex || self.kolodaView.currentCardIndex == 0 {
+                    
+                        self.kolodaView.reloadData()
+                    //}
                 }
             })
         }
@@ -170,49 +176,36 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             completion(idsArray)
         })
     }
+    
+    // populate the cities array with cities currently in Firebase
+    func getCities(id: String, completion: @escaping ([String]) -> Void) {
+        let profileLocs = userRef.child(id).child("profile").child("futureLoc")
+        profileLocs.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let citiesDict = snapshot.value as? [String : AnyObject] else {
+                return completion([])
+            }
+            
+            var citiesArray: [String] = []
+            for city in citiesDict {
+                if ((city.value as? Bool)!) {
+                    citiesArray.append(city.key)
+                }
+            }
+            completion(citiesArray)
+        })
+    }
 
     // MARK: - Actions
     //should check if the other user has also "liked" this user
     @IBAction func yesButtonPressed(_ sender: Any) {
-        let index = kolodaView.currentCardIndex
-        
-        // sets global matchId variable to pass in prepare method
-        matchId = ids[index]
-
-//        let swipeValues = [
-//            "liked": true,
-//            "swiped": true
-//        ]
-//        //update user's swipe values
-//        ref.child("swipes").child(user!).child(ids[index]).updateChildValues(swipeValues)
-
-        //set up the dictionary of people the other user has swiped on
-        let swipe = ref.child("swipes").child(matchId).child(user!)
-        let matchingSelf = ref.child("user-profiles").child(user!).child("matches")
-        let matchingTarget = ref.child("user-profiles").child(matchId).child("matches")
-
-        swipe.observe(.value, with: {(snapshot) in
-            let swipingDict = snapshot.value as? [String : AnyObject] ?? [:]
-            let liked = swipingDict["liked"] as? Bool ?? false
-            if liked{
-                let match = [
-                    self.ids[index-1]: true
-                ]
-                matchingSelf.updateChildValues(match)
-                let match2 = [
-                    self.user: true
-                ]
-                matchingTarget.updateChildValues(match2)
-                self.kolodaView.swipe(.right)
-                self.performSegue(withIdentifier: "matchSegue", sender:sender)
-            }
-            else{
-                self.kolodaView.swipe(.right)
-            }
-        })
-        
+        kolodaView.swipe(.right)
     }
     
+    @IBAction func noButtonPressed(_ sender: Any) {
+        kolodaView.swipe(.left)
+    }
+    
+    //  MARK: - Navigation
     // passes match id to match message VC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "matchSegue" {
@@ -221,37 +214,28 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         }
     }
     
-  @IBAction func noButtonPressed(_ sender: Any) {
-        let index = kolodaView.currentCardIndex
-        //update the card value
-        let swipeValues = [
-            "liked": false,
-            "swiped": true
-        ]
-        ref.child("swipes").child(user!).child(ids[index]).updateChildValues(swipeValues)
-        //don't record for now, will probably change this
-        kolodaView.swipe(.left)
-        
-    }
-    
     // MARK: - Koloda View Data Source
-    func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
-        return ids.count
-    }
-    
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
         return .slow
+    }
+    
+    func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
+        return ids.count
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let card:CardView =  CardView.create()
         
+        print("View for card at index: ", index)
+        
         // Set delegate
         card.delegate = self
         card.uid = ids[index]
         
+        
         let profile = ref.child("user-profiles").child(ids[index]).child("profile")
         profile.observe(.value, with: {(snapshot) in
+            
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
             if let firstName = profileDict["firstName"] as? String {
                 card.nameLabel.text = firstName
@@ -259,105 +243,80 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             if let job = profileDict["occupation"] as? String {
                 card.jobLabel.text = job
             }
-            
+
             if let profilePicVal = profileDict["profilePicture"] as? String {
                 if profilePicVal != "" {
                     let profilePicURL = URL(string: profilePicVal)
                     card.image.kf.setImage(with: profilePicURL)
                 }
                 else {
-                    let profilePicURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/lamp-2c5a7.appspot.com/profilePictures/profile-pic-blank.jpg")
-                    card.image.kf.setImage(with: profilePicURL)
-//                    card.image =   //UIImageView(named: "empty")
-                }
-            }
-            
-            var location:String = ""
-            let locationList = self.ref.child("user-profiles").child(self.ids[index]).child("profile").child("futureLoc")
-            locationList.observe(.value, with: {(snapshot) in
-                let locationDict = snapshot.value as? [String : AnyObject] ?? [:]
-                var counter = 0
-                for (key,value) in locationDict{
-                    let v = value as? Bool ?? false
-                    if v{
-                        counter += 1
-                        if counter == 1{
-                            location = "\(key)"
-                        }
-                        else {
-                            location = "\(location), \(key)"
+                    if let profilePicVal = profileDict["profilePicture"] as? String {
+                        if profilePicVal != "" {
+                            let profilePicURL = URL(string: profilePicVal)
+                            card.image.kf.setImage(with: profilePicURL)
+                        } else {
+                            card.image.image = UIImage(named: "profile-pic-blank")
                         }
                     }
                 }
-                card.locationLabel.text = location
-            })
-            //            TODO: //let location = "Austin"
-            card.locationLabel.text = location
+            }
         })
+        
+        var locationText = ""
+        getCities(id: ids[index]) { (citiesArray) in
+            self.cities = citiesArray
+            locationText = self.cities.joined(separator: ", ")
+            card.locationLabel.text = locationText
+        }
         
         return card
     }
     
-    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
-        return nil //Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)![0] as? OverlayView
-    }
     
     // MARK: - Koloda View Delegate
-    
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
         koloda.reloadData()
     }
     
-    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        //this should open the profile
-        
-    }
-    
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
-        if direction == .right{
-            //            let user = Auth.auth().currentUser?.uid
-            let index = kolodaView.currentCardIndex
-            
+        print("in did swipe index", index)
+        matchId = ids[index]
+        
+        switch direction {
+        case .right:
+//            break
+            // Update for Swiped Right
             let swipeValues = [
                 "liked": true,
                 "swiped": true
             ]
-            //update user's swipe values
-            ref.child("swipes").child(user!).child(ids[index-1]).updateChildValues(swipeValues)
-            
-            //set up the dictionary of people the other user has swiped on
-            let swipe = ref.child("swipes").child(ids[index-1]).child(user!)
-            let matchingSelf = ref.child("user-profiles").child(user!).child("matches")
-            let matchingTarget = ref.child("user-profiles").child(ids[index-1]).child("matches")
-            
-            swipe.observe(.value, with: {(snapshot) in
+            ref.child("swipes").child(user!).child(ids[index]).updateChildValues(swipeValues)
+
+            // Check if there's a match
+            let targetSwipe = ref.child("swipes").child(ids[index]).child(user!)
+            targetSwipe.observe(.value, with: {(snapshot) in
                 let swipingDict = snapshot.value as? [String : AnyObject] ?? [:]
                 let liked = swipingDict["liked"] as? Bool ?? false
-                if liked{
-                    let match = [
-                        self.ids[index-1]: true
-                    ]
-                    matchingSelf.updateChildValues(match)
-                    let match2 = [
-                        self.user: true
-                    ]
-                    matchingTarget.updateChildValues(match2)
-//                    print("would segue: \(self.ids[index-1])")
-//                    self.performSegue(withIdentifier: "matchSegue", sender:self)
+
+                if liked { // There's a match
+                    // Update Firebase
+                    self.ref.child("user-profiles").child(self.user!).child("matches").child(self.ids[index]).setValue(true)
+                    self.ref.child("user-profiles").child(self.ids[index]).child("matches").child(self.user!).setValue(true)
+
+                    // Segue to matched screen
+                    self.performSegue(withIdentifier: "matchSegue", sender:self)
                 }
-                else{
-//                    print("would not segue: \(self.ids[index-1])")
-                }
-                
             })
-        }
-        else{
+        case .left:
+//            break
+            // Update for Swiped Left
             let swipeValues = [
                 "liked": false,
                 "swiped": true
             ]
             ref.child("swipes").child(user!).child(ids[index]).updateChildValues(swipeValues)
-            //don't record for now, will probably change this
+        default:
+            break
         }
     }
     
@@ -370,104 +329,3 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     }
 
 }
-
-// MARK: - Data Retrieval
-//    func getData() {
-//
-//        ref.child("user-profiles").queryOrderedByKey().observe(.value) { snapshot in
-//
-//            self.images = snapshot.children.compactMap { child in
-//                guard let snap = child as? DataSnapshot else { return nil }
-//                return Profile(snapshot: snap)
-//            }
-//            for (key, value) in self.listGender{
-//                if self.genders.contains(key){
-//                    for(k, v) in self.listGender[key]!{
-//                        if v && (k != Auth.auth().currentUser?.uid){
-////                            self.ids.append(k)
-//                            self.idsGenderSet.insert(k)
-//                        }
-//                    }
-//                }
-////
-////            self.kolodaView.reloadData()
-////        }
-////
-////    }
-//            }
-//            for (key, value) in self.listLocations{
-//                if self.locations.contains(key){
-//                    for(k, v) in self.listLocations[key]!{
-//                        if v && (k != Auth.auth().currentUser?.uid){
-//                            self.idsLocationSet.insert(k)
-//                        }
-//                    }
-//                }
-//            }
-//            for (key, value) in self.listUniversities{
-//                if self.universities.contains(key){
-//                    for(k, v) in self.listUniversities[key]!{
-//                        if v && (k != Auth.auth().currentUser?.uid){
-//                            self.idsUniversitiesSet.insert(k)
-//                        }
-//                    }
-//                }
-//            }
-//            self.idsSet = self.idsGenderSet.intersection(self.idsLocationSet)
-//            self.idsSet = self.idsSet.intersection(self.idsUniversitiesSet)
-//            self.ids = Array(self.idsSet)
-//            print("these are the valid gender ids (in set form): \(self.idsGenderSet)")
-//            print("these are the valid location ids (in set form): \(self.idsLocationSet)")
-//            print("these are the valid university ids (in set form): \(self.idsUniversitiesSet)")
-//            print("these are the valid ids (in set form): \(self.idsSet)")
-//            print("these are the valid ids (in array form): \(self.ids)")
-
-
-//    func getIds() {
-//        ref.child("user-profiles").queryOrderedByKey().observe(.value, with: { (snapshot) in
-////            self.ids = snapshot
-//            self.idDict = snapshot.value as? [String : NSObject] ?? [:]
-//            //returns a list of filtered objects
-////            let filtered = self.filtering()
-////            print("these are the filtered ids: \(self.filtered)")
-////            for value in self.filtered{
-////                self.ids.append(value)
-////            }
-//            for (key, value) in self.listGender{
-//                if self.genders.contains(key){
-//                    for(k, v) in self.listGender[key]!{
-//                        if v && (k != Auth.auth().currentUser?.uid){
-//                            self.ids.append(k)
-//                        }
-//                    }
-//                }
-//            }
-//
-////            for (key, _) in self.idDict {
-////                if key != Auth.auth().currentUser?.uid{
-//////                    var k:String = ""
-////
-////                    self.ids.append(key)
-////                print("These are the ids: \(self.ids)")
-////                }
-////            }
-//        })
-//
-//        self.kolodaView.reloadData()
-//    }
-
-// Gets dictionary of all gender information
-//    func getUsers(){
-//        let userGenders = ref.child("genders")
-//        userGenders.observe(.value, with: {(snapshot) in
-//            let genderDict = snapshot.value as? [String : AnyObject] ?? [:]
-//            for (key, value) in genderDict{
-//                //                print("this is a list: \(value)")
-//                self.listGender[key] = value as! [String : Bool]
-//                //                print("gendered list of people without knowing their values: \(self.listGender)")
-//                //                for (k, v) in self.listGender[key]!{
-//                //                    print("Key: \(k) Value: \(v)")
-//                //                }
-//            }
-//        })
-//    }
