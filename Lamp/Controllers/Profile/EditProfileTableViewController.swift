@@ -289,6 +289,10 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                 self.genderField.text = genderVal
             }
             if let birthdayVal = profileDict["birthday"] as? String {
+                let birthdayFormatter = DateFormatter()
+                birthdayFormatter.dateFormat = "MM/dd/yyyy"
+                let birthdayDate = birthdayFormatter.date(from: birthdayVal)!
+                self.birthdayPicker.setDate(birthdayDate, animated: false)
                 self.birthdayField.text = birthdayVal
             }
             if let uniVal = profileDict["uni"] as? String {
