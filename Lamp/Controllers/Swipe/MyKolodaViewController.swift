@@ -343,6 +343,36 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                     self.ref.child("user-profiles").child(self.user!).child("matches").child(self.ids[index]).setValue(true)
                     self.ref.child("user-profiles").child(self.ids[index]).child("matches").child(self.user!).setValue(true)
 
+                    // Create Channels in Firebase also
+                    let profileRef = Database.database().reference(withPath: "user-profiles")
+                    let newChannelId = UUID().uuidString
+                    // Add channel to user-profiles
+                    let userRef = profileRef.child(self.user!).child("channels")
+                    let chan = [newChannelId : true]
+                    userRef.updateChildValues(chan)
+                    let matchRef = profileRef.child(self.matchId).child("channels")
+                    let chan2 = [newChannelId : true]
+                    matchRef.updateChildValues(chan2)
+                    
+                    // ADDING TO MESSAGING
+                    let messagingRef = Database.database().reference(withPath: "messaging")
+                    // Add channel to CHANNELS
+                    let channelsRef = messagingRef.child("channels")
+                    let channel = channelsRef.child(newChannelId).child("channel")
+                    channel.setValue([
+                        "last-message": "New Match!",
+                        "time": "",
+                        "timestamp": "0"
+                        ])
+                    
+                    // Add users to MEMBERS
+                    let membersRef = messagingRef.child("members")
+                    let member = membersRef.child(newChannelId)
+                    member.setValue([
+                        self.user : true,
+                        self.matchId : true
+                        ])
+                    
                     // Segue to matched screen
                     self.performSegue(withIdentifier: "matchSegue", sender:self)
                 }
