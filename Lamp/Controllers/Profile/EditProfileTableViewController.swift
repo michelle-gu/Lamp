@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import Kingfisher
 
-class EditProfileTableViewController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class EditProfileTableViewController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
 
     // MARK: - Constants
     // MARK: Database References
@@ -224,7 +224,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Textfield delegates
+        // Textfield/Textview delegates
         nameField.delegate = self
         genderField.delegate = self
         birthdayField.delegate = self
@@ -236,9 +236,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         emailField.delegate = self
         facebookField.delegate = self
         otherContactField.delegate = self
-        
-        // TODO: Add Bio text placeholder
-        //        bioField.delegate = self
+        bioField.delegate = self
 
         // TODO: Add pickers for Birthday, Gender, Uni, etc.
         imagePicker.delegate = self
@@ -305,11 +303,13 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                 self.occupationField.text = occupationVal
             }
             if let bioVal = profileDict["bio"] as? String {
-                self.bioField.text = bioVal
-                // TODO: Set Bio text w/ placeholder
-//                 if self.bioText.text != "" {
-//                self.bioText.textColor = UIColor.black
-//            }
+                // Set Bio text w/ placeholder
+                if bioVal == "" {
+                    self.bioField.text = "Bio"
+                    self.bioField.textColor = UIColor.lightGray
+                } else {
+                    self.bioField.text = bioVal
+                }
             }
             if let budgetVal = profileDict["budget"] as? Int {
                 self.budgetSlider.setValue(Float(budgetVal), animated: true)
@@ -374,7 +374,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             let university = universityField.text,
             let futureLoc = futureLocationField.titleLabel?.text,
             let occupation = occupationField.text,
-            let bio = bioField.text,
+            var bio = bioField.text,
             let pets = petsField.text,
             let otherLifestylePrefs = otherPreferencesField.text,
             let phone = phoneField.text,
@@ -405,6 +405,10 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             smoking = ""
         } else {
             smoking = smokingSegCtrl.titleForSegment(at: smokingIndex) ?? ""
+        }
+        
+        if bio == "Bio" && bioField.textColor == UIColor.lightGray {
+            bio = ""
         }
         
         // Update all but futureLoc val
@@ -653,6 +657,45 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    // MARK: - TextView Delegate
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        // Combine the textView text and the replacement text to
+        // create the updated text string
+        let currentText:String = textView.text
+        let updatedText = (currentText as NSString).replacingCharacters(in: range, with: text)
+        
+        // If updated text view will be empty, add the placeholder
+        // and set the cursor to the beginning of the text view
+        if updatedText.isEmpty {
+            textView.text = "Bio"
+            textView.textColor = UIColor.lightGray
+            
+            textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
+        } else if textView.textColor == UIColor.lightGray && !text.isEmpty {
+            // Else if the text view's placeholder is showing and the
+            // length of the replacement string is greater than 0, set
+            // the text color to black then set its text to the
+            // replacement string
+            textView.textColor = UIColor.black
+            textView.text = text
+        } else {
+            // For every other case, the text should change with the usual
+            // behavior...
+            return true
+        }
+        // ...otherwise return false since the updates have already
+        // been made
+        return false
+    }
+
+    func textViewDidChangeSelection(_ textView: UITextView) {
+        if self.view.window != nil {
+            if textView.textColor == UIColor.lightGray {
+                textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
+            }
+        }
     }
     
     // MARK: - Database Retrieval
