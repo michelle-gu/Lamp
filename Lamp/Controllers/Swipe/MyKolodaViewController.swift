@@ -161,6 +161,20 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             })
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // add app logo with constraints to nav bar
+        let imageView = UIImageView()
+        imageView.widthAnchor.constraint(equalToConstant: 34).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 34).isActive = true
+        imageView.contentMode = .scaleAspectFit
+        
+        // add logo to navbar
+        let image = UIImage(named: "LogoColor")
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
+    }
   
     func cardStyling() {
         // yes & no button styles
