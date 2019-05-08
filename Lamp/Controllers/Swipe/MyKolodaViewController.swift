@@ -233,6 +233,18 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             completion(citiesArray)
         })
     }
+    
+    // Get age from birthday string
+    func getAgeStr(birthday: String) -> String {
+        let now = Date()
+        let calendar = Calendar.current
+        let myDateFormatter = DateFormatter()
+        myDateFormatter.dateFormat = "MM/dd/yyyy"
+        let birthdayDate = myDateFormatter.date(from: birthday)!
+        let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthdayDate, to: now)
+        let age = ageComponents.year!
+        return String(age)
+    }
 
     // MARK: - Actions
     //should check if the other user has also "liked" this user
@@ -274,8 +286,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         profile.observe(.value, with: {(snapshot) in
 
             let profileDict = snapshot.value as? [String : AnyObject] ?? [:]
-            if let firstName = profileDict["firstName"] as? String {
-                card.nameLabel.text = firstName
+            if let firstName = profileDict["firstName"] as? String,
+                let birthdayVal = profileDict["birthday"] as? String {
+                card.nameLabel.text = "\(firstName), \(self.getAgeStr(birthday: birthdayVal))"
             }
             if let job = profileDict["occupation"] as? String {
                 card.jobLabel.text = job
