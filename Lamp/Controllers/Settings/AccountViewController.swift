@@ -112,7 +112,6 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         default:
             print("Shouldn't reach this")
         }
-        
     }
 
     // MARK: Lifecycle
@@ -122,12 +121,6 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
-    }
-
-    // MARK: Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
     
 }

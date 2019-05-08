@@ -99,7 +99,6 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
             let firstName = firstNameTextField.text,
             let birthday = birthdayTextField.text,
             let gender = genderTextField.text,
-            //let profilePicture = profilePictureView.image,
             firstName.count > 0,
             birthday.count > 0,
             gender.count > 0,
