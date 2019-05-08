@@ -30,6 +30,19 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
     @IBOutlet weak var noButton: UIButton!
     @IBOutlet weak var yesButton: UIButton!
 
+    // MARK: - Functions
+    // Get age from birthday string
+    func getAge(birthday: String) -> Int {
+        let now = Date()
+        let calendar = Calendar.current
+        let myDateFormatter = DateFormatter()
+        myDateFormatter.dateFormat = "MM/dd/yyyy"
+        let birthdayDate = myDateFormatter.date(from: birthday)!
+        let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthdayDate, to: now)
+        let age = ageComponents.year!
+        return Int(age)
+    }
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +94,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                     let allUniversities = myDiscovery["universities"] as? [String: Bool],
                     let locationsDict = dict["locations"] as? [String: AnyObject],
                     let gendersDict = dict["genders"] as? [String: AnyObject],
-                    let universitiesDict = dict["universities"] as? [String: AnyObject] {
+                    let universitiesDict = dict["universities"] as? [String: AnyObject],
+                    let myAgeMin = myDiscovery["ageMin"] as? CGFloat,
+                    let myAgeMax = myDiscovery["ageMax"] as? CGFloat {
 
                     let allSwipesDict = dict["swipes"] as? [String: AnyObject] ?? [:]
                     let mySwipes = allSwipesDict[self.user!] as? [String: AnyObject] ?? [:]
@@ -141,6 +156,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                     }
                     var usersNotSwipedYet : Set<String> = Set<String>()
                     var invisibleUsers: Set<String> = Set<String>()
+                    var usersInAgeRange: Set<String> = Set<String>()
 
                     for user in allUsers {
                         let swipedUser = mySwipes[user] as? [String: Bool]
@@ -161,6 +177,15 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                                 invisibleUsers.insert(user)
                             }
                         }
+
+                        if let userProfile = userProfilesDict[user] as? [String: AnyObject],
+                            let userProfileInfo = userProfile["profile"] as? [String: AnyObject],
+                            let userBirthday = userProfileInfo["birthday"] as? String {
+                            let userAge = self.getAge(birthday: userBirthday)
+                            if userAge >= Int(myAgeMin) && userAge <= Int(myAgeMax) {
+                                usersInAgeRange.insert(user)
+                            }
+                        }
                     }
                     
                     // intersect the sets
@@ -168,6 +193,7 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                     compatibleUsers = compatibleUsers.intersection(usersWithPrefUnis)
                     compatibleUsers = compatibleUsers.intersection(usersNotSwipedYet)
                     compatibleUsers = compatibleUsers.intersection(ids)
+                    compatibleUsers = compatibleUsers.intersection(usersInAgeRange)
                     compatibleUsers.subtract(invisibleUsers)
 
                     // Set self.ids to the filtered array (a modified ids array)
