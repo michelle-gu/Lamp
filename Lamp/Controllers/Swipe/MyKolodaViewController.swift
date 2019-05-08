@@ -37,6 +37,17 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         // Set delegates/data sources
         kolodaView.dataSource = self
         kolodaView.delegate = self
+        
+        // Set logo to nav bar title
+        let logo = UIImage(named: "LogoColor")
+        let imageView = UIImageView(image: logo)
+        imageView.frame = CGRect(x: 0, y: 0, width: 170, height: 30)
+        imageView.contentMode = .scaleAspectFit
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 170, height: 30))
+        titleView.addSubview(imageView)
+        titleView.backgroundColor = .clear
+        self.navigationItem.titleView = titleView
+
         // yes & no button styles
         yesButton.layer.shadowColor = UIColor.darkGray.cgColor
         yesButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)

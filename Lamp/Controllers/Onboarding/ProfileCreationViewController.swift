@@ -117,7 +117,7 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         
         // Create profile using profilePic value from Firebase
         let values = [
-            "firstName": firstName,
+            "firstName": firstName.trimmingCharacters(in: .whitespacesAndNewlines),
             "birthday": birthday,
             "gender": gender,
             ]
@@ -270,6 +270,10 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
                 self.genderTextField?.text = genderVal
             }
             if let birthdayVal = profileDict["birthday"] as? String {
+                let birthdayFormatter = DateFormatter()
+                birthdayFormatter.dateFormat = "MM/dd/yyyy"
+                let birthdayDate = birthdayFormatter.date(from: birthdayVal)!
+                self.birthdayPicker.setDate(birthdayDate, animated: false)
                 self.birthdayTextField?.text = birthdayVal
             }
             if let profilePicVal = profileDict["profilePicture"] as? String {

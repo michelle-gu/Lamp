@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import Kingfisher
 
-class EditProfileTableViewController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class EditProfileTableViewController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
 
     // MARK: - Constants
     // MARK: Database References
@@ -32,6 +32,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     var cities: [String] = []
     var unis: [String] = []
     var genders: [String] = ["Female", "Male", "Other", "Prefer not to say"]
+    var activeField: UITextField?
     
     // MARK: - Outlets
     @IBOutlet weak var profilePicView: UIImageView!
@@ -219,12 +220,62 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         let age = ageComponents.year!
         return age >= 18
     }
-
+    
+    // Change frame for keyboard
+    func registerForKeyboardNotifications(){
+        //Adding notifies on keyboard appearing
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func deregisterFromKeyboardNotifications(){
+        //Removing notifies on keyboard appearing
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWasShown(notification: NSNotification){
+        //Need to calculate keyboard exact size due to Apple suggestions
+        self.tableView.isScrollEnabled = true
+        var info = notification.userInfo!
+        let keyboardSize = (info[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size
+        let contentInsets : UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize!.height, right: 0.0)
+        
+        self.tableView.contentInset = contentInsets
+        self.tableView.scrollIndicatorInsets = contentInsets
+        
+        var aRect : CGRect = self.view.frame
+        aRect.size.height -= keyboardSize!.height
+        if let activeField = self.activeField {
+            if (!aRect.contains(activeField.frame.origin)){
+                self.tableView.scrollRectToVisible(activeField.frame, animated: true)
+            }
+        }
+    }
+    
+    @objc func keyboardWillBeHidden(notification: NSNotification){
+        //Once keyboard disappears, restore original positions
+        let contentInsets : UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+        self.tableView.contentInset = contentInsets
+        self.tableView.scrollIndicatorInsets = contentInsets
+        self.view.endEditing(true)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField){
+        activeField = textField
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField){
+        activeField = nil
+    }
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Textfield delegates
+        registerForKeyboardNotifications()
+        
+        // Textfield/Textview delegates
         nameField.delegate = self
         genderField.delegate = self
         birthdayField.delegate = self
@@ -236,9 +287,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         emailField.delegate = self
         facebookField.delegate = self
         otherContactField.delegate = self
-        
-        // TODO: Add Bio text placeholder
-        //        bioField.delegate = self
+        bioField.delegate = self
 
         // TODO: Add pickers for Birthday, Gender, Uni, etc.
         imagePicker.delegate = self
@@ -289,6 +338,10 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                 self.genderField.text = genderVal
             }
             if let birthdayVal = profileDict["birthday"] as? String {
+                let birthdayFormatter = DateFormatter()
+                birthdayFormatter.dateFormat = "MM/dd/yyyy"
+                let birthdayDate = birthdayFormatter.date(from: birthdayVal)!
+                self.birthdayPicker.setDate(birthdayDate, animated: false)
                 self.birthdayField.text = birthdayVal
             }
             if let uniVal = profileDict["uni"] as? String {
@@ -301,11 +354,13 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                 self.occupationField.text = occupationVal
             }
             if let bioVal = profileDict["bio"] as? String {
-                self.bioField.text = bioVal
-                // TODO: Set Bio text w/ placeholder
-//                 if self.bioText.text != "" {
-//                self.bioText.textColor = UIColor.black
-//            }
+                // Set Bio text w/ placeholder
+                if bioVal == "" {
+                    self.bioField.text = "Bio"
+                    self.bioField.textColor = UIColor.lightGray
+                } else {
+                    self.bioField.text = bioVal
+                }
             }
             if let budgetVal = profileDict["budget"] as? Int {
                 self.budgetSlider.setValue(Float(budgetVal), animated: true)
@@ -363,6 +418,8 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        deregisterFromKeyboardNotifications()
+        
         guard
             let name = nameField.text,
             let gender = genderField.text,
@@ -370,7 +427,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             let university = universityField.text,
             let futureLoc = futureLocationField.titleLabel?.text,
             let occupation = occupationField.text,
-            let bio = bioField.text,
+            var bio = bioField.text,
             let pets = petsField.text,
             let otherLifestylePrefs = otherPreferencesField.text,
             let phone = phoneField.text,
@@ -403,27 +460,31 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             smoking = smokingSegCtrl.titleForSegment(at: smokingIndex) ?? ""
         }
         
+        if bio == "Bio" && bioField.textColor == UIColor.lightGray {
+            bio = ""
+        }
+        
         // Update all but futureLoc val
         let profile = userProfilesRef.child(user!).child("profile")
         let values = [
             // Basic Info
-            "firstName": name,
+            "firstName": name.trimmingCharacters(in: .whitespacesAndNewlines),
             "gender": gender,
             "birthday": birthday,
             "uni": university,
-            "occupation": occupation,
-            "bio": bio,
+            "occupation": occupation.trimmingCharacters(in: .whitespacesAndNewlines),
+            "bio": bio.trimmingCharacters(in: .whitespacesAndNewlines),
             // Living Prefs
             "budget": Int(budgetSlider.value),
             "numBedrooms": Int(numBedsSlider.value),
-            "pets": pets,
+            "pets": pets.trimmingCharacters(in: .whitespacesAndNewlines),
             "smoking": smoking,
-            "otherLifestylePrefs": otherLifestylePrefs,
+            "otherLifestylePrefs": otherLifestylePrefs.trimmingCharacters(in: .whitespacesAndNewlines),
             // Contact Info
-            "phone": phone,
-            "email": email,
-            "facebook": facebook,
-            "otherContact": otherContact
+            "phone": phone.trimmingCharacters(in: .whitespacesAndNewlines),
+            "email": email.trimmingCharacters(in: .whitespacesAndNewlines),
+            "facebook": facebook.trimmingCharacters(in: .whitespacesAndNewlines),
+            "otherContact": otherContact.trimmingCharacters(in: .whitespacesAndNewlines)
             ] as [String : Any]
         profile.updateChildValues(values)
         
@@ -601,6 +662,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                         invalidCharsAlert.addAction(UIAlertAction(title: "OK", style: .default))
                         self.present(invalidCharsAlert, animated: true, completion: nil)
                     } else {
+                        newUni = newUni.trimmingCharacters(in: .whitespacesAndNewlines)
                         let confirmUniAlert = UIAlertController(title: "Add a University", message: "Are you sure you want to add \"\(newUni)\"?", preferredStyle: .alert)
                         confirmUniAlert.addAction(UIAlertAction(title: "No", style: .cancel))
                         confirmUniAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
@@ -649,6 +711,45 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    // MARK: - TextView Delegate
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        // Combine the textView text and the replacement text to
+        // create the updated text string
+        let currentText:String = textView.text
+        let updatedText = (currentText as NSString).replacingCharacters(in: range, with: text)
+        
+        // If updated text view will be empty, add the placeholder
+        // and set the cursor to the beginning of the text view
+        if updatedText.isEmpty {
+            textView.text = "Bio"
+            textView.textColor = UIColor.lightGray
+            
+            textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
+        } else if textView.textColor == UIColor.lightGray && !text.isEmpty {
+            // Else if the text view's placeholder is showing and the
+            // length of the replacement string is greater than 0, set
+            // the text color to black then set its text to the
+            // replacement string
+            textView.textColor = UIColor.black
+            textView.text = text
+        } else {
+            // For every other case, the text should change with the usual
+            // behavior...
+            return true
+        }
+        // ...otherwise return false since the updates have already
+        // been made
+        return false
+    }
+
+    func textViewDidChangeSelection(_ textView: UITextView) {
+        if self.view.window != nil {
+            if textView.textColor == UIColor.lightGray {
+                textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
+            }
+        }
     }
     
     // MARK: - Database Retrieval

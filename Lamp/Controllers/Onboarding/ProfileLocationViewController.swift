@@ -125,7 +125,7 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
         let profile = userProfilesRef.child(user!).child("profile")
         let values = [
             "uni": uni,
-            "occupation": occupation
+            "occupation": occupation.trimmingCharacters(in: .whitespacesAndNewlines)
         ]
         profile.updateChildValues(values)
         
@@ -225,8 +225,8 @@ class ProfileLocationViewController: UIViewController, UIPickerViewDelegate, UIP
                         let invalidCharsAlert = UIAlertController(title: "Failed to Add University", message: "\"\(newUni)\" contains invalid characters \'.$[]#\'.", preferredStyle: .alert)
                         invalidCharsAlert.addAction(UIAlertAction(title: "OK", style: .default))
                         self.present(invalidCharsAlert, animated: true, completion: nil)
-
                     } else {
+                        newUni = newUni.trimmingCharacters(in: .whitespacesAndNewlines)
                         let confirmUniAlert = UIAlertController(title: "Add a University", message: "Are you sure you want to add \"\(newUni)\"?", preferredStyle: .alert)
                         confirmUniAlert.addAction(UIAlertAction(title: "No", style: .cancel))
                         confirmUniAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
