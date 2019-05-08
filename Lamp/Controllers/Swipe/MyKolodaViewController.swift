@@ -135,40 +135,56 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                     }
 
                     // get users I haven't swiped
-//                    var allUsers: [String] = []
-//                    for user in userProfilesDict {
-//                        allUsers.append(user.key)
-//                    }
-//                    var usersNotSwipedYet : Set<String> = Set<String>()
-//                    for user in allUsers {
-//                        let swipedUser = mySwipes[user] as? [String: Bool]
-//                        if swipedUser == nil {
-//                            usersNotSwipedYet.insert(user)
-//                        } else {
-//                            let swipedVal: Bool = swipedUser!["swiped"]!
-//                            if swipedVal == false {
-//                                usersNotSwipedYet.insert(user)
-//                            }
-//                        }
-//                    }
+                    var allUsers: [String] = []
+                    for user in userProfilesDict {
+                        allUsers.append(user.key)
+                    }
+                    var usersNotSwipedYet : Set<String> = Set<String>()
+                    for user in allUsers {
+                        let swipedUser = mySwipes[user] as? [String: Bool]
+                        if swipedUser == nil {
+                            usersNotSwipedYet.insert(user)
+                        } else {
+                            let swipedVal: Bool = swipedUser!["swiped"]!
+                            if swipedVal == false {
+                                usersNotSwipedYet.insert(user)
+                            }
+                        }
+                    }
     
                     // intersect the sets
                     compatibleUsers = usersInMyLocs.intersection(usersWithPrefGender)
                     compatibleUsers = compatibleUsers.intersection(usersWithPrefUnis)
-//                    compatibleUsers = compatibleUsers.intersection(usersNotSwipedYet)
+                    compatibleUsers = compatibleUsers.intersection(usersNotSwipedYet)
                     compatibleUsers = compatibleUsers.intersection(ids)
 
                     // Set self.ids to the filtered array (a modified ids array)
                     self.ids = Array(compatibleUsers)
 
                     // Reload the swipe view with our new list
-                    //if self.kolodaNumberOfCards(self.kolodaView) == self.kolodaView.currentCardIndex || self.kolodaView.currentCardIndex == 0 {
-
-                    self.kolodaView.reloadData()
-                    //}
+                    if self.ids.count == 0 {
+                        self.kolodaView.isHidden = true
+                    } else {
+                        self.kolodaView.resetCurrentCardIndex()
+                        // self.kolodaView.reloadData()
+                    }
                 }
             })
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // add app logo with constraints to nav bar
+        let imageView = UIImageView()
+        imageView.widthAnchor.constraint(equalToConstant: 34).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 34).isActive = true
+        imageView.contentMode = .scaleAspectFit
+        
+        // add logo to navbar
+        let image = UIImage(named: "LogoColor")
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
     }
   
     func cardStyling() {
@@ -300,14 +316,19 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
             locationText = self.cities.joined(separator: ", ")
             card.locationLabel.text = locationText
         }
-
+        
         return card
     }
 
 
     // MARK: - Koloda View Delegate
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        koloda.reloadData()
+        kolodaView.isHidden = true
+//        koloda.resetCurrentCardIndex()
+    }
+    
+    func kolodaShouldApplyAppearAnimation(_ koloda: KolodaView) -> Bool {
+        return false
     }
 
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
@@ -315,7 +336,6 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 
         switch direction {
         case .right:
-//            break
             // Update for Swiped Right
             let swipeValues = [
                 "liked": true,
@@ -334,12 +354,41 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                     self.ref.child("user-profiles").child(self.user!).child("matches").child(self.ids[index]).setValue(true)
                     self.ref.child("user-profiles").child(self.ids[index]).child("matches").child(self.user!).setValue(true)
 
+                    // Create Channels in Firebase also
+                    let profileRef = Database.database().reference(withPath: "user-profiles")
+                    let newChannelId = UUID().uuidString
+                    // Add channel to user-profiles
+                    let userRef = profileRef.child(self.user!).child("channels")
+                    let chan = [newChannelId : true]
+                    userRef.updateChildValues(chan)
+                    let matchRef = profileRef.child(self.matchId).child("channels")
+                    let chan2 = [newChannelId : true]
+                    matchRef.updateChildValues(chan2)
+                    
+                    // ADDING TO MESSAGING
+                    let messagingRef = Database.database().reference(withPath: "messaging")
+                    // Add channel to CHANNELS
+                    let channelsRef = messagingRef.child("channels")
+                    let channel = channelsRef.child(newChannelId).child("channel")
+                    channel.setValue([
+                        "last-message": "New Match!",
+                        "time": "",
+                        "timestamp": "0"
+                        ])
+                    
+                    // Add users to MEMBERS
+                    let membersRef = messagingRef.child("members")
+                    let member = membersRef.child(newChannelId)
+                    member.setValue([
+                        self.user : true,
+                        self.matchId : true
+                        ])
+                    
                     // Segue to matched screen
                     self.performSegue(withIdentifier: "matchSegue", sender:self)
                 }
             })
         case .left:
-//            break
             // Update for Swiped Left
             let swipeValues = [
                 "liked": false,

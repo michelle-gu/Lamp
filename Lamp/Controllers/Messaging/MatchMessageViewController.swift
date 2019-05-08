@@ -32,38 +32,6 @@ class MatchMessageViewController: UIViewController {
         // set appropriate Profile pictures to Match Message Card
         setUserProfilePic()
         setMatchProfilePic()
-        
-        let newChannelId = UUID().uuidString
-        
-        // Add channel to user-profiles
-        let userRef = ref.child(user!).child("channels")
-        let chan = [newChannelId : true]
-        userRef.updateChildValues(chan)
-        
-        let matchRef = ref.child(match).child("channels")
-        let chan2 = [newChannelId : true]
-        matchRef.updateChildValues(chan2)
-        
-        
-        // ADDING TO MESSAGING
-        let messagingRef = Database.database().reference(withPath: "messaging")
-        
-        // Add channel to CHANNELS
-        let channelsRef = messagingRef.child("channels")
-        let channel = channelsRef.child(newChannelId).child("channel")
-        channel.setValue([
-            "last-message": "New Match!",
-            "time": "",
-            "timestamp": "0"
-        ])
-        
-        // Add users to MEMBERS
-        let membersRef = messagingRef.child("members")
-        let member = membersRef.child(newChannelId)
-        member.setValue([
-            user : true,
-            match : true
-        ])
 
         styleViewController()
     }

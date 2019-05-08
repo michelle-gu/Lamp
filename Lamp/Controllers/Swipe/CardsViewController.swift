@@ -45,27 +45,4 @@ class CardsViewController: UIViewController {
         noButton.layer.shadowOpacity = 0.2
         noButton.layer.shadowRadius = 2
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-        // nav bar helper
-//        let nav = self.navigationController?.navigationBar
-        
-        // nav bar styles
-//        nav?.barStyle = UIBarStyle.black
-        
-        // add app logo with constraints to nav bar
-        let imageView = UIImageView()
-        imageView.widthAnchor.constraint(equalToConstant: 34).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 34).isActive = true
-        imageView.contentMode = .scaleAspectFit
-        
-        // add logo to navbar
-        let image = UIImage(named: "LogoColor")
-        imageView.image = image
-
-        navigationItem.titleView = imageView
-
-
-    }
 }
