@@ -143,10 +143,11 @@ class GenderFilterViewController: UIViewController, UITableViewDataSource, UITab
         })
     }
     
+    // Update Firebase discovery settings genders
     override func viewWillDisappear(_ animated: Bool) {
-        // Update Firebase with genders
         let discoverySettingsRef = profilesRef.child(user!).child("settings").child("discovery")
 
+        // Update selected genders array
         var gendersSelected: [String] = []
         for row in 1...numGenders {
             let indexPathForRow = IndexPath(row: row, section: 0)
@@ -157,6 +158,7 @@ class GenderFilterViewController: UIViewController, UITableViewDataSource, UITab
             }
         }
 
+        // Update discovery settings data
         for gender in genderArray {
             if gendersSelected.contains(gender) {
                 discoverySettingsRef.child("genders").child(gender).setValue(true)

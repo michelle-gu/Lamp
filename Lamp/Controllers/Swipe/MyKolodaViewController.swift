@@ -37,6 +37,17 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
         // Set delegates/data sources
         kolodaView.dataSource = self
         kolodaView.delegate = self
+        
+        // Set logo to nav bar title
+        let logo = UIImage(named: "LogoColor")
+        let imageView = UIImageView(image: logo)
+        imageView.frame = CGRect(x: 0, y: 0, width: 170, height: 30)
+        imageView.contentMode = .scaleAspectFit
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 170, height: 30))
+        titleView.addSubview(imageView)
+        titleView.backgroundColor = .clear
+        self.navigationItem.titleView = titleView
+
         // yes & no button styles
         yesButton.layer.shadowColor = UIColor.darkGray.cgColor
         yesButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
@@ -123,12 +134,14 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                         }
                     }
 
-                    // get users I haven't swiped
+                    // get users I haven't swiped and users that are visible
                     var allUsers: [String] = []
                     for user in userProfilesDict {
                         allUsers.append(user.key)
                     }
                     var usersNotSwipedYet : Set<String> = Set<String>()
+                    var invisibleUsers: Set<String> = Set<String>()
+
                     for user in allUsers {
                         let swipedUser = mySwipes[user] as? [String: Bool]
                         if swipedUser == nil {
@@ -139,23 +152,36 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                                 usersNotSwipedYet.insert(user)
                             }
                         }
+                        
+                        if let userProfile = userProfilesDict[user] as? [String: AnyObject],
+                            let userSettings = userProfile["settings"] as? [String: AnyObject],
+                            let userDiscovery = userSettings["discovery"] as? [String: AnyObject],
+                            let userIsVisible: Bool = userDiscovery["showProfile"] as? Bool {
+                            if !userIsVisible {
+                                invisibleUsers.insert(user)
+                            }
+                        }
                     }
-    
+                    
                     // intersect the sets
                     compatibleUsers = usersInMyLocs.intersection(usersWithPrefGender)
                     compatibleUsers = compatibleUsers.intersection(usersWithPrefUnis)
                     compatibleUsers = compatibleUsers.intersection(usersNotSwipedYet)
                     compatibleUsers = compatibleUsers.intersection(ids)
+                    compatibleUsers.subtract(invisibleUsers)
 
                     // Set self.ids to the filtered array (a modified ids array)
                     self.ids = Array(compatibleUsers)
 
                     // Reload the swipe view with our new list
                     if self.ids.count == 0 {
+                        self.noButton.isEnabled = false
+                        self.yesButton.isEnabled = false
                         self.kolodaView.isHidden = true
                     } else {
+                        self.noButton.isEnabled = true
+                        self.yesButton.isEnabled = true
                         self.kolodaView.resetCurrentCardIndex()
-                        // self.kolodaView.reloadData()
                     }
                 }
             })
@@ -331,8 +357,9 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
 
     // MARK: - Koloda View Delegate
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
+        self.noButton.isEnabled = false
+        self.yesButton.isEnabled = false
         kolodaView.isHidden = true
-//        koloda.resetCurrentCardIndex()
     }
     
     func kolodaShouldApplyAppearAnimation(_ koloda: KolodaView) -> Bool {
