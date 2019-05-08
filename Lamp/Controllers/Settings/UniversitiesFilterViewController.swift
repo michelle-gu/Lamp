@@ -25,7 +25,7 @@ class UniversitiesFilterViewController: UIViewController, UITableViewDelegate, U
     let universityCellIdentifier = "universityCellIdentifier"
     let user = Auth.auth().currentUser?.uid
     
-    // MARK: TableView stubs
+    // MARK: TableView Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numUniversities + 1
     }
@@ -56,6 +56,24 @@ class UniversitiesFilterViewController: UIViewController, UITableViewDelegate, U
                 otherCell!.isSelected = true
                 otherCell!.accessoryType = .checkmark
             }
+        } else {
+            var allSelected: Bool = true
+            for row in 1...numUniversities {
+                let indexPathForRow = IndexPath(row: row, section: 0)
+                let otherCell = tableView.cellForRow(at: indexPathForRow)
+                if otherCell?.accessoryType != UITableViewCell.AccessoryType.checkmark {
+                    allSelected = false
+                    break
+                }
+            }
+            
+            if allSelected { // Tick selectAll cell
+                selectAllSelected = true
+                let indexPathForRow = IndexPath(row: 0, section: 0)
+                let selectAllCell = tableView.cellForRow(at: indexPathForRow)
+                selectAllCell!.isSelected = true
+                selectAllCell!.accessoryType = .checkmark
+            }
         }
     }
     
@@ -70,7 +88,6 @@ class UniversitiesFilterViewController: UIViewController, UITableViewDelegate, U
         let selectAllCell = tableView.cellForRow(at: indexPathForSelectAll)
         selectAllCell!.isSelected = false
         selectAllCell!.accessoryType = .none
-        
         
         if indexPath.row == 0 { // Select all
             // Deselect all
@@ -112,13 +129,13 @@ class UniversitiesFilterViewController: UIViewController, UITableViewDelegate, U
             self.numUniversities = uniArray.count
             self.tableView.reloadData()
             
-            // Retrieve initially selected genders from Firebase
+            // Retrieve initially selected unis from Firebase
             let discoverySettingsRef = self.profilesRef.child(self.user!).child("settings").child("discovery")
             discoverySettingsRef.observe(.value, with: { (snapshot) in
                 // Read snapshot
                 let discoverySettingsDict = snapshot.value as? [String : AnyObject] ?? [:]
                 
-                // Build initially selected genders array
+                // Build initially selected universities array
                 let uniData = discoverySettingsDict["universities"] as? [String: AnyObject] ?? [:]
                 var initiallySelectedUnis: [String] = []
                 for uni in uniData {
@@ -150,11 +167,11 @@ class UniversitiesFilterViewController: UIViewController, UITableViewDelegate, U
         }
     }
     
+    // Update Firebase discovery settings universities
     override func viewWillDisappear(_ animated: Bool) {
-        // Update Firebase with genders
-        let user = Auth.auth().currentUser?.uid
         let discoverySettingsRef = profilesRef.child(user!).child("settings").child("discovery")
         
+        // Update selected universities array
         var universitiesSelected: [String] = []
         for row in 1...numUniversities {
             let indexPathForRow = IndexPath(row: row, section: 0)
@@ -166,26 +183,13 @@ class UniversitiesFilterViewController: UIViewController, UITableViewDelegate, U
         }
         
         // Update discovery settings data
-        // Update universitites data
-
         for uni in universitiesArray {
-            let values: [String: Bool]
             if universitiesSelected.contains(uni) {
-                values = [
-                    uni: true
-                ]
-                universitiesRef.child(uni).child(user!).setValue(true)
+                discoverySettingsRef.child("universities").child(uni).setValue(true)
             } else {
-                values = [
-                    uni: false
-                ]
-                universitiesRef.child(uni).child(user!).setValue(false)
+                discoverySettingsRef.child("universities").child(uni).setValue(false)
             }
-            discoverySettingsRef.child("universities").updateChildValues(values)
-            
         }
-        
-        
     }
     
 }

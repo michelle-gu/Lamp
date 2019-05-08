@@ -20,13 +20,11 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
     let selectFutureLocationSegueIdentifier = "selectFutureLocationSegueIdentifier"
 
     // MARK: Outlets
-    @IBOutlet weak var maxDistanceSlider: UISlider!
     @IBOutlet weak var ageRangeSlider: RangeUISlider!
     @IBOutlet weak var showMyProfileSwitch: UISwitch!
     @IBOutlet weak var universitiesListLabel: UILabel!
     @IBOutlet weak var futureLocationsListLabel: UILabel!
     @IBOutlet weak var genderListLabel: UILabel!
-    @IBOutlet weak var maxDistanceValueLabel: UILabel!
     @IBOutlet weak var minAgeLabel: UILabel!
     @IBOutlet weak var maxAgeLabel: UILabel!
     
@@ -43,14 +41,6 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
         let discoverySettingsRef = userProfilesRef.child(user!).child("settings").child("discovery")
         let values = ["ageMin": Int(minValueSelected),
                       "ageMax": Int(maxValueSelected)]
-        discoverySettingsRef.updateChildValues(values)
-    }
-    
-    @IBAction func maxDistanceSliderChanged(_ sender: Any) {
-        let maxDistance = Int(maxDistanceSlider.value)
-        let discoverySettingsRef = userProfilesRef.child(user!).child("settings").child("discovery")
-        let values = ["maxDistance": maxDistance]
-        maxDistanceValueLabel.text = "\(maxDistance)"
         discoverySettingsRef.updateChildValues(values)
     }
     
@@ -76,22 +66,19 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
         discoverySettingsRef.observe(.value, with: { (snapshot) in
             // Read snapshot
             let discoverySettingsDict = snapshot.value as? [String : AnyObject] ?? [:]
-            // If value exists, pre-populate newMessages switch
-            if let maxDistanceVal = discoverySettingsDict["maxDistance"] as? Float {
-                self.maxDistanceSlider?.value = maxDistanceVal
-                self.maxDistanceValueLabel?.text = "\(Int(maxDistanceVal))"
-            }
-            // If value exists, pre-populate newMatches switch
+            // If value exists, pre-populate
             if let minAgeVal = discoverySettingsDict["ageMin"] as? CGFloat {
                 self.ageRangeSlider?.defaultValueLeftKnob = minAgeVal
                 self.minAgeLabel?.text = "\(Int(minAgeVal))"
             }
-            // If value exists, pre-populate newMatches switch
             if let maxAgeVal = discoverySettingsDict["ageMax"] as? CGFloat {
                 self.ageRangeSlider?.defaultValueRightKnob = maxAgeVal
-                self.maxAgeLabel?.text = "\(Int(maxAgeVal))"
+                if maxAgeVal >= 65 {
+                    self.maxAgeLabel.text = "65+"
+                } else {
+                    self.maxAgeLabel.text = "\(Int(maxAgeVal))"
+                }
             }
-            // If value exists, pre-populate newMessages switch
             if let showProfileVal = discoverySettingsDict["showProfile"] as? Bool {
                 self.showMyProfileSwitch?.isOn = showProfileVal
             }
@@ -106,7 +93,6 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
             }
             let futureLocSubtitleStr: String = futureLocSubtitleArr.joined(separator: ", ")
             self.futureLocationsListLabel.text = futureLocSubtitleStr
-            
             
             let universityData = discoverySettingsDict["universities"] as? [String: AnyObject] ?? [:]
             var universitySubtitleArr: [String] = []
@@ -148,10 +134,8 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Location Filters"
+            return "Filters"
         case 1:
-            return "Other Filters"
-        case 2:
             return "Visibility"
         default:
             return ""
@@ -159,16 +143,14 @@ class DiscoveryTableViewController: UITableViewController, RangeUISliderDelegate
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 2
+            return 4
         case 1:
-            return 3
-        case 2:
             return 1
         default:
             return 0
