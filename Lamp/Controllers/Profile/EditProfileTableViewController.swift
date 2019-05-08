@@ -32,6 +32,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     var cities: [String] = []
     var unis: [String] = []
     var genders: [String] = ["Female", "Male", "Other", "Prefer not to say"]
+    var activeField: UITextField?
     
     // MARK: - Outlets
     @IBOutlet weak var profilePicView: UIImageView!
@@ -219,10 +220,60 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         let age = ageComponents.year!
         return age >= 18
     }
-
+    
+    // Change frame for keyboard
+    func registerForKeyboardNotifications(){
+        //Adding notifies on keyboard appearing
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func deregisterFromKeyboardNotifications(){
+        //Removing notifies on keyboard appearing
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWasShown(notification: NSNotification){
+        //Need to calculate keyboard exact size due to Apple suggestions
+        self.tableView.isScrollEnabled = true
+        var info = notification.userInfo!
+        let keyboardSize = (info[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size
+        let contentInsets : UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize!.height, right: 0.0)
+        
+        self.tableView.contentInset = contentInsets
+        self.tableView.scrollIndicatorInsets = contentInsets
+        
+        var aRect : CGRect = self.view.frame
+        aRect.size.height -= keyboardSize!.height
+        if let activeField = self.activeField {
+            if (!aRect.contains(activeField.frame.origin)){
+                self.tableView.scrollRectToVisible(activeField.frame, animated: true)
+            }
+        }
+    }
+    
+    @objc func keyboardWillBeHidden(notification: NSNotification){
+        //Once keyboard disappears, restore original positions
+        let contentInsets : UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+        self.tableView.contentInset = contentInsets
+        self.tableView.scrollIndicatorInsets = contentInsets
+        self.view.endEditing(true)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField){
+        activeField = textField
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField){
+        activeField = nil
+    }
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        registerForKeyboardNotifications()
         
         // Textfield/Textview delegates
         nameField.delegate = self
@@ -367,6 +418,8 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        deregisterFromKeyboardNotifications()
+        
         guard
             let name = nameField.text,
             let gender = genderField.text,
