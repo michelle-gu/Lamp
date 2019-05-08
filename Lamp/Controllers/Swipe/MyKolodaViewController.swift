@@ -290,8 +290,14 @@ class MyKolodaViewController: UIViewController, KolodaViewDataSource, KolodaView
                 let birthdayVal = profileDict["birthday"] as? String {
                 card.nameLabel.text = "\(firstName), \(self.getAgeStr(birthday: birthdayVal))"
             }
+            if let gender = profileDict["gender"] as? String {
+                card.genderLabel.text = gender
+            }
             if let job = profileDict["occupation"] as? String {
                 card.jobLabel.text = job
+            }
+            if let university = profileDict["uni"] as? String {
+                card.universityLabel.text = university
             }
 
             if let profilePicVal = profileDict["profilePicture"] as? String {

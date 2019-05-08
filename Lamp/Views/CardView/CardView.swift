@@ -21,6 +21,8 @@ class CardView: UIView, XibCreatable {
     @IBOutlet weak var jobLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var universityLabel: UILabel!
     //    @IBOutlet weak var subLabel: UILabel!
     
     // MARK: - Variables
