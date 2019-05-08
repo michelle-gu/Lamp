@@ -77,7 +77,6 @@ class ChangePasswordViewController: UIViewController {
         oldPasswordField.isSecureTextEntry = true
         newPasswordField.isSecureTextEntry = true
         confirmPasswordField.isSecureTextEntry = true
-        // Do any additional setup after loading the view.
     }
     
 }

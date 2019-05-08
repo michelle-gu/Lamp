@@ -102,8 +102,6 @@ class ProfileTableViewController: UITableViewController {
         editProfileButton.clipsToBounds = true
         editProfileButton.layer.backgroundColor = UIColor(red: 0.59, green: 0.64, blue: 0.99, alpha: 0.7).cgColor
         
-        // TODO: Auto-size Biotext label cell
-        
         // Populate data
         let profile = userProfilesRef.child(user!).child("profile")
         profile.observe(.value, with: { (snapshot) in

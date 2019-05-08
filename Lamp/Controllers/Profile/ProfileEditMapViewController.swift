@@ -405,8 +405,7 @@ class ProfileEditMapViewController: UIViewController, MKMapViewDelegate, UISearc
     }
     
     // code to dismiss keyboard when user clicks on background
-    
-    func textFieldShouldReturn(textField:UITextField) -> Bool {
+        func textFieldShouldReturn(textField:UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
