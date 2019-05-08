@@ -117,7 +117,7 @@ class ProfileCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         
         // Create profile using profilePic value from Firebase
         let values = [
-            "firstName": firstName,
+            "firstName": firstName.trimmingCharacters(in: .whitespacesAndNewlines),
             "birthday": birthday,
             "gender": gender,
             ]

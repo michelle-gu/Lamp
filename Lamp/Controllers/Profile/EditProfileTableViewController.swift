@@ -415,23 +415,23 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         let profile = userProfilesRef.child(user!).child("profile")
         let values = [
             // Basic Info
-            "firstName": name,
+            "firstName": name.trimmingCharacters(in: .whitespacesAndNewlines),
             "gender": gender,
             "birthday": birthday,
             "uni": university,
-            "occupation": occupation,
-            "bio": bio,
+            "occupation": occupation.trimmingCharacters(in: .whitespacesAndNewlines),
+            "bio": bio.trimmingCharacters(in: .whitespacesAndNewlines),
             // Living Prefs
             "budget": Int(budgetSlider.value),
             "numBedrooms": Int(numBedsSlider.value),
-            "pets": pets,
+            "pets": pets.trimmingCharacters(in: .whitespacesAndNewlines),
             "smoking": smoking,
-            "otherLifestylePrefs": otherLifestylePrefs,
+            "otherLifestylePrefs": otherLifestylePrefs.trimmingCharacters(in: .whitespacesAndNewlines),
             // Contact Info
-            "phone": phone,
-            "email": email,
-            "facebook": facebook,
-            "otherContact": otherContact
+            "phone": phone.trimmingCharacters(in: .whitespacesAndNewlines),
+            "email": email.trimmingCharacters(in: .whitespacesAndNewlines),
+            "facebook": facebook.trimmingCharacters(in: .whitespacesAndNewlines),
+            "otherContact": otherContact.trimmingCharacters(in: .whitespacesAndNewlines)
             ] as [String : Any]
         profile.updateChildValues(values)
         
@@ -609,6 +609,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
                         invalidCharsAlert.addAction(UIAlertAction(title: "OK", style: .default))
                         self.present(invalidCharsAlert, animated: true, completion: nil)
                     } else {
+                        newUni = newUni.trimmingCharacters(in: .whitespacesAndNewlines)
                         let confirmUniAlert = UIAlertController(title: "Add a University", message: "Are you sure you want to add \"\(newUni)\"?", preferredStyle: .alert)
                         confirmUniAlert.addAction(UIAlertAction(title: "No", style: .cancel))
                         confirmUniAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
